@@ -93,6 +93,14 @@ def load_events_from_github(stream):
         logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
         return []
 
+# Получение уникальных предметов из расписания
+def get_unique_subjects(stream):
+    events = load_events_from_github(stream)
+    subjects = set()
+    for event in events:
+        subjects.add(event["summary"])
+    return sorted(list(subjects))
+
 # === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
 def get_week_range(date):
     start = date - datetime.timedelta(days=date.weekday())
@@ -242,13 +250,83 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
     elif query.data.startswith('add_hw_'):
         stream = query.data.split('_')[-1]
-        context.user_data['awaiting_hw'] = True
+        context.user_data['awaiting_hw_method'] = True
+        context.user_data['hw_stream'] = stream
+        
+        keyboard = [
+            [InlineKeyboardButton("📋 Выбрать из списка предметов", callback_data=f"select_subject_{stream}")],
+            [InlineKeyboardButton("⌨️ Ввести вручную", callback_data=f"manual_hw_{stream}")],
+            [InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]
+        ]
+        
+        await query.edit_message_text(
+            text="Как вы хотите добавить домашнее задание?",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+        return
+        
+    elif query.data.startswith('select_subject_'):
+        stream = query.data.split('_')[-1]
+        subjects = get_unique_subjects(stream)
+        
+        if not subjects:
+            await query.edit_message_text(
+                text="❌ Не удалось загрузить список предметов",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
+            )
+            return
+            
+        # Создаем кнопки для выбора предмета (максимум 8 в ряд)
+        keyboard = []
+        row = []
+        for i, subject in enumerate(subjects):
+            # Обрезаем длинные названия предметов
+            button_text = subject[:20] + "..." if len(subject) > 20 else subject
+            row.append(InlineKeyboardButton(button_text, callback_data=f"subject_{stream}_{i}"))
+            if len(row) == 2:  # 2 кнопки в ряд
+                keyboard.append(row)
+                row = []
+        if row:  # Добавляем оставшиеся кнопки
+            keyboard.append(row)
+            
+        keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")])
+        
+        # Сохраняем список предметов для использования в дальнейшем
+        context.user_data['subjects_list'] = subjects
+        
+        await query.edit_message_text(
+            text="Выберите предмет:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+        return
+        
+    elif query.data.startswith('subject_'):
+        stream = query.data.split('_')[-2]
+        subject_index = int(query.data.split('_')[-1])
+        
+        subjects_list = context.user_data.get('subjects_list', [])
+        if subject_index < len(subjects_list):
+            selected_subject = subjects_list[subject_index]
+            context.user_data['selected_subject'] = selected_subject
+            context.user_data['awaiting_hw_date'] = True
+            
+            await query.edit_message_text(
+                text=f"Выбран предмет: {selected_subject}\n\n"
+                     f"Введите дату в формате ГГГГ-ММ-ДД:\n"
+                     f"Например: {datetime.datetime.now().strftime('%Y-%m-%d')}",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"select_subject_{stream}")]])
+            )
+        return
+        
+    elif query.data.startswith('manual_hw_'):
+        stream = query.data.split('_')[-1]
+        context.user_data['awaiting_hw_manual'] = True
         context.user_data['hw_stream'] = stream
         await query.edit_message_text(
             text="Введите домашнее задание в формате:\n"
                  "Дата (ГГГГ-ММ-ДД) | Предмет | Текст задания\n\n"
                  "Пример: 2024-01-15 | Математика | Решить задачи 1-5 на странице 42",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
         )
         return
         
@@ -354,7 +432,55 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if context.user_data.get('awaiting_hw') and is_admin(update):
+    # Обработка ввода даты для домашнего задания (после выбора предмета)
+    if context.user_data.get('awaiting_hw_date'):
+        try:
+            date_str = update.message.text.strip()
+            # Проверяем формат даты
+            datetime.datetime.strptime(date_str, "%Y-%m-%d")
+            
+            stream = context.user_data.get('hw_stream')
+            subject = context.user_data.get('selected_subject')
+            
+            context.user_data['hw_date'] = date_str
+            context.user_data['awaiting_hw_text'] = True
+            del context.user_data['awaiting_hw_date']
+            
+            await update.message.reply_text(
+                f"Дата: {date_str}\n"
+                f"Предмет: {subject}\n\n"
+                f"Введите текст домашнего задания:"
+            )
+            
+        except ValueError:
+            await update.message.reply_text("❌ Неправильный формат даты. Используйте ГГГГ-ММ-ДД")
+            
+    # Обработка ввода текста домашнего задания
+    elif context.user_data.get('awaiting_hw_text'):
+        hw_text = update.message.text
+        stream = context.user_data.get('hw_stream')
+        subject = context.user_data.get('selected_subject')
+        date_str = context.user_data.get('hw_date')
+        
+        hw_key = f"{stream}_{date_str}_{subject}"
+        homeworks[hw_key] = hw_text
+        save_homeworks(homeworks)
+        
+        # Очищаем временные данные
+        for key in ['hw_stream', 'selected_subject', 'hw_date', 'awaiting_hw_text', 'subjects_list']:
+            if key in context.user_data:
+                del context.user_data[key]
+        
+        await update.message.reply_text(
+            f"✅ ДЗ добавлено!\n"
+            f"Дата: {date_str}\n"
+            f"Предмет: {subject}\n"
+            f"Задание: {hw_text}",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
+        )
+    
+    # Обработка ручного ввода домашнего задания
+    elif context.user_data.get('awaiting_hw_manual') and is_admin(update):
         try:
             stream = context.user_data.get('hw_stream')
             parts = update.message.text.split('|')
@@ -370,7 +496,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 homeworks[hw_key] = hw_text
                 save_homeworks(homeworks)
                 
-                del context.user_data['awaiting_hw']
+                del context.user_data['awaiting_hw_manual']
                 del context.user_data['hw_stream']
                 
                 await update.message.reply_text(
