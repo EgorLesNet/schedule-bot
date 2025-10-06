@@ -2,29 +2,42 @@ import datetime
 import pytz
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CallbackQueryHandler, CommandHandler, ContextTypes
-from ics import Calendar
 
 # === НАСТРОЙКИ ===
 BOT_TOKEN = "ВСТАВЬ_СВОЙ_ТОКЕН_ОТ_BOTFATHER"
 ICS_FILE = "GAUGN_1_kurs_2_potok_nodups.ics"
 TIMEZONE = pytz.timezone("Europe/Moscow")
 
-# === ЗАГРУЗКА РАСПИСАНИЯ ===
-with open(ICS_FILE, "r", encoding="utf-8") as f:
-    cal = Calendar(f.read())
+# === ЗАГРУЗКА РАСПИСАНИЯ (без ics parser) ===
+import re
 
-# Преобразуем события в список
 events = []
-for e in cal.events:
-    start = e.begin.astimezone(TIMEZONE).replace(tzinfo=None)
-    end = e.end.astimezone(TIMEZONE).replace(tzinfo=None)
-    events.append({
-        "summary": e.name.strip(),
-        "start": start,
-        "end": end,
-        "desc": e.description or "",
-    })
+with open(ICS_FILE, "r", encoding="utf-8") as f:
+    data = f.read()
 
+for ev_block in data.split("BEGIN:VEVENT"):
+    if "DTSTART" not in ev_block:
+        continue
+
+    try:
+        start_str = re.search(r"DTSTART;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
+        end_str = re.search(r"DTEND;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
+        summary = re.search(r"SUMMARY:(.*)", ev_block).group(1).strip()
+        desc_match = re.search(r"DESCRIPTION:(.*)", ev_block)
+        desc = desc_match.group(1).strip() if desc_match else ""
+
+        start = datetime.datetime.strptime(start_str, "%Y%m%dT%H%M%S")
+        end = datetime.datetime.strptime(end_str, "%Y%m%dT%H%M%S")
+
+        events.append({
+            "summary": summary,
+            "start": start,
+            "end": end,
+            "desc": desc
+        })
+    except Exception as e:
+        print("⚠️ Ошибка в событии:", e)
+        continue
 # === ФУНКЦИИ ===
 def get_week_range(date):
     start = date - datetime.timedelta(days=date.weekday())
