@@ -11,7 +11,7 @@ from telegram.ext import (
 )
 
 # === НАСТРОЙКИ ===
-BOT_TOKEN = os.getenv("BOT_TOKEN", "ВСТАВЬ_СВОЙ_ТОКЕН")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8016190941:AAFqoM5ysLgaGF6MtKh3KM9z-gKWLmW8kBs")
 ICS_FILE = "GAUGN_1_kurs_2_potok_nodups.ics"
 TIMEZONE = pytz.timezone("Europe/Moscow")
 
