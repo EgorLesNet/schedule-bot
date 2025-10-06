@@ -126,11 +126,14 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 # === ЗАПУСК ===
-def main():
+async def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_query))
-    app.run_polling()
+    
+    # Запуск бота
+    await app.run_polling()
 
 if __name__ == "__main__":
-    main()
+    import asyncio
+    asyncio.run(main())
