@@ -2,6 +2,7 @@ import datetime
 import pytz
 import re
 import os
+import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
@@ -126,14 +127,13 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 # === ЗАПУСК ===
-async def main():
+def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_query))
     
     # Запуск бота
-    await app.run_polling()
+    app.run_polling()
 
 if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
+    main()
