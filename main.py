@@ -21,8 +21,32 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+# === ФУНКЦИЯ ДЛЯ ЧТЕНИЯ ТОКЕНА ИЗ ФАЙЛА ===
+def load_bot_token():
+    try:
+        with open("token.txt", "r", encoding="utf-8") as f:
+            token = f.read().strip()
+            if not token:
+                raise ValueError("Файл token.txt пустой")
+            return token
+    except FileNotFoundError:
+        logging.error("❌ Файл token.txt не найден!")
+        print("❌ ОШИБКА: Файл token.txt не найден!")
+        print("Создайте файл token.txt и добавьте в него токен бота")
+        return None
+    except Exception as e:
+        logging.error(f"❌ Ошибка при чтении token.txt: {e}")
+        print(f"❌ ОШИБКА: Не удалось прочитать токен из файла: {e}")
+        return None
+
 # === НАСТРОЙКИ ===
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8016190941:AAFqoM5ysLgaGF6MtKh3KM9z-gKWLmW8kBs")
+# Токен теперь берется из файла token.txt
+BOT_TOKEN = load_bot_token()
+
+# Если токен не загружен, завершаем работу
+if not BOT_TOKEN:
+    exit(1)
+
 ADMIN_USERNAME = "fusuges"  # Без @
 
 # URLs для разных потоков
@@ -144,7 +168,7 @@ def format_day(date, events, stream, is_tomorrow=False):
         'Thursday': 'Четверг',
         'Friday': 'Пятница',
         'Saturday': 'Суббота',
-        'Sunday': 'Воскресенье'
+        'Sunday': 'Воскресеньe'
     }
     
     months_ru = {
@@ -161,7 +185,7 @@ def format_day(date, events, stream, is_tomorrow=False):
     date_str = date.strftime(f'{day_ru}, %d {month_ru}')
     
     # Добавляем пометку "Завтра" если нужно
-    prefix = "🗒️ " if is_tomorrow else "📅 "
+    prefix = "🔄 " if is_tomorrow else "📅 "
     if is_tomorrow:
         date_str = f"Завтра, {date_str}"
     
@@ -193,7 +217,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
     
     keyboard = [
         [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
-         InlineKeyboardButton("🗒️ Завтра", callback_data=f"tomorrow_{stream}")],
+         InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
         [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}")],
         [InlineKeyboardButton("⏭ Следующая неделя", callback_data=f"next_week_{stream}")],
         [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
@@ -283,22 +307,20 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             return
             
-        # Создаем кнопки для выбора предмета (максимум 8 в ряд)
+        # Создаем кнопки для выбора предмета
         keyboard = []
         row = []
         for i, subject in enumerate(subjects):
-            # Обрезаем длинные названия предметов
             button_text = subject[:20] + "..." if len(subject) > 20 else subject
             row.append(InlineKeyboardButton(button_text, callback_data=f"subject_{stream}_{i}"))
-            if len(row) == 2:  # 2 кнопки в ряд
+            if len(row) == 2:
                 keyboard.append(row)
                 row = []
-        if row:  # Добавляем оставшиеся кнопки
+        if row:
             keyboard.append(row)
             
         keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")])
         
-        # Сохраняем список предметов для использования в дальнейшем
         context.user_data['subjects_list'] = subjects
         
         await query.edit_message_text(
@@ -393,7 +415,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         return
 
-    # Обработка основных команд (сегодня, завтра, неделя и т.д.)
+    # Обработка основных команд
     if any(query.data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
         stream = query.data.split('_')[-1]
         today = datetime.datetime.now(TIMEZONE).date()
