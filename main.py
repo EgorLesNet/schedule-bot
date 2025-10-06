@@ -23,7 +23,7 @@ logging.basicConfig(
 
 # === НАСТРОЙКИ ===
 BOT_TOKEN = os.getenv("BOT_TOKEN", "8016190941:AAFqoM5ysLgaGF6MtKh3KM9z-gKWLmW8kBs")
-ADMIN_USERNAME = "@fusuges"
+ADMIN_USERNAME = "fusuges"  # Без @
 
 # URLs для разных потоков
 STREAM_URLS = {
@@ -129,13 +129,38 @@ def format_day(date, events, stream):
     evs = events_for_day(events, date)
     if not evs:
         return f"📅 {date.strftime('%A, %d %B')} — занятий нет\n"
-    text = f"📅 {date.strftime('%A, %d %B')}:\n"
+    
+    # Русские названия дней недели
+    days_ru = {
+        'Monday': 'Понедельник',
+        'Tuesday': 'Вторник', 
+        'Wednesday': 'Среда',
+        'Thursday': 'Четверг',
+        'Friday': 'Пятница',
+        'Saturday': 'Суббота',
+        'Sunday': 'Воскресенье'
+    }
+    
+    months_ru = {
+        'January': 'января', 'February': 'февраля', 'March': 'марта',
+        'April': 'апреля', 'May': 'мая', 'June': 'июня',
+        'July': 'июля', 'August': 'августа', 'September': 'сентября',
+        'October': 'октября', 'November': 'ноября', 'December': 'декабря'
+    }
+    
+    day_en = date.strftime('%A')
+    month_en = date.strftime('%B')
+    day_ru = days_ru.get(day_en, day_en)
+    month_ru = months_ru.get(month_en, month_en)
+    date_str = date.strftime(f'{day_ru}, %d {month_ru}')
+    
+    text = f"📅 {date_str}:\n"
     for ev in sorted(evs, key=lambda x: x["start"]):
-        text += f"{format_event(ev, stream)}\n\n"
+        text += f"• {format_event(ev, stream)}\n\n"
     return text
 
 def is_admin(update: Update):
-    return update.effective_user.username == ADMIN_USERNAME.replace('@', '')
+    return update.effective_user.username == ADMIN_USERNAME
 
 # === ОБРАБОТЧИКИ ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -290,27 +315,43 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         events = load_events_from_github(stream)
 
         if query.data.startswith('today_'):
-            evs = events_for_day(events, today)
             text = format_day(today, events, stream)
+            if "занятий нет" in text:
+                text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
 
         elif query.data.startswith('this_week_'):
             start_date, _ = get_week_range(today)
             text = f"🗓 Расписание на эту неделю ({stream} поток):\n\n"
             for i in range(5):
                 d = start_date + datetime.timedelta(days=i)
-                text += format_day(d, events, stream) + "\n"
+                text += format_day(d, events, stream)
 
         elif query.data.startswith('next_week_'):
             start_date, _ = get_week_range(today + datetime.timedelta(days=7))
             text = f"⏭ Расписание на следующую неделю ({stream} поток):\n\n"
             for i in range(5):
                 d = start_date + datetime.timedelta(days=i)
-                text += format_day(d, events, stream) + "\n"
+                text += format_day(d, events, stream)
 
         else:
             text = "Неизвестная команда."
 
-        await show_main_menu(update, context, stream)
+        # Добавляем кнопки для навигации
+        keyboard = [
+            [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+             InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}")],
+            [InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+            [InlineKeyboardButton("🔙 Главное меню", callback_data=f"select_stream_{stream}")]
+        ]
+        
+        # Обрезаем текст если он слишком длинный для Telegram
+        if len(text) > 4000:
+            text = text[:4000] + "\n\n... (сообщение обрезано)"
+            
+        await query.edit_message_text(
+            text=text,
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if context.user_data.get('awaiting_hw') and is_admin(update):
@@ -353,6 +394,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # === ЗАПУСК ===
 def main():
+    # Загружаем домашние задания при запуске
+    global homeworks
+    homeworks = load_homeworks()
+    
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     
     app.add_handler(CommandHandler("start", start))
@@ -363,6 +408,7 @@ def main():
     print("=" * 50)
     print("🤖 Бот для расписания запущен!")
     print(f"👑 Админ: {ADMIN_USERNAME}")
+    print(f"📚 Загружено домашних заданий: {len(homeworks)}")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
