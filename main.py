@@ -5,6 +5,9 @@ import os
 import requests
 import json
 import logging
+import schedule
+import time
+import threading
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
@@ -32,7 +35,6 @@ def load_bot_token():
     except FileNotFoundError:
         logging.error("❌ Файл token.txt не найден!")
         print("❌ ОШИБКА: Файл token.txt не найден!")
-        print("Создайте файл token.txt с содержимым: BOT_TOKEN=ваш_токен_бота")
         return None
 
 # === НАСТРОЙКИ ===
@@ -41,6 +43,7 @@ if not BOT_TOKEN:
     exit(1)
 
 ADMIN_USERNAME = "fusuges"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/EgorLesNet/schedule-bot/main/main.py"
 
 # URLs для разных потоков
 STREAM_URLS = {
@@ -50,6 +53,8 @@ STREAM_URLS = {
 
 TIMEZONE = pytz.timezone("Europe/Moscow")
 HOMEWORKS_FILE = "homeworks.json"
+USER_SETTINGS_FILE = "user_settings.json"
+LAST_UPDATE_FILE = "last_update.txt"
 
 # Загрузка домашних заданий
 def load_homeworks():
@@ -63,8 +68,33 @@ def save_homeworks(homeworks):
     with open(HOMEWORKS_FILE, "w", encoding="utf-8") as f:
         json.dump(homeworks, f, ensure_ascii=False, indent=2)
 
+# Загрузка настроек пользователей
+def load_user_settings():
+    try:
+        with open(USER_SETTINGS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def save_user_settings(settings):
+    with open(USER_SETTINGS_FILE, "w", encoding="utf-8") as f:
+        json.dump(settings, f, ensure_ascii=False, indent=2)
+
+# Загрузка времени последнего обновления
+def load_last_update():
+    try:
+        with open(LAST_UPDATE_FILE, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return None
+
+def save_last_update():
+    with open(LAST_UPDATE_FILE, "w", encoding="utf-8") as f:
+        f.write(datetime.datetime.now().isoformat())
+
 # Глобальные переменные
 homeworks = load_homeworks()
+user_settings = load_user_settings()
 events_cache = {}
 
 # === ПАРСИНГ ICS ИЗ GITHUB ===
@@ -129,7 +159,6 @@ def is_online_class(ev):
     desc = ev.get("desc", "").lower()
     summary = ev.get("summary", "").lower()
     
-    # Ключевые слова для определения онлайн-пар
     online_keywords = ["онлайн", "online", "zoom", "teams", "вебинар", "webinar", "дистанционно"]
     
     return any(keyword in desc or keyword in summary for keyword in online_keywords)
@@ -141,7 +170,6 @@ def has_only_lunch_break(events, date):
     if len(day_events) == 0:
         return False
     
-    # Если все события - это обеденные перерывы
     lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
     return len(lunch_breaks) == len(day_events)
 
@@ -211,7 +239,7 @@ def format_day(date, events, stream, english_time=None, is_tomorrow=False):
         'Thursday': 'Четверг',
         'Friday': 'Пятница',
         'Saturday': 'Суббота',
-        'Sunday': 'Воскресенье'
+        'Sunday': 'Воскресеньe'
     }
     
     months_ru = {
@@ -242,6 +270,91 @@ def format_day(date, events, stream, english_time=None, is_tomorrow=False):
 
 def is_admin(update: Update):
     return update.effective_user.username == ADMIN_USERNAME
+
+def get_homeworks_for_tomorrow(stream):
+    """Получает домашние задания на завтра"""
+    tomorrow = datetime.datetime.now(TIMEZONE).date() + datetime.timedelta(days=1)
+    tomorrow_homeworks = []
+    
+    for hw_key, hw_text in homeworks.items():
+        if hw_key.startswith(f"{stream}_"):
+            try:
+                hw_date_str = hw_key.split('_')[1]
+                hw_date = datetime.datetime.strptime(hw_date_str, "%Y-%m-%d").date()
+                if hw_date == tomorrow:
+                    subject = hw_key.split('_', 2)[2]
+                    tomorrow_homeworks.append((subject, hw_text))
+            except (ValueError, IndexError):
+                continue
+    
+    return tomorrow_homeworks
+
+async def send_homework_reminders(context: ContextTypes.DEFAULT_TYPE):
+    """Отправляет напоминания о домашних заданиях"""
+    logging.info("🔔 Проверка напоминаний о ДЗ...")
+    
+    for user_id, settings in user_settings.items():
+        try:
+            if settings.get('reminders', False) and settings.get('stream'):
+                stream = settings['stream']
+                tomorrow_hws = get_homeworks_for_tomorrow(stream)
+                
+                if tomorrow_hws:
+                    message = "🔔 Напоминание о домашних заданиях на завтра:\n\n"
+                    for subject, hw_text in tomorrow_hws:
+                        message += f"📖 {subject}:\n{hw_text}\n\n"
+                    
+                    await context.bot.send_message(chat_id=user_id, text=message)
+                    logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
+                
+        except Exception as e:
+            logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
+
+async def check_for_updates(context: ContextTypes.DEFAULT_TYPE):
+    """Проверяет обновления на GitHub"""
+    try:
+        logging.info("🔍 Проверка обновлений на GitHub...")
+        response = requests.get(GITHUB_RAW_URL)
+        if response.status_code == 200:
+            new_content = response.text
+            with open(__file__, "r", encoding="utf-8") as f:
+                current_content = f.read()
+            
+            if new_content != current_content:
+                # Сохраняем новую версию
+                with open(__file__, "w", encoding="utf-8") as f:
+                    f.write(new_content)
+                
+                save_last_update()
+                logging.info("✅ Бот обновлен до последней версии!")
+                
+                # Уведомляем админа
+                if context:
+                    await context.bot.send_message(
+                        chat_id=ADMIN_USERNAME,
+                        text="✅ Бот автоматически обновлен до последней версии из GitHub!"
+                    )
+            else:
+                logging.info("📭 Обновлений нет")
+                
+    except Exception as e:
+        logging.error(f"❌ Ошибка при проверке обновлений: {e}")
+
+def schedule_reminders():
+    """Запускает планировщик для напоминаний и обновлений"""
+    # Напоминания о ДЗ каждый день в 20:00
+    schedule.every().day.at("20:00").do(
+        lambda: asyncio.run_coroutine_threadsafe(send_homework_reminders(None), app._loop)
+    )
+    
+    # Проверка обновлений каждый день в 09:00
+    schedule.every().day.at("09:00").do(
+        lambda: asyncio.run_coroutine_threadsafe(check_for_updates(None), app._loop)
+    )
+    
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
 
 # === ОБРАБОТЧИКИ ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -278,14 +391,22 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
     events = load_events_from_github(stream)
     
     # Сохраняем выбор пользователя
-    if english_time:
-        context.user_data['english_time'] = english_time
+    user_id = str(update.effective_user.id)
+    if user_id not in user_settings:
+        user_settings[user_id] = {}
     
+    user_settings[user_id]['stream'] = stream
+    if english_time:
+        user_settings[user_id]['english_time'] = english_time
+    save_user_settings(user_settings)
+    
+    # Создаем клавиатуру основного меню
     keyboard = [
         [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
          InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
-        [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}")],
-        [InlineKeyboardButton("⏭ Следующая неделя", callback_data=f"next_week_{stream}")],
+        [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}"),
+         InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+        [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_{stream}")],
         [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
     ]
     
@@ -295,22 +416,48 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
     
     reply_markup = InlineKeyboardMarkup(keyboard)
     
+    # Текст с информацией о настройках
     english_text = ""
     if english_time == "morning":
         english_text = "\n🕘 Английский: 9:00-12:10"
     elif english_time == "afternoon":
         english_text = "\n🕑 Английский: 14:00-17:10"
     
+    reminders_status = "🔔" if user_settings[user_id].get('reminders', False) else "🔕"
+    reminders_text = f"\n{reminders_status} Напоминания: {'вкл' if user_settings[user_id].get('reminders', False) else 'выкл'}"
+    
     if update.callback_query:
         await update.callback_query.edit_message_text(
-            text=f"Выбран {stream} поток{english_text}\nВыбери действие:",
+            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
     else:
         await update.message.reply_text(
-            text=f"Выбран {stream} поток{english_text}\nВыбери действие:",
+            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
+
+async def show_reminders_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+    user_id = str(update.effective_user.id)
+    current_status = user_settings.get(user_id, {}).get('reminders', False)
+    
+    status_text = "включены" if current_status else "выключены"
+    status_icon = "🔔" if current_status else "🔕"
+    
+    keyboard = [
+        [InlineKeyboardButton(f"{status_icon} Включить напоминания", callback_data=f"reminders_on_{stream}")],
+        [InlineKeyboardButton(f"{status_icon} Выключить напоминания", callback_data=f"reminders_off_{stream}")],
+        [InlineKeyboardButton("👀 Посмотреть ДЗ на завтра", callback_data=f"view_tomorrow_hw_{stream}")],
+        [InlineKeyboardButton("🔙 Назад", callback_data=f"select_stream_{stream}")]
+    ]
+    
+    await update.callback_query.edit_message_text(
+        text=f"Управление напоминаниями:\n\n"
+             f"Текущий статус: {status_icon} {status_text}\n\n"
+             f"При включенных напоминаниях бот будет присылать уведомления "
+             f"о домашних заданиях на завтра каждый день в 20:00",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
 
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
@@ -336,6 +483,54 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         await show_main_menu(update, context, stream, english_time)
         return
+        
+    elif query.data.startswith('reminders_'):
+        stream = query.data.split('_')[-1]
+        
+        if query.data.startswith('reminders_on_'):
+            user_id = str(update.effective_user.id)
+            if user_id not in user_settings:
+                user_settings[user_id] = {}
+            user_settings[user_id]['reminders'] = True
+            save_user_settings(user_settings)
+            await query.edit_message_text(
+                text="✅ Напоминания включены!\nБот будет присылать уведомления о ДЗ каждый день в 20:00",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
+            )
+            return
+            
+        elif query.data.startswith('reminders_off_'):
+            user_id = str(update.effective_user.id)
+            if user_id not in user_settings:
+                user_settings[user_id] = {}
+            user_settings[user_id]['reminders'] = False
+            save_user_settings(user_settings)
+            await query.edit_message_text(
+                text="🔕 Напоминания выключены",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
+            )
+            return
+            
+        elif query.data.startswith('view_tomorrow_hw_'):
+            stream = query.data.split('_')[-1]
+            tomorrow_hws = get_homeworks_for_tomorrow(stream)
+            
+            if not tomorrow_hws:
+                text = "📭 На завтра домашних заданий нет"
+            else:
+                text = "📚 Домашние задания на завтра:\n\n"
+                for subject, hw_text in tomorrow_hws:
+                    text += f"📖 {subject}:\n{hw_text}\n\n"
+            
+            await query.edit_message_text(
+                text=text,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
+            )
+            return
+            
+        else:
+            await show_reminders_menu(update, context, stream)
+            return
         
     elif query.data.startswith('refresh_'):
         stream = query.data.split('_')[-1]
@@ -509,7 +704,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         events = load_events_from_github(stream)
         
         # Получаем выбранное время английского
-        english_time = context.user_data.get('english_time')
+        user_id = str(update.effective_user.id)
+        english_time = user_settings.get(user_id, {}).get('english_time')
 
         if query.data.startswith('today_'):
             text = format_day(today, events, stream, english_time)
@@ -545,6 +741,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
              InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
             [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}"),
              InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+            [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_{stream}")],
             [InlineKeyboardButton("🔙 Главное меню", callback_data=f"select_stream_{stream}")]
         ]
         
@@ -644,27 +841,52 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("Используйте /start для начала работы")
 
+async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для ручной проверки обновлений"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+        
+    await update.message.reply_text("🔍 Проверяю обновления...")
+    await check_for_updates(context)
+
 # === ЗАПУСК ===
 def main():
-    # Загружаем домашние задания при запуске
-    global homeworks
-    homeworks = load_homeworks()
+    global homeworks, user_settings, app
     
+    # Загружаем данные при запуске
+    homeworks = load_homeworks()
+    user_settings = load_user_settings()
+    
+    # Создаем приложение
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     
+    # Добавляем обработчики
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("update", check_updates_command))
     app.add_handler(CallbackQueryHandler(handle_query))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    
+    # Запускаем планировщик в отдельном потоке
+    scheduler_thread = threading.Thread(target=schedule_reminders, daemon=True)
+    scheduler_thread.start()
+    
+    # Проверяем обновления при запуске
+    asyncio.run_coroutine_threadsafe(check_for_updates(None), app._loop)
     
     logging.info("Бот запускается...")
     print("=" * 50)
     print("🤖 Бот для расписания запущен!")
     print(f"👑 Админ: {ADMIN_USERNAME}")
     print(f"📚 Загружено домашних заданий: {len(homeworks)}")
+    print(f"👥 Пользователей с напоминаниями: {sum(1 for s in user_settings.values() if s.get('reminders', False))}")
+    print("🔔 Напоминания: каждый день в 20:00")
+    print("🔄 Автообновление: каждый день в 09:00")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
     app.run_polling()
 
 if __name__ == "__main__":
+    import asyncio
     main()
