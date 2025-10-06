@@ -18,35 +18,38 @@ TIMEZONE = pytz.timezone("Europe/Moscow")
 
 # === ПАРСИНГ ICS ===
 events = []
-with open(ICS_FILE, "r", encoding="utf-8") as f:
-    data = f.read()
+try:
+    with open(ICS_FILE, "r", encoding="utf-8") as f:
+        data = f.read()
 
-for ev_block in data.split("BEGIN:VEVENT"):
-    if "DTSTART" not in ev_block:
-        continue
-    try:
-        start_str = re.search(r"DTSTART;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
-        end_str = re.search(r"DTEND;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
-        summary = re.search(r"SUMMARY:(.*)", ev_block).group(1).strip()
-        desc_match = re.search(r"DESCRIPTION:(.*)", ev_block)
-        desc = desc_match.group(1).strip() if desc_match else ""
+    for ev_block in data.split("BEGIN:VEVENT"):
+        if "DTSTART" not in ev_block:
+            continue
+        try:
+            start_str = re.search(r"DTSTART;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
+            end_str = re.search(r"DTEND;TZID=Europe/Moscow:(\d{8}T\d{6})", ev_block).group(1)
+            summary = re.search(r"SUMMARY:(.*)", ev_block).group(1).strip()
+            desc_match = re.search(r"DESCRIPTION:(.*)", ev_block)
+            desc = desc_match.group(1).strip() if desc_match else ""
 
-        start = datetime.datetime.strptime(start_str, "%Y%m%dT%H%M%S")
-        end = datetime.datetime.strptime(end_str, "%Y%m%dT%H%M%S")
+            start = datetime.datetime.strptime(start_str, "%Y%m%dT%H%M%S")
+            end = datetime.datetime.strptime(end_str, "%Y%m%dT%H%M%S")
 
-        events.append({
-            "summary": summary,
-            "start": start,
-            "end": end,
-            "desc": desc
-        })
-    except Exception as e:
-        print("⚠️ Ошибка при чтении события:", e)
-        continue
+            events.append({
+                "summary": summary,
+                "start": start,
+                "end": end,
+                "desc": desc
+            })
+        except Exception as e:
+            print("⚠️ Ошибка при чтении события:", e)
+            continue
+except Exception as e:
+    print(f"Ошибка при чтении файла {ICS_FILE}: {e}")
 
 # === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
 def get_week_range(date):
-    start = date - datetime.timedelta(days=date.weekday())  # понедельник
+    start = date - datetime.timedelta(days=date.weekday())
     end = start + datetime.timedelta(days=6)
     return start, end
 
@@ -100,17 +103,17 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text = format_day(today, evs)
 
     elif query.data == "this_week":
-        start, _ = get_week_range(today)
+        start_date, _ = get_week_range(today)
         text = "🗓 Расписание на эту неделю:\n\n"
-        for i in range(5):  # Пн–Пт
-            d = start + datetime.timedelta(days=i)
+        for i in range(5):
+            d = start_date + datetime.timedelta(days=i)
             text += format_day(d, events_for_day(d)) + "\n"
 
     elif query.data == "next_week":
-        start, _ = get_week_range(today + datetime.timedelta(days=7))
+        start_date, _ = get_week_range(today + datetime.timedelta(days=7))
         text = "⏭ Расписание на следующую неделю:\n\n"
         for i in range(5):
-            d = start + datetime.timedelta(days=i)
+            d = start_date + datetime.timedelta(days=i)
             text += format_day(d, events_for_day(d)) + "\n"
 
     else:
@@ -132,7 +135,7 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_query))
     
-    # Запуск бота
+    print("Бот запускается...")
     app.run_polling()
 
 if __name__ == "__main__":
