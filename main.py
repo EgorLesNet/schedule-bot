@@ -113,7 +113,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text += format_day(d, events_for_day(d)) + "\n"
 
     else:
-        text = "Неизвестная команда"
+        text = "Неизвестная команда. Напиши @fusuges если этой ошибки не должно быть!"
 
     keyboard = [
         [InlineKeyboardButton("📅 Сегодня", callback_data="today")],
