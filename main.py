@@ -32,22 +32,15 @@ def load_bot_token():
     except FileNotFoundError:
         logging.error("❌ Файл token.txt не найден!")
         print("❌ ОШИБКА: Файл token.txt не найден!")
-        print("Создайте файл token.txt и добавьте в него токен бота")
-        return None
-    except Exception as e:
-        logging.error(f"❌ Ошибка при чтении token.txt: {e}")
-        print(f"❌ ОШИБКА: Не удалось прочитать токен из файла: {e}")
+        print("Создайте файл token.txt с содержимым: BOT_TOKEN=ваш_токен_бота")
         return None
 
 # === НАСТРОЙКИ ===
-# Токен теперь берется из файла token.txt
 BOT_TOKEN = load_bot_token()
-
-# Если токен не загружен, завершаем работу
 if not BOT_TOKEN:
     exit(1)
 
-ADMIN_USERNAME = "fusuges"  # Без @
+ADMIN_USERNAME = "fusuges"
 
 # URLs для разных потоков
 STREAM_URLS = {
@@ -70,7 +63,7 @@ def save_homeworks(homeworks):
     with open(HOMEWORKS_FILE, "w", encoding="utf-8") as f:
         json.dump(homeworks, f, ensure_ascii=False, indent=2)
 
-# Глобальные переменные для домашних заданий и событий
+# Глобальные переменные
 homeworks = load_homeworks()
 events_cache = {}
 
@@ -131,6 +124,27 @@ def get_week_range(date):
     end = start + datetime.timedelta(days=6)
     return start, end
 
+def is_online_class(ev):
+    """Проверяет, является ли пара онлайн"""
+    desc = ev.get("desc", "").lower()
+    summary = ev.get("summary", "").lower()
+    
+    # Ключевые слова для определения онлайн-пар
+    online_keywords = ["онлайн", "online", "zoom", "teams", "вебинар", "webinar", "дистанционно"]
+    
+    return any(keyword in desc or keyword in summary for keyword in online_keywords)
+
+def has_only_lunch_break(events, date):
+    """Проверяет, есть ли в этот день только обеденный перерыв"""
+    day_events = [e for e in events if e["start"].date() == date]
+    
+    if len(day_events) == 0:
+        return False
+    
+    # Если все события - это обеденные перерывы
+    lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
+    return len(lunch_breaks) == len(day_events)
+
 def format_event(ev, stream):
     desc = ev["desc"]
     teacher, room = "", ""
@@ -139,7 +153,10 @@ def format_event(ev, stream):
     if "Аудитория" in desc:
         room = desc.split("Аудитория:")[1].split("\\n")[0].strip()
     
-    line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}  {ev['summary']}"
+    # Добавляем пометку для онлайн-пар
+    online_marker = " 💻" if is_online_class(ev) else ""
+    
+    line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}  {ev['summary']}{online_marker}"
     if teacher or room:
         line += "\n"
     if teacher:
@@ -154,11 +171,37 @@ def format_event(ev, stream):
     
     return line
 
-def events_for_day(events, date):
-    return [e for e in events if e["start"].date() == date]
+def events_for_day(events, date, english_time=None):
+    day_events = [e for e in events if e["start"].date() == date]
+    
+    # Добавляем английский язык в четверг в выбранное время
+    if date.weekday() == 3 and english_time:  # 3 = четверг
+        if english_time == "morning":
+            start_time = datetime.datetime.combine(date, datetime.time(9, 0))
+            end_time = datetime.datetime.combine(date, datetime.time(12, 10))
+        else:  # afternoon
+            start_time = datetime.datetime.combine(date, datetime.time(14, 0))
+            end_time = datetime.datetime.combine(date, datetime.time(17, 10))
+        
+        # Проверяем, нет ли уже английского в расписании
+        has_english = any("английский" in e["summary"].lower() for e in day_events)
+        if not has_english:
+            english_event = {
+                "summary": "Английский язык 💻",
+                "start": start_time,
+                "end": end_time,
+                "desc": "Онлайн занятие"
+            }
+            day_events.append(english_event)
+    
+    return day_events
 
-def format_day(date, events, stream, is_tomorrow=False):
-    evs = events_for_day(events, date)
+def format_day(date, events, stream, english_time=None, is_tomorrow=False):
+    # Проверяем, есть ли в этот день только обеденные перерывы
+    if has_only_lunch_break(events, date):
+        return f"📅 {date.strftime('%A, %d %B')} — занятий нет\n"
+    
+    evs = events_for_day(events, date, english_time)
     
     # Русские названия дней недели
     days_ru = {
@@ -168,7 +211,7 @@ def format_day(date, events, stream, is_tomorrow=False):
         'Thursday': 'Четверг',
         'Friday': 'Пятница',
         'Saturday': 'Суббота',
-        'Sunday': 'Воскресеньe'
+        'Sunday': 'Воскресенье'
     }
     
     months_ru = {
@@ -212,8 +255,31 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=reply_markup
     )
 
-async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+    keyboard = [
+        [InlineKeyboardButton("🕘 9:00-12:10", callback_data=f"english_morning_{stream}")],
+        [InlineKeyboardButton("🕑 14:00-17:10", callback_data=f"english_afternoon_{stream}")],
+        [InlineKeyboardButton("❌ Без английского", callback_data=f"english_none_{stream}")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text="Выбери время для английского в четверг:",
+            reply_markup=reply_markup
+        )
+    else:
+        await update.message.reply_text(
+            text="Выбери время для английского в четверг:",
+            reply_markup=reply_markup
+        )
+
+async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, english_time=None):
     events = load_events_from_github(stream)
+    
+    # Сохраняем выбор пользователя
+    if english_time:
+        context.user_data['english_time'] = english_time
     
     keyboard = [
         [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
@@ -229,14 +295,20 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
     
     reply_markup = InlineKeyboardMarkup(keyboard)
     
+    english_text = ""
+    if english_time == "morning":
+        english_text = "\n🕘 Английский: 9:00-12:10"
+    elif english_time == "afternoon":
+        english_text = "\n🕑 Английский: 14:00-17:10"
+    
     if update.callback_query:
         await update.callback_query.edit_message_text(
-            text=f"Выбран {stream} поток\nВыбери действие:",
+            text=f"Выбран {stream} поток{english_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
     else:
         await update.message.reply_text(
-            text=f"Выбран {stream} поток\nВыбери действие:",
+            text=f"Выбран {stream} поток{english_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
 
@@ -247,7 +319,22 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if query.data.startswith('select_stream_'):
         stream = query.data.split('_')[-1]
         context.user_data['stream'] = stream
-        await show_main_menu(update, context, stream)
+        await select_english_time(update, context, stream)
+        return
+        
+    elif query.data.startswith('english_'):
+        parts = query.data.split('_')
+        english_option = parts[1]  # morning, afternoon, none
+        stream = parts[2]
+        
+        english_time = None
+        if english_option == "morning":
+            english_time = "morning"
+        elif english_option == "afternoon":
+            english_time = "afternoon"
+        # для "none" оставляем english_time = None
+        
+        await show_main_menu(update, context, stream, english_time)
         return
         
     elif query.data.startswith('refresh_'):
@@ -420,15 +507,18 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         stream = query.data.split('_')[-1]
         today = datetime.datetime.now(TIMEZONE).date()
         events = load_events_from_github(stream)
+        
+        # Получаем выбранное время английского
+        english_time = context.user_data.get('english_time')
 
         if query.data.startswith('today_'):
-            text = format_day(today, events, stream)
+            text = format_day(today, events, stream, english_time)
             if "занятий нет" in text:
                 text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
 
         elif query.data.startswith('tomorrow_'):
             tomorrow = today + datetime.timedelta(days=1)
-            text = format_day(tomorrow, events, stream, is_tomorrow=True)
+            text = format_day(tomorrow, events, stream, english_time, is_tomorrow=True)
             if "занятий нет" in text:
                 text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
 
@@ -437,14 +527,14 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text = f"🗓 Расписание на эту неделю ({stream} поток):\n\n"
             for i in range(5):
                 d = start_date + datetime.timedelta(days=i)
-                text += format_day(d, events, stream)
+                text += format_day(d, events, stream, english_time)
 
         elif query.data.startswith('next_week_'):
             start_date, _ = get_week_range(today + datetime.timedelta(days=7))
             text = f"⏭ Расписание на следующую неделю ({stream} поток):\n\n"
             for i in range(5):
                 d = start_date + datetime.timedelta(days=i)
-                text += format_day(d, events, stream)
+                text += format_day(d, events, stream, english_time)
 
         else:
             text = "Неизвестная команда."
