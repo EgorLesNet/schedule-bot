@@ -8,6 +8,7 @@ import logging
 import schedule
 import time
 import threading
+import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
@@ -56,7 +57,13 @@ HOMEWORKS_FILE = "homeworks.json"
 USER_SETTINGS_FILE = "user_settings.json"
 LAST_UPDATE_FILE = "last_update.txt"
 
-# Загрузка домашних заданий
+# Глобальные переменные
+homeworks = {}
+user_settings = {}
+events_cache = {}
+application = None
+
+# === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
 def load_homeworks():
     try:
         with open(HOMEWORKS_FILE, "r", encoding="utf-8") as f:
@@ -64,11 +71,10 @@ def load_homeworks():
     except FileNotFoundError:
         return {}
 
-def save_homeworks(homeworks):
+def save_homeworks(homeworks_data):
     with open(HOMEWORKS_FILE, "w", encoding="utf-8") as f:
-        json.dump(homeworks, f, ensure_ascii=False, indent=2)
+        json.dump(homeworks_data, f, ensure_ascii=False, indent=2)
 
-# Загрузка настроек пользователей
 def load_user_settings():
     try:
         with open(USER_SETTINGS_FILE, "r", encoding="utf-8") as f:
@@ -76,11 +82,10 @@ def load_user_settings():
     except FileNotFoundError:
         return {}
 
-def save_user_settings(settings):
+def save_user_settings(settings_data):
     with open(USER_SETTINGS_FILE, "w", encoding="utf-8") as f:
-        json.dump(settings, f, ensure_ascii=False, indent=2)
+        json.dump(settings_data, f, ensure_ascii=False, indent=2)
 
-# Загрузка времени последнего обновления
 def load_last_update():
     try:
         with open(LAST_UPDATE_FILE, "r", encoding="utf-8") as f:
@@ -91,11 +96,6 @@ def load_last_update():
 def save_last_update():
     with open(LAST_UPDATE_FILE, "w", encoding="utf-8") as f:
         f.write(datetime.datetime.now().isoformat())
-
-# Глобальные переменные
-homeworks = load_homeworks()
-user_settings = load_user_settings()
-events_cache = {}
 
 # === ПАРСИНГ ICS ИЗ GITHUB ===
 def load_events_from_github(stream):
@@ -289,8 +289,11 @@ def get_homeworks_for_tomorrow(stream):
     
     return tomorrow_homeworks
 
-async def send_homework_reminders(context: ContextTypes.DEFAULT_TYPE):
+async def send_homework_reminders():
     """Отправляет напоминания о домашних заданиях"""
+    if not application:
+        return
+        
     logging.info("🔔 Проверка напоминаний о ДЗ...")
     
     for user_id, settings in user_settings.items():
@@ -304,13 +307,13 @@ async def send_homework_reminders(context: ContextTypes.DEFAULT_TYPE):
                     for subject, hw_text in tomorrow_hws:
                         message += f"📖 {subject}:\n{hw_text}\n\n"
                     
-                    await context.bot.send_message(chat_id=user_id, text=message)
+                    await application.bot.send_message(chat_id=user_id, text=message)
                     logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
                 
         except Exception as e:
             logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
 
-async def check_for_updates(context: ContextTypes.DEFAULT_TYPE):
+async def check_for_updates():
     """Проверяет обновления на GitHub"""
     try:
         logging.info("🔍 Проверка обновлений на GitHub...")
@@ -329,8 +332,8 @@ async def check_for_updates(context: ContextTypes.DEFAULT_TYPE):
                 logging.info("✅ Бот обновлен до последней версии!")
                 
                 # Уведомляем админа
-                if context:
-                    await context.bot.send_message(
+                if application:
+                    await application.bot.send_message(
                         chat_id=ADMIN_USERNAME,
                         text="✅ Бот автоматически обновлен до последней версии из GitHub!"
                     )
@@ -340,17 +343,20 @@ async def check_for_updates(context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         logging.error(f"❌ Ошибка при проверке обновлений: {e}")
 
-def schedule_reminders():
+def run_scheduler():
     """Запускает планировщик для напоминаний и обновлений"""
     # Напоминания о ДЗ каждый день в 20:00
     schedule.every().day.at("20:00").do(
-        lambda: asyncio.run_coroutine_threadsafe(send_homework_reminders(None), app._loop)
+        lambda: asyncio.run(send_homework_reminders())
     )
     
     # Проверка обновлений каждый день в 09:00
     schedule.every().day.at("09:00").do(
-        lambda: asyncio.run_coroutine_threadsafe(check_for_updates(None), app._loop)
+        lambda: asyncio.run(check_for_updates())
     )
+    
+    # Проверка обновлений при запуске
+    asyncio.run(check_for_updates())
     
     while True:
         schedule.run_pending()
@@ -560,142 +566,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
         return
-        
-    elif query.data.startswith('add_hw_'):
-        stream = query.data.split('_')[-1]
-        context.user_data['awaiting_hw_method'] = True
-        context.user_data['hw_stream'] = stream
-        
-        keyboard = [
-            [InlineKeyboardButton("📋 Выбрать из списка предметов", callback_data=f"select_subject_{stream}")],
-            [InlineKeyboardButton("⌨️ Ввести вручную", callback_data=f"manual_hw_{stream}")],
-            [InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]
-        ]
-        
-        await query.edit_message_text(
-            text="Как вы хотите добавить домашнее задание?",
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-        return
-        
-    elif query.data.startswith('select_subject_'):
-        stream = query.data.split('_')[-1]
-        subjects = get_unique_subjects(stream)
-        
-        if not subjects:
-            await query.edit_message_text(
-                text="❌ Не удалось загрузить список предметов",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
-            )
-            return
-            
-        # Создаем кнопки для выбора предмета
-        keyboard = []
-        row = []
-        for i, subject in enumerate(subjects):
-            button_text = subject[:20] + "..." if len(subject) > 20 else subject
-            row.append(InlineKeyboardButton(button_text, callback_data=f"subject_{stream}_{i}"))
-            if len(row) == 2:
-                keyboard.append(row)
-                row = []
-        if row:
-            keyboard.append(row)
-            
-        keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")])
-        
-        context.user_data['subjects_list'] = subjects
-        
-        await query.edit_message_text(
-            text="Выберите предмет:",
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-        return
-        
-    elif query.data.startswith('subject_'):
-        stream = query.data.split('_')[-2]
-        subject_index = int(query.data.split('_')[-1])
-        
-        subjects_list = context.user_data.get('subjects_list', [])
-        if subject_index < len(subjects_list):
-            selected_subject = subjects_list[subject_index]
-            context.user_data['selected_subject'] = selected_subject
-            context.user_data['awaiting_hw_date'] = True
-            
-            await query.edit_message_text(
-                text=f"Выбран предмет: {selected_subject}\n\n"
-                     f"Введите дату в формате ГГГГ-ММ-ДД:\n"
-                     f"Например: {datetime.datetime.now().strftime('%Y-%m-%d')}",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"select_subject_{stream}")]])
-            )
-        return
-        
-    elif query.data.startswith('manual_hw_'):
-        stream = query.data.split('_')[-1]
-        context.user_data['awaiting_hw_manual'] = True
-        context.user_data['hw_stream'] = stream
-        await query.edit_message_text(
-            text="Введите домашнее задание в формате:\n"
-                 "Дата (ГГГГ-ММ-ДД) | Предмет | Текст задания\n\n"
-                 "Пример: 2024-01-15 | Математика | Решить задачи 1-5 на странице 42",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
-        )
-        return
-        
-    elif query.data.startswith('view_hw_'):
-        stream = query.data.split('_')[-1]
-        stream_homeworks = {k: v for k, v in homeworks.items() if k.startswith(f"{stream}_")}
-        
-        if not stream_homeworks:
-            text = "Домашних заданий нет."
-        else:
-            text = "📚 Домашние задания:\n\n"
-            for key, hw_text in stream_homeworks.items():
-                _, date, subject = key.split('_', 2)
-                text += f"📅 {date} | {subject}\n📖 {hw_text}\n\n"
-        
-        await query.edit_message_text(
-            text=text,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-        )
-        return
-        
-    elif query.data.startswith('delete_hw_'):
-        stream = query.data.split('_')[-1]
-        stream_homeworks = {k: v for k, v in homeworks.items() if k.startswith(f"{stream}_")}
-        
-        if not stream_homeworks:
-            await query.edit_message_text(
-                text="Домашних заданий для удаления нет.",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-            )
-            return
-            
-        keyboard = []
-        for key in stream_homeworks.keys():
-            _, date, subject = key.split('_', 2)
-            keyboard.append([InlineKeyboardButton(
-                f"{date} | {subject}", 
-                callback_data=f"confirm_delete_{key}"
-            )])
-        
-        keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
-        
-        await query.edit_message_text(
-            text="Выберите ДЗ для удаления:",
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-        return
-        
-    elif query.data.startswith('confirm_delete_'):
-        hw_key = query.data.replace('confirm_delete_', '')
-        if hw_key in homeworks:
-            del homeworks[hw_key]
-            save_homeworks(homeworks)
-            await query.edit_message_text(
-                text="✅ ДЗ удалено!",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{hw_key.split('_')[0]}")]])
-            )
-        return
 
     # Обработка основных команд
     if any(query.data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
@@ -754,93 +624,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
 
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Обработка ввода даты для домашнего задания (после выбора предмета)
-    if context.user_data.get('awaiting_hw_date'):
-        try:
-            date_str = update.message.text.strip()
-            # Проверяем формат даты
-            datetime.datetime.strptime(date_str, "%Y-%m-%d")
-            
-            stream = context.user_data.get('hw_stream')
-            subject = context.user_data.get('selected_subject')
-            
-            context.user_data['hw_date'] = date_str
-            context.user_data['awaiting_hw_text'] = True
-            del context.user_data['awaiting_hw_date']
-            
-            await update.message.reply_text(
-                f"Дата: {date_str}\n"
-                f"Предмет: {subject}\n\n"
-                f"Введите текст домашнего задания:"
-            )
-            
-        except ValueError:
-            await update.message.reply_text("❌ Неправильный формат даты. Используйте ГГГГ-ММ-ДД")
-            
-    # Обработка ввода текста домашнего задания
-    elif context.user_data.get('awaiting_hw_text'):
-        hw_text = update.message.text
-        stream = context.user_data.get('hw_stream')
-        subject = context.user_data.get('selected_subject')
-        date_str = context.user_data.get('hw_date')
-        
-        hw_key = f"{stream}_{date_str}_{subject}"
-        homeworks[hw_key] = hw_text
-        save_homeworks(homeworks)
-        
-        # Очищаем временные данные
-        for key in ['hw_stream', 'selected_subject', 'hw_date', 'awaiting_hw_text', 'subjects_list']:
-            if key in context.user_data:
-                del context.user_data[key]
-        
-        await update.message.reply_text(
-            f"✅ ДЗ добавлено!\n"
-            f"Дата: {date_str}\n"
-            f"Предмет: {subject}\n"
-            f"Задание: {hw_text}",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-        )
-    
-    # Обработка ручного ввода домашнего задания
-    elif context.user_data.get('awaiting_hw_manual') and is_admin(update):
-        try:
-            stream = context.user_data.get('hw_stream')
-            parts = update.message.text.split('|')
-            if len(parts) == 3:
-                date_str = parts[0].strip()
-                subject = parts[1].strip()
-                hw_text = parts[2].strip()
-                
-                # Проверяем формат даты
-                datetime.datetime.strptime(date_str, "%Y-%m-%d")
-                
-                hw_key = f"{stream}_{date_str}_{subject}"
-                homeworks[hw_key] = hw_text
-                save_homeworks(homeworks)
-                
-                del context.user_data['awaiting_hw_manual']
-                del context.user_data['hw_stream']
-                
-                await update.message.reply_text(
-                    f"✅ ДЗ добавлено!\n"
-                    f"Дата: {date_str}\n"
-                    f"Предмет: {subject}\n"
-                    f"Задание: {hw_text}",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-                )
-            else:
-                await update.message.reply_text(
-                    "❌ Неправильный формат. Используйте:\n"
-                    "Дата (ГГГГ-ММ-ДД) | Предмет | Текст задания"
-                )
-        except ValueError:
-            await update.message.reply_text("❌ Неправильный формат даты. Используйте ГГГГ-ММ-ДД")
-        except Exception as e:
-            await update.message.reply_text(f"❌ Ошибка: {str(e)}")
-    else:
-        await update.message.reply_text("Используйте /start для начала работы")
-
 async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для ручной проверки обновлений"""
     if not is_admin(update):
@@ -848,31 +631,29 @@ async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TY
         return
         
     await update.message.reply_text("🔍 Проверяю обновления...")
-    await check_for_updates(context)
+    await check_for_updates()
+    await update.message.reply_text("✅ Проверка обновлений завершена!")
 
 # === ЗАПУСК ===
 def main():
-    global homeworks, user_settings, app
+    global homeworks, user_settings, application
     
     # Загружаем данные при запуске
     homeworks = load_homeworks()
     user_settings = load_user_settings()
     
     # Создаем приложение
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
     
     # Добавляем обработчики
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("update", check_updates_command))
-    app.add_handler(CallbackQueryHandler(handle_query))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("update", check_updates_command))
+    application.add_handler(CallbackQueryHandler(handle_query))
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, lambda update, context: asyncio.run(handle_message(update, context))))
     
     # Запускаем планировщик в отдельном потоке
-    scheduler_thread = threading.Thread(target=schedule_reminders, daemon=True)
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
     scheduler_thread.start()
-    
-    # Проверяем обновления при запуске
-    asyncio.run_coroutine_threadsafe(check_for_updates(None), app._loop)
     
     logging.info("Бот запускается...")
     print("=" * 50)
@@ -885,8 +666,13 @@ def main():
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
-    app.run_polling()
+    # Запускаем бота
+    application.run_polling()
+
+# Добавляем обработчик сообщений отдельно
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Ваш код обработки сообщений здесь
+    await update.message.reply_text("Используйте /start для начала работы")
 
 if __name__ == "__main__":
-    import asyncio
     main()
