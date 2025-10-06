@@ -133,10 +133,8 @@ def format_event(ev, stream):
 def events_for_day(events, date):
     return [e for e in events if e["start"].date() == date]
 
-def format_day(date, events, stream):
+def format_day(date, events, stream, is_tomorrow=False):
     evs = events_for_day(events, date)
-    if not evs:
-        return f"📅 {date.strftime('%A, %d %B')} — занятий нет\n"
     
     # Русские названия дней недели
     days_ru = {
@@ -162,7 +160,15 @@ def format_day(date, events, stream):
     month_ru = months_ru.get(month_en, month_en)
     date_str = date.strftime(f'{day_ru}, %d {month_ru}')
     
-    text = f"📅 {date_str}:\n"
+    # Добавляем пометку "Завтра" если нужно
+    prefix = "🗒️ " if is_tomorrow else "📅 "
+    if is_tomorrow:
+        date_str = f"Завтра, {date_str}"
+    
+    if not evs:
+        return f"{prefix}{date_str} — занятий нет\n"
+    
+    text = f"{prefix}{date_str}:\n"
     for ev in sorted(evs, key=lambda x: x["start"]):
         text += f"• {format_event(ev, stream)}\n\n"
     return text
@@ -186,7 +192,8 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
     events = load_events_from_github(stream)
     
     keyboard = [
-        [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}")],
+        [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+         InlineKeyboardButton("🗒️ Завтра", callback_data=f"tomorrow_{stream}")],
         [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}")],
         [InlineKeyboardButton("⏭ Следующая неделя", callback_data=f"next_week_{stream}")],
         [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
@@ -386,8 +393,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         return
 
-    # Обработка основных команд (сегодня, неделя и т.д.)
-    if any(query.data.startswith(cmd) for cmd in ['today_', 'this_week_', 'next_week_']):
+    # Обработка основных команд (сегодня, завтра, неделя и т.д.)
+    if any(query.data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
         stream = query.data.split('_')[-1]
         today = datetime.datetime.now(TIMEZONE).date()
         events = load_events_from_github(stream)
@@ -396,6 +403,12 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text = format_day(today, events, stream)
             if "занятий нет" in text:
                 text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+        elif query.data.startswith('tomorrow_'):
+            tomorrow = today + datetime.timedelta(days=1)
+            text = format_day(tomorrow, events, stream, is_tomorrow=True)
+            if "занятий нет" in text:
+                text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
 
         elif query.data.startswith('this_week_'):
             start_date, _ = get_week_range(today)
@@ -417,8 +430,9 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Добавляем кнопки для навигации
         keyboard = [
             [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
-             InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}")],
-            [InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+             InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
+            [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}"),
+             InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
             [InlineKeyboardButton("🔙 Главное меню", callback_data=f"select_stream_{stream}")]
         ]
         
