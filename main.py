@@ -4,7 +4,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CallbackQueryHandler, CommandHandler, ContextTypes
 
 # === НАСТРОЙКИ ===
-BOT_TOKEN = "ВСТАВЬ_СВОЙ_ТОКЕН_ОТ_BOTFATHER"
+BOT_TOKEN = "8016190941:AAFqoM5ysLgaGF6MtKh3KM9z-gKWLmW8kBs"
 ICS_FILE = "GAUGN_1_kurs_2_potok_nodups.ics"
 TIMEZONE = pytz.timezone("Europe/Moscow")
 
