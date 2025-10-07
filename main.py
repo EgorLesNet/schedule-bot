@@ -56,6 +56,7 @@ USER_SETTINGS_FILE = "user_settings.json"
 LAST_UPDATE_FILE = "last_update.txt"
 ASSISTANTS_FILE = "assistants.json"
 SUBJECT_RENAMES_FILE = "subject_renames.json"
+SCHEDULE_EDITS_FILE = "schedule_edits.json"
 
 # Глобальные переменные
 user_settings = {}
@@ -63,6 +64,7 @@ events_cache = {}
 application = None
 assistants = set()
 subject_renames = {}
+schedule_edits = {}
 
 # === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
 def load_assistants():
@@ -91,6 +93,19 @@ def save_subject_renames():
     """Сохраняет переименования предметов"""
     with open(SUBJECT_RENAMES_FILE, "w", encoding="utf-8") as f:
         json.dump(subject_renames, f, ensure_ascii=False, indent=2)
+
+def load_schedule_edits():
+    """Загружает правки расписания"""
+    try:
+        with open(SCHEDULE_EDITS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def save_schedule_edits():
+    """Сохраняет правки расписания"""
+    with open(SCHEDULE_EDITS_FILE, "w", encoding="utf-8") as f:
+        json.dump(schedule_edits, f, ensure_ascii=False, indent=2)
 
 def get_original_subject_name(stream, display_name):
     """Возвращает оригинальное название предмета по отображаемому"""
@@ -140,46 +155,69 @@ def save_last_update():
     with open(LAST_UPDATE_FILE, "w", encoding="utf-8") as f:
         f.write(datetime.datetime.now().isoformat())
 
-# === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
-def is_admin(update: Update):
-    return update.effective_user.username == ADMIN_USERNAME
-
-def is_assistant(update: Update):
-    username = update.effective_user.username
-    return username == ADMIN_USERNAME or username in assistants
-
-def can_manage_homework(update: Update):
-    """Проверяет, может ли пользователь управлять ДЗ"""
-    return is_assistant(update)
-
-def get_week_range(date):
-    start = date - datetime.timedelta(days=date.weekday())
-    end = start + datetime.timedelta(days=6)
-    return start, end
-
-def is_online_class(ev):
-    """Проверяет, является ли пара онлайн"""
-    desc = ev.get("desc", "").lower()
-    summary = ev.get("summary", "").lower()
+# === ФУНКЦИИ РЕДАКТИРОВАНИЯ РАСПИСАНИЯ ===
+def apply_schedule_edits(stream, events):
+    """Применяет правки к расписанию"""
+    if stream not in schedule_edits:
+        return events
     
-    online_keywords = ["онлайн", "online", "zoom", "teams", "вебинар", "webinar", "дистанционно"]
+    stream_edits = schedule_edits[stream]
+    edited_events = []
     
-    return any(keyword in desc or keyword in summary for keyword in online_keywords)
-
-def has_only_lunch_break(events, date):
-    """Проверяет, есть ли в этот день только обеденный перерыв"""
-    day_events = [e for e in events if e["start"].date() == date]
+    for event in events:
+        event_date = event["start"].date().isoformat()
+        event_key = f"{event['original_summary']}|{event['start'].strftime('%H:%M')}"
+        
+        # Проверяем, есть ли правка для этого события
+        if event_date in stream_edits and event_key in stream_edits[event_date]:
+            edit = stream_edits[event_date][event_key]
+            
+            if edit.get("deleted", False):
+                # Пропускаем удаленные события
+                continue
+            elif "new_summary" in edit:
+                # Применяем изменения к событию
+                edited_event = event.copy()
+                edited_event["summary"] = edit["new_summary"]
+                if "new_desc" in edit:
+                    edited_event["desc"] = edit["new_desc"]
+                edited_events.append(edited_event)
+            else:
+                # Оставляем событие без изменений
+                edited_events.append(event)
+        else:
+            # Оставляем событие без изменений
+            edited_events.append(event)
     
-    if len(day_events) == 0:
-        return False
+    # Добавляем новые события
+    for date_str, date_edits in stream_edits.items():
+        for event_key, edit in date_edits.items():
+            if edit.get("new", False) and "start_time" in edit:
+                # Это новое событие
+                try:
+                    start_dt = datetime.datetime.strptime(f"{date_str} {edit['start_time']}", "%Y-%m-%d %H:%M")
+                    end_dt = datetime.datetime.strptime(f"{date_str} {edit['end_time']}", "%Y-%m-%d %H:%M")
+                    
+                    start_dt = TIMEZONE.localize(start_dt)
+                    end_dt = TIMEZONE.localize(end_dt)
+                    
+                    new_event = {
+                        'summary': edit['new_summary'],
+                        'original_summary': edit['new_summary'],
+                        'start': start_dt,
+                        'end': end_dt,
+                        'desc': edit.get('new_desc', '')
+                    }
+                    edited_events.append(new_event)
+                except ValueError as e:
+                    logging.error(f"Ошибка создания нового события: {e}")
     
-    lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
-    return len(lunch_breaks) == len(day_events)
+    return edited_events
 
 # === ПАРСИНГ ICS ИЗ GITHUB ===
 def load_events_from_github(stream):
     if stream in events_cache:
-        return events_cache[stream]
+        return apply_schedule_edits(stream, events_cache[stream])
         
     events = []
     try:
@@ -221,16 +259,13 @@ def load_events_from_github(stream):
                 start_dt = TIMEZONE.localize(start_dt)
                 end_dt = TIMEZONE.localize(end_dt)
                 
-                # ИСПРАВЛЕНИЕ: Гарантируем наличие original_summary
-                event_data = {
+                events.append({
                     'summary': summary,
-                    'original_summary': original_summary,  # Всегда сохраняем оригинальное название
+                    'original_summary': original_summary,
                     'start': start_dt,
                     'end': end_dt,
                     'desc': description
-                }
-                
-                events.append(event_data)
+                })
                 
             except Exception as e:
                 logging.warning(f"Ошибка парсинга события: {e}")
@@ -238,7 +273,7 @@ def load_events_from_github(stream):
                 
         events_cache[stream] = events
         logging.info(f"Успешно загружено {len(events)} событий для потока {stream}")
-        return events
+        return apply_schedule_edits(stream, events)
         
     except Exception as e:
         logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
@@ -249,7 +284,7 @@ def get_unique_subjects(stream):
     events = load_events_from_github(stream)
     subjects = set()
     for event in events:
-        subjects.add(event["summary"])  # Используем отображаемое название
+        subjects.add(event["summary"])
     return sorted(list(subjects))
 
 def get_subject_dates(stream, subject):
@@ -257,9 +292,34 @@ def get_subject_dates(stream, subject):
     events = load_events_from_github(stream)
     dates = []
     for event in events:
-        if event["summary"] == subject:  # Используем отображаемое название
+        if event["summary"] == subject:
             dates.append(event["start"].date())
     return sorted(dates)
+
+# === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
+def get_week_range(date):
+    start = date - datetime.timedelta(days=date.weekday())
+    end = start + datetime.timedelta(days=6)
+    return start, end
+
+def is_online_class(ev):
+    """Проверяет, является ли пара онлайн"""
+    desc = ev.get("desc", "").lower()
+    summary = ev.get("summary", "").lower()
+    
+    online_keywords = ["онлайн", "online", "zoom", "teams", "вебинар", "webinar", "дистанционно"]
+    
+    return any(keyword in desc or keyword in summary for keyword in online_keywords)
+
+def has_only_lunch_break(events, date):
+    """Проверяет, есть ли в этот день только обеденный перерыв"""
+    day_events = [e for e in events if e["start"].date() == date]
+    
+    if len(day_events) == 0:
+        return False
+    
+    lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
+    return len(lunch_breaks) == len(day_events)
 
 def format_event(ev, stream):
     desc = ev["desc"]
@@ -289,11 +349,8 @@ def format_event(ev, stream):
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
-    
-    # ИСПРАВЛЕНИЕ: Безопасное получение оригинального названия
-    # Используем оригинальное название если есть, иначе обычное название
-    subject_name = ev.get('original_summary', ev['summary'])
-    hw_key = f"{subject_name}|{date_str}"
+    # Используем оригинальное название для ключа ДЗ
+    hw_key = f"{ev['original_summary']}|{date_str}"
     homeworks = load_homeworks(stream)
     
     if hw_key in homeworks:
@@ -318,6 +375,7 @@ def events_for_day(events, date, english_time=None):
         if not has_english:
             english_event = {
                 "summary": "Английский язык 💻",
+                "original_summary": "Английский язык",
                 "start": start_time,
                 "end": end_time,
                 "desc": "Онлайн занятие"
@@ -370,6 +428,17 @@ def format_day(date, events, stream, english_time=None, is_tomorrow=False):
         text += f"• {format_event(ev, stream)}\n\n"
     return text
 
+def is_admin(update: Update):
+    return update.effective_user.username == ADMIN_USERNAME
+
+def is_assistant(update: Update):
+    username = update.effective_user.username
+    return username == ADMIN_USERNAME or username in assistants
+
+def can_manage_homework(update: Update):
+    """Проверяет, может ли пользователь управлять ДЗ"""
+    return is_assistant(update)
+
 def get_homeworks_for_tomorrow(stream):
     """Получает домашние задания на завтра"""
     tomorrow = datetime.datetime.now(TIMEZONE).date() + datetime.timedelta(days=1)
@@ -400,10 +469,8 @@ def find_similar_events_across_streams(date, subject, start_time, end_time):
     for stream in ["1", "2"]:
         events = load_events_from_github(stream)
         for event in events:
-            # Используем оригинальное название для сравнения
-            original_subject = event.get('original_summary', event['summary'])
             if (event["start"].date() == date and 
-                original_subject == subject and
+                event["summary"] == subject and
                 event["start"].time() == start_time and
                 event["end"].time() == end_time):
                 similar_events.append((stream, event))
@@ -564,6 +631,7 @@ async def scheduler():
         
         # Ждем 30 секунд перед следующей проверкой
         await asyncio.sleep(30)
+
 # === ОСНОВНЫЕ ОБРАБОТЧИКИ КОМАНД ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
@@ -880,39 +948,44 @@ async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text(message)
 
+async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для ручной проверки обновлений"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+        
+    await update.message.reply_text("🔍 Проверяю обновления...")
+    await check_for_updates()
+    await update.message.reply_text("✅ Проверка обновлений завершена!")
+
+# === ФУНКЦИИ ДЛЯ РЕДАКТИРОВАНИЯ РАСПИСАНИЯ ===
 async def show_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню администратора"""
     if not is_admin(update):
-        # Универсальная отправка сообщения об ошибке
-        if update.callback_query:
-            await update.callback_query.answer("❌ У вас нет прав для этой команды", show_alert=True)
-        else:
-            await update.message.reply_text("❌ У вас нет прав для этой команды")
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
         return
         
     keyboard = [
         [InlineKeyboardButton("👥 Управление помощниками", callback_data="manage_assistants")],
         [InlineKeyboardButton("📝 Переименовать предметы", callback_data="rename_subjects")],
+        [InlineKeyboardButton("✏️ Редактировать расписание", callback_data="edit_schedule")],
         [InlineKeyboardButton("📊 Статистика пользователей", callback_data="user_stats_admin")],
     ]
     
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    # Универсальная отправка сообщения
     if update.callback_query:
         await update.callback_query.edit_message_text(
             text="🔧 Меню администратора:",
-            reply_markup=reply_markup
+            reply_markup=InlineKeyboardMarkup(keyboard)
         )
     else:
         await update.message.reply_text(
             text="🔧 Меню администратора:",
-            reply_markup=reply_markup
+            reply_markup=InlineKeyboardMarkup(keyboard)
         )
 
 async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню управления помощниками"""
-    assistants_list = "\n".join([f"• @{assistant}" for assistant in assistants]) if assistants else "❌ Помощников нет"
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
     
     keyboard = [
         [InlineKeyboardButton("➕ Добавить помощника", callback_data="add_assistant")],
@@ -920,11 +993,44 @@ async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFA
         [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
     ]
     
-    # Отправляем новое сообщение вместо редактирования старого
-    await update.message.reply_text(
-        text=f"👥 Управление помощниками:\n\n{assistants_list}",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text=f"👥 Управление помощниками:\n\n{assistants_list}",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            text=f"👥 Управление помощниками:\n\n{assistants_list}",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+
+async def handle_assistant_username(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
+    """Обрабатывает ввод username помощника"""
+    username = update.message.text.strip().lstrip('@')
+    
+    # Проверяем валидность username
+    if not username:
+        await update.message.reply_text("❌ Username не может быть пустым")
+        return
+    
+    if action == "add":
+        if username in assistants:
+            await update.message.reply_text(f"❌ @{username} уже является помощником")
+        else:
+            assistants.add(username)
+            save_assistants()
+            await update.message.reply_text(f"✅ @{username} добавлен в помощники")
+            
+    elif action == "remove":
+        if username in assistants:
+            assistants.remove(username)
+            save_assistants()
+            await update.message.reply_text(f"✅ @{username} удален из помощников")
+        else:
+            await update.message.reply_text(f"❌ @{username} не найден в помощниках")
+    
+    # Показываем обновленное меню управления помощниками
+    await show_manage_assistants_menu(update, context)
 
 async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню переименования предметов"""
@@ -974,52 +1080,6 @@ async def show_stream_subjects_for_rename(update: Update, context: ContextTypes.
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
-async def handle_all_text_messages(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Универсальный обработчик всех текстовых сообщений"""
-    # Сначала проверяем, ожидаем ли мы ввод username помощника
-    if 'awaiting_assistant' in context.user_data:
-        action = context.user_data.pop('awaiting_assistant')
-        await handle_assistant_username(update, context, action)
-        return
-        
-    # Затем проверяем, ожидаем ли мы ввод нового названия предмета
-    elif 'awaiting_rename' in context.user_data:
-        rename_data = context.user_data.pop('awaiting_rename')
-        await handle_subject_rename(update, context, rename_data['stream'], rename_data['subject'])
-        return
-        
-    # Затем проверяем, находится ли пользователь в процессе добавления ДЗ
-    elif context.user_data.get('hw_step'):
-        await handle_homework_text(update, context)
-        return
-        
-    # Если ничего из вышеперечисленного, то это общее сообщение
-    else:
-        await update.message.reply_text("Используйте /start для начала работы")
-
-async def handle_assistant_username(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
-    """Обрабатывает ввод username помощника"""
-    username = update.message.text.strip().lstrip('@')
-    
-    if action == "add":
-        if username in assistants:
-            await update.message.reply_text(f"❌ @{username} уже является помощником")
-        else:
-            assistants.add(username)
-            save_assistants()
-            await update.message.reply_text(f"✅ @{username} добавлен в помощники")
-            
-    elif action == "remove":
-        if username in assistants:
-            assistants.remove(username)
-            save_assistants()
-            await update.message.reply_text(f"✅ @{username} удален из помощников")
-        else:
-            await update.message.reply_text(f"❌ @{username} не найден в помощниках")
-    
-    # Показываем меню управления помощниками
-    await show_manage_assistants_menu(update, context)
-
 async def handle_subject_rename(update: Update, context: ContextTypes.DEFAULT_TYPE, stream: str, subject: str):
     """Обрабатывает ввод нового названия предмета"""
     new_name = update.message.text.strip()
@@ -1050,6 +1110,378 @@ async def handle_subject_rename(update: Update, context: ContextTypes.DEFAULT_TY
     
     # Показываем меню переименования предметов
     await show_rename_subjects_menu(update, context)
+
+async def show_edit_schedule_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает меню редактирования расписания"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+        
+    keyboard = [
+        [InlineKeyboardButton("📚 1 поток", callback_data="edit_schedule_1")],
+        [InlineKeyboardButton("📚 2 поток", callback_data="edit_schedule_2")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+    ]
+    
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text="📝 Редактирование расписания:\n\nВыберите поток:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            text="📝 Редактирование расписания:\n\nВыберите поток:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+
+async def show_week_selection(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+    """Показывает выбор недели для редактирования"""
+    today = datetime.datetime.now(TIMEZONE).date()
+    start_current, _ = get_week_range(today)
+    start_next = start_current + datetime.timedelta(days=7)
+    
+    # Форматируем даты для отображения
+    current_week_dates = f"{start_current.strftime('%d.%m')} - {(start_current + datetime.timedelta(days=6)).strftime('%d.%m')}"
+    next_week_dates = f"{start_next.strftime('%d.%m')} - {(start_next + datetime.timedelta(days=6)).strftime('%d.%m')}"
+    
+    keyboard = [
+        [InlineKeyboardButton(f"🗓 Текущая неделя ({current_week_dates})", callback_data=f"edit_week_current_{stream}")],
+        [InlineKeyboardButton(f"⏭ След. неделя ({next_week_dates})", callback_data=f"edit_week_next_{stream}")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule_back")]
+    ]
+    
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text=f"Выберите неделю для редактирования ({stream} поток):",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            text=f"Выберите неделю для редактирования ({stream} поток):",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+
+async def show_day_selection(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, week_type):
+    """Показывает выбор дня недели для редактирования"""
+    today = datetime.datetime.now(TIMEZONE).date()
+    
+    if week_type == "current":
+        start_date, _ = get_week_range(today)
+    else:  # next week
+        start_date, _ = get_week_range(today + datetime.timedelta(days=7))
+    
+    days_ru = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+    
+    keyboard = []
+    for i in range(6):  # Пн-Сб
+        day_date = start_date + datetime.timedelta(days=i)
+        day_name = days_ru[i]
+        date_str = day_date.strftime('%d.%m')
+        callback_data = f"edit_day_{stream}_{day_date.isoformat()}"
+        
+        keyboard.append([InlineKeyboardButton(f"📅 {day_name} ({date_str})", callback_data=callback_data)])
+    
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"edit_schedule_{stream}")])
+    
+    await update.callback_query.edit_message_text(
+        text=f"Выберите день для редактирования ({stream} поток):",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_day_events_for_editing(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str):
+    """Показывает события выбранного дня для редактирования"""
+    try:
+        date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+    except ValueError:
+        await update.callback_query.edit_message_text("❌ Ошибка формата даты")
+        return
+    
+    events = load_events_from_github(stream)
+    day_events = [e for e in events if e["start"].date() == date]
+    
+    # Русские названия дней недели
+    days_ru = {
+        'Monday': 'Понедельник', 'Tuesday': 'Вторник', 'Wednesday': 'Среда',
+        'Thursday': 'Четверг', 'Friday': 'Пятница', 'Saturday': 'Суббота', 'Sunday': 'Воскресенье'
+    }
+    
+    months_ru = {
+        'January': 'января', 'February': 'февраля', 'March': 'марта',
+        'April': 'апреля', 'May': 'мая', 'June': 'июня',
+        'July': 'июля', 'August': 'августа', 'September': 'сентября',
+        'October': 'октября', 'November': 'ноября', 'December': 'декабря'
+    }
+    
+    day_en = date.strftime('%A')
+    month_en = date.strftime('%B')
+    day_ru = days_ru.get(day_en, day_en)
+    month_ru = months_ru.get(month_en, month_en)
+    date_display = date.strftime(f'{day_ru}, %d {month_ru}')
+    
+    if not day_events:
+        text = f"📅 {date_display}\n\nЗанятий нет"
+    else:
+        text = f"📅 {date_display}\n\n"
+        for i, event in enumerate(sorted(day_events, key=lambda x: x["start"])):
+            time_str = f"{event['start'].strftime('%H:%M')}–{event['end'].strftime('%H:%M')}"
+            text += f"{i+1}. {time_str} - {event['summary']}\n"
+    
+    keyboard = []
+    
+    # Кнопки для существующих событий
+    for i, event in enumerate(sorted(day_events, key=lambda x: x["start"])):
+        event_key = f"{event['original_summary']}|{event['start'].strftime('%H:%M')}"
+        keyboard.append([
+            InlineKeyboardButton(f"✏️ {i+1}. {event['summary'][:20]}...", 
+                               callback_data=f"edit_event_{stream}_{date_str}_{event_key}")
+        ])
+    
+    # Кнопки действий
+    keyboard.append([InlineKeyboardButton("➕ Добавить пару", callback_data=f"add_event_{stream}_{date_str}")])
+    keyboard.append([InlineKeyboardButton("🔙 Назад к неделе", callback_data=f"edit_week_current_{stream}")])
+    
+    await update.callback_query.edit_message_text(
+        text=text,
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_event_edit_options(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str, event_key):
+    """Показывает опции редактирования для конкретного события"""
+    try:
+        date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+        events = load_events_from_github(stream)
+        
+        # Находим событие
+        target_event = None
+        for event in events:
+            current_key = f"{event['original_summary']}|{event['start'].strftime('%H:%M')}"
+            if current_key == event_key and event["start"].date() == date:
+                target_event = event
+                break
+        
+        if not target_event:
+            await update.callback_query.edit_message_text("❌ Событие не найдено")
+            return
+        
+        time_str = f"{target_event['start'].strftime('%H:%M')}–{target_event['end'].strftime('%H:%M')}"
+        
+        text = (f"✏️ Редактирование пары:\n\n"
+               f"📅 {date.strftime('%d.%m.%Y')}\n"
+               f"🕒 {time_str}\n"
+               f"📚 {target_event['summary']}\n"
+               f"📝 {target_event['desc'][:100]}{'...' if len(target_event['desc']) > 100 else ''}")
+        
+        keyboard = [
+            [InlineKeyboardButton("✏️ Переименовать", callback_data=f"rename_event_{stream}_{date_str}_{event_key}")],
+            [InlineKeyboardButton("❌ Удалить", callback_data=f"delete_event_{stream}_{date_str}_{event_key}")],
+            [InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]
+        ]
+        
+        await update.callback_query.edit_message_text(
+            text=text,
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+        
+    except Exception as e:
+        logging.error(f"Ошибка показа опций редактирования: {e}")
+        await update.callback_query.edit_message_text("❌ Ошибка при загрузке события")
+
+async def handle_event_rename(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str, event_key):
+    """Обрабатывает переименование события"""
+    context.user_data['awaiting_event_rename'] = {
+        'stream': stream,
+        'date': date_str,
+        'event_key': event_key
+    }
+    
+    await update.callback_query.edit_message_text(
+        text="Введите новое название для пары:",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_event_{stream}_{date_str}_{event_key}")]])
+    )
+
+async def handle_event_deletion(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str, event_key):
+    """Обрабатывает удаление события"""
+    # Инициализируем структуру если нужно
+    if stream not in schedule_edits:
+        schedule_edits[stream] = {}
+    if date_str not in schedule_edits[stream]:
+        schedule_edits[stream][date_str] = {}
+    
+    # Помечаем событие как удаленное
+    schedule_edits[stream][date_str][event_key] = {
+        "deleted": True
+    }
+    
+    save_schedule_edits()
+    
+    # Очищаем кэш
+    if stream in events_cache:
+        del events_cache[stream]
+    
+    await update.callback_query.edit_message_text(
+        text="✅ Пара удалена из расписания!",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]])
+    )
+
+async def handle_new_event_creation(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str):
+    """Начинает процесс создания новой пары"""
+    context.user_data['awaiting_new_event'] = {
+        'stream': stream,
+        'date': date_str,
+        'step': 'name'
+    }
+    
+    await update.callback_query.edit_message_text(
+        text="Введите название новой пары:",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_day_{stream}_{date_str}")]])
+    )
+
+async def handle_new_event_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обрабатывает ввод времени для новой пары"""
+    context.user_data['awaiting_new_event']['step'] = 'start_time'
+    context.user_data['awaiting_new_event']['name'] = update.message.text
+    
+    await update.message.reply_text(
+        "Введите время начала пары в формате ЧЧ:ММ (например, 09:00):",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Отмена", callback_data=f"edit_day_{context.user_data['awaiting_new_event']['stream']}_{context.user_data['awaiting_new_event']['date']}")]])
+    )
+
+async def handle_new_event_end_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обрабатывает ввод времени окончания для новой пары"""
+    try:
+        # Проверяем формат времени
+        time.strptime(update.message.text, '%H:%M')
+        context.user_data['awaiting_new_event']['step'] = 'end_time'
+        context.user_data['awaiting_new_event']['start_time'] = update.message.text
+        
+        await update.message.reply_text(
+            "Введите время окончания пары в формате ЧЧ:ММ (например, 10:30):",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Отмена", callback_data=f"edit_day_{context.user_data['awaiting_new_event']['stream']}_{context.user_data['awaiting_new_event']['date']}")]])
+        )
+    except ValueError:
+        await update.message.reply_text("❌ Неверный формат времени. Введите в формате ЧЧ:ММ (например, 09:00):")
+
+async def handle_new_event_description(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обрабатывает ввод описания для новой пары"""
+    try:
+        time.strptime(update.message.text, '%H:%M')
+        context.user_data['awaiting_new_event']['step'] = 'description'
+        context.user_data['awaiting_new_event']['end_time'] = update.message.text
+        
+        await update.message.reply_text(
+            "Введите описание пары (преподаватель, аудитория и т.д.):",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Отмена", callback_data=f"edit_day_{context.user_data['awaiting_new_event']['stream']}_{context.user_data['awaiting_new_event']['date']}")]])
+        )
+    except ValueError:
+        await update.message.reply_text("❌ Неверный формат времени. Введите в формате ЧЧ:ММ (например, 10:30):")
+
+async def save_new_event(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Сохраняет новую пару"""
+    event_data = context.user_data['awaiting_new_event']
+    context.user_data.pop('awaiting_new_event', None)
+    
+    # Инициализируем структуру если нужно
+    stream = event_data['stream']
+    date_str = event_data['date']
+    
+    if stream not in schedule_edits:
+        schedule_edits[stream] = {}
+    if date_str not in schedule_edits[stream]:
+        schedule_edits[stream][date_str] = {}
+    
+    # Создаем ключ для нового события
+    event_key = f"{event_data['name']}|{event_data['start_time']}"
+    
+    # Сохраняем новое событие
+    schedule_edits[stream][date_str][event_key] = {
+        "new": True,
+        "new_summary": event_data['name'],
+        "start_time": event_data['start_time'],
+        "end_time": event_data['end_time'],
+        "new_desc": update.message.text
+    }
+    
+    save_schedule_edits()
+    
+    # Очищаем кэш
+    if stream in events_cache:
+        del events_cache[stream]
+    
+    await update.message.reply_text(
+        f"✅ Новая пара добавлена!\n\n"
+        f"📚 {event_data['name']}\n"
+        f"📅 {datetime.datetime.strptime(date_str, '%Y-%m-%d').strftime('%d.%m.%Y')}\n"
+        f"🕒 {event_data['start_time']}–{event_data['end_time']}\n"
+        f"📝 {update.message.text}",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]])
+    )
+
+# === ОБРАБОТЧИК СООБЩЕНИЙ ===
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработчик текстовых сообщений"""
+    # Проверяем, ожидаем ли мы ввод username помощника
+    if 'awaiting_assistant' in context.user_data:
+        action = context.user_data.pop('awaiting_assistant')
+        await handle_assistant_username(update, context, action)
+        return
+        
+    # Проверяем, ожидаем ли мы ввод нового названия предмета
+    elif 'awaiting_rename' in context.user_data:
+        rename_data = context.user_data.pop('awaiting_rename')
+        await handle_subject_rename(update, context, rename_data['stream'], rename_data['subject'])
+        return
+        
+    # Проверяем, ожидаем ли мы переименование события
+    elif 'awaiting_event_rename' in context.user_data:
+        rename_data = context.user_data.pop('awaiting_event_rename')
+        
+        # Инициализируем структуру если нужно
+        stream = rename_data['stream']
+        date_str = rename_data['date']
+        event_key = rename_data['event_key']
+        
+        if stream not in schedule_edits:
+            schedule_edits[stream] = {}
+        if date_str not in schedule_edits[stream]:
+            schedule_edits[stream][date_str] = {}
+        
+        # Сохраняем переименование
+        schedule_edits[stream][date_str][event_key] = {
+            "new_summary": update.message.text
+        }
+        
+        save_schedule_edits()
+        
+        # Очищаем кэш
+        if stream in events_cache:
+            del events_cache[stream]
+        
+        await update.message.reply_text(
+            f"✅ Пара переименована!\n\nНовое название: {update.message.text}",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]])
+        )
+        return
+        
+    # Проверяем, находимся ли мы в процессе создания новой пары
+    elif 'awaiting_new_event' in context.user_data:
+        event_data = context.user_data['awaiting_new_event']
+        
+        if event_data['step'] == 'name':
+            await handle_new_event_time(update, context)
+        elif event_data['step'] == 'start_time':
+            await handle_new_event_end_time(update, context)
+        elif event_data['step'] == 'end_time':
+            await handle_new_event_description(update, context)
+        elif event_data['step'] == 'description':
+            await save_new_event(update, context)
+        return
+        
+    # Проверяем, находится ли пользователь в процессе добавления ДЗ
+    elif context.user_data.get('hw_step'):
+        await handle_homework_text(update, context)
+        return
+        
+    await update.message.reply_text("Используйте /start для начала работы")
 
 async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик текста домашнего задания"""
@@ -1120,6 +1552,8 @@ async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYP
         context.user_data.pop('hw_step', None)
     else:
         await update.message.reply_text("❌ Сначала выберите предмет для добавления ДЗ через меню")
+
+# === ОБРАБОТЧИК CALLBACK QUERY ===
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -1224,7 +1658,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await show_add_hw_menu(update, context, stream)
             
         elif data.startswith('hw_subj_'):
-            # Правильно извлекаем поток и безопасное название предмета
+            # ИСПРАВЛЕНИЕ: Правильно извлекаем поток и безопасное название предмета
+            # Формат: hw_subj_1_Название_предмета
             parts = data.split('_')
             if len(parts) < 4:
                 await query.answer("Ошибка в данных кнопки")
@@ -1375,12 +1810,16 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 text=text,
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
-            
+
+        # === АДМИНСКИЕ КОМАНДЫ ===
         elif data == "manage_assistants":
             await show_manage_assistants_menu(update, context)
             
         elif data == "rename_subjects":
             await show_rename_subjects_menu(update, context)
+            
+        elif data == "edit_schedule":
+            await show_edit_schedule_menu(update, context)
             
         elif data == "user_stats_admin":
             await users_command(update, context)
@@ -1430,34 +1869,66 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     text=f"Введите новое название для предмета:\n\n{selected_subject}",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"rename_stream_{stream}")]])
                 )
+
+        elif data.startswith('edit_schedule_'):
+            stream = data.split('_')[-1]
+            await show_week_selection(update, context, stream)
+            
+        elif data == "edit_schedule_back":
+            await show_edit_schedule_menu(update, context)
+            
+        elif data.startswith('edit_week_'):
+            # Формат: edit_week_current_1 или edit_week_next_1
+            parts = data.split('_')
+            week_type = parts[2]  # current или next
+            stream = parts[3]
+            await show_day_selection(update, context, stream, week_type)
+            
+        elif data.startswith('edit_day_'):
+            # Формат: edit_day_1_2023-12-25
+            parts = data.split('_')
+            stream = parts[2]
+            date_str = parts[3]
+            await show_day_events_for_editing(update, context, stream, date_str)
+            
+        elif data.startswith('edit_event_'):
+            # Формат: edit_event_1_2023-12-25_Предмет|09:00
+            parts = data.split('_')
+            stream = parts[2]
+            date_str = parts[3]
+            event_key = '_'.join(parts[4:])
+            await show_event_edit_options(update, context, stream, date_str, event_key)
+            
+        elif data.startswith('rename_event_'):
+            parts = data.split('_')
+            stream = parts[2]
+            date_str = parts[3]
+            event_key = '_'.join(parts[4:])
+            await handle_event_rename(update, context, stream, date_str, event_key)
+            
+        elif data.startswith('delete_event_'):
+            parts = data.split('_')
+            stream = parts[2]
+            date_str = parts[3]
+            event_key = '_'.join(parts[4:])
+            await handle_event_deletion(update, context, stream, date_str, event_key)
+            
+        elif data.startswith('add_event_'):
+            parts = data.split('_')
+            stream = parts[2]
+            date_str = parts[3]
+            await handle_new_event_creation(update, context, stream, date_str)
                 
     except Exception as e:
-        logging.error(f"Ошибка в обработчике callback_query: {e}")
-        await query.edit_message_text(
-            text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
-        )
+        logging.error(f"Ошибка в обработчике callback_query: {e}", exc_info=True)
+        try:
+            await query.edit_message_text(
+                text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
+            )
+        except Exception as e2:
+            logging.error(f"Ошибка при отправке сообщения об ошибке: {e2}")
 
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик текстовых сообщений"""
-    # Проверяем, ожидаем ли мы ввод username помощника
-    if 'awaiting_assistant' in context.user_data:
-        action = context.user_data.pop('awaiting_assistant')
-        await handle_assistant_username(update, context, action)
-        return
-        
-    # Проверяем, ожидаем ли мы ввод нового названия предмета
-    elif 'awaiting_rename' in context.user_data:
-        rename_data = context.user_data.pop('awaiting_rename')
-        await handle_subject_rename(update, context, rename_data['stream'], rename_data['subject'])
-        return
-        
-    # Проверяем, находится ли пользователь в процессе добавления ДЗ
-    elif context.user_data.get('hw_step'):
-        await handle_homework_text(update, context)
-        return
-        
-    await update.message.reply_text("Используйте /start для начала работы")
-
+# === КОМАНДЫ ===
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для доступа к меню администратора"""
     await show_admin_menu(update, context)
@@ -1468,28 +1939,19 @@ async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
         await update.message.reply_text("❌ У вас нет прав для этой команды")
         return
     
-    assistants_list = "\n".join([f"• @{assistant}" for assistant in assistants]) if assistants else "❌ Помощников нет"
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
     
     await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
-async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для ручной проверки обновлений"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-        
-    await update.message.reply_text("🔍 Проверяю обновления...")
-    await check_for_updates()
-    await update.message.reply_text("✅ Проверка обновлений завершена!")
-
 # === ЗАПУСК ===
 def main():
-    global user_settings, application, assistants, subject_renames
+    global user_settings, application, assistants, subject_renames, schedule_edits
     
     # Загружаем данные при запуске
     user_settings = load_user_settings()
     assistants = load_assistants()
     subject_renames = load_subject_renames()
+    schedule_edits = load_schedule_edits()
     
     # Создаем приложение
     application = ApplicationBuilder().token(BOT_TOKEN).build()
@@ -1503,9 +1965,10 @@ def main():
     application.add_handler(CallbackQueryHandler(handle_query))
     
     # Обработчик для текста домашнего задания (для админов и помощников)
-    # Используем простой фильтр, проверка прав будет внутри функции
     application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND, 
+        filters.TEXT & ~filters.COMMAND & filters.User(
+            username=lambda username: username == ADMIN_USERNAME or username in assistants
+        ), 
         handle_homework_text
     ))
     
@@ -1523,6 +1986,7 @@ def main():
     print(f"👥 Помощников: {len(assistants)}")
     print("🔔 Напоминания: каждый день в выбранное время")
     print("🔄 Автообновление: каждый день в 09:00")
+    print("✏️ Редактирование расписания: доступно админу")
     print("👤 Команда /users доступна админу для статистики")
     print("🔧 Команда /admin для управления ботом")
     print("⏹️  Для остановки нажмите Ctrl+C")
@@ -1533,3 +1997,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+        # 2000
