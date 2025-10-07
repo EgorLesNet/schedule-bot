@@ -1965,12 +1965,12 @@ def main():
     application.add_handler(CallbackQueryHandler(handle_query))
     
 # Обработчик для текста домашнего задания (для админов и помощников)
-application.add_handler(MessageHandler(
-    filters.TEXT & ~filters.COMMAND & filters.User(
-        username={ADMIN_USERNAME} | assistants
-        ),
-    handle_message  # <- добавьте функцию-обработчик
-    ))  # <- добавьте закрывающие скобки
+    application.add_handler(MessageHandler(
+        filters.TEXT & ~filters.COMMAND & filters.User(
+            username={ADMIN_USERNAME} | assistants
+            ),
+        handle_message  # <- добавьте функцию-обработчик
+        ))  # <- добавьте закрывающие скобки
 
 
     
