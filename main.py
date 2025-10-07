@@ -907,16 +907,11 @@ async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFA
         [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
     ]
     
-    if update.callback_query:
-        await update.callback_query.edit_message_text(
-            text=f"👥 Управление помощниками:\n\n{assistants_list}",
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-    else:
-        await update.message.reply_text(
-            text=f"👥 Управление помощниками:\n\n{assistants_list}",
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
+    # Отправляем новое сообщение вместо редактирования старого
+    await update.message.reply_text(
+        text=f"👥 Управление помощниками:\n\n{assistants_list}",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
 
 async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню переименования предметов"""
@@ -965,6 +960,29 @@ async def show_stream_subjects_for_rename(update: Update, context: ContextTypes.
         text=f"📝 Предметы {stream} потока:\n\nВыберите предмет для переименования:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
+
+async def handle_all_text_messages(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Универсальный обработчик всех текстовых сообщений"""
+    # Сначала проверяем, ожидаем ли мы ввод username помощника
+    if 'awaiting_assistant' in context.user_data:
+        action = context.user_data.pop('awaiting_assistant')
+        await handle_assistant_username(update, context, action)
+        return
+        
+    # Затем проверяем, ожидаем ли мы ввод нового названия предмета
+    elif 'awaiting_rename' in context.user_data:
+        rename_data = context.user_data.pop('awaiting_rename')
+        await handle_subject_rename(update, context, rename_data['stream'], rename_data['subject'])
+        return
+        
+    # Затем проверяем, находится ли пользователь в процессе добавления ДЗ
+    elif context.user_data.get('hw_step'):
+        await handle_homework_text(update, context)
+        return
+        
+    # Если ничего из вышеперечисленного, то это общее сообщение
+    else:
+        await update.message.reply_text("Используйте /start для начала работы")
 
 async def handle_assistant_username(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
     """Обрабатывает ввод username помощника"""
