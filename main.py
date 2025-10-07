@@ -1967,7 +1967,9 @@ def main():
     # Обработчик для текста домашнего задания (для админов и помощников)
     application.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND & filters.User(
-            username=lambda username: username == ADMIN_USERNAME or username in assistants
+            username={ADMIN_USERNAME} | assistants
+),
+
         ), 
         handle_homework_text
     ))
