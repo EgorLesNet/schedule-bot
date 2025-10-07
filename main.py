@@ -314,6 +314,43 @@ def add_homework_for_both_streams(date, subject, homework_text):
     save_homeworks(homeworks)
     return added_for_streams
 
+def get_user_stats():
+    """Получает статистику пользователей"""
+    total_users = len(user_settings)
+    
+    # Статистика по потокам
+    stream_stats = {"1": 0, "2": 0}
+    reminders_stats = {"enabled": 0, "disabled": 0}
+    english_time_stats = {"morning": 0, "afternoon": 0, "none": 0}
+    
+    for user_id, settings in user_settings.items():
+        # Статистика потоков
+        stream = settings.get('stream')
+        if stream in stream_stats:
+            stream_stats[stream] += 1
+        
+        # Статистика напоминаний
+        if settings.get('reminders', False):
+            reminders_stats["enabled"] += 1
+        else:
+            reminders_stats["disabled"] += 1
+        
+        # Статистика времени английского
+        english_time = settings.get('english_time')
+        if english_time == "morning":
+            english_time_stats["morning"] += 1
+        elif english_time == "afternoon":
+            english_time_stats["afternoon"] += 1
+        else:
+            english_time_stats["none"] += 1
+    
+    return {
+        "total_users": total_users,
+        "stream_stats": stream_stats,
+        "reminders_stats": reminders_stats,
+        "english_time_stats": english_time_stats
+    }
+
 async def send_homework_reminders():
     """Отправляет напоминания о домашних заданиях"""
     if not application:
@@ -547,9 +584,16 @@ async def show_add_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, s
     # Создаем клавиатуру с предметами
     keyboard = []
     for subject in subjects:
-        # Обрезаем длинные названия
+        # Обрезаем длинные названия и заменяем проблемные символы
         display_name = subject[:30] + "..." if len(subject) > 30 else subject
-        keyboard.append([InlineKeyboardButton(f"📚 {display_name}", callback_data=f"select_subject_{stream}_{subject}")])
+        
+        # Создаем безопасный идентификатор для callback_data
+        safe_subject = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
+        safe_subject = safe_subject[:20]  # Ограничиваем длину
+        
+        callback_data = f"hw_subj_{stream}_{safe_subject}"
+        
+        keyboard.append([InlineKeyboardButton(f"📚 {display_name}", callback_data=callback_data)])
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
     
@@ -572,7 +616,7 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
     
     # Создаем клавиатуру с ДЗ для удаления
     keyboard = []
-    for hw_key, hw_text in stream_homeworks.items():
+    for hw_key, hw_text in list(stream_homeworks.items())[:20]:  # Ограничиваем количество
         # Форматируем ключ для отображения
         parts = hw_key.split('_')
         date_str = parts[1]
@@ -581,7 +625,8 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
         try:
             date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d.%m.%Y")
             display_text = f"🗑 {date} - {subject[:20]}..."
-            keyboard.append([InlineKeyboardButton(display_text, callback_data=f"delete_hw_{hw_key}")])
+            callback_data = f"del_hw_{hw_key[:30]}"  # Ограничиваем длину ключа
+            keyboard.append([InlineKeyboardButton(display_text, callback_data=callback_data)])
         except:
             continue
     
@@ -636,6 +681,31 @@ async def show_all_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE,
         text=message,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
     )
+
+async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра статистики пользователей (только для админа)"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+    
+    stats = get_user_stats()
+    
+    message = (
+        "📊 Статистика пользователей:\n\n"
+        f"👥 Всего пользователей: {stats['total_users']}\n\n"
+        f"📚 Распределение по потокам:\n"
+        f"• 1 поток: {stats['stream_stats']['1']} пользователей\n"
+        f"• 2 поток: {stats['stream_stats']['2']} пользователей\n\n"
+        f"🔔 Настройки напоминаний:\n"
+        f"• Включены: {stats['reminders_stats']['enabled']} пользователей\n"
+        f"• Выключены: {stats['reminders_stats']['disabled']} пользователей\n\n"
+        f"🕘 Время английского:\n"
+        f"• Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
+        f"• День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
+        f"• Без английского: {stats['english_time_stats']['none']} пользователей"
+    )
+    
+    await update.message.reply_text(message)
 
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
@@ -740,18 +810,36 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             stream = data.split('_')[-1]
             await show_add_hw_menu(update, context, stream)
             
-        elif data.startswith('select_subject_'):
-            # Формат: select_subject_1_Название предмета
-            parts = data.split('_', 3)
-            stream = parts[2]
-            subject = parts[3]
+        elif data.startswith('hw_subj_'):
+            # Формат: hw_subj_1_Название_предмета
+            parts = data.split('_', 2)
+            stream = parts[1]
+            safe_subject = parts[2]
+            
+            # Находим полное название предмета по безопасному идентификатору
+            subjects = get_unique_subjects(stream)
+            original_subject = None
+            
+            for subject in subjects:
+                safe_compare = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
+                safe_compare = safe_compare[:20]  # Ограничиваем длину как при создании
+                if safe_compare == safe_subject:
+                    original_subject = subject
+                    break
+            
+            if not original_subject:
+                await query.edit_message_text(
+                    text="❌ Не удалось найти предмет. Попробуйте снова.",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
+                )
+                return
             
             # Сохраняем в контекст для использования в следующем шаге
-            context.user_data['hw_subject'] = subject
+            context.user_data['hw_subject'] = original_subject
             context.user_data['hw_stream'] = stream
             
             await query.edit_message_text(
-                text=f"📝 Добавление ДЗ для предмета: {subject}\n\n"
+                text=f"📝 Добавление ДЗ для предмета: {original_subject}\n\n"
                      f"Введите текст домашнего задания:",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
             )
@@ -764,22 +852,30 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             stream = data.split('_')[-1]
             await show_delete_hw_menu(update, context, stream)
             
-        elif data.startswith('delete_hw_'):
-            # Формат: delete_hw_1_2023-10-10_Название предмета
-            hw_key = data.replace('delete_hw_', '')
+        elif data.startswith('del_hw_'):
+            # Формат: del_hw_1_2023-10-10_Название_предмета
+            hw_key = data.replace('del_hw_', '')
             
-            if hw_key in homeworks:
-                del homeworks[hw_key]
+            # Находим полный ключ, так как мы его обрезали
+            full_hw_key = None
+            for key in homeworks.keys():
+                if key.startswith(hw_key):
+                    full_hw_key = key
+                    break
+            
+            if full_hw_key and full_hw_key in homeworks:
+                del homeworks[full_hw_key]
                 save_homeworks(homeworks)
                 
                 # Определяем поток из ключа
-                stream = hw_key.split('_')[0]
+                stream = full_hw_key.split('_')[0]
                 
                 await query.edit_message_text(
                     text="✅ Домашнее задание удалено!",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"delete_hw_menu_{stream}")]])
                 )
             else:
+                stream = hw_key.split('_')[0] if '_' in hw_key else "1"
                 await query.edit_message_text(
                     text="❌ Домашнее задание не найдено!",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
@@ -908,6 +1004,7 @@ def main():
     # Добавляем обработчики
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("update", check_updates_command))
+    application.add_handler(CommandHandler("users", users_command))  # Новая команда
     application.add_handler(CallbackQueryHandler(handle_query))
     
     # Обработчик для текста домашнего задания (должен быть перед общим обработчиком сообщений)
@@ -931,6 +1028,7 @@ def main():
     print(f"👥 Пользователей с напоминаниями: {sum(1 for s in user_settings.values() if s.get('reminders', False))}")
     print("🔔 Напоминания: каждый день в выбранное время")
     print("🔄 Автообновление: каждый день в 09:00")
+    print("👤 Команда /users доступна админу для статистики")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
