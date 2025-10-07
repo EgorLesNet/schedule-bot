@@ -177,6 +177,17 @@ def get_subject_dates(stream, subject):
     return sorted(dates)
 
 # === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
+def is_admin(update: Update):
+    return update.effective_user.username == ADMIN_USERNAME
+
+def is_assistant(update: Update):
+    username = update.effective_user.username
+    return username == ADMIN_USERNAME or username in assistants
+
+def can_manage_homework(update: Update):
+    """Проверяет, может ли пользователь управлять ДЗ"""
+    return is_assistant(update)
+
 def get_week_range(date):
     start = date - datetime.timedelta(days=date.weekday())
     end = start + datetime.timedelta(days=6)
@@ -200,10 +211,6 @@ def has_only_lunch_break(events, date):
     
     lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
     return len(lunch_breaks) == len(day_events)
-
-def format_event(ev, stream):
-    desc = ev["desc"]
-    teacher, room = "", ""
     
     # Парсим описание для извлечения преподавателя и аудитории
     if "Преподаватель" in desc:
