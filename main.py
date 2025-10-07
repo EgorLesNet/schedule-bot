@@ -1969,10 +1969,6 @@ def main():
         ),
         handle_message
     ))
-
-    
-    # Общий обработчик сообщений
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
     # Запускаем планировщик в отдельной задаче
     loop = asyncio.get_event_loop()
