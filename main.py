@@ -1463,13 +1463,15 @@ def main():
     application.add_handler(CommandHandler("assistants", assistants_command))
     application.add_handler(CallbackQueryHandler(handle_query))
     
-    # Обработчик для текста домашнего задания (для админов и помощников)
-    application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND & filters.User(
-            username=lambda username: username == ADMIN_USERNAME or username in assistants
-        ), 
-        handle_homework_text
-    ))
+   def user_filter(update: Update) -> bool:
+    """Фильтр для проверки, является ли пользователь админом или помощником"""
+    username = update.effective_user.username
+    return username == ADMIN_USERNAME or username in assistants
+
+application.add_handler(MessageHandler(
+    filters.TEXT & ~filters.COMMAND & filters.Custom(user_filter), 
+    handle_homework_text
+))
     
     # Общий обработчик сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
