@@ -1464,13 +1464,9 @@ def main():
     application.add_handler(CallbackQueryHandler(handle_query))
     
     # Обработчик для текста домашнего задания (для админов и помощников)
-    def admin_or_assistant_filter(update: Update):
-        """Кастомный фильтр для проверки прав доступа"""
-        username = update.effective_user.username
-        return username == ADMIN_USERNAME or username in assistants
-    
+    # Используем простой фильтр, проверка прав будет внутри функции
     application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND & filters.Create(admin_or_assistant_filter), 
+        filters.TEXT & ~filters.COMMAND, 
         handle_homework_text
     ))
     
