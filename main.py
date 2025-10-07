@@ -332,30 +332,64 @@ def get_homeworks_for_tomorrow(stream):
     
     return tomorrow_homeworks
 
-def find_similar_events_across_streams(date, subject):
-    """Находит одинаковые пары в обоих потоках в указанную дату"""
+def find_similar_events_across_streams(date, subject, start_time, end_time):
+    """Находит одинаковые пары в обоих потоках в указанную дату и время"""
     similar_events = []
     
     for stream in ["1", "2"]:
         events = load_events_from_github(stream)
         for event in events:
             if (event["start"].date() == date and 
-                event["summary"] == subject):
+                event["summary"] == subject and
+                event["start"].time() == start_time and
+                event["end"].time() == end_time):
                 similar_events.append((stream, event))
     
     return similar_events
 
-def add_homework_for_both_streams(date, subject, homework_text):
-    """Добавляет ДЗ для обоих потоков, если есть одинаковые пары"""
-    similar_events = find_similar_events_across_streams(date, subject)
+def add_homework_for_both_streams(date, subject, homework_text, current_stream):
+    """Добавляет ДЗ для обоих потоков, если есть одинаковые пары в одно время"""
+    # Находим событие в текущем потоке чтобы получить время
+    current_events = load_events_from_github(current_stream)
+    current_event = None
+    
+    for event in current_events:
+        if (event["start"].date() == date and 
+            event["summary"] == subject):
+            current_event = event
+            break
+    
+    if not current_event:
+        # Если не нашли событие в текущем потоке, добавляем только в текущий
+        hw_key = f"{subject}|{date}"
+        homeworks = load_homeworks(current_stream)
+        homeworks[hw_key] = homework_text
+        save_homeworks(current_stream, homeworks)
+        return [current_stream]
+    
+    # Получаем время события
+    start_time = current_event["start"].time()
+    end_time = current_event["end"].time()
+    
+    # Ищем одинаковые события в обоих потоках
+    similar_events = find_similar_events_across_streams(date, subject, start_time, end_time)
     added_for_streams = []
     
-    for stream, event in similar_events:
+    # Если нашли одинаковые события в обоих потоках, добавляем ДЗ для обоих
+    if len(similar_events) == 2:
+        for stream, event in similar_events:
+            hw_key = f"{subject}|{date}"
+            homeworks = load_homeworks(stream)
+            homeworks[hw_key] = homework_text
+            save_homeworks(stream, homeworks)
+            added_for_streams.append(stream)
+    else:
+        # Если одинаковых событий нет, добавляем только в текущий поток
         hw_key = f"{subject}|{date}"
-        homeworks = load_homeworks(stream)
+        homeworks = load_homeworks(current_stream)
         homeworks[hw_key] = homework_text
-        save_homeworks(stream, homeworks)
-        added_for_streams.append(stream)
+        save_homeworks(current_stream, homeworks)
+        added_for_streams.append(current_stream)
     
     return added_for_streams
 
@@ -1047,9 +1081,10 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
         )
 
+# Обновляем обработчик добавления ДЗ
 async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик текста домашнего задания"""
-    if not is_admin(update):
+    if not can_manage_homework(update):
         await update.message.reply_text("❌ У вас нет прав для управления ДЗ")
         return
     
@@ -1078,7 +1113,6 @@ async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYP
     
     elif hw_step == 'enter_text':
         # Обработка ввода текста ДЗ
-        # Проверяем, есть ли сохраненные данные о предмете и дате
         if 'hw_subject' not in context.user_data or 'hw_date' not in context.user_data or 'hw_stream' not in context.user_data:
             await update.message.reply_text("❌ Сначала выберите предмет и дату для добавления ДЗ")
             return
@@ -1092,15 +1126,21 @@ async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYP
             await update.message.reply_text("❌ Текст домашнего задания не может быть пустым")
             return
         
-        # Добавляем ДЗ для обоих потоков, если есть одинаковые пары
+        # Добавляем ДЗ с проверкой времени
         date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
-        added_streams = add_homework_for_both_streams(date, subject, homework_text)
+        added_streams = add_homework_for_both_streams(date, subject, homework_text, stream)
         
         # Формируем сообщение о результате
         if len(added_streams) == 2:
-            message = f"✅ ДЗ добавлено для обоих потоков!\n\n📖 {subject}\n📅 {date.strftime('%d.%m.%Y')}\n📝 {homework_text}"
+            message = (f"✅ ДЗ добавлено для обоих потоков!\n\n"
+                      f"📖 {subject}\n"
+                      f"📅 {date.strftime('%d.%m.%Y')}\n"
+                      f"📝 {homework_text}")
         else:
-            message = f"✅ ДЗ добавлено для {stream} потока!\n\n📖 {subject}\n📅 {date.strftime('%d.%m.%Y')}\n📝 {homework_text}"
+            message = (f"✅ ДЗ добавлено для {stream} потока!\n\n"
+                      f"📖 {subject}\n"
+                      f"📅 {date.strftime('%d.%m.%Y')}\n"
+                      f"📝 {homework_text}")
         
         await update.message.reply_text(message)
         
