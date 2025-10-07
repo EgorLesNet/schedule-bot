@@ -811,11 +811,21 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await show_add_hw_menu(update, context, stream)
             
         elif data.startswith('hw_subj_'):
+            # ИСПРАВЛЕНИЕ: Правильно извлекаем поток и безопасное название предмета
             # Формат: hw_subj_1_Название_предмета
-            parts = data.split('_', 2)
-            stream = parts[1]
-            safe_subject = parts[2]
+            parts = data.split('_')
+            if len(parts) < 4:
+                await query.answer("Ошибка в данных кнопки")
+                return
+                
+            stream = parts[2]  # Поток находится на третьей позиции
+            safe_subject = '_'.join(parts[3:])  # Остальное - безопасное название предмета
             
+            # Проверяем, что поток корректен
+            if stream not in ['1', '2']:
+                await query.answer("Неверный поток")
+                return
+
             # Находим полное название предмета по безопасному идентификатору
             subjects = get_unique_subjects(stream)
             original_subject = None
@@ -1004,7 +1014,7 @@ def main():
     # Добавляем обработчики
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("update", check_updates_command))
-    application.add_handler(CommandHandler("users", users_command))  # Новая команда
+    application.add_handler(CommandHandler("users", users_command))
     application.add_handler(CallbackQueryHandler(handle_query))
     
     # Обработчик для текста домашнего задания (должен быть перед общим обработчиком сообщений)
