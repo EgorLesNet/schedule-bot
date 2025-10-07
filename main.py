@@ -883,7 +883,11 @@ async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def show_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню администратора"""
     if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        # Универсальная отправка сообщения об ошибке
+        if update.callback_query:
+            await update.callback_query.answer("❌ У вас нет прав для этой команды", show_alert=True)
+        else:
+            await update.message.reply_text("❌ У вас нет прав для этой команды")
         return
         
     keyboard = [
@@ -892,10 +896,19 @@ async def show_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("📊 Статистика пользователей", callback_data="user_stats_admin")],
     ]
     
-    await update.message.reply_text(
-        text="🔧 Меню администратора:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    # Универсальная отправка сообщения
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text="🔧 Меню администратора:",
+            reply_markup=reply_markup
+        )
+    else:
+        await update.message.reply_text(
+            text="🔧 Меню администратора:",
+            reply_markup=reply_markup
+        )
 
 async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает меню управления помощниками"""
