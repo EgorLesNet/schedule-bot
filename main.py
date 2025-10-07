@@ -54,13 +54,55 @@ STREAM_URLS = {
 TIMEZONE = pytz.timezone("Europe/Moscow")
 USER_SETTINGS_FILE = "user_settings.json"
 LAST_UPDATE_FILE = "last_update.txt"
+ASSISTANTS_FILE = "assistants.json"
+SUBJECT_RENAMES_FILE = "subject_renames.json"
 
 # Глобальные переменные
 user_settings = {}
 events_cache = {}
 application = None
+assistants = set()
+subject_renames = {}
 
 # === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
+def load_assistants():
+    """Загружает список помощников"""
+    try:
+        with open(ASSISTANTS_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return set(data.get("assistants", []))
+    except FileNotFoundError:
+        return set()
+
+def save_assistants():
+    """Сохраняет список помощников"""
+    with open(ASSISTANTS_FILE, "w", encoding="utf-8") as f:
+        json.dump({"assistants": list(assistants)}, f, ensure_ascii=False, indent=2)
+
+def load_subject_renames():
+    """Загружает переименования предметов"""
+    try:
+        with open(SUBJECT_RENAMES_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def save_subject_renames():
+    """Сохраняет переименования предметов"""
+    with open(SUBJECT_RENAMES_FILE, "w", encoding="utf-8") as f:
+        json.dump(subject_renames, f, ensure_ascii=False, indent=2)
+
+def get_original_subject_name(stream, display_name):
+    """Возвращает оригинальное название предмета по отображаемому"""
+    for original, renamed in subject_renames.get(stream, {}).items():
+        if renamed == display_name:
+            return original
+    return display_name
+
+def get_display_subject_name(stream, original_name):
+    """Возвращает отображаемое название предмета (с учетом переименований)"""
+    return subject_renames.get(stream, {}).get(original_name, original_name)
+
 def load_homeworks(stream):
     """Загружает домашние задания для указанного потока"""
     filename = f"homeworks{stream}.json"
@@ -98,84 +140,6 @@ def save_last_update():
     with open(LAST_UPDATE_FILE, "w", encoding="utf-8") as f:
         f.write(datetime.datetime.now().isoformat())
 
-# === ПАРСИНГ ICS ИЗ GITHUB ===
-def load_events_from_github(stream):
-    if stream in events_cache:
-        return events_cache[stream]
-        
-    events = []
-    try:
-        logging.info(f"Загрузка расписания для потока {stream} из GitHub...")
-        response = requests.get(STREAM_URLS[stream])
-        response.raise_for_status()
-        data = response.text
-        
-        # Разбиваем на события
-        event_blocks = data.split('BEGIN:VEVENT')
-        
-        for block in event_blocks:
-            if 'END:VEVENT' not in block:
-                continue
-                
-            try:
-                # Извлекаем данные из блока события
-                summary_match = re.search(r'SUMMARY:(.+?)(?:\r\n|\n|$)', block)
-                dtstart_match = re.search(r'DTSTART(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
-                dtend_match = re.search(r'DTEND(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
-                description_match = re.search(r'DESCRIPTION:(.+?)(?:\r\n|\n|$)', block, re.DOTALL)
-                
-                if not all([summary_match, dtstart_match, dtend_match]):
-                    continue
-                
-                summary = summary_match.group(1).strip()
-                start_str = dtstart_match.group(1)
-                end_str = dtend_match.group(1)
-                description = description_match.group(1).strip() if description_match else ""
-                
-                # Парсим даты
-                start_dt = datetime.datetime.strptime(start_str, '%Y%m%dT%H%M%S')
-                end_dt = datetime.datetime.strptime(end_str, '%Y%m%dT%H%M%S')
-                
-                # Локализуем в московское время
-                start_dt = TIMEZONE.localize(start_dt)
-                end_dt = TIMEZONE.localize(end_dt)
-                
-                events.append({
-                    'summary': summary,
-                    'start': start_dt,
-                    'end': end_dt,
-                    'desc': description
-                })
-                
-            except Exception as e:
-                logging.warning(f"Ошибка парсинга события: {e}")
-                continue
-                
-        events_cache[stream] = events
-        logging.info(f"Успешно загружено {len(events)} событий для потока {stream}")
-        return events
-        
-    except Exception as e:
-        logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
-        return []
-
-# Получение уникальных предметов из расписания
-def get_unique_subjects(stream):
-    events = load_events_from_github(stream)
-    subjects = set()
-    for event in events:
-        subjects.add(event["summary"])
-    return sorted(list(subjects))
-
-def get_subject_dates(stream, subject):
-    """Получает все даты для указанного предмета"""
-    events = load_events_from_github(stream)
-    dates = []
-    for event in events:
-        if event["summary"] == subject:
-            dates.append(event["start"].date())
-    return sorted(dates)
-
 # === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
 def is_admin(update: Update):
     return update.effective_user.username == ADMIN_USERNAME
@@ -211,6 +175,92 @@ def has_only_lunch_break(events, date):
     
     lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
     return len(lunch_breaks) == len(day_events)
+
+# === ПАРСИНГ ICS ИЗ GITHUB ===
+def load_events_from_github(stream):
+    if stream in events_cache:
+        return events_cache[stream]
+        
+    events = []
+    try:
+        logging.info(f"Загрузка расписания для потока {stream} из GitHub...")
+        response = requests.get(STREAM_URLS[stream])
+        response.raise_for_status()
+        data = response.text
+        
+        # Разбиваем на события
+        event_blocks = data.split('BEGIN:VEVENT')
+        
+        for block in event_blocks:
+            if 'END:VEVENT' not in block:
+                continue
+                
+            try:
+                # Извлекаем данные из блока события
+                summary_match = re.search(r'SUMMARY:(.+?)(?:\r\n|\n|$)', block)
+                dtstart_match = re.search(r'DTSTART(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
+                dtend_match = re.search(r'DTEND(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
+                description_match = re.search(r'DESCRIPTION:(.+?)(?:\r\n|\n|$)', block, re.DOTALL)
+                
+                if not all([summary_match, dtstart_match, dtend_match]):
+                    continue
+                
+                original_summary = summary_match.group(1).strip()
+                # Применяем переименование если есть
+                summary = get_display_subject_name(stream, original_summary)
+                
+                start_str = dtstart_match.group(1)
+                end_str = dtend_match.group(1)
+                description = description_match.group(1).strip() if description_match else ""
+                
+                # Парсим даты
+                start_dt = datetime.datetime.strptime(start_str, '%Y%m%dT%H%M%S')
+                end_dt = datetime.datetime.strptime(end_str, '%Y%m%dT%H%M%S')
+                
+                # Локализуем в московское время
+                start_dt = TIMEZONE.localize(start_dt)
+                end_dt = TIMEZONE.localize(end_dt)
+                
+                events.append({
+                    'summary': summary,
+                    'original_summary': original_summary,  # Сохраняем оригинальное название
+                    'start': start_dt,
+                    'end': end_dt,
+                    'desc': description
+                })
+                
+            except Exception as e:
+                logging.warning(f"Ошибка парсинга события: {e}")
+                continue
+                
+        events_cache[stream] = events
+        logging.info(f"Успешно загружено {len(events)} событий для потока {stream}")
+        return events
+        
+    except Exception as e:
+        logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
+        return []
+
+# Получение уникальных предметов из расписания
+def get_unique_subjects(stream):
+    events = load_events_from_github(stream)
+    subjects = set()
+    for event in events:
+        subjects.add(event["summary"])  # Используем отображаемое название
+    return sorted(list(subjects))
+
+def get_subject_dates(stream, subject):
+    """Получает все даты для указанного предмета"""
+    events = load_events_from_github(stream)
+    dates = []
+    for event in events:
+        if event["summary"] == subject:  # Используем отображаемое название
+            dates.append(event["start"].date())
+    return sorted(dates)
+
+def format_event(ev, stream):
+    desc = ev["desc"]
+    teacher, room = "", ""
     
     # Парсим описание для извлечения преподавателя и аудитории
     if "Преподаватель" in desc:
@@ -236,7 +286,8 @@ def has_only_lunch_break(events, date):
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
-    hw_key = f"{ev['summary']}|{date_str}"
+    # Используем оригинальное название для ключа ДЗ
+    hw_key = f"{ev['original_summary']}|{date_str}"
     homeworks = load_homeworks(stream)
     
     if hw_key in homeworks:
@@ -312,9 +363,6 @@ def format_day(date, events, stream, english_time=None, is_tomorrow=False):
     for ev in sorted(evs, key=lambda x: x["start"]):
         text += f"• {format_event(ev, stream)}\n\n"
     return text
-
-def is_admin(update: Update):
-    return update.effective_user.username == ADMIN_USERNAME
 
 def get_homeworks_for_tomorrow(stream):
     """Получает домашние задания на завтра"""
@@ -508,7 +556,6 @@ async def scheduler():
         
         # Ждем 30 секунд перед следующей проверкой
         await asyncio.sleep(30)
-
 # === ОСНОВНЫЕ ОБРАБОТЧИКИ КОМАНД ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
@@ -520,10 +567,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Привет! 👋\nВыбери свой поток:",
         reply_markup=reply_markup
     )
-
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик текстовых сообщений"""
-    await update.message.reply_text("Используйте /start для начала работы")
 
 async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     keyboard = [
@@ -582,8 +625,8 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
         [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
     ]
     
-    # Добавляем кнопку управления ДЗ для админа
-    if is_admin(update):
+    # Добавляем кнопку управления ДЗ для админа и помощников
+    if can_manage_homework(update):
         keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{stream}")])
     
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -637,16 +680,20 @@ async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_
 
 async def show_manage_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     """Показывает меню управления домашними заданиями"""
-    if not is_admin(update):
+    if not can_manage_homework(update):
         await update.callback_query.edit_message_text("❌ У вас нет прав для управления ДЗ")
         return
         
     keyboard = [
         [InlineKeyboardButton("📝 Добавить ДЗ", callback_data=f"add_hw_{stream}")],
         [InlineKeyboardButton("👀 Просмотреть все ДЗ", callback_data=f"view_all_hw_{stream}")],
-        [InlineKeyboardButton("❌ Удалить ДЗ", callback_data=f"delete_hw_menu_{stream}")],
-        [InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")],
     ]
+    
+    # Только админ может удалять ДЗ
+    if is_admin(update):
+        keyboard.append([InlineKeyboardButton("❌ Удалить ДЗ", callback_data=f"delete_hw_menu_{stream}")])
+    
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")])
     
     await update.callback_query.edit_message_text(
         text="Управление домашними заданиями:\n\n"
@@ -825,6 +872,215 @@ async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text(message)
 
+async def show_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает меню администратора"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+        
+    keyboard = [
+        [InlineKeyboardButton("👥 Управление помощниками", callback_data="manage_assistants")],
+        [InlineKeyboardButton("📝 Переименовать предметы", callback_data="rename_subjects")],
+        [InlineKeyboardButton("📊 Статистика пользователей", callback_data="user_stats_admin")],
+    ]
+    
+    await update.message.reply_text(
+        text="🔧 Меню администратора:",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает меню управления помощниками"""
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in assistants]) if assistants else "❌ Помощников нет"
+    
+    keyboard = [
+        [InlineKeyboardButton("➕ Добавить помощника", callback_data="add_assistant")],
+        [InlineKeyboardButton("➖ Удалить помощника", callback_data="remove_assistant")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+    ]
+    
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text=f"👥 Управление помощниками:\n\n{assistants_list}",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            text=f"👥 Управление помощниками:\n\n{assistants_list}",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+
+async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает меню переименования предметов"""
+    keyboard = [
+        [InlineKeyboardButton("📚 1 поток", callback_data="rename_stream_1")],
+        [InlineKeyboardButton("📚 2 поток", callback_data="rename_stream_2")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+    ]
+    
+    if update.callback_query:
+        await update.callback_query.edit_message_text(
+            text="📝 Переименование предметов:\n\nВыберите поток:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            text="📝 Переименование предметов:\n\nВыберите поток:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+
+async def show_stream_subjects_for_rename(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+    """Показывает предметы выбранного потока для переименования"""
+    subjects = get_unique_subjects(stream)
+    
+    if not subjects:
+        await update.callback_query.edit_message_text(
+            text="❌ Не удалось загрузить список предметов.",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")]])
+        )
+        return
+    
+    keyboard = []
+    for subject in subjects:
+        # Показываем текущее переименование если есть
+        current_name = get_display_subject_name(stream, get_original_subject_name(stream, subject))
+        display_text = f"✏️ {current_name}"
+        if current_name != get_original_subject_name(stream, subject):
+            display_text += " (переименован)"
+            
+        callback_data = f"rename_subject_{stream}_{re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)[:20]}"
+        keyboard.append([InlineKeyboardButton(display_text, callback_data=callback_data)])
+    
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")])
+    
+    await update.callback_query.edit_message_text(
+        text=f"📝 Предметы {stream} потока:\n\nВыберите предмет для переименования:",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def handle_assistant_username(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
+    """Обрабатывает ввод username помощника"""
+    username = update.message.text.strip().lstrip('@')
+    
+    if action == "add":
+        if username in assistants:
+            await update.message.reply_text(f"❌ @{username} уже является помощником")
+        else:
+            assistants.add(username)
+            save_assistants()
+            await update.message.reply_text(f"✅ @{username} добавлен в помощники")
+            
+    elif action == "remove":
+        if username in assistants:
+            assistants.remove(username)
+            save_assistants()
+            await update.message.reply_text(f"✅ @{username} удален из помощников")
+        else:
+            await update.message.reply_text(f"❌ @{username} не найден в помощниках")
+    
+    # Показываем меню управления помощниками
+    await show_manage_assistants_menu(update, context)
+
+async def handle_subject_rename(update: Update, context: ContextTypes.DEFAULT_TYPE, stream: str, subject: str):
+    """Обрабатывает ввод нового названия предмета"""
+    new_name = update.message.text.strip()
+    
+    if not new_name:
+        await update.message.reply_text("❌ Название не может быть пустым")
+        return
+    
+    # Получаем оригинальное название предмета
+    original_name = get_original_subject_name(stream, subject)
+    
+    # Сохраняем переименование
+    if stream not in subject_renames:
+        subject_renames[stream] = {}
+    subject_renames[stream][original_name] = new_name
+    save_subject_renames()
+    
+    # Очищаем кэш расписания для этого потока
+    if stream in events_cache:
+        del events_cache[stream]
+    
+    await update.message.reply_text(
+        f"✅ Предмет переименован:\n"
+        f"📚 {stream} поток\n"
+        f"Старое: {original_name}\n"
+        f"Новое: {new_name}"
+    )
+    
+    # Показываем меню переименования предметов
+    await show_rename_subjects_menu(update, context)
+
+async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработчик текста домашнего задания"""
+    if not can_manage_homework(update):
+        await update.message.reply_text("❌ У вас нет прав для управления ДЗ")
+        return
+    
+    # Проверяем, на каком шаге добавления ДЗ мы находимся
+    hw_step = context.user_data.get('hw_step')
+    
+    if hw_step == 'enter_date_manual':
+        # Обработка ручного ввода даты
+        try:
+            date = datetime.datetime.strptime(update.message.text, '%d.%m.%Y').date()
+            context.user_data['hw_date'] = date.isoformat()
+            context.user_data['hw_step'] = 'enter_text'
+            
+            subject = context.user_data['hw_subject']
+            stream = context.user_data['hw_stream']
+            
+            await update.message.reply_text(
+                f"📝 Добавление ДЗ для предмета: {subject}\n"
+                f"📅 Дата: {date.strftime('%d.%m.%Y')}\n\n"
+                f"Введите текст домашнего задания:",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
+            )
+        except ValueError:
+            await update.message.reply_text("❌ Неверный формат даты. Введите дату в формате ДД.ММ.ГГГГ (например, 25.12.2023):")
+        return
+    
+    elif hw_step == 'enter_text':
+        # Обработка ввода текста ДЗ
+        if 'hw_subject' not in context.user_data or 'hw_date' not in context.user_data or 'hw_stream' not in context.user_data:
+            await update.message.reply_text("❌ Сначала выберите предмет и дату для добавления ДЗ")
+            return
+        
+        homework_text = update.message.text
+        subject = context.user_data['hw_subject']
+        date_str = context.user_data['hw_date']
+        stream = context.user_data['hw_stream']
+        
+        if not homework_text.strip():
+            await update.message.reply_text("❌ Текст домашнего задания не может быть пустым")
+            return
+        
+        # Добавляем ДЗ с проверкой времени
+        date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+        added_streams = add_homework_for_both_streams(date, subject, homework_text, stream)
+        
+        # Формируем сообщение о результате
+        if len(added_streams) == 2:
+            message = (f"✅ ДЗ добавлено для обоих потоков!\n\n"
+                      f"📖 {subject}\n"
+                      f"📅 {date.strftime('%d.%m.%Y')}\n"
+                      f"📝 {homework_text}")
+        else:
+            message = (f"✅ ДЗ добавлено для {stream} потока!\n\n"
+                      f"📖 {subject}\n"
+                      f"📅 {date.strftime('%d.%m.%Y')}\n"
+                      f"📝 {homework_text}")
+        
+        await update.message.reply_text(message)
+        
+        # Очищаем контекст
+        context.user_data.pop('hw_subject', None)
+        context.user_data.pop('hw_date', None)
+        context.user_data.pop('hw_stream', None)
+        context.user_data.pop('hw_step', None)
+    else:
+        await update.message.reply_text("❌ Сначала выберите предмет для добавления ДЗ через меню")
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -929,8 +1185,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await show_add_hw_menu(update, context, stream)
             
         elif data.startswith('hw_subj_'):
-            # ИСПРАВЛЕНИЕ: Правильно извлекаем поток и безопасное название предмета
-            # Формат: hw_subj_1_Название_предмета
+            # Правильно извлекаем поток и безопасное название предмета
             parts = data.split('_')
             if len(parts) < 4:
                 await query.answer("Ошибка в данных кнопки")
@@ -1082,82 +1337,101 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
             
+        elif data == "manage_assistants":
+            await show_manage_assistants_menu(update, context)
+            
+        elif data == "rename_subjects":
+            await show_rename_subjects_menu(update, context)
+            
+        elif data == "user_stats_admin":
+            await users_command(update, context)
+            
+        elif data == "back_to_admin":
+            await show_admin_menu(update, context)
+            
+        elif data == "add_assistant":
+            context.user_data['awaiting_assistant'] = "add"
+            await query.edit_message_text(
+                text="Введите username помощника (без @):",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
+            )
+            
+        elif data == "remove_assistant":
+            context.user_data['awaiting_assistant'] = "remove"
+            await query.edit_message_text(
+                text="Введите username помощника для удаления (без @):",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
+            )
+            
+        elif data.startswith('rename_stream_'):
+            stream = data.split('_')[-1]
+            await show_stream_subjects_for_rename(update, context, stream)
+            
+        elif data.startswith('rename_subject_'):
+            parts = data.split('_')
+            stream = parts[2]
+            safe_subject = '_'.join(parts[3:])
+            
+            # Находим полное название предмета
+            subjects = get_unique_subjects(stream)
+            selected_subject = None
+            for subject in subjects:
+                safe_compare = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
+                safe_compare = safe_compare[:20]
+                if safe_compare == safe_subject:
+                    selected_subject = subject
+                    break
+            
+            if selected_subject:
+                context.user_data['awaiting_rename'] = {
+                    'stream': stream,
+                    'subject': selected_subject
+                }
+                await query.edit_message_text(
+                    text=f"Введите новое название для предмета:\n\n{selected_subject}",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"rename_stream_{stream}")]])
+                )
+                
     except Exception as e:
         logging.error(f"Ошибка в обработчике callback_query: {e}")
         await query.edit_message_text(
             text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
         )
 
-# Обновляем обработчик добавления ДЗ
-async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик текста домашнего задания"""
-    if not can_manage_homework(update):
-        await update.message.reply_text("❌ У вас нет прав для управления ДЗ")
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработчик текстовых сообщений"""
+    # Проверяем, ожидаем ли мы ввод username помощника
+    if 'awaiting_assistant' in context.user_data:
+        action = context.user_data.pop('awaiting_assistant')
+        await handle_assistant_username(update, context, action)
+        return
+        
+    # Проверяем, ожидаем ли мы ввод нового названия предмета
+    elif 'awaiting_rename' in context.user_data:
+        rename_data = context.user_data.pop('awaiting_rename')
+        await handle_subject_rename(update, context, rename_data['stream'], rename_data['subject'])
+        return
+        
+    # Проверяем, находится ли пользователь в процессе добавления ДЗ
+    elif context.user_data.get('hw_step'):
+        await handle_homework_text(update, context)
+        return
+        
+    await update.message.reply_text("Используйте /start для начала работы")
+
+async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для доступа к меню администратора"""
+    await show_admin_menu(update, context)
+
+async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра списка помощников"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
         return
     
-    # Проверяем, на каком шаге добавления ДЗ мы находимся
-    hw_step = context.user_data.get('hw_step')
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in assistants]) if assistants else "❌ Помощников нет"
     
-    if hw_step == 'enter_date_manual':
-        # Обработка ручного ввода даты
-        try:
-            date = datetime.datetime.strptime(update.message.text, '%d.%m.%Y').date()
-            context.user_data['hw_date'] = date.isoformat()
-            context.user_data['hw_step'] = 'enter_text'
-            
-            subject = context.user_data['hw_subject']
-            stream = context.user_data['hw_stream']
-            
-            await update.message.reply_text(
-                f"📝 Добавление ДЗ для предмета: {subject}\n"
-                f"📅 Дата: {date.strftime('%d.%m.%Y')}\n\n"
-                f"Введите текст домашнего задания:",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
-            )
-        except ValueError:
-            await update.message.reply_text("❌ Неверный формат даты. Введите дату в формате ДД.ММ.ГГГГ (например, 25.12.2023):")
-        return
-    
-    elif hw_step == 'enter_text':
-        # Обработка ввода текста ДЗ
-        if 'hw_subject' not in context.user_data or 'hw_date' not in context.user_data or 'hw_stream' not in context.user_data:
-            await update.message.reply_text("❌ Сначала выберите предмет и дату для добавления ДЗ")
-            return
-        
-        homework_text = update.message.text
-        subject = context.user_data['hw_subject']
-        date_str = context.user_data['hw_date']
-        stream = context.user_data['hw_stream']
-        
-        if not homework_text.strip():
-            await update.message.reply_text("❌ Текст домашнего задания не может быть пустым")
-            return
-        
-        # Добавляем ДЗ с проверкой времени
-        date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
-        added_streams = add_homework_for_both_streams(date, subject, homework_text, stream)
-        
-        # Формируем сообщение о результате
-        if len(added_streams) == 2:
-            message = (f"✅ ДЗ добавлено для обоих потоков!\n\n"
-                      f"📖 {subject}\n"
-                      f"📅 {date.strftime('%d.%m.%Y')}\n"
-                      f"📝 {homework_text}")
-        else:
-            message = (f"✅ ДЗ добавлено для {stream} потока!\n\n"
-                      f"📖 {subject}\n"
-                      f"📅 {date.strftime('%d.%m.%Y')}\n"
-                      f"📝 {homework_text}")
-        
-        await update.message.reply_text(message)
-        
-        # Очищаем контекст
-        context.user_data.pop('hw_subject', None)
-        context.user_data.pop('hw_date', None)
-        context.user_data.pop('hw_stream', None)
-        context.user_data.pop('hw_step', None)
-    else:
-        await update.message.reply_text("❌ Сначала выберите предмет для добавления ДЗ через меню")
+    await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
 async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для ручной проверки обновлений"""
@@ -1171,10 +1445,12 @@ async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TY
 
 # === ЗАПУСК ===
 def main():
-    global user_settings, application
+    global user_settings, application, assistants, subject_renames
     
     # Загружаем данные при запуске
     user_settings = load_user_settings()
+    assistants = load_assistants()
+    subject_renames = load_subject_renames()
     
     # Создаем приложение
     application = ApplicationBuilder().token(BOT_TOKEN).build()
@@ -1183,11 +1459,15 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("update", check_updates_command))
     application.add_handler(CommandHandler("users", users_command))
+    application.add_handler(CommandHandler("admin", admin_command))
+    application.add_handler(CommandHandler("assistants", assistants_command))
     application.add_handler(CallbackQueryHandler(handle_query))
     
-    # Обработчик для текста домашнего задания (должен быть перед общим обработчиком сообщений)
+    # Обработчик для текста домашнего задания (для админов и помощников)
     application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND & filters.User(username=ADMIN_USERNAME), 
+        filters.TEXT & ~filters.COMMAND & filters.User(
+            username=lambda username: username == ADMIN_USERNAME or username in assistants
+        ), 
         handle_homework_text
     ))
     
@@ -1202,9 +1482,11 @@ def main():
     print("=" * 50)
     print("🤖 Бот для расписания запущен!")
     print(f"👑 Админ: {ADMIN_USERNAME}")
+    print(f"👥 Помощников: {len(assistants)}")
     print("🔔 Напоминания: каждый день в выбранное время")
     print("🔄 Автообновление: каждый день в 09:00")
     print("👤 Команда /users доступна админу для статистики")
+    print("🔧 Команда /admin для управления ботом")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
