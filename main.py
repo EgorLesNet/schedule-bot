@@ -1968,11 +1968,8 @@ def main():
     application.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND & filters.User(
             username={ADMIN_USERNAME} | assistants
-),
+        ),
 
-        ), 
-        handle_homework_text
-    )
     
     # Общий обработчик сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
