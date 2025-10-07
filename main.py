@@ -221,13 +221,16 @@ def load_events_from_github(stream):
                 start_dt = TIMEZONE.localize(start_dt)
                 end_dt = TIMEZONE.localize(end_dt)
                 
-                events.append({
+                # ИСПРАВЛЕНИЕ: Гарантируем наличие original_summary
+                event_data = {
                     'summary': summary,
-                    'original_summary': original_summary,  # Сохраняем оригинальное название
+                    'original_summary': original_summary,  # Всегда сохраняем оригинальное название
                     'start': start_dt,
                     'end': end_dt,
                     'desc': description
-                })
+                }
+                
+                events.append(event_data)
                 
             except Exception as e:
                 logging.warning(f"Ошибка парсинга события: {e}")
@@ -286,8 +289,11 @@ def format_event(ev, stream):
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
-    # Используем оригинальное название для ключа ДЗ
-    hw_key = f"{ev['original_summary']}|{date_str}"
+    
+    # ИСПРАВЛЕНИЕ: Безопасное получение оригинального названия
+    # Используем оригинальное название если есть, иначе обычное название
+    subject_name = ev.get('original_summary', ev['summary'])
+    hw_key = f"{subject_name}|{date_str}"
     homeworks = load_homeworks(stream)
     
     if hw_key in homeworks:
@@ -394,8 +400,10 @@ def find_similar_events_across_streams(date, subject, start_time, end_time):
     for stream in ["1", "2"]:
         events = load_events_from_github(stream)
         for event in events:
+            # Используем оригинальное название для сравнения
+            original_subject = event.get('original_summary', event['summary'])
             if (event["start"].date() == date and 
-                event["summary"] == subject and
+                original_subject == subject and
                 event["start"].time() == start_time and
                 event["end"].time() == end_time):
                 similar_events.append((stream, event))
