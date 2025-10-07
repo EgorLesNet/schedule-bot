@@ -1972,7 +1972,7 @@ def main():
 
         ), 
         handle_homework_text
-    ))
+    )
     
     # Общий обработчик сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
