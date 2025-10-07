@@ -5,9 +5,11 @@ import os
 import requests
 import json
 import logging
+import schedule
 import time
 import threading
 import asyncio
+import sys
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
@@ -40,6 +42,7 @@ def load_bot_token():
 # === НАСТРОЙКИ ===
 BOT_TOKEN = load_bot_token()
 if not BOT_TOKEN:
+    print("❌ Не удалось загрузить токен бота. Завершение работы.")
     exit(1)
 
 ADMIN_USERNAME = "fusuges"
@@ -238,7 +241,7 @@ def format_day(date, events, stream, english_time=None, is_tomorrow=False):
         'Thursday': 'Четверг',
         'Friday': 'Пятница',
         'Saturday': 'Суббота',
-        'Sunday': 'Воскресеньe'
+        'Sunday': 'Воскресенье'
     }
     
     months_ru = {
@@ -287,69 +290,6 @@ def get_homeworks_for_tomorrow(stream):
                 continue
     
     return tomorrow_homeworks
-
-def find_similar_events_across_streams(date, subject):
-    """Находит одинаковые пары в обоих потоках в указанную дату"""
-    similar_events = []
-    
-    for stream in ["1", "2"]:
-        events = load_events_from_github(stream)
-        for event in events:
-            if (event["start"].date() == date and 
-                event["summary"] == subject):
-                similar_events.append((stream, event))
-    
-    return similar_events
-
-def add_homework_for_both_streams(date, subject, homework_text):
-    """Добавляет ДЗ для обоих потоков, если есть одинаковые пары"""
-    similar_events = find_similar_events_across_streams(date, subject)
-    added_for_streams = []
-    
-    for stream, event in similar_events:
-        hw_key = f"{stream}_{date}_{subject}"
-        homeworks[hw_key] = homework_text
-        added_for_streams.append(stream)
-    
-    save_homeworks(homeworks)
-    return added_for_streams
-
-def get_user_stats():
-    """Получает статистику пользователей"""
-    total_users = len(user_settings)
-    
-    # Статистика по потокам
-    stream_stats = {"1": 0, "2": 0}
-    reminders_stats = {"enabled": 0, "disabled": 0}
-    english_time_stats = {"morning": 0, "afternoon": 0, "none": 0}
-    
-    for user_id, settings in user_settings.items():
-        # Статистика потоков
-        stream = settings.get('stream')
-        if stream in stream_stats:
-            stream_stats[stream] += 1
-        
-        # Статистика напоминаний
-        if settings.get('reminders', False):
-            reminders_stats["enabled"] += 1
-        else:
-            reminders_stats["disabled"] += 1
-        
-        # Статистика времени английского
-        english_time = settings.get('english_time')
-        if english_time == "morning":
-            english_time_stats["morning"] += 1
-        elif english_time == "afternoon":
-            english_time_stats["afternoon"] += 1
-        else:
-            english_time_stats["none"] += 1
-    
-    return {
-        "total_users": total_users,
-        "stream_stats": stream_stats,
-        "reminders_stats": reminders_stats,
-        "english_time_stats": english_time_stats
-    }
 
 async def send_homework_reminders():
     """Отправляет напоминания о домашних заданиях"""
@@ -405,39 +345,46 @@ async def check_for_updates():
     except Exception as e:
         logging.error(f"❌ Ошибка при проверке обновлений: {e}")
 
-async def scheduler():
-    """Асинхронный планировщик для напоминаний и обновлений"""
-    while True:
-        now = datetime.datetime.now(TIMEZONE)
-        
-        # Проверяем, 20:00 ли для напоминаний
-        if now.hour == 20 and now.minute == 0:
-            await send_homework_reminders()
-            await asyncio.sleep(60)  # Ждем минуту чтобы не выполнять несколько раз
-        
-        # Проверяем, 09:00 ли для обновлений
-        elif now.hour == 9 and now.minute == 0:
-            await check_for_updates()
-            await asyncio.sleep(60)  # Ждем минуту чтобы не выполнять несколько раз
-        
-        # Ждем 30 секунд перед следующей проверкой
-        await asyncio.sleep(30)
-
-# === ОСНОВНЫЕ ОБРАБОТЧИКИ КОМАНД ===
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [
-        [InlineKeyboardButton("📚 1 поток", callback_data="select_stream_1")],
-        [InlineKeyboardButton("📚 2 поток", callback_data="select_stream_2")],
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text(
-        "Привет! 👋\nВыбери свой поток:",
-        reply_markup=reply_markup
+def run_scheduler():
+    """Запускает планировщик для напоминаний и обновлений"""
+    # Напоминания о ДЗ каждый день в 20:00
+    schedule.every().day.at("20:00").do(
+        lambda: asyncio.run(send_homework_reminders())
     )
+    
+    # Проверка обновлений каждый день в 09:00
+    schedule.every().day.at("09:00").do(
+        lambda: asyncio.run(check_for_updates())
+    )
+    
+    # Проверка обновлений при запуске
+    asyncio.run(check_for_updates())
+    
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
 
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик текстовых сообщений"""
-    await update.message.reply_text("Используйте /start для начала работы")
+# === ОБРАБОТЧИКИ ===
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = str(update.effective_user.id)
+    
+    # Проверяем, есть ли сохраненные настройки у пользователя
+    if user_id in user_settings and 'stream' in user_settings[user_id]:
+        # У пользователя есть сохраненные настройки - сразу показываем главное меню
+        stream = user_settings[user_id]['stream']
+        english_time = user_settings[user_id].get('english_time')
+        await show_main_menu(update, context, stream, english_time)
+    else:
+        # У пользователя нет сохраненных настроек - просим выбрать поток
+        keyboard = [
+            [InlineKeyboardButton("📚 1 поток", callback_data="select_stream_1")],
+            [InlineKeyboardButton("📚 2 поток", callback_data="select_stream_2")],
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await update.message.reply_text(
+            "Привет! 👋\nВыбери свой поток:",
+            reply_markup=reply_markup
+        )
 
 async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     keyboard = [
@@ -458,21 +405,6 @@ async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE
             reply_markup=reply_markup
         )
 
-async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
-    """Выбор времени напоминаний"""
-    keyboard = [
-        [InlineKeyboardButton("🕗 20:00", callback_data=f"reminders_time_20:00_{stream}")],
-        [InlineKeyboardButton("🕘 21:00", callback_data=f"reminders_time_21:00_{stream}")],
-        [InlineKeyboardButton("🕙 22:00", callback_data=f"reminders_time_22:00_{stream}")],
-        [InlineKeyboardButton("❌ Выключить напоминания", callback_data=f"reminders_off_{stream}")]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    await update.callback_query.edit_message_text(
-        text="Выбери время для напоминаний о домашних заданиях:",
-        reply_markup=reply_markup
-    )
-
 async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, english_time=None):
     events = load_events_from_github(stream)
     
@@ -492,7 +424,8 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
          InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
         [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}"),
          InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
-        [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{stream}")],
+        [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_{stream}")],
+        [InlineKeyboardButton("⚙️ Настройки", callback_data=f"settings_{stream}")],
         [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
     ]
     
@@ -510,262 +443,137 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, str
         english_text = "\n🕑 Английский: 14:00-17:10"
     
     reminders_status = "🔔" if user_settings[user_id].get('reminders', False) else "🔕"
-    reminders_time = user_settings[user_id].get('reminders_time', '20:00')
     reminders_text = f"\n{reminders_status} Напоминания: {'вкл' if user_settings[user_id].get('reminders', False) else 'выкл'}"
-    if user_settings[user_id].get('reminders', False):
-        reminders_text += f" ({reminders_time})"
     
     if update.callback_query:
         await update.callback_query.edit_message_text(
-            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
+            text=f"Главное меню ({stream} поток){english_text}{reminders_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
     else:
         await update.message.reply_text(
-            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
+            text=f"Главное меню ({stream} поток){english_text}{reminders_text}\nВыбери действие:",
             reply_markup=reply_markup
         )
 
-async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+async def show_settings_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
+    user_id = str(update.effective_user.id)
+    current_english = user_settings.get(user_id, {}).get('english_time', 'none')
+    current_reminders = user_settings.get(user_id, {}).get('reminders', False)
+    
+    english_text = "не выбрано"
+    if current_english == "morning":
+        english_text = "9:00-12:10"
+    elif current_english == "afternoon":
+        english_text = "14:00-17:10"
+    
+    keyboard = [
+        [InlineKeyboardButton("🔄 Сменить поток", callback_data="change_stream")],
+        [InlineKeyboardButton(f"⏰ Английский: {english_text}", callback_data=f"change_english_{stream}")],
+        [InlineKeyboardButton(f"🔔 Напоминания: {'вкл' if current_reminders else 'выкл'}", callback_data=f"reminders_{stream}")],
+        [InlineKeyboardButton("🔙 Главное меню", callback_data=f"main_menu_{stream}")]
+    ]
+    
+    await update.callback_query.edit_message_text(
+        text=f"⚙️ Настройки ({stream} поток):\n\n"
+             f"⏰ Время английского: {english_text}\n"
+             f"🔔 Напоминания: {'включены' if current_reminders else 'выключены'}",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_reminders_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     user_id = str(update.effective_user.id)
     current_status = user_settings.get(user_id, {}).get('reminders', False)
-    current_time = user_settings.get(user_id, {}).get('reminders_time', '20:00')
     
     status_text = "включены" if current_status else "выключены"
     status_icon = "🔔" if current_status else "🔕"
     
     keyboard = [
-        [InlineKeyboardButton(f"{status_icon} Настроить время напоминаний", callback_data=f"set_reminders_time_{stream}")],
+        [InlineKeyboardButton(f"{status_icon} Включить напоминания", callback_data=f"reminders_on_{stream}")],
+        [InlineKeyboardButton(f"{status_icon} Выключить напоминания", callback_data=f"reminders_off_{stream}")],
         [InlineKeyboardButton("👀 Посмотреть ДЗ на завтра", callback_data=f"view_tomorrow_hw_{stream}")],
-        [InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")]
+        [InlineKeyboardButton("🔙 Настройки", callback_data=f"settings_{stream}")]
     ]
     
     await update.callback_query.edit_message_text(
-        text=f"Настройки напоминаний:\n\n"
-             f"Текущий статус: {status_icon} {status_text}\n"
-             f"Время напоминаний: {current_time}\n\n"
+        text=f"Управление напоминаниями:\n\n"
+             f"Текущий статус: {status_icon} {status_text}\n\n"
              f"При включенных напоминаниях бот будет присылать уведомления "
-             f"о домашних заданиях на завтра в выбранное время",
+             f"о домашних заданиях на завтра каждый день в 20:00",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
-
-async def show_manage_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
-    """Показывает меню управления домашними заданиями"""
-    if not is_admin(update):
-        await update.callback_query.edit_message_text("❌ У вас нет прав для управления ДЗ")
-        return
-        
-    keyboard = [
-        [InlineKeyboardButton("📝 Добавить ДЗ", callback_data=f"add_hw_{stream}")],
-        [InlineKeyboardButton("👀 Просмотреть все ДЗ", callback_data=f"view_all_hw_{stream}")],
-        [InlineKeyboardButton("❌ Удалить ДЗ", callback_data=f"delete_hw_menu_{stream}")],
-        [InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")],
-    ]
-    
-    await update.callback_query.edit_message_text(
-        text="Управление домашними заданиями:\n\n"
-             "При добавлении ДЗ для одного потока, если у обоих потоков есть идентичные пары "
-             "в одно время, ДЗ автоматически добавится для обоих потоков.",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_add_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
-    """Показывает меню добавления ДЗ"""
-    # Получаем список предметов для выбранного потока
-    subjects = get_unique_subjects(stream)
-    
-    if not subjects:
-        await update.callback_query.edit_message_text(
-            text="❌ Не удалось загрузить список предметов. Попробуйте обновить расписание.",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-        )
-        return
-    
-    # Создаем клавиатуру с предметами
-    keyboard = []
-    for subject in subjects:
-        # Обрезаем длинные названия и заменяем проблемные символы
-        display_name = subject[:30] + "..." if len(subject) > 30 else subject
-        
-        # Создаем безопасный идентификатор для callback_data
-        safe_subject = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
-        safe_subject = safe_subject[:20]  # Ограничиваем длину
-        
-        callback_data = f"hw_subj_{stream}_{safe_subject}"
-        
-        keyboard.append([InlineKeyboardButton(f"📚 {display_name}", callback_data=callback_data)])
-    
-    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
-    
-    await update.callback_query.edit_message_text(
-        text="Выбери предмет для добавления домашнего задания:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
-    """Показывает меню удаления ДЗ"""
-    # Получаем все ДЗ для текущего потока
-    stream_homeworks = {k: v for k, v in homeworks.items() if k.startswith(f"{stream}_")}
-    
-    if not stream_homeworks:
-        await update.callback_query.edit_message_text(
-            text="📭 Домашних заданий для удаления нет",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-        )
-        return
-    
-    # Создаем клавиатуру с ДЗ для удаления
-    keyboard = []
-    for hw_key, hw_text in list(stream_homeworks.items())[:20]:  # Ограничиваем количество
-        # Форматируем ключ для отображения
-        parts = hw_key.split('_')
-        date_str = parts[1]
-        subject = '_'.join(parts[2:])
-        
-        try:
-            date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d.%m.%Y")
-            display_text = f"🗑 {date} - {subject[:20]}..."
-            callback_data = f"del_hw_{hw_key[:30]}"  # Ограничиваем длину ключа
-            keyboard.append([InlineKeyboardButton(display_text, callback_data=callback_data)])
-        except:
-            continue
-    
-    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
-    
-    await update.callback_query.edit_message_text(
-        text="Выбери домашнее задание для удаления:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_all_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
-    """Показывает все домашние задания"""
-    stream_homeworks = {k: v for k, v in homeworks.items() if k.startswith(f"{stream}_")}
-    
-    if not stream_homeworks:
-        await update.callback_query.edit_message_text(
-            text="📭 Домашних заданий нет",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-        )
-        return
-    
-    # Группируем ДЗ по дате
-    homeworks_by_date = {}
-    for hw_key, hw_text in stream_homeworks.items():
-        parts = hw_key.split('_')
-        date_str = parts[1]
-        subject = '_'.join(parts[2:])
-        
-        if date_str not in homeworks_by_date:
-            homeworks_by_date[date_str] = []
-        
-        homeworks_by_date[date_str].append((subject, hw_text))
-    
-    # Формируем сообщение
-    message = "📚 Все домашние задания:\n\n"
-    
-    for date_str in sorted(homeworks_by_date.keys()):
-        try:
-            date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d.%m.%Y")
-            message += f"📅 {date}:\n"
-            
-            for subject, hw_text in homeworks_by_date[date_str]:
-                message += f"📖 {subject}:\n{hw_text}\n\n"
-        except:
-            continue
-    
-    # Обрезаем если слишком длинное
-    if len(message) > 4000:
-        message = message[:4000] + "\n\n... (сообщение обрезано)"
-    
-    await update.callback_query.edit_message_text(
-        text=message,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-    )
-
-async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для просмотра статистики пользователей (только для админа)"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-    
-    stats = get_user_stats()
-    
-    message = (
-        "📊 Статистика пользователей:\n\n"
-        f"👥 Всего пользователей: {stats['total_users']}\n\n"
-        f"📚 Распределение по потокам:\n"
-        f"• 1 поток: {stats['stream_stats']['1']} пользователей\n"
-        f"• 2 поток: {stats['stream_stats']['2']} пользователей\n\n"
-        f"🔔 Настройки напоминаний:\n"
-        f"• Включены: {stats['reminders_stats']['enabled']} пользователей\n"
-        f"• Выключены: {stats['reminders_stats']['disabled']} пользователей\n\n"
-        f"🕘 Время английского:\n"
-        f"• Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
-        f"• День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
-        f"• Без английского: {stats['english_time_stats']['none']} пользователей"
-    )
-    
-    await update.message.reply_text(message)
 
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     
-    try:
-        data = query.data
+    if query.data == 'change_stream':
+        # Пользователь хочет сменить поток
+        keyboard = [
+            [InlineKeyboardButton("📚 1 поток", callback_data="select_stream_1")],
+            [InlineKeyboardButton("📚 2 поток", callback_data="select_stream_2")],
+        ]
+        await query.edit_message_text(
+            text="Выбери новый поток:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+        return
         
-        if data.startswith('select_stream_'):
-            stream = data.split('_')[-1]
-            context.user_data['stream'] = stream
-            await select_english_time(update, context, stream)
-            
-        elif data.startswith('english_'):
-            parts = data.split('_')
-            english_option = parts[1]  # morning, afternoon, none
-            stream = parts[2]
-            
-            english_time = None
-            if english_option == "morning":
-                english_time = "morning"
-            elif english_option == "afternoon":
-                english_time = "afternoon"
-            
-            await show_main_menu(update, context, stream, english_time)
-            
-        elif data.startswith('back_to_main_'):
-            stream = data.split('_')[-1]
-            user_id = str(update.effective_user.id)
-            english_time = user_settings.get(user_id, {}).get('english_time')
-            await show_main_menu(update, context, stream, english_time)
-            
-        elif data.startswith('reminders_settings_'):
-            stream = data.split('_')[-1]
-            await show_reminders_settings(update, context, stream)
-            
-        elif data.startswith('set_reminders_time_'):
-            stream = data.split('_')[-1]
-            await select_reminders_time(update, context, stream)
-            
-        elif data.startswith('reminders_time_'):
-            # Формат: reminders_time_20:00_1
-            parts = data.split('_')
-            time_str = parts[2]  # 20:00
-            stream = parts[3]    # 1
-            
+    elif query.data.startswith('select_stream_'):
+        stream = query.data.split('_')[-1]
+        context.user_data['stream'] = stream
+        await select_english_time(update, context, stream)
+        return
+        
+    elif query.data.startswith('english_'):
+        parts = query.data.split('_')
+        english_option = parts[1]  # morning, afternoon, none
+        stream = parts[2]
+        
+        english_time = None
+        if english_option == "morning":
+            english_time = "morning"
+        elif english_option == "afternoon":
+            english_time = "afternoon"
+        # для "none" оставляем english_time = None
+        
+        await show_main_menu(update, context, stream, english_time)
+        return
+        
+    elif query.data.startswith('main_menu_'):
+        # Пользователь нажал "Главное меню" - показываем основное меню с сохраненными настройками
+        stream = query.data.split('_')[-1]
+        user_id = str(update.effective_user.id)
+        english_time = user_settings.get(user_id, {}).get('english_time')
+        await show_main_menu(update, context, stream, english_time)
+        return
+        
+    elif query.data.startswith('settings_'):
+        stream = query.data.split('_')[-1]
+        await show_settings_menu(update, context, stream)
+        return
+        
+    elif query.data.startswith('change_english_'):
+        stream = query.data.split('_')[-1]
+        await select_english_time(update, context, stream)
+        return
+        
+    elif query.data.startswith('reminders_'):
+        stream = query.data.split('_')[-1]
+        
+        if query.data.startswith('reminders_on_'):
             user_id = str(update.effective_user.id)
             if user_id not in user_settings:
                 user_settings[user_id] = {}
             user_settings[user_id]['reminders'] = True
-            user_settings[user_id]['reminders_time'] = time_str
             save_user_settings(user_settings)
-            
             await query.edit_message_text(
-                text=f"✅ Напоминания включены и установлены на {time_str}!",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
+                text="✅ Напоминания включены!\nБот будет присылать уведомления о ДЗ каждый день в 20:00",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
             )
+            return
             
-        elif data.startswith('reminders_off_'):
-            stream = data.split('_')[-1]
+        elif query.data.startswith('reminders_off_'):
             user_id = str(update.effective_user.id)
             if user_id not in user_settings:
                 user_settings[user_id] = {}
@@ -773,11 +581,12 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             save_user_settings(user_settings)
             await query.edit_message_text(
                 text="🔕 Напоминания выключены",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
             )
-                
-        elif data.startswith('view_tomorrow_hw_'):
-            stream = data.split('_')[-1]
+            return
+            
+        elif query.data.startswith('view_tomorrow_hw_'):
+            stream = query.data.split('_')[-1]
             tomorrow_hws = get_homeworks_for_tomorrow(stream)
             
             if not tomorrow_hws:
@@ -789,206 +598,100 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
             await query.edit_message_text(
                 text=text,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_{stream}")]])
             )
-                
-        elif data.startswith('refresh_'):
-            stream = data.split('_')[-1]
-            if stream in events_cache:
-                del events_cache[stream]
-            events = load_events_from_github(stream)
-            await query.edit_message_text(
-                text=f"✅ Расписание для {stream} потока обновлено! Загружено {len(events)} событий",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")]])
-            )
+            return
             
-        elif data.startswith('manage_hw_'):
-            stream = data.split('_')[-1]
-            await show_manage_hw_menu(update, context, stream)
-            
-        elif data.startswith('add_hw_'):
-            stream = data.split('_')[-1]
-            await show_add_hw_menu(update, context, stream)
-            
-        elif data.startswith('hw_subj_'):
-            # ИСПРАВЛЕНИЕ: Правильно извлекаем поток и безопасное название предмета
-            # Формат: hw_subj_1_Название_предмета
-            parts = data.split('_')
-            if len(parts) < 4:
-                await query.answer("Ошибка в данных кнопки")
-                return
-                
-            stream = parts[2]  # Поток находится на третьей позиции
-            safe_subject = '_'.join(parts[3:])  # Остальное - безопасное название предмета
-            
-            # Проверяем, что поток корректен
-            if stream not in ['1', '2']:
-                await query.answer("Неверный поток")
-                return
-
-            # Находим полное название предмета по безопасному идентификатору
-            subjects = get_unique_subjects(stream)
-            original_subject = None
-            
-            for subject in subjects:
-                safe_compare = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
-                safe_compare = safe_compare[:20]  # Ограничиваем длину как при создании
-                if safe_compare == safe_subject:
-                    original_subject = subject
-                    break
-            
-            if not original_subject:
-                await query.edit_message_text(
-                    text="❌ Не удалось найти предмет. Попробуйте снова.",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
-                )
-                return
-            
-            # Сохраняем в контекст для использования в следующем шаге
-            context.user_data['hw_subject'] = original_subject
-            context.user_data['hw_stream'] = stream
-            
-            await query.edit_message_text(
-                text=f"📝 Добавление ДЗ для предмета: {original_subject}\n\n"
-                     f"Введите текст домашнего задания:",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
-            )
-            
-        elif data.startswith('view_all_hw_'):
-            stream = data.split('_')[-1]
-            await show_all_homeworks(update, context, stream)
-            
-        elif data.startswith('delete_hw_menu_'):
-            stream = data.split('_')[-1]
-            await show_delete_hw_menu(update, context, stream)
-            
-        elif data.startswith('del_hw_'):
-            # Формат: del_hw_1_2023-10-10_Название_предмета
-            hw_key = data.replace('del_hw_', '')
-            
-            # Находим полный ключ, так как мы его обрезали
-            full_hw_key = None
-            for key in homeworks.keys():
-                if key.startswith(hw_key):
-                    full_hw_key = key
-                    break
-            
-            if full_hw_key and full_hw_key in homeworks:
-                del homeworks[full_hw_key]
-                save_homeworks(homeworks)
-                
-                # Определяем поток из ключа
-                stream = full_hw_key.split('_')[0]
-                
-                await query.edit_message_text(
-                    text="✅ Домашнее задание удалено!",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"delete_hw_menu_{stream}")]])
-                )
-            else:
-                stream = hw_key.split('_')[0] if '_' in hw_key else "1"
-                await query.edit_message_text(
-                    text="❌ Домашнее задание не найдено!",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
-                )
-            
-        elif any(data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
-            stream = data.split('_')[-1]
-            today = datetime.datetime.now(TIMEZONE).date()
-            events = load_events_from_github(stream)
-            
-            # Получаем выбранное время английского
-            user_id = str(update.effective_user.id)
-            english_time = user_settings.get(user_id, {}).get('english_time')
-
-            if data.startswith('today_'):
-                text = format_day(today, events, stream, english_time)
-                if "занятий нет" in text:
-                    text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
-
-            elif data.startswith('tomorrow_'):
-                tomorrow = today + datetime.timedelta(days=1)
-                text = format_day(tomorrow, events, stream, english_time, is_tomorrow=True)
-                if "занятий нет" in text:
-                    text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
-
-            elif data.startswith('this_week_'):
-                start_date, _ = get_week_range(today)
-                text = f"🗓 Расписание на эту неделю ({stream} поток):\n\n"
-                for i in range(5):
-                    d = start_date + datetime.timedelta(days=i)
-                    text += format_day(d, events, stream, english_time)
-
-            elif data.startswith('next_week_'):
-                start_date, _ = get_week_range(today + datetime.timedelta(days=7))
-                text = f"⏭ Расписание на следующую неделю ({stream} поток):\n\n"
-                for i in range(5):
-                    d = start_date + datetime.timedelta(days=i)
-                    text += format_day(d, events, stream, english_time)
-
-            else:
-                text = "Неизвестная команда."
-
-            # Добавляем кнопки для навигации
-            keyboard = [
-                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
-                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
-                [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}"),
-                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
-                [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_settings_{stream}")],
-                [InlineKeyboardButton("🔙 Главное меню", callback_data=f"back_to_main_{stream}")]
-            ]
-            
-            # Обрезаем текст если он слишком длинный для Telegram
-            if len(text) > 4000:
-                text = text[:4000] + "\n\n... (сообщение обрезано)"
-                
-            await query.edit_message_text(
-                text=text,
-                reply_markup=InlineKeyboardMarkup(keyboard)
-            )
-            
-    except Exception as e:
-        logging.error(f"Ошибка в обработчике callback_query: {e}")
+        else:
+            await show_reminders_menu(update, context, stream)
+            return
+        
+    elif query.data.startswith('refresh_'):
+        stream = query.data.split('_')[-1]
+        if stream in events_cache:
+            del events_cache[stream]
+        events = load_events_from_github(stream)
         await query.edit_message_text(
-            text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
+            text=f"✅ Расписание для {stream} потока обновлено! Загружено {len(events)} событий",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Главное меню", callback_data=f"main_menu_{stream}")]])
         )
+        return
+        
+    elif query.data.startswith('manage_hw_'):
+        stream = query.data.split('_')[-1]
+        if not is_admin(update):
+            await query.edit_message_text("❌ У вас нет прав для управления ДЗ")
+            return
+            
+        keyboard = [
+            [InlineKeyboardButton("📝 Добавить ДЗ", callback_data=f"add_hw_{stream}")],
+            [InlineKeyboardButton("👀 Просмотреть ДЗ", callback_data=f"view_hw_{stream}")],
+            [InlineKeyboardButton("❌ Удалить ДЗ", callback_data=f"delete_hw_{stream}")],
+            [InlineKeyboardButton("🔙 Главное меню", callback_data=f"main_menu_{stream}")],
+        ]
+        await query.edit_message_text(
+            text="Управление домашними заданиями:",
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+        return
 
-async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик текста домашнего задания"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для управления ДЗ")
-        return
-    
-    # Проверяем, есть ли сохраненные данные о предмете
-    if 'hw_subject' not in context.user_data or 'hw_stream' not in context.user_data:
-        await update.message.reply_text("❌ Сначала выберите предмет для добавления ДЗ")
-        return
-    
-    homework_text = update.message.text
-    subject = context.user_data['hw_subject']
-    stream = context.user_data['hw_stream']
-    
-    if not homework_text.strip():
-        await update.message.reply_text("❌ Текст домашнего задания не может быть пустым")
-        return
-    
-    # Используем сегодняшнюю дату для ДЗ
-    today = datetime.datetime.now(TIMEZONE).date()
-    
-    # Добавляем ДЗ для обоих потоков, если есть одинаковые пары
-    added_streams = add_homework_for_both_streams(today, subject, homework_text)
-    
-    # Формируем сообщение о результате
-    if len(added_streams) == 2:
-        message = f"✅ ДЗ добавлено для обоих потоков!\n\n📖 {subject}\n📝 {homework_text}"
-    else:
-        message = f"✅ ДЗ добавлено для {stream} потока!\n\n📖 {subject}\n📝 {homework_text}"
-    
-    await update.message.reply_text(message)
-    
-    # Очищаем контекст
-    context.user_data.pop('hw_subject', None)
-    context.user_data.pop('hw_stream', None)
+    # Обработка основных команд
+    if any(query.data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
+        stream = query.data.split('_')[-1]
+        today = datetime.datetime.now(TIMEZONE).date()
+        events = load_events_from_github(stream)
+        
+        # Получаем выбранное время английского
+        user_id = str(update.effective_user.id)
+        english_time = user_settings.get(user_id, {}).get('english_time')
+
+        if query.data.startswith('today_'):
+            text = format_day(today, events, stream, english_time)
+            if "занятий нет" in text:
+                text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+        elif query.data.startswith('tomorrow_'):
+            tomorrow = today + datetime.timedelta(days=1)
+            text = format_day(tomorrow, events, stream, english_time, is_tomorrow=True)
+            if "занятий нет" in text:
+                text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+        elif query.data.startswith('this_week_'):
+            start_date, _ = get_week_range(today)
+            text = f"🗓 Расписание на эту неделю ({stream} поток):\n\n"
+            for i in range(5):
+                d = start_date + datetime.timedelta(days=i)
+                text += format_day(d, events, stream, english_time)
+
+        elif query.data.startswith('next_week_'):
+            start_date, _ = get_week_range(today + datetime.timedelta(days=7))
+            text = f"⏭ Расписание на следующую неделю ({stream} поток):\n\n"
+            for i in range(5):
+                d = start_date + datetime.timedelta(days=i)
+                text += format_day(d, events, stream, english_time)
+
+        else:
+            text = "Неизвестная команда."
+
+        # Добавляем кнопки для навигации
+        keyboard = [
+            [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+             InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
+            [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}"),
+             InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+            [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_{stream}")],
+            [InlineKeyboardButton("⚙️ Настройки", callback_data=f"settings_{stream}")],
+            [InlineKeyboardButton("🔙 Главное меню", callback_data=f"main_menu_{stream}")]
+        ]
+        
+        # Обрезаем текст если он слишком длинный для Telegram
+        if len(text) > 4000:
+            text = text[:4000] + "\n\n... (сообщение обрезано)"
+            
+        await query.edit_message_text(
+            text=text,
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
 
 async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для ручной проверки обновлений"""
@@ -1000,35 +703,61 @@ async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TY
     await check_for_updates()
     await update.message.reply_text("✅ Проверка обновлений завершена!")
 
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработчик текстовых сообщений"""
+    await update.message.reply_text("Используйте /start для начала работы")
+
 # === ЗАПУСК ===
+def setup_global_exception_handler():
+    """Перехватывает все необработанные исключения"""
+    def handle_exception(exc_type, exc_value, exc_traceback):
+        if issubclass(exc_type, KeyboardInterrupt):
+            # Не выводим для Ctrl+C
+            sys.__excepthook__(exc_type, exc_value, exc_traceback)
+            return
+        
+        logging.critical("Необработанное исключение:", exc_info=(exc_type, exc_value, exc_traceback))
+        print(f"💥 КРИТИЧЕСКАЯ ОШИБКА: {exc_value}")
+        import traceback
+        traceback.print_exception(exc_type, exc_value, exc_traceback)
+    
+    sys.excepthook = handle_exception
+
 def main():
     global homeworks, user_settings, application
     
-    # Загружаем данные при запуске
-    homeworks = load_homeworks()
-    user_settings = load_user_settings()
+    # Устанавливаем глобальный обработчик исключений
+    setup_global_exception_handler()
     
+    print("🚀 Бот начинает запуск...")
+    
+    # Загружаем данные при запуске
+    print("📂 Загружаем домашние задания...")
+    homeworks = load_homeworks()
+    print(f"✅ Загружено домашних заданий: {len(homeworks)}")
+    
+    print("📂 Загружаем настройки пользователей...")
+    user_settings = load_user_settings()
+    print(f"✅ Загружено настроек пользователей: {len(user_settings)}")
+    
+    print("🔧 Создаем приложение...")
     # Создаем приложение
     application = ApplicationBuilder().token(BOT_TOKEN).build()
+    print("✅ Приложение создано")
     
     # Добавляем обработчики
+    print("🔧 Добавляем обработчики...")
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("update", check_updates_command))
-    application.add_handler(CommandHandler("users", users_command))
     application.add_handler(CallbackQueryHandler(handle_query))
-    
-    # Обработчик для текста домашнего задания (должен быть перед общим обработчиком сообщений)
-    application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND & filters.User(username=ADMIN_USERNAME), 
-        handle_homework_text
-    ))
-    
-    # Общий обработчик сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    print("✅ Обработчики добавлены")
     
-    # Запускаем планировщик в отдельной задаче
-    loop = asyncio.get_event_loop()
-    loop.create_task(scheduler())
+    # Запускаем планировщик в отдельном потоке
+    print("🔧 Запускаем планировщик...")
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
+    scheduler_thread.start()
+    print("✅ Планировщик запущен")
     
     logging.info("Бот запускается...")
     print("=" * 50)
@@ -1036,14 +765,15 @@ def main():
     print(f"👑 Админ: {ADMIN_USERNAME}")
     print(f"📚 Загружено домашних заданий: {len(homeworks)}")
     print(f"👥 Пользователей с напоминаниями: {sum(1 for s in user_settings.values() if s.get('reminders', False))}")
-    print("🔔 Напоминания: каждый день в выбранное время")
+    print("🔔 Напоминания: каждый день в 20:00")
     print("🔄 Автообновление: каждый день в 09:00")
-    print("👤 Команда /users доступна админу для статистики")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
     # Запускаем бота
+    print("🔧 Запускаем polling...")
     application.run_polling()
+    print("❌ Polling завершился")
 
 if __name__ == "__main__":
     main()
