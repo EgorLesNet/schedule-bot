@@ -729,7 +729,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
             user_settings[user_id]['english_time'] = english_time
         save_user_settings(user_settings)
         
-        # Создаем клавиатуру основного меню
+        # Создаем клавиатуру основного меню с правильными callback_data
         keyboard = [
             [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
              InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
@@ -1176,106 +1176,149 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
         # Обработка выбора потока
         elif data.startswith('select_stream_'):
-            stream = data.split('_')[2]
-            course = data.split('_')[3]
-            context.user_data['stream'] = stream
-            await select_english_time(update, context, course, stream)
+            parts = data.split('_')
+            if len(parts) >= 3:
+                stream = parts[2]
+                course = parts[3] if len(parts) > 3 else "1"  # По умолчанию 1 курс для обратной совместимости
+                context.user_data['stream'] = stream
+                await select_english_time(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         # Обработка выбора времени английского
         elif data.startswith('english_'):
             parts = data.split('_')
-            english_option = parts[1]  # morning, afternoon, none
-            course = parts[2]
-            stream = parts[3]
-            
-            english_time = None
-            if english_option == "morning":
-                english_time = "morning"
-            elif english_option == "afternoon":
-                english_time = "afternoon"
-            
-            await show_main_menu(update, context, course, stream, english_time)
+            if len(parts) >= 4:
+                english_option = parts[1]  # morning, afternoon, none
+                course = parts[2]
+                stream = parts[3]
+                
+                english_time = None
+                if english_option == "morning":
+                    english_time = "morning"
+                elif english_option == "afternoon":
+                    english_time = "afternoon"
+                
+                await show_main_menu(update, context, course, stream, english_time)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         # Обработка кнопок главного меню
         elif any(data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
             parts = data.split('_')
-            course = parts[1]
-            stream = parts[2]
-            today = datetime.datetime.now(TIMEZONE).date()
-            events = load_events_from_github(course, stream)
-            
-            user_id = str(update.effective_user.id)
-            english_time = user_settings.get(user_id, {}).get('english_time')
-
-            if data.startswith('today_'):
-                text = format_day(today, events, course, stream, english_time)
-                if "занятий нет" in text:
-                    text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
-
-            elif data.startswith('tomorrow_'):
-                tomorrow = today + datetime.timedelta(days=1)
-                text = format_day(tomorrow, events, course, stream, english_time, is_tomorrow=True)
-                if "занятий нет" in text:
-                    text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
-
-            elif data.startswith('this_week_'):
-                start_date, _ = get_week_range(today)
-                course_text = f"{course} курс"
-                if course == "1":
-                    course_text += f", {stream} поток"
-                text = f"🗓 Расписание на эту неделю ({course_text}):\n\n"
-                for i in range(5):
-                    d = start_date + datetime.timedelta(days=i)
-                    text += format_day(d, events, course, stream, english_time)
-
-            elif data.startswith('next_week_'):
-                start_date, _ = get_week_range(today + datetime.timedelta(days=7))
-                course_text = f"{course} курс"
-                if course == "1":
-                    course_text += f", {stream} поток"
-                text = f"⏭ Расписание на следующую неделю ({course_text}):\n\n"
-                for i in range(5):
-                    d = start_date + datetime.timedelta(days=i)
-                    text += format_day(d, events, course, stream, english_time)
-
-            keyboard = [
-                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
-                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
-                [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{course}_{stream}"),
-                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{course}_{stream}")],
-                [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_settings_{course}_{stream}")],
-                [InlineKeyboardButton("🔙 Главное меню", callback_data=f"back_to_main_{course}_{stream}")]
-            ]
-            
-            if len(text) > 4000:
-                text = text[:4000] + "\n\n... (сообщение обрезано)"
+            if len(parts) >= 3:
+                # Определяем команду и извлекаем курс и поток
+                if data.startswith('today_'):
+                    course = parts[1]
+                    stream = parts[2]
+                elif data.startswith('tomorrow_'):
+                    course = parts[1]
+                    stream = parts[2]
+                elif data.startswith('this_week_'):
+                    course = parts[2]  # this_week_1_1 -> parts[2] = 1
+                    stream = parts[3]  # parts[3] = 1
+                elif data.startswith('next_week_'):
+                    course = parts[2]  # next_week_1_1 -> parts[2] = 1
+                    stream = parts[3]  # parts[3] = 1
                 
-            await safe_edit_message(
-                update,
-                text=text,
-                reply_markup=InlineKeyboardMarkup(keyboard)
-            )
+                # Проверяем корректность курса
+                if course not in ['1', '2', '3', '4']:
+                    await query.answer("Ошибка: неверный курс")
+                    return
+                
+                today = datetime.datetime.now(TIMEZONE).date()
+                events = load_events_from_github(course, stream)
+                
+                user_id = str(update.effective_user.id)
+                english_time = user_settings.get(user_id, {}).get('english_time')
+
+                if data.startswith('today_'):
+                    text = format_day(today, events, course, stream, english_time)
+                    if "занятий нет" in text:
+                        text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+                elif data.startswith('tomorrow_'):
+                    tomorrow = today + datetime.timedelta(days=1)
+                    text = format_day(tomorrow, events, course, stream, english_time, is_tomorrow=True)
+                    if "занятий нет" in text:
+                        text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+                elif data.startswith('this_week_'):
+                    start_date, _ = get_week_range(today)
+                    course_text = f"{course} курс"
+                    if course == "1":
+                        course_text += f", {stream} поток"
+                    text = f"🗓 Расписание на эту неделю ({course_text}):\n\n"
+                    for i in range(5):
+                        d = start_date + datetime.timedelta(days=i)
+                        text += format_day(d, events, course, stream, english_time)
+
+                elif data.startswith('next_week_'):
+                    start_date, _ = get_week_range(today + datetime.timedelta(days=7))
+                    course_text = f"{course} курс"
+                    if course == "1":
+                        course_text += f", {stream} поток"
+                    text = f"⏭ Расписание на следующую неделю ({course_text}):\n\n"
+                    for i in range(5):
+                        d = start_date + datetime.timedelta(days=i)
+                        text += format_day(d, events, course, stream, english_time)
+
+                keyboard = [
+                    [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
+                     InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
+                    [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{course}_{stream}"),
+                     InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{course}_{stream}")],
+                    [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_settings_{course}_{stream}")],
+                    [InlineKeyboardButton("🔙 Главное меню", callback_data=f"back_to_main_{course}_{stream}")]
+                ]
+                
+                if len(text) > 4000:
+                    text = text[:4000] + "\n\n... (сообщение обрезано)"
+                    
+                await safe_edit_message(
+                    update,
+                    text=text,
+                    reply_markup=InlineKeyboardMarkup(keyboard)
+                )
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         # Обработка кнопки "Назад"
         elif data.startswith('back_to_main_'):
             parts = data.split('_')
-            course = parts[3]
-            stream = parts[4]
-            user_id = str(update.effective_user.id)
-            english_time = user_settings.get(user_id, {}).get('english_time')
-            await show_main_menu(update, context, course, stream, english_time)
+            if len(parts) >= 5:
+                course = parts[3]
+                stream = parts[4]
+                user_id = str(update.effective_user.id)
+                english_time = user_settings.get(user_id, {}).get('english_time')
+                await show_main_menu(update, context, course, stream, english_time)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
+       # Обработка напоминаний
         elif data.startswith('reminders_settings_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            await show_reminders_settings(update, context, course, stream)
+            if len(parts) >= 4:
+                course = parts[2]
+                stream = parts[3]
+                await show_reminders_settings(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('set_reminders_time_'):
             parts = data.split('_')
-            course = parts[4]
-            stream = parts[5]
-            await select_reminders_time(update, context, course, stream)
+            if len(parts) >= 4:
+                course = parts[2]
+                stream = parts[3]
+                await select_reminders_time(update, context, course, stream)
+             else:
+                 await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('reminders_time_'):
             parts = data.split('_')
@@ -1464,9 +1507,9 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
                 )
         
-    except BadRequest as e:
+      except BadRequest as e:
         if "Message is not modified" in str(e):
-            logging.info("Message not modified error - ignoring")
+            logging.info("Message not modified - ignoring")
         else:
             logging.error(f"BadRequest в обработчике callback_query: {e}")
             try:
