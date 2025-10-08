@@ -130,24 +130,37 @@ def get_display_subject_name(stream, original_name):
     """Возвращает отображаемое название предмета (с учетом переименований)"""
     return subject_renames.get(stream, {}).get(original_name, original_name)
 
-def load_homeworks(stream):
-    """Загружает домашние задания для указанного потока - ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ"""
-    filename = f"homeworks{stream}.json"
+# === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
+def load_homeworks(course, stream):
+    """Загружает домашние задания для указанного курса и потока"""
+    filename = f"homeworks_{course}_{stream}.json"
     try:
         with open(filename, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
+        # Если файл не найден, пробуем загрузить старый формат для обратной совместимости
+        if course == "1":
+            old_filename = f"homeworks{stream}.json"
+            try:
+                with open(old_filename, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    # Сохраняем в новом формате
+                    save_homeworks(course, stream, data)
+                    print(f"Мигрирован файл {old_filename} -> {filename}")
+                    return data
+            except FileNotFoundError:
+                pass
         return {}
 
-def save_homeworks(stream, homeworks_data):
-    """Сохраняет домашние задания для указанного потока - ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ"""
-    filename = f"homeworks{stream}.json"
+def save_homeworks(course, stream, homeworks_data):
+    """Сохраняет домашние задания для указанного курса и потока"""
+    filename = f"homeworks_{course}_{stream}.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(homeworks_data, f, ensure_ascii=False, indent=2)
 
-def get_future_homeworks(stream):
-    """Получает только будущие домашние задания - ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ"""
-    homeworks = load_homeworks(stream)
+def get_future_homeworks(course, stream):
+    """Получает только будущие домашние задания"""
+    homeworks = load_homeworks(course, stream)
     today = datetime.datetime.now(TIMEZONE).date()
     
     future_homeworks = {}
@@ -167,9 +180,9 @@ def get_future_homeworks(stream):
     
     return future_homeworks
 
-def get_past_homeworks(stream):
-    """Получает только прошедшие домашние задания - ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ"""
-    homeworks = load_homeworks(stream)
+def get_past_homeworks(course, stream):
+    """Получает только прошедшие домашние задания"""
+    homeworks = load_homeworks(course, stream)
     today = datetime.datetime.now(TIMEZONE).date()
     
     past_homeworks = {}
@@ -188,6 +201,29 @@ def get_past_homeworks(stream):
             continue
     
     return past_homeworks
+
+def get_homeworks_for_tomorrow(course, stream):
+    """Получает домашние задания на завтра"""
+    tomorrow = datetime.datetime.now(TIMEZONE).date() + datetime.timedelta(days=1)
+    tomorrow_homeworks = []
+    homeworks = load_homeworks(course, stream)
+    
+    for hw_key, hw_text in homeworks.items():
+        try:
+            # Формат ключа: предмет|дата
+            parts = hw_key.split('|')
+            if len(parts) != 2:
+                continue
+                
+            subject = parts[0]
+            date_str = parts[1]
+            hw_date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+            if hw_date == tomorrow:
+                tomorrow_homeworks.append((subject, hw_text))
+        except (ValueError, IndexError):
+            continue
+    
+    return tomorrow_homeworks
 
 def load_user_settings():
     try:
@@ -451,8 +487,7 @@ def has_only_lunch_break(events, date):
     lunch_breaks = [e for e in day_events if "обед" in e["summary"].lower() or "перерыв" in e["summary"].lower()]
     return len(lunch_breaks) == len(day_events)
 
-def format_event(ev, stream):
-    """Форматирование события - ВЕРНУЛИ СТАРЫЙ ФОРМАТ"""
+def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
     
@@ -482,12 +517,56 @@ def format_event(ev, stream):
     date_str = ev['start'].date().isoformat()
     # Используем оригинальное название для ключа ДЗ
     hw_key = f"{ev['original_summary']}|{date_str}"
-    homeworks = load_homeworks(stream)
+    homeworks = load_homeworks(course, stream)
     
     if hw_key in homeworks:
         line += f"\n📚 ДЗ: {homeworks[hw_key]}"
     
     return line
+
+def format_day(date, events, course, stream, english_time=None, is_tomorrow=False):
+    # Проверяем, есть ли в этот день только обеденные перерывы
+    if has_only_lunch_break(events, date):
+        return f"📅 {date.strftime('%A, %d %B')} — занятий нет\n"
+    
+    evs = events_for_day(events, date, english_time)
+    
+    # Русские названия дней недели
+    days_ru = {
+        'Monday': 'Понедельник',
+        'Tuesday': 'Вторник', 
+        'Wednesday': 'Среда',
+        'Thursday': 'Четверг',
+        'Friday': 'Пятница',
+        'Saturday': 'Суббота',
+        'Sunday': 'Воскресенье'
+    }
+    
+    months_ru = {
+        'January': 'января', 'February': 'февраля', 'March': 'марта',
+        'April': 'апреля', 'May': 'мая', 'June': 'июня',
+        'July': 'июля', 'August': 'августа', 'September': 'сентября',
+        'October': 'октября', 'November': 'ноября', 'December': 'декабря'
+    }
+    
+    day_en = date.strftime('%A')
+    month_en = date.strftime('%B')
+    day_ru = days_ru.get(day_en, day_en)
+    month_ru = months_ru.get(month_en, month_en)
+    date_str = date.strftime(f'{day_ru}, %d {month_ru}')
+    
+    # Добавляем пометку "Завтра" если нужно
+    prefix = "🔄 " if is_tomorrow else "📅 "
+    if is_tomorrow:
+        date_str = f"Завтра, {date_str}"
+    
+    if not evs:
+        return f"{prefix}{date_str} — занятий нет\n"
+    
+    text = f"{prefix}{date_str}:\n"
+    for ev in sorted(evs, key=lambda x: x["start"]):
+        text += f"• {format_event(ev, course, stream)}\n\n"
+    return text
 
 def events_for_day(events, date, english_time=None):
     day_events = [e for e in events if e["start"].date() == date]
@@ -609,10 +688,19 @@ def find_similar_events_across_streams(date, subject, start_time, end_time):
     
     return similar_events
 
-def add_homework_for_both_streams(date, subject, homework_text, current_stream):
-    """Добавляет ДЗ для обоих потоков, если есть одинаковые пары в одно время - ВЕРНУЛИ СТАРЫЙ ФОРМАТ"""
+def add_homework_for_both_streams(course, date, subject, homework_text, current_stream):
+    """Добавляет ДЗ для обоих потоков, если есть одинаковые пары в одно время (только для 1 курса)"""
+    # Для курсов кроме первого добавляем только в текущий поток
+    if course != "1":
+        hw_key = f"{subject}|{date}"
+        homeworks = load_homeworks(course, current_stream)
+        homeworks[hw_key] = homework_text
+        save_homeworks(course, current_stream, homeworks)
+        return [current_stream]
+    
+    # Для 1 курса проверяем оба потока
     # Находим событие в текущем потоке чтобы получить время
-    current_events = load_events_from_github("1", current_stream)  # Только для 1 курса
+    current_events = load_events_from_github(course, current_stream)
     current_event = None
     
     for event in current_events:
@@ -624,9 +712,9 @@ def add_homework_for_both_streams(date, subject, homework_text, current_stream):
     if not current_event:
         # Если не нашли событие в текущем потоке, добавляем только в текущий
         hw_key = f"{subject}|{date}"
-        homeworks = load_homeworks(current_stream)
+        homeworks = load_homeworks(course, current_stream)
         homeworks[hw_key] = homework_text
-        save_homeworks(current_stream, homeworks)
+        save_homeworks(course, current_stream, homeworks)
         return [current_stream]
     
     # Получаем время события
@@ -634,23 +722,23 @@ def add_homework_for_both_streams(date, subject, homework_text, current_stream):
     end_time = current_event["end"].time()
     
     # Ищем одинаковые события в обоих потоках
-    similar_events = find_similar_events_across_streams(date, subject, start_time, end_time)
+    similar_events = find_similar_events_across_streams(course, date, subject, start_time, end_time)
     added_for_streams = []
     
     # Если нашли одинаковые события в обоих потоках, добавляем ДЗ для обоих
     if len(similar_events) == 2:
         for stream, event in similar_events:
             hw_key = f"{subject}|{date}"
-            homeworks = load_homeworks(stream)
+            homeworks = load_homeworks(course, stream)
             homeworks[hw_key] = homework_text
-            save_homeworks(stream, homeworks)
+            save_homeworks(course, stream, homeworks)
             added_for_streams.append(stream)
     else:
         # Если одинаковых событий нет, добавляем только в текущий поток
         hw_key = f"{subject}|{date}"
-        homeworks = load_homeworks(current_stream)
+        homeworks = load_homeworks(course, current_stream)
         homeworks[hw_key] = homework_text
-        save_homeworks(current_stream, homeworks)
+        save_homeworks(course, current_stream, homeworks)
         added_for_streams.append(current_stream)
     
     return added_for_streams
@@ -701,9 +789,10 @@ async def send_homework_reminders():
     
     for user_id, settings in user_settings.items():
         try:
-            if settings.get('reminders', False) and settings.get('stream'):
+            if settings.get('reminders', False) and settings.get('course') and settings.get('stream'):
+                course = settings['course']
                 stream = settings['stream']
-                tomorrow_hws = get_homeworks_for_tomorrow(stream)
+                tomorrow_hws = get_homeworks_for_tomorrow(course, stream)
                 
                 if tomorrow_hws:
                     message = "🔔 Напоминание о домашних заданиях на завтра:\n\n"
