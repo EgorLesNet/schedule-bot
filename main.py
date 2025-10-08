@@ -1316,8 +1316,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 course = parts[2]
                 stream = parts[3]
                 await select_reminders_time(update, context, course, stream)
-             else:
-                 await query.answer("Ошибка: неверный формат данных")
+            else:
+                await query.answer("Ошибка: неверный формат данных")
                 return
             
         elif data.startswith('reminders_time_'):
