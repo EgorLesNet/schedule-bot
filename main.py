@@ -809,8 +809,8 @@ async def select_stream(update: Update, context: ContextTypes.DEFAULT_TYPE, cour
         return
         
     keyboard = [
-        [InlineKeyboardButton("📚 1 поток", callback_data=f"select_stream_1_{course}")],
-        [InlineKeyboardButton("📚 2 поток", callback_data=f"select_stream_2_{course}")],
+        [InlineKeyboardButton("📚 1 поток", callback_data=f"select_stream_1")],
+        [InlineKeyboardButton("📚 2 поток", callback_data=f"select_stream_2")],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
@@ -827,11 +827,20 @@ async def select_stream(update: Update, context: ContextTypes.DEFAULT_TYPE, cour
         )
 
 async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    keyboard = [
-        [InlineKeyboardButton("🕘 9:00-12:10", callback_data=f"english_morning_{course}_{stream}")],
-        [InlineKeyboardButton("🕑 14:00-17:10", callback_data=f"english_afternoon_{course}_{stream}")],
-        [InlineKeyboardButton("❌ Без английского", callback_data=f"english_none_{course}_{stream}")]
-    ]
+    # Для обратной совместимости с первым курсом
+    if course == "1":
+        keyboard = [
+            [InlineKeyboardButton("🕘 9:00-12:10", callback_data=f"english_morning_{stream}")],
+            [InlineKeyboardButton("🕑 14:00-17:10", callback_data=f"english_afternoon_{stream}")],
+            [InlineKeyboardButton("❌ Без английского", callback_data=f"english_none_{stream}")]
+        ]
+    else:
+        keyboard = [
+            [InlineKeyboardButton("🕘 9:00-12:10", callback_data=f"english_morning_{course}_{stream}")],
+            [InlineKeyboardButton("🕑 14:00-17:10", callback_data=f"english_afternoon_{course}_{stream}")],
+            [InlineKeyboardButton("❌ Без английского", callback_data=f"english_none_{course}_{stream}")]
+        ]
+    
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     if update.callback_query:
@@ -845,22 +854,6 @@ async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE
             text="Выбери время для английского в четверг:",
             reply_markup=reply_markup
         )
-
-async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Выбор времени напоминаний"""
-    keyboard = [
-        [InlineKeyboardButton("🕗 20:00", callback_data=f"reminders_time_20:00_{course}_{stream}")],
-        [InlineKeyboardButton("🕘 21:00", callback_data=f"reminders_time_21:00_{course}_{stream}")],
-        [InlineKeyboardButton("🕙 22:00", callback_data=f"reminders_time_22:00_{course}_{stream}")],
-        [InlineKeyboardButton("❌ Выключить напоминания", callback_data=f"reminders_off_{course}_{stream}")]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    await safe_edit_message(
-        update,
-        text="Выбери время для напоминаний о домашних заданиях:",
-        reply_markup=reply_markup
-    )
 
 async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream, english_time=None):
     try:
@@ -878,18 +871,33 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
         save_user_settings(user_settings)
         
         # Создаем клавиатуру основного меню
-        keyboard = [
-            [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
-             InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
-            [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{course}_{stream}"),
-             InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{course}_{stream}")],
-            [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{course}_{stream}")],
-            [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{course}_{stream}")],
-        ]
+        if course == "1":
+            # Для первого курса используем старые callback_data для обратной совместимости
+            keyboard = [
+                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
+                [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}"),
+                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+                [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{stream}")],
+                [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
+            ]
+        else:
+            # Для других курсов используем новые callback_data с указанием курса
+            keyboard = [
+                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
+                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
+                [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{course}_{stream}"),
+                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{course}_{stream}")],
+                [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{course}_{stream}")],
+                [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{course}_{stream}")],
+            ]
         
         # Добавляем кнопку управления ДЗ для админа и помощников
         if can_manage_homework(update):
-            keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{course}_{stream}")])
+            if course == "1":
+                keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{stream}")])
+            else:
+                keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{course}_{stream}")])
         
         reply_markup = InlineKeyboardMarkup(keyboard)
         
@@ -930,15 +938,8 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
             
     except Exception as e:
         logging.error(f"Ошибка в show_main_menu: {e}")
-        # Попытка отправить новое сообщение в случае ошибки
-        try:
-            if update.callback_query:
-                await update.callback_query.message.reply_text(
-                    text="❌ Произошла ошибка. Попробуйте снова.",
-                    reply_markup=reply_markup
-                )
-        except Exception as e2:
-            logging.error(f"Критическая ошибка в show_main_menu: {e2}")
+
+
 
 async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
     user_id = str(update.effective_user.id)
@@ -1397,6 +1398,7 @@ async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYP
         await update.message.reply_text("❌ Сначала выберите предмет для добавления ДЗ через меню")
 
 # === ОБРАБОТЧИК CALLBACK QUERY ===
+# === ОБРАБОТЧИК CALLBACK QUERY ===
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     user_id = query.from_user.id
@@ -1414,19 +1416,35 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         data = query.data
         
+        # Обработка выбора курса
         if data.startswith('select_course_'):
             course = data.split('_')[-1]
             context.user_data['course'] = course
             await select_stream(update, context, course)
             
+        # Обработка выбора потока (только для 1 курса)
         elif data.startswith('select_stream_'):
-            # Формат: select_stream_1_1 (поток_курс)
-            parts = data.split('_')
-            stream = parts[2]
-            course = parts[3]
+            stream = data.split('_')[-1]
+            course = context.user_data.get('course', '1')  # По умолчанию 1 курс
             context.user_data['stream'] = stream
             await select_english_time(update, context, course, stream)
             
+        # Обработка выбора времени английского для 1 курса
+        elif data.startswith('english_') and not any(x in data for x in ['_1_', '_2_', '_3_', '_4_']):
+            parts = data.split('_')
+            english_option = parts[1]  # morning, afternoon, none
+            stream = parts[2]
+            course = "1"  # Только для первого курса
+            
+            english_time = None
+            if english_option == "morning":
+                english_time = "morning"
+            elif english_option == "afternoon":
+                english_time = "afternoon"
+            
+            await show_main_menu(update, context, course, stream, english_time)
+            
+        # Обработка выбора времени английского для других курсов
         elif data.startswith('english_'):
             parts = data.split('_')
             english_option = parts[1]  # morning, afternoon, none
@@ -1441,6 +1459,159 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
             await show_main_menu(update, context, course, stream, english_time)
             
+        # Обработка кнопок главного меню для 1 курса (старый формат)
+        elif any(data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']) and not any(x in data for x in ['_1_', '_2_', '_3_', '_4_']):
+            stream = data.split('_')[-1]
+            course = "1"
+            today = datetime.datetime.now(TIMEZONE).date()
+            events = load_events_from_github(course, stream)
+            
+            # Получаем выбранное время английского
+            user_id = str(update.effective_user.id)
+            english_time = user_settings.get(user_id, {}).get('english_time')
+
+            if data.startswith('today_'):
+                text = format_day(today, events, stream, english_time)
+                if "занятий нет" in text:
+                    text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+            elif data.startswith('tomorrow_'):
+                tomorrow = today + datetime.timedelta(days=1)
+                text = format_day(tomorrow, events, stream, english_time, is_tomorrow=True)
+                if "занятий нет" в text:
+                    text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
+
+            elif data.startswith('this_week_'):
+                start_date, _ = get_week_range(today)
+                text = f"🗓 Расписание на эту неделю ({stream} поток):\n\n"
+                for i in range(5):
+                    d = start_date + datetime.timedelta(days=i)
+                    text += format_day(d, events, stream, english_time)
+
+            elif data.startswith('next_week_'):
+                start_date, _ = get_week_range(today + datetime.timedelta(days=7))
+                text = f"⏭ Расписание на следующую неделю ({stream} поток):\n\n"
+                for i in range(5):
+                    d = start_date + datetime.timedelta(days=i)
+                    text += format_day(d, events, stream, english_time)
+
+            # Добавляем кнопки для навигации
+            keyboard = [
+                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
+                [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{stream}"),
+                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+                [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_settings_{stream}")],
+                [InlineKeyboardButton("🔙 Главное меню", callback_data=f"back_to_main_{stream}")]
+            ]
+            
+            # Обрезаем текст если он слишком длинный для Telegram
+            if len(text) > 4000:
+                text = text[:4000] + "\n\n... (сообщение обрезано)"
+                
+            await safe_edit_message(
+                update,
+                text=text,
+                reply_markup=InlineKeyboardMarkup(keyboard)
+            )
+            
+        # Обработка кнопок главного меню для других курсов (новый формат)
+        elif any(data.startswith(cmd) for cmd in ['today_', 'tomorrow_', 'this_week_', 'next_week_']):
+            parts = data.split('_')
+            course = parts[1]
+            stream = parts[2]
+            today = datetime.datetime.now(TIMEZONE).date()
+            events = load_events_from_github(course, stream)
+            
+            # Получаем выбранное время английского
+            user_id = str(update.effective_user.id)
+            english_time = user_settings.get(user_id, {}).get('english_time')
+
+            if data.startswith('today_'):
+                # Для других курсов используем упрощенное форматирование
+                evs = [e for e in events if e["start"].date() == today]
+                if not evs:
+                    text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}) — занятий нет\n"
+                else:
+                    text = f"📅 Сегодня ({today.strftime('%d.%m.%Y')}):\n"
+                    for ev in sorted(evs, key=lambda x: x["start"]):
+                        time_str = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}"
+                        text += f"• {time_str}  {ev['summary']}\n\n"
+
+            elif data.startswith('tomorrow_'):
+                tomorrow = today + datetime.timedelta(days=1)
+                evs = [e for e in events if e["start"].date() == tomorrow]
+                if not evs:
+                    text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
+                else:
+                    text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}):\n"
+                    for ev in sorted(evs, key=lambda x: x["start"]):
+                        time_str = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}"
+                        text += f"• {time_str}  {ev['summary']}\n\n"
+
+            elif data.startswith('this_week_'):
+                start_date, _ = get_week_range(today)
+                course_text = f"{course} курс"
+                text = f"🗓 Расписание на эту неделю ({course_text}):\n\n"
+                for i in range(5):
+                    d = start_date + datetime.timedelta(days=i)
+                    day_events = [e for e in events if e["start"].date() == d]
+                    if day_events:
+                        date_str = d.strftime('%A, %d %B')
+                        text += f"📅 {date_str}:\n"
+                        for ev in sorted(day_events, key=lambda x: x["start"]):
+                            time_str = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}"
+                            text += f"• {time_str}  {ev['summary']}\n\n"
+                    else:
+                        date_str = d.strftime('%A, %d %B')
+                        text += f"📅 {date_str} — занятий нет\n\n"
+
+            elif data.startswith('next_week_'):
+                start_date, _ = get_week_range(today + datetime.timedelta(days=7))
+                course_text = f"{course} курс"
+                text = f"⏭ Расписание на следующую неделю ({course_text}):\n\n"
+                for i in range(5):
+                    d = start_date + datetime.timedelta(days=i)
+                    day_events = [e for e in events if e["start"].date() == d]
+                    if day_events:
+                        date_str = d.strftime('%A, %d %B')
+                        text += f"📅 {date_str}:\n"
+                        for ev in sorted(day_events, key=lambda x: x["start"]):
+                            time_str = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}"
+                            text += f"• {time_str}  {ev['summary']}\n\n"
+                    else:
+                        date_str = d.strftime('%A, %d %B')
+                        text += f"📅 {date_str} — занятий нет\n\n"
+
+            # Добавляем кнопки для навигации
+            keyboard = [
+                [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
+                 InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
+                [InlineKeyboardButton("🗓 Неделя", callback_data=f"this_week_{course}_{stream}"),
+                 InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{course}_{stream}")],
+                [InlineKeyboardButton("🔔 Напоминания", callback_data=f"reminders_settings_{course}_{stream}")],
+                [InlineKeyboardButton("🔙 Главное меню", callback_data=f"back_to_main_{course}_{stream}")]
+            ]
+            
+            # Обрезаем текст если он слишком длинный для Telegram
+            if len(text) > 4000:
+                text = text[:4000] + "\n\n... (сообщение обрезано)"
+                
+            await safe_edit_message(
+                update,
+                text=text,
+                reply_markup=InlineKeyboardMarkup(keyboard)
+            )
+
+        # Обработка кнопки "Назад" для 1 курса
+        elif data.startswith('back_to_main_') and not any(x in data for x in ['_1_', '_2_', '_3_', '_4_']):
+            stream = data.split('_')[-1]
+            course = "1"
+            user_id = str(update.effective_user.id)
+            english_time = user_settings.get(user_id, {}).get('english_time')
+            await show_main_menu(update, context, course, stream, english_time)
+            
+        # Обработка кнопки "Назад" для других курсов
         elif data.startswith('back_to_main_'):
             parts = data.split('_')
             course = parts[3]
@@ -1448,6 +1619,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             user_id = str(update.effective_user.id)
             english_time = user_settings.get(user_id, {}).get('english_time')
             await show_main_menu(update, context, course, stream, english_time)
+            
             
         elif data.startswith('reminders_settings_'):
             parts = data.split('_')
@@ -1780,7 +1952,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Остальные обработчики (админские команды и т.д.) остаются аналогичными
         # Для экономии места я опущу их, так как они требуют аналогичных изменений
         
-    except BadRequest as e:
+except BadRequest as e:
         if "Message is not modified" in str(e):
             # Игнорируем эту ошибку - сообщение не изменилось
             logging.info("Message not modified error - ignoring")
