@@ -131,6 +131,7 @@ def get_display_subject_name(stream, original_name):
     return subject_renames.get(stream, {}).get(original_name, original_name)
 
 # === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
+# === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
 def load_homeworks(course, stream):
     """Загружает домашние задания для указанного курса и потока"""
     filename = f"homeworks_{course}_{stream}.json"
@@ -138,18 +139,6 @@ def load_homeworks(course, stream):
         with open(filename, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
-        # Если файл не найден, пробуем загрузить старый формат для обратной совместимости
-        if course == "1":
-            old_filename = f"homeworks{stream}.json"
-            try:
-                with open(old_filename, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    # Сохраняем в новом формате
-                    save_homeworks(course, stream, data)
-                    print(f"Мигрирован файл {old_filename} -> {filename}")
-                    return data
-            except FileNotFoundError:
-                pass
         return {}
 
 def save_homeworks(course, stream, homeworks_data):
@@ -166,7 +155,6 @@ def get_future_homeworks(course, stream):
     future_homeworks = {}
     for hw_key, hw_text in homeworks.items():
         try:
-            # Формат ключа: предмет|дата
             parts = hw_key.split('|')
             if len(parts) != 2:
                 continue
@@ -188,7 +176,6 @@ def get_past_homeworks(course, stream):
     past_homeworks = {}
     for hw_key, hw_text in homeworks.items():
         try:
-            # Формат ключа: предмет|дата
             parts = hw_key.split('|')
             if len(parts) != 2:
                 continue
@@ -210,7 +197,6 @@ def get_homeworks_for_tomorrow(course, stream):
     
     for hw_key, hw_text in homeworks.items():
         try:
-            # Формат ключа: предмет|дата
             parts = hw_key.split('|')
             if len(parts) != 2:
                 continue
@@ -491,7 +477,6 @@ def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
     
-    # Парсим описание для извлечения преподавателя и аудитории
     if "Преподаватель" in desc:
         teacher_match = re.search(r"Преподаватель:\s*([^\\\n]+)", desc)
         if teacher_match:
@@ -502,7 +487,6 @@ def format_event(ev, course, stream):
         if room_match:
             room = room_match.group(1).strip()
     
-    # Добавляем пометку для онлайн-пар
     online_marker = " 💻" if is_online_class(ev) else ""
     
     line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}  {ev['summary']}{online_marker}"
@@ -515,7 +499,6 @@ def format_event(ev, course, stream):
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
-    # Используем оригинальное название для ключа ДЗ
     hw_key = f"{ev['original_summary']}|{date_str}"
     homeworks = load_homeworks(course, stream)
     
@@ -1082,6 +1065,106 @@ async def show_manage_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
+async def show_future_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
+    """Показывает будущие домашние задания"""
+    homeworks = get_future_homeworks(course, stream)
+    
+    if not homeworks:
+        await safe_edit_message(
+            update,
+            text="📭 Будущих домашних заданий нет",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
+        )
+        return
+    
+    # Группируем ДЗ по дате
+    homeworks_by_date = {}
+    for hw_key, hw_text in homeworks.items():
+        parts = hw_key.split('|')
+        if len(parts) != 2:
+            continue
+            
+        subject = parts[0]
+        date_str = parts[1]
+        
+        if date_str not in homeworks_by_date:
+            homeworks_by_date[date_str] = []
+        
+        homeworks_by_date[date_str].append((subject, hw_text))
+    
+    # Формируем сообщение
+    message = "📚 Будущие домашние задания:\n\n"
+    
+    for date_str in sorted(homeworks_by_date.keys()):
+        try:
+            date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d.%m.%Y")
+            message += f"📅 {date}:\n"
+            
+            for subject, hw_text in homeworks_by_date[date_str]:
+                message += f"📖 {subject}:\n{hw_text}\n\n"
+        except:
+            continue
+    
+    # Обрезаем если слишком длинное
+    if len(message) > 4000:
+        message = message[:4000] + "\n\n... (сообщение обрезано)"
+    
+    await safe_edit_message(
+        update,
+        text=message,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
+    )
+
+async def show_past_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
+    """Показывает архив домашних заданий"""
+    homeworks = get_past_homeworks(course, stream)
+    
+    if not homeworks:
+        await safe_edit_message(
+            update,
+            text="📭 В архиве домашних заданий нет",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
+        )
+        return
+    
+    # Группируем ДЗ по дате
+    homeworks_by_date = {}
+    for hw_key, hw_text in homeworks.items():
+        parts = hw_key.split('|')
+        if len(parts) != 2:
+            continue
+            
+        subject = parts[0]
+        date_str = parts[1]
+        
+        if date_str not in homeworks_by_date:
+            homeworks_by_date[date_str] = []
+        
+        homeworks_by_date[date_str].append((subject, hw_text))
+    
+    # Формируем сообщение
+    message = "📚 Архив домашних заданий:\n\n"
+    
+    for date_str in sorted(homeworks_by_date.keys(), reverse=True)[:10]:
+        try:
+            date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d.%m.%Y")
+            message += f"📅 {date}:\n"
+            
+            for subject, hw_text in homeworks_by_date[date_str]:
+                message += f"📖 {subject}:\n{hw_text}\n\n"
+        except:
+            continue
+    
+    if len(message) > 4000:
+        message = message[:4000] + "\n\n... (сообщение обрезано)"
+    
+    await safe_edit_message(
+        update,
+        text=message,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
+    )
+    
+
 async def show_add_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
     """Показывает меню добавления ДЗ"""
     # Получаем список предметов для выбранного курса и потока
@@ -1146,8 +1229,7 @@ async def show_date_selection(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
     """Показывает меню удаления ДЗ"""
-    # Получаем все ДЗ для текущего курса и потока
-    homeworks = load_homeworks(stream)  # ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ
+    homeworks = load_homeworks(course, stream)
     
     if not homeworks:
         await safe_edit_message(
@@ -1157,10 +1239,8 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
         )
         return
     
-    # Создаем клавиатуру с ДЗ для удаления
     keyboard = []
-    for hw_key, hw_text in list(homeworks.items())[:20]:  # Ограничиваем количество
-        # Форматируем ключ для отображения
+    for hw_key, hw_text in list(homeworks.items())[:20]:
         parts = hw_key.split('|')
         if len(parts) != 2:
             continue
@@ -1900,18 +1980,17 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             stream = parts[4]
             await show_delete_hw_menu(update, context, course, stream)
             
-        elif data.startswith('del_hw_'):
-            # Формат: del_hw_1_1_предмет|дата (курс_поток_ключ)
+                elif data.startswith('del_hw_'):
             parts = data.split('_', 4)
             course = parts[2]
             stream = parts[3]
             hw_key = parts[4]
             
-            homeworks = load_homeworks(stream)  # ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ
+            homeworks = load_homeworks(course, stream)
             
             if hw_key in homeworks:
                 del homeworks[hw_key]
-                save_homeworks(stream, homeworks)  # ВЕРНУЛИ СТАРОЕ НАЗВАНИЕ
+                save_homeworks(course, stream, homeworks)
                 
                 await safe_edit_message(
                     update,
