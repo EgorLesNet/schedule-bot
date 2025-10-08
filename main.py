@@ -17,6 +17,7 @@ from telegram.ext import (
     MessageHandler,
     filters
 )
+from telegram.error import BadRequest, TimedOut
 
 # === НАСТРОЙКА ЛОГГИРОВАНИЯ ===
 logging.basicConfig(
@@ -578,8 +579,17 @@ async def send_homework_reminders():
                     for subject, hw_text in tomorrow_hws:
                         message += f"📖 {subject}:\n{hw_text}\n\n"
                     
-                    await application.bot.send_message(chat_id=user_id, text=message)
-                    logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
+                    # Добавляем обработку ошибок при отправке
+                    try:
+                        await application.bot.send_message(chat_id=user_id, text=message)
+                        logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
+                    except BadRequest as e:
+                        logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
+                        # Пользователь заблокировал бота или чат не существует
+                        if "chat not found" in str(e).lower() or "bot was blocked" in str(e).lower():
+                            # Удаляем пользователя из настроек
+                            user_settings.pop(user_id, None)
+                            save_user_settings(user_settings)
                 
         except Exception as e:
             logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
@@ -632,6 +642,20 @@ async def scheduler():
         # Ждем 30 секунд перед следующей проверкой
         await asyncio.sleep(30)
 
+async def safe_edit_message(update: Update, text: str, reply_markup=None):
+    """Безопасное редактирование сообщения с обработкой ошибок"""
+    try:
+        await update.callback_query.edit_message_text(
+            text=text,
+            reply_markup=reply_markup
+        )
+    except BadRequest as e:
+        if "Message is not modified" in str(e):
+            # Игнорируем эту ошибку
+            logging.info("Message not modified - ignoring")
+        else:
+            raise
+
 # === ОСНОВНЫЕ ОБРАБОТЧИКИ КОМАНД ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
@@ -653,7 +677,8 @@ async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="Выбери время для английского в четверг:",
             reply_markup=reply_markup
         )
@@ -673,63 +698,84 @@ async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TY
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Выбери время для напоминаний о домашних заданиях:",
         reply_markup=reply_markup
     )
 
 async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, english_time=None):
-    events = load_events_from_github(stream)
-    
-    # Сохраняем выбор пользователя
-    user_id = str(update.effective_user.id)
-    if user_id not in user_settings:
-        user_settings[user_id] = {}
-    
-    user_settings[user_id]['stream'] = stream
-    if english_time:
-        user_settings[user_id]['english_time'] = english_time
-    save_user_settings(user_settings)
-    
-    # Создаем клавиатуру основного меню
-    keyboard = [
-        [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
-         InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
-        [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}"),
-         InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
-        [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{stream}")],
-        [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
-    ]
-    
-    # Добавляем кнопку управления ДЗ для админа и помощников
-    if can_manage_homework(update):
-        keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{stream}")])
-    
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    # Текст с информацией о настройках
-    english_text = ""
-    if english_time == "morning":
-        english_text = "\n🕘 Английский: 9:00-12:10"
-    elif english_time == "afternoon":
-        english_text = "\n🕑 Английский: 14:00-17:10"
-    
-    reminders_status = "🔔" if user_settings[user_id].get('reminders', False) else "🔕"
-    reminders_time = user_settings[user_id].get('reminders_time', '20:00')
-    reminders_text = f"\n{reminders_status} Напоминания: {'вкл' if user_settings[user_id].get('reminders', False) else 'выкл'}"
-    if user_settings[user_id].get('reminders', False):
-        reminders_text += f" ({reminders_time})"
-    
-    if update.callback_query:
-        await update.callback_query.edit_message_text(
-            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
-            reply_markup=reply_markup
-        )
-    else:
-        await update.message.reply_text(
-            text=f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:",
-            reply_markup=reply_markup
-        )
+    try:
+        events = load_events_from_github(stream)
+        
+        # Сохраняем выбор пользователя
+        user_id = str(update.effective_user.id)
+        if user_id not in user_settings:
+            user_settings[user_id] = {}
+        
+        user_settings[user_id]['stream'] = stream
+        if english_time:
+            user_settings[user_id]['english_time'] = english_time
+        save_user_settings(user_settings)
+        
+        # Создаем клавиатуру основного меню
+        keyboard = [
+            [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{stream}"),
+             InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{stream}")],
+            [InlineKeyboardButton("🗓 Эта неделя", callback_data=f"this_week_{stream}"),
+             InlineKeyboardButton("⏭ След. неделя", callback_data=f"next_week_{stream}")],
+            [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{stream}")],
+            [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{stream}")],
+        ]
+        
+        # Добавляем кнопку управления ДЗ для админа и помощников
+        if can_manage_homework(update):
+            keyboard.append([InlineKeyboardButton("✏️ Управление ДЗ", callback_data=f"manage_hw_{stream}")])
+        
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        # Текст с информацией о настройках
+        english_text = ""
+        if english_time == "morning":
+            english_text = "\n🕘 Английский: 9:00-12:10"
+        elif english_time == "afternoon":
+            english_text = "\n🕑 Английский: 14:00-17:10"
+        
+        reminders_status = "🔔" if user_settings[user_id].get('reminders', False) else "🔕"
+        reminders_time = user_settings[user_id].get('reminders_time', '20:00')
+        reminders_text = f"\n{reminders_status} Напоминания: {'вкл' if user_settings[user_id].get('reminders', False) else 'выкл'}"
+        if user_settings[user_id].get('reminders', False):
+            reminders_text += f" ({reminders_time})"
+        
+        message_text = f"Выбран {stream} поток{english_text}{reminders_text}\nВыбери действие:"
+        
+        if update.callback_query:
+            try:
+                await safe_edit_message(
+                    update,
+                    text=message_text,
+                    reply_markup=reply_markup
+                )
+            except BadRequest as e:
+                if "Message is not modified" not in str(e):
+                    raise
+        else:
+            await update.message.reply_text(
+                text=message_text,
+                reply_markup=reply_markup
+            )
+            
+    except Exception as e:
+        logging.error(f"Ошибка в show_main_menu: {e}")
+        # Попытка отправить новое сообщение в случае ошибки
+        try:
+            if update.callback_query:
+                await update.callback_query.message.reply_text(
+                    text="❌ Произошла ошибка. Попробуйте снова.",
+                    reply_markup=reply_markup
+                )
+        except Exception as e2:
+            logging.error(f"Критическая ошибка в show_main_menu: {e2}")
 
 async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     user_id = str(update.effective_user.id)
@@ -745,7 +791,8 @@ async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_
         [InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")]
     ]
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=f"Настройки напоминаний:\n\n"
              f"Текущий статус: {status_icon} {status_text}\n"
              f"Время напоминаний: {current_time}\n\n"
@@ -757,7 +804,7 @@ async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_
 async def show_manage_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, stream):
     """Показывает меню управления домашними заданиями"""
     if not can_manage_homework(update):
-        await update.callback_query.edit_message_text("❌ У вас нет прав для управления ДЗ")
+        await safe_edit_message(update, "❌ У вас нет прав для управления ДЗ")
         return
         
     keyboard = [
@@ -771,7 +818,8 @@ async def show_manage_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Управление домашними заданиями:\n\n"
              "При добавлении ДЗ для одного потока, если у обоих потоков есть идентичные пары "
              "в одно время, ДЗ автоматически добавится для обоих потоков.",
@@ -784,7 +832,8 @@ async def show_add_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, s
     subjects = get_unique_subjects(stream)
     
     if not subjects:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="❌ Не удалось загрузить список предметов. Попробуйте обновить расписание.",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
         )
@@ -806,7 +855,8 @@ async def show_add_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, s
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Выбери предмет для добавления домашнего задания:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -832,7 +882,8 @@ async def show_date_selection(update: Update, context: ContextTypes.DEFAULT_TYPE
     keyboard.append([InlineKeyboardButton("📆 Ввести другую дату", callback_data=f"hw_date_manual_{stream}")])
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=f"Выбери дату для предмета '{subject}':",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -843,7 +894,8 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
     homeworks = load_homeworks(stream)
     
     if not homeworks:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="📭 Домашних заданий для удаления нет",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
         )
@@ -870,7 +922,8 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Выбери домашнее задание для удаления:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -880,7 +933,8 @@ async def show_all_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE,
     homeworks = load_homeworks(stream)
     
     if not homeworks:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="📭 Домашних заданий нет",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
         )
@@ -918,7 +972,8 @@ async def show_all_homeworks(update: Update, context: ContextTypes.DEFAULT_TYPE,
     if len(message) > 4000:
         message = message[:4000] + "\n\n... (сообщение обрезано)"
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=message,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
     )
@@ -973,7 +1028,8 @@ async def show_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="🔧 Меню администратора:",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
@@ -994,7 +1050,8 @@ async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFA
     ]
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text=f"👥 Управление помощниками:\n\n{assistants_list}",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
@@ -1041,7 +1098,8 @@ async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAUL
     ]
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="📝 Переименование предметов:\n\nВыберите поток:",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
@@ -1056,7 +1114,8 @@ async def show_stream_subjects_for_rename(update: Update, context: ContextTypes.
     subjects = get_unique_subjects(stream)
     
     if not subjects:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="❌ Не удалось загрузить список предметов.",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")]])
         )
@@ -1075,7 +1134,8 @@ async def show_stream_subjects_for_rename(update: Update, context: ContextTypes.
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=f"📝 Предметы {stream} потока:\n\nВыберите предмет для переименования:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -1124,7 +1184,8 @@ async def show_edit_schedule_menu(update: Update, context: ContextTypes.DEFAULT_
     ]
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text="📝 Редактирование расписания:\n\nВыберите поток:",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
@@ -1151,7 +1212,8 @@ async def show_week_selection(update: Update, context: ContextTypes.DEFAULT_TYPE
     ]
     
     if update.callback_query:
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text=f"Выберите неделю для редактирования ({stream} поток):",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
@@ -1183,7 +1245,8 @@ async def show_day_selection(update: Update, context: ContextTypes.DEFAULT_TYPE,
     
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"edit_schedule_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=f"Выберите день для редактирования ({stream} поток):",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -1193,7 +1256,7 @@ async def show_day_events_for_editing(update: Update, context: ContextTypes.DEFA
     try:
         date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
     except ValueError:
-        await update.callback_query.edit_message_text("❌ Ошибка формата даты")
+        await safe_edit_message(update, "❌ Ошибка формата даты")
         return
     
     events = load_events_from_github(stream)
@@ -1240,7 +1303,8 @@ async def show_day_events_for_editing(update: Update, context: ContextTypes.DEFA
     keyboard.append([InlineKeyboardButton("➕ Добавить пару", callback_data=f"add_event_{stream}_{date_str}")])
     keyboard.append([InlineKeyboardButton("🔙 Назад к неделе", callback_data=f"edit_week_current_{stream}")])
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text=text,
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -1260,7 +1324,7 @@ async def show_event_edit_options(update: Update, context: ContextTypes.DEFAULT_
                 break
         
         if not target_event:
-            await update.callback_query.edit_message_text("❌ Событие не найдено")
+            await safe_edit_message(update, "❌ Событие не найдено")
             return
         
         time_str = f"{target_event['start'].strftime('%H:%M')}–{target_event['end'].strftime('%H:%M')}"
@@ -1277,14 +1341,15 @@ async def show_event_edit_options(update: Update, context: ContextTypes.DEFAULT_
             [InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]
         ]
         
-        await update.callback_query.edit_message_text(
+        await safe_edit_message(
+            update,
             text=text,
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
         
     except Exception as e:
         logging.error(f"Ошибка показа опций редактирования: {e}")
-        await update.callback_query.edit_message_text("❌ Ошибка при загрузке события")
+        await safe_edit_message(update, "❌ Ошибка при загрузке события")
 
 async def handle_event_rename(update: Update, context: ContextTypes.DEFAULT_TYPE, stream, date_str, event_key):
     """Обрабатывает переименование события"""
@@ -1294,7 +1359,8 @@ async def handle_event_rename(update: Update, context: ContextTypes.DEFAULT_TYPE
         'event_key': event_key
     }
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Введите новое название для пары:",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_event_{stream}_{date_str}_{event_key}")]])
     )
@@ -1318,7 +1384,8 @@ async def handle_event_deletion(update: Update, context: ContextTypes.DEFAULT_TY
     if stream in events_cache:
         del events_cache[stream]
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="✅ Пара удалена из расписания!",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад к дню", callback_data=f"edit_day_{stream}_{date_str}")]])
     )
@@ -1331,7 +1398,8 @@ async def handle_new_event_creation(update: Update, context: ContextTypes.DEFAUL
         'step': 'name'
     }
     
-    await update.callback_query.edit_message_text(
+    await safe_edit_message(
+        update,
         text="Введите название новой пары:",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_day_{stream}_{date_str}")]])
     )
@@ -1556,9 +1624,19 @@ async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYP
 # === ОБРАБОТЧИК CALLBACK QUERY ===
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
-    await query.answer()
+    user_id = query.from_user.id
+    
+    # Проверяем, не обрабатывается ли уже запрос от этого пользователя
+    if context.user_data.get(f'processing_{user_id}'):
+        await query.answer("Пожалуйста, подождите, обрабатывается предыдущий запрос...", show_alert=False)
+        return
+        
+    # Устанавливаем флаг обработки
+    context.user_data[f'processing_{user_id}'] = True
     
     try:
+        await query.answer()
+        
         data = query.data
         
         if data.startswith('select_stream_'):
@@ -1606,7 +1684,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             user_settings[user_id]['reminders_time'] = time_str
             save_user_settings(user_settings)
             
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text=f"✅ Напоминания включены и установлены на {time_str}!",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
             )
@@ -1618,7 +1697,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 user_settings[user_id] = {}
             user_settings[user_id]['reminders'] = False
             save_user_settings(user_settings)
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text="🔕 Напоминания выключены",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
             )
@@ -1634,7 +1714,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 for subject, hw_text in tomorrow_hws:
                     text += f"📖 {subject}:\n{hw_text}\n\n"
             
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text=text,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{stream}")]])
             )
@@ -1644,7 +1725,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             if stream in events_cache:
                 del events_cache[stream]
             events = load_events_from_github(stream)
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text=f"✅ Расписание для {stream} потока обновлено! Загружено {len(events)} событий",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{stream}")]])
             )
@@ -1685,7 +1767,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     break
             
             if not original_subject:
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text="❌ Не удалось найти предмет. Попробуйте снова.",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
                 )
@@ -1706,7 +1789,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             if parts[3] == 'manual':
                 # Ручной ввод даты
                 context.user_data['hw_step'] = 'enter_date_manual'
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text="Введите дату в формате ДД.ММ.ГГГГ (например, 25.12.2023):",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{stream}")]])
                 )
@@ -1718,7 +1802,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 subject = context.user_data['hw_subject']
                 date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
                 
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text=f"📝 Добавление ДЗ для предмета: {subject}\n"
                          f"📅 Дата: {date.strftime('%d.%m.%Y')}\n\n"
                          f"Введите текст домашнего задания:",
@@ -1745,12 +1830,14 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 del homeworks[hw_key]
                 save_homeworks(stream, homeworks)
                 
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text="✅ Домашнее задание удалено!",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"delete_hw_menu_{stream}")]])
                 )
             else:
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text="❌ Домашнее задание не найдено!",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{stream}")]])
                 )
@@ -1806,7 +1893,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             if len(text) > 4000:
                 text = text[:4000] + "\n\n... (сообщение обрезано)"
                 
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text=text,
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
@@ -1829,14 +1917,16 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
         elif data == "add_assistant":
             context.user_data['awaiting_assistant'] = "add"
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text="Введите username помощника (без @):",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
             )
             
         elif data == "remove_assistant":
             context.user_data['awaiting_assistant'] = "remove"
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text="Введите username помощника для удаления (без @):",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
             )
@@ -1865,7 +1955,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     'stream': stream,
                     'subject': selected_subject
                 }
-                await query.edit_message_text(
+                await safe_edit_message(
+                    update,
                     text=f"Введите новое название для предмета:\n\n{selected_subject}",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"rename_stream_{stream}")]])
                 )
@@ -1919,14 +2010,37 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             date_str = parts[3]
             await handle_new_event_creation(update, context, stream, date_str)
                 
+    except BadRequest as e:
+        if "Message is not modified" in str(e):
+            # Игнорируем эту ошибку - сообщение не изменилось
+            logging.info("Message not modified error - ignoring")
+        else:
+            logging.error(f"BadRequest в обработчике callback_query: {e}")
+            try:
+                await safe_edit_message(
+                    update,
+                    text="❌ Произошла ошибка при обновлении сообщения. Попробуйте еще раз."
+                )
+            except Exception as e2:
+                logging.error(f"Ошибка при отправке сообщения об ошибке: {e2}")
+                
+    except TimedOut as e:
+        logging.error(f"Timeout в обработчике callback_query: {e}")
+        await query.answer("Произошла задержка, попробуйте еще раз", show_alert=False)
+        
     except Exception as e:
         logging.error(f"Ошибка в обработчике callback_query: {e}", exc_info=True)
         try:
-            await query.edit_message_text(
+            await safe_edit_message(
+                update,
                 text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
             )
         except Exception as e2:
             logging.error(f"Ошибка при отправке сообщения об ошибке: {e2}")
+    
+    finally:
+        # Снимаем флаг обработки
+        context.user_data.pop(f'processing_{user_id}', None)
 
 # === КОМАНДЫ ===
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1992,4 +2106,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        # 2000
