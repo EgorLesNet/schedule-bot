@@ -1179,7 +1179,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parts = data.split('_')
             if len(parts) >= 3:
                 stream = parts[2]
-                course = parts[3] if len(parts) > 3 else "1"  # По умолчанию 1 курс для обратной совместимости
+                course = parts[3] if len(parts) > 3 else "1"
                 context.user_data['stream'] = stream
                 await select_english_time(update, context, course, stream)
             else:
@@ -1217,11 +1217,11 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     course = parts[1]
                     stream = parts[2]
                 elif data.startswith('this_week_'):
-                    course = parts[2]  # this_week_1_1 -> parts[2] = 1
-                    stream = parts[3]  # parts[3] = 1
+                    course = parts[2]
+                    stream = parts[3]
                 elif data.startswith('next_week_'):
-                    course = parts[2]  # next_week_1_1 -> parts[2] = 1
-                    stream = parts[3]  # parts[3] = 1
+                    course = parts[2]
+                    stream = parts[3]
                 
                 # Проверяем корректность курса
                 if course not in ['1', '2', '3', '4']:
@@ -1299,7 +1299,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await query.answer("Ошибка: неверный формат данных")
                 return
             
-       # Обработка напоминаний
+        # Обработка напоминаний
         elif data.startswith('reminders_settings_'):
             parts = data.split('_')
             if len(parts) >= 4:
@@ -1312,9 +1312,9 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
         elif data.startswith('set_reminders_time_'):
             parts = data.split('_')
-            if len(parts) >= 4:
-                course = parts[2]
-                stream = parts[3]
+            if len(parts) >= 6:
+                course = parts[4]
+                stream = parts[5]
                 await select_reminders_time(update, context, course, stream)
             else:
                 await query.answer("Ошибка: неверный формат данных")
@@ -1322,192 +1322,269 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
         elif data.startswith('reminders_time_'):
             parts = data.split('_')
-            time_str = parts[2]
-            course = parts[3]
-            stream = parts[4]
-            
-            user_id = str(update.effective_user.id)
-            if user_id not in user_settings:
-                user_settings[user_id] = {}
-            user_settings[user_id]['reminders'] = True
-            user_settings[user_id]['reminders_time'] = time_str
-            save_user_settings(user_settings)
-            
-            await safe_edit_message(
-                update,
-                text=f"✅ Напоминания включены и установлены на {time_str}!",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
-            )
+            if len(parts) >= 5:
+                time_str = parts[2]
+                course = parts[3]
+                stream = parts[4]
+                
+                user_id = str(update.effective_user.id)
+                if user_id not in user_settings:
+                    user_settings[user_id] = {}
+                user_settings[user_id]['reminders'] = True
+                user_settings[user_id]['reminders_time'] = time_str
+                save_user_settings(user_settings)
+                
+                await safe_edit_message(
+                    update,
+                    text=f"✅ Напоминания включены и установлены на {time_str}!",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
+                )
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('reminders_off_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            user_id = str(update.effective_user.id)
-            if user_id not in user_settings:
-                user_settings[user_id] = {}
-            user_settings[user_id]['reminders'] = False
-            save_user_settings(user_settings)
-            await safe_edit_message(
-                update,
-                text="🔕 Напоминания выключены",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
-            )
+            if len(parts) >= 4:
+                course = parts[2]
+                stream = parts[3]
+                user_id = str(update.effective_user.id)
+                if user_id not in user_settings:
+                    user_settings[user_id] = {}
+                user_settings[user_id]['reminders'] = False
+                save_user_settings(user_settings)
+                await safe_edit_message(
+                    update,
+                    text="🔕 Напоминания выключены",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
+                )
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
                 
         elif data.startswith('view_tomorrow_hw_'):
             parts = data.split('_')
-            course = parts[3]
-            stream = parts[4]
-            tomorrow_hws = get_homeworks_for_tomorrow(course, stream)
-            
-            if not tomorrow_hws:
-                text = "📭 На завтра домашних заданий нет"
+            if len(parts) >= 5:
+                course = parts[3]
+                stream = parts[4]
+                tomorrow_hws = get_homeworks_for_tomorrow(course, stream)
+                
+                if not tomorrow_hws:
+                    text = "📭 На завтра домашних заданий нет"
+                else:
+                    text = "📚 Домашние задания на завтра:\n\n"
+                    for subject, hw_text in tomorrow_hws:
+                        text += f"📖 {subject}:\n{hw_text}\n\n"
+                
+                await safe_edit_message(
+                    update,
+                    text=text,
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
+                )
             else:
-                text = "📚 Домашние задания на завтра:\n\n"
-                for subject, hw_text in tomorrow_hws:
-                    text += f"📖 {subject}:\n{hw_text}\n\n"
-            
-            await safe_edit_message(
-                update,
-                text=text,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]])
-            )
+                await query.answer("Ошибка: неверный формат данных")
+                return
                 
         elif data.startswith('refresh_'):
             parts = data.split('_')
-            course = parts[1]
-            stream = parts[2]
-            cache_key = f"{course}_{stream}"
-            if cache_key in events_cache:
-                del events_cache[cache_key]
+            if len(parts) >= 3:
+                course = parts[1]
+                stream = parts[2]
+                cache_key = f"{course}_{stream}"
+                if cache_key in events_cache:
+                    del events_cache[cache_key]
+                        
+                events = load_events_from_github(course, stream)
+                course_text = f"{course} курс"
+                if course == "1":
+                    course_text += f", {stream} поток"
                     
-            events = load_events_from_github(course, stream)
-            course_text = f"{course} курс"
-            if course == "1":
-                course_text += f", {stream} поток"
-                
-            await safe_edit_message(
-                update,
-                text=f"✅ Расписание для {course_text} обновлено! Загружено {len(events)} событий",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{course}_{stream}")]])
-            )
+                await safe_edit_message(
+                    update,
+                    text=f"✅ Расписание для {course_text} обновлено! Загружено {len(events)} событий",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"back_to_main_{course}_{stream}")]])
+                )
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('manage_hw_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            await show_manage_hw_menu(update, context, course, stream)
+            if len(parts) >= 4:
+                course = parts[2]
+                stream = parts[3]
+                await show_manage_hw_menu(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('add_hw_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            await show_add_hw_menu(update, context, course, stream)
+            if len(parts) >= 4:
+                course = parts[2]
+                stream = parts[3]
+                await show_add_hw_menu(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('hw_subj_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            safe_subject = '_'.join(parts[4:])
-            
-            if course not in ['1', '2', '3', '4']:
-                await query.answer("Неверный курс")
-                return
+            if len(parts) >= 5:
+                course = parts[2]
+                stream = parts[3]
+                safe_subject = '_'.join(parts[4:])
+                
+                if course not in ['1', '2', '3', '4']:
+                    await query.answer("Неверный курс")
+                    return
 
-            subjects = get_unique_subjects(course, stream)
-            original_subject = None
-            
-            for subject in subjects:
-                safe_compare = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
-                safe_compare = safe_compare[:20]
-                if safe_compare == safe_subject:
-                    original_subject = subject
-                    break
-            
-            if not original_subject:
-                await safe_edit_message(
-                    update,
-                    text="❌ Не удалось найти предмет. Попробуйте снова.",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
-                )
+                subjects = get_unique_subjects(course, stream)
+                original_subject = None
+                
+                for subject in subjects:
+                    safe_compare = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)
+                    safe_compare = safe_compare[:20]
+                    if safe_compare == safe_subject:
+                        original_subject = subject
+                        break
+                
+                if not original_subject:
+                    await safe_edit_message(
+                        update,
+                        text="❌ Не удалось найти предмет. Попробуйте снова.",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
+                    )
+                    return
+                
+                context.user_data['hw_subject'] = original_subject
+                context.user_data['hw_course'] = course
+                context.user_data['hw_stream'] = stream
+                
+                await show_date_selection(update, context, course, stream, original_subject)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
                 return
-            
-            context.user_data['hw_subject'] = original_subject
-            context.user_data['hw_course'] = course
-            context.user_data['hw_stream'] = stream
-            
-            await show_date_selection(update, context, course, stream, original_subject)
             
         elif data.startswith('hw_date_'):
             parts = data.split('_')
-            course = parts[2]
-            stream = parts[3]
-            
-            if parts[4] == 'manual':
-                context.user_data['hw_step'] = 'enter_date_manual'
-                await safe_edit_message(
-                    update,
-                    text="Введите дату в формате ДД.ММ.ГГГГ (например, 25.12.2023):",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
-                )
-            else:
-                date_str = parts[4]
-                context.user_data['hw_date'] = date_str
-                context.user_data['hw_step'] = 'enter_text'
-                subject = context.user_data['hw_subject']
-                date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+            if len(parts) >= 5:
+                course = parts[2]
+                stream = parts[3]
                 
-                await safe_edit_message(
-                    update,
-                    text=f"📝 Добавление ДЗ для предмета: {subject}\n"
-                         f"📅 Дата: {date.strftime('%d.%m.%Y')}\n\n"
-                         f"Введите текст домашнего задания:",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
-                )
+                if parts[4] == 'manual':
+                    context.user_data['hw_step'] = 'enter_date_manual'
+                    await safe_edit_message(
+                        update,
+                        text="Введите дату в формате ДД.ММ.ГГГГ (например, 25.12.2023):",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
+                    )
+                else:
+                    date_str = parts[4]
+                    context.user_data['hw_date'] = date_str
+                    context.user_data['hw_step'] = 'enter_text'
+                    subject = context.user_data['hw_subject']
+                    date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                    
+                    await safe_edit_message(
+                        update,
+                        text=f"📝 Добавление ДЗ для предмета: {subject}\n"
+                             f"📅 Дата: {date.strftime('%d.%m.%Y')}\n\n"
+                             f"Введите текст домашнего задания:",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"add_hw_{course}_{stream}")]])
+                    )
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('view_future_hw_'):
             parts = data.split('_')
-            course = parts[3]
-            stream = parts[4]
-            await show_future_homeworks(update, context, course, stream)
+            if len(parts) >= 5:
+                course = parts[3]
+                stream = parts[4]
+                await show_future_homeworks(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('view_past_hw_'):
             parts = data.split('_')
-            course = parts[3]
-            stream = parts[4]
-            await show_past_homeworks(update, context, course, stream)
+            if len(parts) >= 5:
+                course = parts[3]
+                stream = parts[4]
+                await show_past_homeworks(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('delete_hw_menu_'):
             parts = data.split('_')
-            course = parts[3]
-            stream = parts[4]
-            await show_delete_hw_menu(update, context, course, stream)
+            if len(parts) >= 5:
+                course = parts[3]
+                stream = parts[4]
+                await show_delete_hw_menu(update, context, course, stream)
+            else:
+                await query.answer("Ошибка: неверный формат данных")
+                return
             
         elif data.startswith('del_hw_'):
             parts = data.split('_', 4)
-            course = parts[2]
-            stream = parts[3]
-            hw_key = parts[4]
-            
-            homeworks = load_homeworks(course, stream)
-            
-            if hw_key in homeworks:
-                del homeworks[hw_key]
-                save_homeworks(course, stream, homeworks)
+            if len(parts) >= 5:
+                course = parts[2]
+                stream = parts[3]
+                hw_key = parts[4]
                 
-                await safe_edit_message(
-                    update,
-                    text="✅ Домашнее задание удалено!",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"delete_hw_menu_{course}_{stream}")]])
-                )
+                homeworks = load_homeworks(course, stream)
+                
+                if hw_key in homeworks:
+                    del homeworks[hw_key]
+                    save_homeworks(course, stream, homeworks)
+                    
+                    await safe_edit_message(
+                        update,
+                        text="✅ Домашнее задание удалено!",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"delete_hw_menu_{course}_{stream}")]])
+                    )
+                else:
+                    await safe_edit_message(
+                        update,
+                        text="❌ Домашнее задание не найдено!",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
+                    )
             else:
-                await safe_edit_message(
-                    update,
-                    text="❌ Домашнее задание не найдено!",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"manage_hw_{course}_{stream}")]])
-                )
+                await query.answer("Ошибка: неверный формат данных")
+                return
         
-      except BadRequest as e:
+        # Обработка админских команд (если нужно)
+        elif data == "manage_assistants":
+            if is_admin(update):
+                await show_manage_assistants_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "rename_subjects":
+            if is_admin(update):
+                await show_rename_subjects_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "edit_schedule":
+            if is_admin(update):
+                await show_edit_schedule_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "user_stats_admin":
+            if is_admin(update):
+                await show_user_stats_admin(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+        
+        else:
+            logging.warning(f"Неизвестный callback_data: {data}")
+            await query.answer("Неизвестная команда")
+        
+    except BadRequest as e:
         if "Message is not modified" in str(e):
             logging.info("Message not modified - ignoring")
         else:
