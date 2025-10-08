@@ -1952,7 +1952,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Остальные обработчики (админские команды и т.д.) остаются аналогичными
         # Для экономии места я опущу их, так как они требуют аналогичных изменений
         
-except BadRequest as e:
+    except BadRequest as e:
         if "Message is not modified" in str(e):
             # Игнорируем эту ошибку - сообщение не изменилось
             logging.info("Message not modified error - ignoring")
