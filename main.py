@@ -1980,7 +1980,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             stream = parts[4]
             await show_delete_hw_menu(update, context, course, stream)
             
-                elif data.startswith('del_hw_'):
+        elif data.startswith('del_hw_'):
             parts = data.split('_', 4)
             course = parts[2]
             stream = parts[3]
