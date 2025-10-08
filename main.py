@@ -1841,6 +1841,22 @@ async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
+# === КОМАНДЫ ===
+async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для доступа к меню администратора"""
+    await show_admin_menu(update, context)
+
+async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра списка помощников"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+    
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
+    
+    await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
+
+
 # === ЗАПУСК ===
 def main():
     global user_settings, application, assistants, subject_renames, schedule_edits
