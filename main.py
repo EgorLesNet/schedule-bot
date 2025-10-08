@@ -1478,7 +1478,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             elif data.startswith('tomorrow_'):
                 tomorrow = today + datetime.timedelta(days=1)
                 text = format_day(tomorrow, events, stream, english_time, is_tomorrow=True)
-                if "занятий нет" в text:
+                if "занятий нет" in text:
                     text = f"🔄 Завтра ({tomorrow.strftime('%d.%m.%Y')}) — занятий нет\n"
 
             elif data.startswith('this_week_'):
