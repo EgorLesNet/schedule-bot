@@ -393,9 +393,31 @@ def is_online_class(ev):
     desc = ev.get("desc", "").lower()
     summary = ev.get("summary", "").lower()
     
-    online_keywords = ["онлайн", "online", "zoom", "teams", "вебинар", "webinar", "дистанционно"]
+    online_keywords = [
+        "онлайн", "online", "zoom", "teams", "вебинар", "webinar", 
+        "дистанционно", "distance", "удаленно", "remote", "ссылка",
+        "конференция", "conference", "meet", "meeting", "call"
+    ]
     
-    return any(keyword in desc or keyword in summary for keyword in online_keywords)
+    # Проверяем наличие ключевых слов в описании или названии
+    desc_online = any(keyword in desc for keyword in online_keywords)
+    summary_online = any(keyword in summary for keyword in online_keywords)
+    
+    # Также проверяем отсутствие аудитории как признак онлайн-занятия
+    room_patterns = [
+        r"Аудитория:\s*([^\\\n\r]+)",
+        r"Room:\s*([^\\\n\r]+)",
+        r"Auditorium:\s*([^\\\n\r]+)"
+    ]
+    
+    has_room = False
+    for pattern in room_patterns:
+        if re.search(pattern, desc, re.IGNORECASE):
+            has_room = True
+            break
+    
+    # Если есть ключевые слова онлайн ИЛИ нет указания на аудиторию, считаем онлайн
+    return desc_online or summary_online or not has_room
 
 def has_only_lunch_break(events, date):
     """Проверяет, есть ли в этот день только обеденный перерыв"""
@@ -411,25 +433,71 @@ def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
     
-    if "Преподаватель" in desc:
-        teacher_match = re.search(r"Преподаватель:\s*([^\\\n]+)", desc)
+    # Улучшенный парсинг преподавателя
+    teacher_patterns = [
+        r"Преподаватель:\s*([^\\\n\r]+)",
+        r"Преподаватель\s*:\s*([^\\\n\r]+)",
+        r"Teacher:\s*([^\\\n\r]+)",
+        r"Teacher\s*:\s*([^\\\n\r]+)"
+    ]
+    
+    for pattern in teacher_patterns:
+        teacher_match = re.search(pattern, desc, re.IGNORECASE)
         if teacher_match:
             teacher = teacher_match.group(1).strip()
+            break
     
-    if "Аудитория" in desc:
-        room_match = re.search(r"Аудитория:\s*([^\\\n]+)", desc)
+    # Улучшенный парсинг аудитории
+    room_patterns = [
+        r"Аудитория:\s*([^\\\n\r]+)",
+        r"Аудитория\s*:\s*([^\\\n\r]+)",
+        r"Room:\s*([^\\\n\r]+)",
+        r"Room\s*:\s*([^\\\n\r]+)",
+        r"Auditorium:\s*([^\\\n\r]+)",
+        r"Auditorium\s*:\s*([^\\\n\r]+)"
+    ]
+    
+    for pattern in room_patterns:
+        room_match = re.search(pattern, desc, re.IGNORECASE)
         if room_match:
             room = room_match.group(1).strip()
+            break
+    
+    # Если аудитория не найдена стандартными способами, ищем ИНИОН
+    if not room:
+        inion_patterns = [
+            r"ИНИОН",
+            r"INION",
+            r"инион",
+            r"inion"
+        ]
+        
+        for pattern in inion_patterns:
+            if re.search(pattern, desc, re.IGNORECASE):
+                room = "ИНИОН"
+                break
+    
+    # Если преподаватель не найден стандартными способами, ищем в описании
+    if not teacher:
+        # Ищем ФИО преподавателя (три слова с заглавными буквами)
+        name_pattern = r"([А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+)"
+        name_match = re.search(name_pattern, desc)
+        if name_match:
+            teacher = name_match.group(1).strip()
     
     online_marker = " 💻" if is_online_class(ev) else ""
     
     line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}  {ev['summary']}{online_marker}"
+    
+    # Добавляем информацию о преподавателе и аудитории
     if teacher or room:
         line += "\n"
-    if teacher:
-        line += f"👨‍🏫 {teacher}"
-    if room:
-        line += f" | 📍{room}"
+        if teacher:
+            line += f"👨‍🏫 {teacher}"
+        if room:
+            if teacher:
+                line += " | "
+            line += f"📍 {room}"
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
@@ -510,6 +578,7 @@ def format_day(date, events, course, stream, english_time=None, is_tomorrow=Fals
     text = f"{prefix}{date_str}:\n"
     for ev in sorted(evs, key=lambda x: x["start"]):
         text += f"• {format_event(ev, course, stream)}\n\n"
+    
     return text
 
 def is_admin(update: Update):
