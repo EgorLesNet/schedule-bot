@@ -1627,7 +1627,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 return
         
         # Обработка админских команд (если нужно)
-      elif data == "manage_assistants":
+elif data == "manage_assistants":
     if is_admin(update):
         await show_manage_assistants_menu(update, context)
     else:
