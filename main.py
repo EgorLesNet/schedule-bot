@@ -1921,7 +1921,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             logging.warning(f"Неизвестный callback_data: {data}")
             await query.answer("Неизвестная команда")
 
-            elif data.startswith("remove_assistant_"):
+        elif data.startswith("remove_assistant_"):
             if is_admin(update):
                 assistant = data.split("_")[2]
                 if assistant in assistants:
