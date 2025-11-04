@@ -1626,31 +1626,41 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await query.answer("Ошибка: неверный формат данных")
                 return
         
-        # Обработка админских команд (если нужно)
+        # Обработка админских команд
         elif data == "manage_assistants":
             if is_admin(update):
-        await show_manage_assistants_menu(update, context)
-          else:
-        await query.answer("🔒 У вас нет прав для этой команды")
+                await show_manage_assistants_menu(update, context)
+            else:
+                await query.answer("🔒 У вас нет прав для этой команды")
 
         elif data == "rename_subjects":
-          if is_admin(update):
-        await show_rename_subjects_menu(update, context)
-           else:
-        await query.answer("🔒 У вас нет прав для этой команды")
+            if is_admin(update):
+                await show_rename_subjects_menu(update, context)
+            else:
+                await query.answer("🔒 У вас нет прав для этой команды")
 
         elif data == "edit_schedule":
-           if is_admin(update):
-        await show_edit_schedule_menu(update, context)
-        else:
-           await query.answer("🔒 У вас нет прав для этой команды")
+            if is_admin(update):
+                await show_edit_schedule_menu(update, context)
+            else:
+                await query.answer("🔒 У вас нет прав для этой команды")
 
         elif data == "user_stats_admin":
-           if is_admin(update):
-             await show_user_stats_admin(update, context)
+            if is_admin(update):
+                await show_user_stats_admin(update, context)
+            else:
+                await query.answer("🔒 У вас нет прав для этой команды")
+
+        elif data == "back_to_admin":
+            if is_admin(update):
+                await admin_command(update, context)
+            else:
+                await query.answer("🔒 У вас нет прав")
+
         else:
-            await query.answer("🔒 У вас нет прав для этой команды")
-        
+            logging.warning(f"Неизвестный callback_data: {data}")
+            await query.answer("Неизвестная команда")
+
     except BadRequest as e:
         if "Message is not modified" in str(e):
             logging.info("Message not modified - ignoring")
@@ -1659,28 +1669,27 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             try:
                 await safe_edit_message(
                     update,
-                    text="❌ Произошла ошибка при обновлении сообщения. Попробуйте еще раз."
+                    text="🔍 Произошла ошибка при обновлении сообщения. Попробуйте еще раз."
                 )
             except Exception as e2:
                 logging.error(f"Ошибка при отправке сообщения об ошибке: {e2}")
-                
+
     except TimedOut as e:
         logging.error(f"Timeout в обработчике callback_query: {e}")
         await query.answer("Произошла задержка, попробуйте еще раз", show_alert=False)
-        
+
     except Exception as e:
         logging.error(f"Ошибка в обработчике callback_query: {e}", exc_info=True)
         try:
             await safe_edit_message(
                 update,
-                text="❌ Произошла ошибка при обработке запроса. Попробуйте еще раз."
+                text="✗ Произошла ошибка при обработке запроса. Попробуйте еще раз."
             )
         except Exception as e2:
             logging.error(f"Ошибка при отправке сообщения об ошибке: {e2}")
-    
+
     finally:
         context.user_data.pop(f'processing_{user_id}', None)
-
 # === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ ОБРАБОТКИ СООБЩЕНИЙ ===
 async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
     """Показывает выбор времени для напоминаний"""
