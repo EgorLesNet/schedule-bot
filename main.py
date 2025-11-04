@@ -1463,6 +1463,16 @@ async def show_rename_course_menu(update: Update, context: ContextTypes.DEFAULT_
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
+async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра списка помощников"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+    
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
+
+    await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
+
 # === ОБРАБОТЧИК CALLBACK QUERY ===
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
