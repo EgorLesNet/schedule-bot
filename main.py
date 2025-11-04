@@ -1917,9 +1917,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await show_remove_assistant_menu(update, context)
             else:
                 await query.answer("🔒 У вас нет прав")
-        else:
-            logging.warning(f"Неизвестный callback_data: {data}")
-            await query.answer("Неизвестная команда")
 
         elif data.startswith("remove_assistant_"):
             if is_admin(update):
@@ -1940,6 +1937,10 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     )
             else:
                 await query.answer("🔒 У вас нет прав")
+
+        else:
+            logging.warning(f"Неизвестный callback_data: {data}")
+            await query.answer("Неизвестная команда")
 
     except BadRequest as e:
         if "Message is not modified" in str(e):
