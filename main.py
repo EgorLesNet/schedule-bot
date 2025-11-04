@@ -1116,49 +1116,6 @@ async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TY
     await update.message.reply_text("✅ Проверка обновлений завершена!")
 
 # === АДМИНСКИЕ ФУНКЦИИ ===
-async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Меню управления помощниками"""
-    await safe_edit_message(
-        update,
-        text="👥 Управление помощниками - функционал в разработке",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
-    )
-
-async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Меню переименования предметов"""
-    await safe_edit_message(
-        update,
-        text="📝 Переименование предметов - функционал в разработке",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
-    )
-
-async def show_edit_schedule_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Меню редактирования расписания"""
-    await safe_edit_message(
-        update,
-        text="📅 Редактирование расписания - функционал в разработке",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
-    )
-
-async def show_user_stats_admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Статистика в админском меню"""
-    stats = get_user_stats()
-    message = "📊 Статистика пользователей (админ):\n\n"
-    message += f"👥 Всего пользователей: {stats['total_users']}\n"
-    
-    message += "🎓 Распределение по курсам:\n"
-    for course in ["1", "2", "3", "4"]:
-        if course in stats['course_stats']:
-            course_users = sum(stats['course_stats'][course].values())
-            message += f"  {course} курс: {course_users} пользователей\n"
-    
-    await safe_edit_message(
-        update,
-        text=message,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
-    )
-
-# === АДМИНСКИЕ ФУНКЦИИ ===
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для доступа к меню администратора"""
     if not is_admin(update):
@@ -1283,6 +1240,74 @@ async def show_user_stats_admin(update: Update, context: ContextTypes.DEFAULT_TY
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад в админку", callback_data="back_to_admin")]])
     )
 
+async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра списка помощников"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+    
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
+
+    await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
+
+async def show_assistants_list(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает список помощников"""
+    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
+    
+    await safe_edit_message(
+        update,
+        text=f"📋 Список помощников:\n\n{assistants_list}",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
+    )
+
+async def prompt_add_assistant(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Запрашивает username помощника для добавления"""
+    context.user_data['awaiting_assistant'] = 'add'
+    await safe_edit_message(
+        update,
+        text="Введите username помощника (без @):",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
+    )
+
+async def show_remove_assistant_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Показывает меню удаления помощников"""
+    if not assistants:
+        await safe_edit_message(
+            update,
+            text="❌ Нет помощников для удаления",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
+        )
+        return
+
+    keyboard = []
+    for assistant in sorted(assistants):
+        keyboard.append([InlineKeyboardButton(f"❌ @{assistant}", callback_data=f"remove_assistant_{assistant}")])
+    
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")])
+
+    await safe_edit_message(
+        update,
+        text="Выберите помощника для удаления:",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_rename_course_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course):
+    """Показывает меню переименования предметов для конкретного курса"""
+    streams = ["1"] if course != "1" else ["1", "2"]
+    
+    keyboard = []
+    for stream in streams:
+        keyboard.append([InlineKeyboardButton(f"📖 {course} курс, {stream} поток", 
+                      callback_data=f"rename_stream_{course}_{stream}")])
+    
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")])
+
+    await safe_edit_message(
+        update,
+        text=f"📝 Переименование предметов {course} курса\n\nВыберите поток:",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
 # === ОБРАБОТЧИК СООБЩЕНИЙ ===
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик текстовых сообщений"""
@@ -1404,74 +1429,6 @@ async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TY
         text="Выбери время для напоминаний о домашних заданиях:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
-
-async def show_assistants_list(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Показывает список помощников"""
-    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
-    
-    await safe_edit_message(
-        update,
-        text=f"📋 Список помощников:\n\n{assistants_list}",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
-    )
-
-async def prompt_add_assistant(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Запрашивает username помощника для добавления"""
-    context.user_data['awaiting_assistant'] = 'add'
-    await safe_edit_message(
-        update,
-        text="Введите username помощника (без @):",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
-    )
-
-async def show_remove_assistant_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Показывает меню удаления помощников"""
-    if not assistants:
-        await safe_edit_message(
-            update,
-            text="❌ Нет помощников для удаления",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")]])
-        )
-        return
-
-    keyboard = []
-    for assistant in sorted(assistants):
-        keyboard.append([InlineKeyboardButton(f"❌ @{assistant}", callback_data=f"remove_assistant_{assistant}")])
-    
-    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="manage_assistants")])
-
-    await safe_edit_message(
-        update,
-        text="Выберите помощника для удаления:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_rename_course_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course):
-    """Показывает меню переименования предметов для конкретного курса"""
-    streams = ["1"] if course != "1" else ["1", "2"]
-    
-    keyboard = []
-    for stream in streams:
-        keyboard.append([InlineKeyboardButton(f"📖 {course} курс, {stream} поток", 
-                      callback_data=f"rename_stream_{course}_{stream}")])
-    
-    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="rename_subjects")])
-
-    await safe_edit_message(
-        update,
-        text=f"📝 Переименование предметов {course} курса\n\nВыберите поток:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для просмотра списка помощников"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-    
-    assistants_list = "\n".join([f"• @{assistant}" for assistant in sorted(assistants)]) if assistants else "❌ Помощников нет"
-
-    await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
 # === ОБРАБОТЧИК CALLBACK QUERY ===
 async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
