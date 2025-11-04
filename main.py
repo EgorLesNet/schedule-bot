@@ -595,29 +595,31 @@ def can_manage_homework(update: Update):
 def get_user_stats():
     """Получает статистику пользователей"""
     total_users = len(user_settings)
-    
+
     # Статистика по курсам и потокам
     course_stats = {}
     reminders_stats = {"enabled": 0, "disabled": 0}
     english_time_stats = {"morning": 0, "afternoon": 0, "none": 0}
-    
+
     for user_id, settings in user_settings.items():
         # Статистика курсов и потоков
         course = settings.get('course')
         stream = settings.get('stream', '1')
-        
-        if course not in course_stats:
-            course_stats[course] = {}
-        if stream not in course_stats[course]:
-            course_stats[course][stream] = 0
-        course_stats[course][stream] += 1
-        
+
+        if course:  # Добавьте проверку на существование курса
+            if course not in course_stats:
+                course_stats[course] = {}
+            
+            if stream not in course_stats[course]:
+                course_stats[course][stream] = 0
+            course_stats[course][stream] += 1
+
         # Статистика напоминаний
         if settings.get('reminders', False):
             reminders_stats["enabled"] += 1
         else:
             reminders_stats["disabled"] += 1
-        
+
         # Статистика времени английского
         english_time = settings.get('english_time')
         if english_time == "morning":
@@ -626,7 +628,7 @@ def get_user_stats():
             english_time_stats["afternoon"] += 1
         else:
             english_time_stats["none"] += 1
-    
+
     return {
         "total_users": total_users,
         "course_stats": course_stats,
@@ -1094,35 +1096,35 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
 async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для просмотра статистики пользователей (только для админа)"""
     if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        await update.message.reply_text("✗️ У вас нет прав для этой команды")
         return
-    
+
     stats = get_user_stats()
-    
+
     message = "📊 Статистика пользователей:\n\n"
     message += f"👥 Всего пользователей: {stats['total_users']}\n\n"
-    
-    message += "📚 Распределение по курсам:\n"
+
+    message += "🎓 Распределение по курсам:\n"
     for course in ["1", "2", "3", "4"]:
         if course in stats['course_stats']:
             course_users = sum(stats['course_stats'][course].values())
-            message += f"• {course} курс: {course_users} пользователей\n"
+            message += f"  {course} курс: {course_users} пользователей\n"
             if course == "1":
                 for stream in ["1", "2"]:
                     if stream in stats['course_stats'][course]:
-                        message += f"  - {stream} поток: {stats['course_stats'][course][stream]} пользователей\n"
-    
-    message += f"\n🔔 Настройки напоминаний:\n"
-    message += f"• Включены: {stats['reminders_stats']['enabled']} пользователей\n"
-    message += f"• Выключены: {stats['reminders_stats']['disabled']} пользователей\n\n"
-    
-    message += f"🕘 Время английского:\n"
-    message += f"• Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
-    message += f"• День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
-    message += f"• Без английского: {stats['english_time_stats']['none']} пользователей"
-    
-    await update.message.reply_text(message)
+                        message += f"   - {stream} поток: {stats['course_stats'][course][stream]} пользователей\n"
 
+    message += f"\n🔔 Настройки напоминаний:\n"
+    message += f"  Включены: {stats['reminders_stats']['enabled']} пользователей\n"
+    message += f"  Выключены: {stats['reminders_stats']['disabled']} пользователей\n"
+
+    message += f"🕒 Время английского:\n"
+    message += f"  Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
+    message += f"  День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
+    message += f"  Без английского: {stats['english_time_stats']['none']} пользователей"
+
+    await update.message.reply_text(message)
+    
 async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для ручной проверки обновлений"""
     if not is_admin(update):
@@ -1625,33 +1627,29 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 return
         
         # Обработка админских команд (если нужно)
-        elif data == "manage_assistants":
-            if is_admin(update):
-                await show_manage_assistants_menu(update, context)
-            else:
-                await query.answer("❌ У вас нет прав для этой команды")
-                
-        elif data == "rename_subjects":
-            if is_admin(update):
-                await show_rename_subjects_menu(update, context)
-            else:
-                await query.answer("❌ У вас нет прав для этой команды")
-                
-        elif data == "edit_schedule":
-            if is_admin(update):
-                await show_edit_schedule_menu(update, context)
-            else:
-                await query.answer("❌ У вас нет прав для этой команды")
-                
-        elif data == "user_stats_admin":
-            if is_admin(update):
-                await show_user_stats_admin(update, context)
-            else:
-                await query.answer("❌ У вас нет прав для этой команды")
-        
-        else:
-            logging.warning(f"Неизвестный callback_data: {data}")
-            await query.answer("Неизвестная команда")
+      elif data == "manage_assistants":
+    if is_admin(update):
+        await show_manage_assistants_menu(update, context)
+    else:
+        await query.answer("🔒 У вас нет прав для этой команды")
+
+elif data == "rename_subjects":
+    if is_admin(update):
+        await show_rename_subjects_menu(update, context)
+    else:
+        await query.answer("🔒 У вас нет прав для этой команды")
+
+elif data == "edit_schedule":
+    if is_admin(update):
+        await show_edit_schedule_menu(update, context)
+    else:
+        await query.answer("🔒 У вас нет прав для этой команды")
+
+elif data == "user_stats_admin":
+    if is_admin(update):
+        await show_user_stats_admin(update, context)
+    else:
+        await query.answer("🔒 У вас нет прав для этой команды")
         
     except BadRequest as e:
         if "Message is not modified" in str(e):
@@ -1705,18 +1703,18 @@ async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TY
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для доступа к меню администратора"""
     if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        await update.message.reply_text("✗ У вас нет прав для этой команды")
         return
-        
+
     keyboard = [
         [InlineKeyboardButton("👥 Управление помощниками", callback_data="manage_assistants")],
         [InlineKeyboardButton("📝 Переименовать предметы", callback_data="rename_subjects")],
-        [InlineKeyboardButton("✏️ Редактировать расписание", callback_data="edit_schedule")],
-        [InlineKeyboardButton("📊 Статистика пользователей", callback_data="user_stats_admin")],
+        [InlineKeyboardButton("📅 Редактировать расписание", callback_data="edit_schedule")],
+        [InlineKeyboardButton("📊 Статистика пользователей", callback_data="user_stats_admin")]
     ]
-    
+
     await update.message.reply_text(
-        text="🔧 Меню администратора:",
+        text="⚙️ Меню администратора:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
