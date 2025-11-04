@@ -8,16 +8,14 @@ import logging
 import time
 import threading
 import asyncio
-import uuid
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, LabeledPrice
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
     CommandHandler,
     CallbackQueryHandler,
     ContextTypes,
     MessageHandler,
-    filters,
-    PreCheckoutQueryHandler
+    filters
 )
 from telegram.error import BadRequest, TimedOut
 
@@ -48,12 +46,6 @@ if not BOT_TOKEN:
 ADMIN_USERNAME = "fusuges"
 GITHUB_RAW_URL = "https://raw.githubusercontent.com/EgorLesNet/schedule-bot/main/main.py"
 
-# Настройки оплаты
-PAYMENT_PROVIDER_TOKEN = "YOUR_PAYMENT_PROVIDER_TOKEN"  # Получить у @BotFather
-PAID_CHANNEL_ID = "@your_paid_channel"  # ID платного канала
-PAID_CHANNEL_LINK = "https://t.me/your_paid_channel"  # Ссылка на канал
-ACCESS_PRICE = 10  # Цена в звездах (Telegram Stars)
-
 # URLs для разных курсов
 STREAM_URLS = {
     "1": {
@@ -77,8 +69,6 @@ LAST_UPDATE_FILE = "last_update.txt"
 ASSISTANTS_FILE = "assistants.json"
 SUBJECT_RENAMES_FILE = "subject_renames.json"
 SCHEDULE_EDITS_FILE = "schedule_edits.json"
-PAID_USERS_FILE = "paid_users.json"
-ONLINE_CLASSES_FILE = "online_classes.json"
 
 # Глобальные переменные
 user_settings = {}
@@ -87,8 +77,6 @@ application = None
 assistants = set()
 subject_renames = {}
 schedule_edits = {}
-paid_users = {}
-online_classes = {}
 
 # === ФУНКЦИИ ДЛЯ РАБОТЫ С ДАННЫМИ ===
 def load_assistants():
@@ -130,32 +118,6 @@ def save_schedule_edits():
     """Сохраняет правки расписания"""
     with open(SCHEDULE_EDITS_FILE, "w", encoding="utf-8") as f:
         json.dump(schedule_edits, f, ensure_ascii=False, indent=2)
-
-def load_paid_users():
-    """Загружает информацию об оплативших пользователях"""
-    try:
-        with open(PAID_USERS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {}
-
-def save_paid_users():
-    """Сохраняет информацию об оплативших пользователях"""
-    with open(PAID_USERS_FILE, "w", encoding="utf-8") as f:
-        json.dump(paid_users, f, ensure_ascii=False, indent=2)
-
-def load_online_classes():
-    """Загружает информацию о онлайн-парах"""
-    try:
-        with open(ONLINE_CLASSES_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {}
-
-def save_online_classes():
-    """Сохраняет информацию о онлайн-парах"""
-    with open(ONLINE_CLASSES_FILE, "w", encoding="utf-8") as f:
-        json.dump(online_classes, f, ensure_ascii=False, indent=2)
 
 def get_original_subject_name(course, stream, display_name):
     """Возвращает оригинальное название предмета по отображаемому"""
@@ -256,9 +218,9 @@ def load_user_settings():
     except FileNotFoundError:
         return {}
 
-def save_user_settings():
+def save_user_settings(settings_data):
     with open(USER_SETTINGS_FILE, "w", encoding="utf-8") as f:
-        json.dump(user_settings, f, ensure_ascii=False, indent=2)
+        json.dump(settings_data, f, ensure_ascii=False, indent=2)
 
 def load_last_update():
     try:
@@ -270,53 +232,6 @@ def load_last_update():
 def save_last_update():
     with open(LAST_UPDATE_FILE, "w", encoding="utf-8") as f:
         f.write(datetime.datetime.now().isoformat())
-
-# === ФУНКЦИИ ДЛЯ ОПЛАТЫ ===
-def is_user_paid(user_id):
-    """Проверяет, оплатил ли пользователь доступ"""
-    user_data = paid_users.get(str(user_id), {})
-    
-    if not user_data:
-        return False
-    
-    # Проверяем срок действия доступа (30 дней)
-    paid_date = datetime.datetime.fromisoformat(user_data['paid_date'])
-    expiry_date = paid_date + datetime.timedelta(days=30)
-    
-    return datetime.datetime.now() < expiry_date
-
-def add_paid_user(user_id, payment_data):
-    """Добавляет пользователя в список оплативших"""
-    paid_users[str(user_id)] = {
-        'paid_date': datetime.datetime.now().isoformat(),
-        'payment_data': payment_data,
-        'access_granted': True
-    }
-    save_paid_users()
-
-# === ФУНКЦИИ ДЛЯ ОНЛАЙН-СТАТУСА ===
-def is_online_class(course, stream, event):
-    """Проверяет, является ли пара онлайн"""
-    # Ключ для идентификации пары: курс_поток_дата_время_предмет
-    date_str = event["start"].date().isoformat()
-    time_str = event["start"].strftime('%H:%M')
-    event_key = f"{course}_{stream}_{date_str}_{time_str}_{event['original_summary']}"
-    
-    # Проверяем, есть ли запись в online_classes
-    return online_classes.get(event_key, False)
-
-def set_online_status(course, stream, event, is_online):
-    """Устанавливает статус онлайн для пары"""
-    date_str = event["start"].date().isoformat()
-    time_str = event["start"].strftime('%H:%M')
-    event_key = f"{course}_{stream}_{date_str}_{time_str}_{event['original_summary']}"
-    
-    if is_online:
-        online_classes[event_key] = True
-    else:
-        online_classes.pop(event_key, None)
-    
-    save_online_classes()
 
 # === ФУНКЦИИ РЕДАКТИРОВАНИЯ РАСПИСАНИЯ ===
 def apply_schedule_edits(course, stream, events):
@@ -473,6 +388,37 @@ def get_week_range(date):
     end = start + datetime.timedelta(days=6)
     return start, end
 
+def is_online_class(ev):
+    """Проверяет, является ли пара онлайн"""
+    desc = ev.get("desc", "").lower()
+    summary = ev.get("summary", "").lower()
+    
+    online_keywords = [
+        "онлайн", "online", "zoom", "teams", "вебинар", "webinar", 
+        "дистанционно", "distance", "удаленно", "remote", "ссылка",
+        "конференция", "conference", "meet", "meeting", "call"
+    ]
+    
+    # Проверяем наличие ключевых слов в описании или названии
+    desc_online = any(keyword in desc for keyword in online_keywords)
+    summary_online = any(keyword in summary for keyword in online_keywords)
+    
+    # Также проверяем отсутствие аудитории как признак онлайн-занятия
+    room_patterns = [
+        r"Аудитория:\s*([^\\\n\r]+)",
+        r"Room:\s*([^\\\n\r]+)",
+        r"Auditorium:\s*([^\\\n\r]+)"
+    ]
+    
+    has_room = False
+    for pattern in room_patterns:
+        if re.search(pattern, desc, re.IGNORECASE):
+            has_room = True
+            break
+    
+    # Если есть ключевые слова онлайн ИЛИ нет указания на аудиторию, считаем онлайн
+    return desc_online or summary_online or not has_room
+
 def has_only_lunch_break(events, date):
     """Проверяет, есть ли в этот день только обеденный перерыв"""
     day_events = [e for e in events if e["start"].date() == date]
@@ -487,26 +433,71 @@ def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
     
-    if "Преподаватель" in desc:
-        teacher_match = re.search(r"Преподаватель:\s*([^\\\n]+)", desc)
+    # Улучшенный парсинг преподавателя
+    teacher_patterns = [
+        r"Преподаватель:\s*([^\\\n\r]+)",
+        r"Преподаватель\s*:\s*([^\\\n\r]+)",
+        r"Teacher:\s*([^\\\n\r]+)",
+        r"Teacher\s*:\s*([^\\\n\r]+)"
+    ]
+    
+    for pattern in teacher_patterns:
+        teacher_match = re.search(pattern, desc, re.IGNORECASE)
         if teacher_match:
             teacher = teacher_match.group(1).strip()
+            break
     
-    if "Аудитория" in desc:
-        room_match = re.search(r"Аудитория:\s*([^\\\n]+)", desc)
+    # Улучшенный парсинг аудитории
+    room_patterns = [
+        r"Аудитория:\s*([^\\\n\r]+)",
+        r"Аудитория\s*:\s*([^\\\n\r]+)",
+        r"Room:\s*([^\\\n\r]+)",
+        r"Room\s*:\s*([^\\\n\r]+)",
+        r"Auditorium:\s*([^\\\n\r]+)",
+        r"Auditorium\s*:\s*([^\\\n\r]+)"
+    ]
+    
+    for pattern in room_patterns:
+        room_match = re.search(pattern, desc, re.IGNORECASE)
         if room_match:
             room = room_match.group(1).strip()
+            break
     
-    # Проверяем, является ли пара онлайн
-    online_marker = " 💻" if is_online_class(course, stream, ev) else ""
+    # Если аудитория не найдена стандартными способами, ищем ИНИОН
+    if not room:
+        inion_patterns = [
+            r"ИНИОН",
+            r"INION",
+            r"инион",
+            r"inion"
+        ]
+        
+        for pattern in inion_patterns:
+            if re.search(pattern, desc, re.IGNORECASE):
+                room = "ИНИОН"
+                break
+    
+    # Если преподаватель не найден стандартными способами, ищем в описании
+    if not teacher:
+        # Ищем ФИО преподавателя (три слова с заглавными буквами)
+        name_pattern = r"([А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+)"
+        name_match = re.search(name_pattern, desc)
+        if name_match:
+            teacher = name_match.group(1).strip()
+    
+    online_marker = " 💻" if is_online_class(ev) else ""
     
     line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')}  {ev['summary']}{online_marker}"
+    
+    # Добавляем информацию о преподавателе и аудитории
     if teacher or room:
         line += "\n"
-    if teacher:
-        line += f"👨‍🏫 {teacher}"
-    if room:
-        line += f" | 📍{room}"
+        if teacher:
+            line += f"👨‍🏫 {teacher}"
+        if room:
+            if teacher:
+                line += " | "
+            line += f"📍 {room}"
     
     # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
@@ -587,6 +578,7 @@ def format_day(date, events, course, stream, english_time=None, is_tomorrow=Fals
     text = f"{prefix}{date_str}:\n"
     for ev in sorted(evs, key=lambda x: x["start"]):
         text += f"• {format_event(ev, course, stream)}\n\n"
+    
     return text
 
 def is_admin(update: Update):
@@ -668,7 +660,7 @@ async def send_homework_reminders():
                         logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
                         if "chat not found" in str(e).lower() or "bot was blocked" in str(e).lower():
                             user_settings.pop(user_id, None)
-                            save_user_settings()
+                            save_user_settings(user_settings)
                 
         except Exception as e:
             logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
@@ -730,168 +722,6 @@ async def safe_edit_message(update: Update, text: str, reply_markup=None):
             logging.info("Message not modified - ignoring")
         else:
             raise
-
-# === КОМАНДЫ ДЛЯ ОПЛАТЫ ===
-#async def buy_access(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для покупки доступа к платному каналу"""
-    user_id = update.effective_user.id
-    
-    # Проверяем, не оплатил ли уже пользователь
-    if is_user_paid(user_id):
-        await update.message.reply_text(
-            "✅ У вас уже есть доступ к платному каналу с конспектами!\n\n"
-            f"Ссылка для вступления: {PAID_CHANNEL_LINK}\n"
-            "Доступ действует 30 дней с момента оплаты.",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("📚 Перейти в канал", url=PAID_CHANNEL_LINK)]
-            ])
-        )
-        return
-    
-    # Создаем инвойс для оплаты
-  #  chat_id = update.message.chat_id
-    title = "Доступ к платному каналу с конспектами"
-    description = (
-        "Премиум доступ к закрытому каналу с конспектами лекций, "
-        "дополнительными материалами и полезными ресурсами.\n\n"
-        "📚 Что включено:\n"
-        "• Полные конспекты всех лекций\n"
-        "• Дополнительные материалы\n" 
-        "• Шпаргалки и формулы\n"
-        "• Экзаменационные билеты\n"
-        "• Поддержка от автора\n\n"
-        "⏰ Доступ на 30 дней"
-    )
-    
-    # payload используется для идентификации платежа
-    payload = f"access_{user_id}_{uuid.uuid4().hex[:8]}"
-    
-    # Валюта "XTR" - Telegram Stars
-    currency = "XTR"
-    
-    # Цена в звездах (1 звезда = 1 единица)
-    prices = [LabeledPrice("Доступ к конспектам", ACCESS_PRICE * 100)]  # В минимальных единицах
-    
-    try:
-        await context.bot.send_invoice(
-            chat_id=chat_id,
-            title=title,
-            description=description,
-            payload=payload,
-            provider_token=PAYMENT_PROVIDER_TOKEN,
-            currency=currency,
-            prices=prices,
-            need_name=False,
-            need_phone_number=False,
-            need_email=False,
-            need_shipping_address=False,
-            is_flexible=False,
-            start_parameter="premium-access"
-        )
-    except Exception as e:
-        logging.error(f"Ошибка при создании инвойса: {e}")
-        await update.message.reply_text(
-            "❌ Произошла ошибка при создании платежа. Попробуйте позже или обратитесь к администратору."
-        )
-
-#async def premium_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Информация о премиум доступе"""
-    user_id = update.effective_user.id
-    
-    if is_user_paid(user_id):
-        user_data = paid_users.get(str(user_id), {})
-        paid_date = datetime.datetime.fromisoformat(user_data['paid_date'])
-        expiry_date = paid_date + datetime.timedelta(days=30)
-        
-        days_left = (expiry_date - datetime.datetime.now()).days
-        
-        await update.message.reply_text(
-            f"⭐ Ваш премиум статус\n\n"
-            f"✅ Доступ активен\n"
-            f"📅 Оплачено: {paid_date.strftime('%d.%m.%Y')}\n"
-            f"⏰ Дней осталось: {days_left}\n\n"
-            f"Ссылка для вступления: {PAID_CHANNEL_LINK}",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("📚 Перейти в канал", url=PAID_CHANNEL_LINK)],
-                [InlineKeyboardButton("🔄 Продлить доступ", callback_data="buy_access_callback")]
-            ])
-        )
-    else:
-        await update.message.reply_text(
-            "💎 Премиум доступ к конспектам\n\n"
-            "Получите эксклюзивный доступ к:\n"
-            "• Полным конспектам лекций 📚\n"
-            "• Дополнительным материалам 🎯\n"
-            "• Шпаргалкам и формулам 📝\n"
-            "• Экзаменационным билетам 🎓\n"
-            "• Поддержке от автора 👨‍🏫\n\n"
-            f"💰 Стоимость: {ACCESS_PRICE} звезд на 30 дней\n\n"
-            "Чтобы приобрести доступ, используйте команду /buy",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("⭐ Купить доступ", callback_data="buy_access_callback")],
-                [InlineKeyboardButton("📚 Посмотреть примеры", callback_data="preview_content")]
-            ])
-        )
-
-#async def preview_content(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Показывает примеры контента"""
-    await update.callback_query.answer()
-    
-    await update.callback_query.edit_message_text(
-        "📚 Примеры контента из премиум канала:\n\n"
-        "• Полные конспекты лекций с выделением главного\n"
-        "• Структурированные материалы по темам\n" 
-        "• Практические задания с решениями\n"
-        "• Подготовка к экзаменам и зачетам\n"
-        "• Дополнительные ресурсы и ссылки\n\n"
-        "Весь материал оформлен в удобном формате и регулярно обновляется!",
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("⭐ Купить доступ", callback_data="buy_access_callback")],
-            [InlineKeyboardButton("🔙 Назад", callback_data="premium_info_back")]
-        ])
-    )
-
-# === ОБРАБОТЧИКИ ПЛАТЕЖЕЙ ===
-#async def precheckout_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик предварительной проверки платежа"""
-    query = update.pre_checkout_query
-    
-    # Проверяем данные платежа
-    if query.invoice_payload.startswith('access_'):
-        await query.answer(ok=True)
-    else:
-        await query.answer(ok=False, error_message="Что-то пошло не так...")
-
-#async def successful_payment_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обработчик успешного платежа"""
-    payment = update.message.successful_payment
-    user_id = update.effective_user.id
-    
-    # Сохраняем информацию об оплате
-    add_paid_user(user_id, {
-        'invoice_payload': payment.invoice_payload,
-        'telegram_payment_charge_id': payment.telegram_payment_charge_id,
-        'provider_payment_charge_id': payment.provider_payment_charge_id,
-        'total_amount': payment.total_amount,
-        'currency': payment.currency
-    })
-    
-    # Отправляем подтверждение и ссылку на канал
-    await update.message.reply_text(
-        "🎉 Поздравляем с приобретением премиум доступа!\n\n"
-        f"✅ Ваш платеж на {payment.total_amount // 100} звезд успешно processed.\n"
-        f"📚 Теперь у вас есть доступ к платному каналу с конспектами.\n\n"
-        f"Ссылка для вступления: {PAID_CHANNEL_LINK}\n"
-        "Доступ будет активен 30 дней с момента оплаты.\n\n"
-        "Спасибо за поддержку! 💫",
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("📚 Перейти в канал", url=PAID_CHANNEL_LINK)],
-            [InlineKeyboardButton("ℹ️ Информация о доступе", callback_data="premium_info_callback")]
-        ])
-    )
-    
-    # Логируем успешный платеж
-    logging.info(f"Успешный платеж от пользователя {user_id} на сумму {payment.total_amount}")
 
 # === ОСНОВНЫЕ ОБРАБОТЧИКИ КОМАНД ===
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -966,9 +796,9 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
         user_settings[user_id]['stream'] = stream
         if english_time:
             user_settings[user_id]['english_time'] = english_time
-        save_user_settings()
+        save_user_settings(user_settings)
         
-        # Создаем клавиатуру основного меню
+        # Создаем клавиатуру основного меню с правильными callback_data
         keyboard = [
             [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
              InlineKeyboardButton("🔄 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
@@ -977,9 +807,6 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
             [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{course}_{stream}")],
             [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{course}_{stream}")],
         ]
-        
-        # Добавляем кнопку премиум доступа
-#        keyboard.append([InlineKeyboardButton("💎 Премиум конспекты", callback_data="premium_info_callback")])
         
         # Добавляем кнопку управления ДЗ для админа и помощников
         if can_manage_homework(update):
@@ -1004,10 +831,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
         if user_settings[user_id].get('reminders', False):
             reminders_text += f" ({reminders_time})"
         
-        # Добавляем статус премиум доступа
-#        premium_status = " 💎" if is_user_paid(int(user_id)) else ""
-        
-        message_text = f"Выбран {course_text}{english_text}{reminders_text}{premium_status}\nВыбери действие:"
+        message_text = f"Выбран {course_text}{english_text}{reminders_text}\nВыбери действие:"
         
         if update.callback_query:
             try:
@@ -1049,23 +873,6 @@ async def show_reminders_settings(update: Update, context: ContextTypes.DEFAULT_
              f"Время напоминаний: {current_time}\n\n"
              f"При включенных напоминаниях бот будет присылать уведомления "
              f"о домашних заданиях на завтра в выбранное время",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Показывает выбор времени для напоминаний"""
-    keyboard = [
-        [InlineKeyboardButton("🕗 20:00", callback_data=f"reminders_time_20:00_{course}_{stream}"),
-         InlineKeyboardButton("🕘 21:00", callback_data=f"reminders_time_21:00_{course}_{stream}")],
-        [InlineKeyboardButton("🕙 22:00", callback_data=f"reminders_time_22:00_{course}_{stream}"),
-         InlineKeyboardButton("🕚 23:00", callback_data=f"reminders_time_23:00_{course}_{stream}")],
-        [InlineKeyboardButton("🔕 Выключить напоминания", callback_data=f"reminders_off_{course}_{stream}")],
-        [InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]
-    ]
-    
-    await safe_edit_message(
-        update,
-        text="Выбери время для напоминаний о домашних заданиях:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
@@ -1283,6 +1090,48 @@ async def show_delete_hw_menu(update: Update, context: ContextTypes.DEFAULT_TYPE
         text="Выбери домашнее задание для удаления:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
+
+async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для просмотра статистики пользователей (только для админа)"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+    
+    stats = get_user_stats()
+    
+    message = "📊 Статистика пользователей:\n\n"
+    message += f"👥 Всего пользователей: {stats['total_users']}\n\n"
+    
+    message += "📚 Распределение по курсам:\n"
+    for course in ["1", "2", "3", "4"]:
+        if course in stats['course_stats']:
+            course_users = sum(stats['course_stats'][course].values())
+            message += f"• {course} курс: {course_users} пользователей\n"
+            if course == "1":
+                for stream in ["1", "2"]:
+                    if stream in stats['course_stats'][course]:
+                        message += f"  - {stream} поток: {stats['course_stats'][course][stream]} пользователей\n"
+    
+    message += f"\n🔔 Настройки напоминаний:\n"
+    message += f"• Включены: {stats['reminders_stats']['enabled']} пользователей\n"
+    message += f"• Выключены: {stats['reminders_stats']['disabled']} пользователей\n\n"
+    
+    message += f"🕘 Время английского:\n"
+    message += f"• Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
+    message += f"• День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
+    message += f"• Без английского: {stats['english_time_stats']['none']} пользователей"
+    
+    await update.message.reply_text(message)
+
+async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда для ручной проверки обновлений"""
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для этой команды")
+        return
+        
+    await update.message.reply_text("🔍 Проверяю обновления...")
+    await check_for_updates()
+    await update.message.reply_text("✅ Проверка обновлений завершена!")
 
 # === ОБРАБОТЧИК СООБЩЕНИЙ ===
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1552,7 +1401,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     user_settings[user_id] = {}
                 user_settings[user_id]['reminders'] = True
                 user_settings[user_id]['reminders_time'] = time_str
-                save_user_settings()
+                save_user_settings(user_settings)
                 
                 await safe_edit_message(
                     update,
@@ -1572,7 +1421,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 if user_id not in user_settings:
                     user_settings[user_id] = {}
                 user_settings[user_id]['reminders'] = False
-                save_user_settings()
+                save_user_settings(user_settings)
                 await safe_edit_message(
                     update,
                     text="🔕 Напоминания выключены",
@@ -1774,57 +1623,31 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 await query.answer("Ошибка: неверный формат данных")
                 return
-
-        # Обработчики для премиум доступа
-        elif data == "buy_access_callback":
-            user_id = query.from_user.id
-            if is_user_paid(user_id):
-                await query.edit_message_text(
-                    "✅ У вас уже есть доступ к платному каналу!\n\n"
-                    f"Ссылка для вступления: {PAID_CHANNEL_LINK}",
-                    reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("📚 Перейти в канал", url=PAID_CHANNEL_LINK)],
-                        [InlineKeyboardButton("ℹ️ Информация о доступе", callback_data="premium_info_callback")]
-                    ])
-                )
-            else:
-                # Создаем инвойс через callback
-                title = "Доступ к платному каналу с конспектами"
-                description = "Премиум доступ к закрытому каналу с конспектами на 30 дней"
-                payload = f"access_{user_id}_{uuid.uuid4().hex[:8]}"
-                currency = "XTR"
-                prices = [LabeledPrice("Доступ к конспектам", ACCESS_PRICE * 100)]
-                
-                try:
-                    await context.bot.send_invoice(
-                        chat_id=query.message.chat_id,
-                        title=title,
-                        description=description,
-                        payload=payload,
-                        provider_token=PAYMENT_PROVIDER_TOKEN,
-                        currency=currency,
-                        prices=prices,
-                        need_name=False,
-                        need_phone_number=False,
-                        need_email=False,
-                        need_shipping_address=False,
-                        is_flexible=False,
-                        start_parameter="premium-access"
-                    )
-                except Exception as e:
-                    logging.error(f"Ошибка при создании инвойса: {e}")
-                    await query.edit_message_text(
-                        "❌ Произошла ошибка при создании платежа. Попробуйте позже."
-                    )
         
-        elif data == "premium_info_callback":
-            await premium_info_callback(update, context)
-            
-        elif data == "premium_info_back":
-            await premium_info_callback(update, context)
-            
-        elif data == "preview_content":
-            await preview_content(update, context)
+        # Обработка админских команд (если нужно)
+        elif data == "manage_assistants":
+            if is_admin(update):
+                await show_manage_assistants_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "rename_subjects":
+            if is_admin(update):
+                await show_rename_subjects_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "edit_schedule":
+            if is_admin(update):
+                await show_edit_schedule_menu(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
+                
+        elif data == "user_stats_admin":
+            if is_admin(update):
+                await show_user_stats_admin(update, context)
+            else:
+                await query.answer("❌ У вас нет прав для этой команды")
         
         else:
             logging.warning(f"Неизвестный callback_data: {data}")
@@ -1860,46 +1683,25 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
     finally:
         context.user_data.pop(f'processing_{user_id}', None)
 
-async def premium_info_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Callback версия информации о премиум доступе"""
-    query = update.callback_query
-    user_id = query.from_user.id
-    await query.answer()
+# === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ ОБРАБОТКИ СООБЩЕНИЙ ===
+async def select_reminders_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
+    """Показывает выбор времени для напоминаний"""
+    keyboard = [
+        [InlineKeyboardButton("🕗 20:00", callback_data=f"reminders_time_20:00_{course}_{stream}"),
+         InlineKeyboardButton("🕘 21:00", callback_data=f"reminders_time_21:00_{course}_{stream}")],
+        [InlineKeyboardButton("🕙 22:00", callback_data=f"reminders_time_22:00_{course}_{stream}"),
+         InlineKeyboardButton("🕚 23:00", callback_data=f"reminders_time_23:00_{course}_{stream}")],
+        [InlineKeyboardButton("🔕 Выключить напоминания", callback_data=f"reminders_off_{course}_{stream}")],
+        [InlineKeyboardButton("🔙 Назад", callback_data=f"reminders_settings_{course}_{stream}")]
+    ]
     
-    if is_user_paid(user_id):
-        user_data = paid_users.get(str(user_id), {})
-        paid_date = datetime.datetime.fromisoformat(user_data['paid_date'])
-        expiry_date = paid_date + datetime.timedelta(days=30)
-        days_left = (expiry_date - datetime.datetime.now()).days
-        
-        await query.edit_message_text(
-            f"⭐ Ваш премиум статус\n\n"
-            f"✅ Доступ активен\n"
-            f"📅 Оплачено: {paid_date.strftime('%d.%m.%Y')}\n"
-            f"⏰ Дней осталось: {max(0, days_left)}\n\n"
-            f"Ссылка для вступления: {PAID_CHANNEL_LINK}",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("📚 Перейти в канал", url=PAID_CHANNEL_LINK)],
-                [InlineKeyboardButton("🔄 Продлить доступ", callback_data="buy_access_callback")]
-            ])
-        )
-    else:
-        await query.edit_message_text(
-            "💎 Премиум доступ к конспектам\n\n"
-            "Получите эксклюзивный доступ к:\n"
-            "• Полным конспектам лекций 📚\n"
-            "• Дополнительным материалам 🎯\n"
-            "• Шпаргалкам и формулам 📝\n"
-            "• Экзаменационным билетам 🎓\n"
-            "• Поддержке от автора 👨‍🏫\n\n"
-            f"💰 Стоимость: {ACCESS_PRICE} звезд на 30 дней",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("⭐ Купить доступ", callback_data="buy_access_callback")],
-                [InlineKeyboardButton("📚 Посмотреть примеры", callback_data="preview_content")]
-            ])
-        )
+    await safe_edit_message(
+        update,
+        text="Выбери время для напоминаний о домашних заданиях:",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
 
-# === КОМАНДЫ АДМИНИСТРАТОРА ===
+# === КОМАНДЫ ===
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для доступа к меню администратора"""
     if not is_admin(update):
@@ -1928,77 +1730,22 @@ async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
-async def users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для просмотра статистики пользователей (только для админа)"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-    
-    stats = get_user_stats()
-    
-    message = "📊 Статистика пользователей:\n\n"
-    message += f"👥 Всего пользователей: {stats['total_users']}\n"
-    message += f"💎 Премиум пользователей: {len(paid_users)}\n\n"
-    
-    message += "📚 Распределение по курсам:\n"
-    for course in ["1", "2", "3", "4"]:
-        if course in stats['course_stats']:
-            course_users = sum(stats['course_stats'][course].values())
-            message += f"• {course} курс: {course_users} пользователей\n"
-            if course == "1":
-                for stream in ["1", "2"]:
-                    if stream in stats['course_stats'][course]:
-                        message += f"  - {stream} поток: {stats['course_stats'][course][stream]} пользователей\n"
-    
-    message += f"\n🔔 Настройки напоминаний:\n"
-    message += f"• Включены: {stats['reminders_stats']['enabled']} пользователей\n"
-    message += f"• Выключены: {stats['reminders_stats']['disabled']} пользователей\n\n"
-    
-    message += f"🕘 Время английского:\n"
-    message += f"• Утро (9:00-12:10): {stats['english_time_stats']['morning']} пользователей\n"
-    message += f"• День (14:00-17:10): {stats['english_time_stats']['afternoon']} пользователей\n"
-    message += f"• Без английского: {stats['english_time_stats']['none']} пользователей"
-    
-    await update.message.reply_text(message)
-
-async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда для ручной проверки обновлений"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-        
-    await update.message.reply_text("🔍 Проверяю обновления...")
-    await check_for_updates()
-    await update.message.reply_text("✅ Проверка обновлений завершена!")
-
 # === ЗАПУСК ===
 def main():
-    global user_settings, application, assistants, subject_renames, schedule_edits, paid_users, online_classes
+    global user_settings, application, assistants, subject_renames, schedule_edits
     
-    # Загружаем данные при запуске
     user_settings = load_user_settings()
     assistants = load_assistants()
     subject_renames = load_subject_renames()
     schedule_edits = load_schedule_edits()
-    paid_users = load_paid_users()
-    online_classes = load_online_classes()
     
-    # Создаем приложение
     application = ApplicationBuilder().token(BOT_TOKEN).build()
     
-    # Добавляем обработчики
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("buy", buy_access))
-    application.add_handler(CommandHandler("premium", premium_info))
     application.add_handler(CommandHandler("update", check_updates_command))
     application.add_handler(CommandHandler("users", users_command))
     application.add_handler(CommandHandler("admin", admin_command))
     application.add_handler(CommandHandler("assistants", assistants_command))
-    
-    # Обработчики платежей
-    application.add_handler(PreCheckoutQueryHandler(precheckout_callback))
-    application.add_handler(MessageHandler(filters.SUCCESSFUL_PAYMENT, successful_payment_callback))
-    
     application.add_handler(CallbackQueryHandler(handle_query))
     application.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND & filters.User(
@@ -2007,7 +1754,6 @@ def main():
         handle_message
     ))
     
-    # Запускаем планировщик в отдельной задаче
     loop = asyncio.get_event_loop()
     loop.create_task(scheduler())
     
@@ -2016,17 +1762,19 @@ def main():
     print("🤖 Бот для расписания запущен!")
     print(f"👑 Админ: {ADMIN_USERNAME}")
     print(f"👥 Помощников: {len(assistants)}")
-    print(f"💎 Премиум пользователей: {len(paid_users)}")
     print("🎓 Поддержка курсов: 1, 2, 3, 4")
     print("📚 Потоки: 2 потока для 1 курса, 1 поток для остальных")
     print("🔔 Напоминания: каждый день в выбранное время")
     print("🔄 Автообновление: каждый день в 09:00")
-    print("💰 Платный доступ: через Telegram Stars")
+    print("📝 Разделение ДЗ: будущие и архивные задания")
+    print("👤 Команда /users доступна админу для статистики")
+    print("🔧 Команда /admin для управления ботом")
     print("⏹️  Для остановки нажмите Ctrl+C")
     print("=" * 50)
     
-    # Запускаем бота
     application.run_polling()
 
 if __name__ == "__main__":
     main()
+
+#dfdgerg
