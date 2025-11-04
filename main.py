@@ -287,273 +287,76 @@ def apply_schedule_edits(course, stream, events):
 
     return edited_events
 
-# === ФУНКЦИИ ДЛЯ РЕДАКТИРОВАНИЯ РАСПИСАНИЯ ЧЕРЕЗ ICS ФАЙЛЫ ===
+# === ПАРСИНГ ICS ИЗ GitHub ===
+def load_events_from_github(course, stream):
+    """Загрузка событий с учетом курса и потока"""
+    cache_key = f"{course}_{stream}"
+    if cache_key in events_cache:
+        return apply_schedule_edits(course, stream, events_cache[cache_key])
 
-async def show_edit_schedule_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Меню редактирования расписания"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    keyboard = [
-        [InlineKeyboardButton("🎓 Выбрать курс для редактирования", callback_data="edit_schedule_select_course")],
-        [InlineKeyboardButton("🔄 Обновить все ICS файлы", callback_data="edit_schedule_refresh_all")],
-        [InlineKeyboardButton("🔙 Назад в админку", callback_data="back_to_admin")]
-    ]
-
-    await safe_edit_message(
-        update,
-        text="📅 Редактирование расписания\n\nЗдесь вы можете управлять расписанием через ICS файлы",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-    
-async def show_edit_schedule_course_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Выбор курса для редактирования расписания"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    keyboard = [
-        [InlineKeyboardButton("1 курс", callback_data="edit_course_1")],
-        [InlineKeyboardButton("2 курс", callback_data="edit_course_2")],
-        [InlineKeyboardButton("3 курс", callback_data="edit_course_3")],
-        [InlineKeyboardButton("4 курс", callback_data="edit_course_4")],
-        [InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule")]
-    ]
-
-    await safe_edit_message(
-        update,
-        text="🎓 Выберите курс для редактирования расписания:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_edit_schedule_stream_selection(update: Update, context: ContextTypes.DEFAULT_TYPE, course):
-    """Выбор потока для редактирования расписания"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    keyboard = []
-    
-    if course == "1":
-        keyboard.append([InlineKeyboardButton("1 поток", callback_data=f"edit_stream_{course}_1")])
-        keyboard.append([InlineKeyboardButton("2 поток", callback_data=f"edit_stream_{course}_2")])
-    else:
-        keyboard.append([InlineKeyboardButton("Основной поток", callback_data=f"edit_stream_{course}_1")])
-    
-    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule_select_course")])
-
-    await safe_edit_message(
-        update,
-        text=f"🎓 Курс {course}\n\nВыберите поток для редактирования:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def show_edit_schedule_actions(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Действия с расписанием для выбранного курса и потока"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    # Получаем URL для этого курса и потока
-    url = STREAM_URLS.get(course, {}).get(stream, "не указан")
-    
-    keyboard = [
-        [InlineKeyboardButton("📥 Скачать текущий ICS файл", callback_data=f"download_ics_{course}_{stream}")],
-        [InlineKeyboardButton("📤 Загрузить новый ICS файл", callback_data=f"upload_ics_{course}_{stream}")],
-        [InlineKeyboardButton("🔄 Обновить кэш расписания", callback_data=f"refresh_cache_{course}_{stream}")],
-        [InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule_select_course")]
-    ]
-
-    await safe_edit_message(
-        update,
-        text=f"📅 Редактирование расписания\n\n"
-             f"🎓 Курс: {course}\n"
-             f"📖 Поток: {stream}\n"
-             f"🔗 URL: {url}\n\n"
-             f"Выберите действие:",
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
-async def download_ics_file(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Скачивает текущий ICS файл"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
+    events = []
     try:
+        logging.info(f"Загрузка расписания для курса {course}, потока {stream} из GitHub...")
         url = STREAM_URLS.get(course, {}).get(stream)
         if not url:
-            await safe_edit_message(
-                update,
-                text="❌ URL для этого курса и потока не найден",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-            )
-            return
+            logging.error(f"URL не найден для курса {course}, потока {stream}")
+            return []
 
-        # Скачиваем файл
         response = requests.get(url)
         response.raise_for_status()
-        
-        # Сохраняем временный файл
-        filename = f"schedule_{course}_{stream}.ics"
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(response.text)
-        
-        # Отправляем файл пользователю
-        with open(filename, 'rb') as f:
-            await context.bot.send_document(
-                chat_id=update.effective_chat.id,
-                document=f,
-                filename=filename,
-                caption=f"📥 ICS файл для {course} курса, {stream} потока"
-            )
-        
-        # Удаляем временный файл
-        os.remove(filename)
-        
-        await safe_edit_message(
-            update,
-            text=f"✅ ICS файл для {course} курса, {stream} потока отправлен",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-        )
-        
-    except Exception as e:
-        logging.error(f"Ошибка при скачивании ICS файла: {e}")
-        await safe_edit_message(
-            update,
-            text=f"❌ Ошибка при скачивании файла: {e}",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-        )
+        data = response.text
 
-async def prompt_upload_ics(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Запрашивает загрузку нового ICS файла"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
+        # Разбиваем на события
+        event_blocks = data.split('BEGIN:VEVENT')
 
-    context.user_data['upload_ics_course'] = course
-    context.user_data['upload_ics_stream'] = stream
-    
-    await safe_edit_message(
-        update,
-        text=f"📤 Загрузка нового ICS файла\n\n"
-             f"🎓 Курс: {course}\n"
-             f"📖 Поток: {stream}\n\n"
-             f"Пожалуйста, отправьте новый ICS файл как документ.\n"
-             f"Файл должен быть в формате .ics",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-    )
+        for block in event_blocks:
+            if 'END:VEVENT' not in block:
+                continue
 
-async def handle_ics_upload(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обрабатывает загруженный ICS файл"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
+            try:
+                # Извлекаем данные из блока события
+                summary_match = re.search(r'SUMMARY:(.+?)(?:\n|$)', block)
+                dtstart_match = re.search(r'DTSTART(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
+                dtend_match = re.search(r'DTEND(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
+                description_match = re.search(r'DESCRIPTION:(.+?)(?:\n|$)', block, re.DOTALL)
 
-    if 'upload_ics_course' not in context.user_data or 'upload_ics_stream' not in context.user_data:
-        await update.message.reply_text("❌ Сначала выберите курс и поток для загрузки")
-        return
+                if not all([summary_match, dtstart_match, dtend_match]):
+                    continue
 
-    course = context.user_data['upload_ics_course']
-    stream = context.user_data['upload_ics_stream']
+                original_summary = summary_match.group(1).strip()
+                # Применяем переименование если есть
+                summary = get_display_subject_name(course, stream, original_summary)
 
-    if not update.message.document:
-        await update.message.reply_text("❌ Пожалуйста, отправьте файл как документ")
-        return
+                start_str = dtstart_match.group(1)
+                end_str = dtend_match.group(1)
+                description = description_match.group(1).strip() if description_match else ""
 
-    document = update.message.document
-    if not document.file_name.endswith('.ics'):
-        await update.message.reply_text("❌ Файл должен быть в формате .ics")
-        return
+                # Парсим даты
+                start_dt = datetime.datetime.strptime(start_str, '%Y%m%dT%H%M%S')
+                end_dt = datetime.datetime.strptime(end_str, '%Y%m%dT%H%M%S')
 
-    try:
-        # Скачиваем файл
-        file = await context.bot.get_file(document.file_id)
-        file_content = await file.download_as_bytearray()
-        ics_content = file_content.decode('utf-8')
+                # Локализуем в московское время
+                start_dt = TIMEZONE.localize(start_dt)
+                end_dt = TIMEZONE.localize(end_dt)
 
-        # Сохраняем файл локально
-        filename = f"schedule_{course}_{stream}.ics"
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(ics_content)
+                events.append({
+                    'summary': summary,
+                    'original_summary': original_summary,
+                    'start': start_dt,
+                    'end': end_dt,
+                    'desc': description
+                })
+            except Exception as e:
+                logging.warning(f"Ошибка парсинга события: {e}")
+                continue
 
-        # Обновляем кэш
-        cache_key = f"{course}_{stream}"
-        if cache_key in events_cache:
-            del events_cache[cache_key]
-
-        # Очищаем контекст
-        context.user_data.pop('upload_ics_course', None)
-        context.user_data.pop('upload_ics_stream', None)
-
-        await update.message.reply_text(
-            f"✅ ICS файл для {course} курса, {stream} потока успешно загружен и кэш обновлен!",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📅 К расписанию", callback_data=f"edit_stream_{course}_{stream}")]])
-        )
+        events_cache[cache_key] = events
+        logging.info(f"Успешно загружено {len(events)} событий для курса {course}, потока {stream}")
+        return apply_schedule_edits(course, stream, events)
 
     except Exception as e:
-        logging.error(f"Ошибка при загрузке ICS файла: {e}")
-        await update.message.reply_text(f"❌ Ошибка при загрузке файла: {e}")
-
-async def refresh_schedule_cache(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
-    """Обновляет кэш расписания для выбранного курса и потока"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    try:
-        cache_key = f"{course}_{stream}"
-        if cache_key in events_cache:
-            del events_cache[cache_key]
-
-        # Загружаем события заново
-        events = load_events_from_github(course, stream)
-
-        await safe_edit_message(
-            update,
-            text=f"✅ Кэш расписания для {course} курса, {stream} потока обновлен!\n"
-                 f"Загружено {len(events)} событий",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-        )
-
-    except Exception as e:
-        logging.error(f"Ошибка при обновлении кэша: {e}")
-        await safe_edit_message(
-            update,
-            text=f"❌ Ошибка при обновлении кэша: {e}",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data=f"edit_stream_{course}_{stream}")]])
-        )
-
-async def refresh_all_schedules(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Обновляет кэш всех расписаний"""
-    if not is_admin(update):
-        await update.callback_query.answer("❌ У вас нет прав для этой команды")
-        return
-
-    try:
-        cleared_count = 0
-        for course in STREAM_URLS.keys():
-            for stream in STREAM_URLS[course].keys():
-                cache_key = f"{course}_{stream}"
-                if cache_key in events_cache:
-                    del events_cache[cache_key]
-                    cleared_count += 1
-
-        await safe_edit_message(
-            update,
-            text=f"✅ Кэш всех расписаний обновлен!\n"
-                 f"Очищено {cleared_count} кэшей",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule")]])
-        )
-
-    except Exception as e:
-        logging.error(f"Ошибка при обновлении всех кэшей: {e}")
-        await safe_edit_message(
-            update,
-            text=f"❌ Ошибка при обновлении кэшей: {e}",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="edit_schedule")]])
-        )
+        logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
+        return []
 
 # Получение уникальных предметов из расписания
 def get_unique_subjects(course, stream):
@@ -1544,11 +1347,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await handle_homework_text(update, context)
         return
 
-    # Проверяем, ожидаем ли мы загрузку ICS файла
-    elif 'upload_ics_course' in context.user_data and 'upload_ics_stream' in context.user_data:
-        await handle_ics_upload(update, context)
-        return
-    
     await update.message.reply_text("Используйте /start для начала работы")
 
 async def handle_homework_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -2106,62 +1904,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     )
             else:
                 await query.answer("🔒 У вас нет прав")
-
-        # Обработка редактирования расписания
-        elif data == "edit_schedule_select_course":
-            if is_admin(update):
-                await show_edit_schedule_course_selection(update, context)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data == "edit_schedule_refresh_all":
-            if is_admin(update):
-                await refresh_all_schedules(update, context)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data.startswith("edit_course_"):
-            if is_admin(update):
-                course = data.split("_")[2]
-                await show_edit_schedule_stream_selection(update, context, course)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data.startswith("edit_stream_"):
-            if is_admin(update):
-                parts = data.split("_")
-                course = parts[2]
-                stream = parts[3]
-                await show_edit_schedule_actions(update, context, course, stream)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data.startswith("download_ics_"):
-            if is_admin(update):
-                parts = data.split("_")
-                course = parts[2]
-                stream = parts[3]
-                await download_ics_file(update, context, course, stream)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data.startswith("upload_ics_"):
-            if is_admin(update):
-                parts = data.split("_")
-                course = parts[2]
-                stream = parts[3]
-                await prompt_upload_ics(update, context, course, stream)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
-
-        elif data.startswith("refresh_cache_"):
-            if is_admin(update):
-                parts = data.split("_")
-                course = parts[2]
-                stream = parts[3]
-                await refresh_schedule_cache(update, context, course, stream)
-            else:
-                await query.answer("🔒 У вас нет прав для этой команды")
 
         else:
             logging.warning(f"Неизвестный callback_data: {data}")
