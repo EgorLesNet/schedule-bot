@@ -1627,29 +1627,29 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 return
         
         # Обработка админских команд (если нужно)
-elif data == "manage_assistants":
-    if is_admin(update):
+        elif data == "manage_assistants":
+            if is_admin(update):
         await show_manage_assistants_menu(update, context)
-    else:
+          else:
         await query.answer("🔒 У вас нет прав для этой команды")
 
-elif data == "rename_subjects":
-    if is_admin(update):
+        elif data == "rename_subjects":
+          if is_admin(update):
         await show_rename_subjects_menu(update, context)
-    else:
+           else:
         await query.answer("🔒 У вас нет прав для этой команды")
 
-elif data == "edit_schedule":
-    if is_admin(update):
+        elif data == "edit_schedule":
+           if is_admin(update):
         await show_edit_schedule_menu(update, context)
-    else:
-        await query.answer("🔒 У вас нет прав для этой команды")
+        else:
+           await query.answer("🔒 У вас нет прав для этой команды")
 
-elif data == "user_stats_admin":
-    if is_admin(update):
-        await show_user_stats_admin(update, context)
-    else:
-        await query.answer("🔒 У вас нет прав для этой команды")
+        elif data == "user_stats_admin":
+           if is_admin(update):
+             await show_user_stats_admin(update, context)
+        else:
+            await query.answer("🔒 У вас нет прав для этой команды")
         
     except BadRequest as e:
         if "Message is not modified" in str(e):
