@@ -732,7 +732,7 @@ async def safe_edit_message(update: Update, text: str, reply_markup=None):
             raise
 
 # === КОМАНДЫ ДЛЯ ОПЛАТЫ ===
-async def buy_access(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#async def buy_access(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда для покупки доступа к платному каналу"""
     user_id = update.effective_user.id
     
@@ -749,7 +749,7 @@ async def buy_access(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
     
     # Создаем инвойс для оплаты
-    chat_id = update.message.chat_id
+  #  chat_id = update.message.chat_id
     title = "Доступ к платному каналу с конспектами"
     description = (
         "Премиум доступ к закрытому каналу с конспектами лекций, "
@@ -794,7 +794,7 @@ async def buy_access(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "❌ Произошла ошибка при создании платежа. Попробуйте позже или обратитесь к администратору."
         )
 
-async def premium_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#async def premium_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Информация о премиум доступе"""
     user_id = update.effective_user.id
     
@@ -833,7 +833,7 @@ async def premium_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
             ])
         )
 
-async def preview_content(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#async def preview_content(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Показывает примеры контента"""
     await update.callback_query.answer()
     
@@ -852,7 +852,7 @@ async def preview_content(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 # === ОБРАБОТЧИКИ ПЛАТЕЖЕЙ ===
-async def precheckout_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#async def precheckout_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик предварительной проверки платежа"""
     query = update.pre_checkout_query
     
@@ -862,7 +862,7 @@ async def precheckout_callback(update: Update, context: ContextTypes.DEFAULT_TYP
     else:
         await query.answer(ok=False, error_message="Что-то пошло не так...")
 
-async def successful_payment_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#async def successful_payment_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик успешного платежа"""
     payment = update.message.successful_payment
     user_id = update.effective_user.id
@@ -979,7 +979,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
         ]
         
         # Добавляем кнопку премиум доступа
-        keyboard.append([InlineKeyboardButton("💎 Премиум конспекты", callback_data="premium_info_callback")])
+#        keyboard.append([InlineKeyboardButton("💎 Премиум конспекты", callback_data="premium_info_callback")])
         
         # Добавляем кнопку управления ДЗ для админа и помощников
         if can_manage_homework(update):
@@ -1005,7 +1005,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
             reminders_text += f" ({reminders_time})"
         
         # Добавляем статус премиум доступа
-        premium_status = " 💎" if is_user_paid(int(user_id)) else ""
+#        premium_status = " 💎" if is_user_paid(int(user_id)) else ""
         
         message_text = f"Выбран {course_text}{english_text}{reminders_text}{premium_status}\nВыбери действие:"
         
