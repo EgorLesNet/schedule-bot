@@ -1737,6 +1737,55 @@ async def assistants_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     await update.message.reply_text(f"👥 Список помощников:\n\n{assistants_list}")
 
+#Admin menu
+async def show_manage_assistants_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Меню управления помощниками"""
+    keyboard = [
+        [InlineKeyboardButton("👥 Добавить помощника", callback_data="add_assistant")],
+        [InlineKeyboardButton("🗑 Удалить помощника", callback_data="remove_assistant")],
+        [InlineKeyboardButton("📋 Список помощников", callback_data="list_assistants")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+    ]
+    await safe_edit_message(
+        update,
+        text="👥 Управление помощниками",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+
+async def show_rename_subjects_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Меню переименования предметов"""
+    await safe_edit_message(
+        update,
+        text="📝 Переименование предметов - функционал в разработке",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
+    )
+
+async def show_edit_schedule_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Меню редактирования расписания"""
+    await safe_edit_message(
+        update,
+        text="📅 Редактирование расписания - функционал в разработке",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
+    )
+
+async def show_user_stats_admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Статистика в админском меню"""
+    stats = get_user_stats()
+    message = "📊 Статистика пользователей (админ):\n\n"
+    message += f"👥 Всего пользователей: {stats['total_users']}\n\n"
+    
+    message += "🎓 Распределение по курсам:\n"
+    for course in ["1", "2", "3", "4"]:
+        if course in stats['course_stats']:
+            course_users = sum(stats['course_stats'][course].values())
+            message += f"  {course} курс: {course_users} пользователей\n"
+    
+    await safe_edit_message(
+        update,
+        text=message,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]])
+    )
+
 # === ЗАПУСК ===
 def main():
     global user_settings, application, assistants, subject_renames, schedule_edits
