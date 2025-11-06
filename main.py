@@ -2128,6 +2128,27 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await refresh_schedule_cache(update, context, course, stream)
             else:
                 await query.answer("🔒 У вас нет прав для этой команды")
+                
+    elif data.startswith('sch_menu_'):
+            if is_admin(update):
+                            parts = data.split('_')
+                            await show_schedule_editor_menu(update, context, parts[2], parts[3])
+                        else:
+                                        await query.answer("ℹ️ Только админ может редактировать расписание")
+                            
+    elif data.startswith('sch_add_'):
+        if is_admin(update):
+                        parts = data.split('_')
+                        await show_add_class_menu(update, context, parts[2], parts[3])
+                    else:
+                                    await query.answer("ℹ️ Только админ может редактировать расписание")
+                        
+    elif data.startswith('sch_remove_'):
+        if is_admin(update):
+                        parts = data.split('_')
+                        await show_remove_class_menu(update, context, parts[2], parts[3])
+                    else:
+                                    await query.answer("ℹ️ Только админ может редактировать расписание")
 
         else:
             logging.warning(f"Неизвестный callback_data: {data}")
@@ -2208,5 +2229,41 @@ def main():
 
     application.run_polling()
 
+
+# === РЕДАКТИРОВАНИЕ РАСПИСАНИЯ В БОТЕ ===
+async def show_schedule_editor_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course: str, stream: str):
+    if not is_admin(update):
+        return
+    keyboard = [
+        [InlineKeyboardButton("➕ Добавить пару", callback_data=f"sch_add_{course}_{stream}")],
+        [InlineKeyboardButton("❌ Удалить пару", callback_data=f"sch_remove_{course}_{stream}")],
+        [InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+    ]
+    await safe_edit_message(update, f"📅 Редактор расписания\n🎓 Курс: {course}\n📖 Поток: {stream}", InlineKeyboardMarkup(keyboard))
+
+async def show_add_class_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course: str, stream: str):
+    subjects = get_unique_subjects(course, stream)[:15]
+    keyboard = []
+    for subject in subjects:
+        safe = re.sub(r'[^a-zA-Z0-9а-яА-Я]', '_', subject)[:20]
+        keyboard.append([InlineKeyboardButton(f"📘 {subject[:25]}", callback_data=f"sch_add_subj_{course}_{stream}_{safe}")])
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"sch_menu_{course}_{stream}")])
+    await safe_edit_message(update, "📘 Выберите предмет:", InlineKeyboardMarkup(keyboard))
+
+async def show_remove_class_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course: str, stream: str):
+    events = load_events_from_github(course, stream)
+    events_by_date = {}
+    for event in events:
+        date_str = event['start'].date().isoformat()
+        if date_str not in events_by_date:
+            events_by_date[date_str] = []
+        events_by_date[date_str].append(event)
+    keyboard = []
+    for date_str in sorted(events_by_date.keys())[:10]:
+        date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
+        date_display = date_obj.strftime('%d.%m.%Y')
+        keyboard.append([InlineKeyboardButton(f"📅 {date_display}", callback_data=f"sch_remove_date_{course}_{stream}_{date_str}")])
+    keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"sch_menu_{course}_{stream}")])
+    await safe_edit_message(update, "📅 Выберите дату:", InlineKeyboardMarkup(keyboard))
 if __name__ == "__main__":
     main()
