@@ -2029,6 +2029,20 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 await query.answer("🔒 У вас нет прав для этой команды")
 
+            elif data == "ics_menu":
+                        await show_ics_editor_menu(update, context)
+
+        elif data == "ics_view":
+            await show_ics_courses_menu(update, context, "view")
+
+        elif data == "ics_add":
+            await show_ics_courses_menu(update, context, "add")
+
+        elif data == "ics_del":
+            await show_ics_courses_menu(update, context, "del")
+
+    
+
         elif data == "back_to_admin":
             if is_admin(update):
                 await admin_command(update, context)
@@ -2241,5 +2255,36 @@ async def show_remove_class_menu(update: Update, context: ContextTypes.DEFAULT_T
         keyboard.append([InlineKeyboardButton(f"📅 {date_display}", callback_data=f"sch_remove_date_{course}_{stream}_{date_str}")])
     keyboard.append([InlineKeyboardButton("🔙 Назад", callback_data=f"sch_menu_{course}_{stream}")])
     await safe_edit_message(update, "📅 Выберите дату:", InlineKeyboardMarkup(keyboard))
+
+# === РЕДАКТИРОВАНИЕ ICS ФАЙЛОВ В БОТЕ ===
+
+async def show_ics_editor_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        if not is_admin(update): return
+                keyboard = [[InlineKeyboardButton("📋 Просмотр", callback_data="ics_view"), InlineKeyboardButton("➕ Добавить", callback_data="ics_add")], [
+    InlineKeyboardButton("🗑 Удалить", callback_data="ics_del"), InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+                                ]
+    await safe_edit_message(update, "📋 Редактор ICS", InlineKeyboardMarkup(keyboard))
+
+async def show_ics_courses_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
+        keyboard = [[InlineKeyboardButton(f"💯 {i} курс", callback_data=f"ics_{action}_{i}") for i in ["1", "2", "3", "4"]]]
+    keyboard.append([InlineKeyboardButton("← Назад", callback_data="ics_menu")])
+    title = "📋 Выбери курс" if action == "view" else "✅ Выбери курс для редактирования"
+    await safe_edit_message(update, title, InlineKeyboardMarkup(keyboard))
+
+async def show_ics_events(update: Update, context: ContextTypes.DEFAULT_TYPE, course: str, stream: str):
+        events = load_events_from_github(course, stream)
+    if not events:
+                text = f"🔍 Нет событий для {course} курса"
+            else:
+                        text = f"📋 События ({course} курс):\n"
+                        for event in events[:10]:
+                                        time = event['start'].strftime('%H:%M')
+                                        text += f"⏰ {time} - {event['summary']}\n"
+                                    if len(events) > 10:
+                                                    text += f"… и еще {len(events)-10}"
+                                            keyboard = [[InlineKeyboardButton("← Назад", callback_data="ics_menu")]]
+    await safe_edit_message(update, text, InlineKeyboardMarkup(keyboard))
+
+
 if __name__ == "__main__":
     main()
