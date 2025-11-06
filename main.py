@@ -2248,8 +2248,8 @@ async def show_remove_class_menu(update: Update, context: ContextTypes.DEFAULT_T
 
 async def show_ics_editor_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not is_admin(update): return
-                keyboard = [[InlineKeyboardButton("📋 Просмотр", callback_data="ics_view"), InlineKeyboardButton("➕ Добавить", callback_data="ics_add")], [
-    InlineKeyboardButton("🗑 Удалить", callback_data="ics_del"), InlineKeyboardButton("🔙 Назад", callback_data="back_to_admin")]
+                    keyboard = [[InlineKeyboardButton("📋 Просмотр", callback_data="ics_view"), InlineKeyboardButton("➕ Добавить", callback_data="ics_add")],
+        [InlineKeyboardButton("🗑 Удалить", callback_data="ics_del"), InlineKeyboardButton("⬅ Назад", callback_data="back_to_admin")]
                                 ]
     await safe_edit_message(update, "📋 Редактор ICS", InlineKeyboardMarkup(keyboard))
 
