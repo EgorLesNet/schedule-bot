@@ -2029,18 +2029,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 await query.answer("🔒 У вас нет прав для этой команды")
 
-        elif data == "ics_menu":
-                        await show_ics_editor_menu(update, context)
-
-        elif data == "ics_view":
-            await show_ics_courses_menu(update, context, "view")
-
-        elif data == "ics_add":
-            await show_ics_courses_menu(update, context, "add")
-
-        elif data == "ics_del":
-            await show_ics_courses_menu(update, context, "del")
-
     
 
         elif data == "back_to_admin":
