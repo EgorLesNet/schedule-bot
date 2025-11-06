@@ -2129,30 +2129,6 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 await query.answer("🔒 У вас нет прав для этой команды")
                 
-    elif data.startswith('sch_menu_'):
-            if is_admin(update):
-                            parts = data.split('_')
-                            await show_schedule_editor_menu(update, context, parts[2], parts[3])
-                        else:
-                                        await query.answer("ℹ️ Только админ может редактировать расписание")
-                            
-    elif data.startswith('sch_add_'):
-        if is_admin(update):
-                        parts = data.split('_')
-                        await show_add_class_menu(update, context, parts[2], parts[3])
-                    else:
-                                    await query.answer("ℹ️ Только админ может редактировать расписание")
-                        
-    elif data.startswith('sch_remove_'):
-        if is_admin(update):
-                        parts = data.split('_')
-                        await show_remove_class_menu(update, context, parts[2], parts[3])
-                    else:
-                                    await query.answer("ℹ️ Только админ может редактировать расписание")
-
-        else:
-            logging.warning(f"Неизвестный callback_data: {data}")
-            await query.answer("Неизвестная команда")
 
     except BadRequest as e:
         if "Message is not modified" in str(e):
