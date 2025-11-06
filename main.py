@@ -2179,12 +2179,14 @@ def main():
     application.add_handler(CommandHandler("users", users_command))
     application.add_handler(CommandHandler("admin", admin_command))
     application.add_handler(CommandHandler("assistants", assistants_command))
+    # КРИТИЧНО: CallbackQueryHandler ПЕРЕД MessageHandler
     application.add_handler(CallbackQueryHandler(handle_query))
+    
+    # ИСПРАВЛЕНО: Убрана проблемная фильтрация через filters.User()
     application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND & filters.User(
-            username={ADMIN_USERNAME} | assistants
-        ),
+        filters.TEXT & ~filters.COMMAND,
         handle_message
+    ))
     ))
 
     loop = asyncio.get_event_loop()
