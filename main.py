@@ -2029,7 +2029,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 await query.answer("🔒 У вас нет прав для этой команды")
 
-            elif data == "ics_menu":
+        elif data == "ics_menu":
                         await show_ics_editor_menu(update, context)
 
         elif data == "ics_view":
