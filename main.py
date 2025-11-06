@@ -2187,7 +2187,6 @@ def main():
         filters.TEXT & ~filters.COMMAND,
         handle_message
     ))
-    ))
 
     loop = asyncio.get_event_loop()
     loop.create_task(scheduler())
