@@ -2246,10 +2246,6 @@ async def show_remove_class_menu(update: Update, context: ContextTypes.DEFAULT_T
 
 # === РЕДАКТИРОВАНИЕ ICS ФАЙЛОВ В БОТЕ ===
 
-async def show_ics_editor_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        if not is_admin(update): return
-        await safe_edit_message(update, "📋 Редактор ICS", InlineKeyboardMarkup(keyboard))
-
 async def show_ics_courses_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str):
         keyboard = [[InlineKeyboardButton(f"💯 {i} курс", callback_data=f"ics_{action}_{i}") for i in ["1", "2", "3", "4"]]]
     keyboard.append([InlineKeyboardButton("← Назад", callback_data="ics_menu")])
