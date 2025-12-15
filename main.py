@@ -630,6 +630,9 @@ async def send_homework_reminders():
                 course = settings['course']
                 stream = settings['stream']
                 tomorrow_hws = get_homeworks_for_tomorrow(course, stream)
+                                chat_id = settings.get('chat_id')
+                                if not chat_id:
+                    continue
 
                 if tomorrow_hws:
                     message = "🔔 Напоминание о домашних заданиях на завтра:\n\n"
@@ -637,7 +640,7 @@ async def send_homework_reminders():
                         message += f"📖 {subject}:\n{hw_text}\n\n"
 
                     try:
-                        await application.bot.send_message(chat_id=user_id, text=message)
+                        await application.bot.send_message(chat_id=chat_id, text=message)
                         logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
                     except BadRequest as e:
                         logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
