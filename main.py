@@ -630,9 +630,6 @@ async def send_homework_reminders():
                 course = settings['course']
                 stream = settings['stream']
                 tomorrow_hws = get_homeworks_for_tomorrow(course, stream)
-                                chat_id = settings.get('chat_id')
-                                if not chat_id:
-                    continue
 
                 if tomorrow_hws:
                     message = "🔔 Напоминание о домашних заданиях на завтра:\n\n"
@@ -640,7 +637,7 @@ async def send_homework_reminders():
                         message += f"📖 {subject}:\n{hw_text}\n\n"
 
                     try:
-                        await application.bot.send_message(chat_id=chat_id, text=message)
+                        await application.bot.send_message(chat_id=user_id, text=message)
                         logging.info(f"📤 Отправлено напоминание пользователю {user_id}")
                     except BadRequest as e:
                         logging.error(f"❌ Ошибка отправки напоминания пользователю {user_id}: {e}")
@@ -774,13 +771,11 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, cou
 
         # Сохраняем выбор пользователя
         user_id = str(update.effective_user.id)
-                chat_id = update.effective_chat.id
         if user_id not in user_settings:
             user_settings[user_id] = {}
 
         user_settings[user_id]['course'] = course
         user_settings[user_id]['stream'] = stream
-                user_settings[user_id]['chat_id'] = chat_id
         if english_time:
             user_settings[user_id]['english_time'] = english_time
         save_user_settings(user_settings)
@@ -1119,45 +1114,6 @@ async def check_updates_command(update: Update, context: ContextTypes.DEFAULT_TY
     await update.message.reply_text("🔍 Проверяю обновления...")
     await check_for_updates()
     await update.message.reply_text("✅ Проверка обновлений завершена!")
-
-async def say_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Админ-команда для рассылки сообщения всем пользователям: /say текст"""
-    if not is_admin(update):
-        await update.message.reply_text("❌ У вас нет прав для этой команды")
-        return
-
-    # текст после /say
-    if not context.args:
-        await update.message.reply_text("Использование: /say текст_сообщения")
-        return
-
-    text_to_send = " ".join(context.args)
-    sent = 0
-    failed = 0
-
-    await update.message.reply_text(f"📤 Начинаю рассылку сообщения:\n\n{text_to_send}\n\nПодождите...")
-
-    # обходим всех пользователей
-    for user_id, settings in list(user_settings.items()):
-        chat_id = settings.get("chat_id")
-        if not chat_id:
-            continue
-        try:
-            await context.bot.send_message(chat_id=chat_id, text=text_to_send)
-            sent += 1
-        except Exception as e:
-            logging.error(f"Ошибка отправки сообщения пользователю {user_id}: {e}")
-            failed += 1
-            # удаляем мёртвых пользователей
-            if "bot was blocked" in str(e).lower() or "chat not found" in str(e).lower():
-                user_settings.pop(user_id, None)
-
-    save_user_settings(user_settings)
-    await update.message.reply_text(
-        f"✅ Рассылка завершена!\n\n"
-        f"📊 Успешно отправлено: {sent}\n"
-        f"❌ Ошибок: {failed}"
-    )
 
 # === АДМИНСКИЕ ФУНКЦИИ ===
 async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -2223,7 +2179,6 @@ def main():
     application.add_handler(CommandHandler("users", users_command))
     application.add_handler(CommandHandler("admin", admin_command))
     application.add_handler(CommandHandler("assistants", assistants_command))
-        application.add_handler(CommandHandler("say", say_command))
     application.add_handler(CallbackQueryHandler(handle_query))
     application.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND & filters.User(
