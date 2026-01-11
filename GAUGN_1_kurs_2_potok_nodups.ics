@@ -1,1693 +1,2046 @@
 BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//GAUGN//Schedule Corrected//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:20251026T030000
+TZOFFSETFROM:+0400
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+
 BEGIN:VEVENT
-UID:1@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-1-20250901T100000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250901T100000
-DTEND;TZID=Europe/Moscow:20250901T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DTEND;TZID=Europe/Moscow:20250901T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:2@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250908T100000
-DTEND;TZID=Europe/Moscow:20250908T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:3@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250915T100000
-DTEND;TZID=Europe/Moscow:20250915T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:4@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250922T100000
-DTEND;TZID=Europe/Moscow:20250922T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:5@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250929T100000
-DTEND;TZID=Europe/Moscow:20250929T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:6@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251006T100000
-DTEND;TZID=Europe/Moscow:20251006T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:7@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251013T100000
-DTEND;TZID=Europe/Moscow:20251013T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:8@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251020T100000
-DTEND;TZID=Europe/Moscow:20251020T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:9@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251027T100000
-DTEND;TZID=Europe/Moscow:20251027T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:10@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251110T100000
-DTEND;TZID=Europe/Moscow:20251110T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:11@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251117T100000
-DTEND;TZID=Europe/Moscow:20251117T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:12@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251124T100000
-DTEND;TZID=Europe/Moscow:20251124T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:13@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251201T100000
-DTEND;TZID=Europe/Moscow:20251201T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:14@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251208T100000
-DTEND;TZID=Europe/Moscow:20251208T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:15@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251215T100000
-DTEND;TZID=Europe/Moscow:20251215T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:16@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251222T100000
-DTEND;TZID=Europe/Moscow:20251222T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:17@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251229T100000
-DTEND;TZID=Europe/Moscow:20251229T131000
-SUMMARY:Логика
-DESCRIPTION:Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Логика: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:35@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-2-20250901T131000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250901T131000
 DTEND;TZID=Europe/Moscow:20250901T140000
 SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:36@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-3-20250901T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250901T140000
+DTEND;TZID=Europe/Moscow:20250901T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-4-20250902T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250902T090000
+DTEND;TZID=Europe/Moscow:20250902T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-5-20250902T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250902T124000
+DTEND;TZID=Europe/Moscow:20250902T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-6-20250902T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250902T131000
+DTEND;TZID=Europe/Moscow:20250902T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-7-20250903T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250903T100000
+DTEND;TZID=Europe/Moscow:20250903T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-8-20250903T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250903T131000
+DTEND;TZID=Europe/Moscow:20250903T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-9-20250903T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250903T140000
+DTEND;TZID=Europe/Moscow:20250903T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-10-20250905T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250905T090000
+DTEND;TZID=Europe/Moscow:20250905T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-11-20250905T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250905T121000
+DTEND;TZID=Europe/Moscow:20250905T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-12-20250905T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250905T131000
+DTEND;TZID=Europe/Moscow:20250905T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-13-20250908T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250908T100000
+DTEND;TZID=Europe/Moscow:20250908T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-14-20250908T131000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250908T131000
 DTEND;TZID=Europe/Moscow:20250908T140000
 SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:37@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250915T131000
-DTEND;TZID=Europe/Moscow:20250915T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:38@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250922T131000
-DTEND;TZID=Europe/Moscow:20250922T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:39@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250929T131000
-DTEND;TZID=Europe/Moscow:20250929T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:40@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251006T131000
-DTEND;TZID=Europe/Moscow:20251006T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:41@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251013T131000
-DTEND;TZID=Europe/Moscow:20251013T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:42@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251020T131000
-DTEND;TZID=Europe/Moscow:20251020T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:43@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251027T131000
-DTEND;TZID=Europe/Moscow:20251027T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:44@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251103T131000
-DTEND;TZID=Europe/Moscow:20251103T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:45@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251110T131000
-DTEND;TZID=Europe/Moscow:20251110T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:46@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251117T131000
-DTEND;TZID=Europe/Moscow:20251117T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:47@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251124T131000
-DTEND;TZID=Europe/Moscow:20251124T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:48@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251201T131000
-DTEND;TZID=Europe/Moscow:20251201T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:49@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251208T131000
-DTEND;TZID=Europe/Moscow:20251208T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:50@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251215T131000
-DTEND;TZID=Europe/Moscow:20251215T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:51@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251222T131000
-DTEND;TZID=Europe/Moscow:20251222T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:52@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251229T131000
-DTEND;TZID=Europe/Moscow:20251229T140000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:53@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250901T140000
-DTEND;TZID=Europe/Moscow:20250901T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:54@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-15-20250908T140000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250908T140000
-DTEND;TZID=Europe/Moscow:20250908T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DTEND;TZID=Europe/Moscow:20250908T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:55@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250915T140000
-DTEND;TZID=Europe/Moscow:20250915T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:56@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250922T140000
-DTEND;TZID=Europe/Moscow:20250922T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:57@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250929T140000
-DTEND;TZID=Europe/Moscow:20250929T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:58@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251006T140000
-DTEND;TZID=Europe/Moscow:20251006T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:59@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251013T140000
-DTEND;TZID=Europe/Moscow:20251013T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:60@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251020T140000
-DTEND;TZID=Europe/Moscow:20251020T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:61@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251027T140000
-DTEND;TZID=Europe/Moscow:20251027T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:62@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251110T140000
-DTEND;TZID=Europe/Moscow:20251110T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:63@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251117T140000
-DTEND;TZID=Europe/Moscow:20251117T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:64@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251124T140000
-DTEND;TZID=Europe/Moscow:20251124T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:65@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251201T140000
-DTEND;TZID=Europe/Moscow:20251201T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:66@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251208T140000
-DTEND;TZID=Europe/Moscow:20251208T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:67@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251215T140000
-DTEND;TZID=Europe/Moscow:20251215T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:68@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251222T140000
-DTEND;TZID=Europe/Moscow:20251222T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:69@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251229T140000
-DTEND;TZID=Europe/Moscow:20251229T171000
-SUMMARY:Философия
-DESCRIPTION:Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря Философия: лекции, практические 1,8,15,22,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:87@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-16-20250908T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250908T180000
 DTEND;TZID=Europe/Moscow:20250908T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:88@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-17-20250909T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250909T131000
+DTEND;TZID=Europe/Moscow:20250909T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-18-20250909T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250909T140000
+DTEND;TZID=Europe/Moscow:20250909T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-19-20250910T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250910T100000
+DTEND;TZID=Europe/Moscow:20250910T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-20-20250910T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250910T131000
+DTEND;TZID=Europe/Moscow:20250910T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-21-20250910T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250910T140000
+DTEND;TZID=Europe/Moscow:20250910T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-22-20250912T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250912T121000
+DTEND;TZID=Europe/Moscow:20250912T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-23-20250912T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250912T140000
+DTEND;TZID=Europe/Moscow:20250912T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-24-20250915T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250915T100000
+DTEND;TZID=Europe/Moscow:20250915T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-25-20250915T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250915T131000
+DTEND;TZID=Europe/Moscow:20250915T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-26-20250915T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250915T140000
+DTEND;TZID=Europe/Moscow:20250915T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-27-20250915T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250915T180000
 DTEND;TZID=Europe/Moscow:20250915T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:89@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-28-20250916T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250916T090000
+DTEND;TZID=Europe/Moscow:20250916T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-29-20250916T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250916T124000
+DTEND;TZID=Europe/Moscow:20250916T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-30-20250916T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250916T131000
+DTEND;TZID=Europe/Moscow:20250916T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-31-20250917T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250917T100000
+DTEND;TZID=Europe/Moscow:20250917T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-32-20250917T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250917T131000
+DTEND;TZID=Europe/Moscow:20250917T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-33-20250917T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250917T140000
+DTEND;TZID=Europe/Moscow:20250917T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-34-20250919T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250919T090000
+DTEND;TZID=Europe/Moscow:20250919T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-35-20250919T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250919T121000
+DTEND;TZID=Europe/Moscow:20250919T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-36-20250919T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250919T131000
+DTEND;TZID=Europe/Moscow:20250919T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-37-20250922T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250922T100000
+DTEND;TZID=Europe/Moscow:20250922T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-38-20250922T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250922T131000
+DTEND;TZID=Europe/Moscow:20250922T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-39-20250922T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250922T140000
+DTEND;TZID=Europe/Moscow:20250922T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-40-20250923T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250923T131000
+DTEND;TZID=Europe/Moscow:20250923T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-41-20250923T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250923T140000
+DTEND;TZID=Europe/Moscow:20250923T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-42-20250924T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250924T100000
+DTEND;TZID=Europe/Moscow:20250924T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-43-20250924T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250924T131000
+DTEND;TZID=Europe/Moscow:20250924T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-44-20250924T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250924T140000
+DTEND;TZID=Europe/Moscow:20250924T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-45-20250926T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250926T100000
+DTEND;TZID=Europe/Moscow:20250926T113000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-46-20250926T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250926T121000
+DTEND;TZID=Europe/Moscow:20250926T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-47-20250929T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250929T100000
+DTEND;TZID=Europe/Moscow:20250929T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-48-20250929T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250929T131000
+DTEND;TZID=Europe/Moscow:20250929T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-49-20250929T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250929T140000
+DTEND;TZID=Europe/Moscow:20250929T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-50-20250929T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20250929T180000
 DTEND;TZID=Europe/Moscow:20250929T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:90@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-51-20250930T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250930T090000
+DTEND;TZID=Europe/Moscow:20250930T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-52-20250930T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250930T124000
+DTEND;TZID=Europe/Moscow:20250930T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-53-20250930T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20250930T131000
+DTEND;TZID=Europe/Moscow:20250930T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-54-20251001T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251001T100000
+DTEND;TZID=Europe/Moscow:20251001T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-55-20251001T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251001T131000
+DTEND;TZID=Europe/Moscow:20251001T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-56-20251001T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251001T140000
+DTEND;TZID=Europe/Moscow:20251001T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-57-20251003T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251003T090000
+DTEND;TZID=Europe/Moscow:20251003T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-58-20251003T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251003T121000
+DTEND;TZID=Europe/Moscow:20251003T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-59-20251003T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251003T131000
+DTEND;TZID=Europe/Moscow:20251003T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-60-20251006T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251006T100000
+DTEND;TZID=Europe/Moscow:20251006T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-61-20251006T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251006T131000
+DTEND;TZID=Europe/Moscow:20251006T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-62-20251006T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251006T140000
+DTEND;TZID=Europe/Moscow:20251006T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-63-20251006T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251006T180000
 DTEND;TZID=Europe/Moscow:20251006T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:91@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-64-20251007T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251007T131000
+DTEND;TZID=Europe/Moscow:20251007T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-65-20251007T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251007T140000
+DTEND;TZID=Europe/Moscow:20251007T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-66-20251008T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251008T100000
+DTEND;TZID=Europe/Moscow:20251008T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-67-20251008T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251008T131000
+DTEND;TZID=Europe/Moscow:20251008T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-68-20251008T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251008T140000
+DTEND;TZID=Europe/Moscow:20251008T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-69-20251010T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251010T121000
+DTEND;TZID=Europe/Moscow:20251010T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-70-20251010T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251010T140000
+DTEND;TZID=Europe/Moscow:20251010T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-71-20251013T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251013T100000
+DTEND;TZID=Europe/Moscow:20251013T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-72-20251013T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251013T131000
+DTEND;TZID=Europe/Moscow:20251013T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-73-20251013T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251013T140000
+DTEND;TZID=Europe/Moscow:20251013T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-74-20251013T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251013T180000
 DTEND;TZID=Europe/Moscow:20251013T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:92@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-75-20251014T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251014T090000
+DTEND;TZID=Europe/Moscow:20251014T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-76-20251014T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251014T124000
+DTEND;TZID=Europe/Moscow:20251014T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-77-20251014T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251014T131000
+DTEND;TZID=Europe/Moscow:20251014T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-78-20251015T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251015T100000
+DTEND;TZID=Europe/Moscow:20251015T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-79-20251015T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251015T131000
+DTEND;TZID=Europe/Moscow:20251015T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-80-20251015T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251015T140000
+DTEND;TZID=Europe/Moscow:20251015T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-81-20251017T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251017T090000
+DTEND;TZID=Europe/Moscow:20251017T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-82-20251017T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251017T121000
+DTEND;TZID=Europe/Moscow:20251017T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-83-20251017T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251017T131000
+DTEND;TZID=Europe/Moscow:20251017T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-84-20251020T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251020T100000
+DTEND;TZID=Europe/Moscow:20251020T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-85-20251020T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251020T131000
+DTEND;TZID=Europe/Moscow:20251020T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-86-20251020T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251020T140000
+DTEND;TZID=Europe/Moscow:20251020T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-87-20251020T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251020T180000
 DTEND;TZID=Europe/Moscow:20251020T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:93@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-88-20251021T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251021T131000
+DTEND;TZID=Europe/Moscow:20251021T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-89-20251021T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251021T140000
+DTEND;TZID=Europe/Moscow:20251021T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-90-20251022T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251022T100000
+DTEND;TZID=Europe/Moscow:20251022T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-91-20251022T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251022T131000
+DTEND;TZID=Europe/Moscow:20251022T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-92-20251022T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251022T140000
+DTEND;TZID=Europe/Moscow:20251022T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-93-20251024T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251024T121000
+DTEND;TZID=Europe/Moscow:20251024T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-94-20251024T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251024T140000
+DTEND;TZID=Europe/Moscow:20251024T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-95-20251027T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251027T100000
+DTEND;TZID=Europe/Moscow:20251027T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-96-20251027T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251027T131000
+DTEND;TZID=Europe/Moscow:20251027T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-97-20251027T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251027T140000
+DTEND;TZID=Europe/Moscow:20251027T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-98-20251027T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251027T180000
 DTEND;TZID=Europe/Moscow:20251027T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:94@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-99-20251028T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251028T131000
+DTEND;TZID=Europe/Moscow:20251028T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-100-20251028T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251028T140000
+DTEND;TZID=Europe/Moscow:20251028T153000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-101-20251029T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251029T100000
+DTEND;TZID=Europe/Moscow:20251029T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-102-20251029T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251029T131000
+DTEND;TZID=Europe/Moscow:20251029T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-103-20251029T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251029T140000
+DTEND;TZID=Europe/Moscow:20251029T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-104-20251031T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251031T090000
+DTEND;TZID=Europe/Moscow:20251031T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-105-20251031T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251031T121000
+DTEND;TZID=Europe/Moscow:20251031T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-106-20251031T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251031T131000
+DTEND;TZID=Europe/Moscow:20251031T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-107-20251105T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251105T100000
+DTEND;TZID=Europe/Moscow:20251105T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-108-20251105T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251105T131000
+DTEND;TZID=Europe/Moscow:20251105T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-109-20251105T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251105T140000
+DTEND;TZID=Europe/Moscow:20251105T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-110-20251107T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251107T121000
+DTEND;TZID=Europe/Moscow:20251107T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-111-20251107T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251107T140000
+DTEND;TZID=Europe/Moscow:20251107T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-112-20251110T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251110T100000
+DTEND;TZID=Europe/Moscow:20251110T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-113-20251110T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251110T131000
+DTEND;TZID=Europe/Moscow:20251110T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-114-20251110T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251110T140000
+DTEND;TZID=Europe/Moscow:20251110T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-115-20251110T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251110T180000
 DTEND;TZID=Europe/Moscow:20251110T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:95@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-116-20251111T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251111T090000
+DTEND;TZID=Europe/Moscow:20251111T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-117-20251111T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251111T124000
+DTEND;TZID=Europe/Moscow:20251111T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-118-20251111T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251111T131000
+DTEND;TZID=Europe/Moscow:20251111T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-119-20251112T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251112T100000
+DTEND;TZID=Europe/Moscow:20251112T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-120-20251112T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251112T131000
+DTEND;TZID=Europe/Moscow:20251112T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-121-20251112T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251112T140000
+DTEND;TZID=Europe/Moscow:20251112T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-122-20251114T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251114T090000
+DTEND;TZID=Europe/Moscow:20251114T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-123-20251114T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251114T121000
+DTEND;TZID=Europe/Moscow:20251114T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-124-20251114T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251114T131000
+DTEND;TZID=Europe/Moscow:20251114T143000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-125-20251117T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251117T100000
+DTEND;TZID=Europe/Moscow:20251117T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-126-20251117T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251117T131000
+DTEND;TZID=Europe/Moscow:20251117T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-127-20251117T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251117T140000
+DTEND;TZID=Europe/Moscow:20251117T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-128-20251117T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251117T180000
 DTEND;TZID=Europe/Moscow:20251117T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:96@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-129-20251118T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251118T131000
+DTEND;TZID=Europe/Moscow:20251118T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-130-20251118T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251118T140000
+DTEND;TZID=Europe/Moscow:20251118T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-131-20251119T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251119T100000
+DTEND;TZID=Europe/Moscow:20251119T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-132-20251119T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251119T131000
+DTEND;TZID=Europe/Moscow:20251119T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-133-20251119T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251119T140000
+DTEND;TZID=Europe/Moscow:20251119T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-134-20251121T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251121T121000
+DTEND;TZID=Europe/Moscow:20251121T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-135-20251121T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251121T140000
+DTEND;TZID=Europe/Moscow:20251121T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-136-20251124T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251124T100000
+DTEND;TZID=Europe/Moscow:20251124T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-137-20251124T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251124T131000
+DTEND;TZID=Europe/Moscow:20251124T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-138-20251124T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251124T140000
+DTEND;TZID=Europe/Moscow:20251124T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-139-20251124T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251124T180000
 DTEND;TZID=Europe/Moscow:20251124T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:97@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-140-20251125T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251125T090000
+DTEND;TZID=Europe/Moscow:20251125T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-141-20251125T124000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251125T124000
+DTEND;TZID=Europe/Moscow:20251125T141000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-142-20251125T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251125T131000
+DTEND;TZID=Europe/Moscow:20251125T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-143-20251126T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251126T100000
+DTEND;TZID=Europe/Moscow:20251126T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-144-20251126T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251126T131000
+DTEND;TZID=Europe/Moscow:20251126T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-145-20251126T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251126T140000
+DTEND;TZID=Europe/Moscow:20251126T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-146-20251128T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251128T090000
+DTEND;TZID=Europe/Moscow:20251128T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-147-20251128T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251128T121000
+DTEND;TZID=Europe/Moscow:20251128T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-148-20251201T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251201T100000
+DTEND;TZID=Europe/Moscow:20251201T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-149-20251201T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251201T131000
+DTEND;TZID=Europe/Moscow:20251201T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-150-20251201T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251201T140000
+DTEND;TZID=Europe/Moscow:20251201T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-151-20251201T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251201T180000
 DTEND;TZID=Europe/Moscow:20251201T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:98@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-152-20251202T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251202T131000
+DTEND;TZID=Europe/Moscow:20251202T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-153-20251202T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251202T140000
+DTEND;TZID=Europe/Moscow:20251202T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-154-20251203T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251203T100000
+DTEND;TZID=Europe/Moscow:20251203T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-155-20251203T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251203T131000
+DTEND;TZID=Europe/Moscow:20251203T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-156-20251203T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251203T140000
+DTEND;TZID=Europe/Moscow:20251203T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-157-20251205T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251205T121000
+DTEND;TZID=Europe/Moscow:20251205T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-158-20251205T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251205T140000
+DTEND;TZID=Europe/Moscow:20251205T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-159-20251208T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251208T100000
+DTEND;TZID=Europe/Moscow:20251208T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-160-20251208T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251208T131000
+DTEND;TZID=Europe/Moscow:20251208T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-161-20251208T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251208T140000
+DTEND;TZID=Europe/Moscow:20251208T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-162-20251208T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251208T180000
 DTEND;TZID=Europe/Moscow:20251208T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:99@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-163-20251209T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251209T090000
+DTEND;TZID=Europe/Moscow:20251209T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-164-20251209T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251209T131000
+DTEND;TZID=Europe/Moscow:20251209T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-165-20251209T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251209T140000
+DTEND;TZID=Europe/Moscow:20251209T153000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-166-20251210T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251210T100000
+DTEND;TZID=Europe/Moscow:20251210T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-167-20251210T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251210T131000
+DTEND;TZID=Europe/Moscow:20251210T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-168-20251210T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251210T140000
+DTEND;TZID=Europe/Moscow:20251210T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-169-20251212T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251212T090000
+DTEND;TZID=Europe/Moscow:20251212T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-170-20251212T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251212T121000
+DTEND;TZID=Europe/Moscow:20251212T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-171-20251215T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251215T100000
+DTEND;TZID=Europe/Moscow:20251215T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-172-20251215T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251215T131000
+DTEND;TZID=Europe/Moscow:20251215T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-173-20251215T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251215T140000
+DTEND;TZID=Europe/Moscow:20251215T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-174-20251215T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251215T180000
 DTEND;TZID=Europe/Moscow:20251215T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:100@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-175-20251216T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251216T131000
+DTEND;TZID=Europe/Moscow:20251216T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-176-20251216T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251216T140000
+DTEND;TZID=Europe/Moscow:20251216T153000
+SUMMARY:Основы социологии
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-177-20251217T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251217T100000
+DTEND;TZID=Europe/Moscow:20251217T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-178-20251217T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251217T131000
+DTEND;TZID=Europe/Moscow:20251217T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-179-20251217T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251217T140000
+DTEND;TZID=Europe/Moscow:20251217T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-180-20251219T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251219T121000
+DTEND;TZID=Europe/Moscow:20251219T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-181-20251219T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251219T140000
+DTEND;TZID=Europe/Moscow:20251219T153000
+SUMMARY:Высшая математика
+DESCRIPTION:Высшая математика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-182-20251222T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251222T100000
+DTEND;TZID=Europe/Moscow:20251222T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-183-20251222T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251222T131000
+DTEND;TZID=Europe/Moscow:20251222T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-184-20251222T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251222T140000
+DTEND;TZID=Europe/Moscow:20251222T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-185-20251222T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251222T180000
 DTEND;TZID=Europe/Moscow:20251222T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:101@gaugn.ru
-DTSTAMP:20251001T091952
+UID:gaugn-corrected-186-20251223T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251223T090000
+DTEND;TZID=Europe/Moscow:20251223T103000
+SUMMARY:История России
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-187-20251223T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251223T131000
+DTEND;TZID=Europe/Moscow:20251223T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-188-20251223T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251223T140000
+DTEND;TZID=Europe/Moscow:20251223T153000
+SUMMARY:Основы российской государственности
+DESCRIPTION:Основы российской государственности - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-189-20251224T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251224T100000
+DTEND;TZID=Europe/Moscow:20251224T113000
+SUMMARY:Логика
+DESCRIPTION:Логика - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-190-20251224T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251224T131000
+DTEND;TZID=Europe/Moscow:20251224T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-191-20251224T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251224T140000
+DTEND;TZID=Europe/Moscow:20251224T153000
+SUMMARY:Общая психология
+DESCRIPTION:Общая психология - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-192-20251226T090000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251226T090000
+DTEND;TZID=Europe/Moscow:20251226T103000
+SUMMARY:Основы права для социологов
+DESCRIPTION:Основы права для социологов - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-193-20251226T121000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251226T121000
+DTEND;TZID=Europe/Moscow:20251226T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (пятница: 12:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-194-20251229T100000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251229T100000
+DTEND;TZID=Europe/Moscow:20251229T113000
+SUMMARY:Философия
+DESCRIPTION:Философия - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-195-20251229T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251229T131000
+DTEND;TZID=Europe/Moscow:20251229T140000
+SUMMARY:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-196-20251229T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251229T140000
+DTEND;TZID=Europe/Moscow:20251229T153000
+SUMMARY:Стилистика социологического научного текста
+DESCRIPTION:Стилистика социологического научного текста - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gaugn-corrected-197-20251229T180000@schedule.ics
 DTSTART;TZID=Europe/Moscow:20251229T180000
 DTEND;TZID=Europe/Moscow:20251229T193000
 SUMMARY:История России
-DESCRIPTION:История России: практические 8,15,29 сентября; 6,13,20,27 октября; 10,17,24 ноября; 1,8,15,22,29 декабря
+DESCRIPTION:История России - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:102@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250902T090000
-DTEND;TZID=Europe/Moscow:20250902T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:103@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250916T090000
-DTEND;TZID=Europe/Moscow:20250916T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:104@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250930T090000
-DTEND;TZID=Europe/Moscow:20250930T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:105@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251014T090000
-DTEND;TZID=Europe/Moscow:20251014T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:106@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251111T090000
-DTEND;TZID=Europe/Moscow:20251111T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:107@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251125T090000
-DTEND;TZID=Europe/Moscow:20251125T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:108@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251209T090000
-DTEND;TZID=Europe/Moscow:20251209T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:109@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251223T090000
-DTEND;TZID=Europe/Moscow:20251223T121000
-SUMMARY:История России
-DESCRIPTION:История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря История России: лекции 2,16,30 сентября, 14 октября, 11,25 ноября; 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:118@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250902T124000
-DTEND;TZID=Europe/Moscow:20250902T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:119@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250916T124000
-DTEND;TZID=Europe/Moscow:20250916T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:120@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250930T124000
-DTEND;TZID=Europe/Moscow:20250930T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:121@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251014T124000
-DTEND;TZID=Europe/Moscow:20251014T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:122@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251028T124000
-DTEND;TZID=Europe/Moscow:20251028T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:123@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251111T124000
-DTEND;TZID=Europe/Moscow:20251111T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:124@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251125T124000
-DTEND;TZID=Europe/Moscow:20251125T155000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября Основы российской государственности: лекции 2,16,30 сентября, 14,28 октября, 11,25 ноября
-END:VEVENT
-BEGIN:VEVENT
-UID:132@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250902T141000
-DTEND;TZID=Europe/Moscow:20250902T143000
+UID:gaugn-corrected-198-20251230T131000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251230T131000
+DTEND;TZID=Europe/Moscow:20251230T140000
 SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
+DESCRIPTION:Обеденный перерыв (13:10-14:00)
+LOCATION:Столовая
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:133@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250909T141000
-DTEND;TZID=Europe/Moscow:20250909T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:134@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250916T141000
-DTEND;TZID=Europe/Moscow:20250916T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:135@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250923T141000
-DTEND;TZID=Europe/Moscow:20250923T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:136@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250930T141000
-DTEND;TZID=Europe/Moscow:20250930T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:137@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251007T141000
-DTEND;TZID=Europe/Moscow:20251007T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:138@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251014T141000
-DTEND;TZID=Europe/Moscow:20251014T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:139@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251021T141000
-DTEND;TZID=Europe/Moscow:20251021T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:140@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251028T141000
-DTEND;TZID=Europe/Moscow:20251028T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:141@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251104T141000
-DTEND;TZID=Europe/Moscow:20251104T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:142@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251111T141000
-DTEND;TZID=Europe/Moscow:20251111T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:143@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251118T141000
-DTEND;TZID=Europe/Moscow:20251118T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:144@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251125T141000
-DTEND;TZID=Europe/Moscow:20251125T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:145@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251202T141000
-DTEND;TZID=Europe/Moscow:20251202T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:146@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251209T141000
-DTEND;TZID=Europe/Moscow:20251209T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:147@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251216T141000
-DTEND;TZID=Europe/Moscow:20251216T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:148@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251223T141000
-DTEND;TZID=Europe/Moscow:20251223T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:149@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250923T090000
-DTEND;TZID=Europe/Moscow:20250923T121000
+UID:gaugn-corrected-199-20251230T140000@schedule.ics
+DTSTART;TZID=Europe/Moscow:20251230T140000
+DTEND;TZID=Europe/Moscow:20251230T153000
 SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара
-END:VEVENT
-BEGIN:VEVENT
-UID:150@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251021T090000
-DTEND;TZID=Europe/Moscow:20251021T121000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара
-END:VEVENT
-BEGIN:VEVENT
-UID:151@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251216T090000
-DTEND;TZID=Europe/Moscow:20251216T121000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара Основы социологии: лекции, практические 23 сентября; 21 октября; + 16 декабря 1 пара
-END:VEVENT
-BEGIN:VEVENT
-UID:155@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251125T140000
-DTEND;TZID=Europe/Moscow:20251125T171000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: практические 25 ноября, 9,23 декабря Основы российской государственности: практические 25 ноября, 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:156@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251209T140000
-DTEND;TZID=Europe/Moscow:20251209T171000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: практические 25 ноября, 9,23 декабря Основы российской государственности: практические 25 ноября, 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:157@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251223T140000
-DTEND;TZID=Europe/Moscow:20251223T171000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: практические 25 ноября, 9,23 декабря Основы российской государственности: практические 25 ноября, 9,23 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:161@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250910T090000
-DTEND;TZID=Europe/Moscow:20250910T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:162@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250917T090000
-DTEND;TZID=Europe/Moscow:20250917T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:163@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250924T090000
-DTEND;TZID=Europe/Moscow:20250924T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:164@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251001T090000
-DTEND;TZID=Europe/Moscow:20251001T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:165@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251015T090000
-DTEND;TZID=Europe/Moscow:20251015T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:166@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251022T090000
-DTEND;TZID=Europe/Moscow:20251022T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:167@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251029T090000
-DTEND;TZID=Europe/Moscow:20251029T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:168@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251112T090000
-DTEND;TZID=Europe/Moscow:20251112T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:169@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251119T090000
-DTEND;TZID=Europe/Moscow:20251119T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:170@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251126T090000
-DTEND;TZID=Europe/Moscow:20251126T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:171@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251203T090000
-DTEND;TZID=Europe/Moscow:20251203T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:172@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251210T090000
-DTEND;TZID=Europe/Moscow:20251210T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:173@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251217T090000
-DTEND;TZID=Europe/Moscow:20251217T103000
-SUMMARY:Основы социологии
-DESCRIPTION:Основы социологии: лекции, практические 10,17,24 сентября; 1,15,22,29 октября; 12,19,26 ноября; 3,10,17 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:174@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250903T104000
-DTEND;TZID=Europe/Moscow:20250903T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:175@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250910T104000
-DTEND;TZID=Europe/Moscow:20250910T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:176@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250917T104000
-DTEND;TZID=Europe/Moscow:20250917T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:177@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250924T104000
-DTEND;TZID=Europe/Moscow:20250924T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:178@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251001T104000
-DTEND;TZID=Europe/Moscow:20251001T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:179@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251008T104000
-DTEND;TZID=Europe/Moscow:20251008T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:180@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251015T104000
-DTEND;TZID=Europe/Moscow:20251015T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:181@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251022T104000
-DTEND;TZID=Europe/Moscow:20251022T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:182@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251029T104000
-DTEND;TZID=Europe/Moscow:20251029T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:183@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251105T134959
-DTEND;TZID=Europe/Moscow:20251105T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:184@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251112T104000
-DTEND;TZID=Europe/Moscow:20251112T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:185@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251119T104000
-DTEND;TZID=Europe/Moscow:20251119T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:186@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251126T104000
-DTEND;TZID=Europe/Moscow:20251126T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:187@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251203T104000
-DTEND;TZID=Europe/Moscow:20251203T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:188@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251210T104000
-DTEND;TZID=Europe/Moscow:20251210T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:189@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251217T104000
-DTEND;TZID=Europe/Moscow:20251217T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:190@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251224T104000
-DTEND;TZID=Europe/Moscow:20251224T135000
-SUMMARY:Стилистика социологического научного текста
-DESCRIPTION:Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Стилистика социологического научного текста: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:208@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250903T135000
-DTEND;TZID=Europe/Moscow:20250903T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:209@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250910T135000
-DTEND;TZID=Europe/Moscow:20250910T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:210@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250917T135000
-DTEND;TZID=Europe/Moscow:20250917T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:211@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250924T135000
-DTEND;TZID=Europe/Moscow:20250924T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:212@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251001T135000
-DTEND;TZID=Europe/Moscow:20251001T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:213@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251008T135000
-DTEND;TZID=Europe/Moscow:20251008T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:214@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251015T135000
-DTEND;TZID=Europe/Moscow:20251015T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:215@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251022T135000
-DTEND;TZID=Europe/Moscow:20251022T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:216@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251029T135000
-DTEND;TZID=Europe/Moscow:20251029T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:217@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251105T135000
-DTEND;TZID=Europe/Moscow:20251105T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:218@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251112T135000
-DTEND;TZID=Europe/Moscow:20251112T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:219@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251119T135000
-DTEND;TZID=Europe/Moscow:20251119T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:220@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251126T135000
-DTEND;TZID=Europe/Moscow:20251126T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:221@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251203T135000
-DTEND;TZID=Europe/Moscow:20251203T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:222@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251210T135000
-DTEND;TZID=Europe/Moscow:20251210T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:223@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251217T135000
-DTEND;TZID=Europe/Moscow:20251217T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:224@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251224T135000
-DTEND;TZID=Europe/Moscow:20251224T143000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:225@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250903T143000
-DTEND;TZID=Europe/Moscow:20250903T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:226@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250910T143000
-DTEND;TZID=Europe/Moscow:20250910T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:227@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250917T143000
-DTEND;TZID=Europe/Moscow:20250917T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:228@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250924T143000
-DTEND;TZID=Europe/Moscow:20250924T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:229@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251001T143000
-DTEND;TZID=Europe/Moscow:20251001T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:230@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251008T143000
-DTEND;TZID=Europe/Moscow:20251008T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:231@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251015T143000
-DTEND;TZID=Europe/Moscow:20251015T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:232@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251022T143000
-DTEND;TZID=Europe/Moscow:20251022T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:233@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251029T143000
-DTEND;TZID=Europe/Moscow:20251029T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:234@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251105T143000
-DTEND;TZID=Europe/Moscow:20251105T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:235@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251112T143000
-DTEND;TZID=Europe/Moscow:20251112T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:236@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251119T143000
-DTEND;TZID=Europe/Moscow:20251119T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:237@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251126T143000
-DTEND;TZID=Europe/Moscow:20251126T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:238@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251203T143000
-DTEND;TZID=Europe/Moscow:20251203T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:239@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251210T143000
-DTEND;TZID=Europe/Moscow:20251210T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:240@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251217T143000
-DTEND;TZID=Europe/Moscow:20251217T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:241@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251224T143000
-DTEND;TZID=Europe/Moscow:20251224T174000
-SUMMARY:Общая психология
-DESCRIPTION:Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря Общая психология: лекции, практические 3,10,17,24 сентября; 1,8,15,22,29 октября; 5,12,19,26 ноября; 3,10,17,24 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:259@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250905T090000
-DTEND;TZID=Europe/Moscow:20250905T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:260@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250919T090000
-DTEND;TZID=Europe/Moscow:20250919T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:261@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251003T090000
-DTEND;TZID=Europe/Moscow:20251003T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:262@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251017T090000
-DTEND;TZID=Europe/Moscow:20251017T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:263@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251031T090000
-DTEND;TZID=Europe/Moscow:20251031T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:264@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251114T090000
-DTEND;TZID=Europe/Moscow:20251114T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:265@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251128T090000
-DTEND;TZID=Europe/Moscow:20251128T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:266@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251212T090000
-DTEND;TZID=Europe/Moscow:20251212T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:267@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251226T090000
-DTEND;TZID=Europe/Moscow:20251226T121000
-SUMMARY:Основы права для социологов
-DESCRIPTION:Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря Основы права для социологов: лекции, практические 5,19 сентября; 3,17,31 октября; 14,28 ноября; 12,26 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:277@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250926T100000
-DTEND;TZID=Europe/Moscow:20250926T131000
-SUMMARY:Основы российской государственности
-DESCRIPTION:Основы российской государственности: практические 26 сентября; Основы российской государственности: практические 26 сентября;
-END:VEVENT
-BEGIN:VEVENT
-UID:279@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250905T131000
-DTEND;TZID=Europe/Moscow:20250905T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:280@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250912T131000
-DTEND;TZID=Europe/Moscow:20250912T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:281@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250919T131000
-DTEND;TZID=Europe/Moscow:20250919T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:282@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250926T131000
-DTEND;TZID=Europe/Moscow:20250926T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:283@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251003T131000
-DTEND;TZID=Europe/Moscow:20251003T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:284@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251010T131000
-DTEND;TZID=Europe/Moscow:20251010T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:285@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251017T131000
-DTEND;TZID=Europe/Moscow:20251017T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:286@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251024T131000
-DTEND;TZID=Europe/Moscow:20251024T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:287@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251031T131000
-DTEND;TZID=Europe/Moscow:20251031T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:288@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251107T131000
-DTEND;TZID=Europe/Moscow:20251107T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:289@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251114T131000
-DTEND;TZID=Europe/Moscow:20251114T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:290@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251121T131000
-DTEND;TZID=Europe/Moscow:20251121T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:291@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251128T131000
-DTEND;TZID=Europe/Moscow:20251128T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:292@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251205T131000
-DTEND;TZID=Europe/Moscow:20251205T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:293@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251212T131000
-DTEND;TZID=Europe/Moscow:20251212T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:294@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251219T131000
-DTEND;TZID=Europe/Moscow:20251219T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:295@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251226T131000
-DTEND;TZID=Europe/Moscow:20251226T142000
-SUMMARY:Обеденный перерыв
-DESCRIPTION:Обеденный перерыв
-END:VEVENT
-BEGIN:VEVENT
-UID:296@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250912T142000
-DTEND;TZID=Europe/Moscow:20250912T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:297@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250919T142000
-DTEND;TZID=Europe/Moscow:20250919T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:298@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20250926T142000
-DTEND;TZID=Europe/Moscow:20250926T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:299@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251003T142000
-DTEND;TZID=Europe/Moscow:20251003T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:300@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251010T142000
-DTEND;TZID=Europe/Moscow:20251010T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:301@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251017T142000
-DTEND;TZID=Europe/Moscow:20251017T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:302@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251024T142000
-DTEND;TZID=Europe/Moscow:20251024T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:303@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251031T142000
-DTEND;TZID=Europe/Moscow:20251031T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:304@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251107T142000
-DTEND;TZID=Europe/Moscow:20251107T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:305@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251114T142000
-DTEND;TZID=Europe/Moscow:20251114T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:306@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251121T142000
-DTEND;TZID=Europe/Moscow:20251121T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:307@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251128T142000
-DTEND;TZID=Europe/Moscow:20251128T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:308@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251205T142000
-DTEND;TZID=Europe/Moscow:20251205T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:309@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251212T142000
-DTEND;TZID=Europe/Moscow:20251212T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
-END:VEVENT
-BEGIN:VEVENT
-UID:310@gaugn.ru
-DTSTAMP:20251001T091952
-DTSTART;TZID=Europe/Moscow:20251219T142000
-DTEND;TZID=Europe/Moscow:20251219T173000
-SUMMARY:Высшая математика
-DESCRIPTION:Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря Высшая математика: лекции, практические 12,19,26 сентября; 3,10,17,24,31 октября; 7,14,21,28 ноября; 5,12,19 декабря
+DESCRIPTION:Основы социологии - занятие по расписанию ГАУГН
+LOCATION:Аудитория
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-1-20260113@schedule.ics
+DTSTART;TZID=Europe/Moscow:20260113T100000
+DTEND;TZID=Europe/Moscow:20260113T113000
+SUMMARY:ЭКЗАМЕН: Общая психология для социологов
+DESCRIPTION:ЭКЗАМЕН: Общая психология для социологов
+LOCATION:218
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-2-20260116@schedule.ics
+DTSTART;TZID=Europe/Moscow:20260116T100000
+DTEND;TZID=Europe/Moscow:20260116T113000
+SUMMARY:ЭКЗАМЕН: Стилистика социологического научного текста
+DESCRIPTION:ЭКЗАМЕН: Стилистика социологического научного текста
+LOCATION:218
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-3-20260119@schedule.ics
+DTSTART;TZID=Europe/Moscow:20260119T100000
+DTEND;TZID=Europe/Moscow:20260119T113000
+SUMMARY:ЭКЗАМЕН: Логика
+DESCRIPTION:ЭКЗАМЕН: Логика
+LOCATION:218
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-4-20260123@schedule.ics
+DTSTART;TZID=Europe/Moscow:20260123T100000
+DTEND;TZID=Europe/Moscow:20260123T113000
+SUMMARY:ЭКЗАМЕН: Высшая математика
+DESCRIPTION:ЭКЗАМЕН: Высшая математика
+LOCATION:218
+TRANSP:OPAQUE
+STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
