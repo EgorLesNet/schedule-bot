@@ -1355,7 +1355,6 @@ async def list_assistants(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # === ГЛАВНАЯ ФУНКЦИЯ ===
 async def post_init(application):
     """Инициализация после запуска бота"""
-    # Запускаем планировщик
     asyncio.create_task(scheduler())
     logging.info("✅ Планировщик запущен!")
 
@@ -1370,7 +1369,7 @@ def main():
 
     logging.info("🤖 Запуск бота...")
 
-    # Создаем приложение
+    # Создаем приложение С post_init
     application = ApplicationBuilder().token(BOT_TOKEN).post_init(post_init).build()
 
     # Добавляем обработчики команд
@@ -1394,4 +1393,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
