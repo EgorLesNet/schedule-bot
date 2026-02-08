@@ -1,0 +1,1927 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Perplexity//Schedule to ICS//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Социология 1 курс (1 поток) Весна 2026
+  (без англ./практики)
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+X-LIC-LOCATION:Europe/Moscow
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260209-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260209T100000
+DTEND;TZID=Europe/Moscow:20260209T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260216-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260216T100000
+DTEND;TZID=Europe/Moscow:20260216T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260302-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260302T100000
+DTEND;TZID=Europe/Moscow:20260302T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260316-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260316T100000
+DTEND;TZID=Europe/Moscow:20260316T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260323-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260323T100000
+DTEND;TZID=Europe/Moscow:20260323T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260330-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260330T100000
+DTEND;TZID=Europe/Moscow:20260330T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260406-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260406T100000
+DTEND;TZID=Europe/Moscow:20260406T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260413-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260413T100000
+DTEND;TZID=Europe/Moscow:20260413T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260420-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260420T100000
+DTEND;TZID=Europe/Moscow:20260420T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260427-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260427T100000
+DTEND;TZID=Europe/Moscow:20260427T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260504-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260504T100000
+DTEND;TZID=Europe/Moscow:20260504T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260518-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260518T100000
+DTEND;TZID=Europe/Moscow:20260518T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260525-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260525T100000
+DTEND;TZID=Europe/Moscow:20260525T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260601-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260601T100000
+DTEND;TZID=Europe/Moscow:20260601T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260608-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260608T100000
+DTEND;TZID=Europe/Moscow:20260608T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:высшая-математика-лекции-практические
+ -20260615-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Высшая математика: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260615T100000
+DTEND;TZID=Europe/Moscow:20260615T131000
+LOCATION:Таганка
+DESCRIPTION:Преподаватель: Шамраева Виктория 
+ Викторовна.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260209-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260209T143000
+DTEND;TZID=Europe/Moscow:20260209T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260216-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260216T143000
+DTEND;TZID=Europe/Moscow:20260216T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260302-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260302T143000
+DTEND;TZID=Europe/Moscow:20260302T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260316-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260316T143000
+DTEND;TZID=Europe/Moscow:20260316T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260323-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260323T143000
+DTEND;TZID=Europe/Moscow:20260323T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260330-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260330T143000
+DTEND;TZID=Europe/Moscow:20260330T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260406-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260406T143000
+DTEND;TZID=Europe/Moscow:20260406T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260413-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260413T143000
+DTEND;TZID=Europe/Moscow:20260413T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260420-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260420T143000
+DTEND;TZID=Europe/Moscow:20260420T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260427-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260427T143000
+DTEND;TZID=Europe/Moscow:20260427T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260504-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260504T143000
+DTEND;TZID=Europe/Moscow:20260504T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260518-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260518T143000
+DTEND;TZID=Europe/Moscow:20260518T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260525-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260525T143000
+DTEND;TZID=Europe/Moscow:20260525T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260601-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260601T143000
+DTEND;TZID=Europe/Moscow:20260601T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260608-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260608T143000
+DTEND;TZID=Europe/Moscow:20260608T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:философия-лекции-практические-20260615-1430@
+ perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Философия: лекции, практические
+DTSTART;TZID=Europe/Moscow:20260615T143000
+DTEND;TZID=Europe/Moscow:20260615T174000
+LOCATION:218
+DESCRIPTION:Преподаватель: Залунин Владимир И
+ ванович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260209-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260209T175000
+DTEND;TZID=Europe/Moscow:20260209T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260216-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260216T175000
+DTEND;TZID=Europe/Moscow:20260216T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260302-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260302T175000
+DTEND;TZID=Europe/Moscow:20260302T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260316-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260316T175000
+DTEND;TZID=Europe/Moscow:20260316T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260323-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260323T175000
+DTEND;TZID=Europe/Moscow:20260323T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260330-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260330T175000
+DTEND;TZID=Europe/Moscow:20260330T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260406-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260406T175000
+DTEND;TZID=Europe/Moscow:20260406T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260413-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260413T175000
+DTEND;TZID=Europe/Moscow:20260413T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260420-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260420T175000
+DTEND;TZID=Europe/Moscow:20260420T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260427-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260427T175000
+DTEND;TZID=Europe/Moscow:20260427T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260504-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260504T175000
+DTEND;TZID=Europe/Moscow:20260504T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260518-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260518T175000
+DTEND;TZID=Europe/Moscow:20260518T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260525-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260525T175000
+DTEND;TZID=Europe/Moscow:20260525T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260601-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260601T175000
+DTEND;TZID=Europe/Moscow:20260601T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260608-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260608T175000
+DTEND;TZID=Europe/Moscow:20260608T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-практические-20260615-1750@perp
+ lexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России: практические
+DTSTART;TZID=Europe/Moscow:20260615T175000
+DTEND;TZID=Europe/Moscow:20260615T192000
+LOCATION:218
+DESCRIPTION:Преподаватель: Любков Владимир Дм
+ итриевич.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260210-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260210T090000
+DTEND;TZID=Europe/Moscow:20260210T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260224-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260224T090000
+DTEND;TZID=Europe/Moscow:20260224T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260310-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260310T090000
+DTEND;TZID=Europe/Moscow:20260310T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260324-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260324T090000
+DTEND;TZID=Europe/Moscow:20260324T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260407-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260407T090000
+DTEND;TZID=Europe/Moscow:20260407T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260421-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260421T090000
+DTEND;TZID=Europe/Moscow:20260421T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260505-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260505T090000
+DTEND;TZID=Europe/Moscow:20260505T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:история-россии-лекции-20260519-0900@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История России, лекции
+DTSTART;TZID=Europe/Moscow:20260519T090000
+DTEND;TZID=Europe/Moscow:20260519T121000
+LOCATION:ИНИОН
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260217-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260217T100000
+DTEND;TZID=Europe/Moscow:20260217T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260303-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260303T100000
+DTEND;TZID=Europe/Moscow:20260303T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260317-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260317T100000
+DTEND;TZID=Europe/Moscow:20260317T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260331-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260331T100000
+DTEND;TZID=Europe/Moscow:20260331T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260414-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260414T100000
+DTEND;TZID=Europe/Moscow:20260414T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260428-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260428T100000
+DTEND;TZID=Europe/Moscow:20260428T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260512-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260512T100000
+DTEND;TZID=Europe/Moscow:20260512T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260526-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260526T100000
+DTEND;TZID=Europe/Moscow:20260526T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:безопасность-жизнедеятельности-лекци
+ и-пр-20260609-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Безопасность жизнедеятельности: лек
+ ции, практические
+DTSTART;TZID=Europe/Moscow:20260609T100000
+DTEND;TZID=Europe/Moscow:20260609T131000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Капралова Дарья Ол
+ еговна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260210-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260210T140000
+DTEND;TZID=Europe/Moscow:20260210T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260224-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260224T140000
+DTEND;TZID=Europe/Moscow:20260224T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260310-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260310T140000
+DTEND;TZID=Europe/Moscow:20260310T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260324-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260324T140000
+DTEND;TZID=Europe/Moscow:20260324T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260407-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260407T140000
+DTEND;TZID=Europe/Moscow:20260407T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260421-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260421T140000
+DTEND;TZID=Europe/Moscow:20260421T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260505-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260505T140000
+DTEND;TZID=Europe/Moscow:20260505T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260519-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260519T140000
+DTEND;TZID=Europe/Moscow:20260519T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:экономическая-география-лекции-практи
+ чес-20260602-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Экономическая география: лекции, пра
+ ктические
+DTSTART;TZID=Europe/Moscow:20260602T140000
+DTEND;TZID=Europe/Moscow:20260602T171000
+LOCATION:218
+DESCRIPTION:Преподаватель: Абина Ирина Анатол
+ ьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-практические-20260401-1000@perpl
+ exity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: практические
+DTSTART;TZID=Europe/Moscow:20260401T100000
+DTEND;TZID=Europe/Moscow:20260401T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-практические-20260415-1000@perpl
+ exity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: практические
+DTSTART;TZID=Europe/Moscow:20260415T100000
+DTEND;TZID=Europe/Moscow:20260415T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-практические-20260429-1000@perpl
+ exity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: практические
+DTSTART;TZID=Europe/Moscow:20260429T100000
+DTEND;TZID=Europe/Moscow:20260429T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-практические-20260513-1000@perpl
+ exity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: практические
+DTSTART;TZID=Europe/Moscow:20260513T100000
+DTEND;TZID=Europe/Moscow:20260513T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-практические-20260527-1000@perpl
+ exity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: практические
+DTSTART;TZID=Europe/Moscow:20260527T100000
+DTEND;TZID=Europe/Moscow:20260527T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260218-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260218T140000
+DTEND;TZID=Europe/Moscow:20260218T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260304-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260304T140000
+DTEND;TZID=Europe/Moscow:20260304T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260318-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260318T140000
+DTEND;TZID=Europe/Moscow:20260318T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260401-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260401T140000
+DTEND;TZID=Europe/Moscow:20260401T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260415-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260415T140000
+DTEND;TZID=Europe/Moscow:20260415T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260429-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260429T140000
+DTEND;TZID=Europe/Moscow:20260429T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260513-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260513T140000
+DTEND;TZID=Europe/Moscow:20260513T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260527-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260527T140000
+DTEND;TZID=Europe/Moscow:20260527T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:история-социальных-учений-лекции-прак
+ тич-20260610-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:История социальных учений: лекции, п
+ рактические
+DTSTART;TZID=Europe/Moscow:20260610T140000
+DTEND;TZID=Europe/Moscow:20260610T185000
+LOCATION:215
+DESCRIPTION:Преподаватель: Подъячев Кирилл Ви
+ кторович.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-лекции-20260211-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: лекции
+DTSTART;TZID=Europe/Moscow:20260211T140000
+DTEND;TZID=Europe/Moscow:20260211T171000
+LOCATION:215
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-лекции-20260225-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: лекции
+DTSTART;TZID=Europe/Moscow:20260225T140000
+DTEND;TZID=Europe/Moscow:20260225T171000
+LOCATION:215
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-лекции-20260311-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: лекции
+DTSTART;TZID=Europe/Moscow:20260311T140000
+DTEND;TZID=Europe/Moscow:20260311T171000
+LOCATION:215
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:культурология-лекции-20260325-1400@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Культурология: лекции
+DTSTART;TZID=Europe/Moscow:20260325T140000
+DTEND;TZID=Europe/Moscow:20260325T171000
+LOCATION:215
+DESCRIPTION:Преподаватель: Николаева Ульяна Г
+ енадьевна.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260212-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260212T100000
+DTEND;TZID=Europe/Moscow:20260212T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260219-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260219T100000
+DTEND;TZID=Europe/Moscow:20260219T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260226-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260226T100000
+DTEND;TZID=Europe/Moscow:20260226T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260305-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260305T100000
+DTEND;TZID=Europe/Moscow:20260305T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260312-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260312T100000
+DTEND;TZID=Europe/Moscow:20260312T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260319-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260319T100000
+DTEND;TZID=Europe/Moscow:20260319T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260326-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260326T100000
+DTEND;TZID=Europe/Moscow:20260326T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260402-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260402T100000
+DTEND;TZID=Europe/Moscow:20260402T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260409-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260409T100000
+DTEND;TZID=Europe/Moscow:20260409T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260416-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260416T100000
+DTEND;TZID=Europe/Moscow:20260416T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260423-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260423T100000
+DTEND;TZID=Europe/Moscow:20260423T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260430-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260430T100000
+DTEND;TZID=Europe/Moscow:20260430T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260507-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260507T100000
+DTEND;TZID=Europe/Moscow:20260507T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260514-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260514T100000
+DTEND;TZID=Europe/Moscow:20260514T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260521-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260521T100000
+DTEND;TZID=Europe/Moscow:20260521T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260528-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260528T100000
+DTEND;TZID=Europe/Moscow:20260528T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260604-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260604T100000
+DTEND;TZID=Europe/Moscow:20260604T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260611-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260611T100000
+DTEND;TZID=Europe/Moscow:20260611T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260618-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260618T100000
+DTEND;TZID=Europe/Moscow:20260618T113000
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260212-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260212T144500
+DTEND;TZID=Europe/Moscow:20260212T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260219-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260219T144500
+DTEND;TZID=Europe/Moscow:20260219T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260226-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260226T144500
+DTEND;TZID=Europe/Moscow:20260226T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260305-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260305T144500
+DTEND;TZID=Europe/Moscow:20260305T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260312-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260312T144500
+DTEND;TZID=Europe/Moscow:20260312T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260319-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260319T144500
+DTEND;TZID=Europe/Moscow:20260319T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260326-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260326T144500
+DTEND;TZID=Europe/Moscow:20260326T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260402-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260402T144500
+DTEND;TZID=Europe/Moscow:20260402T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260409-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260409T144500
+DTEND;TZID=Europe/Moscow:20260409T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260416-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260416T144500
+DTEND;TZID=Europe/Moscow:20260416T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260423-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260423T144500
+DTEND;TZID=Europe/Moscow:20260423T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260430-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260430T144500
+DTEND;TZID=Europe/Moscow:20260430T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260507-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260507T144500
+DTEND;TZID=Europe/Moscow:20260507T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260514-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260514T144500
+DTEND;TZID=Europe/Moscow:20260514T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260521-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260521T144500
+DTEND;TZID=Europe/Moscow:20260521T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260528-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260528T144500
+DTEND;TZID=Europe/Moscow:20260528T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260604-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260604T144500
+DTEND;TZID=Europe/Moscow:20260604T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260611-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260611T144500
+DTEND;TZID=Europe/Moscow:20260611T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:элективные-дисциплины-модули-по-физич
+ еск-20260618-1445@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Элективные дисциплины (модули) по фи
+ зической культуре и спорту
+DTSTART;TZID=Europe/Moscow:20260618T144500
+DTEND;TZID=Europe/Moscow:20260618T161500
+LOCATION:Спортивный комплекс
+DESCRIPTION:Преподаватель: Котов Юрий Владими
+ рович.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260213-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260213T100000
+DTEND;TZID=Europe/Moscow:20260213T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260220-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260220T100000
+DTEND;TZID=Europe/Moscow:20260220T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260227-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260227T100000
+DTEND;TZID=Europe/Moscow:20260227T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260306-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260306T100000
+DTEND;TZID=Europe/Moscow:20260306T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260313-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260313T100000
+DTEND;TZID=Europe/Moscow:20260313T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260320-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260320T100000
+DTEND;TZID=Europe/Moscow:20260320T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260327-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260327T100000
+DTEND;TZID=Europe/Moscow:20260327T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260403-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260403T100000
+DTEND;TZID=Europe/Moscow:20260403T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260410-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260410T100000
+DTEND;TZID=Europe/Moscow:20260410T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260417-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260417T100000
+DTEND;TZID=Europe/Moscow:20260417T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260424-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260424T100000
+DTEND;TZID=Europe/Moscow:20260424T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260508-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260508T100000
+DTEND;TZID=Europe/Moscow:20260508T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260515-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260515T100000
+DTEND;TZID=Europe/Moscow:20260515T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260522-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260522T100000
+DTEND;TZID=Europe/Moscow:20260522T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260529-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260529T100000
+DTEND;TZID=Europe/Moscow:20260529T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260605-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260605T100000
+DTEND;TZID=Europe/Moscow:20260605T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:современные-информационные-технологи
+ и-в--20260619-1000@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Современные информационные техноло
+ гии в социальных науках: лекции, практич
+ еские
+DTSTART;TZID=Europe/Moscow:20260619T100000
+DTEND;TZID=Europe/Moscow:20260619T131000
+LOCATION:218
+DESCRIPTION:Преподаватель: Чурсина Анна Вадим
+ овна.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260213-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260213T150000
+DTEND;TZID=Europe/Moscow:20260213T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260220-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260220T150000
+DTEND;TZID=Europe/Moscow:20260220T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260227-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260227T150000
+DTEND;TZID=Europe/Moscow:20260227T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260306-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260306T150000
+DTEND;TZID=Europe/Moscow:20260306T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260313-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260313T150000
+DTEND;TZID=Europe/Moscow:20260313T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260320-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260320T150000
+DTEND;TZID=Europe/Moscow:20260320T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260327-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260327T150000
+DTEND;TZID=Europe/Moscow:20260327T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260403-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260403T150000
+DTEND;TZID=Europe/Moscow:20260403T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260410-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260410T150000
+DTEND;TZID=Europe/Moscow:20260410T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260417-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260417T150000
+DTEND;TZID=Europe/Moscow:20260417T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260424-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260424T150000
+DTEND;TZID=Europe/Moscow:20260424T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260508-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260508T150000
+DTEND;TZID=Europe/Moscow:20260508T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260515-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260515T150000
+DTEND;TZID=Europe/Moscow:20260515T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260522-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260522T150000
+DTEND;TZID=Europe/Moscow:20260522T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260529-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260529T150000
+DTEND;TZID=Europe/Moscow:20260529T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260605-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260605T150000
+DTEND;TZID=Europe/Moscow:20260605T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+BEGIN:VEVENT
+UID:основы-социологии-лекции-практические
+ -20260619-1500@perplexity
+DTSTAMP:20260208T083600Z
+SUMMARY:Основы социологии: лекции, практичес
+ кие
+DTSTART;TZID=Europe/Moscow:20260619T150000
+DTEND;TZID=Europe/Moscow:20260619T181000
+LOCATION:ZOOM
+DESCRIPTION:Преподаватель: Коротаев Сергей Ал
+ ександрович.
+END:VEVENT
+END:VCALENDAR
