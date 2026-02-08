@@ -1353,6 +1353,12 @@ async def list_assistants(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(text)
 
 # === ГЛАВНАЯ ФУНКЦИЯ ===
+async def post_init(application):
+    """Инициализация после запуска бота"""
+    # Запускаем планировщик
+    asyncio.create_task(scheduler())
+    logging.info("✅ Планировщик запущен!")
+
 def main():
     global user_settings, application, assistants, subject_renames, schedule_edits
 
@@ -1365,7 +1371,7 @@ def main():
     logging.info("🤖 Запуск бота...")
 
     # Создаем приложение
-    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    application = ApplicationBuilder().token(BOT_TOKEN).post_init(post_init).build()
 
     # Добавляем обработчики команд
     application.add_handler(CommandHandler("start", start))
@@ -1381,9 +1387,6 @@ def main():
     # Добавляем обработчик текстовых сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    # Запускаем планировщик в отдельной задаче
-    asyncio.create_task(scheduler())
-
     logging.info("✅ Бот успешно запущен!")
     
     # Запускаем polling
@@ -1391,3 +1394,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
