@@ -251,32 +251,25 @@ def apply_schedule_edits(course, stream, events):
         event_date = event["start"].date().isoformat()
         event_key = f"{event['original_summary']}[{event['start'].strftime('%H:%M')}]"
 
-        # Проверяем, есть ли правка для этого события
         if event_date in stream_edits and event_key in stream_edits[event_date]:
             edit = stream_edits[event_date][event_key]
 
             if edit.get("deleted", False):
-                # Пропускаем удаленные события
                 continue
             elif "new_summary" in edit:
-                # Применяем изменения к событию
                 edited_event = event.copy()
                 edited_event["summary"] = edit["new_summary"]
                 if "new_desc" in edit:
                     edited_event["desc"] = edit["new_desc"]
                 edited_events.append(edited_event)
             else:
-                # Оставляем событие без изменений
                 edited_events.append(event)
         else:
-            # Оставляем событие без изменений
             edited_events.append(event)
 
-    # Добавляем новые события
     for date_str, date_edits in stream_edits.items():
         for event_key, edit in date_edits.items():
             if edit.get("new", False) and "start_time" in edit:
-                # Это новое событие
                 try:
                     start_dt = datetime.datetime.strptime(f"{date_str} {edit['start_time']}", "%Y-%m-%d %H:%M")
                     end_dt = datetime.datetime.strptime(f"{date_str} {edit['end_time']}", "%Y-%m-%d %H:%M")
@@ -297,7 +290,6 @@ def apply_schedule_edits(course, stream, events):
 
     return edited_events
 
-# === ПАРСИНГ ICS ИЗ GitHub ===
 def load_events_from_github(course, stream):
     """Загрузка событий с учетом курса и потока"""
     cache_key = f"{course}_{stream}"
@@ -316,7 +308,6 @@ def load_events_from_github(course, stream):
         response.raise_for_status()
         data = response.text
 
-        # Разбиваем на события
         event_blocks = data.split('BEGIN:VEVENT')
 
         for block in event_blocks:
@@ -324,7 +315,6 @@ def load_events_from_github(course, stream):
                 continue
 
             try:
-                # Извлекаем данные из блока события
                 summary_match = re.search(r'SUMMARY:(.+?)(?:\n|$)', block)
                 dtstart_match = re.search(r'DTSTART(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
                 dtend_match = re.search(r'DTEND(?:;VALUE=DATE-TIME)?(?:;TZID=Europe/Moscow)?:(\d{8}T\d{6})', block)
@@ -334,18 +324,15 @@ def load_events_from_github(course, stream):
                     continue
 
                 original_summary = summary_match.group(1).strip()
-                # Применяем переименование если есть
                 summary = get_display_subject_name(course, stream, original_summary)
 
                 start_str = dtstart_match.group(1)
                 end_str = dtend_match.group(1)
                 description = description_match.group(1).strip() if description_match else ""
 
-                # Парсим даты
                 start_dt = datetime.datetime.strptime(start_str, '%Y%m%dT%H%M%S')
                 end_dt = datetime.datetime.strptime(end_str, '%Y%m%dT%H%M%S')
 
-                # Локализуем в московское время
                 start_dt = TIMEZONE.localize(start_dt)
                 end_dt = TIMEZONE.localize(end_dt)
 
@@ -368,7 +355,6 @@ def load_events_from_github(course, stream):
         logging.error(f"Ошибка при загрузке файла с GitHub: {e}")
         return []
 
-# Получение уникальных предметов из расписания
 def get_unique_subjects(course, stream):
     events = load_events_from_github(course, stream)
     subjects = set()
@@ -402,12 +388,9 @@ def is_online_class(ev):
         "конференция", "conference", "meet", "meeting", "call"
     ]
 
-    # Проверяем наличие ключевых слов в описании или названии
     desc_online = any(keyword in desc for keyword in online_keywords)
     summary_online = any(keyword in summary for keyword in online_keywords)
 
-    # Теперь только если явно указано, что онлайн - возвращаем True
-    # По умолчанию все оффлайн
     return desc_online or summary_online
 
 def has_only_lunch_break(events, date):
@@ -424,7 +407,6 @@ def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
 
-    # Улучшенный парсинг преподавателя
     teacher_patterns = [
         r"Преподаватель:\s*([^\n\r]+)",
         r"Преподаватель\s*:\s*([^\n\r]+)",
@@ -438,7 +420,6 @@ def format_event(ev, course, stream):
             teacher = teacher_match.group(1).strip()
             break
 
-    # Улучшенный парсинг аудитории
     room_patterns = [
         r"Аудитория:\s*([^\n\r]+)",
         r"Аудитория\s*:\s*([^\n\r]+)",
@@ -454,7 +435,6 @@ def format_event(ev, course, stream):
             room = room_match.group(1).strip()
             break
 
-    # Если аудитория не найдена стандартными способами, ищем ИНИОН
     if not room:
         inion_patterns = [
             r"ИНИОН",
@@ -468,20 +448,16 @@ def format_event(ev, course, stream):
                 room = "ИНИОН"
                 break
 
-    # Если преподаватель не найден стандартными способами, ищем в описании
     if not teacher:
-        # Ищем ФИО преподавателя (три слова с заглавными буквами)
         name_pattern = r"([А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+)"
         name_match = re.search(name_pattern, desc)
         if name_match:
             teacher = name_match.group(1).strip()
 
-    # ИКОНКА НОУТБУКА ТОЛЬКО ЕСЛИ ЯВНО УКАЗАНО, ЧТО ОНЛАЙН
     online_marker = " 💻" if is_online_class(ev) else ""
 
     line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')} {ev['summary']}{online_marker}"
 
-    # Добавляем информацию о преподавателе и аудитории
     if teacher or room:
         line += "\n"
         if teacher:
@@ -491,7 +467,6 @@ def format_event(ev, course, stream):
                 line += " | "
             line += f"  🏫 {room}"
 
-    # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
     hw_key = f"{ev['original_summary']}|{date_str}"
     homeworks = load_homeworks(course, stream)
@@ -503,16 +478,14 @@ def format_event(ev, course, stream):
 def events_for_day(events, date, english_time=None):
     day_events = [e for e in events if e["start"].date() == date]
 
-    # Добавляем английский язык в четверг в выбранное время
-    if date.weekday() == 3 and english_time:  # 3 = четверг
+    if date.weekday() == 3 and english_time:
         if english_time == "morning":
             start_time = TIMEZONE.localize(datetime.datetime.combine(date, datetime.time(9, 0)))
             end_time = TIMEZONE.localize(datetime.datetime.combine(date, datetime.time(12, 10)))
-        else:  # afternoon
+        else:
             start_time = TIMEZONE.localize(datetime.datetime.combine(date, datetime.time(14, 0)))
             end_time = TIMEZONE.localize(datetime.datetime.combine(date, datetime.time(17, 10)))
 
-        # Проверяем, нет ли уже английского в расписании
         has_english = any("английский" in e["summary"].lower() for e in day_events)
         if not has_english:
             english_event = {
@@ -528,13 +501,11 @@ def events_for_day(events, date, english_time=None):
 
 def format_day(date, events, course, stream, english_time=None, is_tomorrow=False):
     """Форматирование дня с учетом курса и потока"""
-    # Проверяем, есть ли в этот день только обеденные перерывы
     if has_only_lunch_break(events, date):
         return f"{date.strftime('%A, %d %B')} — занятий нет\n"
 
     evs = events_for_day(events, date, english_time)
 
-    # Русские названия дней недели
     days_ru = {
         'Monday': 'Понедельник',
         'Tuesday': 'Вторник',
@@ -558,10 +529,10 @@ def format_day(date, events, course, stream, english_time=None, is_tomorrow=Fals
     month_ru = months_ru.get(month_en, month_en)
     date_str = date.strftime(f"{day_ru}, %d {month_ru}")
 
-    # Добавляем пометку "Завтра" если нужно
-    prefix = "📅" if is_tomorrow else "📅"
+    prefix = "📅"
     if is_tomorrow:
         date_str = f"Завтра, {date_str}"
+
 
     if not evs:
         return f"{prefix} {date_str} — занятий нет\n"
@@ -587,13 +558,11 @@ def get_user_stats():
     """Получает статистику пользователей"""
     total_users = len(user_settings)
 
-    # Статистика по курсам и потокам
     course_stats = {}
     reminders_stats = {"enabled": 0, "disabled": 0}
     english_time_stats = {"morning": 0, "afternoon": 0, "none": 0}
 
     for user_id, settings in user_settings.items():
-        # Статистика курсов и потоков
         course = settings.get('course')
         stream = settings.get('stream', '1')
 
@@ -605,13 +574,11 @@ def get_user_stats():
                 course_stats[course][stream] = 0
             course_stats[course][stream] += 1
 
-        # Статистика напоминаний
         if settings.get('reminders', False):
             reminders_stats["enabled"] += 1
         else:
             reminders_stats["disabled"] += 1
 
-        # Статистика времени английского
         english_time = settings.get('english_time')
         if english_time == "morning":
             english_time_stats["morning"] += 1
@@ -691,12 +658,10 @@ async def scheduler():
     while True:
         now = datetime.datetime.now(TIMEZONE)
 
-        # Проверяем, 20:00 ли для напоминаний
         if now.hour == 20 and now.minute == 0:
             await send_homework_reminders()
             await asyncio.sleep(60)
 
-        # Проверяем, 09:00 ли для обновлений
         elif now.hour == 9 and now.minute == 0:
             await check_for_updates()
             await asyncio.sleep(60)
@@ -733,7 +698,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def select_stream(update: Update, context: ContextTypes.DEFAULT_TYPE, course):
     """Выбор потока (только для 1 курса)"""
     if course != "1":
-        # Для других курсов сразу переходим к выбору времени английского с потоком 1
         await select_english_time(update, context, course, "1")
         return
 
@@ -756,3 +720,674 @@ async def select_stream(update: Update, context: ContextTypes.DEFAULT_TYPE, cour
             text="Выбери тип расписания:",
             reply_markup=reply_markup
         )
+
+async def select_english_time(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream):
+    keyboard = [
+        [InlineKeyboardButton("🕘 9:00-12:10", callback_data=f"english_morning_{course}_{stream}")],
+        [InlineKeyboardButton("🕑 14:00-17:10", callback_data=f"english_afternoon_{course}_{stream}")],
+        [InlineKeyboardButton("❌ Без английского", callback_data=f"english_none_{course}_{stream}")],
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    if update.callback_query:
+        await safe_edit_message(
+            update,
+            text="Выбери время для английского в четверг:",
+            reply_markup=reply_markup
+        )
+    else:
+        await update.message.reply_text(
+            text="Выбери время для английского в четверг:",
+            reply_markup=reply_markup
+        )
+
+async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, course, stream, english_time=None):
+    try:
+        events = load_events_from_github(course, stream)
+
+        user_id = str(update.effective_user.id)
+        if user_id not in user_settings:
+            user_settings[user_id] = {}
+
+        user_settings[user_id]['course'] = course
+        user_settings[user_id]['stream'] = stream
+        if english_time:
+            user_settings[user_id]['english_time'] = english_time
+        save_user_settings(user_settings)
+
+        keyboard = [
+            [InlineKeyboardButton("📅 Сегодня", callback_data=f"today_{course}_{stream}"),
+             InlineKeyboardButton("📅 Завтра", callback_data=f"tomorrow_{course}_{stream}")],
+            [InlineKeyboardButton("📊 Эта неделя", callback_data=f"this_week_{course}_{stream}"),
+             InlineKeyboardButton("📊 След. неделя", callback_data=f"next_week_{course}_{stream}")],
+            [InlineKeyboardButton("🔔 Настройка напоминаний", callback_data=f"reminders_settings_{course}_{stream}")],
+            [InlineKeyboardButton("🔄 Обновить расписание", callback_data=f"refresh_{course}_{stream}")],
+        ]
+
+        if can_manage_homework(update):
+            keyboard.append([InlineKeyboardButton("📝 Управление ДЗ", callback_data=f"manage_hw_{course}_{stream}")])
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        stream_display = STREAM_NAMES.get(stream, stream) if course == "1" else ""
+        course_text = f"{course} курс"
+        if course == "1":
+            course_text += f", {stream_display}"
+
+        english_text = ""
+        if english_time == "morning":
+            english_text = "\n💡 Английский: 9:00-12:10"
+        elif english_time == "afternoon":
+            english_text = "\n💡 Английский: 14:00-17:10"
+
+        reminders_status = "🔔" if user_settings[user_id].get('reminders', False) else "🔕"
+        reminders_time = user_settings[user_id].get('reminders_time', '20:00')
+        reminders_text = f"\n{reminders_status} Напоминания: {'вкл' if user_settings[user_id].get('reminders', False) else 'выкл'}"
+        if user_settings[user_id].get('reminders', False):
+            reminders_text += f" ({reminders_time})"
+
+        message_text = f"Выбран {course_text}{english_text}{reminders_text}\nВыбери действие:"
+
+        if update.callback_query:
+            try:
+                await safe_edit_message(
+                    update,
+                    text=message_text,
+                    reply_markup=reply_markup
+                )
+            except BadRequest as e:
+                if "Message is not modified" not in str(e):
+                    raise
+        else:
+            await update.message.reply_text(
+                text=message_text,
+                reply_markup=reply_markup
+            )
+
+    except Exception as e:
+        logging.error(f"Ошибка в show_main_menu: {e}")
+
+async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+
+    data = query.data
+    user_id = str(update.effective_user.id)
+
+    # === ОБРАБОТКА ВЫБОРА КУРСА ===
+    if data.startswith('select_course_'):
+        course = data.split('_')[-1]
+        context.user_data['course'] = course
+        await select_stream(update, context, course)
+
+    # === ОБРАБОТКА ВЫБОРА ПОТОКА (ИСПРАВЛЕНО ДЛЯ НОВЫХ ТИПОВ) ===
+    elif data.startswith('select_stream_'):
+        parts = data.split('_')
+        if len(parts) >= 4:
+            stream = parts[2]  # sdi, theory, region1, region2
+            course = parts[3]
+            context.user_data['stream'] = stream
+            await select_english_time(update, context, course, stream)
+        else:
+            await query.answer("Ошибка: неверный формат данных")
+            return
+
+    # === ОБРАБОТКА ВЫБОРА ВРЕМЕНИ АНГЛИЙСКОГО ===
+    elif data.startswith('english_'):
+        parts = data.split('_')
+        if len(parts) >= 4:
+            english_time = parts[1]  # morning, afternoon, none
+            course = parts[2]
+            stream = parts[3]
+            
+            if english_time == "none":
+                english_time = None
+            
+            await show_main_menu(update, context, course, stream, english_time)
+        else:
+            await query.answer("Ошибка: неверный формат данных")
+            return
+
+    # === ОБРАБОТКА ПРОСМОТРА РАСПИСАНИЯ ===
+    elif data.startswith('today_') or data.startswith('tomorrow_'):
+        parts = data.split('_')
+        action = parts[0]
+        course = parts[1]
+        stream = parts[2]
+
+        settings = user_settings.get(user_id, {})
+        english_time = settings.get('english_time')
+
+        events = load_events_from_github(course, stream)
+        today = datetime.datetime.now(TIMEZONE).date()
+
+        if action == "today":
+            text = format_day(today, events, course, stream, english_time)
+        else:  # tomorrow
+            tomorrow = today + datetime.timedelta(days=1)
+            text = format_day(tomorrow, events, course, stream, english_time, is_tomorrow=True)
+
+        keyboard = [[InlineKeyboardButton("⬅️ Назад", callback_data=f"back_to_menu_{course}_{stream}")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ОБРАБОТКА ПРОСМОТРА НЕДЕЛИ ===
+    elif data.startswith('this_week_') or data.startswith('next_week_'):
+        parts = data.split('_')
+        if parts[0] == "this":
+            action = "this_week"
+            course = parts[2]
+            stream = parts[3]
+        else:
+            action = "next_week"
+            course = parts[2]
+            stream = parts[3]
+
+        settings = user_settings.get(user_id, {})
+        english_time = settings.get('english_time')
+
+        events = load_events_from_github(course, stream)
+        today = datetime.datetime.now(TIMEZONE).date()
+
+        if action == "this_week":
+            start_date, end_date = get_week_range(today)
+        else:
+            next_monday = today + datetime.timedelta(days=(7 - today.weekday()))
+            start_date, end_date = get_week_range(next_monday)
+
+        text = ""
+        current_date = start_date
+        while current_date <= end_date:
+            text += format_day(current_date, events, course, stream, english_time)
+            current_date += datetime.timedelta(days=1)
+
+        keyboard = [[InlineKeyboardButton("⬅️ Назад", callback_data=f"back_to_menu_{course}_{stream}")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        try:
+            await safe_edit_message(update, text=text, reply_markup=reply_markup)
+        except BadRequest as e:
+            if "message is too long" in str(e).lower():
+                parts_list = [text[i:i+4000] for i in range(0, len(text), 4000)]
+                for i, part in enumerate(parts_list):
+                    if i == len(parts_list) - 1:
+                        await query.message.reply_text(part, reply_markup=reply_markup)
+                    else:
+                        await query.message.reply_text(part)
+            else:
+                raise
+
+    # === ОБНОВЛЕНИЕ РАСПИСАНИЯ ===
+    elif data.startswith('refresh_'):
+        parts = data.split('_')
+        course = parts[1]
+        stream = parts[2]
+
+        cache_key = f"{course}_{stream}"
+        if cache_key in events_cache:
+            del events_cache[cache_key]
+
+        events = load_events_from_github(course, stream)
+
+        await query.answer("✅ Расписание обновлено!")
+        
+        settings = user_settings.get(user_id, {})
+        english_time = settings.get('english_time')
+        await show_main_menu(update, context, course, stream, english_time)
+
+    # === ВОЗВРАТ В ГЛАВНОЕ МЕНЮ ===
+    elif data.startswith('back_to_menu_'):
+        parts = data.split('_')
+        course = parts[3]
+        stream = parts[4]
+
+        settings = user_settings.get(user_id, {})
+        english_time = settings.get('english_time')
+        await show_main_menu(update, context, course, stream, english_time)
+
+    # === НАСТРОЙКА НАПОМИНАНИЙ ===
+    elif data.startswith('reminders_settings_'):
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        settings = user_settings.get(user_id, {})
+        reminders_enabled = settings.get('reminders', False)
+
+        status_text = "включены ✅" if reminders_enabled else "выключены ❌"
+
+        keyboard = [
+            [InlineKeyboardButton(
+                "🔔 Включить" if not reminders_enabled else "🔕 Выключить",
+                callback_data=f"toggle_reminders_{course}_{stream}"
+            )],
+            [InlineKeyboardButton("⬅️ Назад", callback_data=f"back_to_menu_{course}_{stream}")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        text = f"⚙️ Настройка напоминаний\n\nНапоминания о домашних заданиях {status_text}\n\n"
+        text += "Напоминания приходят каждый день в 20:00 с информацией о ДЗ на завтра."
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ПЕРЕКЛЮЧЕНИЕ НАПОМИНАНИЙ ===
+    elif data.startswith('toggle_reminders_'):
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        if user_id not in user_settings:
+            user_settings[user_id] = {}
+
+        current_status = user_settings[user_id].get('reminders', False)
+        user_settings[user_id]['reminders'] = not current_status
+        save_user_settings(user_settings)
+
+        new_status = user_settings[user_id]['reminders']
+        status_text = "включены ✅" if new_status else "выключены ❌"
+
+        keyboard = [
+            [InlineKeyboardButton(
+                "🔔 Включить" if not new_status else "🔕 Выключить",
+                callback_data=f"toggle_reminders_{course}_{stream}"
+            )],
+            [InlineKeyboardButton("⬅️ Назад", callback_data=f"back_to_menu_{course}_{stream}")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        text = f"⚙️ Настройка напоминаний\n\nНапоминания о домашних заданиях {status_text}\n\n"
+        text += "Напоминания приходят каждый день в 20:00 с информацией о ДЗ на завтра."
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+        await query.answer(f"Напоминания {'включены' if new_status else 'выключены'}!")
+
+    # === УПРАВЛЕНИЕ ДОМАШНИМИ ЗАДАНИЯМИ ===
+    elif data.startswith('manage_hw_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        keyboard = [
+            [InlineKeyboardButton("➕ Добавить ДЗ", callback_data=f"add_hw_{course}_{stream}")],
+            [InlineKeyboardButton("📋 Список ДЗ", callback_data=f"list_hw_{course}_{stream}")],
+            [InlineKeyboardButton("🗑️ Удалить ДЗ", callback_data=f"delete_hw_{course}_{stream}")],
+            [InlineKeyboardButton("⬅️ Назад", callback_data=f"back_to_menu_{course}_{stream}")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        text = "📝 Управление домашними заданиями\n\nВыбери действие:"
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ДОБАВЛЕНИЕ ДЗ - ШАГ 1: ВЫБОР ПРЕДМЕТА ===
+    elif data.startswith('add_hw_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        subjects = get_unique_subjects(course, stream)
+
+        keyboard = []
+        for subject in subjects:
+            keyboard.append([InlineKeyboardButton(
+                subject,
+                callback_data=f"hw_select_subject_{course}_{stream}_{subject}"
+            )])
+        keyboard.append([InlineKeyboardButton("⬅️ Назад", callback_data=f"manage_hw_{course}_{stream}")])
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        text = "Выбери предмет для добавления ДЗ:"
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ДОБАВЛЕНИЕ ДЗ - ШАГ 2: ВЫБОР ДАТЫ ===
+    elif data.startswith('hw_select_subject_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[3]
+        stream = parts[4]
+        subject = '_'.join(parts[5:])
+
+        context.user_data['hw_subject'] = subject
+        context.user_data['hw_course'] = course
+        context.user_data['hw_stream'] = stream
+
+        dates = get_subject_dates(course, stream, subject)
+        future_dates = [d for d in dates if d >= datetime.datetime.now(TIMEZONE).date()]
+
+        keyboard = []
+        for date in future_dates[:10]:
+            date_str = date.strftime("%d.%m.%Y")
+            keyboard.append([InlineKeyboardButton(
+                date_str,
+                callback_data=f"hw_select_date_{course}_{stream}_{date.isoformat()}"
+            )])
+        keyboard.append([InlineKeyboardButton("⬅️ Назад", callback_data=f"add_hw_{course}_{stream}")])
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        text = f"Выбери дату занятия для предмета '{subject}':"
+
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ДОБАВЛЕНИЕ ДЗ - ШАГ 3: ВВОД ТЕКСТА ===
+    elif data.startswith('hw_select_date_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[3]
+        stream = parts[4]
+        date_str = parts[5]
+
+        context.user_data['hw_date'] = date_str
+        context.user_data['hw_course'] = course
+        context.user_data['hw_stream'] = stream
+        context.user_data['awaiting_hw_text'] = True
+
+        await query.message.reply_text(
+            "📝 Введи текст домашнего задания:\n\n"
+            "(Например: 'Прочитать главу 5, ответить на вопросы 1-10')"
+        )
+
+    # === ПРОСМОТР СПИСКА ДЗ ===
+    elif data.startswith('list_hw_'):
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        future_hws = get_future_homeworks(course, stream)
+
+        if not future_hws:
+            text = "📋 Список домашних заданий пуст"
+        else:
+            text = "📋 Список домашних заданий:\n\n"
+            for hw_key, hw_text in sorted(future_hws.items()):
+                parts = hw_key.split('|')
+                subject = parts[0]
+                date_str = parts[1]
+                date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                date_formatted = date_obj.strftime("%d.%m.%Y")
+                text += f"📖 {subject} ({date_formatted}):\n{hw_text}\n\n"
+
+        keyboard = [[InlineKeyboardButton("⬅️ Назад", callback_data=f"manage_hw_{course}_{stream}")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        try:
+            await safe_edit_message(update, text=text, reply_markup=reply_markup)
+        except BadRequest as e:
+            if "message is too long" in str(e).lower():
+                await query.message.reply_text(text, reply_markup=reply_markup)
+            else:
+                raise
+
+    # === УДАЛЕНИЕ ДЗ ===
+    elif data.startswith('delete_hw_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[2]
+        stream = parts[3]
+
+        future_hws = get_future_homeworks(course, stream)
+
+        if not future_hws:
+            text = "📋 Нет домашних заданий для удаления"
+            keyboard = [[InlineKeyboardButton("⬅️ Назад", callback_data=f"manage_hw_{course}_{stream}")]]
+        else:
+            text = "Выбери ДЗ для удаления:"
+            keyboard = []
+            for hw_key in sorted(future_hws.keys()):
+                parts = hw_key.split('|')
+                subject = parts[0]
+                date_str = parts[1]
+                date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                date_formatted = date_obj.strftime("%d.%m.%Y")
+                
+                button_text = f"{subject} ({date_formatted})"
+                callback_data = f"confirm_delete_hw_{course}_{stream}_{hw_key}"
+                
+                keyboard.append([InlineKeyboardButton(button_text, callback_data=callback_data)])
+            
+            keyboard.append([InlineKeyboardButton("⬅️ Назад", callback_data=f"manage_hw_{course}_{stream}")])
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await safe_edit_message(update, text=text, reply_markup=reply_markup)
+
+    # === ПОДТВЕРЖДЕНИЕ УДАЛЕНИЯ ДЗ ===
+    elif data.startswith('confirm_delete_hw_'):
+        if not can_manage_homework(update):
+            await query.answer("❌ У вас нет прав для управления ДЗ")
+            return
+
+        parts = data.split('_')
+        course = parts[3]
+        stream = parts[4]
+        hw_key = '_'.join(parts[5:])
+
+        homeworks = load_homeworks(course, stream)
+        if hw_key in homeworks:
+            del homeworks[hw_key]
+            save_homeworks(course, stream, homeworks)
+            await query.answer("✅ Домашнее задание удалено!")
+        else:
+            await query.answer("❌ Домашнее задание не найдено")
+
+        await handle_query(update, context)
+
+# === ОБРАБОТКА ТЕКСТОВЫХ СООБЩЕНИЙ ===
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = str(update.effective_user.id)
+
+    # Обработка добавления ДЗ
+    if context.user_data.get('awaiting_hw_text'):
+        if not can_manage_homework(update):
+            await update.message.reply_text("❌ У вас нет прав для управления ДЗ")
+            return
+
+        hw_text = update.message.text
+        subject = context.user_data.get('hw_subject')
+        date_str = context.user_data.get('hw_date')
+        course = context.user_data.get('hw_course')
+        stream = context.user_data.get('hw_stream')
+
+        original_subject = get_original_subject_name(course, stream, subject)
+        hw_key = f"{original_subject}|{date_str}"
+
+        homeworks = load_homeworks(course, stream)
+        homeworks[hw_key] = hw_text
+        save_homeworks(course, stream, homeworks)
+
+        context.user_data['awaiting_hw_text'] = False
+
+        date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+        date_formatted = date_obj.strftime("%d.%m.%Y")
+
+        await update.message.reply_text(
+            f"✅ Домашнее задание добавлено!\n\n"
+            f"📖 {subject}\n"
+            f"📅 {date_formatted}\n"
+            f"📝 {hw_text}"
+        )
+
+        settings = user_settings.get(user_id, {})
+        english_time = settings.get('english_time')
+        await show_main_menu(update, context, course, stream, english_time)
+
+# === АДМИНСКИЕ КОМАНДЫ ===
+async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+
+    stats_data = get_user_stats()
+
+    text = "📊 Статистика бота\n\n"
+    text += f"👥 Всего пользователей: {stats_data['total_users']}\n\n"
+
+    text += "📚 По курсам и потокам:\n"
+    for course, streams in sorted(stats_data['course_stats'].items()):
+        for stream, count in sorted(streams.items()):
+            stream_name = STREAM_NAMES.get(stream, stream)
+            if course == "1":
+                text += f"  • {course} курс, {stream_name}: {count}\n"
+            else:
+                text += f"  • {course} курс: {count}\n"
+
+    text += f"\n🔔 Напоминания:\n"
+    text += f"  • Включены: {stats_data['reminders_stats']['enabled']}\n"
+    text += f"  • Выключены: {stats_data['reminders_stats']['disabled']}\n"
+
+    text += f"\n⏰ Английский язык:\n"
+    text += f"  • Утро: {stats_data['english_time_stats']['morning']}\n"
+    text += f"  • День: {stats_data['english_time_stats']['afternoon']}\n"
+    text += f"  • Не выбрано: {stats_data['english_time_stats']['none']}\n"
+
+    await update.message.reply_text(text)
+
+async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+
+    if not context.args:
+        await update.message.reply_text(
+            "Использование: /broadcast <сообщение>\n"
+            "Пример: /broadcast Привет всем!"
+        )
+        return
+
+    message_text = ' '.join(context.args)
+    
+    success_count = 0
+    fail_count = 0
+
+    for user_id in user_settings.keys():
+        try:
+            await context.bot.send_message(chat_id=user_id, text=message_text)
+            success_count += 1
+            await asyncio.sleep(0.05)
+        except Exception as e:
+            logging.error(f"Ошибка отправки сообщения пользователю {user_id}: {e}")
+            fail_count += 1
+
+    await update.message.reply_text(
+        f"✅ Рассылка завершена!\n"
+        f"📤 Отправлено: {success_count}\n"
+        f"❌ Ошибок: {fail_count}"
+    )
+
+async def add_assistant(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+
+    if not context.args:
+        await update.message.reply_text(
+            "Использование: /add_assistant <username>\n"
+            "Пример: /add_assistant johndoe"
+        )
+        return
+
+    username = context.args[0].replace('@', '')
+    
+    if username in assistants:
+        await update.message.reply_text(f"❌ Пользователь @{username} уже является помощником")
+        return
+
+    assistants.add(username)
+    save_assistants()
+
+    await update.message.reply_text(f"✅ Пользователь @{username} добавлен в помощники!")
+
+async def remove_assistant(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+
+    if not context.args:
+        await update.message.reply_text(
+            "Использование: /remove_assistant <username>\n"
+            "Пример: /remove_assistant johndoe"
+        )
+        return
+
+    username = context.args[0].replace('@', '')
+    
+    if username not in assistants:
+        await update.message.reply_text(f"❌ Пользователь @{username} не является помощником")
+        return
+
+    assistants.remove(username)
+    save_assistants()
+
+    await update.message.reply_text(f"✅ Пользователь @{username} удален из помощников!")
+
+async def list_assistants(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+
+    if not assistants:
+        await update.message.reply_text("📋 Список помощников пуст")
+        return
+
+    text = "📋 Список помощников:\n\n"
+    for username in sorted(assistants):
+        text += f"• @{username}\n"
+
+    await update.message.reply_text(text)
+
+# === ГЛАВНАЯ ФУНКЦИЯ ===
+def main():
+    global user_settings, application, assistants, subject_renames, schedule_edits
+
+    # Загружаем данные
+    user_settings = load_user_settings()
+    assistants = load_assistants()
+    subject_renames = load_subject_renames()
+    schedule_edits = load_schedule_edits()
+
+    logging.info("🤖 Запуск бота...")
+
+    # Создаем приложение
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
+
+    # Добавляем обработчики команд
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("stats", stats))
+    application.add_handler(CommandHandler("broadcast", broadcast))
+    application.add_handler(CommandHandler("add_assistant", add_assistant))
+    application.add_handler(CommandHandler("remove_assistant", remove_assistant))
+    application.add_handler(CommandHandler("list_assistants", list_assistants))
+
+    # Добавляем обработчики callback
+    application.add_handler(CallbackQueryHandler(handle_query))
+
+    # Добавляем обработчик текстовых сообщений
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+    # Запускаем планировщик в отдельной задаче
+    asyncio.create_task(scheduler())
+
+    logging.info("✅ Бот успешно запущен!")
+    
+    # Запускаем polling
+    application.run_polling()
+
+if __name__ == '__main__':
+    main()
