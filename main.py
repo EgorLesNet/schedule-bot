@@ -407,6 +407,7 @@ def format_event(ev, course, stream):
     desc = ev["desc"]
     teacher, room = "", ""
 
+    # Улучшенный парсинг преподавателя
     teacher_patterns = [
         r"Преподаватель:\s*([^\n\r]+)",
         r"Преподаватель\s*:\s*([^\n\r]+)",
@@ -420,6 +421,7 @@ def format_event(ev, course, stream):
             teacher = teacher_match.group(1).strip()
             break
 
+    # Улучшенный парсинг аудитории
     room_patterns = [
         r"Аудитория:\s*([^\n\r]+)",
         r"Аудитория\s*:\s*([^\n\r]+)",
@@ -435,29 +437,39 @@ def format_event(ev, course, stream):
             room = room_match.group(1).strip()
             break
 
+    # Если аудитория не найдена стандартными способами, ищем специфические места
     if not room:
-        inion_patterns = [
-            r"ИНИОН",
-            r"INION",
-            r"инион",
-            r"inion"
-        ]
+        # Ищем ИНИОН
+        if re.search(r"ИНИОН|INION", desc, re.IGNORECASE):
+            room = "ИНИОН"
+        # Ищем Марон
+        elif re.search(r"марон|мар\s*он", desc, re.IGNORECASE):
+            room = "Марон"
+        # Ищем номера аудиторий (218, 220 и т.д.)
+        elif re.search(r"\b\d{3}\b", desc):
+            room_match = re.search(r"\b(\d{3})\b", desc)
+            if room_match:
+                room = room_match.group(1)
+        # Ищем двузначные аудитории с контекстом
+        elif re.search(r"(?:ауд|аудитория|room|зал|каб|кабинет)[\s:]*(\d{2,3})", desc, re.IGNORECASE):
+            room_match = re.search(r"(?:ауд|аудитория|room|зал|каб|кабинет)[\s:]*(\d{2,3})", desc, re.IGNORECASE)
+            if room_match:
+                room = room_match.group(1)
 
-        for pattern in inion_patterns:
-            if re.search(pattern, desc, re.IGNORECASE):
-                room = "ИНИОН"
-                break
-
+    # Если преподаватель не найден стандартными способами, ищем в описании
     if not teacher:
+        # Ищем ФИО преподавателя (три слова с заглавными буквами)
         name_pattern = r"([А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+\s+[А-ЯЁ][а-яё]+)"
         name_match = re.search(name_pattern, desc)
         if name_match:
             teacher = name_match.group(1).strip()
 
+    # ИКОНКА НОУТБУКА ТОЛЬКО ЕСЛИ ЯВНО УКАЗАНО, ЧТО ОНЛАЙН
     online_marker = " 💻" if is_online_class(ev) else ""
 
     line = f"{ev['start'].strftime('%H:%M')}–{ev['end'].strftime('%H:%M')} {ev['summary']}{online_marker}"
 
+    # Добавляем информацию о преподавателе и аудитории
     if teacher or room:
         line += "\n"
         if teacher:
@@ -467,6 +479,7 @@ def format_event(ev, course, stream):
                 line += " | "
             line += f"  🏫 {room}"
 
+    # Добавляем домашнее задание если есть
     date_str = ev['start'].date().isoformat()
     hw_key = f"{ev['original_summary']}|{date_str}"
     homeworks = load_homeworks(course, stream)
