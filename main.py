@@ -79,6 +79,7 @@ LAST_UPDATE_FILE = "last_update.txt"
 ASSISTANTS_FILE = "assistants.json"
 SUBJECT_RENAMES_FILE = "subject_renames.json"
 SCHEDULE_EDITS_FILE = "schedule_edits.json"
+PROXY_URL = "socks5://127.0.0.1:987"
 
 # Глобальные переменные
 user_settings = {}
@@ -1366,15 +1367,14 @@ async def list_assistants(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(text)
 
 # === ГЛАВНАЯ ФУНКЦИЯ ===
+
 async def post_init(application):
-    """Инициализация после запуска бота"""
     asyncio.create_task(scheduler())
     logging.info("✅ Планировщик запущен!")
 
 def main():
     global user_settings, application, assistants, subject_renames, schedule_edits
 
-    # Загружаем данные
     user_settings = load_user_settings()
     assistants = load_assistants()
     subject_renames = load_subject_renames()
@@ -1382,26 +1382,25 @@ def main():
 
     logging.info("🤖 Запуск бота...")
 
-    # Создаем приложение С post_init
-    application = ApplicationBuilder().token(BOT_TOKEN).post_init(post_init).build()
+    application = (
+        ApplicationBuilder()
+        .token(BOT_TOKEN)
+        .proxy(PROXY_URL)
+        .get_updates_proxy(PROXY_URL)
+        .post_init(post_init)
+        .build()
+    )
 
-    # Добавляем обработчики команд
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("stats", stats))
     application.add_handler(CommandHandler("broadcast", broadcast))
     application.add_handler(CommandHandler("add_assistant", add_assistant))
     application.add_handler(CommandHandler("remove_assistant", remove_assistant))
     application.add_handler(CommandHandler("list_assistants", list_assistants))
-
-    # Добавляем обработчики callback
     application.add_handler(CallbackQueryHandler(handle_query))
-
-    # Добавляем обработчик текстовых сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     logging.info("✅ Бот успешно запущен!")
-    
-    # Запускаем polling
     application.run_polling()
 
 if __name__ == '__main__':
