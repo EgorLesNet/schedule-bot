@@ -497,9 +497,9 @@ def can_manage_homework(update: Update) -> bool:
     return is_assistant(update)
 
 
-async def require_assistant(query) -> bool:
-    if not can_manage_homework(query):
-        await query.answer("❌ У вас нет прав для управления ДЗ")
+async def require_assistant(update: Update) -> bool:
+    if not can_manage_homework(update):
+        await update.callback_query.answer("❌ У вас нет прав для управления ДЗ")
         return False
     return True
 
@@ -803,7 +803,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 raise
 
     elif data.startswith('manage_hw_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[2], parts[3]
@@ -816,7 +816,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await safe_edit_message(update, text="🛠 Управление домашними заданиями\n\nВыбери действие:", reply_markup=InlineKeyboardMarkup(keyboard))
 
     elif data.startswith('add_hw_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[2], parts[3]
@@ -826,7 +826,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await safe_edit_message(update, text="Выбери предмет для добавления ДЗ:", reply_markup=InlineKeyboardMarkup(keyboard))
 
     elif data.startswith('hw_select_subject_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[3], parts[4]
@@ -841,7 +841,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await safe_edit_message(update, text=f"Выбери дату занятия для предмета '{subject}':", reply_markup=InlineKeyboardMarkup(keyboard))
 
     elif data.startswith('hw_select_date_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream, date_str = parts[3], parts[4], parts[5]
@@ -852,7 +852,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.message.reply_text("📝 Введи текст домашнего задания:\n\n(Например: 'Прочитать главу 5, ответить на вопросы 1-10')")
 
     elif data.startswith('list_hw_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[2], parts[3]
@@ -868,7 +868,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 raise
 
     elif data.startswith('delete_hw_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[2], parts[3]
@@ -887,7 +887,7 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await safe_edit_message(update, text=text, reply_markup=InlineKeyboardMarkup(keyboard))
 
     elif data.startswith('confirm_delete_hw_'):
-        if not await require_assistant(query):
+        if not await require_assistant(update):
             return
         parts = data.split('_')
         course, stream = parts[3], parts[4]
