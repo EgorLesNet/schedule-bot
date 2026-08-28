@@ -59,8 +59,6 @@ LAST_UPDATE_FILE = "last_update.txt"
 ASSISTANTS_FILE = "assistants.json"
 SUBJECT_RENAMES_FILE = "subject_renames.json"
 SCHEDULE_EDITS_FILE = "schedule_edits.json"
-PROXY_URL = "socks5://127.0.0.1:987"
-
 TEACHER_PATTERNS = [
     r"Преподаватель:\s*([^\n\r]+)",
     r"Преподаватель\s*:\s*([^\n\r]+)",
@@ -1043,8 +1041,6 @@ def main():
     application = (
         ApplicationBuilder()
         .token(BOT_TOKEN)
-        .proxy(PROXY_URL)
-        .get_updates_proxy(PROXY_URL)
         .post_init(post_init)
         .build()
     )
