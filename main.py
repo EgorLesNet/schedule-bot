@@ -38,9 +38,20 @@ def load_bot_token():
         return None
 
 
+def load_proxy_url():
+    try:
+        with open("proxy.txt", "r", encoding="utf-8") as f:
+            url = f.read().strip()
+        return url or None
+    except FileNotFoundError:
+        return None
+
+
 BOT_TOKEN = load_bot_token()
 if not BOT_TOKEN:
     exit(1)
+
+PROXY_URL = load_proxy_url()
 
 ADMIN_USERNAME = "fusuges"
 GITHUB_OWNER = "EgorLesNet"
@@ -59,6 +70,7 @@ LAST_UPDATE_FILE = "last_update.txt"
 ASSISTANTS_FILE = "assistants.json"
 SUBJECT_RENAMES_FILE = "subject_renames.json"
 SCHEDULE_EDITS_FILE = "schedule_edits.json"
+
 TEACHER_PATTERNS = [
     r"Преподаватель:\s*([^\n\r]+)",
     r"Преподаватель\s*:\s*([^\n\r]+)",
@@ -821,7 +833,8 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parts = data.split('_')
         course, stream = parts[2], parts[3]
         subjects = get_unique_subjects(course, stream)
-        keyboard = [[InlineKeyboardButton(subject, callback_data=f"hw_select_subject_{course}_{stream}_{subject}")] for subject in subjects]
+        context.user_data['hw_subjects'] = subjects
+        keyboard = [[InlineKeyboardButton(subject, callback_data=f"hw_select_subject_{course}_{stream}_{i}")] for i, subject in enumerate(subjects)]
         keyboard.append([InlineKeyboardButton("⬅️ Назад", callback_data=f"manage_hw_{course}_{stream}")])
         await safe_edit_message(update, text="Выбери предмет для добавления ДЗ:", reply_markup=InlineKeyboardMarkup(keyboard))
 
@@ -829,8 +842,13 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not await require_assistant(update):
             return
         parts = data.split('_')
-        course, stream = parts[3], parts[4]
-        subject = '_'.join(parts[5:])
+        course, stream, idx_str = parts[3], parts[4], parts[5]
+        subjects = context.user_data.get('hw_subjects', [])
+        try:
+            subject = subjects[int(idx_str)]
+        except (ValueError, IndexError):
+            await query.answer("❌ Не удалось определить предмет, открой список заново")
+            return
         context.user_data['hw_subject'] = subject
         context.user_data['hw_course'] = course
         context.user_data['hw_stream'] = stream
@@ -1038,12 +1056,10 @@ def main():
     subject_renames = load_subject_renames()
     schedule_edits = load_schedule_edits()
     refresh_schedules()
-    application = (
-        ApplicationBuilder()
-        .token(BOT_TOKEN)
-        .post_init(post_init)
-        .build()
-    )
+    builder = ApplicationBuilder().token(BOT_TOKEN)
+    if PROXY_URL:
+        builder = builder.proxy(PROXY_URL).get_updates_proxy(PROXY_URL)
+    application = builder.post_init(post_init).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("stats", stats))
     application.add_handler(CommandHandler("broadcast", broadcast))
