@@ -495,6 +495,35 @@ def format_day(date, events, course, stream, english_time=None, is_tomorrow=Fals
         text += f"{format_event(ev, course, stream)}\n\n"
     return text
 
+async def announce_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not is_admin(update):
+        await update.message.reply_text("❌ У вас нет прав для использования этой команды")
+        return
+    context.user_data['awaiting_announcement'] = True
+    await update.message.reply_text(
+        "✏️ Отправьте текст объявления — он будет разослан всем пользователям бота.\n"
+        "Для отмены отправьте /cancel_announce."
+    )
+
+async def cancel_announce(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data['awaiting_announcement'] = False
+    await update.message.reply_text("Отменено.")
+
+async def send_announcement_to_all(update: Update, context: ContextTypes.DEFAULT_TYPE, text: str):
+    full_text = f"📢 Объявление от администратора:\n\n{text}"
+    sent, failed = 0, 0
+    for user_id in list(user_settings.keys()):
+        try:
+            await application.bot.send_message(chat_id=user_id, text=full_text)
+            sent += 1
+        except BadRequest as e:
+            failed += 1
+            if "chat not found" in str(e).lower() or "bot was blocked" in str(e).lower():
+                continue
+        except Exception:
+            failed += 1
+    await update.message.reply_text(f"✅ Объявление отправлено.\nУспешно: {sent}\nНе доставлено: {failed}")
+
 
 def is_admin(update: Update) -> bool:
     return update.effective_user.username == ADMIN_USERNAME
@@ -922,6 +951,12 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = str(update.effective_user.id)
+
+    if context.user_data.get('awaiting_announcement'):
+        context.user_data['awaiting_announcement'] = False
+        await send_announcement_to_all(update, context, update.message.text)
+        return
+
     if not context.user_data.get('awaiting_hw_text'):
         return
     if not can_manage_homework(update):
@@ -1062,6 +1097,8 @@ def main():
     application = builder.post_init(post_init).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("stats", stats))
+    application.add_handler(CommandHandler("announce", announce_start))
+    application.add_handler(CommandHandler("cancel_announce", cancel_announce))
     application.add_handler(CommandHandler("broadcast", broadcast))
     application.add_handler(CommandHandler("add_assistant", add_assistant))
     application.add_handler(CommandHandler("remove_assistant", remove_assistant))
