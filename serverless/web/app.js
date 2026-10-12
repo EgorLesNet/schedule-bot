@@ -1,18 +1,42 @@
 const tg = window.Telegram && window.Telegram.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 let offline = false;
-const S = { tab: 'day', date: '', week: '', boot: null, pre: null };
+const S = { tab: 'day', date: '', week: '', cm: '', boot: null, pre: null };
+const MONTHS = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+const MG = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+const WD = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const ICONS = {
+  day: `<svg viewBox='0 0 24 24'><rect x='3' y='5' width='18' height='16' rx='4'/><path d='M3 10h18M8 3v4M16 3v4'/></svg>`,
+  week: `<svg viewBox='0 0 24 24'><rect x='3' y='4' width='18' height='16' rx='4'/><path d='M3 9h18M9 9v11M15 9v11'/></svg>`,
+  hw: `<svg viewBox='0 0 24 24'><path d='M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z'/><path d='M8 8h7M8 12h7'/></svg>`,
+  set: `<svg viewBox='0 0 24 24'><path d='M4 7h10M18 7h2M4 17h2M10 17h10'/><circle cx='16' cy='7' r='2'/><circle cx='8' cy='17' r='2'/></svg>`,
+};
 const P = (s) => new Date(s + 'T00:00:00Z');
 const add = (s, n) => new Date(P(s).getTime() + n * 86400000).toISOString().slice(0, 10);
 const wd = (s) => (P(s).getUTCDay() + 6) % 7;
 const wk = (s) => add(s, -wd(s));
+const fd = (s) => P(s).getUTCDate() + ' ' + MG[P(s).getUTCMonth()];
 const $ = (q) => document.querySelector(q);
+
+function weekLabel(a) {
+  const b = add(a, 6);
+  const left = P(a).getUTCMonth() === P(b).getUTCMonth() ? String(P(a).getUTCDate()) : fd(a);
+  return left + ' – ' + fd(b) + ' ' + P(b).getUTCFullYear();
+}
+
+const applyTheme = () => {
+  const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = (tg && tg.colorScheme) || (dark ? 'dark' : 'light');
+};
+applyTheme();
+if (tg && tg.onEvent) tg.onEvent('themeChanged', applyTheme);
 
 function h(tag, attrs, ...kids) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {
     if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
     else if (k === 'class') e.className = v;
+    else if (k === 'html') e.innerHTML = v;
     else if (k === 'value') e.value = v;
     else if (k === 'checked') e.checked = !!v;
     else if (v !== undefined && v !== null && v !== false) e.setAttribute(k, v === true ? '' : v);
@@ -50,9 +74,34 @@ const safe = (f) => async () => {
 
 const openLink = (u) => { if (tg && tg.openLink) tg.openLink(u); else window.open(u, '_blank'); };
 
-function nav(prev, next, reset) {
+function nav(prev, next, reset, label) {
   const go = (f) => () => { f(); render(); };
-  return h('div', { class: 'nav' }, h('button', { onclick: go(prev) }, '◀'), h('button', { onclick: go(reset) }, 'Сегодня'), h('button', { onclick: go(next) }, '▶'));
+  return h('div', { class: 'nav' }, h('button', { onclick: go(prev) }, '◀'), h('button', { class: 'mid', onclick: go(reset) }, label), h('button', { onclick: go(next) }, '▶'));
+}
+
+function calendar() {
+  const box = h('section', { class: 'cal' });
+  const draw = () => {
+    const [y, m] = S.cm.split('-').map(Number);
+    const first = S.cm + '-01';
+    const dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const shift = (n) => { S.cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
+    const head = h('div', { class: 'head' },
+      h('button', { onclick: () => shift(-1) }, '‹'),
+      h('b', {}, MONTHS[m - 1] + ' ' + y),
+      h('button', { onclick: () => shift(1) }, '›'));
+    const grid = h('div', { class: 'grid' }, WD.map((x) => h('span', { class: 'wdn' }, x)));
+    for (let i = 0; i < wd(first); i++) grid.append(h('span', {}));
+    for (let day = 1; day <= dim; day++) {
+      const ds = S.cm + '-' + String(day).padStart(2, '0');
+      const cls = 'd' + (ds === S.boot.today ? ' today' : '') + (ds === S.date ? ' sel' : '');
+      grid.append(h('button', { class: cls, onclick: () => { S.date = ds; render(); } }, day));
+    }
+    const todayBtn = h('button', { class: 'todaybtn', onclick: () => { S.date = S.boot.today; S.cm = S.boot.today.slice(0, 7); render(); } }, 'Сегодня');
+    box.replaceChildren(head, grid, todayBtn);
+  };
+  draw();
+  return box;
 }
 
 function linkForm(d, i) {
@@ -98,12 +147,16 @@ function dayCard(d) {
 
 async function viewDay() {
   const days = await call('range', { from: S.date, days: 1 }, true);
-  return h('div', {}, nav(() => { S.date = add(S.date, -1); }, () => { S.date = add(S.date, 1); }, () => { S.date = S.boot.today; }), dayCard(days[0]));
+  return h('div', {}, calendar(), dayCard(days[0]));
 }
 
 async function viewWeek() {
   const days = await call('range', { from: S.week, days: 7 }, true);
-  return h('div', {}, nav(() => { S.week = add(S.week, -7); }, () => { S.week = add(S.week, 7); }, () => { S.week = wk(S.boot.today); }), days.map(dayCard));
+  const cur = S.week === wk(S.boot.today);
+  return h('div', {},
+    nav(() => { S.week = add(S.week, -7); }, () => { S.week = add(S.week, 7); }, () => { S.week = wk(S.boot.today); }, weekLabel(S.week)),
+    h('p', { class: 'muted center' }, cur ? 'Текущая неделя' : 'Нажмите на интервал, чтобы вернуться к текущей неделе'),
+    days.map(dayCard));
 }
 
 async function hwForm() {
@@ -151,7 +204,7 @@ async function viewSet() {
     h('label', { class: 'row' }, rem, 'Напоминания о ДЗ'),
     h('button', { onclick: safe(async () => {
       S.boot.user = await call('settings', { course: course.value, stream: stream.value, englishTime: eng.value || null, reminders: rem.checked });
-      S.tab = 'day'; S.date = S.boot.today; render();
+      S.tab = 'day'; S.date = S.boot.today; S.cm = S.boot.today.slice(0, 7); render();
     }) }, 'Сохранить'));
 }
 
@@ -159,7 +212,7 @@ const TABS = [['day', 'Сегодня', viewDay], ['week', 'Неделя', viewW
 
 async function render() {
   offline = false;
-  $('#tabs').replaceChildren(...TABS.map(([id, t]) => h('button', { class: S.tab === id ? 'on' : '', onclick: () => { if (id !== 'hw') S.pre = null; S.tab = id; render(); } }, t)));
+  $('#tabs').replaceChildren(...TABS.map(([id, t]) => h('button', { class: S.tab === id ? 'on' : '', onclick: () => { if (id !== 'hw') S.pre = null; S.tab = id; render(); } }, h('i', { html: ICONS[id] }), h('span', {}, t))));
   const v = $('#view');
   v.replaceChildren(h('p', { class: 'muted' }, 'Загрузка…'));
   try {
@@ -174,6 +227,7 @@ async function render() {
   try { S.boot = await call('bootstrap', {}, true); } catch (e) { $('#view').replaceChildren(h('p', { class: 'err' }, 'Не удалось загрузить: ' + ((e && e.message) || e))); return; }
   S.date = S.boot.today;
   S.week = wk(S.boot.today);
+  S.cm = S.boot.today.slice(0, 7);
   if (!S.boot.user.course) S.tab = 'set';
   render();
 })();

@@ -1,9 +1,6 @@
-body{margin:0;font-family:system-ui,sans-serif;background:var(--tg-theme-bg-color,#fff);color:var(--tg-theme-text-color,#000)}
-nav#tabs{display:flex;position:sticky;top:0;z-index:1;background:var(--tg-theme-bg-color,#fff);border-bottom:1px solid #8884}
-nav#tabs button{flex:1;padding:12px 4px;border:0;background:none;color:inherit;font-size:15px}
-nav#tabs button.on{color:var(--tg-theme-button-color,#2481cc);border-bottom:2px solid currentColor;font-weight:600}
-main{padding:12px;max-width:640px;margin:0 auto}
-.card{background:var(--tg-theme-secondary-bg-color,#f1f1f4);border-radius:12px;padding:12px;margin:0 0 12px}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--tg-theme-bg-color,#fff);color:var(--tg-theme-text-color,#000)}
+main{padding:12px 12px 120px;max-width:640px;margin:0 auto}
+.card{background:var(--tg-theme-secondary-bg-color,#f1f1f4);border-radius:18px;padding:12px;margin:0 0 12px}
 .card h3{margin:0 0 8px;font-size:16px}
 .lesson{display:flex;gap:10px;padding:6px 0;border-top:1px solid #8883}
 .lesson:first-of-type{border-top:0}
@@ -12,14 +9,36 @@ main{padding:12px;max-width:640px;margin:0 auto}
 .acts{display:flex;flex-wrap:wrap}
 .linkform{margin-top:6px}
 .muted{color:var(--tg-theme-hint-color,#777);font-size:14px}
+.center{text-align:center;margin:0 0 12px}
 .hw{margin-top:4px;font-size:14px}
 .err{color:#d33}
-.nav{display:flex;gap:8px;margin-bottom:12px}
-.nav button,.card button{flex:1;padding:10px;border:0;border-radius:10px;background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff);font-size:15px}
+.nav{display:flex;gap:8px;margin-bottom:8px}
+.nav button,.card button{flex:1;padding:10px;border:0;border-radius:14px;background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff);font-size:15px}
+.nav button.mid{flex:4;font-size:14px;font-weight:600}
 .card button{margin-top:8px;width:100%}
 button.danger{background:#d33}
 .card button.mini{flex:none;width:auto;margin:6px 6px 0 0;padding:6px 10px;font-size:13px}
 .card button.alt{background:#8883;color:inherit}
 label{display:block;margin:8px 0}
 label.row{display:flex;align-items:center;gap:8px}
-select,input[type=date],input[type=url],textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border-radius:10px;border:1px solid #8886;background:var(--tg-theme-bg-color,#fff);color:inherit;font-size:15px}
+select,input[type=date],input[type=url],textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border-radius:12px;border:1px solid #8886;background:var(--tg-theme-bg-color,#fff);color:inherit;font-size:15px}
+.cal{padding:12px;border-radius:22px;margin:0 0 12px;background:var(--tg-theme-secondary-bg-color,#f1f1f4)}
+.cal .head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal .head b{font-size:16px}
+.cal .head button{border:0;background:transparent;color:var(--tg-theme-button-color,#2481cc);font-size:24px;line-height:1;padding:2px 14px;border-radius:12px}
+.cal .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.cal .wdn{font-size:11px;color:var(--tg-theme-hint-color,#777);padding:4px 0}
+.cal .d{aspect-ratio:1;border:0;border-radius:50%;background:transparent;color:inherit;font-size:15px;padding:0}
+.cal .d.today{color:var(--tg-theme-button-color,#2481cc);font-weight:700}
+.cal .d.sel{background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff)}
+.cal .todaybtn{display:block;margin:8px auto 0;border:0;background:transparent;color:var(--tg-theme-button-color,#2481cc);font-size:14px;font-weight:600;padding:6px 14px;border-radius:14px}
+nav#tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:10;display:flex;gap:2px;padding:6px;width:min(92vw,420px);box-sizing:border-box;border-radius:32px;background:rgba(255,255,255,.34);-webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(255,255,255,.2),0 10px 32px rgba(0,0,0,.2)}
+nav#tabs::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0) 45%);opacity:.55}
+nav#tabs button{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px 6px;border:0;border-radius:26px;background:transparent;color:var(--tg-theme-hint-color,#6b6b70);font-size:11px;font-weight:500}
+nav#tabs i{display:flex}
+nav#tabs svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav#tabs button.on{color:var(--tg-theme-button-color,#2481cc);background:rgba(255,255,255,.62);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 2px 10px rgba(0,0,0,.14)}
+[data-theme=dark] nav#tabs{background:rgba(40,40,48,.42);border-color:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(255,255,255,.05),0 10px 32px rgba(0,0,0,.55)}
+[data-theme=dark] nav#tabs::before{opacity:.18}
+[data-theme=dark] nav#tabs button.on{background:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 2px 10px rgba(0,0,0,.4)}
+@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){nav#tabs{background:var(--tg-theme-secondary-bg-color,#f1f1f4)}}
