@@ -24,17 +24,24 @@ function h(tag, attrs, ...kids) {
   return e;
 }
 
-async function call(name, p = {}, cache = false) {
-  const key = 'sb:' + name + ':' + JSON.stringify(p);
-  try {
-    const r = await tg.Serverless.call(name, p);
-    if (cache) localStorage.setItem(key, JSON.stringify(r));
-    return r;
-  } catch (e) {
-    const c = cache && localStorage.getItem(key);
-    if (c) { offline = true; return JSON.parse(c); }
-    throw e;
-  }
+function call(name, p = {}, cache = false) {
+  const key = 'sb2:' + name + ':' + JSON.stringify(p);
+  return new Promise((resolve, reject) => {
+    const fail = (e) => {
+      const c = cache && !(e && e.type === 'ENDPOINT_ERROR') && localStorage.getItem(key);
+      let parsed;
+      try { parsed = c ? JSON.parse(c) : undefined; } catch (x) { parsed = undefined; }
+      if (parsed !== undefined) { offline = true; resolve(parsed); }
+      else reject(e instanceof Error ? e : new Error((e && e.message) || String(e)));
+    };
+    try {
+      tg.Serverless.call(name, p, (err, res) => {
+        if (err) return fail(err);
+        if (cache && res !== undefined) localStorage.setItem(key, JSON.stringify(res));
+        resolve(res);
+      });
+    } catch (e) { fail(e); }
+  });
 }
 
 const safe = (f) => async () => {
@@ -130,7 +137,7 @@ async function viewHw() {
 }
 
 async function viewSet() {
-  const sch = S.boot.schedules;
+  const sch = {}; for (const x of S.boot.schedules) sch[x.course] = x.streams;
   const u = S.boot.user;
   const lab = (t, el) => h('label', {}, h('span', { class: 'muted' }, t), el);
   const course = h('select', {}, Object.keys(sch).sort((a, b) => a - b).map((c) => h('option', { value: c, selected: c === u.course }, c + ' курс')));
@@ -157,7 +164,7 @@ async function render() {
   v.replaceChildren(h('p', { class: 'muted' }, 'Загрузка…'));
   try {
     const el = await TABS.find((x) => x[0] === S.tab)[2]();
-    v.replaceChildren(offline ? h('p', { class: 'muted' }, 'Офлайн: показаны сохранённые данные') : null, el);
+    v.replaceChildren(...[offline ? h('p', { class: 'muted' }, 'Офлайн: показаны сохранённые данные') : null, el].filter(Boolean));
   } catch (e) {
     v.replaceChildren(h('p', { class: 'err' }, 'Ошибка: ' + ((e && e.message) || e)));
   }

@@ -1,5 +1,5 @@
 export const NL = String.fromCharCode(10);
-export const APP_URL = '';
+export const APP_URL = 'https://app8016190941.tgcloud.ai/';
 export const ADMIN_USERNAME = 'fusuges';
 export const GH_OWNER = 'EgorLesNet';
 export const GH_REPO = 'schedule-bot';
