@@ -8,6 +8,9 @@ main{padding:12px;max-width:640px;margin:0 auto}
 .lesson{display:flex;gap:10px;padding:6px 0;border-top:1px solid #8883}
 .lesson:first-of-type{border-top:0}
 .time{min-width:92px;font-variant-numeric:tabular-nums;color:var(--tg-theme-hint-color,#777)}
+.grow{flex:1;min-width:0}
+.acts{display:flex;flex-wrap:wrap}
+.linkform{margin-top:6px}
 .muted{color:var(--tg-theme-hint-color,#777);font-size:14px}
 .hw{margin-top:4px;font-size:14px}
 .err{color:#d33}
@@ -15,6 +18,8 @@ main{padding:12px;max-width:640px;margin:0 auto}
 .nav button,.card button{flex:1;padding:10px;border:0;border-radius:10px;background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff);font-size:15px}
 .card button{margin-top:8px;width:100%}
 button.danger{background:#d33}
+.card button.mini{flex:none;width:auto;margin:6px 6px 0 0;padding:6px 10px;font-size:13px}
+.card button.alt{background:#8883;color:inherit}
 label{display:block;margin:8px 0}
 label.row{display:flex;align-items:center;gap:8px}
-select,input[type=date],textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border-radius:10px;border:1px solid #8886;background:var(--tg-theme-bg-color,#fff);color:inherit;font-size:15px}
+select,input[type=date],input[type=url],textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border-radius:10px;border:1px solid #8886;background:var(--tg-theme-bg-color,#fff);color:inherit;font-size:15px}

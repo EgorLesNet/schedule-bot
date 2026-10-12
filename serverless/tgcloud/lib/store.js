@@ -3,10 +3,8 @@ import { eq } from 'sdk/db';
 import { kv } from '../schema.js';
 import { ADMIN_USERNAME } from './config.js';
 
-const first = (r) => (Array.isArray(r) ? r[0] : (r && (r.results || r.rows) ? (r.results || r.rows)[0] : undefined));
-
 export async function get(key, fallback = null) {
-  const row = first(await db.select().from(kv).where(eq(kv.key, key)).run());
+  const row = await db.select().from(kv).where(eq(kv.key, key)).get();
   if (!row) return fallback;
   try { return JSON.parse(row.value); } catch (e) { return fallback; }
 }
@@ -30,6 +28,10 @@ export async function saveUser(id, patch) {
 const hwKey = (c, s) => 'hw:' + c + '_' + s;
 export const loadHw = (c, s) => get(hwKey(c, s), {});
 export const saveHw = (c, s, d) => set(hwKey(c, s), d);
+
+const linkKey = (c, s) => 'links:' + c + '_' + s;
+export const loadLinks = (c, s) => get(linkKey(c, s), {});
+export const saveLinks = (c, s, d) => set(linkKey(c, s), d);
 
 export function futureHw(all, from) {
   return Object.entries(all).map(([k, text]) => {

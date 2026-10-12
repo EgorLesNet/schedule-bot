@@ -1,7 +1,7 @@
 const tg = window.Telegram && window.Telegram.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 let offline = false;
-const S = { tab: 'day', date: '', week: '', boot: null };
+const S = { tab: 'day', date: '', week: '', boot: null, pre: null };
 const P = (s) => new Date(s + 'T00:00:00Z');
 const add = (s, n) => new Date(P(s).getTime() + n * 86400000).toISOString().slice(0, 10);
 const wd = (s) => (P(s).getUTCDay() + 6) % 7;
@@ -41,19 +41,51 @@ const safe = (f) => async () => {
   try { await f(); } catch (e) { const m = String((e && e.message) || e); if (tg && tg.showAlert) tg.showAlert(m); else alert(m); }
 };
 
+const openLink = (u) => { if (tg && tg.openLink) tg.openLink(u); else window.open(u, '_blank'); };
+
 function nav(prev, next, reset) {
   const go = (f) => () => { f(); render(); };
   return h('div', { class: 'nav' }, h('button', { onclick: go(prev) }, '◀'), h('button', { onclick: go(reset) }, 'Сегодня'), h('button', { onclick: go(next) }, '▶'));
 }
 
+function linkForm(d, i) {
+  const url = h('input', { type: 'url', placeholder: 'https://…', value: i.link || '' });
+  const all = h('input', { type: 'checkbox', checked: i.linkAll });
+  const form = h('div', { class: 'linkform' }, url,
+    h('label', { class: 'row' }, all, 'Для всех занятий этого предмета'),
+    h('button', { class: 'mini', onclick: safe(async () => {
+      await call('link', { action: 'set', original: i.original, date: d.date, start: i.start, url: url.value, all: all.checked });
+      render();
+    }) }, 'Сохранить'));
+  if (i.link) {
+    form.append(h('button', { class: 'mini danger', onclick: safe(async () => {
+      await call('link', { action: 'delete', original: i.original, date: d.date, start: i.start, all: i.linkAll });
+      render();
+    }) }, 'Удалить ссылку'));
+  }
+  return form;
+}
+
+function lessonRow(d, i) {
+  const who = [i.teacher ? '👤 ' + i.teacher : '', i.room ? '🏫 ' + i.room : ''].filter(Boolean).join(' · ');
+  const body = h('div', { class: 'grow' }, h('b', {}, i.summary + (i.online || i.link ? ' 💻' : '')),
+    who ? h('div', { class: 'muted' }, who) : null,
+    i.hw ? h('div', { class: 'hw' }, '📝 ' + i.hw) : null);
+  const acts = h('div', { class: 'acts' });
+  const slot = h('div', {});
+  if (i.link) acts.append(h('button', { class: 'mini', onclick: () => openLink(i.link) }, '🔗 Подключиться'));
+  if (S.boot.assistant) {
+    acts.append(h('button', { class: 'mini alt', onclick: () => { if (slot.firstChild) slot.replaceChildren(); else slot.append(linkForm(d, i)); } }, i.link ? '✏️ Ссылка' : '＋ Ссылка'));
+    acts.append(h('button', { class: 'mini alt', onclick: () => { S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '＋ ДЗ'));
+  }
+  body.append(acts, slot);
+  return h('div', { class: 'lesson' }, h('div', { class: 'time' }, i.start + '–' + i.end), body);
+}
+
 function dayCard(d) {
   const c = h('section', { class: 'card' }, h('h3', {}, d.label));
   if (!d.items.length) c.append(h('p', { class: 'muted' }, 'Занятий нет'));
-  for (const i of d.items) {
-    const who = [i.teacher ? '👤 ' + i.teacher : '', i.room ? '🏫 ' + i.room : ''].filter(Boolean).join(' · ');
-    c.append(h('div', { class: 'lesson' }, h('div', { class: 'time' }, i.start + '–' + i.end),
-      h('div', {}, h('b', {}, i.summary + (i.online ? ' 💻' : '')), who ? h('div', { class: 'muted' }, who) : null, i.hw ? h('div', { class: 'hw' }, '📝 ' + i.hw) : null)));
-  }
+  for (const i of d.items) c.append(lessonRow(d, i));
   return c;
 }
 
@@ -69,23 +101,31 @@ async function viewWeek() {
 
 async function hwForm() {
   const subs = await call('subjects', {}, true);
-  const sel = h('select', {}, subs.map((s) => h('option', { value: s }, s)));
-  const date = h('input', { type: 'date', value: S.boot.today });
+  const pre = S.pre || {};
+  const sel = h('select', {}, subs.map((s) => h('option', { value: s, selected: s === pre.subject }, s)));
+  const date = h('input', { type: 'date', value: pre.date || S.boot.today });
   const text = h('textarea', { rows: 3, placeholder: 'Текст задания' });
   return h('section', { class: 'card' }, h('h3', {}, 'Добавить ДЗ'), sel, date, text,
-    h('button', { onclick: safe(async () => { if (!text.value.trim()) return; await call('homework', { action: 'add', subject: sel.value, date: date.value, text: text.value }); render(); }) }, 'Сохранить'));
+    h('button', { onclick: safe(async () => {
+      if (!text.value.trim()) return;
+      await call('homework', { action: 'add', subject: sel.value, date: date.value, text: text.value });
+      S.pre = null;
+      render();
+    }) }, 'Сохранить'));
 }
 
 async function viewHw() {
   const list = await call('homework', { action: 'list' }, true);
   const box = h('div', {});
+  const form = S.boot.assistant ? await hwForm() : null;
+  if (form && S.pre) box.append(form);
   if (!list.length) box.append(h('p', { class: 'muted' }, 'Список ДЗ пуст'));
   for (const x of list) {
     const card = h('section', { class: 'card' }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', {}, x.text));
     if (S.boot.assistant) card.append(h('button', { class: 'danger', onclick: safe(async () => { await call('homework', { action: 'delete', subject: x.subject, date: x.date }); render(); }) }, 'Удалить'));
     box.append(card);
   }
-  if (S.boot.assistant) box.append(await hwForm());
+  if (form && !S.pre) box.append(form);
   return box;
 }
 
@@ -112,7 +152,7 @@ const TABS = [['day', 'Сегодня', viewDay], ['week', 'Неделя', viewW
 
 async function render() {
   offline = false;
-  $('#tabs').replaceChildren(...TABS.map(([id, t]) => h('button', { class: S.tab === id ? 'on' : '', onclick: () => { S.tab = id; render(); } }, t)));
+  $('#tabs').replaceChildren(...TABS.map(([id, t]) => h('button', { class: S.tab === id ? 'on' : '', onclick: () => { if (id !== 'hw') S.pre = null; S.tab = id; render(); } }, t)));
   const v = $('#view');
   v.replaceChildren(h('p', { class: 'muted' }, 'Загрузка…'));
   try {
