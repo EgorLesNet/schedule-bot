@@ -1,0 +1,20 @@
+body{margin:0;font-family:system-ui,sans-serif;background:var(--tg-theme-bg-color,#fff);color:var(--tg-theme-text-color,#000)}
+nav#tabs{display:flex;position:sticky;top:0;z-index:1;background:var(--tg-theme-bg-color,#fff);border-bottom:1px solid #8884}
+nav#tabs button{flex:1;padding:12px 4px;border:0;background:none;color:inherit;font-size:15px}
+nav#tabs button.on{color:var(--tg-theme-button-color,#2481cc);border-bottom:2px solid currentColor;font-weight:600}
+main{padding:12px;max-width:640px;margin:0 auto}
+.card{background:var(--tg-theme-secondary-bg-color,#f1f1f4);border-radius:12px;padding:12px;margin:0 0 12px}
+.card h3{margin:0 0 8px;font-size:16px}
+.lesson{display:flex;gap:10px;padding:6px 0;border-top:1px solid #8883}
+.lesson:first-of-type{border-top:0}
+.time{min-width:92px;font-variant-numeric:tabular-nums;color:var(--tg-theme-hint-color,#777)}
+.muted{color:var(--tg-theme-hint-color,#777);font-size:14px}
+.hw{margin-top:4px;font-size:14px}
+.err{color:#d33}
+.nav{display:flex;gap:8px;margin-bottom:12px}
+.nav button,.card button{flex:1;padding:10px;border:0;border-radius:10px;background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff);font-size:15px}
+.card button{margin-top:8px;width:100%}
+button.danger{background:#d33}
+label{display:block;margin:8px 0}
+label.row{display:flex;align-items:center;gap:8px}
+select,input[type=date],textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border-radius:10px;border:1px solid #8886;background:var(--tg-theme-bg-color,#fff);color:inherit;font-size:15px}
