@@ -120,6 +120,38 @@ function calendar() {
   return box;
 }
 
+function datePicker(dates, value, onPick) {
+  const set = new Set(dates);
+  const box = h('section', { class: 'cal' });
+  let cm = (value || dates[0] || nowMsk().date).slice(0, 7);
+  let sel = value;
+  const draw = () => {
+    const [y, m] = cm.split('-').map(Number);
+    const first = cm + '-01';
+    const dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const shift = (n) => { cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
+    const head = h('div', { class: 'head' },
+      h('button', { onclick: () => shift(-1) }, '‹'),
+      h('b', {}, MONTHS[m - 1] + ' ' + y),
+      h('button', { onclick: () => shift(1) }, '›'));
+    const grid = h('div', { class: 'grid' }, WD.map((x) => h('span', { class: 'wdn' }, x)));
+    for (let i = 0; i < wd(first); i++) grid.append(h('span', {}));
+    for (let day = 1; day <= dim; day++) {
+      const ds = cm + '-' + String(day).padStart(2, '0');
+      const has = set.has(ds);
+      grid.append(h('button', {
+        class: 'd' + (ds === sel ? ' sel' : ''),
+        disabled: !has,
+        style: has ? 'font-weight:700;box-shadow:inset 0 0 0 2px var(--tg-theme-button-color,#2481cc)' : 'opacity:.25',
+        onclick: () => { sel = ds; onPick(ds); draw(); },
+      }, day));
+    }
+    box.replaceChildren(head, grid);
+  };
+  draw();
+  return box;
+}
+
 function jumpToday() {
   const t = nowMsk().date;
   S.date = t; S.cm = t.slice(0, 7); S.week = wk(t);
@@ -280,13 +312,30 @@ async function viewWeek() {
 async function hwForm() {
   const subs = await call('subjects', {}, true);
   const pre = S.pre || {};
+  let date = '';
   const sel = h('select', {}, subs.map((s) => h('option', { value: s, selected: s === pre.subject }, s)));
-  const date = h('input', { type: 'date', value: pre.date || S.boot.today });
+  const pick = h('div', {});
+  const chosen = h('p', { class: 'muted' }, '');
   const text = h('textarea', { rows: 3, placeholder: 'Текст задания' });
-  return h('section', { class: 'card' }, h('h3', {}, 'Добавить ДЗ'), sel, date, text,
+  const load = async () => {
+    date = '';
+    chosen.textContent = '';
+    pick.replaceChildren(h('p', { class: 'muted' }, 'Загрузка дат…'));
+    try {
+      const dates = await call('subjectDates', { subject: sel.value });
+      if (!dates.length) { pick.replaceChildren(h('p', { class: 'muted' }, 'Для этого предмета нет ближайших занятий')); return; }
+      const show = (d) => { date = d; chosen.textContent = 'Выбрано: ' + d.split('-').reverse().join('.'); };
+      show(pre.subject === sel.value && dates.includes(pre.date) ? pre.date : dates[0]);
+      pick.replaceChildren(h('p', { class: 'muted' }, 'Отмечены даты, когда есть этот предмет'), datePicker(dates, date, show), chosen);
+    } catch (e) { pick.replaceChildren(h('p', { class: 'err' }, 'Ошибка: ' + ((e && e.message) || e))); }
+  };
+  sel.addEventListener('change', load);
+  load();
+  return h('section', { class: 'card' }, h('h3', {}, 'Добавить ДЗ'), sel, pick, text,
     h('button', { onclick: safe(async () => {
+      if (!date) { alertMsg('Выберите дату занятия'); return; }
       if (!text.value.trim()) return;
-      await call('homework', { action: 'add', subject: sel.value, date: date.value, text: text.value });
+      await call('homework', { action: 'add', subject: sel.value, date, text: text.value });
       S.pre = null;
       render();
     }) }, 'Сохранить'));

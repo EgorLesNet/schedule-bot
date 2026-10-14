@@ -67,6 +67,26 @@ function applyEdits(events, edits) {
   return out;
 }
 
+function dedupe(events) {
+  const groups = new Map();
+  for (const e of events) {
+    const k = e.date + '|' + e.start + '|' + e.summary.trim().toLowerCase();
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(e);
+  }
+  const out = [];
+  for (const list of groups.values()) {
+    const seen = new Set();
+    const withT = [];
+    for (const e of list) {
+      const t = parseTeacherRoom(e.desc || '').teacher.trim().toLowerCase();
+      if (t && !seen.has(t)) { seen.add(t); withT.push(e); }
+    }
+    if (withT.length) out.push(...withT); else out.push(list[0]);
+  }
+  return out;
+}
+
 export async function loadEvents(course, stream, force = false) {
   const info = ((await listSchedules())[course] || []).find((s) => s.key === stream);
   if (!info) return [];
@@ -85,7 +105,7 @@ export async function loadEvents(course, stream, force = false) {
   const ren = await getRenames(course, stream);
   const events = parseIcs(text).map((e) => Object.assign({}, e, { summary: ren[e.summary] || e.summary }));
   const edits = (await store.get('edits', {}))[course + '_' + stream];
-  return applyEdits(events, edits);
+  return dedupe(applyEdits(events, edits));
 }
 
 function after(desc, labels) {
