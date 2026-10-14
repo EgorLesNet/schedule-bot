@@ -83,8 +83,40 @@ const safe = (f) => async () => {
 };
 
 const openLink = (u) => {
-  try { if (tg && tg.openLink && u.startsWith('http')) tg.openLink(u); else window.open(u, '_blank'); } catch (e) { window.location.href = u; }
+  try {
+    if (tg && tg.openTelegramLink && u.startsWith('https://t.me/')) tg.openTelegramLink(u);
+    else if (tg && tg.openLink && u.startsWith('http')) tg.openLink(u);
+    else window.open(u, '_blank');
+  } catch (e) { window.location.href = u; }
 };
+
+const STOP = '<>' + String.fromCharCode(34, 39);
+const LINK_STYLE = 'color:var(--tg-theme-link-color,#2481cc);text-decoration:underline;word-break:break-all';
+
+function linkify(text) {
+  const s = String(text || '');
+  const out = [];
+  let i = 0;
+  while (i < s.length) {
+    let start = -1;
+    let j = i;
+    while (j < s.length) {
+      const k = s.indexOf('http', j);
+      if (k < 0) break;
+      if (s.startsWith('http://', k) || s.startsWith('https://', k)) { start = k; break; }
+      j = k + 4;
+    }
+    if (start < 0) { out.push(s.slice(i)); break; }
+    let end = start;
+    while (end < s.length && s[end] > ' ' && STOP.indexOf(s[end]) < 0) end++;
+    while (end > start && '.,;:!?)]}»'.indexOf(s[end - 1]) >= 0) end--;
+    if (start > i) out.push(s.slice(i, start));
+    const url = s.slice(start, end);
+    out.push(h('a', { href: url, style: LINK_STYLE, onclick: (e) => { e.preventDefault(); openLink(url); } }, url));
+    i = end;
+  }
+  return out;
+}
 
 const copy = async (t) => {
   try { await navigator.clipboard.writeText(t); alertMsg('Ссылка скопирована'); } catch (e) { alertMsg(t); }
@@ -250,8 +282,8 @@ function lessonRow(d, i) {
   const who = [i.teacher ? '👤 ' + i.teacher : '', i.room ? '🏫 ' + i.room : ''].filter(Boolean).join(' · ');
   const body = h('div', { class: 'grow' }, h('b', {}, (fav ? '★ ' : '') + i.summary + (i.online || i.link ? ' 💻' : '')),
     who ? h('div', { class: 'muted' }, who) : null,
-    i.hw ? h('div', { class: 'hw' }, '📝 ' + i.hw) : null,
-    note ? h('div', { class: 'note' }, '🗒 ' + note) : null);
+    i.hw ? h('div', { class: 'hw', style: 'white-space:pre-wrap' }, '📝 ', linkify(i.hw)) : null,
+    note ? h('div', { class: 'note', style: 'white-space:pre-wrap' }, '🗒 ', linkify(note)) : null);
   const acts = h('div', { class: 'acts' });
   const slot = h('div', {});
   const toggle = (id, fn) => () => {
@@ -371,7 +403,7 @@ async function viewHw() {
   else box.append(h('p', { class: 'muted center' }, 'Выполнено ' + list.filter((x) => done.includes(x.key)).length + ' из ' + list.length));
   for (const x of sorted) {
     const dn = done.includes(x.key);
-    const card = h('section', { class: 'card hwc' + (dn ? ' done' : '') }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', {}, x.text),
+    const card = h('section', { class: 'card hwc' + (dn ? ' done' : '') }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', { style: 'white-space:pre-wrap' }, linkify(x.text)),
       h('button', { class: 'mini' + (dn ? '' : ' alt'), onclick: safe(async () => { S.me = normMe(await call('me', { action: 'done', key: x.key, value: !dn })); render(); }) }, dn ? '✓ Сделано' : 'Отметить сделанным'));
     if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }) }, 'Удалить'));
     box.append(card);
