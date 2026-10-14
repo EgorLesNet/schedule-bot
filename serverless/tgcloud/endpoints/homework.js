@@ -22,5 +22,5 @@ export default endpoint(async (input, u) => {
     await store.saveHw(course, stream, all);
   }
   const ren = await getRenames(course, stream);
-  return store.futureHw(all, today()).map((x) => ({ subject: ren[x.subject] || x.subject, date: x.date, text: x.text }));
+  return store.futureHw(all, today()).map((x) => ({ key: x.subject + '|' + x.date, subject: ren[x.subject] || x.subject, date: x.date, text: x.text }));
 });
