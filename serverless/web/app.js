@@ -2,6 +2,19 @@ const tg = window.Telegram && window.Telegram.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 let offline = false;
 const S = { tab: 'day', date: '', week: '', cm: '', boot: null, pre: null, me: null, onlyFav: false, lastTap: 0, timer: null, marks: {} };
+
+const hf = tg && tg.HapticFeedback;
+const hv = (f) => { try { if (hf) f(); } catch (e) {} };
+const buzz = {
+  tap: () => hv(() => hf.impactOccurred('light')),
+  heavy: () => hv(() => hf.impactOccurred('heavy')),
+  pick: () => hv(() => hf.selectionChanged()),
+  ok: () => hv(() => hf.notificationOccurred('success')),
+  err: () => hv(() => hf.notificationOccurred('error')),
+  warn: () => hv(() => hf.notificationOccurred('warning')),
+  none: () => {},
+};
+
 const RAW = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/main/';
 const DAYS = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 const MONTHS = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
@@ -78,8 +91,15 @@ function call(name, p = {}, cache = false) {
 }
 
 const alertMsg = (m) => { if (tg && tg.showAlert) tg.showAlert(m); else alert(m); };
-const safe = (f) => async () => {
-  try { await f(); } catch (e) { alertMsg(String((e && e.message) || e)); }
+
+const safe = (f, kind) => async () => {
+  try {
+    const r = await f();
+    if (r !== false) buzz[kind || 'ok']();
+  } catch (e) {
+    buzz.err();
+    alertMsg(String((e && e.message) || e));
+  }
 };
 
 const openLink = (u) => {
@@ -119,11 +139,11 @@ function linkify(text) {
 }
 
 const copy = async (t) => {
-  try { await navigator.clipboard.writeText(t); alertMsg('Ссылка скопирована'); } catch (e) { alertMsg(t); }
+  try { await navigator.clipboard.writeText(t); buzz.ok(); alertMsg('Ссылка скопирована'); } catch (e) { alertMsg(t); }
 };
 
 function nav(prev, next, reset, label) {
-  const go = (f) => () => { f(); render(); };
+  const go = (f) => () => { buzz.tap(); f(); render(); };
   return h('div', { class: 'nav' }, h('button', { onclick: go(prev) }, '◀'), h('button', { class: 'mid', onclick: go(reset) }, label), h('button', { onclick: go(next) }, '▶'));
 }
 
@@ -144,7 +164,7 @@ function calendar() {
     const [y, m] = month.split('-').map(Number);
     const first = month + '-01';
     const dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
-    const shift = (n) => { S.cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
+    const shift = (n) => { buzz.tap(); S.cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
     const head = h('div', { class: 'head' },
       h('button', { onclick: () => shift(-1) }, '‹'),
       h('b', {}, MONTHS[m - 1] + ' ' + y),
@@ -155,11 +175,11 @@ function calendar() {
     for (let day = 1; day <= dim; day++) {
       const ds = month + '-' + String(day).padStart(2, '0');
       const cls = 'd' + (ds === nowMsk().date ? ' today' : '') + (ds === S.date ? ' sel' : '');
-      const b = h('button', { class: cls, onclick: () => { S.date = ds; render(); } }, day);
+      const b = h('button', { class: cls, onclick: () => { buzz.pick(); S.date = ds; render(); } }, day);
       btns[ds] = b;
       grid.append(b);
     }
-    const todayBtn = h('button', { class: 'todaybtn', onclick: () => { jumpToday(); render(); } }, 'Сегодня');
+    const todayBtn = h('button', { class: 'todaybtn', onclick: () => { buzz.tap(); jumpToday(); render(); } }, 'Сегодня');
     box.replaceChildren(head, grid, todayBtn);
     monthMarks(month).then((list) => {
       if (my !== seq) return;
@@ -179,7 +199,7 @@ function datePicker(dates, value, onPick) {
     const [y, m] = cm.split('-').map(Number);
     const first = cm + '-01';
     const dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
-    const shift = (n) => { cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
+    const shift = (n) => { buzz.tap(); cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
     const head = h('div', { class: 'head' },
       h('button', { onclick: () => shift(-1) }, '‹'),
       h('b', {}, MONTHS[m - 1] + ' ' + y),
@@ -193,7 +213,7 @@ function datePicker(dates, value, onPick) {
         class: 'd' + (ds === sel ? ' sel' : ''),
         disabled: !has,
         style: has ? 'font-weight:700;box-shadow:inset 0 0 0 2px var(--tg-theme-button-color,#2481cc)' : 'opacity:.25',
-        onclick: () => { sel = ds; onPick(ds); draw(); },
+        onclick: () => { buzz.pick(); sel = ds; onPick(ds); draw(); },
       }, day));
     }
     box.replaceChildren(head, grid);
@@ -247,9 +267,10 @@ function linkForm(d, i) {
     }) }, 'Сохранить'));
   if (i.link) {
     form.append(h('button', { class: 'mini danger', onclick: safe(async () => {
+      buzz.heavy();
       await call('link', { action: 'delete', original: i.original, date: d.date, start: i.start, all: i.linkAll });
       render();
-    }) }, 'Удалить ссылку'));
+    }, 'none') }, 'Удалить ссылку'));
   }
   return form;
 }
@@ -261,7 +282,10 @@ function editForm(d, i) {
   const nn = h('input', { type: 'text', value: i.summary });
   const base = { original: i.original, date: d.date, start: i.start, summary: i.summary };
   const run = (ex, msg) => safe(async () => {
-    if (msg && !(await ask(msg))) return;
+    if (msg) {
+      buzz.warn();
+      if (!(await ask(msg))) return false;
+    }
     await call('schedit', Object.assign({}, base, typeof ex === 'function' ? ex() : ex));
     render();
   });
@@ -287,15 +311,16 @@ function lessonRow(d, i) {
   const acts = h('div', { class: 'acts' });
   const slot = h('div', {});
   const toggle = (id, fn) => () => {
+    buzz.tap();
     if (slot.dataset.p === id) { slot.replaceChildren(); slot.dataset.p = ''; }
     else { slot.replaceChildren(fn()); slot.dataset.p = id; }
   };
-  if (i.link) acts.append(h('button', { class: 'mini', onclick: () => openLink(i.link) }, '🔗 Подключиться'));
-  acts.append(h('button', { class: 'mini alt', onclick: safe(async () => { S.me = normMe(await call('me', { action: 'fav', subject: i.original, value: !fav })); render(); }) }, fav ? '★' : '☆'));
+  if (i.link) acts.append(h('button', { class: 'mini', onclick: () => { buzz.tap(); openLink(i.link); } }, '🔗 Подключиться'));
+  acts.append(h('button', { class: 'mini alt', onclick: safe(async () => { S.me = normMe(await call('me', { action: 'fav', subject: i.original, value: !fav })); render(); }, 'tap') }, fav ? '★' : '☆'));
   acts.append(h('button', { class: 'mini alt', onclick: toggle('note', () => noteForm(key, note)) }, note ? '🗒 Заметка' : '🗒'));
   if (S.boot.assistant) {
     acts.append(h('button', { class: 'mini alt', onclick: toggle('link', () => linkForm(d, i)) }, i.link ? '✏️ Ссылка' : '＋ Ссылка'));
-    acts.append(h('button', { class: 'mini alt', onclick: () => { S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '＋ ДЗ'));
+    acts.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '＋ ДЗ'));
     acts.append(h('button', { class: 'mini alt', onclick: toggle('edit', () => editForm(d, i)) }, '⚙️'));
   }
   body.append(acts, slot);
@@ -310,7 +335,7 @@ function dayCard(d) {
   return c;
 }
 
-const favChip = () => h('button', { class: 'chip' + (S.onlyFav ? ' on' : ''), onclick: () => { S.onlyFav = !S.onlyFav; render(); } }, '★ Избранные');
+const favChip = () => h('button', { class: 'chip' + (S.onlyFav ? ' on' : ''), onclick: () => { buzz.tap(); S.onlyFav = !S.onlyFav; render(); } }, '★ Избранные');
 
 function searchResults(list) {
   if (!list.length) return h('p', { class: 'muted center' }, 'Ничего не найдено');
@@ -320,7 +345,7 @@ function searchResults(list) {
   for (const x of list) {
     if (x.date !== last) { last = x.date; card = h('section', { class: 'card' }, h('h3', {}, fullLabel(x.date))); box.append(card); }
     const who = [x.teacher ? '👤 ' + x.teacher : '', x.room ? '🏫 ' + x.room : ''].filter(Boolean).join(' · ');
-    card.append(h('div', { class: 'res', style: '--c:hsl(' + hue(x.original) + ' 65% 52%)', onclick: () => { S.date = x.date; S.cm = x.date.slice(0, 7); render(); } },
+    card.append(h('div', { class: 'res', style: '--c:hsl(' + hue(x.original) + ' 65% 52%)', onclick: () => { buzz.pick(); S.date = x.date; S.cm = x.date.slice(0, 7); render(); } },
       h('div', { class: 'time' }, x.start + '–' + x.end),
       h('div', { class: 'grow' }, h('b', {}, x.summary), who ? h('div', { class: 'muted' }, who) : null)));
   }
@@ -379,12 +404,12 @@ async function hwForm() {
       pick.replaceChildren(h('p', { class: 'muted' }, 'Отмечены даты, когда есть этот предмет'), datePicker(dates, date, show), chosen);
     } catch (e) { pick.replaceChildren(h('p', { class: 'err' }, 'Ошибка: ' + ((e && e.message) || e))); }
   };
-  sel.addEventListener('change', load);
+  sel.addEventListener('change', () => { buzz.pick(); load(); });
   load();
   return h('section', { class: 'card' }, h('h3', {}, 'Добавить ДЗ'), sel, pick, text,
     h('button', { onclick: safe(async () => {
-      if (!date) { alertMsg('Выберите дату занятия'); return; }
-      if (!text.value.trim()) return;
+      if (!date) { buzz.err(); alertMsg('Выберите дату занятия'); return false; }
+      if (!text.value.trim()) { buzz.err(); return false; }
       await call('homework', { action: 'add', subject: sel.value, date, text: text.value });
       S.marks = {};
       S.pre = null;
@@ -404,8 +429,8 @@ async function viewHw() {
   for (const x of sorted) {
     const dn = done.includes(x.key);
     const card = h('section', { class: 'card hwc' + (dn ? ' done' : '') }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', { style: 'white-space:pre-wrap' }, linkify(x.text)),
-      h('button', { class: 'mini' + (dn ? '' : ' alt'), onclick: safe(async () => { S.me = normMe(await call('me', { action: 'done', key: x.key, value: !dn })); render(); }) }, dn ? '✓ Сделано' : 'Отметить сделанным'));
-    if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }) }, 'Удалить'));
+      h('button', { class: 'mini' + (dn ? '' : ' alt'), onclick: safe(async () => { S.me = normMe(await call('me', { action: 'done', key: x.key, value: !dn })); render(); }, 'tap') }, dn ? '✓ Сделано' : 'Отметить сделанным'));
+    if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { buzz.heavy(); await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }, 'none') }, 'Удалить'));
     box.append(card);
   }
   if (form && !S.pre) box.append(form);
@@ -425,8 +450,8 @@ function subCard() {
   const raw = RAW + encodeURIComponent(file);
   const web = raw.replace('https://', 'webcal://');
   c.append(h('p', { class: 'muted' }, 'Подписка на исходное расписание из файла. Отмены и переносы из приложения в календаре не отражаются.'),
-    h('button', { onclick: () => openLink(web) }, 'Подписаться: Apple Календарь'),
-    h('button', { class: 'alt', onclick: () => openLink('https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(web)) }, 'Подписаться: Google Календарь'),
+    h('button', { onclick: () => { buzz.tap(); openLink(web); } }, 'Подписаться: Apple Календарь'),
+    h('button', { class: 'alt', onclick: () => { buzz.tap(); openLink('https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(web)); } }, 'Подписаться: Google Календарь'),
     h('button', { class: 'alt', onclick: () => copy(raw) }, 'Копировать ссылку'));
   return c;
 }
@@ -456,9 +481,10 @@ async function viewSet() {
   const stream = h('select', {});
   const fill = () => stream.replaceChildren(...(sch[course.value] || []).map((s) => h('option', { value: s.key, selected: s.key === u.stream }, s.name)));
   fill();
-  course.addEventListener('change', fill);
+  course.addEventListener('change', () => { buzz.pick(); fill(); });
   const eng = h('select', {}, [['', 'Без английского'], ['morning', '9:00–12:10'], ['afternoon', '14:00–17:10']].map(([v, t]) => h('option', { value: v, selected: v === (u.englishTime || '') }, t)));
   const rem = h('input', { type: 'checkbox', checked: !!u.reminders });
+  rem.addEventListener('change', () => buzz.pick());
   const form = h('section', { class: 'card' }, h('h3', {}, 'Настройки'), lab('Курс', course), lab('Расписание', stream), lab('Английский в четверг', eng),
     h('label', { class: 'row' }, rem, 'Уведомления: ДЗ и изменения расписания'),
     h('button', { onclick: safe(async () => {
@@ -479,6 +505,7 @@ async function render() {
   $('#tabs').replaceChildren(...TABS.map(([id, t]) => h('button', {
     class: S.tab === id ? 'on' : '',
     onclick: () => {
+      buzz.pick();
       const now = Date.now();
       const dbl = id === S.tab && now - S.lastTap < 350;
       S.lastTap = now;
@@ -509,8 +536,8 @@ document.addEventListener('touchend', (e) => {
   if (Math.abs(dx) < 70 || Math.abs(dy) > 45) return;
   if (e.target.closest && e.target.closest('input,textarea,select,.cal,nav')) return;
   const dir = dx < 0 ? 1 : -1;
-  if (S.tab === 'day') { S.date = add(S.date, dir); S.cm = S.date.slice(0, 7); render(); }
-  else if (S.tab === 'week') { S.week = add(S.week, 7 * dir); render(); }
+  if (S.tab === 'day') { buzz.pick(); S.date = add(S.date, dir); S.cm = S.date.slice(0, 7); render(); }
+  else if (S.tab === 'week') { buzz.pick(); S.week = add(S.week, 7 * dir); render(); }
 }, { passive: true });
 
 (async () => {
