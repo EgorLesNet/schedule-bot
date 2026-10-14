@@ -1,7 +1,7 @@
 const tg = window.Telegram && window.Telegram.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 let offline = false;
-const S = { tab: 'day', date: '', week: '', cm: '', boot: null, pre: null, me: null, onlyFav: false, lastTap: 0, timer: null };
+const S = { tab: 'day', date: '', week: '', cm: '', boot: null, pre: null, me: null, onlyFav: false, lastTap: 0, timer: null, marks: {} };
 const RAW = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/main/';
 const DAYS = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 const MONTHS = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
@@ -95,11 +95,22 @@ function nav(prev, next, reset, label) {
   return h('div', { class: 'nav' }, h('button', { onclick: go(prev) }, '◀'), h('button', { class: 'mid', onclick: go(reset) }, label), h('button', { onclick: go(next) }, '▶'));
 }
 
+async function monthMarks(month) {
+  if (S.marks[month]) return S.marks[month];
+  const r = await call('monthMarks', { month });
+  S.marks[month] = r;
+  return r;
+}
+
 function calendar() {
   const box = h('section', { class: 'cal' });
+  let seq = 0;
+  const dot = () => h('i', { style: 'display:block;width:5px;height:5px;border-radius:50%;background:currentColor;margin:1px auto 0' });
   const draw = () => {
-    const [y, m] = S.cm.split('-').map(Number);
-    const first = S.cm + '-01';
+    const my = ++seq;
+    const month = S.cm;
+    const [y, m] = month.split('-').map(Number);
+    const first = month + '-01';
     const dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
     const shift = (n) => { S.cm = new Date(Date.UTC(y, m - 1 + n, 1)).toISOString().slice(0, 7); draw(); };
     const head = h('div', { class: 'head' },
@@ -107,14 +118,21 @@ function calendar() {
       h('b', {}, MONTHS[m - 1] + ' ' + y),
       h('button', { onclick: () => shift(1) }, '›'));
     const grid = h('div', { class: 'grid' }, WD.map((x) => h('span', { class: 'wdn' }, x)));
+    const btns = {};
     for (let i = 0; i < wd(first); i++) grid.append(h('span', {}));
     for (let day = 1; day <= dim; day++) {
-      const ds = S.cm + '-' + String(day).padStart(2, '0');
+      const ds = month + '-' + String(day).padStart(2, '0');
       const cls = 'd' + (ds === nowMsk().date ? ' today' : '') + (ds === S.date ? ' sel' : '');
-      grid.append(h('button', { class: cls, onclick: () => { S.date = ds; render(); } }, day));
+      const b = h('button', { class: cls, onclick: () => { S.date = ds; render(); } }, day);
+      btns[ds] = b;
+      grid.append(b);
     }
     const todayBtn = h('button', { class: 'todaybtn', onclick: () => { jumpToday(); render(); } }, 'Сегодня');
     box.replaceChildren(head, grid, todayBtn);
+    monthMarks(month).then((list) => {
+      if (my !== seq) return;
+      for (const ds of list) if (btns[ds]) btns[ds].append(dot());
+    }).catch(() => {});
   };
   draw();
   return box;
@@ -209,7 +227,7 @@ function editForm(d, i) {
   const ns = h('input', { type: 'time', value: i.start });
   const ne = h('input', { type: 'time', value: i.end });
   const nn = h('input', { type: 'text', value: i.summary });
-  const base = { original: i.original, date: d.date, start: i.start };
+  const base = { original: i.original, date: d.date, start: i.start, summary: i.summary };
   const run = (ex, msg) => safe(async () => {
     if (msg && !(await ask(msg))) return;
     await call('schedit', Object.assign({}, base, typeof ex === 'function' ? ex() : ex));
@@ -336,6 +354,7 @@ async function hwForm() {
       if (!date) { alertMsg('Выберите дату занятия'); return; }
       if (!text.value.trim()) return;
       await call('homework', { action: 'add', subject: sel.value, date, text: text.value });
+      S.marks = {};
       S.pre = null;
       render();
     }) }, 'Сохранить'));
@@ -354,7 +373,7 @@ async function viewHw() {
     const dn = done.includes(x.key);
     const card = h('section', { class: 'card hwc' + (dn ? ' done' : '') }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', {}, x.text),
       h('button', { class: 'mini' + (dn ? '' : ' alt'), onclick: safe(async () => { S.me = normMe(await call('me', { action: 'done', key: x.key, value: !dn })); render(); }) }, dn ? '✓ Сделано' : 'Отметить сделанным'));
-    if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { await call('homework', { action: 'delete', subject: x.subject, date: x.date }); render(); }) }, 'Удалить'));
+    if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }) }, 'Удалить'));
     box.append(card);
   }
   if (form && !S.pre) box.append(form);
@@ -409,9 +428,10 @@ async function viewSet() {
   const eng = h('select', {}, [['', 'Без английского'], ['morning', '9:00–12:10'], ['afternoon', '14:00–17:10']].map(([v, t]) => h('option', { value: v, selected: v === (u.englishTime || '') }, t)));
   const rem = h('input', { type: 'checkbox', checked: !!u.reminders });
   const form = h('section', { class: 'card' }, h('h3', {}, 'Настройки'), lab('Курс', course), lab('Расписание', stream), lab('Английский в четверг', eng),
-    h('label', { class: 'row' }, rem, 'Напоминания о ДЗ'),
+    h('label', { class: 'row' }, rem, 'Уведомления: ДЗ и изменения расписания'),
     h('button', { onclick: safe(async () => {
       S.boot.user = await call('settings', { course: course.value, stream: stream.value, englishTime: eng.value || null, reminders: rem.checked });
+      S.marks = {};
       jumpToday(); S.tab = 'day'; render();
     }) }, 'Сохранить'));
   const box = h('div', {}, form, subCard());

@@ -1,11 +1,13 @@
 import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { endpoint } from '../lib/auth.js';
+import { notifyStream } from '../lib/notify.js';
 import { NL } from '../lib/config.js';
 
 const D = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const T = /^[0-9]{2}:[0-9]{2}$/;
 const bad = () => new EndpointError('bad input');
+const dm = (d) => d.slice(8) + '.' + d.slice(5, 7);
 
 export default endpoint(async (input, u) => {
   if (!(await store.isAssistant(u.username))) throw new EndpointError('forbidden');
@@ -22,23 +24,26 @@ export default endpoint(async (input, u) => {
   const start = String(input.start || '');
   const evKey = orig + '[' + start + ']';
   let changed = true;
+  let note = '';
 
   if (a === 'cancel' || a === 'move') {
     if (!orig || !D.test(date) || !T.test(start)) throw bad();
     se[date] = se[date] || {};
+    const title = String(input.summary || orig).trim() || orig;
     if (a === 'cancel') {
       se[date][evKey] = { deleted: true };
+      note = '❌ Пара отменена: ' + title + NL + dm(date) + ' в ' + start;
     } else {
       const nd = String(input.newDate || '');
       const ns = String(input.newStart || '');
       const ne = String(input.newEnd || '');
       if (!D.test(nd) || !T.test(ns) || !T.test(ne)) throw bad();
-      const summary = String(input.summary || orig).trim() || orig;
       const desc = [input.teacher ? 'Преподаватель: ' + input.teacher : '', input.room ? 'Аудитория: ' + input.room : ''].filter(Boolean).join(NL);
-      const nk = summary + '[' + ns + ']';
+      const nk = title + '[' + ns + ']';
       se[nd] = se[nd] || {};
-      se[nd][nk] = { new: true, new_summary: summary, new_desc: desc, start_time: ns, end_time: ne };
+      se[nd][nk] = { new: true, new_summary: title, new_desc: desc, start_time: ns, end_time: ne };
       se[date][evKey] = { deleted: true, moved_to: nd + '|' + nk };
+      note = '↪️ Пара перенесена: ' + title + NL + 'Было: ' + dm(date) + ' ' + start + NL + 'Стало: ' + dm(nd) + ' ' + ns + '–' + ne;
     }
   } else if (a === 'undo') {
     const ev = String(input.ev || '');
@@ -63,6 +68,10 @@ export default endpoint(async (input, u) => {
     ren[sk] = sr;
     await store.set('edits', edits);
     await store.set('renames', ren);
+  }
+
+  if (note) {
+    try { await notifyStream(user.course, user.stream, note, u.id); } catch (e) {}
   }
 
   const list = [];
