@@ -3,13 +3,14 @@ import { send } from '../lib/bot.js';
 import * as V from '../lib/views.js';
 import { sendReminders } from '../lib/remind.js';
 import { toOriginal } from '../lib/schedule.js';
+import { applyHw, syncExisting } from '../lib/hwsync.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const HELP = [
   '/menu - меню', '/today, /tomorrow, /week - расписание', '/hw - домашние задания', '/app - мини-приложение',
   '', 'Ассистенты:', '/addhw Предмет | 2026-10-20 | текст', '/delhw Предмет | 2026-10-20',
-  '', 'Админ:', '/assistant add @user, /assistant del @user, /assistants', '/announce текст, /stats, /remind_now',
+  '', 'Админ:', '/assistant add @user, /assistant del @user, /assistants', '/announce текст, /stats, /remind_now, /synchw',
 ].join(NL);
 
 export default async function (message) {
@@ -52,11 +53,15 @@ export default async function (message) {
       if (await needCourse()) return;
       const p = arg.split('|').map((s) => s.trim());
       if (!p[0] || !DATE.test(p[1] || '') || (cmd === '/addhw' && !p[2])) return send(chat, 'Формат: ' + cmd + ' Предмет | ГГГГ-ММ-ДД' + (cmd === '/addhw' ? ' | текст' : ''));
-      const all = await store.loadHw(user.course, user.stream);
-      const key = (await toOriginal(user.course, user.stream, p[0])) + '|' + p[1];
-      if (cmd === '/addhw') all[key] = p.slice(2).join(' | '); else delete all[key];
-      await store.saveHw(user.course, user.stream, all);
-      return send(chat, cmd === '/addhw' ? '✅ ДЗ сохранено' : '🗑 ДЗ удалено');
+      const original = await toOriginal(user.course, user.stream, p[0]);
+      const n = await applyHw(user.course, user.stream, original, p[1], cmd === '/addhw' ? p.slice(2).join(' | ') : '');
+      return send(chat, (cmd === '/addhw' ? '✅ ДЗ сохранено' : '🗑 ДЗ удалено') + (n ? ' (синхронизировано с другими потоками: ' + n + ')' : ''));
+    }
+    case '/synchw': {
+      if (!store.isAdmin(uname)) return deny();
+      if (await needCourse()) return;
+      const r = await syncExisting(user.course);
+      return send(chat, '🔄 Синхронизация ДЗ: скопировано ' + r.copied + ', расхождений (не тронуты) ' + r.conflicts);
     }
     case '/assistant': {
       if (!store.isAdmin(uname)) return deny();
