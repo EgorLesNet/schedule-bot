@@ -6,11 +6,17 @@ import { today } from '../lib/time.js';
 export default endpoint(async (input, u) => {
   const sch = await listSchedules();
   const me = Object.assign({ done: [], notes: {}, favs: [] }, await store.get('ud:' + u.id, {}));
+  const user = await store.getUser(u.id);
+  const assistant = await store.isAssistant(u.username);
+  if (assistant && u.username && user.username !== u.username) {
+    user.username = u.username;
+    await store.saveUser(u.id, { username: u.username });
+  }
   return {
     today: today(),
-    user: await store.getUser(u.id),
+    user,
     schedules: Object.keys(sch).map((course) => ({ course, streams: sch[course] })),
-    assistant: await store.isAssistant(u.username),
+    assistant,
     admin: store.isAdmin(u.username),
     me,
   };

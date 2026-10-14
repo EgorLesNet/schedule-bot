@@ -322,6 +322,8 @@ function lessonRow(d, i) {
     acts.append(h('button', { class: 'mini alt', onclick: toggle('link', () => linkForm(d, i)) }, i.link ? '✏️ Ссылка' : '＋ Ссылка'));
     acts.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '＋ ДЗ'));
     acts.append(h('button', { class: 'mini alt', onclick: toggle('edit', () => editForm(d, i)) }, '⚙️'));
+  } else {
+    acts.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '💡 ДЗ'));
   }
   body.append(acts, slot);
   return h('div', { class: 'lesson' + (live ? ' now' : ''), style: '--c:hsl(' + hue(i.original) + ' 65% 52%)' }, h('div', { class: 'time' }, i.start + '–' + i.end), body);
@@ -384,7 +386,8 @@ async function viewWeek() {
     days.map(dayCard));
 }
 
-async function hwForm() {
+async function hwForm(mode = 'add') {
+  const propose = mode === 'propose';
   const subs = await call('subjects', {}, true);
   const pre = S.pre || {};
   let date = '';
@@ -406,34 +409,67 @@ async function hwForm() {
   };
   sel.addEventListener('change', () => { buzz.pick(); load(); });
   load();
-  return h('section', { class: 'card' }, h('h3', {}, 'Добавить ДЗ'), sel, pick, text,
+  return h('section', { class: 'card' }, h('h3', {}, propose ? '💡 Предложить ДЗ' : 'Добавить ДЗ'),
+    propose ? h('p', { class: 'muted' }, 'Ассистент проверит текст и опубликует его для всех') : null,
+    sel, pick, text,
     h('button', { onclick: safe(async () => {
       if (!date) { buzz.err(); alertMsg('Выберите дату занятия'); return false; }
       if (!text.value.trim()) { buzz.err(); return false; }
-      await call('homework', { action: 'add', subject: sel.value, date, text: text.value });
-      S.marks = {};
+      await call(propose ? 'proposal' : 'homework', { action: 'add', subject: sel.value, date, text: text.value });
+      if (propose) alertMsg('Отправлено на проверку ассистенту');
+      else S.marks = {};
       S.pre = null;
       render();
-    }) }, 'Сохранить'));
+    }) }, propose ? 'Отправить на проверку' : 'Сохранить'));
+}
+
+function proposalCard(p, list) {
+  const cur = list.find((x) => x.key === p.original + '|' + p.date);
+  const t = h('textarea', { rows: 3 });
+  t.value = p.text;
+  return h('section', { class: 'card' },
+    h('b', {}, '💡 ' + p.subject + ' · ' + p.date.split('-').reverse().join('.')),
+    h('div', { class: 'muted' }, 'от ' + (p.uname ? '@' + p.uname : 'студента')),
+    cur ? h('div', { class: 'muted' }, 'Сейчас в ДЗ: ' + cur.text) : null,
+    t,
+    h('button', { class: 'mini', onclick: safe(async () => { await call('proposal', { action: 'approve', id: p.id, text: t.value }); S.marks = {}; render(); }) }, '✓ Принять'),
+    h('button', { class: 'mini danger', onclick: safe(async () => { buzz.heavy(); await call('proposal', { action: 'reject', id: p.id }); render(); }, 'none') }, '✕ Отклонить'));
+}
+
+function myProposals(mine) {
+  const c = h('section', { class: 'card' }, h('h3', {}, 'Мои предложения'));
+  for (const p of mine) {
+    c.append(h('div', { class: 'erow' },
+      h('span', {}, '⏳ ' + p.subject + ' · ' + p.date.split('-').reverse().join('.') + ': ' + p.text.slice(0, 60)),
+      h('button', { class: 'mini danger', onclick: safe(async () => { await call('proposal', { action: 'cancel', id: p.id }); render(); }) }, 'Отозвать')));
+  }
+  return c;
 }
 
 async function viewHw() {
   const list = (await call('homework', { action: 'list' }, true)).map((x) => Object.assign({}, x, { key: x.key || x.subject + '|' + x.date }));
   const done = S.me.done;
   const sorted = list.slice().sort((a, b) => done.includes(a.key) - done.includes(b.key));
+  const assistant = S.boot.assistant;
+  const prop = await call('proposal', { action: 'list' }).catch(() => ({ pending: [], mine: [] }));
   const box = h('div', {});
-  const form = S.boot.assistant ? await hwForm() : null;
-  if (form && S.pre) box.append(form);
+  if (assistant && prop.pending.length) {
+    box.append(h('p', { class: 'muted center' }, '💡 На проверке: ' + prop.pending.length));
+    for (const p of prop.pending) box.append(proposalCard(p, list));
+  }
+  const form = await hwForm(assistant ? 'add' : 'propose');
+  if (S.pre) box.append(form);
   if (!list.length) box.append(h('p', { class: 'muted' }, 'Список ДЗ пуст'));
   else box.append(h('p', { class: 'muted center' }, 'Выполнено ' + list.filter((x) => done.includes(x.key)).length + ' из ' + list.length));
   for (const x of sorted) {
     const dn = done.includes(x.key);
     const card = h('section', { class: 'card hwc' + (dn ? ' done' : '') }, h('b', {}, x.subject + ' · ' + x.date.split('-').reverse().join('.')), h('p', { style: 'white-space:pre-wrap' }, linkify(x.text)),
       h('button', { class: 'mini' + (dn ? '' : ' alt'), onclick: safe(async () => { S.me = normMe(await call('me', { action: 'done', key: x.key, value: !dn })); render(); }, 'tap') }, dn ? '✓ Сделано' : 'Отметить сделанным'));
-    if (S.boot.assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { buzz.heavy(); await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }, 'none') }, 'Удалить'));
+    if (assistant) card.append(h('button', { class: 'mini danger', onclick: safe(async () => { buzz.heavy(); await call('homework', { action: 'delete', subject: x.subject, date: x.date }); S.marks = {}; render(); }, 'none') }, 'Удалить'));
     box.append(card);
   }
-  if (form && !S.pre) box.append(form);
+  if (!S.pre) box.append(form);
+  if (!assistant && prop.mine.length) box.append(myProposals(prop.mine));
   return box;
 }
 
