@@ -40,6 +40,10 @@ const hue = (s) => { let x = 0; for (const c of String(s)) x = (x * 31 + c.charC
 const normMe = (m) => Object.assign({ done: [], notes: {}, favs: [] }, m || {});
 const ask = (m) => new Promise((res) => { if (tg && tg.showConfirm) tg.showConfirm(m, res); else res(confirm(m)); });
 
+const hhmm = (m) => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+const LANG_TIMES = (() => { const o = []; for (let m = 480; m <= 1080; m += 30) o.push(hhmm(m)); return o; })();
+const langSpan = (t) => { const m = mins(t); return hhmm(m) + '–' + hhmm(m + 90) + ', ' + hhmm(m + 100) + '–' + hhmm(m + 190); };
+
 function weekLabel(a) {
   const b = add(a, 6);
   const left = P(a).getUTCMonth() === P(b).getUTCMonth() ? String(P(a).getUTCDate()) : fd(a);
@@ -321,7 +325,7 @@ function lessonRow(d, i) {
   if (S.boot.assistant) {
     acts.append(h('button', { class: 'mini alt', onclick: toggle('link', () => linkForm(d, i)) }, i.link ? '✏️ Ссылка' : '＋ Ссылка'));
     acts.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '＋ ДЗ'));
-    acts.append(h('button', { class: 'mini alt', onclick: toggle('edit', () => editForm(d, i)) }, '⚙️'));
+    if (!i.lang) acts.append(h('button', { class: 'mini alt', onclick: toggle('edit', () => editForm(d, i)) }, '⚙️'));
   } else {
     acts.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); S.pre = { subject: i.summary, date: d.date }; S.tab = 'hw'; render(); } }, '💡 ДЗ'));
   }
@@ -527,6 +531,10 @@ async function viewSet() {
   const stream = h('select', {});
   const info = h('p', { class: 'muted' }, '');
   const streamLab = lab('Поток / расписание', stream);
+  const lang0 = u.langStart || (u.englishTime === 'morning' ? '09:00' : u.englishTime === 'afternoon' ? '14:00' : '');
+  const lang = h('select', {}, [h('option', { value: '' }, 'Не выбрано'), ...LANG_TIMES.map((t) => h('option', { value: t, selected: t === lang0 }, t))]);
+  const langLab = lab('Ин. яз: время начала', lang);
+  const langInfo = h('p', { class: 'muted' }, '');
   const streamsNow = () => (sch[course.value] || []).filter((s) => (FILES[fac.value + ':' + dir.value] || []).includes(s.file));
   const fillDir = () => {
     const f = FAC[Number(fac.value)] || { directions: [] };
@@ -539,21 +547,29 @@ async function viewSet() {
     streamLab.style.display = list.length > 1 ? '' : 'none';
     info.textContent = list.length ? '' : 'Расписание для этого направления и курса пока не добавлено';
   };
+  const refreshLang = () => {
+    const on = course.value === '1' || course.value === '2';
+    langLab.style.display = on ? '' : 'none';
+    langInfo.style.display = on ? '' : 'none';
+    langInfo.textContent = lang.value ? 'Две пары: ' + langSpan(lang.value) + ' (перерыв 10 мин). Ин. яз показывается в будний день без других пар.' : 'Выберите время начала: Ин. яз появится в будний день без других пар.';
+  };
   fillDir();
   fillStream();
+  refreshLang();
   fac.addEventListener('change', () => { buzz.pick(); fillDir(); fillStream(); });
-  course.addEventListener('change', () => { buzz.pick(); fillStream(); });
+  course.addEventListener('change', () => { buzz.pick(); fillStream(); refreshLang(); });
   dir.addEventListener('change', () => { buzz.pick(); fillStream(); });
-  const eng = h('select', {}, [['', 'Без английского'], ['morning', '9:00–12:10'], ['afternoon', '14:00–17:10']].map(([v, t]) => h('option', { value: v, selected: v === (u.englishTime || '') }, t)));
+  lang.addEventListener('change', () => { buzz.pick(); refreshLang(); });
   const rem = h('input', { type: 'checkbox', checked: !!u.reminders });
   rem.addEventListener('change', () => buzz.pick());
   const form = h('section', { class: 'card' }, h('h3', {}, 'Настройки'),
     lab('Факультет', fac), lab('Курс', course), lab('Направление', dir), streamLab, info,
-    lab('Английский в четверг', eng),
+    langLab, langInfo,
     h('label', { class: 'row' }, rem, 'Уведомления: ДЗ и изменения расписания'),
     h('button', { onclick: safe(async () => {
       if (!streamsNow().length) { buzz.err(); alertMsg('Для выбранных направления и курса расписание пока не добавлено'); return false; }
-      S.boot.user = await call('settings', { faculty: Number(fac.value), direction: Number(dir.value), course: course.value, stream: stream.value, englishTime: eng.value || null, reminders: rem.checked });
+      const ls = (course.value === '1' || course.value === '2') && lang.value ? lang.value : null;
+      S.boot.user = await call('settings', { faculty: Number(fac.value), direction: Number(dir.value), course: course.value, stream: stream.value, langStart: ls, reminders: rem.checked });
       S.marks = {};
       jumpToday(); S.tab = 'day'; render();
     }) }, 'Сохранить'));

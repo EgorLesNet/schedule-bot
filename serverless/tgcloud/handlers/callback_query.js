@@ -3,10 +3,16 @@ import * as store from '../lib/store.js';
 import { edit } from '../lib/bot.js';
 import * as V from '../lib/views.js';
 import { listSchedules, loadEvents } from '../lib/schedule.js';
+import { isLangStart } from '../lib/lang.js';
 import { NL } from '../lib/config.js';
 
 const NEED = ['menu', 'd', 'w', 'hw', 'rem', 'remt', 'rf'];
-const ENG = { m: 'morning', a: 'afternoon', n: null };
+
+async function chooseStream(uid, course, stream) {
+  if (course === '1' || course === '2') return V.langView(course, stream);
+  const user = await store.saveUser(uid, { course, stream, langStart: null, englishTime: null });
+  return await V.menuView(user);
+}
 
 export default async function (q) {
   try { await api.answerCallbackQuery({ callback_query_id: q.id }); } catch (e) {}
@@ -23,11 +29,17 @@ export default async function (q) {
   else if (a === 'dr') {
     user = await store.saveUser(uid, { faculty: +p[1], direction: +p[3] });
     v = await V.streamsView(p[2], +p[1], +p[3]);
+    if (v.single) v = await chooseStream(uid, p[2], v.single);
   }
-  else if (a === 'c') v = await V.streamsView(p[1], user.faculty, user.direction);
-  else if (a === 's') v = V.englishView(p[1], p[2]);
+  else if (a === 'c') {
+    v = await V.streamsView(p[1], user.faculty, user.direction);
+    if (v.single) v = await chooseStream(uid, p[1], v.single);
+  }
+  else if (a === 's') v = await chooseStream(uid, p[1], p[2]);
   else if (a === 'e') {
-    user = await store.saveUser(uid, { course: p[1], stream: p[2], englishTime: ENG[p[3]] || null });
+    const raw = p[3] && p[3] !== 'n' ? p[3].slice(0, 2) + ':' + p[3].slice(2) : null;
+    const ls = raw && isLangStart(raw) && (p[1] === '1' || p[1] === '2') ? raw : null;
+    user = await store.saveUser(uid, { course: p[1], stream: p[2], langStart: ls, englishTime: null });
     v = await V.menuView(user);
   }
   else if (a === 'menu') v = await V.menuView(user);

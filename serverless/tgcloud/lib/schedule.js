@@ -2,9 +2,11 @@ import * as store from './store.js';
 import { getText } from './http.js';
 import { parseIcs } from './ics.js';
 import { BASE, API_CONTENTS, TTL, NL } from './config.js';
-import { weekday, human } from './time.js';
+import { human } from './time.js';
+import { langLessons } from './lang.js';
 
 const NAME = /^GAUGN_([0-9]+)_kurs_(.+)[.]ics$/i;
+const LUNCH = /обед|перерыв/i;
 const ONLINE = ['онлайн', 'online', 'zoom', 'teams', 'вебинар', 'webinar', 'дистанционно', 'удаленно', 'remote', 'ссылка', 'конференция', 'conference', 'meet', 'meeting'];
 
 function hash(s) {
@@ -134,19 +136,17 @@ export function parseTeacherRoom(desc) {
   return { teacher, room };
 }
 
-export function buildDay(events, date, english, hwAll) {
+export function buildDay(events, date, lang, hwAll) {
   const dayEv = events.filter((e) => e.date === date);
-  const lunchOnly = dayEv.length > 0 && dayEv.every((e) => /обед|перерыв/i.test(e.summary));
-  const list = dayEv.slice();
-  if (weekday(date) === 3 && (english === 'morning' || english === 'afternoon') && !list.some((e) => /английский/i.test(e.summary))) {
-    const am = english === 'morning';
-    list.push({ date, start: am ? '09:00' : '14:00', end: am ? '12:10' : '17:10', summary: 'Английский язык', original: 'Английский язык', desc: 'Онлайн занятие' });
-  }
+  const extra = langLessons(events, date, lang);
+  const lunchOnly = !extra.length && dayEv.length > 0 && dayEv.every((e) => LUNCH.test(e.summary));
+  const base = extra.length ? dayEv.filter((e) => !LUNCH.test(e.summary)) : dayEv;
+  const list = base.concat(extra);
   list.sort((a, b) => a.start.localeCompare(b.start));
   const items = lunchOnly ? [] : list.map((e) => {
     const tr = parseTeacherRoom(e.desc || '');
     const hay = ((e.desc || '') + ' ' + e.summary).toLowerCase();
-    return { start: e.start, end: e.end, summary: e.summary, teacher: tr.teacher, room: tr.room, online: ONLINE.some((k) => hay.includes(k)), hw: (hwAll || {})[e.original + '|' + date] || '' };
+    return { start: e.start, end: e.end, summary: e.summary, teacher: tr.teacher, room: tr.room, online: ONLINE.some((k) => hay.includes(k)), lang: !!e.lang, hw: (hwAll || {})[e.original + '|' + date] || '' };
   });
   return { date, label: human(date), items };
 }

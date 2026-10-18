@@ -3,6 +3,7 @@ import { listSchedules, loadEvents, buildDay, dayText, getRenames } from './sche
 import { today, addDays, weekStart, ruShort } from './time.js';
 import { APP_URL, NL } from './config.js';
 import { FACULTIES, COURSES_COUNT, filesFor } from './faculties.js';
+import { userLang, langSpan, LANG_TIMES } from './lang.js';
 
 const b = (text, data) => ({ text, callback_data: data });
 const kb = (rows) => ({ inline_keyboard: rows });
@@ -47,9 +48,13 @@ export async function directionsView(fi, course) {
   return { text: f.name + ' факультет, ' + course + ' курс' + NL + 'Выбери направление:', markup: kb(rows) };
 }
 
-export function englishView(course, stream) {
-  const p = 'e:' + course + ':' + stream + ':';
-  return { text: 'Выбери время для английского в четверг:', markup: kb([[b('🕘 9:00-12:10', p + 'm')], [b('🕑 14:00-17:10', p + 'a')], [b('❌ Без английского', p + 'n')]]) };
+export function langView(course, stream) {
+  const rows = [];
+  for (let i = 0; i < LANG_TIMES.length; i += 4) {
+    rows.push(LANG_TIMES.slice(i, i + 4).map((t) => b(t, 'e:' + course + ':' + stream + ':' + t.replace(':', ''))));
+  }
+  rows.push([b('❌ Не выбрано', 'e:' + course + ':' + stream + ':n')]);
+  return { text: '🗣 Ин. яз' + NL + 'Выбери время начала. Две пары по 90 минут, перерыв 10 минут.', markup: kb(rows) };
 }
 
 export async function streamsView(course, fi, di) {
@@ -58,7 +63,7 @@ export async function streamsView(course, fi, di) {
     const markup = has(fi) && has(di) ? kb([[b('⬅️ Назад', 'k:' + fi + ':' + course)]]) : kb([[b('⬅️ К факультетам', 'courses')]]);
     return { text: '😕 Расписание для этого направления и курса пока не добавлено.', markup };
   }
-  if (streams.length === 1) return englishView(course, streams[0].key);
+  if (streams.length === 1) return { single: streams[0].key };
   return { text: 'Выбери своё расписание:', markup: kb(streams.map((s) => [b('📖 ' + s.name, 's:' + course + ':' + s.key)])) };
 }
 
@@ -69,8 +74,8 @@ export async function menuView(user) {
   const f = has(user.faculty) ? FACULTIES[user.faculty] : null;
   if (f) t += '🏛 ' + f.name + ' факультет' + (f.directions[user.direction] ? ', ' + f.directions[user.direction] : '') + NL;
   t += 'Выбран ' + user.course + ' курс' + (streams.length > 1 && info ? ', ' + info.name : '');
-  if (user.englishTime === 'morning') t += NL + '💡 Английский: 9:00-12:10';
-  if (user.englishTime === 'afternoon') t += NL + '💡 Английский: 14:00-17:10';
+  const ls = userLang(user);
+  if (ls) t += NL + '🗣 Ин. яз: ' + langSpan(ls);
   t += NL + (user.reminders ? '🔔' : '🔕') + ' Напоминания: ' + (user.reminders ? 'вкл' : 'выкл') + NL + 'Выбери действие:';
   const rows = [
     [b('📅 Сегодня', 'd:0'), b('📅 Завтра', 'd:1')],
@@ -88,14 +93,14 @@ export async function menuView(user) {
 export async function dayView(user, offset) {
   const date = addDays(today(), offset);
   const [events, hw] = await Promise.all([loadEvents(user.course, user.stream), store.loadHw(user.course, user.stream)]);
-  return { text: dayText(buildDay(events, date, user.englishTime, hw), offset === 1 ? 'Завтра, ' : ''), markup: back };
+  return { text: dayText(buildDay(events, date, userLang(user), hw), offset === 1 ? 'Завтра, ' : ''), markup: back };
 }
 
 export async function weekView(user, offset) {
   const start = weekStart(addDays(today(), 7 * offset));
   const [events, hw] = await Promise.all([loadEvents(user.course, user.stream), store.loadHw(user.course, user.stream)]);
   let t = '';
-  for (let i = 0; i < 7; i++) t += dayText(buildDay(events, addDays(start, i), user.englishTime, hw));
+  for (let i = 0; i < 7; i++) t += dayText(buildDay(events, addDays(start, i), userLang(user), hw));
   if (t.length > 4000) t = t.slice(0, 4000) + '…';
   return { text: t, markup: back };
 }

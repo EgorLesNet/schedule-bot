@@ -1,6 +1,7 @@
 import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { loadEvents, toOriginal } from '../lib/schedule.js';
+import { LANG_NAME, langDates } from '../lib/lang.js';
 import { applyHw } from '../lib/hwsync.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
@@ -40,7 +41,8 @@ export default endpoint(async (input, u) => {
     if (list.filter((p) => p.uid === u.id).length >= 5) throw new EndpointError('too many pending');
     if (list.length >= 100) throw new EndpointError('queue full');
     const events = await loadEvents(course, stream);
-    if (!events.some((e) => e.date === date && e.summary === subject)) throw new EndpointError('no such lesson');
+    const lang = subject === LANG_NAME && (course === '1' || course === '2') && langDates(events, date).includes(date);
+    if (!lang && !events.some((e) => e.date === date && e.summary === subject)) throw new EndpointError('no such lesson');
     const original = await toOriginal(course, stream, subject);
     const id = Date.now().toString(36) + Math.floor(Math.random() * 1000).toString(36);
     list.push({ id, uid: u.id, uname: u.username || '', subject, original, date, text, at: Date.now() });

@@ -1,6 +1,7 @@
 import * as store from '../lib/store.js';
 import { loadEvents, buildDay } from '../lib/schedule.js';
 import { attachLinks } from '../lib/links.js';
+import { userLang } from '../lib/lang.js';
 import { endpoint } from '../lib/auth.js';
 import { today, addDays } from '../lib/time.js';
 
@@ -14,6 +15,7 @@ export default endpoint(async (input, u) => {
     store.loadHw(user.course, user.stream),
     store.loadLinks(user.course, user.stream),
   ]);
-  const days = Array.from({ length: n }, (_, i) => buildDay(events, addDays(from, i), user.englishTime, hw));
+  const lang = userLang(user);
+  const days = Array.from({ length: n }, (_, i) => buildDay(events, addDays(from, i), lang, hw));
   return attachLinks(days, events, links);
 });
