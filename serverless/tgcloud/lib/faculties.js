@@ -2,17 +2,24 @@ export const FACULTY_NAMES = ['Исторический', 'Мировой пол
 
 export const COURSES_COUNT = 4;
 
-// Имя файла расписания: <Факультет>_<N>курс_<Направление>[_<Поток>].ics
-// пример: Социологический_2курс_1поток.ics → факультет «Социологический», 2 курс, направление «1 поток».
-// Ключ потока = хэш имени файла; для трёх переименованных файлов он считается от СТАРОГО имени,
-// чтобы не потерять ДЗ, ссылки, правки и сохранённый выбор пользователей.
-const NEW_TO_OLD = {
-  'Социологический_1курс_Общий.ics': 'GAUGN_1_kurs_Общий.ics',
-  'Социологический_2курс_1поток.ics': 'GAUGN_2_kurs_Поток_1.ics',
-  'Социологический_2курс_2поток.ics': 'GAUGN_2_kurs_Поток_2.ics',
+// Расписания лежат в docs/<Факультет>/<N>курс_<Направление>[_<Поток>].ics (ветка main).
+// Префикс факультета в имени файла необязателен: Социологический_2курс_1поток.ics тоже подходит.
+// Файлы в корне репозитория (с префиксом факультета) тоже читаются, пока их не перенесли.
+const FILE_RE = /^(?:(.+?)_)?\s*([0-9]+)\s*курс_(.+)[.]ics$/i;
+
+// Старые имена файлов в корне → поля расписания
+const OLD_FILES = {
+  'GAUGN_1_kurs_Общий.ics': { faculty: 'Социологический', course: '1', direction: 'Общий', stream: '' },
+  'GAUGN_2_kurs_Поток_1.ics': { faculty: 'Социологический', course: '2', direction: '1 поток', stream: '' },
+  'GAUGN_2_kurs_Поток_2.ics': { faculty: 'Социологический', course: '2', direction: '2 поток', stream: '' },
 };
-const OLD_TO_NEW = {};
-for (const [n, o] of Object.entries(NEW_TO_OLD)) OLD_TO_NEW[o] = n;
+
+const idOf = (f) => [f.faculty, f.course, f.direction, f.stream].join('|');
+
+// Ключ потока = хэш «факультет|курс|направление|поток», а не пути файла: файл можно переименовать и перенести
+// без потери ДЗ, ссылок, правок и выбора пользователей. Для трёх старых файлов ключ считается от старого имени.
+const LEGACY_KEYS = {};
+for (const [name, f] of Object.entries(OLD_FILES)) LEGACY_KEYS[idOf(f)] = name;
 
 export function fileKey(s) {
   let x = 5381;
@@ -20,30 +27,32 @@ export function fileKey(s) {
   return 's' + x.toString(36);
 }
 
-const FILE_RE = /^(.+?)_\s*([0-9]+)\s*курс_(.+)[.]ics$/i;
-
 export function prettify(s) {
   return String(s).replace(/^([0-9]+)([^0-9\s].*)$/, '$1 $2').trim();
 }
 
 function canonFaculty(name) {
-  const n = name.trim().toLowerCase();
-  return FACULTY_NAMES.find((x) => x.toLowerCase() === n) || name.trim();
+  const n = String(name || '').trim();
+  if (!n) return '';
+  return FACULTY_NAMES.find((x) => x.toLowerCase() === n.toLowerCase()) || n;
 }
 
-export function parseSchedule(file) {
-  const norm = OLD_TO_NEW[file] || file;
-  const m = FILE_RE.exec(norm);
-  if (!m) return null;
-  const parts = m[3].split('_').filter(Boolean);
-  if (!parts.length) return null;
-  return {
-    faculty: canonFaculty(m[1]),
-    course: String(Number(m[2])),
-    direction: prettify(parts[0]),
-    stream: parts.slice(1).map(prettify).join(' '),
-    key: fileKey(NEW_TO_OLD[norm] || file),
-  };
+export function parseSchedule(path) {
+  const parts = path.split('/');
+  const base = parts[parts.length - 1];
+  let f = OLD_FILES[base] ? Object.assign({}, OLD_FILES[base]) : null;
+  if (!f) {
+    const m = FILE_RE.exec(base);
+    if (!m) return null;
+    const segs = m[3].split('_').filter(Boolean);
+    if (!segs.length) return null;
+    const folder = parts.length >= 3 && parts[0] === 'docs' ? parts[1] : '';
+    const faculty = canonFaculty(folder || m[1]);
+    if (!faculty) return null;
+    f = { faculty, course: String(Number(m[2])), direction: prettify(segs[0]), stream: segs.slice(1).map(prettify).join(' ') };
+  }
+  const id = idOf(f);
+  return Object.assign(f, { key: fileKey(LEGACY_KEYS[id] || id) });
 }
 
 export function facultyList(entries) {
@@ -62,7 +71,7 @@ export function streamsOf(entries, faculty, course, direction) {
   return entries.filter((e) => e.faculty === faculty && e.course === String(course) && e.direction === direction);
 }
 
-// Пары (курс, направление) факультета: так их показывает Mini App (список направлений без привязки к курсу)
+// Пары (курс, направление) факультета: так их показывает Mini App (web/settings.js фильтрует по курсу)
 export function directionPairs(entries, faculty) {
   const out = [];
   for (const e of entries) if (e.faculty === faculty && !out.some((p) => p.course === e.course && p.direction === e.direction)) out.push({ course: e.course, direction: e.direction });

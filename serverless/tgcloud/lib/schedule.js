@@ -1,7 +1,7 @@
 import * as store from './store.js';
 import { getText } from './http.js';
 import { parseIcs } from './ics.js';
-import { BASE, API_CONTENTS, TTL, NL } from './config.js';
+import { BASE, API_TREE, TTL, NL } from './config.js';
 import { human } from './time.js';
 import { langLessons } from './lang.js';
 import { parseSchedule } from './faculties.js';
@@ -10,22 +10,25 @@ const LUNCH = /обед|перерыв/i;
 const ONLINE = ['онлайн', 'online', 'zoom', 'teams', 'вебинар', 'webinar', 'дистанционно', 'удаленно', 'remote', 'ссылка', 'конференция', 'conference', 'meet', 'meeting'];
 
 export async function listSchedules(force = false) {
-  const c = await store.get('cache:schedules2');
+  const c = await store.get('cache:schedules3');
   if (c && !force && Date.now() - c.at < TTL) return c.data;
   try {
-    const items = JSON.parse(await getText(API_CONTENTS));
+    const tree = JSON.parse(await getText(API_TREE)).tree || [];
+    const paths = tree
+      .filter((it) => it.type === 'blob' && /[.]ics$/i.test(it.path) && (it.path.startsWith('docs/') || !it.path.includes('/')))
+      .map((it) => it.path)
+      .sort((a, b) => Number(b.startsWith('docs/')) - Number(a.startsWith('docs/')));
     const data = {};
     const seen = new Set();
-    for (const it of items) {
-      if (it.type !== 'file') continue;
-      const p = parseSchedule(it.name);
+    for (const path of paths) {
+      const p = parseSchedule(path);
       if (!p || seen.has(p.key)) continue;
       seen.add(p.key);
-      (data[p.course] = data[p.course] || []).push({ key: p.key, file: it.name, faculty: p.faculty, direction: p.direction, stream: p.stream, name: p.stream || p.direction });
+      (data[p.course] = data[p.course] || []).push({ key: p.key, file: path, faculty: p.faculty, direction: p.direction, stream: p.stream, name: p.stream || p.direction });
     }
     for (const arr of Object.values(data)) arr.sort((a, b) => a.name.localeCompare(b.name, 'ru', { numeric: true }));
     if (Object.keys(data).length) {
-      await store.set('cache:schedules2', { at: Date.now(), data });
+      await store.set('cache:schedules3', { at: Date.now(), data });
       return data;
     }
   } catch (e) {}
@@ -95,7 +98,7 @@ export async function loadEvents(course, stream, force = false) {
   if (c && !force && Date.now() - c.at < TTL) text = c.text;
   else {
     try {
-      text = await getText(BASE + '/' + encodeURIComponent(info.file));
+      text = await getText(BASE + '/' + info.file.split('/').map(encodeURIComponent).join('/'));
       await store.set(ck, { at: Date.now(), text });
     } catch (e) {
       if (c) text = c.text; else return [];
