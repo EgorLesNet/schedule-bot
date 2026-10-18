@@ -1,5 +1,6 @@
 import * as store from '../lib/store.js';
 import { listSchedules } from '../lib/schedule.js';
+import { FACULTIES, COURSES_COUNT, FILES } from '../lib/faculties.js';
 import { endpoint } from '../lib/auth.js';
 import { today } from '../lib/time.js';
 
@@ -16,6 +17,9 @@ export default endpoint(async (input, u) => {
     today: today(),
     user,
     schedules: Object.keys(sch).map((course) => ({ course, streams: sch[course] })),
+    faculties: FACULTIES,
+    courses: COURSES_COUNT,
+    files: FILES,
     assistant,
     admin: store.isAdmin(u.username),
     me,

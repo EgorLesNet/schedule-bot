@@ -18,11 +18,11 @@ export default async function (q) {
   let v;
   if (NEED.includes(a) && !user.course) v = await V.coursesView();
   else if (a === 'courses') v = await V.coursesView();
-  else if (a === 'f') v = V.directionsView(+p[1]);
-  else if (a === 'dr') v = V.courseNumView(+p[1], +p[2]);
-  else if (a === 'k') {
-    user = await store.saveUser(uid, { faculty: +p[1], direction: +p[2] });
-    v = await V.streamsView(p[3], +p[1], +p[2]);
+  else if (a === 'f') v = V.courseNumView(+p[1]);
+  else if (a === 'k') v = await V.directionsView(+p[1], p[2]);
+  else if (a === 'dr') {
+    user = await store.saveUser(uid, { faculty: +p[1], direction: +p[3] });
+    v = await V.streamsView(p[2], +p[1], +p[3]);
   }
   else if (a === 'c') v = await V.streamsView(p[1], user.faculty, user.direction);
   else if (a === 's') v = V.englishView(p[1], p[2]);

@@ -23,3 +23,16 @@ export const FILES = {
 };
 
 export const filesFor = (fi, di) => FILES[fi + ':' + di] || [];
+
+export function streamsFor(streams, fi, di) {
+  const files = filesFor(fi, di);
+  return (streams || []).filter((s) => files.includes(s.file));
+}
+
+export function sameGroup(a, b) {
+  const groups = Object.values(FILES);
+  const ga = groups.filter((g) => g.includes(a));
+  const gb = groups.filter((g) => g.includes(b));
+  if (!ga.length && !gb.length) return true;
+  return ga.some((g) => g.includes(b));
+}

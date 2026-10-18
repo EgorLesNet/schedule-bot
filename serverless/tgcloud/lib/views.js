@@ -19,21 +19,13 @@ export async function coursesView() {
   return facultiesView();
 }
 
-export function directionsView(fi) {
+export function courseNumView(fi) {
   const f = FACULTIES[fi];
   if (!f) return facultiesView();
-  const rows = f.directions.map((d, i) => [b(d, 'dr:' + fi + ':' + i)]);
-  rows.push([b('⬅️ К факультетам', 'courses')]);
-  return { text: f.name + ' факультет' + NL + 'Выбери направление:', markup: kb(rows) };
-}
-
-export function courseNumView(fi, di) {
-  const f = FACULTIES[fi];
-  if (!f || !f.directions[di]) return facultiesView();
   const rows = [];
-  for (let c = 1; c <= COURSES_COUNT; c++) rows.push([b(c + ' курс', 'k:' + fi + ':' + di + ':' + c)]);
-  rows.push([b('⬅️ Назад', 'f:' + fi)]);
-  return { text: f.name + ' факультет' + NL + f.directions[di] + NL + 'Выбери курс:', markup: kb(rows) };
+  for (let c = 1; c <= COURSES_COUNT; c++) rows.push([b(c + ' курс', 'k:' + fi + ':' + c)]);
+  rows.push([b('⬅️ К факультетам', 'courses')]);
+  return { text: f.name + ' факультет' + NL + 'Выбери курс:', markup: kb(rows) };
 }
 
 async function courseStreams(course, fi, di) {
@@ -41,6 +33,18 @@ async function courseStreams(course, fi, di) {
   if (!has(fi) || !has(di)) return all;
   const files = filesFor(fi, di);
   return all.filter((s) => files.includes(s.file));
+}
+
+export async function directionsView(fi, course) {
+  const f = FACULTIES[fi];
+  if (!f) return facultiesView();
+  const rows = [];
+  for (let i = 0; i < f.directions.length; i++) {
+    const ok = (await courseStreams(course, fi, i)).length > 0;
+    rows.push([b(f.directions[i] + (ok ? '' : ' (нет расписания)'), 'dr:' + fi + ':' + course + ':' + i)]);
+  }
+  rows.push([b('⬅️ Назад', 'f:' + fi)]);
+  return { text: f.name + ' факультет, ' + course + ' курс' + NL + 'Выбери направление:', markup: kb(rows) };
 }
 
 export function englishView(course, stream) {
@@ -51,7 +55,7 @@ export function englishView(course, stream) {
 export async function streamsView(course, fi, di) {
   const streams = await courseStreams(course, fi, di);
   if (!streams.length) {
-    const markup = has(fi) && has(di) ? kb([[b('⬅️ Назад', 'dr:' + fi + ':' + di)]]) : kb([[b('⬅️ К факультетам', 'courses')]]);
+    const markup = has(fi) && has(di) ? kb([[b('⬅️ Назад', 'k:' + fi + ':' + course)]]) : kb([[b('⬅️ К факультетам', 'courses')]]);
     return { text: '😕 Расписание для этого направления и курса пока не добавлено.', markup };
   }
   if (streams.length === 1) return englishView(course, streams[0].key);

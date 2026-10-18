@@ -1,5 +1,6 @@
 import * as store from './store.js';
 import { listSchedules, loadEvents } from './schedule.js';
+import { sameGroup } from './faculties.js';
 
 const norm = (s) => String(s).trim().toLowerCase();
 
@@ -13,10 +14,12 @@ async function loadAll(course) {
 function counterparts(ctx, stream, original, date) {
   const mine = (ctx.evs[stream] || []).filter((e) => e.date === date && norm(e.original) === norm(original));
   if (!mine.length) return [];
+  const me = ctx.streams.find((x) => x.key === stream);
   const starts = new Set(mine.map((e) => e.start));
   const out = [];
   for (const s of ctx.streams) {
     if (s.key === stream) continue;
+    if (me && !sameGroup(me.file, s.file)) continue;
     const ev = (ctx.evs[s.key] || []).find((e) => e.date === date && starts.has(e.start) && norm(e.original) === norm(original));
     if (ev) out.push({ stream: s.key, original: ev.original });
   }

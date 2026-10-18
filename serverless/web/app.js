@@ -511,20 +511,49 @@ async function editsCard() {
 
 async function viewSet() {
   const sch = {}; for (const x of S.boot.schedules) sch[x.course] = x.streams;
+  const FAC = S.boot.faculties || [];
+  const FILES = S.boot.files || {};
   const u = S.boot.user;
   const lab = (t, el) => h('label', {}, h('span', { class: 'muted' }, t), el);
-  const course = h('select', {}, Object.keys(sch).sort((a, b) => a - b).map((c) => h('option', { value: c, selected: c === u.course }, c + ' курс')));
+  const defFac = () => {
+    const ks = Object.keys(FILES).filter((k) => (FILES[k] || []).length).map((k) => Number(k.split(':')[0]));
+    return ks.length ? Math.min(...ks) : 0;
+  };
+  const f0 = Number.isInteger(u.faculty) ? u.faculty : defFac();
+  const fac = h('select', {}, FAC.map((f, i) => h('option', { value: String(i), selected: i === f0 }, f.name)));
+  const courseList = Array.from({ length: S.boot.courses || 4 }, (_, i) => String(i + 1));
+  const course = h('select', {}, courseList.map((c) => h('option', { value: c, selected: c === u.course }, c + ' курс')));
+  const dir = h('select', {});
   const stream = h('select', {});
-  const fill = () => stream.replaceChildren(...(sch[course.value] || []).map((s) => h('option', { value: s.key, selected: s.key === u.stream }, s.name)));
-  fill();
-  course.addEventListener('change', () => { buzz.pick(); fill(); });
+  const info = h('p', { class: 'muted' }, '');
+  const streamLab = lab('Поток / расписание', stream);
+  const streamsNow = () => (sch[course.value] || []).filter((s) => (FILES[fac.value + ':' + dir.value] || []).includes(s.file));
+  const fillDir = () => {
+    const f = FAC[Number(fac.value)] || { directions: [] };
+    const want = Number(fac.value) === u.faculty ? u.direction : 0;
+    dir.replaceChildren(...f.directions.map((n, i) => h('option', { value: String(i), selected: i === want }, n)));
+  };
+  const fillStream = () => {
+    const list = streamsNow();
+    stream.replaceChildren(...list.map((s) => h('option', { value: s.key, selected: s.key === u.stream }, s.name)));
+    streamLab.style.display = list.length > 1 ? '' : 'none';
+    info.textContent = list.length ? '' : 'Расписание для этого направления и курса пока не добавлено';
+  };
+  fillDir();
+  fillStream();
+  fac.addEventListener('change', () => { buzz.pick(); fillDir(); fillStream(); });
+  course.addEventListener('change', () => { buzz.pick(); fillStream(); });
+  dir.addEventListener('change', () => { buzz.pick(); fillStream(); });
   const eng = h('select', {}, [['', 'Без английского'], ['morning', '9:00–12:10'], ['afternoon', '14:00–17:10']].map(([v, t]) => h('option', { value: v, selected: v === (u.englishTime || '') }, t)));
   const rem = h('input', { type: 'checkbox', checked: !!u.reminders });
   rem.addEventListener('change', () => buzz.pick());
-  const form = h('section', { class: 'card' }, h('h3', {}, 'Настройки'), lab('Курс', course), lab('Расписание', stream), lab('Английский в четверг', eng),
+  const form = h('section', { class: 'card' }, h('h3', {}, 'Настройки'),
+    lab('Факультет', fac), lab('Курс', course), lab('Направление', dir), streamLab, info,
+    lab('Английский в четверг', eng),
     h('label', { class: 'row' }, rem, 'Уведомления: ДЗ и изменения расписания'),
     h('button', { onclick: safe(async () => {
-      S.boot.user = await call('settings', { course: course.value, stream: stream.value, englishTime: eng.value || null, reminders: rem.checked });
+      if (!streamsNow().length) { buzz.err(); alertMsg('Для выбранных направления и курса расписание пока не добавлено'); return false; }
+      S.boot.user = await call('settings', { faculty: Number(fac.value), direction: Number(dir.value), course: course.value, stream: stream.value, englishTime: eng.value || null, reminders: rem.checked });
       S.marks = {};
       jumpToday(); S.tab = 'day'; render();
     }) }, 'Сохранить'));
