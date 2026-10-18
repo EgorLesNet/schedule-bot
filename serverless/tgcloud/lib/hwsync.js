@@ -1,6 +1,5 @@
 import * as store from './store.js';
 import { listSchedules, loadEvents } from './schedule.js';
-import { sameGroup } from './faculties.js';
 
 const norm = (s) => String(s).trim().toLowerCase();
 
@@ -19,7 +18,7 @@ function counterparts(ctx, stream, original, date) {
   const out = [];
   for (const s of ctx.streams) {
     if (s.key === stream) continue;
-    if (me && !sameGroup(me.file, s.file)) continue;
+    if (me && me.faculty !== s.faculty) continue;
     const ev = (ctx.evs[s.key] || []).find((e) => e.date === date && starts.has(e.start) && norm(e.original) === norm(original));
     if (ev) out.push({ stream: s.key, original: ev.original });
   }

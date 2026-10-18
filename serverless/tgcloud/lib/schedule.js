@@ -4,40 +4,37 @@ import { parseIcs } from './ics.js';
 import { BASE, API_CONTENTS, TTL, NL } from './config.js';
 import { human } from './time.js';
 import { langLessons } from './lang.js';
+import { parseSchedule } from './faculties.js';
 
-const NAME = /^GAUGN_([0-9]+)_kurs_(.+)[.]ics$/i;
 const LUNCH = /обед|перерыв/i;
 const ONLINE = ['онлайн', 'online', 'zoom', 'teams', 'вебинар', 'webinar', 'дистанционно', 'удаленно', 'remote', 'ссылка', 'конференция', 'conference', 'meet', 'meeting'];
 
-function hash(s) {
-  let x = 5381;
-  for (const c of s) x = ((x * 33) ^ c.charCodeAt(0)) >>> 0;
-  return 's' + x.toString(36);
-}
-
 export async function listSchedules(force = false) {
-  const c = await store.get('cache:schedules');
+  const c = await store.get('cache:schedules2');
   if (c && !force && Date.now() - c.at < TTL) return c.data;
   try {
     const items = JSON.parse(await getText(API_CONTENTS));
-    const by = {};
+    const data = {};
+    const seen = new Set();
     for (const it of items) {
       if (it.type !== 'file') continue;
-      const m = NAME.exec(it.name);
-      if (!m) continue;
-      (by[m[1]] = by[m[1]] || []).push({ key: hash(it.name), name: m[2].split('_').join(' ').trim(), file: it.name });
+      const p = parseSchedule(it.name);
+      if (!p || seen.has(p.key)) continue;
+      seen.add(p.key);
+      (data[p.course] = data[p.course] || []).push({ key: p.key, file: it.name, faculty: p.faculty, direction: p.direction, stream: p.stream, name: p.stream || p.direction });
     }
-    const data = {};
-    for (const [course, arr] of Object.entries(by)) {
-      arr.sort((a, b) => a.name.localeCompare(b.name, 'ru', { numeric: true }));
-      data[course] = arr;
-    }
+    for (const arr of Object.values(data)) arr.sort((a, b) => a.name.localeCompare(b.name, 'ru', { numeric: true }));
     if (Object.keys(data).length) {
-      await store.set('cache:schedules', { at: Date.now(), data });
+      await store.set('cache:schedules2', { at: Date.now(), data });
       return data;
     }
   } catch (e) {}
   return c ? c.data : {};
+}
+
+export async function allEntries(force = false) {
+  const s = await listSchedules(force);
+  return Object.values(s).flat();
 }
 
 export async function getRenames(course, stream) {
