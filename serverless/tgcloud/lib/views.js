@@ -2,16 +2,45 @@ import * as store from './store.js';
 import { listSchedules, loadEvents, buildDay, dayText, getRenames } from './schedule.js';
 import { today, addDays, weekStart, ruShort } from './time.js';
 import { APP_URL, NL } from './config.js';
+import { FACULTIES, COURSES_COUNT, filesFor } from './faculties.js';
 
 const b = (text, data) => ({ text, callback_data: data });
 const kb = (rows) => ({ inline_keyboard: rows });
 const back = kb([[b('⬅️ Меню', 'menu')]]);
+const has = (v) => v !== undefined && v !== null;
+
+export function facultiesView() {
+  return { text: 'Привет! 🎓' + NL + 'Выбери свой факультет:', markup: kb(FACULTIES.map((f, i) => [b(f.name, 'f:' + i)])) };
+}
 
 export async function coursesView() {
   const s = await listSchedules();
-  const courses = Object.keys(s).sort((x, y) => x - y);
-  if (!courses.length) return { text: '❌ Не удалось найти файлы расписания. Попробуй позже.' };
-  return { text: 'Привет! 🎓' + NL + 'Выбери свой курс:', markup: kb(courses.map((c) => [b(c + ' курс', 'c:' + c)])) };
+  if (!Object.keys(s).length) return { text: '❌ Не удалось найти файлы расписания. Попробуй позже.' };
+  return facultiesView();
+}
+
+export function directionsView(fi) {
+  const f = FACULTIES[fi];
+  if (!f) return facultiesView();
+  const rows = f.directions.map((d, i) => [b(d, 'dr:' + fi + ':' + i)]);
+  rows.push([b('⬅️ К факультетам', 'courses')]);
+  return { text: f.name + ' факультет' + NL + 'Выбери направление:', markup: kb(rows) };
+}
+
+export function courseNumView(fi, di) {
+  const f = FACULTIES[fi];
+  if (!f || !f.directions[di]) return facultiesView();
+  const rows = [];
+  for (let c = 1; c <= COURSES_COUNT; c++) rows.push([b(c + ' курс', 'k:' + fi + ':' + di + ':' + c)]);
+  rows.push([b('⬅️ Назад', 'f:' + fi)]);
+  return { text: f.name + ' факультет' + NL + f.directions[di] + NL + 'Выбери курс:', markup: kb(rows) };
+}
+
+async function courseStreams(course, fi, di) {
+  const all = (await listSchedules())[course] || [];
+  if (!has(fi) || !has(di)) return all;
+  const files = filesFor(fi, di);
+  return all.filter((s) => files.includes(s.file));
 }
 
 export function englishView(course, stream) {
@@ -19,17 +48,23 @@ export function englishView(course, stream) {
   return { text: 'Выбери время для английского в четверг:', markup: kb([[b('🕘 9:00-12:10', p + 'm')], [b('🕑 14:00-17:10', p + 'a')], [b('❌ Без английского', p + 'n')]]) };
 }
 
-export async function streamsView(course) {
-  const streams = (await listSchedules())[course] || [];
-  if (!streams.length) return { text: '❌ Расписание для этого курса пока не добавлено.' };
+export async function streamsView(course, fi, di) {
+  const streams = await courseStreams(course, fi, di);
+  if (!streams.length) {
+    const markup = has(fi) && has(di) ? kb([[b('⬅️ Назад', 'dr:' + fi + ':' + di)]]) : kb([[b('⬅️ К факультетам', 'courses')]]);
+    return { text: '😕 Расписание для этого направления и курса пока не добавлено.', markup };
+  }
   if (streams.length === 1) return englishView(course, streams[0].key);
   return { text: 'Выбери своё расписание:', markup: kb(streams.map((s) => [b('📖 ' + s.name, 's:' + course + ':' + s.key)])) };
 }
 
 export async function menuView(user) {
-  const streams = (await listSchedules())[user.course] || [];
+  const streams = await courseStreams(user.course, user.faculty, user.direction);
   const info = streams.find((x) => x.key === user.stream);
-  let t = 'Выбран ' + user.course + ' курс' + (streams.length > 1 && info ? ', ' + info.name : '');
+  let t = '';
+  const f = has(user.faculty) ? FACULTIES[user.faculty] : null;
+  if (f) t += '🏛 ' + f.name + ' факультет' + (f.directions[user.direction] ? ', ' + f.directions[user.direction] : '') + NL;
+  t += 'Выбран ' + user.course + ' курс' + (streams.length > 1 && info ? ', ' + info.name : '');
   if (user.englishTime === 'morning') t += NL + '💡 Английский: 9:00-12:10';
   if (user.englishTime === 'afternoon') t += NL + '💡 Английский: 14:00-17:10';
   t += NL + (user.reminders ? '🔔' : '🔕') + ' Напоминания: ' + (user.reminders ? 'вкл' : 'выкл') + NL + 'Выбери действие:';
@@ -42,7 +77,7 @@ export async function menuView(user) {
   ];
   if (APP_URL) rows.unshift([{ text: '📱 Открыть приложение', web_app: { url: APP_URL } }]);
   if (streams.length > 1) rows.push([b('🔁 Сменить расписание', 'c:' + user.course)]);
-  rows.push([b('⚙️ Сменить курс', 'courses')]);
+  rows.push([b('⚙️ Сменить факультет/курс', 'courses')]);
   return { text: t, markup: kb(rows) };
 }
 
