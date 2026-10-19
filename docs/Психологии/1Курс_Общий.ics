@@ -1,0 +1,2050 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Psychology 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Психология, 1 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:b2b566b3b5a690b8773f65fbccb470e2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:0778456304ebaec176eef40530cad044@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260914T100000
+DTEND;TZID=Europe/Moscow:20260914T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:890f67f02d9557f70f3c2588fd8f3a5f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:96669f32253345853502aca8b7f30cd9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260928T100000
+DTEND;TZID=Europe/Moscow:20260928T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:74ca722298ed6e42908f402de54ae4cf@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:af8582f4c4302a402be648c7e5b29238@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261012T100000
+DTEND;TZID=Europe/Moscow:20261012T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:3e3207790a3fe76112af4c79add74ea4@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:c7097045ccf87a2337a6fe9b1a71917c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:b3b939149690fe529b0b15f94d51fb18@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261102T100000
+DTEND;TZID=Europe/Moscow:20261102T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:5af60f501ae4dd591e47a2305f82525a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261109T100000
+DTEND;TZID=Europe/Moscow:20261109T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:724b3130dc9fd0b9fe30cdd46c6af5db@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261116T100000
+DTEND;TZID=Europe/Moscow:20261116T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:50b1a03b260d5abb4cd6cce82fee51c0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261123T100000
+DTEND;TZID=Europe/Moscow:20261123T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:11bc2d90cb996156b14a31b483c38c49@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261130T100000
+DTEND;TZID=Europe/Moscow:20261130T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:5ba7e0390036f961242f7ca61c4b4028@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261207T100000
+DTEND;TZID=Europe/Moscow:20261207T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:7da3ee814618f5705a8b18e4612335a3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261214T100000
+DTEND;TZID=Europe/Moscow:20261214T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:9a6331a502c184d54f28d0f8bda16df9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261221T100000
+DTEND;TZID=Europe/Moscow:20261221T130000
+SUMMARY:Педагогическая психология и психол
+ огия общения
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Романовская Мария 
+ Александровна (к.п.н.)\nФорма контроля: Эк
+ замен
+END:VEVENT
+BEGIN:VEVENT
+UID:f05c4de7379a08a0d5aefcbfa0e7ae3a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260907T133000
+DTEND;TZID=Europe/Moscow:20260907T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:56537683880081231b2c9412f58cbba8@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260914T133000
+DTEND;TZID=Europe/Moscow:20260914T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6748072dd9c4556b8d2e83bf066863ae@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260921T133000
+DTEND;TZID=Europe/Moscow:20260921T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:648fc1bb4c517623a495aa5357ef0bc6@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260928T133000
+DTEND;TZID=Europe/Moscow:20260928T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e2780008cf1585d698bac970e23e8118@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261005T133000
+DTEND;TZID=Europe/Moscow:20261005T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a67474efce6395c4e9ee93dc32e469ee@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261012T133000
+DTEND;TZID=Europe/Moscow:20261012T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:975726e980c7666b2482f302f44297fa@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261019T133000
+DTEND;TZID=Europe/Moscow:20261019T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c87f70caab6925aeaecf7d53b7911e0f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261026T133000
+DTEND;TZID=Europe/Moscow:20261026T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c619dd2bf4a05979a0fc946054d50b9f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261102T133000
+DTEND;TZID=Europe/Moscow:20261102T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8af7c430efd67c70f5a8306a9e83f17a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261109T133000
+DTEND;TZID=Europe/Moscow:20261109T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8d2894b35b0f641815fd1fa1615166bd@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261116T133000
+DTEND;TZID=Europe/Moscow:20261116T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:13812abd23c548af38b6ecb828366598@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261123T133000
+DTEND;TZID=Europe/Moscow:20261123T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b77fe90c59f01fd48a16c3b68ddd263f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261130T133000
+DTEND;TZID=Europe/Moscow:20261130T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:08d0611a151066baa87b7d10433d50c1@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261207T133000
+DTEND;TZID=Europe/Moscow:20261207T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:9759bdf7dc23691362ef7421d001a96b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261214T133000
+DTEND;TZID=Europe/Moscow:20261214T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:64a5d15ec4ba756f99b0981dcdd5df65@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261221T133000
+DTEND;TZID=Europe/Moscow:20261221T160000
+SUMMARY:Религиоведение
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Коренева Надежда А
+ лександровна\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a30326be0861323ff0a03263b3b25c25@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260902T110000
+DTEND;TZID=Europe/Moscow:20260902T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6973eb2d98ec76322f10b51940dc9732@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260909T110000
+DTEND;TZID=Europe/Moscow:20260909T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:aac3533957ad8d84b19e006a48e7210a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260916T110000
+DTEND;TZID=Europe/Moscow:20260916T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:79ee5d5938f9fefe1ba6c77dde995697@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260923T110000
+DTEND;TZID=Europe/Moscow:20260923T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:44c0f2cf00c64460044de85713641ea5@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260930T110000
+DTEND;TZID=Europe/Moscow:20260930T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:029ec303b09c91abb1e370210b9573a8@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261007T110000
+DTEND;TZID=Europe/Moscow:20261007T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:07f3929a5900881d1669a3c16f0f3866@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261014T110000
+DTEND;TZID=Europe/Moscow:20261014T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:15a06c711e7872fa711efb07aeef74d5@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261021T110000
+DTEND;TZID=Europe/Moscow:20261021T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d6e3e98a6a1e8c8c0987d10d0a9bd5d5@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261028T110000
+DTEND;TZID=Europe/Moscow:20261028T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:0d043362212fa498c9e0d829394c8bb7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261111T110000
+DTEND;TZID=Europe/Moscow:20261111T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b230e7a6956b51d6abf8886abfb08809@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261118T110000
+DTEND;TZID=Europe/Moscow:20261118T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b8d432235ba1d0f35526a21d15993fda@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261125T110000
+DTEND;TZID=Europe/Moscow:20261125T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:24a36386a5ea58bee32584d248ee1cf0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261202T110000
+DTEND;TZID=Europe/Moscow:20261202T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:51aa24a1206ad660d704f5cd453f8d11@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261209T110000
+DTEND;TZID=Europe/Moscow:20261209T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:632f9ccb44e4af06c73dfac3130db10f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261216T110000
+DTEND;TZID=Europe/Moscow:20261216T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:fde8613e3bcfc21bc9b1e6f47de5941a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261223T110000
+DTEND;TZID=Europe/Moscow:20261223T130000
+SUMMARY:Психофизиология
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Юрий И
+ осифович (д.п.н.)\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:96a5b228fadaf131ac40f462424f5bfc@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260902T133000
+DTEND;TZID=Europe/Moscow:20260902T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:9b440ac44b21d116e8256f24e5efebbd@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260909T133000
+DTEND;TZID=Europe/Moscow:20260909T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4950541e5b0b3153db7e60d35dc4ae45@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260916T133000
+DTEND;TZID=Europe/Moscow:20260916T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:7e6a1692422fae2798206b6ea8e9def7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260923T133000
+DTEND;TZID=Europe/Moscow:20260923T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:9864afe0ca1ae6deb4d620ec6892c00d@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260930T133000
+DTEND;TZID=Europe/Moscow:20260930T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:0b16fdbc401682ce7536cb153751ad83@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261007T133000
+DTEND;TZID=Europe/Moscow:20261007T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:907bea1ce691de6d79c625d0cc551842@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261014T133000
+DTEND;TZID=Europe/Moscow:20261014T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:773194cd7f37a131f9e95b819fa61c50@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261021T133000
+DTEND;TZID=Europe/Moscow:20261021T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:74b304e7f8269c7bfaf752bdfe375a03@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261028T133000
+DTEND;TZID=Europe/Moscow:20261028T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ede3a2aebe990e730ea54b2a8d0a2845@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261111T133000
+DTEND;TZID=Europe/Moscow:20261111T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a26127a9fa8f2003571bfe30b916c88b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261118T133000
+DTEND;TZID=Europe/Moscow:20261118T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6700c6db7a4ea864f025d94bf99d48f8@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261125T133000
+DTEND;TZID=Europe/Moscow:20261125T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5fc217a0ce849e788d25a5178ede53d9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261202T133000
+DTEND;TZID=Europe/Moscow:20261202T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ac16a86a02dd902ed73a5eb060066f64@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261209T133000
+DTEND;TZID=Europe/Moscow:20261209T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:0d4ae9f4e976957c6975f9017d95dbcd@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261216T133000
+DTEND;TZID=Europe/Moscow:20261216T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:56044e7bebd5f16bf6a7609f721585ca@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261223T133000
+DTEND;TZID=Europe/Moscow:20261223T153000
+SUMMARY:Практикум по организации научно-пра
+ ктических мероприятий
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Евтодий Мария Влад
+ имировна\nФорма контроля: Дифференциров
+ анный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d9d4353c1ceb216403855d918f6d8b3d@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260902T154000
+DTEND;TZID=Europe/Moscow:20260902T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:28d75936d38d5968056d66330a0924a8@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260909T154000
+DTEND;TZID=Europe/Moscow:20260909T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:668a18c54607acd885b840800561c8e3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260916T154000
+DTEND;TZID=Europe/Moscow:20260916T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3c89bb040eb58a324f76121e4f5c342f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260923T154000
+DTEND;TZID=Europe/Moscow:20260923T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ea414955660c4599b64b80cceaf692b0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260930T154000
+DTEND;TZID=Europe/Moscow:20260930T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3acac80b9956e914ac43816e215dc5ad@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261007T154000
+DTEND;TZID=Europe/Moscow:20261007T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:1c2291fdb4653c9b908b55f00394e3c5@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261014T154000
+DTEND;TZID=Europe/Moscow:20261014T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:dc87973dd3c6528bbfc48d896e6bc1e6@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261021T154000
+DTEND;TZID=Europe/Moscow:20261021T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b512b90b94b0bf1344afe2c005118a00@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261028T154000
+DTEND;TZID=Europe/Moscow:20261028T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ce1016b4e07e0796b7ccc81b570dc280@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261111T154000
+DTEND;TZID=Europe/Moscow:20261111T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:92bc224f9ef90adfee84e4a0decec553@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261118T154000
+DTEND;TZID=Europe/Moscow:20261118T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e670814c231ff2608e3b6d9176fddd9e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261125T154000
+DTEND;TZID=Europe/Moscow:20261125T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ede3636e30023a786e01d9fbaf44f464@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261202T154000
+DTEND;TZID=Europe/Moscow:20261202T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d129a3d0f69b57c1629e61625983f8b1@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261209T154000
+DTEND;TZID=Europe/Moscow:20261209T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c7ca1d176c0688d843819d20a0be4243@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261216T154000
+DTEND;TZID=Europe/Moscow:20261216T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6c60364dff9d86f1e2f57c974e48a771@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261223T154000
+DTEND;TZID=Europe/Moscow:20261223T174000
+SUMMARY:Логика
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Александров Павел 
+ Владимирович\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:7b1ca18e2d5a9f5747d75f3773990d8b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260903T093000
+DTEND;TZID=Europe/Moscow:20260903T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:50debec663a4d3b0fe01a5ca7c49200c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260910T093000
+DTEND;TZID=Europe/Moscow:20260910T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:26af5583b7d1fca49a4ae7d32aa6fc6e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260917T093000
+DTEND;TZID=Europe/Moscow:20260917T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:5b93e3618b9d6ee9499a74989e658ce5@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260924T093000
+DTEND;TZID=Europe/Moscow:20260924T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:0b44584a08a80137c493e3bcd72bbb70@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261001T093000
+DTEND;TZID=Europe/Moscow:20261001T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:3c4790e3ec8be58c161dbefce0908e43@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261008T093000
+DTEND;TZID=Europe/Moscow:20261008T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:23444cb8e251e4e052c6b707a8a56fbf@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261015T093000
+DTEND;TZID=Europe/Moscow:20261015T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:479995bd24c6fa8eabaacd2fe5bd1ee0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261022T093000
+DTEND;TZID=Europe/Moscow:20261022T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:b31aca1f7ba942eecd0fb8fc01a53faf@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261029T093000
+DTEND;TZID=Europe/Moscow:20261029T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:6c765cd642bff163747e46ce85cf365d@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261105T093000
+DTEND;TZID=Europe/Moscow:20261105T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:9919e91212a564225cc395c8ff49240b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261112T093000
+DTEND;TZID=Europe/Moscow:20261112T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:b0055366d294ac6e6c8c38b274e6b0ce@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261119T093000
+DTEND;TZID=Europe/Moscow:20261119T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:d4c1dcee4e666c257dff76ad0164c33b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261126T093000
+DTEND;TZID=Europe/Moscow:20261126T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:211067dd588a0fcb9620ecd4aadeb26e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261203T093000
+DTEND;TZID=Europe/Moscow:20261203T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:7f6cf3d72a4a20df9b80e6834ad68113@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261210T093000
+DTEND;TZID=Europe/Moscow:20261210T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:e08f2e4f36cfb184a024e24cd944da01@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261217T093000
+DTEND;TZID=Europe/Moscow:20261217T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:bdacb84cd376c533cb3aaef6227a8c90@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261224T093000
+DTEND;TZID=Europe/Moscow:20261224T123000
+SUMMARY:Введение в профессию
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Созинов Алексей Ал
+ ександрович (к.п.н.)\nФорма контроля: Экза
+ мен
+END:VEVENT
+BEGIN:VEVENT
+UID:98e5a2f72de89aa2fd3a4fa3ac411b60@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260903T130000
+DTEND;TZID=Europe/Moscow:20260903T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:3d54c0e9c08cdc3d5879b28556d94ede@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260910T130000
+DTEND;TZID=Europe/Moscow:20260910T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:61b892429c8a39315efccff539fe7c09@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260917T130000
+DTEND;TZID=Europe/Moscow:20260917T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d0ec482d0ecc2bf849006962572bc8d7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260924T130000
+DTEND;TZID=Europe/Moscow:20260924T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:e84095565d7d3dcff82aee00488b8cc3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261001T130000
+DTEND;TZID=Europe/Moscow:20261001T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:963ad2ccfd58d6dd9a97be668200c925@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261008T130000
+DTEND;TZID=Europe/Moscow:20261008T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:9951bfa729b375ea553de970f513f14a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261015T130000
+DTEND;TZID=Europe/Moscow:20261015T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:bacd1fcdecf2ef81cec30882a9f487fe@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261022T130000
+DTEND;TZID=Europe/Moscow:20261022T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:5940814c22eef25a3032dfec29cefcd9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261029T130000
+DTEND;TZID=Europe/Moscow:20261029T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:c8e7f7d4ecc699375e9492c83daeeaa9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261105T130000
+DTEND;TZID=Europe/Moscow:20261105T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:73e0fb3fc92c64c01830d88464df8de3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261112T130000
+DTEND;TZID=Europe/Moscow:20261112T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:391379450a0183d58a258c5bf40efb55@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261119T130000
+DTEND;TZID=Europe/Moscow:20261119T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:ad74efce7b75810a8523c978e58528c2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261126T130000
+DTEND;TZID=Europe/Moscow:20261126T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:bf87e8f9e25144ea02b51091f40722c2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261203T130000
+DTEND;TZID=Europe/Moscow:20261203T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:6e12951b42538a3773c11829be3dcb05@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261210T130000
+DTEND;TZID=Europe/Moscow:20261210T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:30ca6a8728e2bfe25f6d85b88b32cbb9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261217T130000
+DTEND;TZID=Europe/Moscow:20261217T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:2f9d82b9b86c9a7f64834279076f6683@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261224T130000
+DTEND;TZID=Europe/Moscow:20261224T160000
+SUMMARY:Анатомия ЦНС
+LOCATION:ауд. 101
+DESCRIPTION:Преподаватель: Булава Александра 
+ Игоревна\nФорма контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:524999fc551a02c42187545c33022b0e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260922T100000
+DTEND;TZID=Europe/Moscow:20260922T113000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:bc2c7f6f08e181fc3fc25dacb58cdba4@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260922T114000
+DTEND;TZID=Europe/Moscow:20260922T131000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b80aa351eceda0b029d84aa30ea5614f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261006T100000
+DTEND;TZID=Europe/Moscow:20261006T113000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ae8a1b4f2bb748f3b47b24df89934e6c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261006T114000
+DTEND;TZID=Europe/Moscow:20261006T131000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:78ae84c650add1ecf44223835392e619@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261020T100000
+DTEND;TZID=Europe/Moscow:20261020T113000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:49aa7dd1ec50634548c69cc89dbe77c4@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261020T114000
+DTEND;TZID=Europe/Moscow:20261020T131000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3aac3851936288276592e0c34c741263@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261117T100000
+DTEND;TZID=Europe/Moscow:20261117T113000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d96fc593bff6ebb9f7239d1abbd97077@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261117T114000
+DTEND;TZID=Europe/Moscow:20261117T131000
+SUMMARY:Основы российской государственност
+ и (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Дифференцированный 
+ зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b86f4c1418823cf5ed69e13bdbf92c3e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260908T140000
+DTEND;TZID=Europe/Moscow:20260908T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:67f5fb090f142c30ae5d0855cd251617@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260908T154000
+DTEND;TZID=Europe/Moscow:20260908T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:43c51588e4790d3ef8b071b13a4b363c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261006T140000
+DTEND;TZID=Europe/Moscow:20261006T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:59dceb755c76e399b409957e191860b9@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261006T154000
+DTEND;TZID=Europe/Moscow:20261006T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:fccad2a7d2555c46ccca6c29c8ee3ad3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261020T140000
+DTEND;TZID=Europe/Moscow:20261020T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:843d97516ced1cbd0ba03af6406f44e7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261020T154000
+DTEND;TZID=Europe/Moscow:20261020T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:83c4677071f4a7d854ab95c7424631ac@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261117T140000
+DTEND;TZID=Europe/Moscow:20261117T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:173bff054df30bdae32f57c0f6ebc2a7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261117T154000
+DTEND;TZID=Europe/Moscow:20261117T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3a0de067a124d41209baaa2634262888@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261201T140000
+DTEND;TZID=Europe/Moscow:20261201T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3fb1909bf82bc2110ed6f3ba14ba3531@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261201T154000
+DTEND;TZID=Europe/Moscow:20261201T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5cdba0c174310298b62619ca4d31f36f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261215T140000
+DTEND;TZID=Europe/Moscow:20261215T153000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4b752398add27eac0fc2d063ca4fdc5e@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261215T154000
+DTEND;TZID=Europe/Moscow:20261215T171000
+SUMMARY:История России (лекция)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Преподаватель: Преподаватели ГАУ
+ ГН\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:f374749f49dc9d48213c061e0dda755f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260926T100000
+DTEND;TZID=Europe/Moscow:20260926T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:92436bbc2b55cfa53b16ce6ac67f7c6c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260926T114000
+DTEND;TZID=Europe/Moscow:20260926T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d2ae9a6706d67e07ad8dc814e178c1f2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261003T100000
+DTEND;TZID=Europe/Moscow:20261003T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:2f066022118cad15f4d638f1caa65b49@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261003T114000
+DTEND;TZID=Europe/Moscow:20261003T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:00719977b07da3910e44567c1e72916a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261010T100000
+DTEND;TZID=Europe/Moscow:20261010T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:453d1ded5998917a421975061ed2e333@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261010T114000
+DTEND;TZID=Europe/Moscow:20261010T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e18948e6bd95a0331ba0febf68372acd@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261017T100000
+DTEND;TZID=Europe/Moscow:20261017T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ac481782a9c92247558af93ebdcc0602@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261017T114000
+DTEND;TZID=Europe/Moscow:20261017T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:af1e917f65e6a1c1b2e62205dc2629d6@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261024T100000
+DTEND;TZID=Europe/Moscow:20261024T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e815f9667ed78fc3655058d45b89e406@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261024T114000
+DTEND;TZID=Europe/Moscow:20261024T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6ac211145314bc5a0d411109b104909c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261031T100000
+DTEND;TZID=Europe/Moscow:20261031T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c7c1dd44678bdeb31715b00d88eed174@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261031T114000
+DTEND;TZID=Europe/Moscow:20261031T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:58542de72d65ea625fde6351acef7ac0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261107T100000
+DTEND;TZID=Europe/Moscow:20261107T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:bf2667081a18d1083b5d7a4cef406b43@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261107T114000
+DTEND;TZID=Europe/Moscow:20261107T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4fcd41cfd41e8b9c57431dcb540ae2b3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261114T100000
+DTEND;TZID=Europe/Moscow:20261114T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8b9fba3741c607af75080081d97d1643@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261114T114000
+DTEND;TZID=Europe/Moscow:20261114T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8bc1e4ab7455b8a8e63f7355b6b6dd40@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261121T100000
+DTEND;TZID=Europe/Moscow:20261121T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5b0ff80e94fa9435c29c107174c8909a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261121T114000
+DTEND;TZID=Europe/Moscow:20261121T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e90a13501967801c72d663a5d6e26674@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261128T100000
+DTEND;TZID=Europe/Moscow:20261128T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6457c68e2ed226270866eda8ca5216c7@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261128T114000
+DTEND;TZID=Europe/Moscow:20261128T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:25e5cdb8242baf3940d4f6919a52c234@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261205T100000
+DTEND;TZID=Europe/Moscow:20261205T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8a42424fed08f2284c8a55946098273d@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261205T114000
+DTEND;TZID=Europe/Moscow:20261205T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:25264fc8530adcd3b15b2488f64c17cd@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261212T100000
+DTEND;TZID=Europe/Moscow:20261212T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:172aa8c3877acd9ee1fe548292a32a5f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261212T114000
+DTEND;TZID=Europe/Moscow:20261212T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b929c793e33accc20757f1ee2e46d865@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261219T100000
+DTEND;TZID=Europe/Moscow:20261219T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:bf94d0dcfcfa5dd4baff4407e51632b3@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261219T114000
+DTEND;TZID=Europe/Moscow:20261219T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:838fe244ee9a166c0f7d7720a590c2c6@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261226T100000
+DTEND;TZID=Europe/Moscow:20261226T113000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c63309cc570d1a82b706087e6bc1158c@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261226T114000
+DTEND;TZID=Europe/Moscow:20261226T131000
+SUMMARY:Основы российской государственност
+ и (семинар)
+DESCRIPTION:Преподаватель: Арбиев Руслан Мусл
+ имович\nФорма контроля: Дифференцирован
+ ный зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:86f87d20581b5c0d3168cd70010c9526@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260912T140000
+DTEND;TZID=Europe/Moscow:20260912T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:96b16fa5e042e2c1c5a68d8b4df477e1@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260912T154000
+DTEND;TZID=Europe/Moscow:20260912T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ba0f3428a52692087070d53bab7e98fa@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260919T140000
+DTEND;TZID=Europe/Moscow:20260919T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:344682c2593bd45b697e1a366e9f9c1d@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260919T154000
+DTEND;TZID=Europe/Moscow:20260919T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:bf291928c8a9c2360c1e6671920fac45@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260926T140000
+DTEND;TZID=Europe/Moscow:20260926T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:562cbc355689a52ac75bc934b66a3b84@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20260926T154000
+DTEND;TZID=Europe/Moscow:20260926T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:98f5f6f94f092b5e83a44ae6823b6ca0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261003T140000
+DTEND;TZID=Europe/Moscow:20261003T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:1a6a24f838673697811b45fb02435b5b@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261003T154000
+DTEND;TZID=Europe/Moscow:20261003T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:df7349395f999789bb9607ea8495df54@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261010T140000
+DTEND;TZID=Europe/Moscow:20261010T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b490c7745151b4c7fa5c15ea8cfc31de@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261010T154000
+DTEND;TZID=Europe/Moscow:20261010T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:fab04cbb635ff32197ad8f82c2c23815@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261017T140000
+DTEND;TZID=Europe/Moscow:20261017T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:50a497dd3bd4142217f58019f078f1db@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261017T154000
+DTEND;TZID=Europe/Moscow:20261017T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:19dfbf89ead527b3b1841b3b7b9a2f08@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261024T140000
+DTEND;TZID=Europe/Moscow:20261024T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:2effc4b4f97456de670e2be2f075e3d8@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261024T154000
+DTEND;TZID=Europe/Moscow:20261024T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a59fbebfb919251f4dac225d07f2371f@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261031T140000
+DTEND;TZID=Europe/Moscow:20261031T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:70788429255d4f1fd601a829034b2e45@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261031T154000
+DTEND;TZID=Europe/Moscow:20261031T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d32b003641ff93a9fb882294e8d088ae@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261107T140000
+DTEND;TZID=Europe/Moscow:20261107T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:170e5bd7ca9fe5cc4f84f2129a618f81@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261107T154000
+DTEND;TZID=Europe/Moscow:20261107T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:35238e4d4a9537eb768af8b257d889c2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261114T140000
+DTEND;TZID=Europe/Moscow:20261114T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a16385f7f0d4edbd1b8581ec6779764a@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261114T154000
+DTEND;TZID=Europe/Moscow:20261114T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c9529d2a484b409be60d80d1fcf4c320@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261121T140000
+DTEND;TZID=Europe/Moscow:20261121T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ba13b3c0a67dde707a23e099da6f6dfe@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261121T154000
+DTEND;TZID=Europe/Moscow:20261121T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4964079d11c42554cda7e94ffb41faf1@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261128T140000
+DTEND;TZID=Europe/Moscow:20261128T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:713ae254ac7674680e7669fb78e8a1cc@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261128T154000
+DTEND;TZID=Europe/Moscow:20261128T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:20ece24f3d80f49186a168a7dd745fb2@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261205T140000
+DTEND;TZID=Europe/Moscow:20261205T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:78398d1a8747e9e4ee4eee6fb8c8bdb0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261205T154000
+DTEND;TZID=Europe/Moscow:20261205T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b94555f2bc29a4305210f667295a7434@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261212T140000
+DTEND;TZID=Europe/Moscow:20261212T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:f208b8f38dfc6580ba0daeb6a3614681@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261212T154000
+DTEND;TZID=Europe/Moscow:20261212T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:dd82aa0d4763d81bf6a1a2b74466b3d0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261219T140000
+DTEND;TZID=Europe/Moscow:20261219T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:19464fede2df420f2a8833d550945ad4@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261219T154000
+DTEND;TZID=Europe/Moscow:20261219T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:497f0fcee8a9b1c77e4add4bef401cf0@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261226T140000
+DTEND;TZID=Europe/Moscow:20261226T153000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a925139c4366fe3f41645d499ebafdf1@gaugn-psy
+DTSTAMP:20261019T114000Z
+DTSTART;TZID=Europe/Moscow:20261226T154000
+DTEND;TZID=Europe/Moscow:20261226T171000
+SUMMARY:История России (семинар)
+DESCRIPTION:Преподаватель: Яковлев Матвей Евг
+ еньевич\nФорма контроля: Зачёт
+END:VEVENT
+END:VCALENDAR
