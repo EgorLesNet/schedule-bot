@@ -2,6 +2,7 @@
 (function () {
   const baseViewSet = viewSet;
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
+  const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
 
   function cascade(root) {
     const sel = root.querySelectorAll('select');
@@ -36,7 +37,7 @@
     const c = h('section', { class: 'card' }, h('h3', {}, 'Календарь'));
     const file = myFile();
     if (!file) { c.append(h('p', { class: 'muted' }, 'Сначала выберите курс и расписание')); return c; }
-    const raw = RAW + file.split('/').map(encodeURIComponent).join('/');
+    const raw = RAW_FILES + file.split('/').map(encodeURIComponent).join('/');
     const web = raw.replace('https://', 'webcal://');
     c.append(h('p', { class: 'muted' }, 'Подписка на исходное расписание из файла. Отмены и переносы из приложения в календаре не отражаются.'),
       h('button', { onclick: () => { buzz.tap(); openLink(web); } }, 'Подписаться: Apple Календарь'),
