@@ -1,4 +1,4 @@
-import { weekday, addDays } from './time.js';
+import { weekday, addDays, weekStart } from './time.js';
 
 export const LANG_NAME = 'Ин. яз';
 
@@ -35,18 +35,36 @@ export function userLang(u) {
   return '';
 }
 
+// Обычный свободный будний день — тот, где в файле заметно меньше всего дат с парами (разовая пара на нём не мешает).
+// Если такого дня нет или их несколько, ин. яз не ставится.
 export function langInfo(events) {
   if (cache.has(events)) return cache.get(events);
   const real = events.filter((e) => !LUNCH.test(e.summary));
   let info = null;
   if (real.length) {
     const dates = real.map((e) => e.date).sort();
-    const used = new Set(real.map((e) => weekday(e.date)));
-    const empty = [0, 1, 2, 3, 4].filter((w) => !used.has(w));
-    if (empty.length === 1) info = { weekday: empty[0], from: dates[0], to: dates[dates.length - 1] };
+    const days = new Set(real.map((e) => e.date));
+    const count = [0, 0, 0, 0, 0];
+    for (const d of days) {
+      const w = weekday(d);
+      if (w < 5) count[w]++;
+    }
+    const min = Math.min(...count);
+    const free = count.map((c, w) => (c === min ? w : -1)).filter((w) => w >= 0);
+    const others = count.filter((c) => c !== min);
+    if (free.length === 1 && others.length && min * 5 <= Math.min(...others)) {
+      const weeks = new Set(real.map((e) => weekStart(e.date)));
+      info = { weekday: free[0], from: dates[0], to: dates[dates.length - 1], days, weeks };
+    }
   }
   cache.set(events, info);
   return info;
+}
+
+// Ин. яз ставится только на дату без других пар, в обычный свободный день недели, внутри периода расписания
+// и только в неделе, где есть хоть одна пара (на каникулах не ставится).
+function langOn(info, date) {
+  return weekday(date) === info.weekday && date >= info.from && date <= info.to && !info.days.has(date) && info.weeks.has(weekStart(date));
 }
 
 export function langDates(events, from) {
@@ -55,7 +73,7 @@ export function langDates(events, from) {
   const out = [];
   let d = info.from > from ? info.from : from;
   for (let i = 0; i < 400 && d <= info.to; i++) {
-    if (weekday(d) === info.weekday) out.push(d);
+    if (langOn(info, d)) out.push(d);
     d = addDays(d, 1);
   }
   return out;
@@ -64,7 +82,7 @@ export function langDates(events, from) {
 export function langLessons(events, date, start) {
   if (!start) return [];
   const info = langInfo(events);
-  if (!info || weekday(date) !== info.weekday || date < info.from || date > info.to) return [];
+  if (!info || !langOn(info, date)) return [];
   const s = toMin(start);
   const mk = (a) => ({ date, start: fmt(a), end: fmt(a + 90), summary: LANG_NAME, original: LANG_NAME, desc: '', lang: true });
   return [mk(s), mk(s + 100)];
