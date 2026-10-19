@@ -1,0 +1,2875 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Schedule 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Социология СПЭ, 3 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ebed28eea627938f1af89612388bee29@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250902T100000
+DTEND;TZID=Europe/Moscow:20250902T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad0906ba8b4e63d380a6bce462e28263@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250902T114000
+DTEND;TZID=Europe/Moscow:20250902T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4952655a76823741fffa4609e2d490ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250903T103000
+DTEND;TZID=Europe/Moscow:20250903T120000
+SUMMARY:Социология управления
+LOCATION:130
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f62bd3924337ff4f9e914c181c0bea99@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250903T121000
+DTEND;TZID=Europe/Moscow:20250903T134000
+SUMMARY:Социология управления
+LOCATION:130
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d7d881b62068b426f116f9942509ad3b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250904T170000
+DTEND;TZID=Europe/Moscow:20250904T183000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:06ad6c3c361751acbca0dc556e6a9690@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250905T100000
+DTEND;TZID=Europe/Moscow:20250905T113000
+SUMMARY:Семейное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:a6b82d14c85f77075cc1175a11989bb2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250905T114000
+DTEND;TZID=Europe/Moscow:20250905T131000
+SUMMARY:Семейное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:aa722fc5db487be98e1482b327223698@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250908T112000
+DTEND;TZID=Europe/Moscow:20250908T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:4f3d0fe64fdd69149cb4776053fbe651@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250908T130000
+DTEND;TZID=Europe/Moscow:20250908T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:34c6cd7900f5b8578b3147d584153ee3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250908T150000
+DTEND;TZID=Europe/Moscow:20250908T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad032934bb793930597dc63d78d697ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250908T164000
+DTEND;TZID=Europe/Moscow:20250908T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad448e118c135725041f27afd748bb47@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250909T100000
+DTEND;TZID=Europe/Moscow:20250909T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e8cbf447ecfea7fb7566ffc3b1b4339@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250909T114000
+DTEND;TZID=Europe/Moscow:20250909T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8bd540efa7081bfa5b32b10ac8e16b29@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250910T103000
+DTEND;TZID=Europe/Moscow:20250910T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9133d8cb5daaa5553e2d466b316afa6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250910T121000
+DTEND;TZID=Europe/Moscow:20250910T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:89d11c7fadc2229b2771e318006aa39b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250910T141000
+DTEND;TZID=Europe/Moscow:20250910T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:18b017602e742575fbefb10cb4203605@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250910T155000
+DTEND;TZID=Europe/Moscow:20250910T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d35c00618cb0904fec61585f534444e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250911T123000
+DTEND;TZID=Europe/Moscow:20250911T140000
+SUMMARY:Уголовное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7617c8beaf9defe7fc00b7b1fab0206b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250911T141000
+DTEND;TZID=Europe/Moscow:20250911T154000
+SUMMARY:Уголовное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:0773a0e17748e8b97340da6426c9c923@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250911T155000
+DTEND;TZID=Europe/Moscow:20250911T172000
+SUMMARY:Уголовное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f457044fbe52050bbf1959514d90d968@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250912T100000
+DTEND;TZID=Europe/Moscow:20250912T113000
+SUMMARY:Гражданское право: ч. II
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:4cb374d083d2cde9452fb2902924cf0d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250912T114000
+DTEND;TZID=Europe/Moscow:20250912T131000
+SUMMARY:Гражданское право: ч. II
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:0f6798dc6ecd7d55760caed59f1dd767@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250912T150000
+DTEND;TZID=Europe/Moscow:20250912T163000
+SUMMARY:Семейное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:a55f15f62b635674b1ac0dd6ae7ab0a2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250912T164000
+DTEND;TZID=Europe/Moscow:20250912T181000
+SUMMARY:Семейное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:ed11479e7c770bdbe7e9161889bcea2b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250915T112000
+DTEND;TZID=Europe/Moscow:20250915T125000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:cd6eb06f24bdc44aac12522369fd172f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250915T130000
+DTEND;TZID=Europe/Moscow:20250915T143000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:789246ca8cc230a9afe137f297bcbee5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250915T150000
+DTEND;TZID=Europe/Moscow:20250915T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:91a507d59dc6861e03cadec561676b43@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250915T164000
+DTEND;TZID=Europe/Moscow:20250915T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:b53444740684201496ed311a1a321c89@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250916T100000
+DTEND;TZID=Europe/Moscow:20250916T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cbc80ec5b9f111de0f4ed73bc252da05@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250916T114000
+DTEND;TZID=Europe/Moscow:20250916T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:77312cf58d07cd847c90f53400875b2f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250916T144000
+DTEND;TZID=Europe/Moscow:20250916T161000
+SUMMARY:Уголовное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:36c0e4b3e6468f4a52d4991e0424794b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250916T162000
+DTEND;TZID=Europe/Moscow:20250916T175000
+SUMMARY:Уголовное право
+LOCATION:133
+DESCRIPTION:Вид занятия: кср\nст.преп. Бурков А.
+ И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ccfa72568110fabb3b4c25d53ac2d417@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250917T103000
+DTEND;TZID=Europe/Moscow:20250917T120000
+SUMMARY:Социология управления
+LOCATION:227
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:b0bc24d53be8420c32f2771e6e752dc2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250917T121000
+DTEND;TZID=Europe/Moscow:20250917T134000
+SUMMARY:Социология управления
+LOCATION:227
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:6072f63b8062c132a845cef6dcd1150e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250917T141000
+DTEND;TZID=Europe/Moscow:20250917T154000
+SUMMARY:Административное право
+LOCATION:227
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c559ec98de91a4bde9e4c2de01a0641f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250917T155000
+DTEND;TZID=Europe/Moscow:20250917T172000
+SUMMARY:Административное право
+LOCATION:227
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:26e05b182ef2be296e4e99a827885b63@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250918T120000
+DTEND;TZID=Europe/Moscow:20250918T133000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:77f49bec31f0123529e4cd75ac8d8f58@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250918T134000
+DTEND;TZID=Europe/Moscow:20250918T151000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:016962e15c10f8bcdd0c8580088d2577@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250918T152000
+DTEND;TZID=Europe/Moscow:20250918T165000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f56cbdaf161ecb3f8cfd378216f71f79@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250919T090000
+DTEND;TZID=Europe/Moscow:20250919T103000
+SUMMARY:Семейное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:dafaf09d80be3b6968bf1c968b185b71@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250919T104000
+DTEND;TZID=Europe/Moscow:20250919T121000
+SUMMARY:Семейное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:29ca185a3bb7bb52f778edc234e3af9b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250919T124000
+DTEND;TZID=Europe/Moscow:20250919T141000
+SUMMARY:Гражданское право: ч. II
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:e65a8f161c106d6dfea33bf15fd66742@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250919T142000
+DTEND;TZID=Europe/Moscow:20250919T155000
+SUMMARY:Гражданское право: ч. II
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:4610d746c96e51af62e8375926ccf67b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250922T112000
+DTEND;TZID=Europe/Moscow:20250922T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:628a838170cece81ff43ff8012f0028a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250922T130000
+DTEND;TZID=Europe/Moscow:20250922T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:306b23dda901f4c51c60c775e0732ead@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250922T150000
+DTEND;TZID=Europe/Moscow:20250922T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:c1f5d3f29fbfb873c7c72c5acbdcb009@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250922T164000
+DTEND;TZID=Europe/Moscow:20250922T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d523ffd8b86ae3c21ebc7d53bee0f6e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250923T100000
+DTEND;TZID=Europe/Moscow:20250923T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5897c43236b87c45d62cfbab8537bdb7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250923T114000
+DTEND;TZID=Europe/Moscow:20250923T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:eabb7d980f91b27c38bdbd20e407d745@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250923T144000
+DTEND;TZID=Europe/Moscow:20250923T161000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:892a379f7f4ac0b0abff2e5d6ad56b4c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250923T162000
+DTEND;TZID=Europe/Moscow:20250923T175000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: кср\nст.преп. Бурков А.
+ И.
+END:VEVENT
+BEGIN:VEVENT
+UID:36205a5fae5b6fb7b8dbb86b0aa2d85f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250924T103000
+DTEND;TZID=Europe/Moscow:20250924T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:c77fdbc71b7892b156935f026baab834@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250924T121000
+DTEND;TZID=Europe/Moscow:20250924T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad5fc008921bbfc4f81e2aeaef6b3d44@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250925T100000
+DTEND;TZID=Europe/Moscow:20250925T113000
+SUMMARY:История отеч. социологии
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:284d1016dfe3911d4049f5cdf81a1ffb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250925T114000
+DTEND;TZID=Europe/Moscow:20250925T131000
+SUMMARY:История отеч. социологии
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:5d5e6c00874d106009dc52134a248e25@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250925T152000
+DTEND;TZID=Europe/Moscow:20250925T165000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ea8f5a062870b48931d749562dead3cf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250925T170000
+DTEND;TZID=Europe/Moscow:20250925T183000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5bd72a2ef9c1402a3a123eba0dd45baf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250926T090000
+DTEND;TZID=Europe/Moscow:20250926T103000
+SUMMARY:Семейное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:5542f2d9fbf08c47f6fc8ea9b0599096@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250926T104000
+DTEND;TZID=Europe/Moscow:20250926T121000
+SUMMARY:Семейное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:d50457de7eb446a120250f90393e2dfc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250926T124000
+DTEND;TZID=Europe/Moscow:20250926T141000
+SUMMARY:Уголовное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:1212dad2cdfbb1a4d829e242190824af@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250926T142000
+DTEND;TZID=Europe/Moscow:20250926T155000
+SUMMARY:Уголовное право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d88ef1cb121ef27a3a80eb247c73729@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250929T112000
+DTEND;TZID=Europe/Moscow:20250929T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:2ad81c89b23df675d4c93f1effc6c898@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250929T130000
+DTEND;TZID=Europe/Moscow:20250929T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:048cd5cc637ab585b7ef26fad8f21a95@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250929T150000
+DTEND;TZID=Europe/Moscow:20250929T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:09af2314cec924bcc9299d60ec78807a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250929T164000
+DTEND;TZID=Europe/Moscow:20250929T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:96c4987b01e8996de2ce93511fbaff6d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250930T100000
+DTEND;TZID=Europe/Moscow:20250930T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:50dade0b15d4cb8d5ca456eb1893509d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250930T114000
+DTEND;TZID=Europe/Moscow:20250930T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:fdf406dd1aceca54a02f0a7d97c4f9de@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250930T144000
+DTEND;TZID=Europe/Moscow:20250930T161000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4824b77000eec1f5d1f6160daf12fa85@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20250930T162000
+DTEND;TZID=Europe/Moscow:20250930T175000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:1f8286565ddaf7332f494fedb7795432@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251001T103000
+DTEND;TZID=Europe/Moscow:20251001T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:8121a735a99ebb4d03e3279c5c12abd1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251001T121000
+DTEND;TZID=Europe/Moscow:20251001T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:34a3c410ef8c140daba87cf489504bc1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251001T141000
+DTEND;TZID=Europe/Moscow:20251001T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e90891a8d8dd21d9152f19b217fd6449@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251002T100000
+DTEND;TZID=Europe/Moscow:20251002T113000
+SUMMARY:Научно-методический семинар
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Репин Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d88da3ad8bcb8d0828a57aaded8791ac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251002T114000
+DTEND;TZID=Europe/Moscow:20251002T131000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:4dd64af170617769b2938ef511a4f250@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251002T132000
+DTEND;TZID=Europe/Moscow:20251002T145000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:85fb55b96a39b54abc3ef9bf5c1566f7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251002T152000
+DTEND;TZID=Europe/Moscow:20251002T165000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:224d74223e3bc7be67bfe25f2ca5a842@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251002T183000
+DTEND;TZID=Europe/Moscow:20251002T200000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3f0512762b3d9063f3c3da227975fe1b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251003T090000
+DTEND;TZID=Europe/Moscow:20251003T103000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:93cd7da9d7f8caaa258ab6a1afab43d8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251003T104000
+DTEND;TZID=Europe/Moscow:20251003T121000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:9b8bd1458bd5d1e46ccf0712a41cd1b3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251003T124000
+DTEND;TZID=Europe/Moscow:20251003T141000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:6eaccbe5c84d5b103bc5201d4260a1c4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251003T142000
+DTEND;TZID=Europe/Moscow:20251003T155000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:36ebbc83f9fbc019b5ce6d8e1701bc0c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251006T112000
+DTEND;TZID=Europe/Moscow:20251006T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:18e1dedbcd1466a48fdcf6ec7dc5c8d7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251006T130000
+DTEND;TZID=Europe/Moscow:20251006T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:d60db24364bb15188fe599ea76266ae2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251006T150000
+DTEND;TZID=Europe/Moscow:20251006T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:b0910e0de9561ba2915558e40c3f3eec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251006T164000
+DTEND;TZID=Europe/Moscow:20251006T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:6f267a9ff5bf25d0dec92c292bb63deb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251007T100000
+DTEND;TZID=Europe/Moscow:20251007T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:73e116d517781dae2f0b27ce365ed957@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251007T114000
+DTEND;TZID=Europe/Moscow:20251007T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6eca651d3042e360da5d79506875e0cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251008T090000
+DTEND;TZID=Europe/Moscow:20251008T103000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: с/кср\nст.преп. Бурков 
+ А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:504da1dbc2902f365d55e0c3b9099038@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251008T104000
+DTEND;TZID=Europe/Moscow:20251008T121000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: с/кср\nст.преп. Бурков 
+ А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:cb67fa4768e96c201ffb180e1dce3a98@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251008T122000
+DTEND;TZID=Europe/Moscow:20251008T135000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4122cded54cf690bb1dce5d50d55a34e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251008T142000
+DTEND;TZID=Europe/Moscow:20251008T155000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a885d847df0b16b37e5507d5e58abc2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251008T160000
+DTEND;TZID=Europe/Moscow:20251008T173000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:65fbbe0b43622b328b7b24a2f6398154@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251009T090000
+DTEND;TZID=Europe/Moscow:20251009T103000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f51d691f0907294179406d77dbb9c018@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251009T104000
+DTEND;TZID=Europe/Moscow:20251009T121000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc0af4df462ae0b4f326ae29773f6fae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251009T124000
+DTEND;TZID=Europe/Moscow:20251009T141000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:68646210902b5216c1f0c57c5ad04180@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251009T142000
+DTEND;TZID=Europe/Moscow:20251009T155000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5da542c93b9b2b4eadf45eac29360e64@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251010T090000
+DTEND;TZID=Europe/Moscow:20251010T103000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:c54b0de39beb991b80b6188fc130048b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251010T104000
+DTEND;TZID=Europe/Moscow:20251010T121000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:b784cf68a09e2d4ab0b3be9acc1f81ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251013T112000
+DTEND;TZID=Europe/Moscow:20251013T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:07240566d0ee3979bf9c5f5ab0bbdf06@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251013T130000
+DTEND;TZID=Europe/Moscow:20251013T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:63da6e853a2b155e5d0855cc2f988140@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251013T150000
+DTEND;TZID=Europe/Moscow:20251013T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:2584666cee00ba32e8f1ca6c04324de1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251013T164000
+DTEND;TZID=Europe/Moscow:20251013T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:38ed9b99a3e7c4b5694b1b7f00a4195c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251014T100000
+DTEND;TZID=Europe/Moscow:20251014T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca90110a1138e75fab7cfef5a7460520@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251014T114000
+DTEND;TZID=Europe/Moscow:20251014T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c9dbbf4517bc7ffc0f5b17879fa7e2d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251014T144000
+DTEND;TZID=Europe/Moscow:20251014T161000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:826900157c5794beae0bdcf1955e7e36@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251014T162000
+DTEND;TZID=Europe/Moscow:20251014T175000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: кср\nст.преп. Бурков А.
+ И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a2f578b58b21e695a2150f038f215a43@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251015T103000
+DTEND;TZID=Europe/Moscow:20251015T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:52554d83c76976f4c6c628ea58498b47@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251015T121000
+DTEND;TZID=Europe/Moscow:20251015T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c6aee5f8a3ab9f101bd679eba76a19c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251015T141000
+DTEND;TZID=Europe/Moscow:20251015T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0a05863c69b2acfe9d625385a0386d52@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251015T155000
+DTEND;TZID=Europe/Moscow:20251015T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c230c4686a4393b147e92452efa891e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251016T134000
+DTEND;TZID=Europe/Moscow:20251016T151000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:bec7b7ba49822bccf2fccdffadedfc88@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251016T152000
+DTEND;TZID=Europe/Moscow:20251016T165000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ffa1ba66d059ece524fb20cf1cbe45d1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251016T170000
+DTEND;TZID=Europe/Moscow:20251016T183000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:bfd321fa7ba78df5edbba98a3e0ec5c5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251017T090000
+DTEND;TZID=Europe/Moscow:20251017T103000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:42fc8b61a9d7619c2b6b939fcf3942e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251017T104000
+DTEND;TZID=Europe/Moscow:20251017T121000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:cdbc8363f63bde06ab9874c76470e980@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251017T124000
+DTEND;TZID=Europe/Moscow:20251017T141000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:216665f84b555f98e016ea0cabb06d4e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251017T142000
+DTEND;TZID=Europe/Moscow:20251017T155000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:db27cf8aefffaa2574808a33b00d0ffe@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251020T112000
+DTEND;TZID=Europe/Moscow:20251020T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:074e8c38aeeaccdd75b664b35f0de0d9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251020T130000
+DTEND;TZID=Europe/Moscow:20251020T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:23820271559272f010a6de005e8df68f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251020T150000
+DTEND;TZID=Europe/Moscow:20251020T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:720e2589cecaf92854182a36d2840428@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251020T164000
+DTEND;TZID=Europe/Moscow:20251020T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:2a736bee0c3a0de30add06323ba4c48c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251021T100000
+DTEND;TZID=Europe/Moscow:20251021T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:47f34e210ef27788b0c6286a80742e29@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251021T114000
+DTEND;TZID=Europe/Moscow:20251021T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c31d665845564a3f618aaf3cb4a597d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251021T144000
+DTEND;TZID=Europe/Moscow:20251021T161000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7a68a063c0c16409d7b5c0b64764f929@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251021T162000
+DTEND;TZID=Europe/Moscow:20251021T175000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5276ba62afab6b4ab457058f4830d82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251022T103000
+DTEND;TZID=Europe/Moscow:20251022T120000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:b24370a6a2674700d9627b2810c4efb0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251022T121000
+DTEND;TZID=Europe/Moscow:20251022T134000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:a98d4269d1a19121f34f2f67fa7f25cd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251022T141000
+DTEND;TZID=Europe/Moscow:20251022T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:69f00aeaab6811bd55bcafc36166660e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251022T155000
+DTEND;TZID=Europe/Moscow:20251022T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:96031ef5caf6853683b593ac9ed3afd8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251023T114000
+DTEND;TZID=Europe/Moscow:20251023T131000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:c93c89e7e53c5420f6981bd57c34e963@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251023T132000
+DTEND;TZID=Europe/Moscow:20251023T145000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:48f5c6eb0f1f1b1d4eb6f85073d6de82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251023T152000
+DTEND;TZID=Europe/Moscow:20251023T165000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:99a6d24823f5f232e279385b6f10c128@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251023T170000
+DTEND;TZID=Europe/Moscow:20251023T183000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:207e5dcdb509289d12705b3667dbb8bc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251024T090000
+DTEND;TZID=Europe/Moscow:20251024T103000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Ефимо
+ ва Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:1ac3ecfb81d81f663a08de882946f38d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251024T104000
+DTEND;TZID=Europe/Moscow:20251024T121000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:d8a81c7c5845b89bda6f751677025690@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251027T112000
+DTEND;TZID=Europe/Moscow:20251027T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:37cc43de290502580d4a00d15601ec15@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251027T130000
+DTEND;TZID=Europe/Moscow:20251027T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5522c3895c86740b34ba0b496f920ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251028T100000
+DTEND;TZID=Europe/Moscow:20251028T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c868088af121df17a9d1287ec7c8101e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251028T114000
+DTEND;TZID=Europe/Moscow:20251028T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:aa7e1e2128198d9f0b7e51761042eee1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251028T144000
+DTEND;TZID=Europe/Moscow:20251028T161000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:b612fb2d00f50d99e75e1f506c499fc5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251028T162000
+DTEND;TZID=Europe/Moscow:20251028T175000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: кср\nст.преп. Бурков А.
+ И.
+END:VEVENT
+BEGIN:VEVENT
+UID:211af4c75d39f17d9a18cfcd4957497e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251029T103000
+DTEND;TZID=Europe/Moscow:20251029T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:042da04a0a81c299fb9386e59c735fc1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251029T121000
+DTEND;TZID=Europe/Moscow:20251029T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:2b528bd16537872d58212e8471bbcead@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251029T141000
+DTEND;TZID=Europe/Moscow:20251029T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:985fb90e5fe53198be8f648fb68e9253@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251029T155000
+DTEND;TZID=Europe/Moscow:20251029T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a05b75bcc4027912c25a476abb0e6a4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251030T090000
+DTEND;TZID=Europe/Moscow:20251030T103000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:255bee234b1957d26dec36f48c447d33@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251030T104000
+DTEND;TZID=Europe/Moscow:20251030T121000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:c8c23cd93cac23400c567eb6c8b20f9c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251030T122000
+DTEND;TZID=Europe/Moscow:20251030T135000
+SUMMARY:Уголовное право
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:1cd152f68b5aca5f4bc5b389ec522f1c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251030T160000
+DTEND;TZID=Europe/Moscow:20251030T173000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b70bf875a331ed93474c4cf6f552e5a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251031T090000
+DTEND;TZID=Europe/Moscow:20251031T103000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:add57b1104cb591748ae7ac85e655b18@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251031T104000
+DTEND;TZID=Europe/Moscow:20251031T121000
+SUMMARY:Семейное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Ефим
+ ова Н.Е.
+END:VEVENT
+BEGIN:VEVENT
+UID:43905e943ff79cdb158e3d4b5a1eccf8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251105T103000
+DTEND;TZID=Europe/Moscow:20251105T120000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:9967ee0ad6107792dc81343ff670dd83@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251105T121000
+DTEND;TZID=Europe/Moscow:20251105T134000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:617a9b0bd255df29b56b8dc833ad4e05@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251105T141000
+DTEND;TZID=Europe/Moscow:20251105T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3117947faf1564e7d8b83e87ba6932fd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251105T155000
+DTEND;TZID=Europe/Moscow:20251105T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ddfe80bc7c06fbfac235c419aa8f4efb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251106T152000
+DTEND;TZID=Europe/Moscow:20251106T165000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2af2e5ff3d2a8c188eee23356ff7f89e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251106T170000
+DTEND;TZID=Europe/Moscow:20251106T183000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:36fcf6d215d8f12932b8a94df07d87bd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251107T100000
+DTEND;TZID=Europe/Moscow:20251107T113000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:c41f5d7fee31f74a073cfc26b4de709f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251107T114000
+DTEND;TZID=Europe/Moscow:20251107T131000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:33318c8fcd57f1cf509f4339d2cc8a00@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251108T100000
+DTEND;TZID=Europe/Moscow:20251108T113000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d1e9df8caf1116653cb255031b95e2e3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251108T114000
+DTEND;TZID=Europe/Moscow:20251108T131000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:bc1939c737089115543bc6c688149126@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251110T112000
+DTEND;TZID=Europe/Moscow:20251110T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:5dd32238af8319c220aa7da9bf0b8d05@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251110T130000
+DTEND;TZID=Europe/Moscow:20251110T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:9ce1a1c33251996aeadd589a9c316546@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251110T150000
+DTEND;TZID=Europe/Moscow:20251110T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f1c290c8650f553c63c9534cee598d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251110T164000
+DTEND;TZID=Europe/Moscow:20251110T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:84de2781ec9259cb8f1f159617732b41@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251111T100000
+DTEND;TZID=Europe/Moscow:20251111T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:91c67998c651bbbdfeed36d70ea9b6ce@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251111T114000
+DTEND;TZID=Europe/Moscow:20251111T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a2e774af896e48f16ae2d5b988fde3e5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251111T144000
+DTEND;TZID=Europe/Moscow:20251111T161000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Асриян Б
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:aef6c42d333c1091983a47e9f53e2d47@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251111T162000
+DTEND;TZID=Europe/Moscow:20251111T175000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Асриян 
+ Б.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:28c51e27942891b9392cc43fa3b5372e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251112T103000
+DTEND;TZID=Europe/Moscow:20251112T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca685c16f03a558c936b97adb29e6bf1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251112T121000
+DTEND;TZID=Europe/Moscow:20251112T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:aa7d26dc63c5319f287d40a2b530c695@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251112T141000
+DTEND;TZID=Europe/Moscow:20251112T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f3ff883b223dec5a21548206dcae8280@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251112T155000
+DTEND;TZID=Europe/Moscow:20251112T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:04793545a78f2838a8e530f76d8ea82a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251113T103000
+DTEND;TZID=Europe/Moscow:20251113T120000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:545046a8245d7fc3b17cae96fe43ac3e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251113T121000
+DTEND;TZID=Europe/Moscow:20251113T134000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:1b44876e0617065277506b71f44a6914@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251113T160000
+DTEND;TZID=Europe/Moscow:20251113T173000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:27c4263c5de9c12cfd196e3572350ada@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251114T124000
+DTEND;TZID=Europe/Moscow:20251114T141000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:40f53cd49c3a46c6ab143ed7117bc76a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251114T142000
+DTEND;TZID=Europe/Moscow:20251114T155000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:41a0ee11fa0163176bb16d9378033b83@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251115T100000
+DTEND;TZID=Europe/Moscow:20251115T113000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7e753220428a511391283bd611faee78@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251115T114000
+DTEND;TZID=Europe/Moscow:20251115T131000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: кср\nст.преп. Бурков А.
+ И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c6cb662e5275e92fe7e5a040f6d5c9b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251117T112000
+DTEND;TZID=Europe/Moscow:20251117T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8c95e86e73cded0cc044a0caa15e1b7e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251117T130000
+DTEND;TZID=Europe/Moscow:20251117T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:24a84b0e63bf73a484e4a634fbe34065@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251117T150000
+DTEND;TZID=Europe/Moscow:20251117T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:5b01fe6abe6210fec24020b339abbc47@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251117T164000
+DTEND;TZID=Europe/Moscow:20251117T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:489c26c24380ec0c42673914718503bd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251118T100000
+DTEND;TZID=Europe/Moscow:20251118T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b623d2b5da13a662a943f919ca0e23c8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251118T114000
+DTEND;TZID=Europe/Moscow:20251118T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3dfd369dcef53d89b5479a34e56c7dc2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251118T144000
+DTEND;TZID=Europe/Moscow:20251118T161000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Асриян Б
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c88c072d851c85e97a3233d7aed791d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251118T162000
+DTEND;TZID=Europe/Moscow:20251118T175000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Асриян 
+ Б.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:623e26a61504c66e4c92a08a57e66019@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251119T100000
+DTEND;TZID=Europe/Moscow:20251119T113000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:4446fc867c4ae6b59112dff79bc052b4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251119T114000
+DTEND;TZID=Europe/Moscow:20251119T131000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:26f89ce2583abea1a400c5c78ae02ef4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251120T152000
+DTEND;TZID=Europe/Moscow:20251120T165000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f9cbf9c823206ecd4da479af5ca5cee4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251120T170000
+DTEND;TZID=Europe/Moscow:20251120T183000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d05c29be31acc2797aa06b209cea886@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251121T090000
+DTEND;TZID=Europe/Moscow:20251121T103000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8c0d1110b569db6c4a9cc2359eb4834@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251121T104000
+DTEND;TZID=Europe/Moscow:20251121T121000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:67359bae47b9de4e7fd8d923b7755428@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251121T124000
+DTEND;TZID=Europe/Moscow:20251121T141000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:c7441728e18cff8fe28b1ef17bcf6f17@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251121T142000
+DTEND;TZID=Europe/Moscow:20251121T155000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a160fad948b1b6ea6adba96668ae36f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251122T100000
+DTEND;TZID=Europe/Moscow:20251122T113000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Бурко
+ в А.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d18133856a69cbf9ffa1ee0fb79d01ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251122T114000
+DTEND;TZID=Europe/Moscow:20251122T131000
+SUMMARY:Уголовное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бурк
+ ов А.И.\n(+ ЗАЧЁТ С ОЦЕНКОЙ)
+END:VEVENT
+BEGIN:VEVENT
+UID:8c4aaeeacc466ca200f0351c91b4e3fa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251124T112000
+DTEND;TZID=Europe/Moscow:20251124T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:e04c70aedbc0cb38c0cea964196e973f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251124T130000
+DTEND;TZID=Europe/Moscow:20251124T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:57da0226315796d62749183393c87f96@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251124T150000
+DTEND;TZID=Europe/Moscow:20251124T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:1529e265affeb0b1855f3cd6c0f5cb11@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251124T164000
+DTEND;TZID=Europe/Moscow:20251124T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:89490d4c85bfc7bc7a7fdf47efa73ae6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251125T100000
+DTEND;TZID=Europe/Moscow:20251125T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c89d684ca413560141562bd79301e6d8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251125T114000
+DTEND;TZID=Europe/Moscow:20251125T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:732f364c91edefea45ddeb45c46b8be1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251125T144000
+DTEND;TZID=Europe/Moscow:20251125T161000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:529e016bd07c1d8697d29c55a3a4f3a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251125T162000
+DTEND;TZID=Europe/Moscow:20251125T175000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:df1d84821095e6565da68f4903074d23@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251126T103000
+DTEND;TZID=Europe/Moscow:20251126T120000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9407294c982a2f5ae9c67e559df66176@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251126T121000
+DTEND;TZID=Europe/Moscow:20251126T134000
+SUMMARY:Социология управления
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nДемьяненко В
+ .И.  (+ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:513ef82b479c478fa45dc49d52a54cd7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251126T141000
+DTEND;TZID=Europe/Moscow:20251126T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Подейко 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fb7f00032fbc37bbede7698618c2afbd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251126T155000
+DTEND;TZID=Europe/Moscow:20251126T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce5a3051b8d5160c0c1182f8227701b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251127T090000
+DTEND;TZID=Europe/Moscow:20251127T103000
+SUMMARY:Научно-методический семинар
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Репин Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:14b2c7f156ab1a7a60187e8bf75121a9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251127T104000
+DTEND;TZID=Europe/Moscow:20251127T121000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5d3c7f353bde843bf2542de3a21fc637@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251127T122000
+DTEND;TZID=Europe/Moscow:20251127T135000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8af663702cfa16710cb4d9d2786e8e14@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251127T170000
+DTEND;TZID=Europe/Moscow:20251127T183000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1b968a6e91e750d020567f4f01f9d1c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251128T090000
+DTEND;TZID=Europe/Moscow:20251128T103000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:6dd5379874a22ea9ffb272821d70644b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251128T104000
+DTEND;TZID=Europe/Moscow:20251128T121000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:475039dde0f1c20845559779edd6bc0b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251128T124000
+DTEND;TZID=Europe/Moscow:20251128T141000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:176ebb52d7bb54b99952f9089c045ea7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251128T142000
+DTEND;TZID=Europe/Moscow:20251128T155000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:977d20d5859c7a9a5f506719ea3d0b60@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251201T112000
+DTEND;TZID=Europe/Moscow:20251201T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:59a78684c3afeb3611061e28edac4663@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251201T130000
+DTEND;TZID=Europe/Moscow:20251201T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:fcc7418989d92d07a841dc21923b067b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251201T150000
+DTEND;TZID=Europe/Moscow:20251201T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:0cef36ced28e2b0b1c16c99f8c00daac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251201T164000
+DTEND;TZID=Europe/Moscow:20251201T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:12e8f6a89f27a498793f33925a9e1f10@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251202T100000
+DTEND;TZID=Europe/Moscow:20251202T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:81e30eea48cf104a701538ddc8b7f66e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251202T114000
+DTEND;TZID=Europe/Moscow:20251202T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8f77c277bd14c17da671cb877be7c252@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251202T144000
+DTEND;TZID=Europe/Moscow:20251202T161000
+SUMMARY:Административное право
+LOCATION:130
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8dd4df8ab410959c56146885797e76ae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251202T162000
+DTEND;TZID=Europe/Moscow:20251202T175000
+SUMMARY:Административное право
+LOCATION:130
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:af2132ab7edfd49ce56c8699a356ace9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251203T103000
+DTEND;TZID=Europe/Moscow:20251203T120000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nпреп. Шеховцо
+ ва Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:bbee45e10b13357365678499a21ac838@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251203T121000
+DTEND;TZID=Europe/Moscow:20251203T134000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:15ffd7ed3ba8d72ed8b2ddd374f8e6df@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251203T141000
+DTEND;TZID=Europe/Moscow:20251203T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:435e8ec67aaa06826ad17663881cb74c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251203T155000
+DTEND;TZID=Europe/Moscow:20251203T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8f915ace5c1e6ad89e58ae6e8f68164f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251204T152000
+DTEND;TZID=Europe/Moscow:20251204T165000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4423d2538bdc9eb0cf21bf73c189694b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251204T170000
+DTEND;TZID=Europe/Moscow:20251204T183000
+SUMMARY:Политическая социология
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e406a2529c3f9d6c99056455fd83ee0b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251205T100000
+DTEND;TZID=Europe/Moscow:20251205T113000
+SUMMARY:Семейное право
+LOCATION:304 или 135
+DESCRIPTION:ст.преп. Ефимова Н.Е.\n(ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:e54d24071187b0f7a8791b4b39f492bc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251205T132000
+DTEND;TZID=Europe/Moscow:20251205T145000
+SUMMARY:Правовая экспертиза
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:70a20c9a0b1e638e7669d0ab3a0762c5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251205T150000
+DTEND;TZID=Europe/Moscow:20251205T163000
+SUMMARY:Правовая экспертиза
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c1b0372ca0815f362a777c9b4f615a7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251208T112000
+DTEND;TZID=Europe/Moscow:20251208T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef1ea6c1b4ad32b4bc74f6e489aa7a98@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251208T130000
+DTEND;TZID=Europe/Moscow:20251208T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:19d8674a6d16ea27947311d06a98ffb2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251208T150000
+DTEND;TZID=Europe/Moscow:20251208T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:0456f74c0bceaaf4bcd49d713968a6a8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251208T164000
+DTEND;TZID=Europe/Moscow:20251208T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Нарьян 
+ С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:23dcc147281e88b1ac93f8d3d3dce3a8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251209T100000
+DTEND;TZID=Europe/Moscow:20251209T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Чурси
+ на А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f2700fbf86696ce8ac38ac597f87f826@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251209T114000
+DTEND;TZID=Europe/Moscow:20251209T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4f58c2ba20572d6ae34b23a2b6dbdd29@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251209T144000
+DTEND;TZID=Europe/Moscow:20251209T161000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Асриян Б
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f1a5e3b624215392bd1e49286739fc3f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251209T162000
+DTEND;TZID=Europe/Moscow:20251209T175000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Асриян 
+ Б.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1efac9efeb6ddab063839e302d33b824@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251210T103000
+DTEND;TZID=Europe/Moscow:20251210T120000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Шеховц
+ ова Е.П.
+END:VEVENT
+BEGIN:VEVENT
+UID:90a30b80d7ec39c1961163cbd3c85b90@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251210T121000
+DTEND;TZID=Europe/Moscow:20251210T134000
+SUMMARY:История отеч. социологии
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nШеховцова Е.
+ П. (+ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:b8a4fb081b3ff951cd9aa52c66a8dce0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251210T141000
+DTEND;TZID=Europe/Moscow:20251210T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ab34ab403456392de79a63ee6775420a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251210T155000
+DTEND;TZID=Europe/Moscow:20251210T172000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Подейк
+ о В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9066c67a22c79aac4c0c29a0adaef1dc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251211T114000
+DTEND;TZID=Europe/Moscow:20251211T131000
+SUMMARY:Правовая экспертиза
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1a88234498459b45013e261ed516068e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251211T132000
+DTEND;TZID=Europe/Moscow:20251211T145000
+SUMMARY:Правовая экспертиза
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c77b9d011eb742ce0bb26d35257ccdb9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251211T160000
+DTEND;TZID=Europe/Moscow:20251211T173000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b6642308c7ece06c42814493dda04ee0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251212T110000
+DTEND;TZID=Europe/Moscow:20251212T123000
+SUMMARY:Гражданское право: ч. II
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nЯкимова Е.С. (
+ + ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:d3d5646e1bc3dd9332b624a9d8eb87b3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251212T124000
+DTEND;TZID=Europe/Moscow:20251212T141000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Якимо
+ ва Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:cad8e523be4ab682ce60860451f53f0f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251212T142000
+DTEND;TZID=Europe/Moscow:20251212T155000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Яким
+ ова Е.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:737e9d4f2d539afd697feafc127f8b01@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251215T112000
+DTEND;TZID=Europe/Moscow:20251215T125000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:571ddd1fa389f6ccb5cef5ad5d6622d8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251215T130000
+DTEND;TZID=Europe/Moscow:20251215T143000
+SUMMARY:Прикладная статистика для социолог
+ ов
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:dc6bc178356b069604705f9067726caa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251215T150000
+DTEND;TZID=Europe/Moscow:20251215T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:981da5259d88101e9ae0d336d25810bf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251215T164000
+DTEND;TZID=Europe/Moscow:20251215T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nпреп. Нарьян С
+ .К.
+END:VEVENT
+BEGIN:VEVENT
+UID:f8256ddcb0ffde6d77a4206bba1a5917@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251216T100000
+DTEND;TZID=Europe/Moscow:20251216T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d8f65bf290af54799c6c380e4d4bb257@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251216T114000
+DTEND;TZID=Europe/Moscow:20251216T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d7e07399757b0b2b1197ec5faf3f447@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251216T144000
+DTEND;TZID=Europe/Moscow:20251216T161000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Асриян Б
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:01ff7b707da302c04bf15258a6e46407@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251216T162000
+DTEND;TZID=Europe/Moscow:20251216T175000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Асриян 
+ Б.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fea9fcbe94a30dad116706f40b0fef36@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251217T141000
+DTEND;TZID=Europe/Moscow:20251217T154000
+SUMMARY:Административное право
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nПодейко В.А. (
+ +ЗАЧ. С ОЦ.)
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4bac9bbaafa1c7f1ba95a3c36aaaa2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251218T090000
+DTEND;TZID=Europe/Moscow:20251218T103000
+SUMMARY:Научно-методический семинар
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Репин Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d0230c061f793aef4e6cf9c0b0b1d5d1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251218T104000
+DTEND;TZID=Europe/Moscow:20251218T121000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:71febc20c8a7e182c1a68be8eadfd2c8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251218T122000
+DTEND;TZID=Europe/Moscow:20251218T135000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6fde7c7365001f6e4cd7ae4f752d338e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251218T152000
+DTEND;TZID=Europe/Moscow:20251218T165000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Лекция\nк.ф.н. Ермолае
+ в И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a4ba11ce3c4a7d590c5d8fcd20e216c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251218T170000
+DTEND;TZID=Europe/Moscow:20251218T183000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:cb82a378bfb73abd41bf6d6651c04223@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251219T103000
+DTEND;TZID=Europe/Moscow:20251219T120000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 220
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:457f6079c24e8ab4456ec005946926c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251219T121000
+DTEND;TZID=Europe/Moscow:20251219T134000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 220
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e30d82a15f2c2f5b1cba450887876d25@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251222T112000
+DTEND;TZID=Europe/Moscow:20251222T125000
+SUMMARY:Прикладная статистика для социолог
+ ов (+ЗАЧ. С ОЦ\,)
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nпреп. Тищенк
+ о А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:a69857f74c1bc47062dcc1e647d36e4a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251222T150000
+DTEND;TZID=Europe/Moscow:20251222T163000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Вид занятия: кср\nпреп. Нарьян С.К.
+END:VEVENT
+BEGIN:VEVENT
+UID:b587ff49db528bb2309a1c9aa42d50f8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251222T164000
+DTEND;TZID=Europe/Moscow:20251222T181000
+SUMMARY:Программа SPSS
+LOCATION:дист
+DESCRIPTION:Нарьян С.К. (+ ЗАЧЁТ с ОЦ\,)
+END:VEVENT
+BEGIN:VEVENT
+UID:baa9b4c07149b2b2b1f03b6fb2927739@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251223T100000
+DTEND;TZID=Europe/Moscow:20251223T113000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Чурс
+ ина А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2cbfde5e73986f5b3699bdc56fa6cf58@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251223T114000
+DTEND;TZID=Europe/Moscow:20251223T131000
+SUMMARY:Технологии прикладных социологич. и
+ сследований
+LOCATION:Крж / 218
+DESCRIPTION:Вид занятия: Семинар\nЧурсина А.В. (
+ +ЗАЧ. С ОЦ.)
+END:VEVENT
+BEGIN:VEVENT
+UID:390f3aa191b6eb9c2af436a059a64e3b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251225T110000
+DTEND;TZID=Europe/Moscow:20251225T123000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8ac1a47f9fcc8f4302a8b4bc9b491b9e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251225T124000
+DTEND;TZID=Europe/Moscow:20251225T141000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2dbbd06c6fb1594d5ccc5eb9bc1ca080@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251225T170000
+DTEND;TZID=Europe/Moscow:20251225T183000
+SUMMARY:Политическая социология
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ф.н. Ермола
+ ев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c61c6fa2c5a09ac26a1dd69181774405@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251226T090000
+DTEND;TZID=Europe/Moscow:20251226T103000
+SUMMARY:Научно-методический семинар
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nпреп. Старов
+ ойтенко А.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:97402b5531eea0e6a6f58a9e4b257fb1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20251226T160000
+DTEND;TZID=Europe/Moscow:20251226T173000
+SUMMARY:Правовая экспертиза
+LOCATION:115
+DESCRIPTION:к.ю.н. Асриян Б.А. (ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:7e37c6eb0784ceb6097bdf4ae455e41e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260116T120000
+DTEND;TZID=Europe/Moscow:20260116T133000
+SUMMARY:Политическая социология — КОНСУЛЬТ
+ АЦИЯ
+LOCATION:дист
+DESCRIPTION:к.ф.н. Ермолаев И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d786c9229ea32ffa532da8675461ee35@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260121T120000
+DTEND;TZID=Europe/Moscow:20260121T133000
+SUMMARY:Политическая социология — ЭКЗАМЕН
+LOCATION:131
+DESCRIPTION:к.ф.н. Ермолаев И.А.
+END:VEVENT
+END:VCALENDAR
