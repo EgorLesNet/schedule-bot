@@ -2,8 +2,10 @@
 (function () {
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
   const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
+  const AD_W = 900;
+  const AD_H = 163;
 
-  // ---------- Реклама: картинки docs/ads/ad1.*, ad2.*, ... ----------
+  // ---------- Реклама: картинки docs/ads/ad1.*, ad2.*, ... размером 900×163 ----------
   let ADS = [];
   let adsReady = null;
 
@@ -21,15 +23,11 @@
     if (!items.length) return null;
     const card = document.querySelector('.card');
     const radius = card ? getComputedStyle(card).borderRadius : '16px';
-    const box = h('div', { class: 'ad', style: 'position:relative;overflow:hidden;width:100%;aspect-ratio:3 / 1;margin:12px 0;user-select:none;background:rgba(127,127,127,.12);border-radius:' + radius });
+    const box = h('div', { class: 'ad', style: 'position:relative;overflow:hidden;width:100%;aspect-ratio:' + AD_W + ' / ' + AD_H + ';margin:12px 0;user-select:none;background:rgba(127,127,127,.12);border-radius:' + radius });
     const imgs = items.map((a, i) => {
       const im = h('img', { src: a.src, alt: '', draggable: 'false', style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .8s ease;opacity:' + (i === 0 ? '1' : '0') });
       im.addEventListener('error', () => { im.dataset.bad = '1'; });
       return im;
-    });
-    imgs[0].addEventListener('load', () => {
-      const r = imgs[0].naturalWidth / imgs[0].naturalHeight;
-      if (r > 0) box.style.aspectRatio = Math.min(4, Math.max(1.6, r)) + ' / 1';
     });
     box.append(...imgs);
     let cur = 0;
@@ -72,20 +70,25 @@
     else cal.parentElement.append(box);
   }
 
-  // Настройки (только админ): ссылка для каждой картинки
+  // Настройки (только админ): ссылка для каждой картинки и проверка размера
   function adminAds(root) {
     if (root.querySelector('.ad-admin')) return;
     const card = h('section', { class: 'card ad-admin' }, h('h3', {}, 'Реклама'),
-      h('p', { class: 'muted' }, 'Картинки берутся из docs/ads (ad1, ad2, …). Для каждой задайте ссылку, на которую перейдёт пользователь.'));
+      h('p', { class: 'muted' }, 'Картинки берутся из docs/ads (ad1, ad2, …), размер строго ' + AD_W + '×' + AD_H + '. Для каждой задайте ссылку, на которую перейдёт пользователь.'));
     const list = h('div', {});
     card.append(list);
     const draw = () => {
       if (!ADS.length) { list.replaceChildren(h('p', { class: 'muted' }, 'Картинок в docs/ads пока нет')); return; }
       list.replaceChildren(...ADS.map((a) => {
         const url = h('input', { type: 'url', placeholder: 'https://…', value: a.url });
+        const note = h('span', { class: 'muted' }, '');
+        const im = h('img', { src: a.src, alt: a.id, style: 'width:100%;aspect-ratio:' + AD_W + ' / ' + AD_H + ';object-fit:cover;border-radius:10px' });
+        im.addEventListener('load', () => {
+          const ok = im.naturalWidth === AD_W && im.naturalHeight === AD_H;
+          note.textContent = im.naturalWidth + '×' + im.naturalHeight + (ok ? ' ✓' : ' — нужен размер ' + AD_W + '×' + AD_H);
+        });
         return h('div', { class: 'linkform' },
-          h('img', { src: a.src, alt: a.id, style: 'width:100%;max-height:90px;object-fit:cover;border-radius:10px' }),
-          h('b', {}, a.id), url,
+          im, h('b', {}, a.id), note, url,
           h('button', { class: 'mini', onclick: safe(async () => {
             const r = await call('ads', { action: 'set', id: a.id, url: url.value.trim() });
             ADS = (r && r.ads) || ADS;
