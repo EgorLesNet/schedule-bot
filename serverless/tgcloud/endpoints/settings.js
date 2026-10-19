@@ -13,5 +13,7 @@ export default endpoint(async (input, u) => {
   const e = pair && pair.course === course ? all.find((x) => x.course === course && x.key === input.stream && x.faculty === faculty && x.direction === pair.direction) : null;
   if (!e) throw new Error('no schedule for this selection');
   const ls = (course === '1' || course === '2') && isLangStart(input.langStart) ? input.langStart : null;
-  return await store.saveUser(u.id, { faculty: e.faculty, direction: e.direction, course, stream: e.key, langStart: ls, englishTime: null, reminders: !!input.reminders });
+  const saved = await store.saveUser(u.id, { faculty: e.faculty, direction: e.direction, course, stream: e.key, langStart: ls, englishTime: null, reminders: !!input.reminders });
+  // В базе хранятся названия, а Mini App ожидает номера из списков bootstrap (как в endpoints/bootstrap.js)
+  return Object.assign({}, saved, { faculty: Number(input.faculty), direction: Number(input.direction) });
 });

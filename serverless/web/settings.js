@@ -34,6 +34,18 @@
     new MutationObserver(() => { try { cascade(view); } catch (e) {} }).observe(view, { childList: true, subtree: true });
   }
 
+  // После успешного сохранения настроек обновляем данные пользователя в памяти, чтобы вкладка настроек показывала новый выбор
+  const baseCall = call;
+  call = function (name, p, cache) {
+    const r = baseCall(name, p, cache);
+    if (name === 'settings') {
+      r.then((user) => {
+        if (user && typeof user === 'object' && S.boot) S.boot.user = Object.assign({}, S.boot.user, user);
+      }).catch(() => {});
+    }
+    return r;
+  };
+
   subCard = function () {
     const c = h('section', { class: 'card' }, h('h3', {}, 'Календарь'));
     const file = myFile();
