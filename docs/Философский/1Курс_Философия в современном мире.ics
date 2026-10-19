@@ -1,0 +1,2513 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Philosophy 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Философия, 1 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:031bb270abea8511caa5859b7d5fdfae@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:a67dd5396e07b44fb53b72b406ee129d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260907T114000
+DTEND;TZID=Europe/Moscow:20260907T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:54916ec16ab43195bc4872a79b179ee2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260914T100000
+DTEND;TZID=Europe/Moscow:20260914T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:dc6bf463bb68da7ff762167b32e8cbba@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260914T114000
+DTEND;TZID=Europe/Moscow:20260914T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:8c3810963dee0d9a3a37e8fc5036e4ac@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:a7d7674c08795a55846ca652b529b32a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260921T114000
+DTEND;TZID=Europe/Moscow:20260921T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:9bf99fa6ff6a46e691e53acfc31a05a6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260928T100000
+DTEND;TZID=Europe/Moscow:20260928T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d7bf436c4c7b6d959094b566977773bf@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260928T114000
+DTEND;TZID=Europe/Moscow:20260928T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:9c64b7c8bff821ea5884d70fd25aa074@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:f88b1c2e5efe8a761ebbca3896f65e2f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261005T114000
+DTEND;TZID=Europe/Moscow:20261005T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:18be5fc9e52f33ad7a9ffe789581efda@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261012T100000
+DTEND;TZID=Europe/Moscow:20261012T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:6108e391bd8072e0b9f8ef4c0ef83006@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261012T114000
+DTEND;TZID=Europe/Moscow:20261012T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:9f5a1db76c6bcfaf722eb757dd136a97@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:80d7cc1525e8e1f86a34c9fcb0366b36@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261019T114000
+DTEND;TZID=Europe/Moscow:20261019T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:fdfcde69e1b0c5f62042f11d697a2761@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:4d6345ba31b4152fc474d37e8f8e2731@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261026T114000
+DTEND;TZID=Europe/Moscow:20261026T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:816c89e702695e4573abae747b59e517@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261102T100000
+DTEND;TZID=Europe/Moscow:20261102T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:159c661601f204a5d576a3af49cbe44a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261102T114000
+DTEND;TZID=Europe/Moscow:20261102T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:57473d964ab92e78f5604a8a20b7b9f3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261109T100000
+DTEND;TZID=Europe/Moscow:20261109T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:c4684dfca035d907a148cf9342bb79fe@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261109T114000
+DTEND;TZID=Europe/Moscow:20261109T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:92e13fca36dc86ce74fb9d1487f3c684@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261116T100000
+DTEND;TZID=Europe/Moscow:20261116T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:aadb3be4f6a68307c2fdecaa6a8a1259@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261116T114000
+DTEND;TZID=Europe/Moscow:20261116T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:c79e91514f54e2e6f88017636fc802b5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261123T100000
+DTEND;TZID=Europe/Moscow:20261123T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:741a4436207bca466a5d7e3147034202@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261123T114000
+DTEND;TZID=Europe/Moscow:20261123T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:5f39adc59595484a9eb1c5f30bc4ccab@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261130T100000
+DTEND;TZID=Europe/Moscow:20261130T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:b5c815d9fbe7bb42450e8eba65e44de4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261130T114000
+DTEND;TZID=Europe/Moscow:20261130T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:0e3d2efda0a3180b25dbdc1e0788c615@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261207T100000
+DTEND;TZID=Europe/Moscow:20261207T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:adc80187be4e66661bacbcc1edd721e5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261207T114000
+DTEND;TZID=Europe/Moscow:20261207T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:e0d4924ac26abd1a223d896744f22bfd@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261214T100000
+DTEND;TZID=Europe/Moscow:20261214T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:3c997c1dfe5d117b572ef51b5adb4aba@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261214T114000
+DTEND;TZID=Europe/Moscow:20261214T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:b8a1d9741f456c93af7f87c658ca92d3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261221T100000
+DTEND;TZID=Europe/Moscow:20261221T113000
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:816a7a8491c3f42aac088b885cd51ec3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261221T114000
+DTEND;TZID=Europe/Moscow:20261221T122500
+SUMMARY:История зарубежной философии
+LOCATION:230
+DESCRIPTION:Преподаватель: Волкова Н.П.\nФорма 
+ контроля: Экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:4fb6aa91ab63c27dd5a349086f800f4f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260907T130000
+DTEND;TZID=Europe/Moscow:20260907T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:343e44d2175d238aae845f3ed8a736d5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260914T130000
+DTEND;TZID=Europe/Moscow:20260914T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:881d9828124c2988fe115a1481dc40f6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260921T130000
+DTEND;TZID=Europe/Moscow:20260921T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e874a5defb9ea75f1e08daaaefb4c731@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260928T130000
+DTEND;TZID=Europe/Moscow:20260928T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:77ec6da42b4352fe8b7ca079bbf0272f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261005T130000
+DTEND;TZID=Europe/Moscow:20261005T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4b1583764b4a62aa79df88f739b5b110@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261012T130000
+DTEND;TZID=Europe/Moscow:20261012T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:137696ffaf7eefebf0f0141384f37c26@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261019T130000
+DTEND;TZID=Europe/Moscow:20261019T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:60d5dee9d88a239b5dd8b137e0052c84@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261026T130000
+DTEND;TZID=Europe/Moscow:20261026T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8ba826ba39e3996f86d2038b38d3afbb@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261102T130000
+DTEND;TZID=Europe/Moscow:20261102T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c254b9630946cdcabbcd6f3f73700b9a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261109T130000
+DTEND;TZID=Europe/Moscow:20261109T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6c256fd33ed6e9a482220598e4ba61bd@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261116T130000
+DTEND;TZID=Europe/Moscow:20261116T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:247e7796285a183f67ab73c85ca84953@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261123T130000
+DTEND;TZID=Europe/Moscow:20261123T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:0987743d82600108cccea162845148c6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261130T130000
+DTEND;TZID=Europe/Moscow:20261130T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ae832f4e291ff3bca0fae4f6bbc9aca3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261207T130000
+DTEND;TZID=Europe/Moscow:20261207T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:dc3da4aaf8fa0aec3b58670e0429a312@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261214T130000
+DTEND;TZID=Europe/Moscow:20261214T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:042f14caf4bf9c5a775e95a51a14a469@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261221T130000
+DTEND;TZID=Europe/Moscow:20261221T143000
+SUMMARY:Латинский язык для философов
+LOCATION:226
+DESCRIPTION:Преподаватель: Гусева А.А.\nФорма к
+ онтроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:42db8c214ea188ef97146fe4c67f5086@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260907T150000
+DTEND;TZID=Europe/Moscow:20260907T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:58c760d7df27cea4124e96906b6b5446@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260914T150000
+DTEND;TZID=Europe/Moscow:20260914T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:bf863634f41581318542df62420c62ef@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260921T150000
+DTEND;TZID=Europe/Moscow:20260921T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:eeaa291992480ed515e130e4b9c29b86@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260928T150000
+DTEND;TZID=Europe/Moscow:20260928T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:055298f6aa167ee7bbe344072357f009@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261005T150000
+DTEND;TZID=Europe/Moscow:20261005T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c2c8fcba2c3eac7e616ab8094f615918@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261012T150000
+DTEND;TZID=Europe/Moscow:20261012T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:84f9b71c46d645bf7bd81dda8a646fe9@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261019T150000
+DTEND;TZID=Europe/Moscow:20261019T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3cc4b02c8ccff3d1bc7e3c30ffdc149e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261026T150000
+DTEND;TZID=Europe/Moscow:20261026T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f2fad7a7a9c0b54b807307ccd5701839@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261102T150000
+DTEND;TZID=Europe/Moscow:20261102T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4e1bee5c114ec68f1ce40339366e7f44@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261109T150000
+DTEND;TZID=Europe/Moscow:20261109T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ea497952d142e5cc9f07ff9a3a79c243@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261116T150000
+DTEND;TZID=Europe/Moscow:20261116T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3f02fbbcf5effed0bf078ca3efdca2b3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261123T150000
+DTEND;TZID=Europe/Moscow:20261123T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9db2aa702fc23f4c556059cef952275e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261130T150000
+DTEND;TZID=Europe/Moscow:20261130T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2cfea829e245e146138e010cec315bf4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261207T150000
+DTEND;TZID=Europe/Moscow:20261207T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c1fc818c28dda8e4330b8de559b4cd29@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261214T150000
+DTEND;TZID=Europe/Moscow:20261214T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:7023f991b981559678e8239109292917@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261221T150000
+DTEND;TZID=Europe/Moscow:20261221T163000
+SUMMARY:Введение в философию
+LOCATION:226
+DESCRIPTION:Преподаватель: Алексеева Е.А.\, Сид
+ орин В.В.\, Медведев А.О.\nФорма контроля: 
+ Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a04ffd4a014012fa29957488adbc0392@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260921T164000
+DTEND;TZID=Europe/Moscow:20260921T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:266df82e3d04b491e99f99d48158117f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260928T164000
+DTEND;TZID=Europe/Moscow:20260928T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:f592656f34b302dddfc5423c50d1f838@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261005T164000
+DTEND;TZID=Europe/Moscow:20261005T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a17871112628142d6dae395f28fd0e9d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261012T164000
+DTEND;TZID=Europe/Moscow:20261012T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c3e32a74bc7e322ec2bcd4a6c578335f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261019T164000
+DTEND;TZID=Europe/Moscow:20261019T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:cb36a311ad0f2ea2f378652b675800a4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261026T164000
+DTEND;TZID=Europe/Moscow:20261026T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6a1f84aa1a1073309d93256042d5687f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261102T164000
+DTEND;TZID=Europe/Moscow:20261102T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:39b1940691dcff5c4d4b1ed2d61d4da3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261109T164000
+DTEND;TZID=Europe/Moscow:20261109T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3cece626c173d3424dc26db6ae2efc84@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261116T164000
+DTEND;TZID=Europe/Moscow:20261116T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:de0423bde46227f883a6e458e5efb7e4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261123T164000
+DTEND;TZID=Europe/Moscow:20261123T181000
+SUMMARY:Академическое чтение
+LOCATION:226
+DESCRIPTION:Преподаватель: Медведев А.О.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:1a96d66dc538528033fb3e875d2621cb@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260908T090000
+DTEND;TZID=Europe/Moscow:20260908T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:45e067ebe83d933456cfd5a8825aade9@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260908T104000
+DTEND;TZID=Europe/Moscow:20260908T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:2bac97991e39a13ee31f320dca7769a8@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261006T090000
+DTEND;TZID=Europe/Moscow:20261006T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:16bc9cf417361918872eb4cffa3146fb@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261006T104000
+DTEND;TZID=Europe/Moscow:20261006T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:26e2f5a2b77d3666a2f6d8c8c57362ca@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261020T090000
+DTEND;TZID=Europe/Moscow:20261020T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ef07126fcbf4e7efc6614d7fe4fce790@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261020T104000
+DTEND;TZID=Europe/Moscow:20261020T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:364033378c7f7fed741f6b15b574ed9e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261117T090000
+DTEND;TZID=Europe/Moscow:20261117T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:c25b7f0523dc8fa7587bc9ec1bc5a954@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261117T104000
+DTEND;TZID=Europe/Moscow:20261117T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:35d6c79472ff1d75e5ab84c14a704bbe@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261201T090000
+DTEND;TZID=Europe/Moscow:20261201T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:31090c83cade5aeac37f183eb0867b1c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261201T104000
+DTEND;TZID=Europe/Moscow:20261201T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e99ff721963396c1d11f9944daf16990@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261215T090000
+DTEND;TZID=Europe/Moscow:20261215T103000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a78df1efbbeb8b62e22def1b9507d1b5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261215T104000
+DTEND;TZID=Europe/Moscow:20261215T121000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:d739c7cc046853d431dfde222d652713@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260908T124000
+DTEND;TZID=Europe/Moscow:20260908T141000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:1f4de324616fbbea427bfa73cfcc23ce@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260908T142000
+DTEND;TZID=Europe/Moscow:20260908T155000
+SUMMARY:История России (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:8b37bf10c44431098fea598e94903e15@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260922T090000
+DTEND;TZID=Europe/Moscow:20260922T103000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d69618df2497c8c0212562b157ee145e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260922T104000
+DTEND;TZID=Europe/Moscow:20260922T121000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ba81a2f0a9af6c8f29a49d672f9b2c39@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260922T124000
+DTEND;TZID=Europe/Moscow:20260922T141000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ab090e5a6cafff6e73ab7e10d2d1bfd8@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260922T142000
+DTEND;TZID=Europe/Moscow:20260922T155000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f9ee1d5587b4d746ce7d724cb3efc3d3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261006T124000
+DTEND;TZID=Europe/Moscow:20261006T141000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:b6b3db627a6a261c928fa1fd483df311@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261006T142000
+DTEND;TZID=Europe/Moscow:20261006T155000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:bb918e71d7c885bb7161565e0f839a5e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261020T124000
+DTEND;TZID=Europe/Moscow:20261020T141000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:31a17728bac60139dc36c2cf20fc8337@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261020T142000
+DTEND;TZID=Europe/Moscow:20261020T155000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:6c833bff016feac20ce06e1f4a30bb60@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261117T124000
+DTEND;TZID=Europe/Moscow:20261117T141000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:fc984aca821bf9f783b96c06d92a532c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261117T142000
+DTEND;TZID=Europe/Moscow:20261117T155000
+SUMMARY:Основы российской государственност
+ и (лекции)
+LOCATION:ИНИОН РАН (актовый зал)
+DESCRIPTION:Форма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:cae2fe3eed2648097ef351af8bc73379@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260910T090000
+DTEND;TZID=Europe/Moscow:20260910T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:bf02cf0d844e4783d2e1c5265b30e415@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260910T104000
+DTEND;TZID=Europe/Moscow:20260910T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:500412121d14c09129a5e239498f4589@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260917T090000
+DTEND;TZID=Europe/Moscow:20260917T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4d3ab03280c0b4fb06342838f6f7fbe1@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260917T104000
+DTEND;TZID=Europe/Moscow:20260917T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:95fc1e0a9eb12084a957174185ace263@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260924T090000
+DTEND;TZID=Europe/Moscow:20260924T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a9b5e2d104ed062b1b42560b86adca39@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260924T104000
+DTEND;TZID=Europe/Moscow:20260924T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f26fb930b4485cd87c04232ad97039f2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261001T090000
+DTEND;TZID=Europe/Moscow:20261001T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:42f6221712ab7a7e91c20ad0e9aaf6e4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261001T104000
+DTEND;TZID=Europe/Moscow:20261001T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:bca243e1cf58a7f2bcea675c8bfcc2e2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261008T090000
+DTEND;TZID=Europe/Moscow:20261008T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:e6c676ceaa6fb6e0cb391f6006407b54@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261008T104000
+DTEND;TZID=Europe/Moscow:20261008T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c6ce6041f23979d1ea2037f6a140efc4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261015T090000
+DTEND;TZID=Europe/Moscow:20261015T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:575177476e655025b3cdf96fb31ddf64@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261015T104000
+DTEND;TZID=Europe/Moscow:20261015T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:90d91760176e72dd9cdf30cd4241d4ae@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261022T090000
+DTEND;TZID=Europe/Moscow:20261022T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2f9c797e2bd5a5e901185d246f989c51@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261022T104000
+DTEND;TZID=Europe/Moscow:20261022T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0a5aba5d6ce5754353c5ca7feb6d1f73@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261029T090000
+DTEND;TZID=Europe/Moscow:20261029T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:b8730fa67e961e213dd2c1478f8758ce@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261029T104000
+DTEND;TZID=Europe/Moscow:20261029T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a233fd6662f735516771f44142c23f0e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261105T090000
+DTEND;TZID=Europe/Moscow:20261105T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9c6b9c013160d08d1586cfd12044ab25@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261105T104000
+DTEND;TZID=Europe/Moscow:20261105T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:535d84fc83b7a58c12845d5bf04fa59d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261112T090000
+DTEND;TZID=Europe/Moscow:20261112T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4d6073d540dc58cc6bc1c2c79f817b4c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261112T104000
+DTEND;TZID=Europe/Moscow:20261112T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:75159bd9f6076e8021a3d7a3d3aa8845@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261119T090000
+DTEND;TZID=Europe/Moscow:20261119T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:77e6da93e4b5b40e0c1834939477b52b@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261119T104000
+DTEND;TZID=Europe/Moscow:20261119T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:17981d7045703807a95a7a0831cf28d9@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261126T090000
+DTEND;TZID=Europe/Moscow:20261126T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ef7e9dc135bf0975cc51d4d750dc2627@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261126T104000
+DTEND;TZID=Europe/Moscow:20261126T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ecf8cd023c32ae191f5b9a0be0551e3c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261203T090000
+DTEND;TZID=Europe/Moscow:20261203T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:dda26abdb5b542288ce2c77ddbcd98ef@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261203T104000
+DTEND;TZID=Europe/Moscow:20261203T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c6a5118e78e4919054f13f6c07c91988@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261210T090000
+DTEND;TZID=Europe/Moscow:20261210T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4baf308a9f7d79cb3467a7bd71de69c2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261210T104000
+DTEND;TZID=Europe/Moscow:20261210T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:7a1b39d4e716201d424902893d6e8081@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261217T090000
+DTEND;TZID=Europe/Moscow:20261217T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2342055929b4866ea80d4272bd6b48b2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261217T104000
+DTEND;TZID=Europe/Moscow:20261217T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:aaff0fd08f7cab381c82c248d59f2b42@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261224T090000
+DTEND;TZID=Europe/Moscow:20261224T103000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4a7d2f6d0abf547fbfbbe9ccd9b1343c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261224T104000
+DTEND;TZID=Europe/Moscow:20261224T121000
+SUMMARY:Всеобщая история
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Спиченко Н.К.\nФорм
+ а контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:316acfb3aa9667e4ef3b6f638813a32f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260910T124000
+DTEND;TZID=Europe/Moscow:20260910T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2f9266391c098c7f9c634914edc2f10a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260910T142000
+DTEND;TZID=Europe/Moscow:20260910T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c0fa6ace635c3cba61e6ee6db48f5c9f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260917T124000
+DTEND;TZID=Europe/Moscow:20260917T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a14f4d720d685c9decb9b89b6f587f19@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260917T142000
+DTEND;TZID=Europe/Moscow:20260917T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:1ad53167b26e4861214f8528057cbd4e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260924T124000
+DTEND;TZID=Europe/Moscow:20260924T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d5c101411eb4a2108b32f2f9700428ce@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260924T142000
+DTEND;TZID=Europe/Moscow:20260924T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:fe5be2364872dac1603286d854df5959@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261001T124000
+DTEND;TZID=Europe/Moscow:20261001T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f2b4c4a24a4a1b9506acbcc671ad09ae@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261001T142000
+DTEND;TZID=Europe/Moscow:20261001T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:58d39f3f7f10eba87bc51b8418d93284@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261008T124000
+DTEND;TZID=Europe/Moscow:20261008T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:53cc2e08b013084981a69b821ea778f1@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261008T142000
+DTEND;TZID=Europe/Moscow:20261008T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:06f6e8ef383c50a25d71b7f0da7d7545@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261015T124000
+DTEND;TZID=Europe/Moscow:20261015T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:00b16754d60a9220b0bbf21ba6fb41d4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261015T142000
+DTEND;TZID=Europe/Moscow:20261015T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3e1d66a9a35c8d71e7017e127049ce76@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261022T124000
+DTEND;TZID=Europe/Moscow:20261022T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3230c5c1e55d902b4c0412a3d654d7fb@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261022T142000
+DTEND;TZID=Europe/Moscow:20261022T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:41c98e9b6d2c88c232228512140bdef0@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261029T124000
+DTEND;TZID=Europe/Moscow:20261029T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ff1880246cacf79ca906dee1fdb29ff9@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261029T142000
+DTEND;TZID=Europe/Moscow:20261029T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:5e18b685138d38490fafc3626050dc7f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261105T124000
+DTEND;TZID=Europe/Moscow:20261105T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:7c2d502e414864ee65de71b6f900a5ab@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261105T142000
+DTEND;TZID=Europe/Moscow:20261105T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9fb399f968d249ae0641b2597bd8b688@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261112T124000
+DTEND;TZID=Europe/Moscow:20261112T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:41d26ad4dbf6f1a0a5e25d903be2709c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261112T142000
+DTEND;TZID=Europe/Moscow:20261112T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:692d721274bcb8925c538b981436d635@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261119T124000
+DTEND;TZID=Europe/Moscow:20261119T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:37e8ff90695c61da6463a19bb71d40a3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261119T142000
+DTEND;TZID=Europe/Moscow:20261119T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4737335ba307a5554bd369d81a3f729c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261126T124000
+DTEND;TZID=Europe/Moscow:20261126T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:e2f6d619db3edc7388c39b03cfc12a99@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261126T142000
+DTEND;TZID=Europe/Moscow:20261126T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2449d31ecd870c89b14bb8c55cba240d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261203T124000
+DTEND;TZID=Europe/Moscow:20261203T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:592b4cb8fbe7feec1bd04bf08e39ddb3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261203T142000
+DTEND;TZID=Europe/Moscow:20261203T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a173bd1215c5b70c2142b1db5893c226@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261210T124000
+DTEND;TZID=Europe/Moscow:20261210T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0400f49fbf4861345113704dfa12d80a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261210T142000
+DTEND;TZID=Europe/Moscow:20261210T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0eeea67150a4a78685aea5bdee3b6028@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261217T124000
+DTEND;TZID=Europe/Moscow:20261217T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:518f17bce59b67f5e18bf7ee827e6908@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261217T142000
+DTEND;TZID=Europe/Moscow:20261217T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:dd73d36d51e14c3b898631dab890961e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261224T124000
+DTEND;TZID=Europe/Moscow:20261224T141000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f2b9a40e28ba05c7046e7047e5b8e720@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261224T142000
+DTEND;TZID=Europe/Moscow:20261224T155000
+SUMMARY:Русский язык и культура речи
+LOCATION:МАЗ
+DESCRIPTION:Преподаватель: Чернова Ю.В.\nФорма 
+ контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2fbfaabf8e97d8d358b5f3a92991d801@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260910T161000
+DTEND;TZID=Europe/Moscow:20260910T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:7dc55694eafa90af41b540de8be7b0e2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260917T161000
+DTEND;TZID=Europe/Moscow:20260917T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:95d46cd8cdb0eae92645fa54c514ad08@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260924T161000
+DTEND;TZID=Europe/Moscow:20260924T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9901ae1020b060a859ff4d94b929e856@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261001T161000
+DTEND;TZID=Europe/Moscow:20261001T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:94d0ca682f256c2b442c13876133f55c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261008T161000
+DTEND;TZID=Europe/Moscow:20261008T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2317fd3e2831d180dd440b69a7f51c80@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261015T161000
+DTEND;TZID=Europe/Moscow:20261015T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c94d66c9440c07278b3fcf00472abfbc@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261022T161000
+DTEND;TZID=Europe/Moscow:20261022T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a93aa9a663cb807da689b352ef97a2d4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261029T161000
+DTEND;TZID=Europe/Moscow:20261029T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:754f00c64794c47f2456db6c6c6aa8a4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261105T161000
+DTEND;TZID=Europe/Moscow:20261105T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2259d33d66277851fe57bb5fc4073bb6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261112T161000
+DTEND;TZID=Europe/Moscow:20261112T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d022ca06c2458e1dd1ea5d4b1ffa7f05@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261119T161000
+DTEND;TZID=Europe/Moscow:20261119T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:8c1a35386dd34cf5eb5f348c123be3be@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261126T161000
+DTEND;TZID=Europe/Moscow:20261126T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d3441c94823f566168788da1a9eaef98@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261203T161000
+DTEND;TZID=Europe/Moscow:20261203T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:30feb6f7d8326acfdb71bed45d6d778c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261210T161000
+DTEND;TZID=Europe/Moscow:20261210T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d02402ec1bd9473cf507ffbf1fcb14ab@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261217T161000
+DTEND;TZID=Europe/Moscow:20261217T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a2a35ee31d3b3a126c0347d0248701d3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261224T161000
+DTEND;TZID=Europe/Moscow:20261224T174000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:318
+DESCRIPTION:Преподаватель: Яхшиян О.Ю.\nФорма к
+ онтроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c388c8799e14e416a15dc90749211582@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260904T090000
+DTEND;TZID=Europe/Moscow:20260904T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:bc494bb3ddf75e5adff4fcd3b5f61c39@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260918T090000
+DTEND;TZID=Europe/Moscow:20260918T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:94b55fda98b67d9959e3a7771a34822e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261002T090000
+DTEND;TZID=Europe/Moscow:20261002T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:89c11354b952a0e181389af9dd6b236f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261016T090000
+DTEND;TZID=Europe/Moscow:20261016T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:62443ca8845735da8c3e27386981cabd@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261030T090000
+DTEND;TZID=Europe/Moscow:20261030T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:a6ec904c1c07cc38b1378472f55500f6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261113T090000
+DTEND;TZID=Europe/Moscow:20261113T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e2e087c3396c5fb5d91dac246165b285@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261127T090000
+DTEND;TZID=Europe/Moscow:20261127T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:7f55cea2c33c9c713861e8425320782c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261211T090000
+DTEND;TZID=Europe/Moscow:20261211T103000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3cbd3b333d542895f8574fc4c61b583c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260911T090000
+DTEND;TZID=Europe/Moscow:20260911T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:947b2f89e84ed9c71550819b4bed4a8e@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260925T090000
+DTEND;TZID=Europe/Moscow:20260925T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4824e681a66a6029251279c661bee9d5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261009T090000
+DTEND;TZID=Europe/Moscow:20261009T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4326498ce6ef3a2cc91a4743d53ff08c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261023T090000
+DTEND;TZID=Europe/Moscow:20261023T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:83c20248660ce6bdcac267547057d6c5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261106T090000
+DTEND;TZID=Europe/Moscow:20261106T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:f0a2cca6787af571c7ae8628a3e576e2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261120T090000
+DTEND;TZID=Europe/Moscow:20261120T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:3724bfe52aa6914521270e7cb0042a64@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261204T090000
+DTEND;TZID=Europe/Moscow:20261204T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5f2e59773f8adb1b26028bc7debe90c6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261218T090000
+DTEND;TZID=Europe/Moscow:20261218T103000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар\, зачёт)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4b5111e8ba4c7de70e21bf8723c6fce5@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260904T104000
+DTEND;TZID=Europe/Moscow:20260904T121000
+SUMMARY:Безопасность жизнедеятельности (ле
+ кция)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4ac188d1761fffbc119f9c6d6c6c0466@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260911T104000
+DTEND;TZID=Europe/Moscow:20260911T121000
+SUMMARY:Безопасность жизнедеятельности (се
+ минар)
+LOCATION:ВКС (онлайн)
+DESCRIPTION:Преподаватель: Капралова Д.О.\nФор
+ ма контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:b5ff6ae37a7eba8b03736a72f085fbe2@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260904T140000
+DTEND;TZID=Europe/Moscow:20260904T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ccf6a14853c29abfe91ba1fdbffac0a4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260904T154000
+DTEND;TZID=Europe/Moscow:20260904T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:175595dad556897dad54e0b9b292ad20@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260911T140000
+DTEND;TZID=Europe/Moscow:20260911T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:651b4ed35b71e748b56dea45222acf75@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260911T154000
+DTEND;TZID=Europe/Moscow:20260911T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9d1ae8f468b55b240dabf01ecc94f747@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260918T140000
+DTEND;TZID=Europe/Moscow:20260918T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2533c68048755cd118dceae9ee155fbc@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260918T154000
+DTEND;TZID=Europe/Moscow:20260918T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:bac9bfbb6c2748122fcc4b43a99ffde6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260925T140000
+DTEND;TZID=Europe/Moscow:20260925T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:8236bf40d525c212c4954a149207d8a3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260925T154000
+DTEND;TZID=Europe/Moscow:20260925T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:ccca2a423491b14cdd4b34fec835f642@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261002T140000
+DTEND;TZID=Europe/Moscow:20261002T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:27111f8cb368b33bc810535996b06df6@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261002T154000
+DTEND;TZID=Europe/Moscow:20261002T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:43b3800d12dfae219708c0eba25b566b@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261009T140000
+DTEND;TZID=Europe/Moscow:20261009T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0c88f161df7d46815ea5806bdd63c0fb@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261009T154000
+DTEND;TZID=Europe/Moscow:20261009T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d3a7658a7e0bf003fded2f39ee92db21@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261016T140000
+DTEND;TZID=Europe/Moscow:20261016T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d9f9a731816aa44122b3285bf1e49579@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261016T154000
+DTEND;TZID=Europe/Moscow:20261016T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:dc5f3d78c921a4ee5aeeed1fc7505555@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261023T140000
+DTEND;TZID=Europe/Moscow:20261023T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c55277995b73495fa54964b56bd343c4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261023T154000
+DTEND;TZID=Europe/Moscow:20261023T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:69c111c933ffd8e06f6b4bc4c40371ff@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261030T140000
+DTEND;TZID=Europe/Moscow:20261030T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a12e81a02f0f12bb77fe90e9863be156@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261030T154000
+DTEND;TZID=Europe/Moscow:20261030T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c4222b62289bd0479c25995308f7e49f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261106T140000
+DTEND;TZID=Europe/Moscow:20261106T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9511f5e585263da3c30d43e3fcc30b75@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261106T154000
+DTEND;TZID=Europe/Moscow:20261106T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c9467558329416229c2d8a2ff96a1a53@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261113T140000
+DTEND;TZID=Europe/Moscow:20261113T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:cfeba3813677a1fd5f085b99d4f8ae8f@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261113T154000
+DTEND;TZID=Europe/Moscow:20261113T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c77269fec4efb87574964b63d6d0aebf@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261120T140000
+DTEND;TZID=Europe/Moscow:20261120T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:046cd3938d8f0a2a74fa49b88b4667b9@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261120T154000
+DTEND;TZID=Europe/Moscow:20261120T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d6c6145b5e68cdcd1a435303fdbae3a8@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261127T140000
+DTEND;TZID=Europe/Moscow:20261127T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f0c42807989b0cc2fc4eb9bd2b7ecdb8@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261127T154000
+DTEND;TZID=Europe/Moscow:20261127T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:5596a32165e4a6472ee5323fdb0c1265@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261204T140000
+DTEND;TZID=Europe/Moscow:20261204T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:76200551537a0378c2b1e7d71f0a703b@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261204T154000
+DTEND;TZID=Europe/Moscow:20261204T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a2078c9095ec71165f9e2b11576a6817@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261211T140000
+DTEND;TZID=Europe/Moscow:20261211T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:1e61d1968434426b124b423844d5bb7c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261211T154000
+DTEND;TZID=Europe/Moscow:20261211T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9062e933b5ebbf6336ea346659d8f34d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261218T140000
+DTEND;TZID=Europe/Moscow:20261218T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d22f5b97e86b042993ce838dc70009cf@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261218T154000
+DTEND;TZID=Europe/Moscow:20261218T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3dd3de75225fe74bb49cdc656b76adf7@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261225T140000
+DTEND;TZID=Europe/Moscow:20261225T153000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:6f8478104c47ee36b70c7d22951d03ac@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261225T154000
+DTEND;TZID=Europe/Moscow:20261225T171000
+SUMMARY:Логика
+LOCATION:321
+DESCRIPTION:Преподаватель: Державина Н.Ф.\nФор
+ ма контроля: Зачёт с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:7e219ab190182a8ba5995cfa4ee3d473@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260912T105000
+DTEND;TZID=Europe/Moscow:20260912T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5c3cf6303cb4e903bd44b6d0d8c559c3@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260912T123000
+DTEND;TZID=Europe/Moscow:20260912T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:6ffa53622185bc52a0a10b30aaddb968@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260926T105000
+DTEND;TZID=Europe/Moscow:20260926T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:09566afa05eb9866d37b9b32c8db8260@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20260926T123000
+DTEND;TZID=Europe/Moscow:20260926T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ce228ee9a2c6d09e0a3a77f4b05316b0@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261010T105000
+DTEND;TZID=Europe/Moscow:20261010T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:641f3d35d06ae6a1a86719c718d5cee8@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261010T123000
+DTEND;TZID=Europe/Moscow:20261010T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:e269d57ecd4f0806e3f36e09844a84aa@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261024T105000
+DTEND;TZID=Europe/Moscow:20261024T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ebfad279252bd5ceb0765840f8db6fa7@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261024T123000
+DTEND;TZID=Europe/Moscow:20261024T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:5084892077aea907bbe7998256fe93fa@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261107T105000
+DTEND;TZID=Europe/Moscow:20261107T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:4239a2abb0663ca57fdee543326dcba1@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261107T123000
+DTEND;TZID=Europe/Moscow:20261107T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:7c2b88f72477267827a6a117655c3100@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261121T105000
+DTEND;TZID=Europe/Moscow:20261121T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:61482875728a21ab8d9ed1573aa8524a@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261121T123000
+DTEND;TZID=Europe/Moscow:20261121T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:2067028489db71c000d9a47293bc1b88@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261205T105000
+DTEND;TZID=Europe/Moscow:20261205T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:f6b7d013de5ee975687888d90a90fa6d@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261205T123000
+DTEND;TZID=Europe/Moscow:20261205T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:ed5e651af94fdf6a5e3995701ae1ce9c@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261219T105000
+DTEND;TZID=Europe/Moscow:20261219T122000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+BEGIN:VEVENT
+UID:153e5cc4da097d630ea6634bd8fde5c4@gaugn-phil
+DTSTAMP:20261019T080800Z
+DTSTART;TZID=Europe/Moscow:20261219T123000
+DTEND;TZID=Europe/Moscow:20261219T140000
+SUMMARY:История России
+LOCATION:321
+DESCRIPTION:Преподаватель: Дробышев М.И.\nФорм
+ а контроля: Зачёт
+END:VEVENT
+END:VCALENDAR
