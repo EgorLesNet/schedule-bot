@@ -1,6 +1,5 @@
 // Подключается после app.js: в настройках направления зависят от курса, ссылка на календарь работает с путями вида docs/...
 (function () {
-  const baseViewSet = viewSet;
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
   const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
 
@@ -11,6 +10,8 @@
     const dir = sel[2];
     const F = (S.boot && S.boot.faculties) || [];
     if (!fac || !course || !dir || !F.length || !fac.options.length || fac.options[0].textContent !== F[0].name) return;
+    if (fac.dataset.cascade) return;
+    fac.dataset.cascade = '1';
     const rebuild = () => {
       const f = F[Number(fac.value)] || { directions: [] };
       const prev = dir.value;
@@ -27,11 +28,11 @@
     rebuild();
   }
 
-  viewSet = async function () {
-    const root = await baseViewSet();
-    try { cascade(root); } catch (e) {}
-    return root;
-  };
+  // Экран настроек определяется по элементам на странице, а не подменой функции: не зависит от того, как app.js вызывает viewSet
+  const view = document.getElementById('view');
+  if (view) {
+    new MutationObserver(() => { try { cascade(view); } catch (e) {} }).observe(view, { childList: true, subtree: true });
+  }
 
   subCard = function () {
     const c = h('section', { class: 'card' }, h('h3', {}, 'Календарь'));
