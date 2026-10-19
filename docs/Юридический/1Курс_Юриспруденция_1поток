@@ -1,0 +1,2511 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Schedule 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Юриспруденция, 1 курс, гру
+ ппа 1
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:01cb5754f0b5f70c049997353de467b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260901T130000
+DTEND;TZID=Europe/Moscow:20260901T144500
+SUMMARY:Организационное собрание 1 курса
+END:VEVENT
+BEGIN:VEVENT
+UID:d12e9163c2f768f3ae2702b2be43945c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260901T150000
+DTEND;TZID=Europe/Moscow:20260901T163000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c27cc59de13ddbe73201747ea486d44@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T100000
+DTEND;TZID=Europe/Moscow:20260903T113000
+SUMMARY:Лекция по комплексной и антитеррори
+ стической безопасности
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция
+END:VEVENT
+BEGIN:VEVENT
+UID:25fe9a39c28e60b9bb4a951f67ee5e9b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T114000
+DTEND;TZID=Europe/Moscow:20260903T131000
+SUMMARY:Лекция по комплексной и антитеррори
+ стической безопасности
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция
+END:VEVENT
+BEGIN:VEVENT
+UID:b6ad7a0bcb82ccf23cb629f411cb8b06@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T132000
+DTEND;TZID=Europe/Moscow:20260903T145000
+SUMMARY:Лекция по комплексной и антитеррори
+ стической безопасности
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция
+END:VEVENT
+BEGIN:VEVENT
+UID:91d0074f34fc9014cad90396fe4f5ce1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T162000
+DTEND;TZID=Europe/Moscow:20260903T175000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:ecd4e38cbc3bb84668c95818281b599f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T100000
+DTEND;TZID=Europe/Moscow:20260904T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:0cb79c88da9879c6645de6263bfb4a33@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T114000
+DTEND;TZID=Europe/Moscow:20260904T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:551992a4527902f882b276ba37e5f6a2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1a5fdf922d82427a986e64650a731026@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T114000
+DTEND;TZID=Europe/Moscow:20260907T131000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2fbef9ef52a80a08ac2b02af37428708@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T134000
+DTEND;TZID=Europe/Moscow:20260907T151000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:de52546063bcb66819ac024c14890294@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T152000
+DTEND;TZID=Europe/Moscow:20260907T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:61fa69c10d7e7b660a93646e4939047f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T090000
+DTEND;TZID=Europe/Moscow:20260908T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:a88f026e6fda80cb436eb39ae84214c7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T104000
+DTEND;TZID=Europe/Moscow:20260908T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:65b349319c9710be3a66df4d11bfe85a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T124000
+DTEND;TZID=Europe/Moscow:20260908T141000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:d9d67846eb77d13b60b870369855aba3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T142000
+DTEND;TZID=Europe/Moscow:20260908T155000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:1359337cdca7dee5638addccd713eb27@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T100000
+DTEND;TZID=Europe/Moscow:20260910T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ed7c0e91a5bb89a4e4a88572308747e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T114000
+DTEND;TZID=Europe/Moscow:20260910T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6cf581f96f1bf447b70c80a73c665159@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T134000
+DTEND;TZID=Europe/Moscow:20260910T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:3f132ddd43741d646986e0d613736235@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T152000
+DTEND;TZID=Europe/Moscow:20260910T165000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:f34cf6f8540ea20893ad45a951fed581@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T100000
+DTEND;TZID=Europe/Moscow:20260911T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:1e1f5577fd76343a3e2bbf36bc36c29c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T114000
+DTEND;TZID=Europe/Moscow:20260911T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:eaa1925338c3b53cc0a43e10073d7bf3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T140000
+DTEND;TZID=Europe/Moscow:20260911T153000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:92589edc68b8ab589d2ce0bdf4267e51@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T154000
+DTEND;TZID=Europe/Moscow:20260911T171000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:57676d353b14b5c39e3e34690363b006@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T100000
+DTEND;TZID=Europe/Moscow:20260914T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1b0e463070563f62c3a730091ec16e71@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T114000
+DTEND;TZID=Europe/Moscow:20260914T131000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a81bc3f4df32dce785246bed859c72fa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T134000
+DTEND;TZID=Europe/Moscow:20260914T151000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:c760116c8188ddea09d05f397c098d23@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T152000
+DTEND;TZID=Europe/Moscow:20260914T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:908235b00f13589aec8f793add888cff@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T100000
+DTEND;TZID=Europe/Moscow:20260915T113000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c705a0db6937b5fca8cbc91c75fa241@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T114000
+DTEND;TZID=Europe/Moscow:20260915T131000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c7950e85a1f62721e04a8aaadbfcd88@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:81311b2281e6f159c9680f6f31d0724f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T114000
+DTEND;TZID=Europe/Moscow:20260917T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfbf4fecf71eeb01512558ef97bb22a9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T134000
+DTEND;TZID=Europe/Moscow:20260917T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:6482d6dad0636c83efe366b5d7cd7bba@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T152000
+DTEND;TZID=Europe/Moscow:20260917T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:24f75ccaa63f94b57ff0085012b69ded@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T100000
+DTEND;TZID=Europe/Moscow:20260918T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:125
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:85d339ae05433fca868bfa75d1cfa868@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T114000
+DTEND;TZID=Europe/Moscow:20260918T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:125
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:899ffced5bc1179834e07ac3c42efcec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T134000
+DTEND;TZID=Europe/Moscow:20260918T151000
+SUMMARY:История России
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:5db235bf96f072ebd1c6d9a2e10135c1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T152000
+DTEND;TZID=Europe/Moscow:20260918T165000
+SUMMARY:История России
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:d090f562f2fd56971581f563645b76fa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T113000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:e09e34736ae811ed48e6bd9efb23b8ae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T114000
+DTEND;TZID=Europe/Moscow:20260921T131000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:1941d7851b7f2f4f4b8f110202233021@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T134000
+DTEND;TZID=Europe/Moscow:20260921T151000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3075a4d1435b0a0152b854735df4a459@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T152000
+DTEND;TZID=Europe/Moscow:20260921T165000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c156f35041930d4fe93a8854c72e5eda@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T090000
+DTEND;TZID=Europe/Moscow:20260922T103000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:336d2ed31449344eae33f3e49d7d5d8d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T104000
+DTEND;TZID=Europe/Moscow:20260922T121000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:b699d937bee1f8f724e7e2d994955250@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T124000
+DTEND;TZID=Europe/Moscow:20260922T141000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:d09696a6a2efff4ab562a042fc7511ee@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T142000
+DTEND;TZID=Europe/Moscow:20260922T155000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:748c7e1ff1f6710fd9e460c7fd7c2040@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T100000
+DTEND;TZID=Europe/Moscow:20260924T113000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:081a3b43564fba67ce26ae0e93ac41a5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T114000
+DTEND;TZID=Europe/Moscow:20260924T131000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5875e15f2d962191413139f0987bc1e6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T134000
+DTEND;TZID=Europe/Moscow:20260924T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколь
+ щик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:e240d9be7bb9446908159de71de21077@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T100000
+DTEND;TZID=Europe/Moscow:20260925T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:7188ff04fe77be1cb3918dfb4be18537@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T114000
+DTEND;TZID=Europe/Moscow:20260925T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6be905b9e76bdf888d15c1815decb74@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T134000
+DTEND;TZID=Europe/Moscow:20260925T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6d05c64fd04cb14f6febdff2e5a5fd3d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T152000
+DTEND;TZID=Europe/Moscow:20260925T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e34b465fe0ab70ff43982eeae253861@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T100000
+DTEND;TZID=Europe/Moscow:20260928T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c8796e9ddd10b0d076540112d5ea16a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T114000
+DTEND;TZID=Europe/Moscow:20260928T131000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:57ae5e510acdb42f87e18ce9e6a14742@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T134000
+DTEND;TZID=Europe/Moscow:20260928T151000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca2a84b3584d5a0075c84dce79039e61@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T152000
+DTEND;TZID=Europe/Moscow:20260928T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:c9a950893a8997bc82722a6f4a78ae77@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T100000
+DTEND;TZID=Europe/Moscow:20260929T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:628e2722e3fe7ef7a516afcd149a97f2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T114000
+DTEND;TZID=Europe/Moscow:20260929T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:befe6fa77fddfa8e0b6a6bafeb10ac3a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T134000
+DTEND;TZID=Europe/Moscow:20260929T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1a20ee411810947ff6c903b99c1cb66c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T152000
+DTEND;TZID=Europe/Moscow:20260929T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2771dd5c4338b77199693c45682f449f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:3c9ccc9c05c90111ead0bcad07f16fb3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T114000
+DTEND;TZID=Europe/Moscow:20261001T131000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9dcc5e11677dbea80586992b9fc8856f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T134000
+DTEND;TZID=Europe/Moscow:20261001T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:af3ab54982b4cd2a150a9f6adcb16e83@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T152000
+DTEND;TZID=Europe/Moscow:20261001T165000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c48c59c8790c4cf9e12eaf8f7a9c525@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T100000
+DTEND;TZID=Europe/Moscow:20261002T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:225e6f576dec196f6b1a520791be55ce@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T114000
+DTEND;TZID=Europe/Moscow:20261002T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:6d3734fd985add1de8b826708ef379f4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T134000
+DTEND;TZID=Europe/Moscow:20261002T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:30ddfacb4f5618b2d998ebaea45b888a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T152000
+DTEND;TZID=Europe/Moscow:20261002T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2bfb811280cf0d7508b727518b52ce1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T113000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:eb1c861fe7e2e6aea583c32e2e5aec93@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T114000
+DTEND;TZID=Europe/Moscow:20261005T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:64de7f679ec6c915ede87d939905d248@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T134000
+DTEND;TZID=Europe/Moscow:20261005T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a809fcebd21b7b94b7d19ae5026f6f3b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T152000
+DTEND;TZID=Europe/Moscow:20261005T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:07190a14fee0708d901a3e9e17cfa4f4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T090000
+DTEND;TZID=Europe/Moscow:20261006T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:25cec4da89d573683c3e9b4d8f835ece@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T104000
+DTEND;TZID=Europe/Moscow:20261006T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:0e2a80230c4fd36671692a734a867357@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T124000
+DTEND;TZID=Europe/Moscow:20261006T141000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:f6896205c119355daa4b3dfe77628813@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T142000
+DTEND;TZID=Europe/Moscow:20261006T155000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:1dd5ec1a2e59531e7e6ff66a58ba62e6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d56df9ef443d52b367b0f1c846e66d9c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T114000
+DTEND;TZID=Europe/Moscow:20261008T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f34f7d199ab59588c23381a0b6813c6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T134000
+DTEND;TZID=Europe/Moscow:20261008T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:e14391103e7358510cb96f2c692f9f11@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T152000
+DTEND;TZID=Europe/Moscow:20261008T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c747861ebbdc2fc503a6b2a92190697a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T170000
+DTEND;TZID=Europe/Moscow:20261008T183000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1f25c06f53dddb67a26c8dfd98c62ee9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T100000
+DTEND;TZID=Europe/Moscow:20261009T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:d91600a1fe399aaa2b2bdf6df6372258@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T114000
+DTEND;TZID=Europe/Moscow:20261009T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:d629578eee0e9a0024affca0a2ee8b8f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T134000
+DTEND;TZID=Europe/Moscow:20261009T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f9c453028de047e7ae09d990f82cac0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T152000
+DTEND;TZID=Europe/Moscow:20261009T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c3d1f17eb9b4994c291de566c59a9de@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T100000
+DTEND;TZID=Europe/Moscow:20261012T113000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e7a91110b452dffc99d5298c0f463995@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T114000
+DTEND;TZID=Europe/Moscow:20261012T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f13e2e94c341d87b7040a8155de3b8a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T134000
+DTEND;TZID=Europe/Moscow:20261012T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:1ccf5804cecbf45a952e74cbb3ae653b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T152000
+DTEND;TZID=Europe/Moscow:20261012T165000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:a6c87212ef4db005640e8ee20ab3bbe6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T100000
+DTEND;TZID=Europe/Moscow:20261013T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e743f2a62f4deb96bcc3704da4d99b45@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T114000
+DTEND;TZID=Europe/Moscow:20261013T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a62eaad0b2b355e3c0f3911bf3e494ac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T134000
+DTEND;TZID=Europe/Moscow:20261013T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколь
+ щик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:cfca4b914da5e899654942c4960c1e8d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T100000
+DTEND;TZID=Europe/Moscow:20261015T113000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:95df8a717904a886bd3190f5685f504f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T114000
+DTEND;TZID=Europe/Moscow:20261015T131000
+SUMMARY:Академическое письмо для юристов
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f4eac6ac1b922a0b4558f61ec812cca2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T134000
+DTEND;TZID=Europe/Moscow:20261015T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca002e9a53c0a9c63c480e166c53c1a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T100000
+DTEND;TZID=Europe/Moscow:20261016T113000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a3934c7076fae5c5d363684e8ee55425@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T114000
+DTEND;TZID=Europe/Moscow:20261016T131000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cb556befe9338abcdef1605ff4ddbd8e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:826156447aeaef75d95ee9d824169eac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T114000
+DTEND;TZID=Europe/Moscow:20261019T131000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c8f745b37f32d6834dd2870b9f8c30ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T134000
+DTEND;TZID=Europe/Moscow:20261019T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1fd38dabf564c9ec5e3ce9cce434fcda@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T152000
+DTEND;TZID=Europe/Moscow:20261019T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1284473758d60538655bf683fafceab7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T090000
+DTEND;TZID=Europe/Moscow:20261020T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:6289a556eaccc68e170a7e64db8b1ebc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T104000
+DTEND;TZID=Europe/Moscow:20261020T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:aed18984eeb7daede734362fe4c4efe9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T124000
+DTEND;TZID=Europe/Moscow:20261020T141000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:e35c8b43cd2cadcf588658392f384144@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T142000
+DTEND;TZID=Europe/Moscow:20261020T155000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:b94b31714ca166e2d8a0256481fdc01c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T100000
+DTEND;TZID=Europe/Moscow:20261022T113000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f76a04b4bc259f83d882c99b305a37a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T114000
+DTEND;TZID=Europe/Moscow:20261022T131000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:11794b23a184d2158ba9493e4b165461@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T134000
+DTEND;TZID=Europe/Moscow:20261022T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколь
+ щик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:9e31dc9b64d69547304628ae1ea7774b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T100000
+DTEND;TZID=Europe/Moscow:20261023T113000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ad3e975f7734c228a4ebf282c02f88e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T114000
+DTEND;TZID=Europe/Moscow:20261023T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c46a44b1a752d8542c1b70bb8c8231f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T134000
+DTEND;TZID=Europe/Moscow:20261023T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:d717af119ade8c1a19355ee87317af17@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T152000
+DTEND;TZID=Europe/Moscow:20261023T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:99d44514d2427a921a12e41d6916de32@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:39d753a3d5597e6178f3d21bc80b2f88@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T114000
+DTEND;TZID=Europe/Moscow:20261026T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8407aabde9630396bba4592a87d68616@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T134000
+DTEND;TZID=Europe/Moscow:20261026T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:326e9e20d015d97d596fe2504f31c6cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T152000
+DTEND;TZID=Europe/Moscow:20261026T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:4daa39bf26f887e8461bd894b8365dd2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T100000
+DTEND;TZID=Europe/Moscow:20261027T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:32a3bee9643df1fc2930430df1706ce8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T114000
+DTEND;TZID=Europe/Moscow:20261027T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:bb875bc27bea09aae5cac0f2e33c4da8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T134000
+DTEND;TZID=Europe/Moscow:20261027T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколь
+ щик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:c0a0f583d4cdf18d5479cdf356351691@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T100000
+DTEND;TZID=Europe/Moscow:20261029T113000
+SUMMARY:Академическое письмо для юристов
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c16f2acae0731ea7850e14e7f572540@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T114000
+DTEND;TZID=Europe/Moscow:20261029T131000
+SUMMARY:Академическое письмо для юристов
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0aeac38183c91439b6f76ce4f4d10c23@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T134000
+DTEND;TZID=Europe/Moscow:20261029T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8bd80d49171ebe2f1d6fbd0da3701cd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T152000
+DTEND;TZID=Europe/Moscow:20261029T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:751cd058bb708aaa3e8576940b23a2a2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T100000
+DTEND;TZID=Europe/Moscow:20261030T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:b52dd21ed26d0a9e4b8359089e975141@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T114000
+DTEND;TZID=Europe/Moscow:20261030T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:e92055cbc1e085f3c9c8c9dce427737a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T134000
+DTEND;TZID=Europe/Moscow:20261030T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:497f5ce14199f2a218f42246a45926d6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T152000
+DTEND;TZID=Europe/Moscow:20261030T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:27a2f24f433e73c487f52a0d32948281@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T100000
+DTEND;TZID=Europe/Moscow:20261102T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7829b83acaeac0589414effa2c4e19ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T114000
+DTEND;TZID=Europe/Moscow:20261102T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3439c3c1f7f4d21a3309975533d8fe87@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T134000
+DTEND;TZID=Europe/Moscow:20261102T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:221659faad7e6918fcf33cae8d47c122@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T152000
+DTEND;TZID=Europe/Moscow:20261102T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:a769ac95aac9c9436fbafec8621d753a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T100000
+DTEND;TZID=Europe/Moscow:20261103T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca2fd59c0ffd194c38726eb782dce775@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T114000
+DTEND;TZID=Europe/Moscow:20261103T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:26628e2868033c5ddd5010eafb23235f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T134000
+DTEND;TZID=Europe/Moscow:20261103T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c5c89a3512d1ac8591fe0f5a6a143d8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T152000
+DTEND;TZID=Europe/Moscow:20261103T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:d3ec47f9a96a2ab6ea52e49e272e10d0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T100000
+DTEND;TZID=Europe/Moscow:20261105T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7dc6931f27580447956e1c808dc00bc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T114000
+DTEND;TZID=Europe/Moscow:20261105T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7e92f418c6d34e5a1bf0f6e191044d9a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T134000
+DTEND;TZID=Europe/Moscow:20261105T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Сокольщ
+ ик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:283deef6134acad2b48754c7e1735d24@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T152000
+DTEND;TZID=Europe/Moscow:20261105T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:eb2e6b97907ca295cd4824f38e54e29e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T170000
+DTEND;TZID=Europe/Moscow:20261105T183000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e86d20cab6df1f8b5a9d1bf1a480b7a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T100000
+DTEND;TZID=Europe/Moscow:20261106T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:d1bc5d079b84ed98c87c29adbd6ba5cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T114000
+DTEND;TZID=Europe/Moscow:20261106T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:6db83dae06dd68fb46215ae389a2a885@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T134000
+DTEND;TZID=Europe/Moscow:20261106T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:71fa5a545e0335aba7c414c00e19f587@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T152000
+DTEND;TZID=Europe/Moscow:20261106T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:a182737e953be5d927f012d5eb24ca61@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T100000
+DTEND;TZID=Europe/Moscow:20261109T113000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:5416fb650fd6bd9d1a16cd3b0b19bd96@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T114000
+DTEND;TZID=Europe/Moscow:20261109T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:47880343081c87132060fc44a4086594@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T134000
+DTEND;TZID=Europe/Moscow:20261109T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d5a52353dbf2887cad279b56f8a39538@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T152000
+DTEND;TZID=Europe/Moscow:20261109T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Лушнико
+ ва В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2b610fc29b4ef422d7bbebaf01f7e119@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T100000
+DTEND;TZID=Europe/Moscow:20261110T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e11b5cac5511654e9fe1b9ad42ff47a4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T114000
+DTEND;TZID=Europe/Moscow:20261110T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5820ac4f3ef2c8d6636645d1bb137ba4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T134000
+DTEND;TZID=Europe/Moscow:20261110T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколь
+ щик И.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:176c852f79960e876a503c934e5afc55@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T100000
+DTEND;TZID=Europe/Moscow:20261112T113000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:de2a05759ec6ecb81a14d61e6e867ccc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T114000
+DTEND;TZID=Europe/Moscow:20261112T131000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b42579841638983195f179973ea40483@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T134000
+DTEND;TZID=Europe/Moscow:20261112T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:67fb51be90628717d09080daf522774a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T152000
+DTEND;TZID=Europe/Moscow:20261112T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:f2450fdb6d142c092097639e1ad4e9a4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T100000
+DTEND;TZID=Europe/Moscow:20261113T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:9fffa42e458a69901deb55cf220a4bd7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T114000
+DTEND;TZID=Europe/Moscow:20261113T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:cfc13e67d8ab65ff67d2652cd286715d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T134000
+DTEND;TZID=Europe/Moscow:20261113T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:2349002e420bdd7823a04c633ea6faed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T152000
+DTEND;TZID=Europe/Moscow:20261113T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:85ae363bfb76ef736653aa714fc3be27@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T100000
+DTEND;TZID=Europe/Moscow:20261116T113000
+SUMMARY:Теория гос-ва и права
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:82e650d8643a5daed8349505098b2184@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T114000
+DTEND;TZID=Europe/Moscow:20261116T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:10d98078e6e49217c18f1acb7e85923a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T134000
+DTEND;TZID=Europe/Moscow:20261116T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3959572909f4afd75018747f55277892@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T152000
+DTEND;TZID=Europe/Moscow:20261116T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:38cf5e3943f495c87dcb40a9d63bc752@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T090000
+DTEND;TZID=Europe/Moscow:20261117T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:ed5202814ab99f72431963bdfb11091c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T104000
+DTEND;TZID=Europe/Moscow:20261117T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:cc19f77b8da0d7676638bb712f038121@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T124000
+DTEND;TZID=Europe/Moscow:20261117T141000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:f83100cde3b2d00707e8ed65fc34a95b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T142000
+DTEND;TZID=Europe/Moscow:20261117T155000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ГАУГН (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:fbf2c1d82f17e48dcd5a3d5e6565f96c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T100000
+DTEND;TZID=Europe/Moscow:20261119T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9ac3e6f93dd06c87666c02042937cb89@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T114000
+DTEND;TZID=Europe/Moscow:20261119T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e0d9e5f0e039c2f9ac97177d5fa3b06c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T134000
+DTEND;TZID=Europe/Moscow:20261119T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:057b034244857a00c0e9bd1ed52254c2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T152000
+DTEND;TZID=Europe/Moscow:20261119T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a02bba788b07c40d6e1a95f2b18a95cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T100000
+DTEND;TZID=Europe/Moscow:20261120T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5e45909a55582becd021f9675866421@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T114000
+DTEND;TZID=Europe/Moscow:20261120T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:3d099f0c6cee1c04b21b8a8462a96f59@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T134000
+DTEND;TZID=Europe/Moscow:20261120T151000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:1e570d384b843a32f506505ccf6c15e3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T152000
+DTEND;TZID=Europe/Moscow:20261120T165000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.иск. Румянце
+ ва О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:777e14f859d8f2934e300ef408980a03@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T100000
+DTEND;TZID=Europe/Moscow:20261123T113000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce8ae6b2bae23361307b7cc227caa1e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T114000
+DTEND;TZID=Europe/Moscow:20261123T131000
+SUMMARY:Теория государства и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ерохина 
+ Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f6286f9283ad2343153d295804605c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T134000
+DTEND;TZID=Europe/Moscow:20261123T151000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:570e354e0307846f723b22693e808f5b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T152000
+DTEND;TZID=Europe/Moscow:20261123T165000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:fce3fd3b4958c28676b2657ab42e17b1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T100000
+DTEND;TZID=Europe/Moscow:20261124T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d914ed31f230fc81c9d65096188b1a10@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T114000
+DTEND;TZID=Europe/Moscow:20261124T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7373a50a341012d76d0acb544ae23119@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T134000
+DTEND;TZID=Europe/Moscow:20261124T151000
+SUMMARY:Введение в юриспруденцию
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nСокольщик И.
+ М. (+ ЗАЧЕТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:c9f96215eed213b0e0486723a11b6079@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T100000
+DTEND;TZID=Europe/Moscow:20261126T113000
+SUMMARY:Академическое письмо для юристов
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d1de3f9025878fa23ecb9aa50e5f53fc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T114000
+DTEND;TZID=Europe/Moscow:20261126T131000
+SUMMARY:Академическое письмо для юристов
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5015e636898d5f452cd360ad8f8d7e12@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T134000
+DTEND;TZID=Europe/Moscow:20261126T151000
+SUMMARY:Логика и крит. мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7a296845693b2171618c810dd55e9d3c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T152000
+DTEND;TZID=Europe/Moscow:20261126T165000
+SUMMARY:Логика и крит. мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:69e5aca82702c046105b998a7fb8a411@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T100000
+DTEND;TZID=Europe/Moscow:20261127T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:8e52657ff4873f02a3da2a3f4dffd241@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T114000
+DTEND;TZID=Europe/Moscow:20261127T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:0dec47ce1ca8557aa5982393a9f29067@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T134000
+DTEND;TZID=Europe/Moscow:20261127T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:06a56ed446a5d8dda02dda308442a7d8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T152000
+DTEND;TZID=Europe/Moscow:20261127T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:1b7432009a8476ffec8806976f58a3c7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T114000
+DTEND;TZID=Europe/Moscow:20261130T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:119b9e4196fcbb3deab0dcba4042bc82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T134000
+DTEND;TZID=Europe/Moscow:20261130T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:38cab20ed8ccd833d77ffcc5f5b153a0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T152000
+DTEND;TZID=Europe/Moscow:20261130T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e129a047efb3ad2d84163569d6fe63a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T090000
+DTEND;TZID=Europe/Moscow:20261201T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:b03b0d8be8ae0507709fc6bddac89b3a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T104000
+DTEND;TZID=Europe/Moscow:20261201T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:06f7c4015cca0907215267bfb129500f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T134000
+DTEND;TZID=Europe/Moscow:20261201T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Сивиц
+ кая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4db0bd485d4d15f66559077e331c7b32@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T152000
+DTEND;TZID=Europe/Moscow:20261201T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:108afd8cd82e4f501d3d0ca8b34f1c49@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T100000
+DTEND;TZID=Europe/Moscow:20261203T113000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:bee70bfdd21cec61e1c8d4a2de3a5de0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T114000
+DTEND;TZID=Europe/Moscow:20261203T131000
+SUMMARY:Логика и критическое мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nк.к. Докучаев 
+ А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:56d33e9997af31650a4efad6ce821a74@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T134000
+DTEND;TZID=Europe/Moscow:20261203T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5a589035d43116ec579da93f6838c5d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T152000
+DTEND;TZID=Europe/Moscow:20261203T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c7304e0856c3ffea72d0c34cd3948fa5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T100000
+DTEND;TZID=Europe/Moscow:20261204T113000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:3f7a8c49d3e12d79a8c1c89de9856c1a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T114000
+DTEND;TZID=Europe/Moscow:20261204T131000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:55b9e1c1bead07e523e40b0f5012d240@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T134000
+DTEND;TZID=Europe/Moscow:20261204T151000
+SUMMARY:История России
+LOCATION:318
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5d907e53196f1e40b85ecc8b7a55051@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T152000
+DTEND;TZID=Europe/Moscow:20261204T165000
+SUMMARY:История России
+LOCATION:318
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:6735dff6036ab118432d3910b8411ae3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T100000
+DTEND;TZID=Europe/Moscow:20261207T113000
+SUMMARY:История государства и права России
+LOCATION:124
+DESCRIPTION:Вид занятия: Лекция\nд.ю.н. Максимо
+ ва О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:9daa8283f92e93511707f048d72d98da@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T114000
+DTEND;TZID=Europe/Moscow:20261207T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef5772bd5841c0d40b231b0e2f0d7a1e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T134000
+DTEND;TZID=Europe/Moscow:20261207T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:a9762aabef21060438cb5db0afaaed54@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T100000
+DTEND;TZID=Europe/Moscow:20261208T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3149a74d82b9a36a9bb965fc1ab73436@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T114000
+DTEND;TZID=Europe/Moscow:20261208T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:35012e538e34d298eb32291685dcb918@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T100000
+DTEND;TZID=Europe/Moscow:20261210T113000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:1d5722f7ec8448d7689fe726b69325d7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T114000
+DTEND;TZID=Europe/Moscow:20261210T131000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:599a57e7b521f9504847a337e387d8ce@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T134000
+DTEND;TZID=Europe/Moscow:20261210T151000
+SUMMARY:Логика и крит. мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:73939dfb4e3969c7fab9fbdbca40b947@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T152000
+DTEND;TZID=Europe/Moscow:20261210T165000
+SUMMARY:Логика и крит. мышление
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:21681fec8d91def2c9aa52bbe053a8d0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T100000
+DTEND;TZID=Europe/Moscow:20261211T113000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:c5d0658eb54825a384b3732dbbae8086@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T114000
+DTEND;TZID=Europe/Moscow:20261211T131000
+SUMMARY:История государства и права зарубеж
+ ных стран
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:b17dd68eb7d209e35675a84aa1c69039@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T134000
+DTEND;TZID=Europe/Moscow:20261211T151000
+SUMMARY:Логика и крит. мышление
+LOCATION:318
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:60c83ee2e0c55991fab2bc551a53c47b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T100000
+DTEND;TZID=Europe/Moscow:20261214T113000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:20d594098c3d8f7dd00b5f52cfc44b3a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T114000
+DTEND;TZID=Europe/Moscow:20261214T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:21cca8d5a6143b944ba411c1f8c3f3e0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T134000
+DTEND;TZID=Europe/Moscow:20261214T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1ffbfc6b9587d231f5242f09e338a84b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T152000
+DTEND;TZID=Europe/Moscow:20261214T165000
+SUMMARY:Академическое письмо для юристов
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b9de958a5bc136531961c23f25a19224@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T090000
+DTEND;TZID=Europe/Moscow:20261215T103000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:3203c36f6588d408a627efd34029a993@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T104000
+DTEND;TZID=Europe/Moscow:20261215T121000
+SUMMARY:История России
+LOCATION:ИНИОН
+DESCRIPTION:Вид занятия: Лекция\nпреподавател
+ и ИРИ РАН  (по темам)
+END:VEVENT
+BEGIN:VEVENT
+UID:487304fddd7013030b774af3b51f7bf0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T134000
+DTEND;TZID=Europe/Moscow:20261215T151000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cca4858268fba38b45656cfaa60874fc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T152000
+DTEND;TZID=Europe/Moscow:20261215T165000
+SUMMARY:Латынь для юристов (факультатив)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Сиви
+ цкая А.В. (+ЗАЧЕТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:20f7b42ac9099a6fd67005c232a590a8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T100000
+DTEND;TZID=Europe/Moscow:20261217T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b65fcb44b9704824b79fcd5a95868156@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T114000
+DTEND;TZID=Europe/Moscow:20261217T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:bb9335b35887dc35f0211b4ce87cce57@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T134000
+DTEND;TZID=Europe/Moscow:20261217T151000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2195150b44ebf67216f47185a8d57a2b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T152000
+DTEND;TZID=Europe/Moscow:20261217T165000
+SUMMARY:Логика и крит. мышление
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.к. Докучаев
+  А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:fc8651df29b28f1792fd18668d68e289@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T100000
+DTEND;TZID=Europe/Moscow:20261218T113000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.иск. Румянц
+ ева О.О.
+END:VEVENT
+BEGIN:VEVENT
+UID:35335dce726bf1e7fda6c0c4c152b778@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T114000
+DTEND;TZID=Europe/Moscow:20261218T131000
+SUMMARY:Русский язык и культура речи юриста
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nРумянуева О.
+ О.. (+ЗАЧ.С ОЦ\,)
+END:VEVENT
+BEGIN:VEVENT
+UID:b60c98c89ad32b1e4d40795894aa5407@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T134000
+DTEND;TZID=Europe/Moscow:20261218T151000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.
+END:VEVENT
+BEGIN:VEVENT
+UID:844b2a5cc97bba653a9230b62158e57b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T152000
+DTEND;TZID=Europe/Moscow:20261218T165000
+SUMMARY:История России
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nпреп. Мельни
+ ченко Т.С.\n(+ ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:b65938f1308c2c53f5c203e6e0f87d9a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T100000
+DTEND;TZID=Europe/Moscow:20261221T113000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:82616e69ec58978970a99f2594944ad0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T114000
+DTEND;TZID=Europe/Moscow:20261221T131000
+SUMMARY:Теория гос-ва и права
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ерохин
+ а Ю.В.\n(+ ЗАЧЕТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:60350fb2f77044bb8115f5ebeb515259@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T134000
+DTEND;TZID=Europe/Moscow:20261221T151000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nд.ю.н. Максим
+ ова О.Д.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b939fd3b1baeb7527ce9913942ba651@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T152000
+DTEND;TZID=Europe/Moscow:20261221T165000
+SUMMARY:История государства и права России
+LOCATION:115
+DESCRIPTION:Вид занятия: Семинар\nМаксимова О.
+ Д. (+ ЗАЧЕТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:13adb7082133fb0fb9bf5a1cbd60b184@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T100000
+DTEND;TZID=Europe/Moscow:20261222T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f41a84204ff886d2ea4699d4bde7662@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T114000
+DTEND;TZID=Europe/Moscow:20261222T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a97c471c5d74973fc8272735795012a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T134000
+DTEND;TZID=Europe/Moscow:20261222T151000
+SUMMARY:Академическое письмо для юристов
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0f5de70eaeef8e48f74150ab4d6d62b7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T152000
+DTEND;TZID=Europe/Moscow:20261222T165000
+SUMMARY:Академическое письмо для юристов (З
+ АЧ. С ОЦ.)
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Лушник
+ ова В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ec01ee98e28538ca0ad63b9fd68368e5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T100000
+DTEND;TZID=Europe/Moscow:20261224T113000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e51a554a79c923206f51be899ee62fc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T114000
+DTEND;TZID=Europe/Moscow:20261224T131000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:124
+DESCRIPTION:Вид занятия: Семинар\nМазаев Д.В. (+
+ ЗАЧ. С ОЦ.)
+END:VEVENT
+END:VCALENDAR
