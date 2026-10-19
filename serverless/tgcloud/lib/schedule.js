@@ -10,7 +10,7 @@ const LUNCH = /обед|перерыв/i;
 const ONLINE = ['онлайн', 'online', 'zoom', 'teams', 'вебинар', 'webinar', 'дистанционно', 'удаленно', 'remote', 'ссылка', 'конференция', 'conference', 'meet', 'meeting'];
 
 export async function listSchedules(force = false) {
-  const c = await store.get('cache:schedules3');
+  const c = await store.get('cache:schedules4');
   if (c && !force && Date.now() - c.at < TTL) return c.data;
   try {
     const tree = JSON.parse(await getText(API_TREE)).tree || [];
@@ -24,20 +24,24 @@ export async function listSchedules(force = false) {
       const p = parseSchedule(path);
       if (!p || seen.has(p.key)) continue;
       seen.add(p.key);
-      (data[p.course] = data[p.course] || []).push({ key: p.key, file: path, faculty: p.faculty, direction: p.direction, stream: p.stream, name: p.stream || p.direction });
+      (data[p.course] = data[p.course] || []).push({ key: p.key, file: path, course: p.course, faculty: p.faculty, direction: p.direction, stream: p.stream, name: p.stream || p.direction });
     }
     for (const arr of Object.values(data)) arr.sort((a, b) => a.name.localeCompare(b.name, 'ru', { numeric: true }));
     if (Object.keys(data).length) {
-      await store.set('cache:schedules3', { at: Date.now(), data });
+      await store.set('cache:schedules4', { at: Date.now(), data });
       return data;
     }
   } catch (e) {}
   return c ? c.data : {};
 }
 
+// Плоский список записей; курс берётся из ключа группы, так что работает и со старым кэшем
+export function flatten(s) {
+  return Object.entries(s).flatMap(([course, arr]) => arr.map((e) => Object.assign({}, e, { course })));
+}
+
 export async function allEntries(force = false) {
-  const s = await listSchedules(force);
-  return Object.values(s).flat();
+  return flatten(await listSchedules(force));
 }
 
 export async function getRenames(course, stream) {

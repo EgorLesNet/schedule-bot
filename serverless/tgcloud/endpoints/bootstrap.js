@@ -1,12 +1,12 @@
 import * as store from '../lib/store.js';
-import { listSchedules } from '../lib/schedule.js';
+import { listSchedules, flatten } from '../lib/schedule.js';
 import { COURSES_COUNT, facultyList, directionPairs, pairLabel } from '../lib/faculties.js';
 import { endpoint } from '../lib/auth.js';
 import { today } from '../lib/time.js';
 
 export default endpoint(async (input, u) => {
   const sch = await listSchedules();
-  const all = Object.values(sch).flat();
+  const all = flatten(sch);
   const names = facultyList(all);
   const faculties = [];
   const files = {};
