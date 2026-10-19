@@ -1,0 +1,2168 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Schedule 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Юриспруденция, 2 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:9dbe10fa42db532a5920ceb2609b2bd0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260902T100000
+DTEND;TZID=Europe/Moscow:20260902T113000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4a41660e19b4372bef94107e2c8b10fa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260902T114000
+DTEND;TZID=Europe/Moscow:20260902T131000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6befc088f2f36ebd10b2466fd599c0e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T134000
+DTEND;TZID=Europe/Moscow:20260903T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:09fe27fe22b01dceaf55821d4480bbab@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T152000
+DTEND;TZID=Europe/Moscow:20260903T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8ebfa779742af7443cef1b05cb7087ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T100000
+DTEND;TZID=Europe/Moscow:20260904T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:95dbfb9e9ed539e5be3b6637e6ce964d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T114000
+DTEND;TZID=Europe/Moscow:20260904T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8892c65dbe28390a954533d7f6fdfac5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T134000
+DTEND;TZID=Europe/Moscow:20260904T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:229b1d359c6099807943fa5fd05acef9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:a23250dc3bc684da79079065a46e9842@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T114000
+DTEND;TZID=Europe/Moscow:20260907T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:fcce9c4e25b4ed34bf4d7624866599d4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T100000
+DTEND;TZID=Europe/Moscow:20260909T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:94bcd46875a074ec533070690bf5386e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T114000
+DTEND;TZID=Europe/Moscow:20260909T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c8d4284e2663a2e9ab864fb2a79243e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T100000
+DTEND;TZID=Europe/Moscow:20260910T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:6657456c54a0f70efb9b1f50ee67b792@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T114000
+DTEND;TZID=Europe/Moscow:20260910T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:7182d3a16d1ab55a4018a9cab83349c8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T134000
+DTEND;TZID=Europe/Moscow:20260910T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b93983c3d1173fcdabcc3cc547ff75df@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T152000
+DTEND;TZID=Europe/Moscow:20260910T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5706472ef110447388305cdd8affde7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T100000
+DTEND;TZID=Europe/Moscow:20260911T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac3f031757e30898001854ede6110eac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T114000
+DTEND;TZID=Europe/Moscow:20260911T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:447fa19cb2f43f0ebf8fa9da6ca294ac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T134000
+DTEND;TZID=Europe/Moscow:20260911T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:192f455b345fccec1c0a2ee9e2afd6b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T152000
+DTEND;TZID=Europe/Moscow:20260911T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:2ebb75fc10a40170ce8fcba182f74498@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T100000
+DTEND;TZID=Europe/Moscow:20260914T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:1c0b37147424520e3bc0dc22b98eb2ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T114000
+DTEND;TZID=Europe/Moscow:20260914T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:5239b38ce757568db7e898094d873714@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:831c64f2aa6a9b678452cfce895e97ec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T114000
+DTEND;TZID=Europe/Moscow:20260917T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:2d459dbc9fa4768d6186c82bdb925553@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T134000
+DTEND;TZID=Europe/Moscow:20260917T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d50c33d9aacc2820af5f151dac700c52@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T152000
+DTEND;TZID=Europe/Moscow:20260917T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:eba2949a60e9011ecf210766bf0b6da1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T100000
+DTEND;TZID=Europe/Moscow:20260918T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5e69934cc11236a0b71acacb8e28bf33@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T114000
+DTEND;TZID=Europe/Moscow:20260918T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f55774063f97f913760407ff15024310@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2d7912261457bc282a8f9f45fe2f76d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T114000
+DTEND;TZID=Europe/Moscow:20260921T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:50d882fc3ba430be2911863d43230e70@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T134000
+DTEND;TZID=Europe/Moscow:20260921T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:c721fc2a1b749840dd6f5204a0dca595@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T152000
+DTEND;TZID=Europe/Moscow:20260921T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:66ed10632cb6ff12afb0060ed20102d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T100000
+DTEND;TZID=Europe/Moscow:20260923T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:61f0661fc501be00ae53a0aef0d5c471@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T114000
+DTEND;TZID=Europe/Moscow:20260923T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:5edc2e742825fd354dd54a2eb1408a3e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T134000
+DTEND;TZID=Europe/Moscow:20260923T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:08a013fe9b59dcad78c87225919fca90@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T152000
+DTEND;TZID=Europe/Moscow:20260923T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:51548f105a45a4ee7de0eba60bdd5bb6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T100000
+DTEND;TZID=Europe/Moscow:20260924T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8e4ada7a7519c5fa1b53ae9bb65967d9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T114000
+DTEND;TZID=Europe/Moscow:20260924T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:c7b6f92887b4f9f312736c8ab81960c4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T134000
+DTEND;TZID=Europe/Moscow:20260924T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:30730bfd8fb3700b0d45f9c3293013ee@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T152000
+DTEND;TZID=Europe/Moscow:20260924T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c922f64c6fe60f9fc71fef46b68fdc7f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T100000
+DTEND;TZID=Europe/Moscow:20260925T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:522dfbbc56b8865d66f600e5ca8f8768@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T114000
+DTEND;TZID=Europe/Moscow:20260925T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:154f2593316d11afe47e4f706448aa4e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T134000
+DTEND;TZID=Europe/Moscow:20260925T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:16d0416ddf862b0357ff350fb4b8b5a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T152000
+DTEND;TZID=Europe/Moscow:20260925T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:97135e7b92139ca5d26c4816068979cb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T100000
+DTEND;TZID=Europe/Moscow:20260928T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:8ea2c2e37ae223c9f3190cb9135febaa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T114000
+DTEND;TZID=Europe/Moscow:20260928T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:971367690e059bf01558828dd2bdf54f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T100000
+DTEND;TZID=Europe/Moscow:20260930T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:b2acf616a54b24fd7a2021d6b4aca600@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T114000
+DTEND;TZID=Europe/Moscow:20260930T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:77924fd2034cfa422db43a95ccca029f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:d381e21981ac3b9c4f6455c154a51c46@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T114000
+DTEND;TZID=Europe/Moscow:20261001T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:22e54d65669a0528c1e0b28e10116646@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T134000
+DTEND;TZID=Europe/Moscow:20261001T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:be02fe3c1ee8afdbc96c0b3446ce020f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T152000
+DTEND;TZID=Europe/Moscow:20261001T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:308f96615d2d0ba3cf5c0f27e1d4d946@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T100000
+DTEND;TZID=Europe/Moscow:20261002T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:03f642572b4d2e5f92ef90909e7fd572@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T114000
+DTEND;TZID=Europe/Moscow:20261002T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:20e2b2e9846dc1c61ac46e87369599c4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5d7475557d5cb87d6c67e30897b5be8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T114000
+DTEND;TZID=Europe/Moscow:20261005T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:34da85f8d61481e0e93dbcb2c5c61710@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T100000
+DTEND;TZID=Europe/Moscow:20261007T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c0a90631478634aca35b85dc24798d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T114000
+DTEND;TZID=Europe/Moscow:20261007T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:65acb26745c89d55e84f0b2fb209a297@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T134000
+DTEND;TZID=Europe/Moscow:20261007T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a44c44692c7b544b6bb1a056e457c6e2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T152000
+DTEND;TZID=Europe/Moscow:20261007T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6153e10297cea4e43641aec376a17a5b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:b664d06594374b4ac6865aee7ff19d0a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T114000
+DTEND;TZID=Europe/Moscow:20261008T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:7fe75a86eb26ddd518b65931600c8860@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T134000
+DTEND;TZID=Europe/Moscow:20261008T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d1f660931a09f36b1a307d61cd9d481f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T152000
+DTEND;TZID=Europe/Moscow:20261008T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:816078dc235f97bf1867a0808b02a53b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T100000
+DTEND;TZID=Europe/Moscow:20261009T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5d9d8129163a06f0e30986b5c2dbd032@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T114000
+DTEND;TZID=Europe/Moscow:20261009T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:895b86e660d7ee11c8008cebe46ccf0b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T100000
+DTEND;TZID=Europe/Moscow:20261012T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:bbd407c2024da0050ee7a01d349aeef2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T114000
+DTEND;TZID=Europe/Moscow:20261012T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:33d2836dacbf0c636b6ffeb498bd94d0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T134000
+DTEND;TZID=Europe/Moscow:20261012T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:7261bbe86a241dbea0ddbf3d968f4437@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T152000
+DTEND;TZID=Europe/Moscow:20261012T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:a3fb132d501c36b713ac64b3b5f0cb4f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T100000
+DTEND;TZID=Europe/Moscow:20261014T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:3042552d7412992e93deefa9f56d175d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T114000
+DTEND;TZID=Europe/Moscow:20261014T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a348339479dff053dedd9f63a472548b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T134000
+DTEND;TZID=Europe/Moscow:20261014T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f4a5ee455e5fece42c152431e1319dbe@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T152000
+DTEND;TZID=Europe/Moscow:20261014T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:78c200a39d5c544e380ba36a4bfdbbd6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T100000
+DTEND;TZID=Europe/Moscow:20261015T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ff3c6adf7f9fc3b2aad852fecad650b6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T114000
+DTEND;TZID=Europe/Moscow:20261015T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:016644f69b3e7eb67f3a2a4cbbd62065@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T134000
+DTEND;TZID=Europe/Moscow:20261015T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fc166387e157518d14eed09048857f5d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T152000
+DTEND;TZID=Europe/Moscow:20261015T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c91f11d77a1a2b3660928226f42c07a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T100000
+DTEND;TZID=Europe/Moscow:20261016T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2a330262d8c7ba729f8faf03e75c5e6d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T114000
+DTEND;TZID=Europe/Moscow:20261016T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:04d78f8dbb5ffa488102a2c8d997b6ca@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:32bfc869f0843e5fec0e7ffb9ad9bff7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T114000
+DTEND;TZID=Europe/Moscow:20261019T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:c74445dc08aec28c1b063ae0f929401f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T134000
+DTEND;TZID=Europe/Moscow:20261019T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:10b3c99a247271915408aaf30d65ced5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T152000
+DTEND;TZID=Europe/Moscow:20261019T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:9527dc6da8a78712fdcf51c7e1cae95e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T100000
+DTEND;TZID=Europe/Moscow:20261021T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ee3e74f7e8387e49d67dc7d7e99b18e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T114000
+DTEND;TZID=Europe/Moscow:20261021T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:adb16cffce8e8ca0b6e69b0fcd12dc6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T134000
+DTEND;TZID=Europe/Moscow:20261021T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:aef79bfd00406c8c29c600e219518318@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T152000
+DTEND;TZID=Europe/Moscow:20261021T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:28d2403f412bd5585cb784aae6f84e3d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T100000
+DTEND;TZID=Europe/Moscow:20261022T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:db3969bbc55e9cc72d39b0fdc9699ef6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T114000
+DTEND;TZID=Europe/Moscow:20261022T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:685ceb3fc0ab8fe52512adc4aa28a61b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T134000
+DTEND;TZID=Europe/Moscow:20261022T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3c842e8bf6e55463c751ac00a4edac4a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T152000
+DTEND;TZID=Europe/Moscow:20261022T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3c1011cdff655fb9a0cdfc6a544f4a06@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T100000
+DTEND;TZID=Europe/Moscow:20261023T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:6865d42014ec4b490f2c934ed9b4c73a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T114000
+DTEND;TZID=Europe/Moscow:20261023T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:272ceb630bd9192813588d42e28081ef@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T134000
+DTEND;TZID=Europe/Moscow:20261023T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f90a861e482490c9cd285662a4a37ee0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T152000
+DTEND;TZID=Europe/Moscow:20261023T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:6c23e6e094f005d3a280003bc2f62f00@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:10558e3bdd0dfe85b0b735c29d0c112e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T114000
+DTEND;TZID=Europe/Moscow:20261026T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:344ca4531aa540b37cc6d9885a096a8a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T134000
+DTEND;TZID=Europe/Moscow:20261026T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:644aab17bf2348e04f0cd3ef17ed33ae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T152000
+DTEND;TZID=Europe/Moscow:20261026T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:fcc6a457ae3937b53c2ee403cf0de92e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T100000
+DTEND;TZID=Europe/Moscow:20261028T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:23103deb6770b2f6d5c01a17ac9af943@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T114000
+DTEND;TZID=Europe/Moscow:20261028T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c3e7eb724518cda0f43e7338172e22d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T134000
+DTEND;TZID=Europe/Moscow:20261028T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:43fe93971c4b30e0957a2a9521db26c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T152000
+DTEND;TZID=Europe/Moscow:20261028T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf3f49b795aca48a6593feb8efeb902f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T100000
+DTEND;TZID=Europe/Moscow:20261029T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:84cbfbf9796be4e17a7fac76a6dee1a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T114000
+DTEND;TZID=Europe/Moscow:20261029T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8957159ac9eeba9ebe845ae1cca0af1f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T134000
+DTEND;TZID=Europe/Moscow:20261029T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d14d264a0de49be709ef41b48b7c6119@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T152000
+DTEND;TZID=Europe/Moscow:20261029T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:893ed793b151fbdc79de8e2ca6ee7c6c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T100000
+DTEND;TZID=Europe/Moscow:20261030T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0174a2137db1594e6de8488463f1648f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T114000
+DTEND;TZID=Europe/Moscow:20261030T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:acbf7e136c13fe8c85ee60c62940955c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T100000
+DTEND;TZID=Europe/Moscow:20261102T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:eef90b3ae5f5e49f676fdcb44b5a4b15@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T114000
+DTEND;TZID=Europe/Moscow:20261102T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:f885fba622371fde41dbf2d446a39cd1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T134000
+DTEND;TZID=Europe/Moscow:20261102T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:ed1e22f29caf2e807a302ccc63d35cdb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T152000
+DTEND;TZID=Europe/Moscow:20261102T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:0392d8fc36f4a19cdd6b98def6bcd06f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T100000
+DTEND;TZID=Europe/Moscow:20261105T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ed4cdc5a31b3844348819f4ab92ac82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T114000
+DTEND;TZID=Europe/Moscow:20261105T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:c1cb884a41e013e5d2607cfe95441307@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T134000
+DTEND;TZID=Europe/Moscow:20261105T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6cf733e296fcf5093541d32964c12f0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T152000
+DTEND;TZID=Europe/Moscow:20261105T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:43aff4bfce63612c2b24ee926630c431@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T100000
+DTEND;TZID=Europe/Moscow:20261106T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c79a67a319656e6c2da0a65a23cb215@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T114000
+DTEND;TZID=Europe/Moscow:20261106T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:17453b33e7b61ae9c9a1e5b3d0ed8322@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T134000
+DTEND;TZID=Europe/Moscow:20261106T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d9895b1b188c94d5c7f759959d82831@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T152000
+DTEND;TZID=Europe/Moscow:20261106T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d4a13cb9037572c17cf95027a7e3d062@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T100000
+DTEND;TZID=Europe/Moscow:20261109T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:05f86e8a422dd5514ce8841bc97ade42@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T114000
+DTEND;TZID=Europe/Moscow:20261109T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c1914b138234b3ef30c89c75cd9411a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T134000
+DTEND;TZID=Europe/Moscow:20261109T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:03b0cf877d735b01af89963e841abca9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T152000
+DTEND;TZID=Europe/Moscow:20261109T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:8dcf183cf37d2924a98aba73a2b60406@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T100000
+DTEND;TZID=Europe/Moscow:20261111T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:54a27390c3e08aef2def5485919fac9a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T114000
+DTEND;TZID=Europe/Moscow:20261111T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e485fdf496475dc79f86d7fbb0a2c5d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T134000
+DTEND;TZID=Europe/Moscow:20261111T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5901c2e5e9b6a9cd222bc010cf1bdd4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T152000
+DTEND;TZID=Europe/Moscow:20261111T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e0056efc4d8358d3888bcc85d584d4dc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T100000
+DTEND;TZID=Europe/Moscow:20261112T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d1f8c21f12c30e99cac091cff790bd0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T114000
+DTEND;TZID=Europe/Moscow:20261112T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfa48ce12acd01094653e46eae83cb9f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T134000
+DTEND;TZID=Europe/Moscow:20261112T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:cd883d055edb7ec902c173291bccadce@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T152000
+DTEND;TZID=Europe/Moscow:20261112T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c4287c363deae2ce5472c9551efe42c4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T100000
+DTEND;TZID=Europe/Moscow:20261113T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:45e7ce3c3244fc2299ba04ccb36453ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T114000
+DTEND;TZID=Europe/Moscow:20261113T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fdfb7d1c524bc7c62bf24311bb452e7a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T100000
+DTEND;TZID=Europe/Moscow:20261116T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5552a13248ee07d4168ccbae52ac7af@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T114000
+DTEND;TZID=Europe/Moscow:20261116T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:d12e693948cc96b3c7d3d4d99e8e42a2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T134000
+DTEND;TZID=Europe/Moscow:20261116T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:cd0d0d584ea9fc1e7b1e363b11daaf0a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T152000
+DTEND;TZID=Europe/Moscow:20261116T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:0bef5f3bfb0e4a3ebe2c6c9fa236c1d0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T100000
+DTEND;TZID=Europe/Moscow:20261118T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:96dcf689bfeca96fdf557e738a8b38dc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T114000
+DTEND;TZID=Europe/Moscow:20261118T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d513ca96fb6f3fc73b82cb87f40b524f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T134000
+DTEND;TZID=Europe/Moscow:20261118T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d8f3cf25e42e131c21f9d009a72660f0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T152000
+DTEND;TZID=Europe/Moscow:20261118T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5f2fa9fe35d03b1314207f7fcd94ab0f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T100000
+DTEND;TZID=Europe/Moscow:20261119T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:0b47efee7c30790c46ff1aca60d1c5e4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T114000
+DTEND;TZID=Europe/Moscow:20261119T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:0ae08db78a52f2c723427bf9ba63b9b1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T134000
+DTEND;TZID=Europe/Moscow:20261119T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:095acadd3f3badc68a7cf7975192d0f5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T152000
+DTEND;TZID=Europe/Moscow:20261119T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef024b2f6ecd27af536a88646c2f27da@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T100000
+DTEND;TZID=Europe/Moscow:20261120T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Пашин С.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:eaf9b8071aeef7a21059bdca3f48e825@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T114000
+DTEND;TZID=Europe/Moscow:20261120T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:909c3a3aba6e563460baf04358d8c1d9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T134000
+DTEND;TZID=Europe/Moscow:20261120T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef5d0e41785d77068726bce17fbeb121@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T152000
+DTEND;TZID=Europe/Moscow:20261120T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:3995ff27042fb84193db05c7925c26c6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T100000
+DTEND;TZID=Europe/Moscow:20261123T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.псих.н. Довж
+ ик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:d3f5a5716edf22a5cdc3a07b4e58977c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T114000
+DTEND;TZID=Europe/Moscow:20261123T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:0fe6cc5cf5638444b2b33c0beba1d1fc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T134000
+DTEND;TZID=Europe/Moscow:20261123T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:3f35e74aeedf54f2472cea2e791f286b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T152000
+DTEND;TZID=Europe/Moscow:20261123T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:d5eaba2fb72add7e3de65c2766ef5723@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T100000
+DTEND;TZID=Europe/Moscow:20261125T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc42f3d15e1105feeaa8b18c65a74956@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T114000
+DTEND;TZID=Europe/Moscow:20261125T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7551d1326bbb4815f5a4df1f279f7fe7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T134000
+DTEND;TZID=Europe/Moscow:20261125T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e4d8ec0038f0f50a09abd9b0c5063884@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T152000
+DTEND;TZID=Europe/Moscow:20261125T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e150129a6e341ffc02abffc3b2c4e645@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T100000
+DTEND;TZID=Europe/Moscow:20261126T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Алова Д.
+ Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ccf3ca76171c61b9f6fb0b102badc839@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T114000
+DTEND;TZID=Europe/Moscow:20261126T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ff8a75178fad06184713ba79cc4b7d1a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T134000
+DTEND;TZID=Europe/Moscow:20261126T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e426fda326e21865a8ed5ffe89f71439@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T152000
+DTEND;TZID=Europe/Moscow:20261126T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4eb5bd92daa7642bb6e8544d53a83ffc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T100000
+DTEND;TZID=Europe/Moscow:20261127T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c02ed2cc6909589144378a20fc411650@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T114000
+DTEND;TZID=Europe/Moscow:20261127T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1df82b10588f528c65eab7118cb7a8e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T100000
+DTEND;TZID=Europe/Moscow:20261130T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:2be7d25361dbe9a2ae54d15c38a8cd65@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T114000
+DTEND;TZID=Europe/Moscow:20261130T131000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.
+END:VEVENT
+BEGIN:VEVENT
+UID:4a1fac34858121efb8992655f4d193bd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T134000
+DTEND;TZID=Europe/Moscow:20261130T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:050e7884b6a1250ade48c89ec7da0fdc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T152000
+DTEND;TZID=Europe/Moscow:20261130T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:cfceaa46d03cd220897f00361e1929ed@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T100000
+DTEND;TZID=Europe/Moscow:20261202T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7ded287b1b4401d78b18c45b188c7288@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T114000
+DTEND;TZID=Europe/Moscow:20261202T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:bf1a863d42e5f5c7d9ad33bc7dc1e9f7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T134000
+DTEND;TZID=Europe/Moscow:20261202T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf2c9aa439ed306843856d197f15a942@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T152000
+DTEND;TZID=Europe/Moscow:20261202T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2448b27cd11db604129675f1aaedef09@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T100000
+DTEND;TZID=Europe/Moscow:20261203T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:c09f485102c03316517cf1e042cf63b6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T114000
+DTEND;TZID=Europe/Moscow:20261203T131000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Алова Д
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:08a8b84559346ee97c5f4c43cc5ed804@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T134000
+DTEND;TZID=Europe/Moscow:20261203T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3feb83dbece62777893b268f74295eb5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T152000
+DTEND;TZID=Europe/Moscow:20261203T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:569b05d4307d9d3e311fe9d18934a8f6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T100000
+DTEND;TZID=Europe/Moscow:20261204T113000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Пашин С
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ea3c56f88a76ed412188f26228cd1455@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T114000
+DTEND;TZID=Europe/Moscow:20261204T131000
+SUMMARY:Судебная система и правоохранит. ор
+ ганы
+LOCATION:134
+DESCRIPTION:Пашин С.А. (ЗАЧ. С ОЦ.)
+END:VEVENT
+BEGIN:VEVENT
+UID:81a2c4904675c0bca64df471a52c9469@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T134000
+DTEND;TZID=Europe/Moscow:20261204T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:67a563e1ea7a98a72d6a263906323645@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T152000
+DTEND;TZID=Europe/Moscow:20261204T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:bdf53874b92f8097d255c7dcf641f27b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T100000
+DTEND;TZID=Europe/Moscow:20261207T113000
+SUMMARY:Психология
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.псих.н. Дов
+ жик Л.М.\n(+ ЗАЧЕТ С ОЦЕНКОЙ)
+END:VEVENT
+BEGIN:VEVENT
+UID:1cf222dab55c7a21a36a6512f0725d30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T134000
+DTEND;TZID=Europe/Moscow:20261207T151000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Бара
+ нова А.Б.
+END:VEVENT
+BEGIN:VEVENT
+UID:3d6bbc7fba87c7cf266334c96e847e1e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T152000
+DTEND;TZID=Europe/Moscow:20261207T165000
+SUMMARY:Информ. технологии в юридич. деятель
+ ности
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\n(+ ЗАЧ. С ОЦ.)
+END:VEVENT
+BEGIN:VEVENT
+UID:1f7569aa2534f577960a144cd9b8093c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T100000
+DTEND;TZID=Europe/Moscow:20261209T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:5451449e0be5e1b008834e4a30f8e52b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T114000
+DTEND;TZID=Europe/Moscow:20261209T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a1246260a991e4869c0bfeedcfdbb25e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T134000
+DTEND;TZID=Europe/Moscow:20261209T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:933d9ef97cd5a57434deefa143e5a91c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T152000
+DTEND;TZID=Europe/Moscow:20261209T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:20248362c66fcc5018a47b0eb7f3adeb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T100000
+DTEND;TZID=Europe/Moscow:20261210T113000
+SUMMARY:История политических и правовых уче
+ ний
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nАлова Д.Г. (+ З
+ АЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:c9ff39012deddef69a69e6747acfc71d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T134000
+DTEND;TZID=Europe/Moscow:20261210T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfd40c2cce04a2f15655ee718edc1a3a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T152000
+DTEND;TZID=Europe/Moscow:20261210T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d48e31db021152037f43891122e5b8fd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T100000
+DTEND;TZID=Europe/Moscow:20261211T113000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:12b306a3cf45a0626d96384c5a8d05c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T114000
+DTEND;TZID=Europe/Moscow:20261211T131000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9be8b74d4bccc203317e4ec1ea84f4ee@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T134000
+DTEND;TZID=Europe/Moscow:20261211T151000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:77777a09861004cacbaa5151fdaa5399@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T152000
+DTEND;TZID=Europe/Moscow:20261211T165000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac0108261a44d7a72d6c9895228e8bfc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261216T100000
+DTEND;TZID=Europe/Moscow:20261216T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Ромашко
+ ва И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:c28b5bd47cefc923167282c9aa4e48e1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261216T114000
+DTEND;TZID=Europe/Moscow:20261216T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:eecdb2269d9777dcaec0984c31d1a51f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261216T134000
+DTEND;TZID=Europe/Moscow:20261216T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:23c223d7059a0019a046569843fc0e32@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261216T152000
+DTEND;TZID=Europe/Moscow:20261216T165000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:181b0b67016d03cf4ed6799e31e550d1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T114000
+DTEND;TZID=Europe/Moscow:20261217T131000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:17ccebc824fdc3dc9a875ab7ab93cb4a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T134000
+DTEND;TZID=Europe/Moscow:20261217T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Михаль О
+ .А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c42e7fcfdfb63464288abfdf93fa674@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T152000
+DTEND;TZID=Europe/Moscow:20261217T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ed22cba233ba4e919577974828f8e907@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T100000
+DTEND;TZID=Europe/Moscow:20261223T113000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:9eeac702567d3a6964395575247d5092@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T114000
+DTEND;TZID=Europe/Moscow:20261223T131000
+SUMMARY:Гражданское право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Ромашк
+ ова И.И.\n(+ ЗАЧЁТ С ОЦЕНКОЙ)
+END:VEVENT
+BEGIN:VEVENT
+UID:de273f285fc9b81bb77d91ed13eab3e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T134000
+DTEND;TZID=Europe/Moscow:20261223T151000
+SUMMARY:Конституционное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:be033e7ef4d0c7e08aa9888d21e0f90d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T114000
+DTEND;TZID=Europe/Moscow:20261224T131000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:25cb741cab9c5528941fc594056cce22@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T134000
+DTEND;TZID=Europe/Moscow:20261224T151000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1be68a7d8d5369cd84629a2407edff67@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T152000
+DTEND;TZID=Europe/Moscow:20261224T165000
+SUMMARY:Уголовное право
+LOCATION:134
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Михаль 
+ О.А.
+END:VEVENT
+END:VCALENDAR
