@@ -1,0 +1,2593 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Schedule 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Социология СПЭ, 4 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:f19e5ef1d636376c1f7a944e65749675@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T100000
+DTEND;TZID=Europe/Moscow:20260903T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:4bb86c4e8ba28ec70b5f47e34591686a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T114000
+DTEND;TZID=Europe/Moscow:20260903T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:15885e048cefbb216688dec71882f2f1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T140000
+DTEND;TZID=Europe/Moscow:20260903T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:34c8aff5403cac1bd66b302fe78fcf99@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260903T154000
+DTEND;TZID=Europe/Moscow:20260903T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:6331d948ec2297e959553ee6fd96d898@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a2e30fa3d1d28f7e4a7a34bb8ee65c4c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T114000
+DTEND;TZID=Europe/Moscow:20260907T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:6f65c22f9687a62059caeb7b67e8f035@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T114000
+DTEND;TZID=Europe/Moscow:20260908T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:91f0e559e4af4b719af290f1bf30b619@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T132000
+DTEND;TZID=Europe/Moscow:20260908T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:4ffbf3ba7778f3e52a88b97afdd5be10@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T162000
+DTEND;TZID=Europe/Moscow:20260908T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:dbb6b16178ab58ef537dd0e4cbc02851@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T100000
+DTEND;TZID=Europe/Moscow:20260910T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e7068475e2848695786dff6ef49e5cfd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T114000
+DTEND;TZID=Europe/Moscow:20260910T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc24881e4e628cca6bfdd6428eaa6cbb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T140000
+DTEND;TZID=Europe/Moscow:20260910T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c41e98c4482e1d006ee500db3866bb12@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260910T154000
+DTEND;TZID=Europe/Moscow:20260910T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:91a737c392e76de63a0669d329c1f3e5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T134000
+DTEND;TZID=Europe/Moscow:20260911T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b27b8f7d5d0a7e66914b20e32783cb51@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T152000
+DTEND;TZID=Europe/Moscow:20260911T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d82a6e2fa04827e4314191d3b1585838@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260912T100000
+DTEND;TZID=Europe/Moscow:20260912T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:46da5deb9156258dce580c327875be30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260912T114000
+DTEND;TZID=Europe/Moscow:20260912T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:07645084e5fa7936cbf37c349a71f7a3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T100000
+DTEND;TZID=Europe/Moscow:20260914T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:d3e4c5f1adb9be51a3fa6ba83d04effd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T114000
+DTEND;TZID=Europe/Moscow:20260914T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:64b2b1d19e0ccb1a0b0168a5a4d8639c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T134000
+DTEND;TZID=Europe/Moscow:20260914T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:712202702a221f24b25182c80705be4d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T152000
+DTEND;TZID=Europe/Moscow:20260914T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c77f5e174c6602edaf78ebdfe6122d17@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T114000
+DTEND;TZID=Europe/Moscow:20260915T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:5db4134a8a19b916167c63a547ad2519@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T132000
+DTEND;TZID=Europe/Moscow:20260915T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:853840d52d5ea7db6e3cb63a1f55daf7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T162000
+DTEND;TZID=Europe/Moscow:20260915T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:b3a73ff2ab395d5aa7c7de653176b2a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T100000
+DTEND;TZID=Europe/Moscow:20260916T113000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:b1e7f9f999c99088d52314c0d918be30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T114000
+DTEND;TZID=Europe/Moscow:20260916T131000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:e6a26d855258585131dc28fceb87b601@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:84437d6e7d550c51657bc9d806f0fdf1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T114000
+DTEND;TZID=Europe/Moscow:20260917T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:a60bb98c67feb34c9ee3103ac97c5461@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T140000
+DTEND;TZID=Europe/Moscow:20260917T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b247ea410fa85e7136a49c9cbd53ff7f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260917T154000
+DTEND;TZID=Europe/Moscow:20260917T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3d849d0f324922a3da5c082725a8b0fe@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T100000
+DTEND;TZID=Europe/Moscow:20260918T113000
+SUMMARY:Предпринимательское право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:40f5c7fef46f75a39e40233d10bea5fc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T114000
+DTEND;TZID=Europe/Moscow:20260918T131000
+SUMMARY:Предпринимательское право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:dc96cced5156f7eb3a71fca9c89df09b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260919T100000
+DTEND;TZID=Europe/Moscow:20260919T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:bcb3ba807e509df128cde2b3edfd1525@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260919T114000
+DTEND;TZID=Europe/Moscow:20260919T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:52239556059a35ead60e18a6f4174ca2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc24e9f6f1c1bb1172488a233ccd97dc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T114000
+DTEND;TZID=Europe/Moscow:20260921T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:34d7ebedb436098ffc55c8a010253552@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T134000
+DTEND;TZID=Europe/Moscow:20260921T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:deca9e2b0ea057798054bed931b7bd30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T152000
+DTEND;TZID=Europe/Moscow:20260921T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4d2745db16c0e981d03a005ef8078bf8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T114000
+DTEND;TZID=Europe/Moscow:20260922T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:183292e51a0fa459197c67d968a7c423@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T132000
+DTEND;TZID=Europe/Moscow:20260922T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:bc3b7dfcdc65e3742a521b345d61ef11@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T162000
+DTEND;TZID=Europe/Moscow:20260922T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:34d62b3c9382625ffc400fbfc1d4300a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T153000
+DTEND;TZID=Europe/Moscow:20260923T170000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:54efbbe96a01043f60459927c7b275a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T100000
+DTEND;TZID=Europe/Moscow:20260924T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4af14878cac9cf2436441c3273586842@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T114000
+DTEND;TZID=Europe/Moscow:20260924T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad543d2b9a352034ce584518e6e93ddb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T140000
+DTEND;TZID=Europe/Moscow:20260924T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7050f0431195c67e9064b54ea1e0e0aa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260924T154000
+DTEND;TZID=Europe/Moscow:20260924T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:00ec82707d5f76e36dd42ebf781fcad4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T100000
+DTEND;TZID=Europe/Moscow:20260925T113000
+SUMMARY:Предпринимательское право
+LOCATION:маз
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e96d33a1d6ae7b86a072f8ca047fc53a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T114000
+DTEND;TZID=Europe/Moscow:20260925T131000
+SUMMARY:Предпринимательское право
+LOCATION:маз
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c4c16a1dd81257adfa9df26fc8ecff0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T100000
+DTEND;TZID=Europe/Moscow:20260928T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:dbc386ceea40391cc59c37abd94c15b7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T114000
+DTEND;TZID=Europe/Moscow:20260928T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:b1f7ee391c081b632e5f8b0ceac07f4a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T114000
+DTEND;TZID=Europe/Moscow:20260929T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:495efec5338f65b4ab8e87faf128d827@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T132000
+DTEND;TZID=Europe/Moscow:20260929T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:b3edc9ba378707c586b7f9198122e9c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T162000
+DTEND;TZID=Europe/Moscow:20260929T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:27361bf9423503d71a6c790999a617f2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T100000
+DTEND;TZID=Europe/Moscow:20260930T113000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:8df4e77a20731a2727d499828e6828e4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T114000
+DTEND;TZID=Europe/Moscow:20260930T131000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:e647cc8d73081664515523e81d825fbe@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:65b0f3fc2e64d6c0bb514b24582f4bc8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T114000
+DTEND;TZID=Europe/Moscow:20261001T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:27888b401d6a28f30b6d269c009dd27b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T140000
+DTEND;TZID=Europe/Moscow:20261001T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c9925ef2d5db6cf0c4b22caeeb146119@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261001T154000
+DTEND;TZID=Europe/Moscow:20261001T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:eac20b8de5e7f7dabfe402a3f73f307e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T100000
+DTEND;TZID=Europe/Moscow:20261002T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a012bb4e5fe5ed0e340fea17c654ff80@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T114000
+DTEND;TZID=Europe/Moscow:20261002T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce4bc97119ad4d7582efc29f77c88f75@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T134000
+DTEND;TZID=Europe/Moscow:20261002T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:bb66a7b680b8339d87a10ac02aba0a6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T152000
+DTEND;TZID=Europe/Moscow:20261002T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:cfa5adb7d82caabbf37f760d80c41a10@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261003T100000
+DTEND;TZID=Europe/Moscow:20261003T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e5d436e5b83d0bb8f0877dd3637a586@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261003T114000
+DTEND;TZID=Europe/Moscow:20261003T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:982b7b4b585bd2fea851fe71342341c5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:1e6b2e4446dfe3e6f382c97a35312ad3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T114000
+DTEND;TZID=Europe/Moscow:20261005T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:04b97785140da9a1de741a7fd2c778ad@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T114000
+DTEND;TZID=Europe/Moscow:20261006T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:da5b3b4a0dad584cbd04252e75f6cb0f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T132000
+DTEND;TZID=Europe/Moscow:20261006T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea621e66b94ffb816acc6db36fdedb8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T162000
+DTEND;TZID=Europe/Moscow:20261006T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef49326bb274614a9fdf409c5c043365@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T153000
+DTEND;TZID=Europe/Moscow:20261007T170000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c780c4f31c7c955259418737f2e2e5e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T171000
+DTEND;TZID=Europe/Moscow:20261007T184000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e0c8b27240efc9c21bb14409988d149@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b7b5302b23e852d360b8e157258c068@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T114000
+DTEND;TZID=Europe/Moscow:20261008T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ec7987ec53763fccc84c8493152b2b6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T140000
+DTEND;TZID=Europe/Moscow:20261008T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9da19c8ab0464b38b7787e0a1fab1b1d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261008T154000
+DTEND;TZID=Europe/Moscow:20261008T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5f1ae7922184011edc66ea8475f0235d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T134000
+DTEND;TZID=Europe/Moscow:20261009T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d6f6512f3324d4109e502ebf034d99ae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T152000
+DTEND;TZID=Europe/Moscow:20261009T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d297ddadb9c65cd0b0535b8fb03135c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261010T100000
+DTEND;TZID=Europe/Moscow:20261010T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5b6b2fe94adcf617d7099fdd1b9bcaa3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261010T114000
+DTEND;TZID=Europe/Moscow:20261010T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7dfbacf0fb91aa4f70470e8439eaa2fd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T100000
+DTEND;TZID=Europe/Moscow:20261012T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2f3a48675b1e3ee1e770cf1371a559a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T114000
+DTEND;TZID=Europe/Moscow:20261012T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:7559b8d28a639ea532be3d9d97ed8b83@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T134000
+DTEND;TZID=Europe/Moscow:20261012T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:515caddf6c2553479afb18a507b8b596@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T152000
+DTEND;TZID=Europe/Moscow:20261012T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a7944b43ab49a4ade07f07ba8e82cc59@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T114000
+DTEND;TZID=Europe/Moscow:20261013T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e503a5526c4f2b22c0ffd358ee5907e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T132000
+DTEND;TZID=Europe/Moscow:20261013T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:fff1641420574e9d9690aa01be05d2a8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T162000
+DTEND;TZID=Europe/Moscow:20261013T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:f0b70357b30c42c031373b184dcc3083@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T100000
+DTEND;TZID=Europe/Moscow:20261014T113000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:77b7fd59216369118bdd2fe3e8afcba0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T114000
+DTEND;TZID=Europe/Moscow:20261014T131000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:cffc266e46ae6e96dfc940ca8589a137@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T100000
+DTEND;TZID=Europe/Moscow:20261015T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:d19f7665e2f9fd1883f0f9649896c769@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T114000
+DTEND;TZID=Europe/Moscow:20261015T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:b08f5e619fa3ccb4aae1f614337356eb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T140000
+DTEND;TZID=Europe/Moscow:20261015T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:bafd8ba85f765293cd22b90be363c31f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261015T154000
+DTEND;TZID=Europe/Moscow:20261015T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3939fd398d51e7bb0fef3de6d2a721ea@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T100000
+DTEND;TZID=Europe/Moscow:20261016T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ae13a5d00219cd89e515b81b50bafee8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T114000
+DTEND;TZID=Europe/Moscow:20261016T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a0402f79c0cf15f9e5237379c934b81@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T134000
+DTEND;TZID=Europe/Moscow:20261016T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d4cf8572c1b5a0f258663f0a159d1e8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T152000
+DTEND;TZID=Europe/Moscow:20261016T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8e0b8e85251bd0d0773d6bbe0284138d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:845656c4474fc72e4831803c66dea3fb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T114000
+DTEND;TZID=Europe/Moscow:20261019T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:93ed5fc09a86c5d317817a6f064bcb30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T134000
+DTEND;TZID=Europe/Moscow:20261019T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:54f347405d0c877414a92f8da99c15a6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T152000
+DTEND;TZID=Europe/Moscow:20261019T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4396f6e18949f31090593da787d3d321@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T114000
+DTEND;TZID=Europe/Moscow:20261020T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:98c8b7350f5622b7e5bd20a8d46136bc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T132000
+DTEND;TZID=Europe/Moscow:20261020T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:023bde828a120c63f7f1fcc1d4325866@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T162000
+DTEND;TZID=Europe/Moscow:20261020T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:55864baad0765127f13a12100355227e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T153000
+DTEND;TZID=Europe/Moscow:20261021T170000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac2a9b02406f58d9cb60ca2332589490@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T171000
+DTEND;TZID=Europe/Moscow:20261021T184000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d7663b8f74a97a90d68ce2960330be8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T100000
+DTEND;TZID=Europe/Moscow:20261022T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e48f11cb25e06d8a1d682adf688a5d17@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T114000
+DTEND;TZID=Europe/Moscow:20261022T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:628293ef2792a319856848e2ebbf6d8f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T140000
+DTEND;TZID=Europe/Moscow:20261022T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2107226dae54404081c7418c2c9fb938@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261022T154000
+DTEND;TZID=Europe/Moscow:20261022T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:48214940ac268fa5e98b8d948f66d8f8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T100000
+DTEND;TZID=Europe/Moscow:20261023T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:37416b3c72705e7c04743f6d6fadbcc1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T114000
+DTEND;TZID=Europe/Moscow:20261023T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:32e9d6f987b216c051a5c2536282cea7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T134000
+DTEND;TZID=Europe/Moscow:20261023T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:87110b0c0b04cf1ae009b2180feb2f00@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T152000
+DTEND;TZID=Europe/Moscow:20261023T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:26fb86f85a5fce3ac34621c8606fb7bf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261024T100000
+DTEND;TZID=Europe/Moscow:20261024T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7ca66389213fd74180b0bda45b91824a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261024T114000
+DTEND;TZID=Europe/Moscow:20261024T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d9a51f273ba599d249097f710deeaff@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:09414adc27c554287934162c9f9893fe@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T114000
+DTEND;TZID=Europe/Moscow:20261026T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:64269ee15912b1b2e09f894f687a4803@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T134000
+DTEND;TZID=Europe/Moscow:20261026T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e18aad1895d9a3e1eb623f95eb82c56d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T152000
+DTEND;TZID=Europe/Moscow:20261026T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3c30dde533d3e2b594a430b3d31ea83f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T114000
+DTEND;TZID=Europe/Moscow:20261027T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:2aee7f5651d8d8d891224fbb88e52705@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T132000
+DTEND;TZID=Europe/Moscow:20261027T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:e1b9fd6ec4cff6f90e2f275fae5052f7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T162000
+DTEND;TZID=Europe/Moscow:20261027T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:ea305d85f345a63d765a437b79e0a495@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T100000
+DTEND;TZID=Europe/Moscow:20261028T113000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:f8cb12f5a811bc71d06d13d15d4ea6e4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T114000
+DTEND;TZID=Europe/Moscow:20261028T131000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e93b2b34e5e08f424fa7b457d49ba84@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T100000
+DTEND;TZID=Europe/Moscow:20261029T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:63cf64f5a2767975a38a2b2e56fff9c7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T114000
+DTEND;TZID=Europe/Moscow:20261029T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:ff37bc09bc569e76073e9a4fa6e25f7f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T140000
+DTEND;TZID=Europe/Moscow:20261029T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:84bf00950ae28ba15f559607c9739d41@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261029T154000
+DTEND;TZID=Europe/Moscow:20261029T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3fce08d8448c42af12c0f0476be31f30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T100000
+DTEND;TZID=Europe/Moscow:20261030T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:af649a3ddf5898768ee8851102c39cb7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T114000
+DTEND;TZID=Europe/Moscow:20261030T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:45de1408a3e37a8c49b0481812e60730@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T134000
+DTEND;TZID=Europe/Moscow:20261030T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:41372fa16aa6bb9acfbfbe7bbd7f97cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T152000
+DTEND;TZID=Europe/Moscow:20261030T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8010a962ca0a7b857aface2c357fff0d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T100000
+DTEND;TZID=Europe/Moscow:20261102T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:e3f4b9dbd085a7c0808b0991daee1a59@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T114000
+DTEND;TZID=Europe/Moscow:20261102T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:dcf1729892b1aef31fa612799729db60@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T134000
+DTEND;TZID=Europe/Moscow:20261102T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e56edc0eb85fc76de2327a614d4d906f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T152000
+DTEND;TZID=Europe/Moscow:20261102T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2553afd631b0c3fbc5c2b52a65ca590a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T114000
+DTEND;TZID=Europe/Moscow:20261103T131000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:fd1184dd447bfec020ead0652ed80492@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T132000
+DTEND;TZID=Europe/Moscow:20261103T145000
+SUMMARY:Многомерный стат. анализ
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nв социол. исс
+ ледованиях\nк.псих.н. Тищенко А.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:177e7e676ba613d82b9403de43eafe45@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T100000
+DTEND;TZID=Europe/Moscow:20261105T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:fdfb6201f0b96cc93d138253c0afbd30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T114000
+DTEND;TZID=Europe/Moscow:20261105T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:c048f51b006784e2a1ae9726838a68a7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T140000
+DTEND;TZID=Europe/Moscow:20261105T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:459f7a8ca093f0e03ffeb5b53c9c0453@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261105T154000
+DTEND;TZID=Europe/Moscow:20261105T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:30f5a871fdf3acfc451937c14cca6f82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T100000
+DTEND;TZID=Europe/Moscow:20261106T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:888bcd26f713fc3a94d92a1c32a1d5b0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T114000
+DTEND;TZID=Europe/Moscow:20261106T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ff1ca4a9d88c82a9fa9d5b92dc74d5ca@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T134000
+DTEND;TZID=Europe/Moscow:20261106T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b43f39302d0fe73a95a019e4146ab322@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T152000
+DTEND;TZID=Europe/Moscow:20261106T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e9ce97747b54ab714d8e0a487ea8e97e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261107T100000
+DTEND;TZID=Europe/Moscow:20261107T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b3e37f10e784f222c37cb209cb644b38@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261107T114000
+DTEND;TZID=Europe/Moscow:20261107T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf7f464038404f4412c00af7863d2927@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T100000
+DTEND;TZID=Europe/Moscow:20261109T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:50a8cb9cab88c19997a94405061c90b5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T114000
+DTEND;TZID=Europe/Moscow:20261109T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:0ea3eb5619a6f35b54c279d73f715837@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T134000
+DTEND;TZID=Europe/Moscow:20261109T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:36b792e43811e0bf5e85c47e26fe23f7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T152000
+DTEND;TZID=Europe/Moscow:20261109T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7dd234776eed03c74f398a625957b70@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T162000
+DTEND;TZID=Europe/Moscow:20261110T175000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a1626ad4d3553ce67c4c63a457f09e7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T100000
+DTEND;TZID=Europe/Moscow:20261111T113000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н. Девятко 
+ И.Ф.
+END:VEVENT
+BEGIN:VEVENT
+UID:d6bec277477619c71e39b1f854f9a302@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T100000
+DTEND;TZID=Europe/Moscow:20261112T113000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:884ecb24c288900784baef336a696535@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T114000
+DTEND;TZID=Europe/Moscow:20261112T131000
+SUMMARY:Современные социологические теории
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:5dd99d17ecbee93ec38d84fe4551432c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T140000
+DTEND;TZID=Europe/Moscow:20261112T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f1a3fda80d3e05d12d7976caabf330a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261112T154000
+DTEND;TZID=Europe/Moscow:20261112T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1b1b9cde771db8fd3f7bd3bf4b74b393@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T100000
+DTEND;TZID=Europe/Moscow:20261113T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:12dd47a1426f28c6f84096962ec5a317@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T114000
+DTEND;TZID=Europe/Moscow:20261113T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c3cbc34b58e0d728549f6f751d1621e3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T134000
+DTEND;TZID=Europe/Moscow:20261113T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:06cc7108da8420655fae622281a74cc2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T152000
+DTEND;TZID=Europe/Moscow:20261113T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2c585dbb0ae5bde2af10f8f1206fbb1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261114T100000
+DTEND;TZID=Europe/Moscow:20261114T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.н. Гнилоз
+ уб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d5706d6d66c21616aa9b54751fc6599@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261114T114000
+DTEND;TZID=Europe/Moscow:20261114T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:39b31512a508a7514f32c73984f084bc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T100000
+DTEND;TZID=Europe/Moscow:20261116T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:807ab4ee68554f2a01e8059d7fd909ac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T114000
+DTEND;TZID=Europe/Moscow:20261116T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f2bd8b3d702508dcfe198f6b64a52e76@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T134000
+DTEND;TZID=Europe/Moscow:20261116T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:17bdd294ff354b067ce49c572cfa8940@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T152000
+DTEND;TZID=Europe/Moscow:20261116T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2dad422d58cb95a39a0fa8be95a10399@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T140000
+DTEND;TZID=Europe/Moscow:20261117T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:f060bae2ceee1a50900f83c964744ca0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T154000
+DTEND;TZID=Europe/Moscow:20261117T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:55370254f1095b5a652cd13b13e588a5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T153000
+DTEND;TZID=Europe/Moscow:20261118T170000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:64a37cf072cfbf28d6e06904c3f94e41@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T171000
+DTEND;TZID=Europe/Moscow:20261118T184000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:e3c70a2a32c50990b420c1415c7aa169@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T100000
+DTEND;TZID=Europe/Moscow:20261119T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:de0cc4915b0312ba5f51c0e578e77d7e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T114000
+DTEND;TZID=Europe/Moscow:20261119T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1607ebdad80d33de20d6d7fc243251f4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T140000
+DTEND;TZID=Europe/Moscow:20261119T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fb94c386af1cdd91bb7f70bd829e6e69@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261119T154000
+DTEND;TZID=Europe/Moscow:20261119T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e52ceb39b33fc8d8e846ceafec57aca3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T100000
+DTEND;TZID=Europe/Moscow:20261120T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6a3e0ea92f72eea9b820aacc09980535@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T114000
+DTEND;TZID=Europe/Moscow:20261120T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2a1f18c4405a9ab6e5c26b9dae7d5ccd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T134000
+DTEND;TZID=Europe/Moscow:20261120T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a9cbe84be613fbf28141163b4e8f8f2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T152000
+DTEND;TZID=Europe/Moscow:20261120T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a9d004d66ace3ab5a75a7a1afbc62e23@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T100000
+DTEND;TZID=Europe/Moscow:20261123T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e548c3c2d71259b1416bda108ba1771@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T114000
+DTEND;TZID=Europe/Moscow:20261123T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:f9a1b17b60b9c4c27bcdd5c5a12bcb7f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T134000
+DTEND;TZID=Europe/Moscow:20261123T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e9a01c6acaccf038f1593f7563ec0a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T152000
+DTEND;TZID=Europe/Moscow:20261123T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f8bb2b86ee0691aca3061b5c829f6845@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T140000
+DTEND;TZID=Europe/Moscow:20261124T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Лекция\nст.преп.  Брик
+ ет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:c82971a985e7c598aa6c942cb29ca986@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T154000
+DTEND;TZID=Europe/Moscow:20261124T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:840977e1cc329607b8251becb859230c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T103000
+DTEND;TZID=Europe/Moscow:20261125T120000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:a35225504644edf726b1a9b54ca181ef@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T121000
+DTEND;TZID=Europe/Moscow:20261125T134000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc1958c49ca93d36623abf4865019c2b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T100000
+DTEND;TZID=Europe/Moscow:20261126T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:69bf932aadc394883f5ba9da7b217cca@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T114000
+DTEND;TZID=Europe/Moscow:20261126T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:815648fb57d69d37f7fb2cd8b85dfa99@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T140000
+DTEND;TZID=Europe/Moscow:20261126T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4f7f9e76d7671a9dbae14f4c296b9efd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261126T154000
+DTEND;TZID=Europe/Moscow:20261126T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:718e81295c0d59a1a482dfd70de77ac5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T100000
+DTEND;TZID=Europe/Moscow:20261127T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:858c0bb08aa7b7a69e10c3b8f6b9acc6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T114000
+DTEND;TZID=Europe/Moscow:20261127T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e7bcf9f221084cf0e31fa5545e465245@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T134000
+DTEND;TZID=Europe/Moscow:20261127T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc1d20c46382a02e8747a3cb2541611d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T152000
+DTEND;TZID=Europe/Moscow:20261127T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac4ff8c35edcf46d569a82344ba2f330@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261128T100000
+DTEND;TZID=Europe/Moscow:20261128T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6b13a830e60b625ec4bf576c807c0ac@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261128T114000
+DTEND;TZID=Europe/Moscow:20261128T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d441e089dea666c9cc5b81721145094@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T100000
+DTEND;TZID=Europe/Moscow:20261130T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:017d4d91284271cd8d66d8abb15877c3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T114000
+DTEND;TZID=Europe/Moscow:20261130T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:545d829df769d0a86d281414590dd893@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T134000
+DTEND;TZID=Europe/Moscow:20261130T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Мазаев Д
+ .В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1ae34e49dd1c4636f59c70cf201c6a52@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T152000
+DTEND;TZID=Europe/Moscow:20261130T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c49549495db762cf4c668bd19473690@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T140000
+DTEND;TZID=Europe/Moscow:20261201T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:2559cc15919fd3a36871f915b366f8d7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T154000
+DTEND;TZID=Europe/Moscow:20261201T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:63fe9c85e921bfb50fc1736dfb71ec6d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T153000
+DTEND;TZID=Europe/Moscow:20261202T170000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:a540b937be6bc79f122a93ff8a42aee6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T171000
+DTEND;TZID=Europe/Moscow:20261202T184000
+SUMMARY:Модели объяснения и логика соц.иссл
+ едования
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nпреп. Попов Н
+ .Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:f2b3e42d8155f7c966d8908b583594cd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T100000
+DTEND;TZID=Europe/Moscow:20261203T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6ddb2068659008a8864829fbf6777cf3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T114000
+DTEND;TZID=Europe/Moscow:20261203T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b79dd6986ab99eb0a35d3d8d4bcf88cc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T140000
+DTEND;TZID=Europe/Moscow:20261203T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:931ac1f864480a07729268462b8c2f88@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261203T154000
+DTEND;TZID=Europe/Moscow:20261203T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:77cf23af0f5187efb57145a0cc68a215@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T114000
+DTEND;TZID=Europe/Moscow:20261204T131000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d6d25d3c6a0e732bd6f3ddc20ce981e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T134000
+DTEND;TZID=Europe/Moscow:20261204T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7a8ce0524b93f487170f72a48960a846@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T152000
+DTEND;TZID=Europe/Moscow:20261204T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a24cdc06272a29d57570d139f0519f2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T100000
+DTEND;TZID=Europe/Moscow:20261207T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:8bd8aab6551dc1d3ab4abaf024984c24@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T114000
+DTEND;TZID=Europe/Moscow:20261207T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:00dd5d44ad9e0395f6c8c12870150add@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T134000
+DTEND;TZID=Europe/Moscow:20261207T151000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0529db14b266f996a0d462c18dbdcc80@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T152000
+DTEND;TZID=Europe/Moscow:20261207T165000
+SUMMARY:Право интеллектуальной собственнос
+ ти
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Мазаев 
+ Д.В. (+ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:79cde7728badb3874e7b1677c1c57e74@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T140000
+DTEND;TZID=Europe/Moscow:20261208T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:1e534ca431f4b231ada164f6421d8b8a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T154000
+DTEND;TZID=Europe/Moscow:20261208T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:515f73378e6698174d882ba81be8ea12@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T100000
+DTEND;TZID=Europe/Moscow:20261210T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Кайне
+ р О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:dc4df97f8dee7ef5b89733486c0fc263@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T114000
+DTEND;TZID=Europe/Moscow:20261210T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9a497f436810c895377ab65e52832c59@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T140000
+DTEND;TZID=Europe/Moscow:20261210T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b28380245a57a02bc8ceb83437fe42d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261210T154000
+DTEND;TZID=Europe/Moscow:20261210T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:18b9c89740ce252b30374ea767484fb1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T100000
+DTEND;TZID=Europe/Moscow:20261211T113000
+SUMMARY:Системный анализ и моделирование
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2b0fb2a1fec7c38b22d2195d7c6665d3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T114000
+DTEND;TZID=Europe/Moscow:20261211T131000
+SUMMARY:Системный анализ и моделирование
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2f2efd6d0b6ec0aceda6ed7788224f6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T134000
+DTEND;TZID=Europe/Moscow:20261211T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e94d84f4d173146875f48b011ba700a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T152000
+DTEND;TZID=Europe/Moscow:20261211T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a36b37b983a875344c236c1064fcfa6a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T100000
+DTEND;TZID=Europe/Moscow:20261214T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:207ecefd5dac8b3e9e65546cfc4943ca@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T114000
+DTEND;TZID=Europe/Moscow:20261214T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Демь
+ яненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:bb8eb06966f40855934e2e6711fea13e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T134000
+DTEND;TZID=Europe/Moscow:20261214T151000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Венгеро
+ вский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:ea5d356771774c60f642269d3437a060@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T152000
+DTEND;TZID=Europe/Moscow:20261214T165000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:ee92bf8319475adb6146cc5597d74331@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T140000
+DTEND;TZID=Europe/Moscow:20261215T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:37b01b56b419eab906e8572da184faab@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T154000
+DTEND;TZID=Europe/Moscow:20261215T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:d254ba482cc51f1d10b69778c208f4d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T100000
+DTEND;TZID=Europe/Moscow:20261217T113000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2a17fab157d2852750b2ba00f649e29@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T114000
+DTEND;TZID=Europe/Moscow:20261217T131000
+SUMMARY:Трудовое право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nст.преп. Кайн
+ ер О.В. (+ ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:9f9bf76b27aaf1544bb9de4bb75c97db@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T140000
+DTEND;TZID=Europe/Moscow:20261217T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nд.с.н.  Гурко Т.
+ А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2ddfacd346984f92686af191b19142b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261217T154000
+DTEND;TZID=Europe/Moscow:20261217T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8c2751dd01173fe4d1705d8f8e2a2d1b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T100000
+DTEND;TZID=Europe/Moscow:20261218T113000
+SUMMARY:Социальная справедливость
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В. (+ ЗАЧЕТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:1fca140ce83d0ab8744bd1a8fd905deb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T134000
+DTEND;TZID=Europe/Moscow:20261218T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Внукова 
+ В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:966743eaf15aadfaa890738e835ea697@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T152000
+DTEND;TZID=Europe/Moscow:20261218T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8fdb120566e67bdc78d9c68e213e06ff@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T100000
+DTEND;TZID=Europe/Moscow:20261221T113000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Венгер
+ овский Е.Л.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad1d0dbbcaf4e444b89e4511a48dd21a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T114000
+DTEND;TZID=Europe/Moscow:20261221T131000
+SUMMARY:Правовое регулирование цифровой эк
+ ономики
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nВенгеровски
+ й Е.Л. (+ ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:df1647e476c0b58df31963bfabb0ef77@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T140000
+DTEND;TZID=Europe/Moscow:20261222T153000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:e45ef980420d73bdb8ee0f551c3a8edd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261222T154000
+DTEND;TZID=Europe/Moscow:20261222T171000
+SUMMARY:Современные социологические теории
+LOCATION:Крж / 108
+DESCRIPTION:Вид занятия: Семинар\nст.преп.  Бри
+ кет Д.Н.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b2d0c54c429f23571b3e5731cbf5df6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T140000
+DTEND;TZID=Europe/Moscow:20261224T153000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:90d05782f0f0d4afa883e92a07f1c2d4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261224T154000
+DTEND;TZID=Europe/Moscow:20261224T171000
+SUMMARY:Социология семьи
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nд.с.н.  Гурко 
+ Т.А. (+ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:d2947a9bacc797a30144cffe8a964adf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T134000
+DTEND;TZID=Europe/Moscow:20261225T151000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Внуков
+ а В.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:15430fef8763d880b9ca896399d8d98f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T152000
+DTEND;TZID=Europe/Moscow:20261225T165000
+SUMMARY:Предпринимательское право
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\n. (+ ЗАЧЁТ С ОЦ
+ ЕНКОЙ)
+END:VEVENT
+BEGIN:VEVENT
+UID:f1d6becaff078763619113467dcf3182@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261228T100000
+DTEND;TZID=Europe/Moscow:20261228T113000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Лекция\nст.преп. Демья
+ ненко В.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:7d8eed09989d5e0f1d78fb84bbfa74b5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261228T114000
+DTEND;TZID=Europe/Moscow:20261228T131000
+SUMMARY:Социология организации
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nДемьяненко В
+ .И. (+ ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:d62ff1d31cb803587240122fda442e1c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261230T090000
+DTEND;TZID=Europe/Moscow:20261230T103000
+SUMMARY:Научно-методический семинар
+LOCATION:131
+DESCRIPTION:Вид занятия: Семинар\nпреп. Старов
+ ойтенко А.Д.
+END:VEVENT
+END:VCALENDAR
