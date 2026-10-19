@@ -2,7 +2,7 @@ import * as store from '../lib/store.js';
 import { send } from '../lib/bot.js';
 import * as V from '../lib/views.js';
 import { sendReminders } from '../lib/remind.js';
-import { toOriginal } from '../lib/schedule.js';
+import { toOriginal, allEntries } from '../lib/schedule.js';
 import { applyHw, syncExisting } from '../lib/hwsync.js';
 import { APP_URL, NL } from '../lib/config.js';
 
@@ -89,15 +89,34 @@ export default async function (message) {
     case '/stats': {
       if (!store.isAdmin(uname)) return deny();
       const ids = await store.get('users', []);
-      const by = {};
-      let rem = 0;
+      const entries = await allEntries();
+      const byKey = new Map(entries.map((e) => [e.course + '|' + e.key, e]));
+      const tree = {};
+      const total = {};
+      let none = 0, lost = 0, rem = 0;
       for (const id of ids) {
         const u = await store.getUser(id);
-        const k = u.course ? u.course + ' курс' : 'не выбран';
-        by[k] = (by[k] || 0) + 1;
         if (u.reminders) rem++;
+        if (!u.course || !u.stream) { none++; continue; }
+        const e = byKey.get(u.course + '|' + u.stream);
+        if (!e) { lost++; continue; }
+        const f = tree[e.faculty] || (tree[e.faculty] = { total: 0, courses: {} });
+        f.total++;
+        f.courses[u.course] = (f.courses[u.course] || 0) + 1;
+        total[u.course] = (total[u.course] || 0) + 1;
       }
-      return send(chat, '📊 Пользователей: ' + ids.length + NL + Object.entries(by).map(([k, v]) => k + ': ' + v).join(NL) + NL + 'Напоминания включены: ' + rem);
+      const lines = ['📊 Пользователей: ' + ids.length, ''];
+      const names = Object.keys(tree).sort((a, b) => tree[b].total - tree[a].total || a.localeCompare(b, 'ru'));
+      for (const n of names) {
+        lines.push('🏛 ' + n + ': ' + tree[n].total);
+        for (const c of Object.keys(tree[n].courses).sort((a, b) => Number(a) - Number(b))) lines.push('   ' + c + ' курс: ' + tree[n].courses[c]);
+      }
+      const courses = Object.keys(total).sort((a, b) => Number(a) - Number(b));
+      if (courses.length) lines.push('', 'По курсам (всего): ' + courses.map((c) => c + ' курс: ' + total[c]).join(', '));
+      if (none) lines.push('', 'Не выбрали расписание: ' + none);
+      if (lost) lines.push((none ? '' : ''), 'Расписание больше не найдено: ' + lost);
+      lines.push('', 'Напоминания включены: ' + rem);
+      return send(chat, lines.filter((l, i) => !(l === '' && lines[i - 1] === '')).join(NL));
     }
     case '/remind_now':
       if (!store.isAdmin(uname)) return deny();
