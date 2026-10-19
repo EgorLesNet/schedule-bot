@@ -1,9 +1,10 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//ГАУГН//Schedule History 2026-27//RU
+PRODID:-//ГАУГН//History 2026-27//RU
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:ГАУГН — История, 1 курс
+X-WR-CALNAME:ГАУГН — История (Всеобщая истори
+ я), 1 курс
 X-WR-TIMEZONE:Europe/Moscow
 BEGIN:VTIMEZONE
 TZID:Europe/Moscow
@@ -15,8 +16,8 @@ TZNAME:MSK
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:09f3a85ebd2b6cc397b94343b3b2d631@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:aa846be3b8015a6f28b37a4168fc467e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260907T090000
 DTEND;TZID=Europe/Moscow:20260907T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -26,8 +27,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:e105348a15dda205ab0456e471b0ad57@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:eed52e0662224b6db12b83f6c37bb321@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260914T090000
 DTEND;TZID=Europe/Moscow:20260914T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -37,8 +38,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:0dddbc93fae51414ba6d894bc13a1800@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:800798d95d0037aa5cd23ab0a67fb257@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260921T090000
 DTEND;TZID=Europe/Moscow:20260921T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -48,8 +49,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:24672e6c9e7cf8f13790e26f9d3be889@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:05506aa638bbccdd90abde38255301ab@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260928T090000
 DTEND;TZID=Europe/Moscow:20260928T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -59,8 +60,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:0f5faba9d9f16a054b92324f62bf6d6b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:447bb8a6d36abb1ea8532ffa16dadf19@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261005T090000
 DTEND;TZID=Europe/Moscow:20261005T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -70,8 +71,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:1b5452fa964254df7f2496f9680432c4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f390289d918248f8b793d783bc6b21d9@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261012T090000
 DTEND;TZID=Europe/Moscow:20261012T103000
 SUMMARY:Вспомогательные исторические дисци
@@ -81,118 +82,8 @@ DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
  \n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:eff9b19f2dcb8ac5de716cee53a74683@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261019T090000
-DTEND;TZID=Europe/Moscow:20261019T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:facc0369918a79948c311bf9c1004367@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261026T090000
-DTEND;TZID=Europe/Moscow:20261026T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:3028efeebd1c44b675ebdd980287fa4d@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261102T090000
-DTEND;TZID=Europe/Moscow:20261102T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:29cfc46507d342992daf68522eea92f0@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261109T090000
-DTEND;TZID=Europe/Moscow:20261109T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:4e207b43b802a499f9197d9fc2f5708b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261116T090000
-DTEND;TZID=Europe/Moscow:20261116T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:41eecb4ad1107b9bba38786bf4975a81@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261123T090000
-DTEND;TZID=Europe/Moscow:20261123T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:2c8660d916741f4dc2852ed1a8d5a3f0@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261130T090000
-DTEND;TZID=Europe/Moscow:20261130T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:b983144463d5a6fced7a73974cd898be@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261207T090000
-DTEND;TZID=Europe/Moscow:20261207T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:f7b0862e6d11a610f5eef360b64d05f4@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261214T090000
-DTEND;TZID=Europe/Moscow:20261214T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:e5b8f13e78a19ea379c43d17eba8d41b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261221T090000
-DTEND;TZID=Europe/Moscow:20261221T103000
-SUMMARY:Вспомогательные исторические дисци
- плины
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
- \n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:249ebe8e1cbb8cbc8250e6d7b8b9d465@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a605e924855ffe46a56aa3e0fb51e1f1@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260907T104000
 DTEND;TZID=Europe/Moscow:20260907T121000
 SUMMARY:Основы российской государственност
@@ -202,8 +93,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:a6d55e7bf814c1e76ccef9b8a67546f7@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a9bf99b9a1aab27e11373d7c96d8bb37@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260914T104000
 DTEND;TZID=Europe/Moscow:20260914T121000
 SUMMARY:Основы российской государственност
@@ -213,8 +104,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:0a590e2f871161c5b58b051130c9cda3@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9e96ae814deedf76eeab0c154077b09e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260921T104000
 DTEND;TZID=Europe/Moscow:20260921T121000
 SUMMARY:Основы российской государственност
@@ -224,8 +115,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:3035dd1ba4f6e24acaccad413a08fc7e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:bdae87adbc72ee3aa5fa258bcd8ab9da@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260928T104000
 DTEND;TZID=Europe/Moscow:20260928T121000
 SUMMARY:Основы российской государственност
@@ -235,8 +126,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:98618fad427840f7c57f64256e5d70da@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:138fce5b4c2e5e1659460f503a0ebb8b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261005T104000
 DTEND;TZID=Europe/Moscow:20261005T121000
 SUMMARY:Основы российской государственност
@@ -246,8 +137,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:800f6ce9c51b2e39ebb64b47c19f4f17@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f49e00b99374847400a22ece9169772d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261012T104000
 DTEND;TZID=Europe/Moscow:20261012T121000
 SUMMARY:Основы российской государственност
@@ -257,118 +148,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:fbd0402451759b6dacf07aee6d2f4787@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261019T104000
-DTEND;TZID=Europe/Moscow:20261019T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:1a76ff1fdbf1757e31377b07a46557d4@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261026T104000
-DTEND;TZID=Europe/Moscow:20261026T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:9d63712474279dbc5e4357e6c5a90ad1@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261102T104000
-DTEND;TZID=Europe/Moscow:20261102T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:66d7e6516aa907d6f2a4b29381403530@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261109T104000
-DTEND;TZID=Europe/Moscow:20261109T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:dc8aa2774e97852ad090817d782b6a8c@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261116T104000
-DTEND;TZID=Europe/Moscow:20261116T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:ca55b27a66bfe4ba44d53087d42df14f@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261123T104000
-DTEND;TZID=Europe/Moscow:20261123T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:0c87ddf55e499da91e5523fca5861722@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261130T104000
-DTEND;TZID=Europe/Moscow:20261130T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:efddb549ab14a2b6fcb2cc0ccfb44f98@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261207T104000
-DTEND;TZID=Europe/Moscow:20261207T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:a5f5e49f2b1e638704c6f9ca0a48eb09@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261214T104000
-DTEND;TZID=Europe/Moscow:20261214T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:b40246359dfd853bf6312975f1af5b1b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261221T104000
-DTEND;TZID=Europe/Moscow:20261221T121000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:a2d972c1bac1acbfff145c2b946535f3@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9d4bb128a7345d98c9f2b3b5af9d9fbd@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260907T124000
 DTEND;TZID=Europe/Moscow:20260907T141000
 SUMMARY:Основы российской государственност
@@ -378,8 +159,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:4b01f7ba945d7e45a6ff42ef96df0804@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c1a59c64b70598aa8bcf00664f35c0c1@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260914T124000
 DTEND;TZID=Europe/Moscow:20260914T141000
 SUMMARY:Основы российской государственност
@@ -389,8 +170,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:5d217e461280d993349cb2c5eb1debdf@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:330f358a843f953ea37c1e2f06e65e4c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260921T124000
 DTEND;TZID=Europe/Moscow:20260921T141000
 SUMMARY:Основы российской государственност
@@ -400,8 +181,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:3e836cd3ae3aa86eac867d500a388b55@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9d63148570dd334ff1557467f90c7ef7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260928T124000
 DTEND;TZID=Europe/Moscow:20260928T141000
 SUMMARY:Основы российской государственност
@@ -411,8 +192,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:b88638ccd5fdeacb4d49a190c96203c0@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8297c9f5196479804673a3ac30d240d5@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261005T124000
 DTEND;TZID=Europe/Moscow:20261005T141000
 SUMMARY:Основы российской государственност
@@ -422,8 +203,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:108abb607d41164e274599c273dda199@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9823313f01b57d07bab51d8103f93857@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261012T124000
 DTEND;TZID=Europe/Moscow:20261012T141000
 SUMMARY:Основы российской государственност
@@ -433,118 +214,8 @@ DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт
  с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:3049113d46260579a3d2c55784fc391e@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261019T124000
-DTEND;TZID=Europe/Moscow:20261019T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:4c8e55ab4bcae4fe1d67500d5cb5358a@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261026T124000
-DTEND;TZID=Europe/Moscow:20261026T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:edb81139e2ac711a1a10b79b9005ed83@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261102T124000
-DTEND;TZID=Europe/Moscow:20261102T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:8b07dad247c21e2cb58293ec405c00f0@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261109T124000
-DTEND;TZID=Europe/Moscow:20261109T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:84c7982cd2feb02e2997ea2bb3853fa9@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261116T124000
-DTEND;TZID=Europe/Moscow:20261116T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:c00548ff3a8fc7ee206ea21124533a5e@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261123T124000
-DTEND;TZID=Europe/Moscow:20261123T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:d855fc027b3d9a5ce900c28e1f61ba5b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261130T124000
-DTEND;TZID=Europe/Moscow:20261130T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:c2faf1c5befb5f5aa2db7f8befa47a72@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261207T124000
-DTEND;TZID=Europe/Moscow:20261207T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:d9e0dc60f4eb75fad9c660d732e3fc2f@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261214T124000
-DTEND;TZID=Europe/Moscow:20261214T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:bbb8fb9d8cc1d594197df7bb14db31c8@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261221T124000
-DTEND;TZID=Europe/Moscow:20261221T141000
-SUMMARY:Основы российской государственност
- и
-LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
- с оценкой
-END:VEVENT
-BEGIN:VEVENT
-UID:d4812498c78be1a0077e0a1df6b0965a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:3c7f1ee080d957b5a20bc13fc5426139@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260907T142000
 DTEND;TZID=Europe/Moscow:20260907T155000
 SUMMARY:Антропология
@@ -553,8 +224,8 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:792866142f42fdf2b6fa17926f7a316a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:637f8f469060e6280fe2ccce172afc57@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260914T142000
 DTEND;TZID=Europe/Moscow:20260914T155000
 SUMMARY:Антропология
@@ -563,8 +234,8 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:9ee3cc0c5de1c80d421c40615f53564f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:62c7d8b55abdcf48da78d8f84f9b3fc4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260921T142000
 DTEND;TZID=Europe/Moscow:20260921T155000
 SUMMARY:Антропология
@@ -573,8 +244,8 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:2e10da833a9cd57dd38df02bda329fa7@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:48caf13518b50cc86840b2dad8746d7e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260928T142000
 DTEND;TZID=Europe/Moscow:20260928T155000
 SUMMARY:Антропология
@@ -583,8 +254,8 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:6777571f4f8eedaaa851dcca0e3edbbc@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f057dd88b9cd8aff913e84df0ee462c8@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261005T142000
 DTEND;TZID=Europe/Moscow:20261005T155000
 SUMMARY:Антропология
@@ -593,8 +264,8 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:f57e29bae72bae4ad16b07d8a419da7b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b61f659ab2a1bfb980abad75aa2f701b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261012T142000
 DTEND;TZID=Europe/Moscow:20261012T155000
 SUMMARY:Антропология
@@ -603,108 +274,548 @@ DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:2cf6457dfc7e9c1a3fd7399e638f60a7@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c3ba8d6977517e228169f170e5f237c2@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261019T090000
+DTEND;TZID=Europe/Moscow:20261019T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:daba20be92b2c28ceed801e98a239fb5@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261026T090000
+DTEND;TZID=Europe/Moscow:20261026T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:d2e2c18449e3412300052416c4758e2b@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261102T090000
+DTEND;TZID=Europe/Moscow:20261102T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:a605bf8105e42eb32dae533ae67aef17@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261109T090000
+DTEND;TZID=Europe/Moscow:20261109T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:4a76461ed4ab121dd4e454bb6a477027@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261116T090000
+DTEND;TZID=Europe/Moscow:20261116T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:418448c0f3a273b44899f8c358fe16a6@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261123T090000
+DTEND;TZID=Europe/Moscow:20261123T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:bb3f2e358acf6cf388d3d9fc30a09fc7@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261130T090000
+DTEND;TZID=Europe/Moscow:20261130T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:08c57dd1ad0bbb8b0e02d26673bbccbe@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261207T090000
+DTEND;TZID=Europe/Moscow:20261207T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:b9e5ea602f8d7723e77445521eeaadec@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261214T090000
+DTEND;TZID=Europe/Moscow:20261214T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:60e3c67a872b86f4331f1b016739ef7c@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261221T090000
+DTEND;TZID=Europe/Moscow:20261221T103000
+SUMMARY:Вспомогательные исторические дисци
+ плины
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Гимон Т. В.\nЭкзамен
+ \n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:de370fee698da19df12bfcfc5dbf5f44@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261019T104000
+DTEND;TZID=Europe/Moscow:20261019T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:3a3b081f63e90189017c4334aa1512e9@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261026T104000
+DTEND;TZID=Europe/Moscow:20261026T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:ff451b80e95439a4f7d6af0d821ea238@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261102T104000
+DTEND;TZID=Europe/Moscow:20261102T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:f6fc46e19be8de6177cf59331de0ec63@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261109T104000
+DTEND;TZID=Europe/Moscow:20261109T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:dbf1f549365e229d9656804d8aef4dd0@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261116T104000
+DTEND;TZID=Europe/Moscow:20261116T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:64c5bc96cf8f680d66c74b601cc50e18@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261123T104000
+DTEND;TZID=Europe/Moscow:20261123T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:c56434e1304ec12d24fa0a65c6b31b35@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261130T104000
+DTEND;TZID=Europe/Moscow:20261130T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:00a4ba0df0b83fa1444c9f256164cfb0@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261207T104000
+DTEND;TZID=Europe/Moscow:20261207T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:e39e416f48ecd5b311d2502eb74b2557@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261214T104000
+DTEND;TZID=Europe/Moscow:20261214T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:d7c17f74c24c75c7d67fa85e89aadf61@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261221T104000
+DTEND;TZID=Europe/Moscow:20261221T121000
+SUMMARY:Первобытное общество
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
+ т\n36 часов\nПеренесено с субботы на понед
+ ельник
+END:VEVENT
+BEGIN:VEVENT
+UID:b4bbb46a8249839e10d2ab4aaf03202a@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261019T124000
+DTEND;TZID=Europe/Moscow:20261019T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:d3bf7caaa66263fd3b66dc011d0c189f@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261026T124000
+DTEND;TZID=Europe/Moscow:20261026T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:34ddebfa447e6cc8239a1e5dd5d5d5d7@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261102T124000
+DTEND;TZID=Europe/Moscow:20261102T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:9179c7072d3414e559637cf26000bdd9@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261109T124000
+DTEND;TZID=Europe/Moscow:20261109T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:7cb9666660fbc8a484507ce09d53f6aa@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261116T124000
+DTEND;TZID=Europe/Moscow:20261116T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:5efcb612b879516d8caedc4ba3ad6782@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261123T124000
+DTEND;TZID=Europe/Moscow:20261123T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:2500a01c228b28599f0aa205e74826e7@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261130T124000
+DTEND;TZID=Europe/Moscow:20261130T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:6a00567198318fa76d55a54911054b8c@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261207T124000
+DTEND;TZID=Europe/Moscow:20261207T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:f0d1825153a175675f14846559ba7f88@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261214T124000
+DTEND;TZID=Europe/Moscow:20261214T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:077c3e83ee810f56b044b62121d5ccda@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261221T124000
+DTEND;TZID=Europe/Moscow:20261221T141000
+SUMMARY:Археология
+LOCATION:Дистант
+DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
+ мен\n54 часа\nПеренесено с субботы на поне
+ дельник
+END:VEVENT
+BEGIN:VEVENT
+UID:4d02d51e00c8f32d2103531417633238@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261019T142000
 DTEND;TZID=Europe/Moscow:20261019T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:3b94c42d66dd35197887e6ef67da55d2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c84b911857b95aeb699af7de59aa8ac9@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261026T142000
 DTEND;TZID=Europe/Moscow:20261026T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:1b98d01cbf434a8a2a563d6700cd3525@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:581db158efe3beae31f15e6de0cbf7de@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261102T142000
 DTEND;TZID=Europe/Moscow:20261102T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:708ddbfd06c82a610f4e495bd348a5be@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:cc628b4811dd0a2c7137e2d909d4727f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261109T142000
 DTEND;TZID=Europe/Moscow:20261109T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:f10e4b986a9b11d05b8e14e4413539ed@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:5a23f0078240381a7c2551c5a142be89@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261116T142000
 DTEND;TZID=Europe/Moscow:20261116T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:35fadeb7a6c551ad75a7f1e9ef2eefb5@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a61798e1af3219d6038e3a9c36ddd3c4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261123T142000
 DTEND;TZID=Europe/Moscow:20261123T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:7cbd7a00fbb6e7df8a91044eeb846c91@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ecf01dbb9b99a0e75c8df573957fec47@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261130T142000
 DTEND;TZID=Europe/Moscow:20261130T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:f9d3269e059365bdb9cce0b8ba7d4211@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:37bd4dea6c29bde129d0a4491eb8ac3f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261207T142000
 DTEND;TZID=Europe/Moscow:20261207T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:1cf13a3dbbd9e50bfbabceae90933098@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:69b9b88d847e13591b23540de92e37a4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261214T142000
 DTEND;TZID=Europe/Moscow:20261214T155000
-SUMMARY:Антропология
+SUMMARY:Основы российской государственност
+ и
 LOCATION:ЦЭМИ\, 01
-DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
- т с оценкой\n36 часов
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:97d6295dea9fe0808b16410244f0b6ec@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2f77099014c9f07110fecd05fa2fa68e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261221T142000
 DTEND;TZID=Europe/Moscow:20261221T155000
+SUMMARY:Основы российской государственност
+ и
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Баканов Д.К.\nЗачёт 
+ с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:97926df3f92b930556f1a82a93947b89@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261019T155000
+DTEND;TZID=Europe/Moscow:20261019T172000
 SUMMARY:Антропология
 LOCATION:ЦЭМИ\, 01
 DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
  т с оценкой\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:105ee567b448dbdd08b891d3b582656f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:02b45a1d17800205b6aa11e46deda3c9@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261026T155000
+DTEND;TZID=Europe/Moscow:20261026T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:38eef0d5b642adfa7379f6363f3a471b@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261102T155000
+DTEND;TZID=Europe/Moscow:20261102T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:1269c33a9de01d4c144728200a58c1f2@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261109T155000
+DTEND;TZID=Europe/Moscow:20261109T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:b59969d916318a31303a8d70ff4a9c70@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261116T155000
+DTEND;TZID=Europe/Moscow:20261116T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:2de36176f31859c50b26814f18b7b9a4@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261123T155000
+DTEND;TZID=Europe/Moscow:20261123T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:02fc33576c0eaded554a76d8fa279951@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261130T155000
+DTEND;TZID=Europe/Moscow:20261130T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:00b2acff1a12987f024d952ed4541f66@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261207T155000
+DTEND;TZID=Europe/Moscow:20261207T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:5d0059cd18e77584b0ab786842f2cc05@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261214T155000
+DTEND;TZID=Europe/Moscow:20261214T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:fc3ebd90cc9b31710d969f820e8db17a@gaugn-hist
+DTSTAMP:20261019T152000Z
+DTSTART;TZID=Europe/Moscow:20261221T155000
+DTEND;TZID=Europe/Moscow:20261221T172000
+SUMMARY:Антропология
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Аксянова Г.А.\nЗачё
+ т с оценкой\n36 часов
+END:VEVENT
+BEGIN:VEVENT
+UID:2c8a69a1fde2e9b41ca26e8efb80c3f7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260901T090000
 DTEND;TZID=Europe/Moscow:20260901T103000
 SUMMARY:Латинский язык (1 группа)
@@ -713,8 +824,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:54325a03bc756c8cf7b16068d03a8dde@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:52461aa1261664a7cfbd8a6121f53a26@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260908T090000
 DTEND;TZID=Europe/Moscow:20260908T103000
 SUMMARY:Латинский язык (1 группа)
@@ -723,8 +834,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:790985f44726146e747a3f68d35d6410@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9c4dc475fe1918bddde6ac9a8bc7438d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260915T090000
 DTEND;TZID=Europe/Moscow:20260915T103000
 SUMMARY:Латинский язык (1 группа)
@@ -733,8 +844,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:c837f50faf2e5dacb8012b6d249f782f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4af2ca769452910077df9ff17adcb04a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260922T090000
 DTEND;TZID=Europe/Moscow:20260922T103000
 SUMMARY:Латинский язык (1 группа)
@@ -743,8 +854,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:b35b682735b8ad47290a3cea5eea1da6@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c3545bb7d6a67274ce01532013e96c0b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260929T090000
 DTEND;TZID=Europe/Moscow:20260929T103000
 SUMMARY:Латинский язык (1 группа)
@@ -753,8 +864,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:62126f00172a2044b6c476991acfb822@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8155105a0377f7f7a465db31b1acc25b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261006T090000
 DTEND;TZID=Europe/Moscow:20261006T103000
 SUMMARY:Латинский язык (1 группа)
@@ -763,8 +874,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:9d56b3af9d25977e0956e4ce90d50abd@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b23e33ef4db5483476a5086d5e8560a7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261013T090000
 DTEND;TZID=Europe/Moscow:20261013T103000
 SUMMARY:Латинский язык (1 группа)
@@ -773,8 +884,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:37edb06d1cdce7f260ddb0d9d1748dd8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:98129fdb8576822addadaf4573b8ae58@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261020T090000
 DTEND;TZID=Europe/Moscow:20261020T103000
 SUMMARY:Латинский язык (1 группа)
@@ -783,8 +894,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:db21ef3d8e97914a8b2700385d413dd9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:23416797adaf21b645a1f3cd367f67fe@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261027T090000
 DTEND;TZID=Europe/Moscow:20261027T103000
 SUMMARY:Латинский язык (1 группа)
@@ -793,8 +904,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:b36be7262a34d36e61e038efc63ec97c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d8d287c64c45d1a84d0703d728f352dd@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261103T090000
 DTEND;TZID=Europe/Moscow:20261103T103000
 SUMMARY:Латинский язык (1 группа)
@@ -803,8 +914,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:3b512721a87b833c7df535591839977a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:60229f4c814a0c7628f6f2b3f3f677eb@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261110T090000
 DTEND;TZID=Europe/Moscow:20261110T103000
 SUMMARY:Латинский язык (1 группа)
@@ -813,8 +924,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:6d6e81de823f64e5c273429c8a83ef8a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4e2d8d0bc08856078550ae984478f2be@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261117T090000
 DTEND;TZID=Europe/Moscow:20261117T103000
 SUMMARY:Латинский язык (1 группа)
@@ -823,8 +934,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:28e075929883db4c971b7fe08d68ac91@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:daa8db91e199b307ef7fc747cb02a4da@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261124T090000
 DTEND;TZID=Europe/Moscow:20261124T103000
 SUMMARY:Латинский язык (1 группа)
@@ -833,8 +944,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:c4d42595d46f4981b0ee3de68b721e2e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b3c9c5b3210c842c9036b01c2b0768ff@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261201T090000
 DTEND;TZID=Europe/Moscow:20261201T103000
 SUMMARY:Латинский язык (1 группа)
@@ -843,8 +954,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:940877b4a0811eb88cd94cf740b465c5@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:3f4d5d8978872a378ff022da682d4a05@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261208T090000
 DTEND;TZID=Europe/Moscow:20261208T103000
 SUMMARY:Латинский язык (1 группа)
@@ -853,8 +964,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:c54c014748ed4cc099c820d6be9ccab4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9e478d239cf007b5be09f264e50b638b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261215T090000
 DTEND;TZID=Europe/Moscow:20261215T103000
 SUMMARY:Латинский язык (1 группа)
@@ -863,8 +974,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:e920356372cf79a76f42ae06bdf7e37f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6ea1f54c82f3d0f19db65b75cfd9fc9d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261222T090000
 DTEND;TZID=Europe/Moscow:20261222T103000
 SUMMARY:Латинский язык (1 группа)
@@ -873,8 +984,8 @@ DESCRIPTION:Группа: 1\nПреподаватель: Спиченко
  Н.К.\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:3fc3b2a8f765d9c0fc5a4195135ed116@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f0c30012b9247e9273554f9283c1b3c7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260901T104000
 DTEND;TZID=Europe/Moscow:20260901T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -886,8 +997,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:414699e1087ee4687b509d5db8db5f63@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:578956adbd80fad5b37ecba7b835ab88@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260908T104000
 DTEND;TZID=Europe/Moscow:20260908T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -899,8 +1010,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:d6d0cd39920535176cd0356ddc373005@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:e24c3b39fe7bbf6d906f00194319dacb@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260915T104000
 DTEND;TZID=Europe/Moscow:20260915T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -912,8 +1023,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:0b3cb91cd02c853202db24dd30d4b9f9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8edc4a2025bce7c9b2bed1428050b16d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260922T104000
 DTEND;TZID=Europe/Moscow:20260922T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -925,8 +1036,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:81a2365ed8998604a91c48b77d25d6db@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:53edcf0d2e8f76bf1dc9a836c4d2bede@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260929T104000
 DTEND;TZID=Europe/Moscow:20260929T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -938,8 +1049,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:daf8b85b59f6f66e3cbabc37e5c4889c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:cf770f7d632fbe7871a26f7a9b192c81@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261006T104000
 DTEND;TZID=Europe/Moscow:20261006T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -951,8 +1062,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:cdfdcdf23693b48ee793bbea4fd48aa7@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:aefe8a6d3cdc2c52c112b60163913330@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261013T104000
 DTEND;TZID=Europe/Moscow:20261013T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -964,8 +1075,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:eda8eb14fd05c61242fa58e8f8f5ff9c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:efa361d4a4d5c61898bf82cf184ddb94@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261020T104000
 DTEND;TZID=Europe/Moscow:20261020T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -977,8 +1088,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:f13bdc688ee20f2bc84c8e03322a0f88@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9d4aebb128839e2fe76baf21231113c7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261027T104000
 DTEND;TZID=Europe/Moscow:20261027T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -990,8 +1101,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:eab5524ad3453f49cbc2dd84933bc41e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d010af0329d3135ebccbce307d2695e6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261103T104000
 DTEND;TZID=Europe/Moscow:20261103T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1003,8 +1114,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:bdc4f0b4037c94330ac21812b6f21975@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c5c2b42dfd2263dbc12f7929a85775c6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261110T104000
 DTEND;TZID=Europe/Moscow:20261110T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1016,8 +1127,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:4b1183123d56ee2a62d9dc0c75338c2e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:519c67ea471bbf642b7aab3a45fab07f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261117T104000
 DTEND;TZID=Europe/Moscow:20261117T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1029,8 +1140,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:80e1d1e61fee9a0208d0cba1a07decbe@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:3b9e30bdec7fcf0d792c3963a6d0c769@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261124T104000
 DTEND;TZID=Europe/Moscow:20261124T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1042,8 +1153,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:11ebee35e092c5bee45d7874ccb995d1@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:1d066391f03c1e454779bc79d867f83a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261201T104000
 DTEND;TZID=Europe/Moscow:20261201T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1055,8 +1166,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:62585215b16af2c6852b8c52cea9166f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4d2fe497e0fef48e8da51a934293eb61@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261208T104000
 DTEND;TZID=Europe/Moscow:20261208T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1068,8 +1179,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:4f34e3fda00c38ecf3a30980a45ead55@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c8347db0ec503144565f2865fff34cd2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261215T104000
 DTEND;TZID=Europe/Moscow:20261215T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1081,8 +1192,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:8ae485c4839a72b27056df0a34f2e988@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4dac07cc1c6c245bb8217ef6fdd65c22@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261222T104000
 DTEND;TZID=Europe/Moscow:20261222T121000
 SUMMARY:Латинский язык (группы 2\, 3\, 4)
@@ -1094,8 +1205,8 @@ DESCRIPTION:Группа 2: Елисеева Л.Г.\, ЦЭМИ\, ауд. 0
   01 (1930)\nЗачёт\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:4feba0baff23e53f6b4860e073420bfd@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:828f12b8350549fa45c421e03b5d413a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260903T104000
 DTEND;TZID=Europe/Moscow:20260903T121000
 SUMMARY:История Древнего Востока
@@ -1104,8 +1215,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:61f6612c15958aa11f61d209c8961071@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9ff81b88d89bc5b386ba19657e52f663@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260910T104000
 DTEND;TZID=Europe/Moscow:20260910T121000
 SUMMARY:История Древнего Востока
@@ -1114,8 +1225,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:906cee22e4c3c506d91875211479202a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b86b0458d3b6b6389ea062a38fca415e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260917T104000
 DTEND;TZID=Europe/Moscow:20260917T121000
 SUMMARY:История Древнего Востока
@@ -1124,8 +1235,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:44be4415f8e49532324cdeba4cdd1e9f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ecad4bc53473a8f3b121158972eaeda4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260924T104000
 DTEND;TZID=Europe/Moscow:20260924T121000
 SUMMARY:История Древнего Востока
@@ -1134,8 +1245,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:a47a4c55e2a4c1db9ad6f2fd5210589a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6d0df7aa702fbca8499fc6c3eac48bcc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261001T104000
 DTEND;TZID=Europe/Moscow:20261001T121000
 SUMMARY:История Древнего Востока
@@ -1144,8 +1255,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:0bd4650c1ee9f9cd46b36419201d106b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:43811ad5da25b0c9f4d22426820237cf@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261008T104000
 DTEND;TZID=Europe/Moscow:20261008T121000
 SUMMARY:История Древнего Востока
@@ -1154,8 +1265,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:d1d8ea09276b6491ee8daacff23ff9d9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:db0ab2e535a61100dd8d4e10899355bd@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261015T104000
 DTEND;TZID=Europe/Moscow:20261015T121000
 SUMMARY:История Древнего Востока
@@ -1164,8 +1275,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:d0a37c5300d7c57f6091ade8bdc4dd87@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:84c6c55a7f06d637a23abc8cb702f11b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261022T104000
 DTEND;TZID=Europe/Moscow:20261022T121000
 SUMMARY:История Древнего Востока
@@ -1174,8 +1285,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:125a80be089b6e8a73bdd6476045c8de@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:3cf7c6cc6bd1e419c11a866d6c7fdc1a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261029T104000
 DTEND;TZID=Europe/Moscow:20261029T121000
 SUMMARY:История Древнего Востока
@@ -1184,8 +1295,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:40f64ab13f6a77bf09f98368210e20eb@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:41d93d82854dd32d022ef0e92b7b436f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261105T104000
 DTEND;TZID=Europe/Moscow:20261105T121000
 SUMMARY:История Древнего Востока
@@ -1194,8 +1305,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:1cd7696e4b1f8ca9f25c44e8cd8d0058@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:1a6eced1ce4f047e44722c170a103c72@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261112T104000
 DTEND;TZID=Europe/Moscow:20261112T121000
 SUMMARY:История Древнего Востока
@@ -1204,8 +1315,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:ea0f669e03f9ac72cc70cdaab0e78376@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8e713e2c2f57cd57694f3d17256f3b82@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261119T104000
 DTEND;TZID=Europe/Moscow:20261119T121000
 SUMMARY:История Древнего Востока
@@ -1214,8 +1325,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:03b8e72651a8248108087540c28ddb1b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ca81f26946d06c7f7a73f0e3c365ce54@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261126T104000
 DTEND;TZID=Europe/Moscow:20261126T121000
 SUMMARY:История Древнего Востока
@@ -1224,8 +1335,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:685dabef82ef19e32a574b97fed712ad@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:7626d9180ea3b4d0f943ace46a400b8a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261203T104000
 DTEND;TZID=Europe/Moscow:20261203T121000
 SUMMARY:История Древнего Востока
@@ -1234,8 +1345,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:655f3b9de740ac469c180ef6d038cb5c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b35d4cbbea06107546fd73732ee42769@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261210T104000
 DTEND;TZID=Europe/Moscow:20261210T121000
 SUMMARY:История Древнего Востока
@@ -1244,8 +1355,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:85fc3b0df0343e193f5bbd2e3e779559@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a216bfeb818b3473ec55471cb98d4074@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261217T104000
 DTEND;TZID=Europe/Moscow:20261217T121000
 SUMMARY:История Древнего Востока
@@ -1254,8 +1365,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:9e6d939e0eefe4f1173f4685ba06dcd6@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:5562d1cc6b35099c28242e20b9bc6299@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261224T104000
 DTEND;TZID=Europe/Moscow:20261224T121000
 SUMMARY:История Древнего Востока
@@ -1264,8 +1375,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:59b51efd29fc0ac7b5204c1f69594b08@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:5ff3ca2d59c4aa68966623dc5225d6fd@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260903T124000
 DTEND;TZID=Europe/Moscow:20260903T141000
 SUMMARY:История Древнего Востока
@@ -1274,8 +1385,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:e8f5efa60d96d81705eaddb8e339d7ff@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b80e914e0cc5b8143b227b2e26e2cfd4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260910T124000
 DTEND;TZID=Europe/Moscow:20260910T141000
 SUMMARY:История Древнего Востока
@@ -1284,8 +1395,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:5088b01536056ab4c2a0d72214cbebda@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:3090f49d568b7d457e0232bcc9f38def@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260917T124000
 DTEND;TZID=Europe/Moscow:20260917T141000
 SUMMARY:История Древнего Востока
@@ -1294,8 +1405,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:6b45295d418c919ab15abdd278a3b51c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:297c7698c1cb1e0cf9910a9a5a27a55b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260924T124000
 DTEND;TZID=Europe/Moscow:20260924T141000
 SUMMARY:История Древнего Востока
@@ -1304,8 +1415,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:d274195f300f179c27a81a77dcc4c341@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f5527f0e165701a460fed6b967204ca2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261001T124000
 DTEND;TZID=Europe/Moscow:20261001T141000
 SUMMARY:История Древнего Востока
@@ -1314,8 +1425,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:9d43a7e9a2f4c802ce5dbffbc4715611@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2df92f7f8c7057e45330aaf8d8345808@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261008T124000
 DTEND;TZID=Europe/Moscow:20261008T141000
 SUMMARY:История Древнего Востока
@@ -1324,8 +1435,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:fbe8b8af1aee3aaffb9d8c5b223e3b0b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:036b8ea903c9b81c636e5b7bdfbd50c1@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261015T124000
 DTEND;TZID=Europe/Moscow:20261015T141000
 SUMMARY:История Древнего Востока
@@ -1334,8 +1445,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:0ec986b57b360b46eb19d9bb9ff168a8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c9cb1dc9d400d7ab8985a21468ddf454@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261022T124000
 DTEND;TZID=Europe/Moscow:20261022T141000
 SUMMARY:История Древнего Востока
@@ -1344,8 +1455,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:082e68eab686fbe541ecfaac6d9095b0@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:02a30416444c0b10fefe251f3ad88b67@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261029T124000
 DTEND;TZID=Europe/Moscow:20261029T141000
 SUMMARY:История Древнего Востока
@@ -1354,8 +1465,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:95ac6c6bb12ae44bad008d22baa76e8b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:7a91005a8d4ed3b29e9d0d0644403b18@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261105T124000
 DTEND;TZID=Europe/Moscow:20261105T141000
 SUMMARY:История Древнего Востока
@@ -1364,8 +1475,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:56987ff21708c76d80bf1fe3b74d9d9b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2fc26b9942b1ed20a122fabe17c456dc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261112T124000
 DTEND;TZID=Europe/Moscow:20261112T141000
 SUMMARY:История Древнего Востока
@@ -1374,8 +1485,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:66f05298d99e640930fe313f1e88a725@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:26475c22ab051deb3d2f4157fb08ea01@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261119T124000
 DTEND;TZID=Europe/Moscow:20261119T141000
 SUMMARY:История Древнего Востока
@@ -1384,8 +1495,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:9eaaceb0f6989b75032c8c2a00ceb4e3@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:1c080ef5c13437c9a5c3a1ddddb9f04b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261126T124000
 DTEND;TZID=Europe/Moscow:20261126T141000
 SUMMARY:История Древнего Востока
@@ -1394,8 +1505,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:20ab93280d1912fbcd49b34eab66c73a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2e29a5b372164e13a99c96121edf831d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261203T124000
 DTEND;TZID=Europe/Moscow:20261203T141000
 SUMMARY:История Древнего Востока
@@ -1404,8 +1515,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:af56a6ce418ef76e39735aa81f00ec7a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:67f5235c58b71f5c2e0776d2dccacd5a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261210T124000
 DTEND;TZID=Europe/Moscow:20261210T141000
 SUMMARY:История Древнего Востока
@@ -1414,8 +1525,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:7c8c8f3c24a03575ba18937854de29bf@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9ba18199bbd26496416b91ecd233c152@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261217T124000
 DTEND;TZID=Europe/Moscow:20261217T141000
 SUMMARY:История Древнего Востока
@@ -1424,8 +1535,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:099d744c1310bdf0f8bb9fb158e9247c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d65dc5dedb4ee5e9960baec12b1e6d1a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261224T124000
 DTEND;TZID=Europe/Moscow:20261224T141000
 SUMMARY:История Древнего Востока
@@ -1434,8 +1545,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЭкзаме
  н\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:d04afe45eb4ee81eae0000a80a8fe118@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:75217af4a080d7471aa047e92575c863@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260903T142000
 DTEND;TZID=Europe/Moscow:20260903T155000
 SUMMARY:Культура Древнего мира
@@ -1444,8 +1555,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:ba3a49dca4ab1b6499474afb05179510@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:e9872c9eeac89f941afe9128ece8f7b7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260910T142000
 DTEND;TZID=Europe/Moscow:20260910T155000
 SUMMARY:Культура Древнего мира
@@ -1454,8 +1565,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:26b56c557858932615341c02d4163867@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:cd03d98b29c8cf1eb6802bd1ea8416a2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260917T142000
 DTEND;TZID=Europe/Moscow:20260917T155000
 SUMMARY:Культура Древнего мира
@@ -1464,8 +1575,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:e5f241f7b60b5dbd12612a9b2dfd3f27@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:721e4ddf9906807e7f91c2b900ebb2e2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260924T142000
 DTEND;TZID=Europe/Moscow:20260924T155000
 SUMMARY:Культура Древнего мира
@@ -1474,8 +1585,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:5420434f90239679225396bf17d18e50@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f99c27be674e58d1c468e9e87d3c1cd4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261001T142000
 DTEND;TZID=Europe/Moscow:20261001T155000
 SUMMARY:Культура Древнего мира
@@ -1484,8 +1595,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:315cdcad52afc6a39a12ec9a424cdd91@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:126419573691bdaff969252a34906a9d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261008T142000
 DTEND;TZID=Europe/Moscow:20261008T155000
 SUMMARY:Культура Древнего мира
@@ -1494,8 +1605,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:569d3dd24225ca620ac95a77c83cb2b2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f67bd731f3965e4a46e20b036e7fac14@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261015T142000
 DTEND;TZID=Europe/Moscow:20261015T155000
 SUMMARY:Культура Древнего мира
@@ -1504,8 +1615,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:5935e913c1d0e721c2dedbbadf531edd@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:48788613b628d38a9604ccf2dd911864@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261022T142000
 DTEND;TZID=Europe/Moscow:20261022T155000
 SUMMARY:Культура Древнего мира
@@ -1514,8 +1625,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:b0857843f39f9252eaf00a4f9d523a30@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b8dc82ac1df55c4ff53627c0ca988f85@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261029T142000
 DTEND;TZID=Europe/Moscow:20261029T155000
 SUMMARY:Культура Древнего мира
@@ -1524,8 +1635,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:13f71d85e30e67551870e02b5f1a28fe@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ac6a94e4954829739353c2628b4e47fb@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261105T142000
 DTEND;TZID=Europe/Moscow:20261105T155000
 SUMMARY:Культура Древнего мира
@@ -1534,8 +1645,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:a2b82e38fac1964e203f498f14f2532d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:db5a7c6f94ced9d0fb853fc964ee2347@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261112T142000
 DTEND;TZID=Europe/Moscow:20261112T155000
 SUMMARY:Культура Древнего мира
@@ -1544,8 +1655,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:426a122912303b2bde0201b2338db6c4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ab169b18b08d2d7e4940f05a50b55b31@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261119T142000
 DTEND;TZID=Europe/Moscow:20261119T155000
 SUMMARY:Культура Древнего мира
@@ -1554,8 +1665,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:645de48bf5d17f886243977e7783d28b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2a909910d79e1184e5577a5e2d5fb1f2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261126T142000
 DTEND;TZID=Europe/Moscow:20261126T155000
 SUMMARY:Культура Древнего мира
@@ -1564,8 +1675,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:ac87845c21ea92b2a3dd70d65f287acd@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:54b2f3c2ebc8391c9d2a9d56426afcff@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261203T142000
 DTEND;TZID=Europe/Moscow:20261203T155000
 SUMMARY:Культура Древнего мира
@@ -1574,8 +1685,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:37b12ec04d364d8586ea9761b1890426@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a3d9b9c8e009d421cd9dfc81c35dba0d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261210T142000
 DTEND;TZID=Europe/Moscow:20261210T155000
 SUMMARY:Культура Древнего мира
@@ -1584,8 +1695,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:0f38c3b30e46d178c70b57d33a42fbd0@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d7224cb08bf4b874803364bb22eae9f0@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261217T142000
 DTEND;TZID=Europe/Moscow:20261217T155000
 SUMMARY:Культура Древнего мира
@@ -1594,8 +1705,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:de0d4cdca68d56dd4fe74dfd71d3bf2c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:bab36b263d0ed24110a5711a9fe67f71@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261224T142000
 DTEND;TZID=Europe/Moscow:20261224T155000
 SUMMARY:Культура Древнего мира
@@ -1604,8 +1715,8 @@ DESCRIPTION:Преподаватель: Берзон Е.М.\nЗачёт с
   оценкой\n54 часа
 END:VEVENT
 BEGIN:VEVENT
-UID:95c34906623be1e3f7ebd93e4ef3a7fc@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6ee845a82b6db9c2afda4dc1c919acdc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260903T160000
 DTEND;TZID=Europe/Moscow:20260903T173000
 SUMMARY:Введение в специальность
@@ -1614,8 +1725,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:f5817c26b0366d617be1a9572e57bff2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8beb5975f9a7a7f649e76f727d6846d8@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260910T160000
 DTEND;TZID=Europe/Moscow:20260910T173000
 SUMMARY:Введение в специальность
@@ -1624,8 +1735,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:349f5afe5d0ec3bd061dd207af551748@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:77516e83664edb4e1b21efb10941cc1c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260917T160000
 DTEND;TZID=Europe/Moscow:20260917T173000
 SUMMARY:Введение в специальность
@@ -1634,8 +1745,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:d4ca80af8930f80fb37922c1f2480d3b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9f4315f75ad1b2f5000834a38af8b589@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260924T160000
 DTEND;TZID=Europe/Moscow:20260924T173000
 SUMMARY:Введение в специальность
@@ -1644,8 +1755,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:cd61eca9f28cf54bad3bf3896f351da4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4ed6db65d28e482fca9fac447e298420@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261001T160000
 DTEND;TZID=Europe/Moscow:20261001T173000
 SUMMARY:Введение в специальность
@@ -1654,8 +1765,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:81f172d402721f3fc0bb4588f277e5ac@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:71dd6df7f96e888ef497cca6d37d624e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261008T160000
 DTEND;TZID=Europe/Moscow:20261008T173000
 SUMMARY:Введение в специальность
@@ -1664,8 +1775,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:e702c027a550d363218aca6a38c88700@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c28c9dd6dc7c17116e9414d7604ec3a2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261015T160000
 DTEND;TZID=Europe/Moscow:20261015T173000
 SUMMARY:Введение в специальность
@@ -1674,8 +1785,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:b50c80a279f30ceb0b2f288a11bec0b4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2261d0027251715df77e2f06c29b2cd6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261022T160000
 DTEND;TZID=Europe/Moscow:20261022T173000
 SUMMARY:Введение в специальность
@@ -1684,8 +1795,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:29705835712b9815b6e6a11d53880c3d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:897ea8672864766adab43b4ba018f796@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261029T160000
 DTEND;TZID=Europe/Moscow:20261029T173000
 SUMMARY:Введение в специальность
@@ -1694,8 +1805,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:6f8d96fc1cb9d0c78061cf7b13e89869@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8d9c57158d40e93dc8e0bbd804733752@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261105T160000
 DTEND;TZID=Europe/Moscow:20261105T173000
 SUMMARY:Введение в специальность
@@ -1704,8 +1815,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:537cf86a6b8dfdb22661cba4b446108a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ddcbc97abbdce44f08333c9d631a9b53@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261112T160000
 DTEND;TZID=Europe/Moscow:20261112T173000
 SUMMARY:Введение в специальность
@@ -1714,8 +1825,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:4a5400bc0ea08a24d23d81b82b26048f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a5bbc414e8d99287841d2a1b82eafc82@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261119T160000
 DTEND;TZID=Europe/Moscow:20261119T173000
 SUMMARY:Введение в специальность
@@ -1724,8 +1835,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:797dd269e5176ce8319ec3bd35490f8b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:fe995c86ded5846b9f487386801b9190@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261126T160000
 DTEND;TZID=Europe/Moscow:20261126T173000
 SUMMARY:Введение в специальность
@@ -1734,8 +1845,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:0c63ef38886cc34a04d0c601bc70ddb6@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:76b57a7559316c3eaeb3952e9a4aed12@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261203T160000
 DTEND;TZID=Europe/Moscow:20261203T173000
 SUMMARY:Введение в специальность
@@ -1744,8 +1855,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:0ef1ccb9c0df679b04ca5ee4178a9e61@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f9161c3de499f1449dd03af32f0c07b1@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261210T160000
 DTEND;TZID=Europe/Moscow:20261210T173000
 SUMMARY:Введение в специальность
@@ -1754,8 +1865,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:06876e65a435bf5d23ec1adc0a49b1cf@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f8c535e13099859caaec5c83f6b92ad8@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261217T160000
 DTEND;TZID=Europe/Moscow:20261217T173000
 SUMMARY:Введение в специальность
@@ -1764,8 +1875,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:a01e58df050bd476ff37a251d2f97648@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b87f3b1baf81a062712481f3059e3ff7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261224T160000
 DTEND;TZID=Europe/Moscow:20261224T173000
 SUMMARY:Введение в специальность
@@ -1774,8 +1885,8 @@ DESCRIPTION:Преподаватель: Майер А.С.\, Фомин-Н
  илов Д.В.\nЗачёт с оценкой
 END:VEVENT
 BEGIN:VEVENT
-UID:aa3a0c0cebddac6ed6be9eb9b0f075e9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a66c3e0dcc538db6ea61151ab468f29e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260918T104000
 DTEND;TZID=Europe/Moscow:20260918T121000
 SUMMARY:Русский язык и культура речи
@@ -1784,8 +1895,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:6bc2328f537dd2f38a59864eb6a326c4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:771335d957a30aebdf0357b42dfe2fa9@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260925T104000
 DTEND;TZID=Europe/Moscow:20260925T121000
 SUMMARY:Русский язык и культура речи
@@ -1794,8 +1905,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:06e04f209c3641ebf26d89ad4913e061@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:0a5c754e0596353d44eab48caab06624@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261002T104000
 DTEND;TZID=Europe/Moscow:20261002T121000
 SUMMARY:Русский язык и культура речи
@@ -1804,8 +1915,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:1ad5f3e5575ec57c93af7de6c0d159e9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4cded385c32dbf0972378999a62e2f8c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261009T104000
 DTEND;TZID=Europe/Moscow:20261009T121000
 SUMMARY:Русский язык и культура речи
@@ -1814,8 +1925,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:67c9209ae9a6a27a180dd5a561a637d2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:314574028256c246f95375d8b1d86e5b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261016T104000
 DTEND;TZID=Europe/Moscow:20261016T121000
 SUMMARY:Русский язык и культура речи
@@ -1824,8 +1935,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:27e83c38df8da4c0a2de5a9022daba0d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:439afc1647866f400b7ad294a289e070@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261023T104000
 DTEND;TZID=Europe/Moscow:20261023T121000
 SUMMARY:Русский язык и культура речи
@@ -1834,8 +1945,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:d66262e95347c9713ab2b6e975f9ac10@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:91c65192959e8a1afcb63b3ca94a162d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261030T104000
 DTEND;TZID=Europe/Moscow:20261030T121000
 SUMMARY:Русский язык и культура речи
@@ -1844,8 +1955,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:9b3106627c43323192a3e109d5d8b678@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:aa1a6f8df46d8db21396193d9c44a17f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261106T104000
 DTEND;TZID=Europe/Moscow:20261106T121000
 SUMMARY:Русский язык и культура речи
@@ -1854,8 +1965,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:5b04964c04201fa78a6daba0796de2ec@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4b8cb0ca72a2539d17188b1297e32bb6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261113T104000
 DTEND;TZID=Europe/Moscow:20261113T121000
 SUMMARY:Русский язык и культура речи
@@ -1864,8 +1975,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:2b082a14923b06075b8a45602f0b7d7c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f817e9f503cf5a9b9a99264ab5787d0f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261120T104000
 DTEND;TZID=Europe/Moscow:20261120T121000
 SUMMARY:Русский язык и культура речи
@@ -1874,8 +1985,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:e173c9b5b05c5e26af424ce3353a0fb2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6df2dc3794b0db888751cf7a9d2e78c2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261127T104000
 DTEND;TZID=Europe/Moscow:20261127T121000
 SUMMARY:Русский язык и культура речи
@@ -1884,8 +1995,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:f729050ec5c17ddf594020a21340f89b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:24eaf8b8070a31fbb67e67e62ac1b130@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261204T104000
 DTEND;TZID=Europe/Moscow:20261204T121000
 SUMMARY:Русский язык и культура речи
@@ -1894,8 +2005,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:b1509d4fd17a28a5ef20dacd6110564e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:bf03b834e1d624414ac67c0b3de40b76@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261211T104000
 DTEND;TZID=Europe/Moscow:20261211T121000
 SUMMARY:Русский язык и культура речи
@@ -1904,8 +2015,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:6a5d9bdb9b27ebe5c7e6a30e8cf60f96@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:48e13b7d90eeddfc217c74e59c3a3e66@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261218T104000
 DTEND;TZID=Europe/Moscow:20261218T121000
 SUMMARY:Русский язык и культура речи
@@ -1914,8 +2025,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:b28cf9f658da9794be7b0f198731a1e0@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c6728ec8ab7952bd4f124fd467051011@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261225T104000
 DTEND;TZID=Europe/Moscow:20261225T121000
 SUMMARY:Русский язык и культура речи
@@ -1924,8 +2035,8 @@ DESCRIPTION:Преподаватель: Трухановская Н.С.\n
  Зачёт с оценкой\nС 18 сентября
 END:VEVENT
 BEGIN:VEVENT
-UID:e0fca7d61a4f1e06fdf1a13e79323749@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:dad58ad26f1e79e627082333f7f5ec6e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260904T124000
 DTEND;TZID=Europe/Moscow:20260904T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1935,8 +2046,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:c419f1d239d62e3f1fe9197ff7f0eb70@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8192f8ed7cd28da35084e281079561d5@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260911T124000
 DTEND;TZID=Europe/Moscow:20260911T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1946,8 +2057,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:26df21036ac50b9e6adc504a0b6df7c5@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:faef207f184948ee8ca5efd54813414f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260918T124000
 DTEND;TZID=Europe/Moscow:20260918T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1957,8 +2068,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:17fa215e3ba8878e08b07f1768b82697@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:2550a5a537e63367817a8deefee934e3@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260925T124000
 DTEND;TZID=Europe/Moscow:20260925T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1968,8 +2079,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:c1aa093fbfe0131fcd9c7a5e64644339@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d3f340af1937085530bd74e70471d338@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261002T124000
 DTEND;TZID=Europe/Moscow:20261002T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1979,8 +2090,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:fe004c78593a2077ffcbd9947c3fa50b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:ff6b1b5206eb0082f4994a2316ff4076@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261009T124000
 DTEND;TZID=Europe/Moscow:20261009T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -1990,8 +2101,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:3893c7bf95f7eb7825f49c398eacbdd8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6586c01f0087e4d232c29219cc98a6be@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261016T124000
 DTEND;TZID=Europe/Moscow:20261016T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2001,8 +2112,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:bf2bf2f1d796f32b386a8b3350dfcda8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c1550a0c74802a95e7cee28408c0aafc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261023T124000
 DTEND;TZID=Europe/Moscow:20261023T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2012,8 +2123,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:bf4fa72dab116f9b988a44ee2f61dc64@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b9f93eaf4a3ef03cd808ae6a182a809d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261030T124000
 DTEND;TZID=Europe/Moscow:20261030T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2023,8 +2134,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:31c50a2033c40334edd740739e725f1c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:863c0ff8fde45b991df1f17f955c981a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261106T124000
 DTEND;TZID=Europe/Moscow:20261106T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2034,8 +2145,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:722e8aedf88f3061a2fd4aaec11eaead@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:220361708d4a17d417839f43a7af59c4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261113T124000
 DTEND;TZID=Europe/Moscow:20261113T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2045,8 +2156,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:5d0983b98c3c4642be43a4c289274447@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d3b971564979783a47b87aed2451ad7a@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261120T124000
 DTEND;TZID=Europe/Moscow:20261120T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2056,8 +2167,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:74d8e8223aae78b61aa52f8b6a6ee99d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:1bdc96173b8b861b2165a472508bcacd@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261127T124000
 DTEND;TZID=Europe/Moscow:20261127T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2067,8 +2178,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:0ba055ab179da6f5346bc1f53ebda2f0@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b0614faab6f66fd4b194511fd34e7dd9@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261204T124000
 DTEND;TZID=Europe/Moscow:20261204T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2078,8 +2189,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:20ebea4e5cd4084c2fb63a6b8ca57018@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f485495d9e1a5c7886b8bab2bbbfe28f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261211T124000
 DTEND;TZID=Europe/Moscow:20261211T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2089,8 +2200,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:f4a6e93e226b5f80f43ce18981b95ad1@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:50115eed984969e9c8ed38d647258b3c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261218T124000
 DTEND;TZID=Europe/Moscow:20261218T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2100,8 +2211,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:2720dc18f746a4a909b0b053e897b029@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:37af484276433f22a48a7bc25a303934@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261225T124000
 DTEND;TZID=Europe/Moscow:20261225T141000
 SUMMARY:Латинский язык (группы 1\, 2\, 4)
@@ -2111,8 +2222,8 @@ DESCRIPTION:Группа 1: Спиченко Н.К.\nГруппа 2: Ел
  ёт
 END:VEVENT
 BEGIN:VEVENT
-UID:e1ffc67bbce1a56ca27e5ea79973be09@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:39c436b265e40fee539736a37eb69081@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260904T142000
 DTEND;TZID=Europe/Moscow:20260904T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2122,8 +2233,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:3b6effc0c1a15b54a7712be0a8be4c5e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:66659b2d895118c45fc979e22c4a04fc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260911T142000
 DTEND;TZID=Europe/Moscow:20260911T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2133,8 +2244,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:056fea40e61b9080be529dc4718b9115@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:d8fdb31d937f096a24b21cf8e6e18466@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260918T142000
 DTEND;TZID=Europe/Moscow:20260918T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2144,8 +2255,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:aa1e38a7c7b64e223ab809aea981e2d5@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:e233ab9823f94d742569caae237cbe5c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260925T142000
 DTEND;TZID=Europe/Moscow:20260925T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2155,8 +2266,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:beb79da17fd5b391320dbd943049671b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:5f2eb74173b790ac908b9434923a6e45@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261002T142000
 DTEND;TZID=Europe/Moscow:20261002T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2166,8 +2277,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:acfea57b9742e811426975db224a8103@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9d99b701a02c412e07508413126f935c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261009T142000
 DTEND;TZID=Europe/Moscow:20261009T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2177,8 +2288,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:41ad22a8a931dcbddad8b55089bd7e2a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:13318e9a27ab4003ef1bb7900a125e05@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261016T142000
 DTEND;TZID=Europe/Moscow:20261016T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2188,8 +2299,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:c5471fb361a46f88f3f5e25f5f01da77@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:f077206f73b4d1e4f647de4eab15eb58@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261023T142000
 DTEND;TZID=Europe/Moscow:20261023T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2199,8 +2310,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:55d7083818b1844e1dfdd4a9f2fefe54@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:32548202a34db443033b1b18f041b9db@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261030T142000
 DTEND;TZID=Europe/Moscow:20261030T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2210,8 +2321,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:cd00356b2a91f134159daefd732a88c1@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:dabb15845b77befa1ff8389ef072d116@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261106T142000
 DTEND;TZID=Europe/Moscow:20261106T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2221,8 +2332,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:4c4e3ff3632a2a0adb383c319153e42c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:43b60f70252c232a5c7f60ba1d6399d6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261113T142000
 DTEND;TZID=Europe/Moscow:20261113T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2232,8 +2343,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:4f8e969d32bd6e406d74b46804f3214d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:7802157954c9ad251a8fe2c8083bf686@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261120T142000
 DTEND;TZID=Europe/Moscow:20261120T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2243,8 +2354,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:7eec703aa93af66421368cdd9f402c28@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:fa4a569a16f10f94ef4a836b66ede8d2@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261127T142000
 DTEND;TZID=Europe/Moscow:20261127T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2254,8 +2365,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:ad02549008f0c723fc5531c77224d228@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:fcdfd792100f7b600c230d9cd5dcc90e@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261204T142000
 DTEND;TZID=Europe/Moscow:20261204T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2265,8 +2376,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:e3532294408ad778b400e5dfdc006f0c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:0e7e9ab3baf4861d6abcd46b4e8eb721@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261211T142000
 DTEND;TZID=Europe/Moscow:20261211T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2276,8 +2387,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:1d94b96938a8ea0bcd77dacc6b186f24@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:30c057fd4bac1652c1c4896915a34087@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261218T142000
 DTEND;TZID=Europe/Moscow:20261218T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2287,8 +2398,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:c0dc5b235a62efcee3cfcbf92e88ec56@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:dd5a4fe9096398c0eba23fcee182fa63@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261225T142000
 DTEND;TZID=Europe/Moscow:20261225T155000
 SUMMARY:История Древнего Востока (группы 1\, 2
@@ -2298,8 +2409,8 @@ DESCRIPTION:Группы: 1\, 2\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:127526e15e84ddbd54bd02e77ae2b58d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:796d925dc1f1a87ddcb9eb51cefe795b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260904T142000
 DTEND;TZID=Europe/Moscow:20260904T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2307,8 +2418,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:9a5ce0e2f18b3ce2ebaa9b4eeace41b2@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:225e15b51d6470d6836d9c2e89121db6@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260911T142000
 DTEND;TZID=Europe/Moscow:20260911T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2316,8 +2427,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:d871ac331e1be54f7916873b84f96a63@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:78d193e668afaf6456a7652e8970507b@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260918T142000
 DTEND;TZID=Europe/Moscow:20260918T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2325,8 +2436,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:1ea73b0ecd2f5701262f8560249cace9@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:5106feafeeefe2cfe3c2177c785cf836@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260925T142000
 DTEND;TZID=Europe/Moscow:20260925T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2334,8 +2445,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:c729f20969bc93de75f5522630a03f50@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a357fe468fdd8b8e6b2a553d6146d48d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261002T142000
 DTEND;TZID=Europe/Moscow:20261002T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2343,8 +2454,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:0f7d2b98030c14b473ad651448953e22@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:282c68df1b7d02c4393ff3d65f38a52f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261009T142000
 DTEND;TZID=Europe/Moscow:20261009T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2352,8 +2463,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:258acc39544072890ff8e934eb4a8c6d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:da5b2901ce68f2890cda8a2553bf1f5d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261016T142000
 DTEND;TZID=Europe/Moscow:20261016T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2361,8 +2472,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:ae4abe4a7bcaa37c8925a96ffe863ae4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:22139d62cf90078fefe88817bd267cfc@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261023T142000
 DTEND;TZID=Europe/Moscow:20261023T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2370,8 +2481,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:9021754a01ad248b41b069a5670f0b6e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8348f6c1b1b64f985e3efbdf2289e639@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261030T142000
 DTEND;TZID=Europe/Moscow:20261030T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2379,8 +2490,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:65818c503fe385692427920efc8c99f8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4e50d43078dc27235a81f992eb2c8951@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261106T142000
 DTEND;TZID=Europe/Moscow:20261106T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2388,8 +2499,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:94633c5749870a5cd17fd7b546a19c98@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:df1346c69d1d4dcce7c5c06f0ab00b0f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261113T142000
 DTEND;TZID=Europe/Moscow:20261113T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2397,8 +2508,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:ac9795228e02773accdafca4f87ec4dd@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9c8308c16e872dae7d6d61090e2fecc8@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261120T142000
 DTEND;TZID=Europe/Moscow:20261120T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2406,8 +2517,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:655b1314fedbc24a8e96d0257e53c37c@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:b39721f0c3a2cbddc7d1239e7689643f@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261127T142000
 DTEND;TZID=Europe/Moscow:20261127T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2415,8 +2526,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:d3cac9181b956291a81fd5fb3e1f4877@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9e98aec15f3b8443ec529b56021cc1a0@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261204T142000
 DTEND;TZID=Europe/Moscow:20261204T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2424,8 +2535,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:d4a465f4ef6743b672dc7a19713161e8@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:9e019650cb0e36ff08d53678852d7b9c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261211T142000
 DTEND;TZID=Europe/Moscow:20261211T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2433,8 +2544,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:3a5353655dd94c61550b0960540f200f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:0a2c1fc03ec344eac004bb64eafc7850@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261218T142000
 DTEND;TZID=Europe/Moscow:20261218T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2442,8 +2553,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:fd751a1a76dddb47269624c5993b81c4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:4bdee48e82eca57040dbe80d2e18caee@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261225T142000
 DTEND;TZID=Europe/Moscow:20261225T155000
 SUMMARY:Латинский язык (3 группа)
@@ -2451,8 +2562,8 @@ LOCATION:Дистант
 DESCRIPTION:Группа 3: Спиченко Н.К.\nЗачёт
 END:VEVENT
 BEGIN:VEVENT
-UID:3fa54689fd68952626058473be1a185f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:e30d658399500d473d7ec6f9d0cbbf06@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260904T160000
 DTEND;TZID=Europe/Moscow:20260904T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2462,8 +2573,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:16fc64e272873ee510429d39897c9ea4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:7a2cf3251251564a72584ef6508f2695@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260911T160000
 DTEND;TZID=Europe/Moscow:20260911T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2473,8 +2584,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:2a17a6f82fb1daab3e5e774e5bb6f27b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:8574360ffd7b15b84f86d5a2a93edd94@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260918T160000
 DTEND;TZID=Europe/Moscow:20260918T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2484,8 +2595,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:0b6fd56d18b123f7bc8a6f574a7423a4@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:e65decd6cd42dfd98ab5b1963a745e03@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20260925T160000
 DTEND;TZID=Europe/Moscow:20260925T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2495,8 +2606,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:a90eb48ee3d4d10bc5ab0cd498c0623e@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:0b5aef76a0d31b37feab10860426e0a7@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261002T160000
 DTEND;TZID=Europe/Moscow:20261002T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2506,8 +2617,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:1d061438d93ca94c1a52262e9fa2d0ae@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:372ae843bee566a629c80d990ad16789@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261009T160000
 DTEND;TZID=Europe/Moscow:20261009T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2517,8 +2628,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:97734649f84d4c27a4795614ee66470f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:44e6841dc11ff9a204708de2fd3a9bff@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261016T160000
 DTEND;TZID=Europe/Moscow:20261016T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2528,8 +2639,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:b5e031db05650f0b41fa8859e97f148f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:fc842d66671874f29f425a663522a115@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261023T160000
 DTEND;TZID=Europe/Moscow:20261023T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2539,8 +2650,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:7d8aab6cebf7e1d0298968c4745b9929@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a0da5b27210cdb16148a6d6329b08240@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261030T160000
 DTEND;TZID=Europe/Moscow:20261030T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2550,8 +2661,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:9d558aac419aef22fbb6c30246d1e863@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:c2ad1d51d0522cab0e903e31dc3a361d@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261106T160000
 DTEND;TZID=Europe/Moscow:20261106T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2561,8 +2672,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:3d18988ada5fbf50a8f63aff561ca9f5@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:6d5cadb22f967fc1d87c736eab9d90b4@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261113T160000
 DTEND;TZID=Europe/Moscow:20261113T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2572,8 +2683,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:c5fd91483ccd01490bc12fc23b4d2977@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:a26a44144cf844b3f49764d7d59276e1@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261120T160000
 DTEND;TZID=Europe/Moscow:20261120T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2583,8 +2694,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:41a10a7a858d0ffb109017c907ffdb0b@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:21466016b4e7d9990227a132f9a8ff5c@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261127T160000
 DTEND;TZID=Europe/Moscow:20261127T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2594,8 +2705,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:048f98091668d5341d02b10603de9c23@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:abd82682125cb64a769b8e605f733d30@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261204T160000
 DTEND;TZID=Europe/Moscow:20261204T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2605,8 +2716,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:912f2508b667ce6e0709737cdb857e7a@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:970d94d2f84d8e6b41a521bd506c5610@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261211T160000
 DTEND;TZID=Europe/Moscow:20261211T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2616,8 +2727,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:13440edab40066c64ad9a2b01017d90f@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:72c62df1c202eb85963a8e4e45ba0414@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261218T160000
 DTEND;TZID=Europe/Moscow:20261218T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2627,8 +2738,8 @@ DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
 END:VEVENT
 BEGIN:VEVENT
-UID:27729e1571dd15effafbeac83a9a506d@gaugn-history
-DTSTAMP:20261019T075400Z
+UID:79bec438e3a9f27715b79e41757e7370@gaugn-hist
+DTSTAMP:20261019T152000Z
 DTSTART;TZID=Europe/Moscow:20261225T160000
 DTEND;TZID=Europe/Moscow:20261225T173000
 SUMMARY:История Древнего Востока (группы 3\, 4
@@ -2636,345 +2747,5 @@ SUMMARY:История Древнего Востока (группы 3\, 4
 LOCATION:Дистант
 DESCRIPTION:Группы: 3\, 4\nПреподаватель: Немиро
  вский А.А.\nЭкзамен\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:3e72aafd06a98cc99062dd69eab1730e@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260905T100000
-DTEND;TZID=Europe/Moscow:20260905T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:c2ee4e26184cbea5fcc58fab576b61bd@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260912T100000
-DTEND;TZID=Europe/Moscow:20260912T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:18442c7b177fe504900169b2a04c302c@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260919T100000
-DTEND;TZID=Europe/Moscow:20260919T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:763d137334eb3dd4199433f39e25edb8@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260926T100000
-DTEND;TZID=Europe/Moscow:20260926T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:c31e25109d4ccff2cc04dbd0fe8ffc89@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261003T100000
-DTEND;TZID=Europe/Moscow:20261003T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:87b9c6b76608d15571fb8be60de63122@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261010T100000
-DTEND;TZID=Europe/Moscow:20261010T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:a2dc426b63e787cc645b842365306e8e@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261017T100000
-DTEND;TZID=Europe/Moscow:20261017T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:d985cd10cd5c538a0785798010f1539d@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261024T100000
-DTEND;TZID=Europe/Moscow:20261024T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:bd175b5216284478a8a5dfb60829e398@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261031T100000
-DTEND;TZID=Europe/Moscow:20261031T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:64925b4be1932955e937b76ae1c56dff@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261107T100000
-DTEND;TZID=Europe/Moscow:20261107T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:f475fcb3bcb7169b3cc230031a0c5974@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261114T100000
-DTEND;TZID=Europe/Moscow:20261114T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:70d937124ecba7dd32df5fc4b57e5b5c@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261121T100000
-DTEND;TZID=Europe/Moscow:20261121T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:e442faacae05074d48080710ad1e385a@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261128T100000
-DTEND;TZID=Europe/Moscow:20261128T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:7da05f2411dbba6ce68fa5c15d685fe0@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261205T100000
-DTEND;TZID=Europe/Moscow:20261205T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:cf186fdfacd99b5a7eba7c00ab47f75b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261212T100000
-DTEND;TZID=Europe/Moscow:20261212T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:3b9cf4cd1b05ce3d0fc800a8d9b7cfb2@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261219T100000
-DTEND;TZID=Europe/Moscow:20261219T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:91545291b5da05ef24fa4359fed6a516@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261226T100000
-DTEND;TZID=Europe/Moscow:20261226T113000
-SUMMARY:Археология
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЭкза
- мен\n54 часа
-END:VEVENT
-BEGIN:VEVENT
-UID:fa83abec0e205bde04aabd4f0a4c8c6a@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260905T140000
-DTEND;TZID=Europe/Moscow:20260905T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:cae53338d967bc44e0183377a12a0754@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260912T140000
-DTEND;TZID=Europe/Moscow:20260912T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:2399439a579372ebb0b83d97467fa277@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260919T140000
-DTEND;TZID=Europe/Moscow:20260919T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:dd7c85f46fb3876cce00c5eb65105b1f@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20260926T140000
-DTEND;TZID=Europe/Moscow:20260926T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:7db426ec18396f85f7e9bfcca38d6b82@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261003T140000
-DTEND;TZID=Europe/Moscow:20261003T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:bea8f845fee2873750979c0ee9cb811b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261010T140000
-DTEND;TZID=Europe/Moscow:20261010T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:380f77f15c659535c03bd994044bfdb0@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261017T140000
-DTEND;TZID=Europe/Moscow:20261017T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:fd4bc2c967052ee3ab286130a18e5817@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261024T140000
-DTEND;TZID=Europe/Moscow:20261024T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:093b73a6b66ecef9841c6ef496f48d88@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261031T140000
-DTEND;TZID=Europe/Moscow:20261031T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:269cc7f61a842eb5adbf0cb1978df35b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261107T140000
-DTEND;TZID=Europe/Moscow:20261107T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:d24eaab71136d08ee5ba67aee46b108a@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261114T140000
-DTEND;TZID=Europe/Moscow:20261114T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:1acfc7d08b69a2094cdce8251eb30d56@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261121T140000
-DTEND;TZID=Europe/Moscow:20261121T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:c6faee51e3082846a257fe18f51d3d91@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261128T140000
-DTEND;TZID=Europe/Moscow:20261128T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:1aa8267f5c89245c1ae51af440fe7755@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261205T140000
-DTEND;TZID=Europe/Moscow:20261205T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:b7a193dd6b51e352ad98cc45b3bae20d@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261212T140000
-DTEND;TZID=Europe/Moscow:20261212T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:e8cf7b10161ad92b2b91b3208cd6ba1b@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261219T140000
-DTEND;TZID=Europe/Moscow:20261219T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
-END:VEVENT
-BEGIN:VEVENT
-UID:fbcca99a2383bb6271a91a8c492f3c78@gaugn-history
-DTSTAMP:20261019T075400Z
-DTSTART;TZID=Europe/Moscow:20261226T140000
-DTEND;TZID=Europe/Moscow:20261226T153000
-SUMMARY:Первобытное общество
-LOCATION:Дистант
-DESCRIPTION:Преподаватель: Сапрыкин С.Ю.\nЗачё
- т\n36 часов
 END:VEVENT
 END:VCALENDAR
