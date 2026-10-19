@@ -1,0 +1,2324 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Schedule 2026-27//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Социология СПЭ, 2 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:85ad3d8187c1e82d4f97d01302a45ab3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T100000
+DTEND;TZID=Europe/Moscow:20260904T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c203438f00057496433cc00e73b256b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T114000
+DTEND;TZID=Europe/Moscow:20260904T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ceb91c8bbce9ba724dd203ff3237ea1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T134000
+DTEND;TZID=Europe/Moscow:20260904T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e143ed5eea2949655a852216b9d36049@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260904T152000
+DTEND;TZID=Europe/Moscow:20260904T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4356575e0f3250be44c010f0fbab5c04@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T100000
+DTEND;TZID=Europe/Moscow:20260907T113000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e449be1c84b3fc8c032cd983be87440@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260907T114000
+DTEND;TZID=Europe/Moscow:20260907T131000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b594b5425bc1c0c28231dee91c76ff35@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T134000
+DTEND;TZID=Europe/Moscow:20260908T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:97ed46329a077d0a394867c7aac7c53d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T152000
+DTEND;TZID=Europe/Moscow:20260908T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:27fbfc2bcdaa6f20589c12351e20c7fb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260908T180000
+DTEND;TZID=Europe/Moscow:20260908T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:0960926d5fed1762a5610a4d29db3f8c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T100000
+DTEND;TZID=Europe/Moscow:20260909T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a28251cd4aa12006233d671ca98a84bb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T114000
+DTEND;TZID=Europe/Moscow:20260909T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3dd7c5d78b5953b0923713a05be94a10@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T134000
+DTEND;TZID=Europe/Moscow:20260909T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:1f17d8fc8d223e9d6531025e5542131c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260909T152000
+DTEND;TZID=Europe/Moscow:20260909T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:213fa81145a72aa66f4f92929257800e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T100000
+DTEND;TZID=Europe/Moscow:20260911T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2cd29334ca9d7a3451d5562940006737@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T114000
+DTEND;TZID=Europe/Moscow:20260911T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce6a75e4bbe0e0e5918a67947c3fcc99@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T134000
+DTEND;TZID=Europe/Moscow:20260911T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4f97fe0e81f708ce3e9c17ef826a9d45@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260911T152000
+DTEND;TZID=Europe/Moscow:20260911T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1a8077f5b1ecaa2516f6c64e895a32c0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T110000
+DTEND;TZID=Europe/Moscow:20260914T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c1c36bbaf904bf47958fb87f76a089be@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260914T124000
+DTEND;TZID=Europe/Moscow:20260914T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:235a7d608337de9f1e354215f1faebca@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T134000
+DTEND;TZID=Europe/Moscow:20260915T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0f06540f26a78e85a710ba8c17071647@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T152000
+DTEND;TZID=Europe/Moscow:20260915T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f3845408136232464ad96748d166713b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260915T180000
+DTEND;TZID=Europe/Moscow:20260915T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:67cda35e263096200fd3783f2831bf23@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T100000
+DTEND;TZID=Europe/Moscow:20260916T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e13bcafca35b026e54ce2ca5c6650ebf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T114000
+DTEND;TZID=Europe/Moscow:20260916T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:69ca5a42e5ab76e7942a60ed580039ab@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T134000
+DTEND;TZID=Europe/Moscow:20260916T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:093446349af15023385ff6fef0205f37@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260916T152000
+DTEND;TZID=Europe/Moscow:20260916T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:18642f28f4f5ab916c07a5b06f93f65c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T100000
+DTEND;TZID=Europe/Moscow:20260918T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:03951986af761773b25fb052a8a0c070@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T114000
+DTEND;TZID=Europe/Moscow:20260918T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:170596d29fd3a21465b29062d5aba12b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T134000
+DTEND;TZID=Europe/Moscow:20260918T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:27f91cbf36efc9090ea09987a12aa127@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260918T152000
+DTEND;TZID=Europe/Moscow:20260918T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5c01441fc9aa6eaeada701a1d8e2f060@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T100000
+DTEND;TZID=Europe/Moscow:20260921T113000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2a273588ba72fef42a13f252f93f72cb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T114000
+DTEND;TZID=Europe/Moscow:20260921T131000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d3fa36d60ada347dd622df55192978e0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260921T144000
+DTEND;TZID=Europe/Moscow:20260921T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2036ab48e81948f13772e219e5a4b6b7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260922T180000
+DTEND;TZID=Europe/Moscow:20260922T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:2786f96789a4a00ea2d54bdaf6970377@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T100000
+DTEND;TZID=Europe/Moscow:20260923T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5cddd443146730e657c75fe6fb48cd4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T114000
+DTEND;TZID=Europe/Moscow:20260923T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:871314dd69f1171e499946fcbe1ce491@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T134000
+DTEND;TZID=Europe/Moscow:20260923T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:a7fc59b7fa3b0dc30d37a32d5f1b322d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260923T152000
+DTEND;TZID=Europe/Moscow:20260923T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:95c40b227c4c06a93377c3b5c26b0204@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T100000
+DTEND;TZID=Europe/Moscow:20260925T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c37cab0ec446b535a76fe6de39990701@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T114000
+DTEND;TZID=Europe/Moscow:20260925T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c7d1e40dfe506d541b1cad293aeeba34@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T134000
+DTEND;TZID=Europe/Moscow:20260925T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b100346f79e3d77ab12ee75221398509@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260925T152000
+DTEND;TZID=Europe/Moscow:20260925T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d0a68b94f92facbc7024333d55685033@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T144000
+DTEND;TZID=Europe/Moscow:20260928T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d9e1e8a5ac12d9581cede85c72c484a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260928T162000
+DTEND;TZID=Europe/Moscow:20260928T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:90528734e8db8e237f01c95ca1a613da@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T134000
+DTEND;TZID=Europe/Moscow:20260929T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:74ac877bcb9ab16db96818c06f3c9ce5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260929T180000
+DTEND;TZID=Europe/Moscow:20260929T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:77d6324c4d2c73ee8d308c0bf5458d9e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T100000
+DTEND;TZID=Europe/Moscow:20260930T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:961742674f19451ad4a18d428679fcda@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T114000
+DTEND;TZID=Europe/Moscow:20260930T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3fffe615c026dcba8d6487d86d5d6933@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T140000
+DTEND;TZID=Europe/Moscow:20260930T153000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:96dfb105647db5d8670af8e2e0703c8c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20260930T154000
+DTEND;TZID=Europe/Moscow:20260930T171000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:a1ef2c1876bc2da10b0016d7c8525628@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T134000
+DTEND;TZID=Europe/Moscow:20261002T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:13f55806e85927aaf89c9b4175a87f53@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261002T152000
+DTEND;TZID=Europe/Moscow:20261002T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:dbfda112a71ab0e0759aad30a1fb43b8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T100000
+DTEND;TZID=Europe/Moscow:20261005T113000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:2dcbef21ee6ae167e004368a09c7444b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T114000
+DTEND;TZID=Europe/Moscow:20261005T131000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0ad1b49b9d47134340aee4eea91b20d2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T144000
+DTEND;TZID=Europe/Moscow:20261005T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b39655e26037cd93108a33f3dc8f7719@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261005T162000
+DTEND;TZID=Europe/Moscow:20261005T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2b0b92b59c60811b665df8bb9405f62@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T134000
+DTEND;TZID=Europe/Moscow:20261006T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ff3f065b4e4045629425f49e61a3a0c9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T152000
+DTEND;TZID=Europe/Moscow:20261006T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:b3c8718c283d21db1e445cb50c742772@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261006T180000
+DTEND;TZID=Europe/Moscow:20261006T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:8dfb5905476ff449bdeeb6c2d45dcf11@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T100000
+DTEND;TZID=Europe/Moscow:20261007T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:29881f35aa385b0408a8979d0f80f639@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T114000
+DTEND;TZID=Europe/Moscow:20261007T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6cf4aaf3cc2e3f6bd6b522eb2157cbe5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T134000
+DTEND;TZID=Europe/Moscow:20261007T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d0f2097c6eaa316f5bbd6dd9e5cd389a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261007T152000
+DTEND;TZID=Europe/Moscow:20261007T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:74b6bb5faca08bbc2a2b509d23646d92@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T100000
+DTEND;TZID=Europe/Moscow:20261009T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ebcd7697ae1968912aba30d3aba0510@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T114000
+DTEND;TZID=Europe/Moscow:20261009T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8f5bd4093c248b8d7d897d564bfa154d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T134000
+DTEND;TZID=Europe/Moscow:20261009T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:d2758c0fbcbe2a83fdd4304944481e06@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261009T152000
+DTEND;TZID=Europe/Moscow:20261009T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4b2125adb5f22159c96f4c9f90308e14@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261010T134000
+DTEND;TZID=Europe/Moscow:20261010T151000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:дист
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:50eda5190b5f3b72d5e7a1e270ea9666@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261010T152000
+DTEND;TZID=Europe/Moscow:20261010T165000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:дист
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:532e09cf66bf84a5f92f71cdf742ae39@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T110000
+DTEND;TZID=Europe/Moscow:20261012T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:21a4180b54e8da452ed92517f89564b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T124000
+DTEND;TZID=Europe/Moscow:20261012T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:21dad65784e5e3a83863db07dc07642d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T144000
+DTEND;TZID=Europe/Moscow:20261012T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cee4c125ec3c1171b157d3fe2f325d21@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261012T162000
+DTEND;TZID=Europe/Moscow:20261012T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:69ead5e1c3027b8e14e063628530d7d7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T114000
+DTEND;TZID=Europe/Moscow:20261013T131000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7de23d8219ac8142064286ef4c4c4b1d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T134000
+DTEND;TZID=Europe/Moscow:20261013T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:dcb733486bfa5fd4fede0a8199cebf03@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T152000
+DTEND;TZID=Europe/Moscow:20261013T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5b36f5bf056e16f1fd77fae72ae3d5e8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261013T180000
+DTEND;TZID=Europe/Moscow:20261013T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:1f3f40888b6987c3d44cbd1f3ef77529@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T100000
+DTEND;TZID=Europe/Moscow:20261014T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b466da42921c76c527915cd3937a7863@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T114000
+DTEND;TZID=Europe/Moscow:20261014T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b695400596b44d5b751e36382b6bf9c7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T134000
+DTEND;TZID=Europe/Moscow:20261014T151000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d64550268204dfb1af08efcb740f095@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261014T152000
+DTEND;TZID=Europe/Moscow:20261014T165000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4081410429a559d89a03447bd6ac4b34@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T100000
+DTEND;TZID=Europe/Moscow:20261016T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f74ffd55e64e1f3c362906d32a6143f0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T114000
+DTEND;TZID=Europe/Moscow:20261016T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:835ad5a0a160f68c933407a3509161b3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T134000
+DTEND;TZID=Europe/Moscow:20261016T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c46c3c096b5ab8eef1508ca01a35ee8f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261016T152000
+DTEND;TZID=Europe/Moscow:20261016T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a2b8ffc0c8ef627175000db6c0d2a40@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T100000
+DTEND;TZID=Europe/Moscow:20261019T113000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:990e4bb26362c040371cb5b47378e961@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T114000
+DTEND;TZID=Europe/Moscow:20261019T131000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц. 
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c3335e382de663fe7e4804133bf12000@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T144000
+DTEND;TZID=Europe/Moscow:20261019T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:f1734f7f9a89bf648b75de56cdcdc576@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261019T162000
+DTEND;TZID=Europe/Moscow:20261019T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1d7d4d008dd50d9a34b6ae251ab6c3e1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T134000
+DTEND;TZID=Europe/Moscow:20261020T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a2ed17408ed0d0b599064bcfb2ac76c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T152000
+DTEND;TZID=Europe/Moscow:20261020T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:df243e2189dc706ecf6705449f77123c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261020T180000
+DTEND;TZID=Europe/Moscow:20261020T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:630bdcae9b9c4287798056f65576a42f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T100000
+DTEND;TZID=Europe/Moscow:20261021T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:12f51abbc55f96a2fc45e2ebaf360eb0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T114000
+DTEND;TZID=Europe/Moscow:20261021T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:25416ea58b9c5839cd72cc89a14c8f26@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T134000
+DTEND;TZID=Europe/Moscow:20261021T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:87c5134c920bec9ed573866869577004@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261021T152000
+DTEND;TZID=Europe/Moscow:20261021T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:ccce9ef2b798052dab4b8a0de475f6ad@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T100000
+DTEND;TZID=Europe/Moscow:20261023T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:288ad74741714f601474d43f553afbe7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T114000
+DTEND;TZID=Europe/Moscow:20261023T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:146075b3352ce3eea4e457b12ba7f263@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T134000
+DTEND;TZID=Europe/Moscow:20261023T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c103a82fbb9a8d7b7bd55e54fe6c0a60@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261023T152000
+DTEND;TZID=Europe/Moscow:20261023T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:52edebed04e664e7e230daeda2d94086@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T100000
+DTEND;TZID=Europe/Moscow:20261026T113000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ba52e672f8adb22c28090d27f158a72d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T114000
+DTEND;TZID=Europe/Moscow:20261026T131000
+SUMMARY:Измерения в социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Семинар\nк.соц.н.\, доц.
+   Кученкова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:074b74315813ecd833c3c23aa6a10f26@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T144000
+DTEND;TZID=Europe/Moscow:20261026T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3591178813635a377d00bd98f1cde5b4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261026T162000
+DTEND;TZID=Europe/Moscow:20261026T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:aafe41a87c640b29f2314624cb036a63@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T114000
+DTEND;TZID=Europe/Moscow:20261027T131000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:20fd2b6bf6c6e57e70cb26d526b753b5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T134000
+DTEND;TZID=Europe/Moscow:20261027T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c8307b79a1ab4e22c79ec80fd9a3003@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T152000
+DTEND;TZID=Europe/Moscow:20261027T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:d5d03f45c10de90fe6f46c6fd7a26c8c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261027T180000
+DTEND;TZID=Europe/Moscow:20261027T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:c94d6bc585ced8fef4aa37089d2a32e5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T100000
+DTEND;TZID=Europe/Moscow:20261028T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1aaed0ac935f7f856b150877bfa847b7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T114000
+DTEND;TZID=Europe/Moscow:20261028T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:70c2588c33c4690aced2fb006c29e0de@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T134000
+DTEND;TZID=Europe/Moscow:20261028T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:4a4f0dfc456b21db687d858790cb78f3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261028T152000
+DTEND;TZID=Europe/Moscow:20261028T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:0f0001c77a5692472ff62ce4a524374a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T100000
+DTEND;TZID=Europe/Moscow:20261030T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:92135431ba9085234a92146c3e948798@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T114000
+DTEND;TZID=Europe/Moscow:20261030T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7f9610ab4a56f894b05e775f53a04d3c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T134000
+DTEND;TZID=Europe/Moscow:20261030T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c9fd5895b0d460d1d2dfa0e14a195bf8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261030T152000
+DTEND;TZID=Europe/Moscow:20261030T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:328295ab13e30f3cc027950d931bf038@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T110000
+DTEND;TZID=Europe/Moscow:20261102T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e73d19fca94035856cc13d3c360c90fa@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T124000
+DTEND;TZID=Europe/Moscow:20261102T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8e1acdc747dc84d1795f55cdcf2740a3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T144000
+DTEND;TZID=Europe/Moscow:20261102T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:71f64d27d3870a85fc0360f1f26c7feb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261102T162000
+DTEND;TZID=Europe/Moscow:20261102T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef24fb2fd7f3f0d167fd7f4841df7d7a@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T134000
+DTEND;TZID=Europe/Moscow:20261103T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce471f90892ee475918d2ca8183e8215@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261103T152000
+DTEND;TZID=Europe/Moscow:20261103T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:71ae2b7e379ed890dfa99a5bbd02d4ff@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T100000
+DTEND;TZID=Europe/Moscow:20261106T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Лекция\nк.ф-м.-н. Гнило
+ зуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2cffdb3e57b521766122cf036198ca62@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T114000
+DTEND;TZID=Europe/Moscow:20261106T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:fd062cb7a42c54929c7167fe17c37227@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T134000
+DTEND;TZID=Europe/Moscow:20261106T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e6585053f610fb7ca0df3d9c52abbafb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261106T152000
+DTEND;TZID=Europe/Moscow:20261106T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:c88710a1663e784ab3109f2198453087@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T110000
+DTEND;TZID=Europe/Moscow:20261109T123000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a7205928bfc8984651ced025bdc285e6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T124000
+DTEND;TZID=Europe/Moscow:20261109T141000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8be68ff06c7d564536f8dab8559be155@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T144000
+DTEND;TZID=Europe/Moscow:20261109T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:de6d67212164548757a3d9ad133ee4df@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261109T162000
+DTEND;TZID=Europe/Moscow:20261109T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:cae295029d7314320e179ddd4feadc16@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T114000
+DTEND;TZID=Europe/Moscow:20261110T131000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:12df6e094234e3df87c2af209d9e69d7@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T134000
+DTEND;TZID=Europe/Moscow:20261110T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:947adb2962408245d3c9f13ceb8d29f5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T152000
+DTEND;TZID=Europe/Moscow:20261110T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c4badf765d183a229e2bc260e2f6d625@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261110T180000
+DTEND;TZID=Europe/Moscow:20261110T193000
+SUMMARY:История западной социологии
+LOCATION:Крж / 215
+DESCRIPTION:Вид занятия: Лекция\nк.соц.н.\, доц.  
+ Подвойский Д.Г.
+END:VEVENT
+BEGIN:VEVENT
+UID:118e5a2631fc36e47d7d246e4e7ba8bf@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T100000
+DTEND;TZID=Europe/Moscow:20261111T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:778d2f27d4f4c7b564524a781b8465fb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T114000
+DTEND;TZID=Europe/Moscow:20261111T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:7c7e8e243b9d816147ff0b91ec66aeb8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T134000
+DTEND;TZID=Europe/Moscow:20261111T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f71f00ced84110fbdc8a8a077e54bc28@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261111T152000
+DTEND;TZID=Europe/Moscow:20261111T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:3644baf02fa15165d11e1d9f0d8ba1ec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T100000
+DTEND;TZID=Europe/Moscow:20261113T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:c102468c48a6d24bf36483967b70230d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T114000
+DTEND;TZID=Europe/Moscow:20261113T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:16386dd51cff0497d9dab24fb7ba07f9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T134000
+DTEND;TZID=Europe/Moscow:20261113T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b11f30ca8a8a99bb11ef574e95bb520f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261113T152000
+DTEND;TZID=Europe/Moscow:20261113T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1c0e2a945926b0a838738bcbc21bacb0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T110000
+DTEND;TZID=Europe/Moscow:20261116T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e0c2c2ff2b09382cb631b675b7873bd8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T124000
+DTEND;TZID=Europe/Moscow:20261116T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e34a05ff0ed1673adc17c4c24eaf49fb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T144000
+DTEND;TZID=Europe/Moscow:20261116T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:e58195aab3a5730325d62a86669dae19@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261116T162000
+DTEND;TZID=Europe/Moscow:20261116T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b27278b3895665100af7a5104166873c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T134000
+DTEND;TZID=Europe/Moscow:20261117T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:506f28b8cc42cc66b9cc00707fcbe405@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261117T152000
+DTEND;TZID=Europe/Moscow:20261117T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c5e86fdef02e31d21dd7c6f26eff956@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T100000
+DTEND;TZID=Europe/Moscow:20261118T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ee779e02c04cd8398dee53c7c0630b98@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T114000
+DTEND;TZID=Europe/Moscow:20261118T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:09425fb3869039332c1ecac2ebd00437@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T134000
+DTEND;TZID=Europe/Moscow:20261118T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nОбщая часть\nк
+ .ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:38fc2c30f9d9c2b1b8b4a3a13eadf429@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261118T152000
+DTEND;TZID=Europe/Moscow:20261118T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f15406e8489fe04cf853681b27ae1d30@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T100000
+DTEND;TZID=Europe/Moscow:20261120T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1fd4e4e53a30d69c6bcf97ffca7101f5@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T114000
+DTEND;TZID=Europe/Moscow:20261120T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3aec05ab9e791e94a8599d1f4b0f4fdb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T134000
+DTEND;TZID=Europe/Moscow:20261120T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5eec567cd7372f7bad2cfa1f341f7dfc@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261120T152000
+DTEND;TZID=Europe/Moscow:20261120T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8966f9dd5865e8dc36937a5710cad5e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T110000
+DTEND;TZID=Europe/Moscow:20261123T123000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:40c0d5402469ec147e69f4fe01b296e6@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T124000
+DTEND;TZID=Europe/Moscow:20261123T141000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:61a63f7496965c3664ad1b7c9a8f18df@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T144000
+DTEND;TZID=Europe/Moscow:20261123T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1ccddba47b0a4a4826042115534a01ec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261123T162000
+DTEND;TZID=Europe/Moscow:20261123T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:03205929ad2aed974339a84471a3d7c1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T100000
+DTEND;TZID=Europe/Moscow:20261124T113000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:4eb6d47356475247a9e66571a73b024d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T114000
+DTEND;TZID=Europe/Moscow:20261124T131000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:5151d29b8992cef0a78462eb772ecc8d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T134000
+DTEND;TZID=Europe/Moscow:20261124T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.э.н. Никонов
+ а М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1fb894d1cb88b865d575b8e67d98ecd1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261124T152000
+DTEND;TZID=Europe/Moscow:20261124T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:28ffa921f082e7ec2e016ac73efc9c86@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T100000
+DTEND;TZID=Europe/Moscow:20261125T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b4ea8937f4f6f36c54d9480dcaf89175@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T114000
+DTEND;TZID=Europe/Moscow:20261125T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b4abd3f6a56686590cf50dd39cc31ae4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T140000
+DTEND;TZID=Europe/Moscow:20261125T153000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:67e0c5261090d9f0da51ce29a05b0d58@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261125T154000
+DTEND;TZID=Europe/Moscow:20261125T171000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3f2aec88e6145acaad7857661f2ab400@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T100000
+DTEND;TZID=Europe/Moscow:20261127T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:2e3f91d77cde5610e0576fd9740efbf8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T114000
+DTEND;TZID=Europe/Moscow:20261127T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:bbbf5c93524f0748ee3c37d52572c139@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T134000
+DTEND;TZID=Europe/Moscow:20261127T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:d5be7ec552d8f098736a35f5e6b252ec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261127T152000
+DTEND;TZID=Europe/Moscow:20261127T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:3d8d9ecdb9be48b2b5b023ffd4c85222@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T110000
+DTEND;TZID=Europe/Moscow:20261130T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7c2a0d535d155956412b90211448402@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T124000
+DTEND;TZID=Europe/Moscow:20261130T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:929f2179f2d8b4b27034a94fc87d790c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T144000
+DTEND;TZID=Europe/Moscow:20261130T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:fdaf2158a7459165f99a9c9928b96ec2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261130T162000
+DTEND;TZID=Europe/Moscow:20261130T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:617f99a62cdc7b078fe60f73ef92b96b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T134000
+DTEND;TZID=Europe/Moscow:20261201T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:8de8e869240ebde66b49e94b6b9c60bb@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261201T152000
+DTEND;TZID=Europe/Moscow:20261201T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1f5436fe33453d636f8350bf1c2c27ae@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T100000
+DTEND;TZID=Europe/Moscow:20261202T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nМихайлова Л.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:4d41e665f00f9c075d4a1324c2dbb219@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T114000
+DTEND;TZID=Europe/Moscow:20261202T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:99625adfaceb182e6c93a90d65b34a99@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T134000
+DTEND;TZID=Europe/Moscow:20261202T151000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть\n
+ к.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:5f349c405b2f3494ec3c4bd5fe13dab9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261202T152000
+DTEND;TZID=Europe/Moscow:20261202T165000
+SUMMARY:Гражданское право:
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nОбщая часть (
+ +ЗАЧЁТ)\nк.ю.н. Ромашкова И.И.
+END:VEVENT
+BEGIN:VEVENT
+UID:f9c593309af42f6cd71c1cdd16b12299@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T100000
+DTEND;TZID=Europe/Moscow:20261204T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3698def54fb7bf6b6f24fc6ca54c7832@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T114000
+DTEND;TZID=Europe/Moscow:20261204T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:545b242777309b463775b7c1cf7d32a4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T134000
+DTEND;TZID=Europe/Moscow:20261204T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:451435b4b24a4df7272d4a72d47f2ae2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261204T152000
+DTEND;TZID=Europe/Moscow:20261204T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:284c5d0b37375e25e0feffe0ed679246@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T110000
+DTEND;TZID=Europe/Moscow:20261207T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:13cc5c4ed119e9efc8053ae3b6b717b9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T124000
+DTEND;TZID=Europe/Moscow:20261207T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5795228d2aa0bdc5fca940904cd6a45@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T144000
+DTEND;TZID=Europe/Moscow:20261207T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:5e0ebdf474b16a32c30f450e150e21c8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261207T162000
+DTEND;TZID=Europe/Moscow:20261207T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:a2cb30a7fb469b3234bf00c4df18687e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T100000
+DTEND;TZID=Europe/Moscow:20261208T113000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:7f113911a9225ee65e4e1ac2b34da081@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T114000
+DTEND;TZID=Europe/Moscow:20261208T131000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:1124fb33ec3004b7675ea72ecffb5be2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T134000
+DTEND;TZID=Europe/Moscow:20261208T151000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:49d6236c57477f9da3aeaab0309e2a82@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261208T152000
+DTEND;TZID=Europe/Moscow:20261208T165000
+SUMMARY:Экономическая теория
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.э.н. Никоно
+ ва М.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:25454bb7d459d3e5e45ee90236a27ecd@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T100000
+DTEND;TZID=Europe/Moscow:20261209T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:db0420e3327816695d639480cf407e5e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T114000
+DTEND;TZID=Europe/Moscow:20261209T131000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В.
+END:VEVENT
+BEGIN:VEVENT
+UID:9ace8dae7288690e7b8f0a13362675d3@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T134000
+DTEND;TZID=Europe/Moscow:20261209T151000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:66c21de71e1f9a98511b3a5c549faf88@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261209T152000
+DTEND;TZID=Europe/Moscow:20261209T165000
+SUMMARY:Измерения в социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: c\nпреп. Чиркова А.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:8cc7fcafc9696925a5e6a71f431634b2@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T100000
+DTEND;TZID=Europe/Moscow:20261211T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:aa7d2627a15ffe02994609636961983f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T114000
+DTEND;TZID=Europe/Moscow:20261211T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:adf742d7c1a4d4e5fe5f90ad5a1de153@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T134000
+DTEND;TZID=Europe/Moscow:20261211T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e0c4cb6b80ed79699938494b321c90c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261211T152000
+DTEND;TZID=Europe/Moscow:20261211T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:49ef160d5ada900e3450fb633e023618@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T110000
+DTEND;TZID=Europe/Moscow:20261214T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b60e2faa35600ef0830504517eae745@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T124000
+DTEND;TZID=Europe/Moscow:20261214T141000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:87728e0d3e8db2e2f9b604365582ebe8@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T144000
+DTEND;TZID=Europe/Moscow:20261214T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Соколов 
+ Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:61d8a76ea7eb34322ae6560eb8e14d3d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261214T162000
+DTEND;TZID=Europe/Moscow:20261214T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:1826bfc2a670d964ccb274a94a3d30f9@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T134000
+DTEND;TZID=Europe/Moscow:20261215T151000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c5e648e25c2c61e958bcb15a157a96e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261215T152000
+DTEND;TZID=Europe/Moscow:20261215T165000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:f19a537fac76786cda1d8c7c245d8349@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261216T100000
+DTEND;TZID=Europe/Moscow:20261216T113000
+SUMMARY:Методы социологического исследован
+ ия
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nМихайлова Л.
+ В. (+ ЗАЧЁТ)
+END:VEVENT
+BEGIN:VEVENT
+UID:0e3191e0d8997fc3cd8af2d6d07a0094@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T100000
+DTEND;TZID=Europe/Moscow:20261218T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3e9d5d5dcabfd41f78aefd2e6587c4ba@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T114000
+DTEND;TZID=Europe/Moscow:20261218T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a24dec653a23e34ad66b245b226b11b@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T134000
+DTEND;TZID=Europe/Moscow:20261218T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:0e742d4a4eaee80ab961c25294bbc472@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T152000
+DTEND;TZID=Europe/Moscow:20261218T165000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Лекция\nк.ю.н. Балашов 
+ Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:28afa07ae0730a87cd2e8e67dbe2afec@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261218T170000
+DTEND;TZID=Europe/Moscow:20261218T183000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ba6a878aaff7b1c8ec1fb86162c24630@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T110000
+DTEND;TZID=Europe/Moscow:20261221T123000
+SUMMARY:История западной социологии
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c58432f9bcb3af1ed0d633b1d504ce4@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T124000
+DTEND;TZID=Europe/Moscow:20261221T141000
+SUMMARY:История западной социологии (+ ЗАЧЁТ
+ )
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп.  Михайл
+ ов А.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f7aaacd8f5bb0a2efb452e591def249@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T144000
+DTEND;TZID=Europe/Moscow:20261221T161000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Соколо
+ в Т.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:30e822c826d9eecd24bd4c94d6a96c5d@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261221T162000
+DTEND;TZID=Europe/Moscow:20261221T175000
+SUMMARY:Конституционное право
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nСоколов Т.В.. 
+ (+ ЗАЧ. С ОЦ.)
+END:VEVENT
+BEGIN:VEVENT
+UID:136daa29b4f7a800c8b3dc0ef881c330@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T100000
+DTEND;TZID=Europe/Moscow:20261223T113000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce77c88e3d739dd8115876b81687486e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T114000
+DTEND;TZID=Europe/Moscow:20261223T131000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:29e57dd817e5980a9b801a0c117de099@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261223T134000
+DTEND;TZID=Europe/Moscow:20261223T151000
+SUMMARY:Реалистическая теория государства
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ю.н. Балашо
+ в Д.В.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8aa8a03268ded686813c8fd0cd7c4a1@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T100000
+DTEND;TZID=Europe/Moscow:20261225T113000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:75cf0f0354fc44e4b395e71108ac21e0@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T114000
+DTEND;TZID=Europe/Moscow:20261225T131000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:305
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:eb39f4eeaedfbb08dfeb0462f38df15e@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T134000
+DTEND;TZID=Europe/Moscow:20261225T151000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:824fe9097817c7fa9c53104de34b263f@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261225T152000
+DTEND;TZID=Europe/Moscow:20261225T165000
+SUMMARY:Теория вероятности и математическа
+ я статистика
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nк.ф-м.-н. Гнил
+ озуб И.А.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfa9a3b3991b27bd648cefda8b51631c@gaugn-schedule
+DTSTAMP:20261018T185600Z
+DTSTART;TZID=Europe/Moscow:20261229T152000
+DTEND;TZID=Europe/Moscow:20261229T165000
+SUMMARY:Научно-методический семинар
+LOCATION:133
+DESCRIPTION:Вид занятия: Семинар\nпреп. Старов
+ ойтенко А.Д.
+END:VEVENT
+END:VCALENDAR
