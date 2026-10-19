@@ -1,8 +1,9 @@
+// Список нужен только для канонического регистра и порядка; в выборе показываются только факультеты, для которых есть файлы в docs/
 export const FACULTY_NAMES = ['Исторический', 'Мировой политики', 'Политологии', 'Психологии', 'Социологический', 'Философский', 'Юридический', 'Восточный', 'Экономический', 'Филологический'];
 
 export const COURSES_COUNT = 4;
 
-// Расписания лежат в docs/<Факультет>/<N>курс_<Направление>[_<Поток>].ics (ветка main).
+// Расписания лежат в docs/<Факультет>/<N>курс_<Направление>[_<Поток>].ics (ветка tgcloud).
 // Префикс факультета в имени файла необязателен: Социологический_2курс_1поток.ics тоже подходит.
 // Файлы в корне репозитория (с префиксом факультета) тоже читаются, пока их не перенесли.
 const FILE_RE = /^(?:(.+?)_)?\s*([0-9]+)\s*курс_(.+)[.]ics$/i;
@@ -55,10 +56,13 @@ export function parseSchedule(path) {
   return Object.assign(f, { key: fileKey(LEGACY_KEYS[id] || id) });
 }
 
+// Только факультеты, для которых есть файлы: сначала известные в привычном порядке, затем остальные по алфавиту
 export function facultyList(entries) {
-  const extra = [];
-  for (const e of entries) if (!FACULTY_NAMES.includes(e.faculty) && !extra.includes(e.faculty)) extra.push(e.faculty);
-  return FACULTY_NAMES.concat(extra.sort((a, b) => a.localeCompare(b, 'ru')));
+  const present = [];
+  for (const e of entries) if (!present.includes(e.faculty)) present.push(e.faculty);
+  const known = FACULTY_NAMES.filter((n) => present.includes(n));
+  const extra = present.filter((n) => !FACULTY_NAMES.includes(n)).sort((a, b) => a.localeCompare(b, 'ru'));
+  return known.concat(extra);
 }
 
 export function directionsOf(entries, faculty, course) {
