@@ -158,24 +158,74 @@
     } catch (e) { if (alive()) body.replaceChildren(errBox(e)); }
   }
 
+  // Роли ассистентов: словарь потоков из данных bootstrap
+  function streamIndex() {
+    const m = {};
+    for (const x of (S.boot && S.boot.schedules) || []) {
+      for (const s of x.streams) m[s.key] = { course: x.course, faculty: s.faculty, label: s.direction + (s.stream ? ', ' + s.stream : '') };
+    }
+    return m;
+  }
+
+  const scopeLabel = (s, idx) => [
+    s.faculty || 'все факультеты',
+    s.course ? s.course + ' курс' : 'все курсы',
+    s.stream ? ((idx[s.stream] && idx[s.stream].label) || 'поток') : 'все потоки',
+  ].join(' · ');
+
+  function scopeForm(idx, onAdd) {
+    const F = ((S.boot && S.boot.faculties) || []).map((f) => f.name);
+    const fac = h('select', {}, [h('option', { value: '' }, 'Любой факультет'), ...F.map((n) => h('option', { value: n }, n))]);
+    const nCourses = (S.boot && S.boot.courses) || 4;
+    const course = h('select', {}, [h('option', { value: '' }, 'Любой курс'), ...Array.from({ length: nCourses }, (_, i) => h('option', { value: String(i + 1) }, (i + 1) + ' курс'))]);
+    const stream = h('select', {});
+    const fill = () => {
+      const opts = [h('option', { value: '' }, 'Любой поток')];
+      for (const [key, v] of Object.entries(idx)) {
+        if (fac.value && v.faculty !== fac.value) continue;
+        if (course.value && v.course !== course.value) continue;
+        opts.push(h('option', { value: key }, v.faculty + ' · ' + v.course + ' курс · ' + v.label));
+      }
+      stream.replaceChildren(...opts);
+    };
+    fac.addEventListener('change', fill);
+    course.addEventListener('change', fill);
+    fill();
+    return h('div', {}, fac, course, stream,
+      h('button', { class: 'mini', onclick: safe(async () => { await onAdd({ faculty: fac.value, course: course.value, stream: stream.value }); }) }, 'Добавить доступ'));
+  }
+
   async function drawAssistants(body, alive) {
     try {
       let list = ((await call('admin', { action: 'assistants' })).assistants) || [];
       if (!alive()) return;
+      const idx = streamIndex();
       const box = h('div', {});
+      const setScopes = async (name, scopes) => {
+        list = ((await call('admin', { action: 'role_set', username: name, scopes })).assistants) || [];
+        draw();
+      };
       const draw = () => {
         box.replaceChildren(...(list.length
-          ? list.map((n) => h('div', { class: 'erow' }, h('span', {}, '@' + n),
-            h('button', { class: 'mini danger', onclick: safe(async () => {
-              if (!(await ask('Убрать ассистента @' + n + '?'))) return false;
-              list = ((await call('admin', { action: 'assistant_del', username: n })).assistants) || [];
-              draw();
-            }, 'none') }, 'Убрать')))
+          ? list.map((a) => {
+            const scopes = a.scopes || [];
+            return h('div', { class: 'linkform' },
+              h('div', { class: 'erow' }, h('b', {}, '@' + a.name),
+                h('button', { class: 'mini danger', onclick: safe(async () => {
+                  if (!(await ask('Убрать ассистента @' + a.name + '?'))) return false;
+                  list = ((await call('admin', { action: 'assistant_del', username: a.name })).assistants) || [];
+                  draw();
+                }, 'none') }, 'Убрать')),
+              h('p', { class: 'muted' }, scopes.length ? 'Может править только:' : 'Доступ ко всем потокам'),
+              ...scopes.map((s, i) => h('div', { class: 'erow' }, h('span', {}, scopeLabel(s, idx)),
+                h('button', { class: 'mini danger', onclick: safe(async () => { await setScopes(a.name, scopes.filter((_, j) => j !== i)); }, 'none') }, '✕'))),
+              scopeForm(idx, async (s) => { await setScopes(a.name, scopes.concat([s])); }));
+          })
           : [h('p', { class: 'muted' }, 'Ассистентов пока нет (админ имеет все права)')]));
       };
       const name = h('input', { type: 'text', placeholder: '@username' });
       body.replaceChildren(h('section', { class: 'card' }, h('h3', {}, 'Ассистенты'),
-        h('p', { class: 'muted' }, 'Ассистенты могут менять расписание, ДЗ и ссылки на своём выбранном потоке.'),
+        h('p', { class: 'muted' }, 'Ассистенты могут менять расписание, ДЗ и ссылки на своём выбранном потоке. Если не заданы ограничения, доступ полный; если заданы — только на подходящих потоках.'),
         box, name,
         h('button', { class: 'mini', onclick: safe(async () => {
           const v = name.value.trim();
@@ -183,7 +233,7 @@
           list = ((await call('admin', { action: 'assistant_add', username: v })).assistants) || [];
           name.value = '';
           draw();
-        }) }, 'Добавить')));
+        }) }, 'Добавить ассистента')));
       draw();
     } catch (e) { if (alive()) body.replaceChildren(errBox(e)); }
   }

@@ -4,6 +4,7 @@ import * as V from '../lib/views.js';
 import { sendReminders } from '../lib/remind.js';
 import { toOriginal, allEntries } from '../lib/schedule.js';
 import { applyHw, syncExisting } from '../lib/hwsync.js';
+import { canEdit } from '../lib/roles.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
@@ -55,7 +56,7 @@ export default async function (message) {
     }
     case '/addhw':
     case '/delhw': {
-      if (!(await store.isAssistant(uname))) return deny();
+      if (!(await canEdit(uname, user))) return deny();
       if (await needCourse()) return;
       const p = arg.split('|').map((s) => s.trim());
       if (!p[0] || !DATE.test(p[1] || '') || (cmd === '/addhw' && !p[2])) return send(chat, 'Формат: ' + cmd + ' Предмет | ГГГГ-ММ-ДД' + (cmd === '/addhw' ? ' | текст' : ''));
@@ -77,12 +78,20 @@ export default async function (message) {
       let list = await store.get('assistants', []);
       list = list.filter((x) => x !== name);
       if (p[0] === 'add') list.push(name);
+      else {
+        const roles = await store.get('roles', {});
+        delete roles[name];
+        await store.set('roles', roles);
+      }
       await store.set('assistants', list);
       return send(chat, '✅ Ассистенты: ' + (list.join(', ') || 'нет'));
     }
-    case '/assistants':
+    case '/assistants': {
       if (!store.isAdmin(uname)) return deny();
-      return send(chat, 'Ассистенты: ' + ((await store.get('assistants', [])).join(', ') || 'нет'));
+      const list = await store.get('assistants', []);
+      const roles = await store.get('roles', {});
+      return send(chat, 'Ассистенты: ' + (list.map((n) => '@' + n + (roles[n] && roles[n].length ? ' (ограничен)' : '')).join(', ') || 'нет'));
+    }
     case '/announce': {
       if (!store.isAdmin(uname)) return deny();
       if (!arg) return send(chat, 'Формат: /announce текст');

@@ -1,10 +1,11 @@
 import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { endpoint } from '../lib/auth.js';
+import { canEdit } from '../lib/roles.js';
 
 export default endpoint(async (input, u) => {
-  if (!(await store.isAssistant(u.username))) throw new EndpointError('forbidden');
   const user = await store.getUser(u.id);
+  if (!(await canEdit(u.username, user))) throw new EndpointError('forbidden');
   if (!user.course) throw new EndpointError('no course');
   const original = String(input.original || '').trim();
   const date = String(input.date || '');

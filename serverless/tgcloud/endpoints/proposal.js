@@ -5,20 +5,21 @@ import { LANG_NAME, langDates } from '../lib/lang.js';
 import { applyHw } from '../lib/hwsync.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
+import { canEdit } from '../lib/roles.js';
 import { NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const pkey = (c, s) => 'props:' + c + '_' + s;
 const fmt = (d) => d.slice(8) + '.' + d.slice(5, 7);
 
+// Уведомляем только тех ассистентов и админа, которые могут править этот поток (с учётом ролей)
 async function notifyAssistants(course, stream, text, exceptId) {
-  const names = (await store.get('assistants', [])).map((x) => String(x).toLowerCase());
   for (const id of await store.get('users', [])) {
     if (id === exceptId) continue;
     try {
       const u = await store.getUser(id);
       if (u.course !== course || u.stream !== stream || !u.username) continue;
-      if (!(store.isAdmin(u.username) || names.includes(u.username.toLowerCase()))) continue;
+      if (!(await canEdit(u.username, u))) continue;
       await send(id, text);
     } catch (e) {}
   }
@@ -30,7 +31,7 @@ export default endpoint(async (input, u) => {
   const { course, stream } = user;
   const k = pkey(course, stream);
   let list = await store.get(k, []);
-  const assistant = await store.isAssistant(u.username);
+  const assistant = await canEdit(u.username, user);
   const a = input.action;
 
   if (a === 'add') {

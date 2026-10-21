@@ -2,6 +2,7 @@ import * as store from '../lib/store.js';
 import { listSchedules, flatten } from '../lib/schedule.js';
 import { COURSES_COUNT, facultyList, directionPairs, pairLabel } from '../lib/faculties.js';
 import { endpoint } from '../lib/auth.js';
+import { canEdit } from '../lib/roles.js';
 import { today } from '../lib/time.js';
 
 export default endpoint(async (input, u) => {
@@ -19,8 +20,9 @@ export default endpoint(async (input, u) => {
   });
   const me = Object.assign({ done: [], notes: {}, favs: [] }, await store.get('ud:' + u.id, {}));
   const saved = await store.touch(u.id);
-  const assistant = await store.isAssistant(u.username);
-  if (assistant && u.username && saved.username !== u.username) {
+  const isAsst = await store.isAssistant(u.username);
+  const assistant = isAsst && (await canEdit(u.username, saved));
+  if (isAsst && u.username && saved.username !== u.username) {
     saved.username = u.username;
     await store.saveUser(u.id, { username: u.username });
   }
