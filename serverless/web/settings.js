@@ -1,4 +1,4 @@
-// Подключается после app.js: направления в настройках зависят от курса, уведомления об изменениях, календарь (подписка и экспорт с правками), рекламные плашки, админ-панель
+// Подключается после app.js: первый запуск, направления в настройках зависят от курса, уведомления об изменениях, календарь (подписка и экспорт с правками), рекламные плашки, админ-панель
 (function () {
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
   const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
@@ -267,6 +267,29 @@
       h('button', { onclick: () => { buzz.tap(); openAdmin(); } }, 'Открыть админ-панель')));
   }
 
+  // ---------- Первый запуск: если расписание не выбрано (или файл уже не найден), открываем настройки с приветствием ----------
+  const hasSchedule = () => {
+    const u = (S.boot && S.boot.user) || {};
+    if (!u.course || !u.stream) return false;
+    const group = ((S.boot && S.boot.schedules) || []).find((x) => x.course === u.course);
+    return !!group && group.streams.some((s) => s.key === u.stream);
+  };
+
+  let onboardDone = false;
+  function startOnboarding() {
+    if (onboardDone || !S.boot) return;
+    onboardDone = true;
+    if (hasSchedule()) return;
+    S.tab = 'set';
+    try { render(); } catch (e) {}
+  }
+
+  function welcomeCard(root) {
+    if (root.querySelector('.welcome-card')) return;
+    root.prepend(h('section', { class: 'card welcome-card' }, h('h3', {}, '👋 Добро пожаловать!'),
+      h('p', {}, 'Выберите факультет, курс и направление и сохраните выбор — расписание появится на главном экране.')));
+  }
+
   // ---------- Настройки: уведомления об изменениях расписания (раньше переключались только в боте) ----------
   function alertsCard(root) {
     if (root.querySelector('.alerts-card')) return;
@@ -304,6 +327,7 @@
     fac.addEventListener('change', rebuild);
     course.addEventListener('change', rebuild);
     rebuild();
+    if (!hasSchedule()) welcomeCard(root);
     alertsCard(root);
     if (S.boot && S.boot.admin) adminEntry(root);
   }
@@ -312,6 +336,7 @@
   const view = document.getElementById('view');
   if (view) {
     new MutationObserver(() => {
+      try { startOnboarding(); } catch (e) {}
       try { cascade(view); } catch (e) {}
       try { placeAds(view); } catch (e) {}
     }).observe(view, { childList: true, subtree: true });
