@@ -1,4 +1,4 @@
-// Подключается после app.js: направления в настройках зависят от курса, календарь (подписка и экспорт с правками), рекламные плашки, админ-панель
+// Подключается после app.js: направления в настройках зависят от курса, уведомления об изменениях, календарь (подписка и экспорт с правками), рекламные плашки, админ-панель
 (function () {
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
   const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
@@ -267,6 +267,19 @@
       h('button', { onclick: () => { buzz.tap(); openAdmin(); } }, 'Открыть админ-панель')));
   }
 
+  // ---------- Настройки: уведомления об изменениях расписания (раньше переключались только в боте) ----------
+  function alertsCard(root) {
+    if (root.querySelector('.alerts-card')) return;
+    const u = (S.boot && S.boot.user) || {};
+    const box = h('input', { type: 'checkbox', checked: u.alerts !== false });
+    box.addEventListener('change', safe(async () => {
+      const r = await call('alerts', { value: box.checked });
+      if (S.boot) S.boot.user = Object.assign({}, S.boot.user, { alerts: r.alerts });
+    }));
+    root.append(h('section', { class: 'card alerts-card' }, h('h3', {}, 'Уведомления'),
+      h('label', { class: 'row' }, box, 'Присылать в чат сообщения об отменах, переносах и обновлениях расписания')));
+  }
+
   // ---------- Настройки: направления по курсу ----------
   function cascade(root) {
     const sel = root.querySelectorAll('select');
@@ -291,6 +304,7 @@
     fac.addEventListener('change', rebuild);
     course.addEventListener('change', rebuild);
     rebuild();
+    alertsCard(root);
     if (S.boot && S.boot.admin) adminEntry(root);
   }
 

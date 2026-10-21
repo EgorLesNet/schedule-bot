@@ -1,19 +1,20 @@
+import { api } from 'sdk';
 import * as store from '../lib/store.js';
 import { send } from '../lib/bot.js';
-import * as V from '../lib/views.js';
 import { sendReminders } from '../lib/remind.js';
-import { toOriginal, allEntries } from '../lib/schedule.js';
-import { applyHw, syncExisting } from '../lib/hwsync.js';
-import { canEdit } from '../lib/roles.js';
+import { allEntries } from '../lib/schedule.js';
+import { syncExisting } from '../lib/hwsync.js';
+import { inviteView } from '../lib/invite.js';
 import { APP_URL, NL } from '../lib/config.js';
 
-const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const DAY = 86400000;
-const HELP = [
-  '/menu - меню', '/today, /tomorrow, /week - расписание', '/hw - домашние задания', '/app - мини-приложение',
+const SHORT = 'Расписание ГАУГН в приложении: пары, ДЗ, календарь. Откройте кнопкой внизу.';
+const LONG = 'Расписание ГАУГН в удобном приложении: неделя и день, поиск по предметам и преподавателям, домашние задания, заметки, ссылки на онлайн-пары и календарь. Нажмите «Старт» и откройте приложение. Уведомления об отменах и переносах пар приходят в этот чат. Быстрое расписание в любом чате: напишите имя бота и выберите «Сегодня» или «Неделя».';
+const ADMIN_HELP = [
+  'Расписание, ДЗ и настройки — в приложении. В чате доступны:',
   '/alerts - уведомления об изменениях расписания (вкл/выкл)',
-  '', 'Ассистенты:', '/addhw Предмет | 2026-10-20 | текст', '/delhw Предмет | 2026-10-20',
-  '', 'Админ:', '/assistant add @user, /assistant del @user, /assistants', '/announce текст, /stats, /remind_now, /synchw',
+  '', 'Админ:', '/stats - статистика', '/announce текст - рассылка всем', '/assistant add @user, /assistant del @user, /assistants',
+  '/remind_now, /synchw', '/setmenu - кнопка приложения, описание бота и список команд',
 ].join(NL);
 
 export default async function (message) {
@@ -25,48 +26,19 @@ export default async function (message) {
   const cmd = (sp < 0 ? text : text.slice(0, sp)).split('@')[0].toLowerCase();
   const arg = sp < 0 ? '' : text.slice(sp + 1).trim();
   const user = await store.touch(message.from.id);
-  const show = (v) => send(chat, v.text, v.markup);
   const deny = () => send(chat, '❌ Нет прав для этой команды');
-  const needCourse = async () => { if (user.course) return false; await show(await V.coursesView()); return true; };
+  const invite = async () => { const v = await inviteView(); return send(chat, v.text, v.markup); };
 
   switch (cmd) {
-    case '/start':
-    case '/menu':
-      return show(user.course ? await V.menuView(user) : await V.coursesView());
-    case '/today':
-      if (await needCourse()) return;
-      return show(await V.dayView(user, 0));
-    case '/tomorrow':
-      if (await needCourse()) return;
-      return show(await V.dayView(user, 1));
-    case '/week':
-      if (await needCourse()) return;
-      return show(await V.weekView(user, 0));
-    case '/hw':
-      if (await needCourse()) return;
-      return show(await V.hwView(user));
-    case '/app':
-      if (!APP_URL) return send(chat, 'Мини-приложение ещё не подключено: впишите APP_URL в lib/config.js');
-      return send(chat, 'Открыть расписание:', { inline_keyboard: [[{ text: '📱 Открыть приложение', web_app: { url: APP_URL } }]] });
-    case '/help':
-      return send(chat, HELP);
     case '/alerts': {
       const u2 = await store.saveUser(message.from.id, { alerts: user.alerts === false });
       return send(chat, u2.alerts === false ? '🔕 Уведомления об изменениях расписания выключены' : '🔔 Уведомления об изменениях расписания включены');
     }
-    case '/addhw':
-    case '/delhw': {
-      if (!(await canEdit(uname, user))) return deny();
-      if (await needCourse()) return;
-      const p = arg.split('|').map((s) => s.trim());
-      if (!p[0] || !DATE.test(p[1] || '') || (cmd === '/addhw' && !p[2])) return send(chat, 'Формат: ' + cmd + ' Предмет | ГГГГ-ММ-ДД' + (cmd === '/addhw' ? ' | текст' : ''));
-      const original = await toOriginal(user.course, user.stream, p[0]);
-      const n = await applyHw(user.course, user.stream, original, p[1], cmd === '/addhw' ? p.slice(2).join(' | ') : '');
-      return send(chat, (cmd === '/addhw' ? '✅ ДЗ сохранено' : '🗑 ДЗ удалено') + (n ? ' (синхронизировано с другими потоками: ' + n + ')' : ''));
-    }
+    case '/help':
+      return store.isAdmin(uname) ? send(chat, ADMIN_HELP) : invite();
     case '/synchw': {
       if (!store.isAdmin(uname)) return deny();
-      if (await needCourse()) return;
+      if (!user.course) return send(chat, 'Сначала выберите расписание в приложении.');
       const r = await syncExisting(user.course);
       return send(chat, '🔄 Синхронизация ДЗ: скопировано ' + r.copied + ', расхождений (не тронуты) ' + r.conflicts);
     }
@@ -147,7 +119,19 @@ export default async function (message) {
     case '/remind_now':
       if (!store.isAdmin(uname)) return deny();
       return send(chat, '🔔 Разослано напоминаний: ' + (await sendReminders()));
+    case '/setmenu': {
+      if (!store.isAdmin(uname)) return deny();
+      const res = [];
+      const step = async (title, fn) => {
+        try { await fn(); res.push('✅ ' + title); } catch (e) { res.push('❌ ' + title + ': ' + ((e && e.message) || e)); }
+      };
+      await step('Кнопка меню', () => api.setChatMenuButton({ menu_button: { type: 'web_app', text: '📱 Расписание', web_app: { url: APP_URL } } }));
+      await step('Краткое описание', () => api.setMyShortDescription({ short_description: SHORT }));
+      await step('Полное описание', () => api.setMyDescription({ description: LONG }));
+      await step('Список команд', () => api.setMyCommands({ commands: [{ command: 'alerts', description: 'Уведомления об изменениях расписания' }] }));
+      return send(chat, res.join(NL));
+    }
     default:
-      return send(chat, cmd.startsWith('/') ? 'Неизвестная команда. /help' : 'Нажми /menu');
+      return invite();
   }
 }
