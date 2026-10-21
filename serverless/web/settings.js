@@ -1,4 +1,4 @@
-// Подключается после app.js: направления в настройках зависят от курса, календарь (подписка и экспорт с правками), рекламные плашки
+// Подключается после app.js: направления в настройках зависят от курса, календарь (подписка и экспорт с правками), рекламные плашки, админ-панель
 (function () {
   const LABEL = /^(.*) \(([0-9]+) курс\)$/;
   const RAW_FILES = 'https://raw.githubusercontent.com/EgorLesNet/schedule-bot/tgcloud/';
@@ -18,6 +18,25 @@
     return adsReady;
   }
 
+  // Учёт показов и кликов: копим в памяти и отправляем пачкой (раз в 30 с, при сворачивании и при клике)
+  const pending = { views: {}, clicks: {} };
+  let pendingN = 0;
+
+  function flushAds() {
+    if (!pendingN) return;
+    const body = { action: 'track', views: pending.views, clicks: pending.clicks };
+    pending.views = {};
+    pending.clicks = {};
+    pendingN = 0;
+    call('ads', body).catch(() => {});
+  }
+
+  const countView = (id) => { pending.views[id] = (pending.views[id] || 0) + 1; pendingN++; };
+  const countClick = (id) => { pending.clicks[id] = (pending.clicks[id] || 0) + 1; pendingN++; flushAds(); };
+  setInterval(flushAds, 30000);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushAds(); });
+  window.addEventListener('pagehide', flushAds);
+
   function adBanner() {
     const items = ADS.slice();
     if (!items.length) return null;
@@ -34,9 +53,13 @@
     const urlOf = (i) => { const a = ADS.find((x) => x.id === items[i].id); return a ? a.url : ''; };
     const sync = () => { box.style.cursor = urlOf(cur) ? 'pointer' : 'default'; };
     sync();
+    if (document.visibilityState === 'visible') countView(items[0].id);
     box.addEventListener('click', () => {
       const u = urlOf(cur);
-      if (u) { buzz.tap(); openLink(u); }
+      if (!u) return;
+      buzz.tap();
+      countClick(items[cur].id);
+      openLink(u);
     });
     if (imgs.length > 1) {
       const t = setInterval(() => {
@@ -51,6 +74,7 @@
         imgs[next].style.opacity = '1';
         cur = next;
         sync();
+        if (document.visibilityState === 'visible') countView(items[cur].id);
       }, 5000);
     }
     return box;
@@ -70,39 +94,127 @@
     else cal.parentElement.append(box);
   }
 
-  // Настройки (только админ): ссылка для каждой картинки и проверка размера
-  function adminAds(root) {
-    if (root.querySelector('.ad-admin')) return;
-    const card = h('section', { class: 'card ad-admin' }, h('h3', {}, 'Реклама'),
-      h('p', { class: 'muted' }, 'Картинки берутся из docs/ads (ad1, ad2, …), размер строго ' + AD_W + '×' + AD_H + '. Для каждой задайте ссылку, на которую перейдёт пользователь.'));
-    const list = h('div', {});
-    card.append(list);
-    const draw = () => {
-      if (!ADS.length) { list.replaceChildren(h('p', { class: 'muted' }, 'Картинок в docs/ads пока нет')); return; }
-      list.replaceChildren(...ADS.map((a) => {
-        const url = h('input', { type: 'url', placeholder: 'https://…', value: a.url });
-        const note = h('span', { class: 'muted' }, '');
-        const im = h('img', { src: a.src, alt: a.id, style: 'width:100%;aspect-ratio:' + AD_W + ' / ' + AD_H + ';object-fit:cover;border-radius:10px' });
-        im.addEventListener('load', () => {
-          const ok = im.naturalWidth === AD_W && im.naturalHeight === AD_H;
-          note.textContent = im.naturalWidth + '×' + im.naturalHeight + (ok ? ' ✓' : ' — нужен размер ' + AD_W + '×' + AD_H);
-        });
-        return h('div', { class: 'linkform' },
-          im, h('b', {}, a.id), note, url,
-          h('button', { class: 'mini', onclick: safe(async () => {
-            const r = await call('ads', { action: 'set', id: a.id, url: url.value.trim() });
-            ADS = (r && r.ads) || ADS;
-            draw();
-          }) }, 'Сохранить'));
-      }));
-    };
-    card.append(h('button', { class: 'mini alt', onclick: safe(async () => {
-      const r = await call('ads', { action: 'refresh' });
+  // ---------- Админ-панель (только админ): активность, реклама, ассистенты ----------
+  const errBox = (e) => h('p', { class: 'err' }, 'Ошибка: ' + ((e && e.message) || e));
+  const ctr = (v, c) => (v ? (c / v * 100).toFixed(1) + '%' : '—');
+
+  async function drawActivity(body, alive) {
+    try {
+      const s = await call('admin', { action: 'stats' });
+      if (!alive()) return;
+      const top = h('section', { class: 'card' }, h('h3', {}, 'Активность'),
+        h('p', {}, 'Пользователей: ' + s.total),
+        h('p', {}, 'Заходили: за 24 ч — ' + s.d1 + ', за 7 дн. — ' + s.d7 + ', за 30 дн. — ' + s.d30),
+        s.fresh ? h('p', {}, 'Новых за 7 дней: ' + s.fresh) : null,
+        s.unknown ? h('p', { class: 'muted' }, 'Нет данных об активности: ' + s.unknown + ' (появятся после следующего захода)') : null,
+        h('p', { class: 'muted' }, 'Не выбрали расписание: ' + s.none + ' · Расписание не найдено: ' + s.lost + ' · Напоминания включены: ' + s.reminders));
+      const facs = s.faculties.map((f) => h('section', { class: 'card' },
+        h('h3', {}, f.name + ': ' + f.total),
+        h('p', { class: 'muted' }, 'Активны за 7 дней: ' + f.active),
+        ...f.courses.map((c) => h('p', {}, c.course + ' курс: ' + c.n))));
+      body.replaceChildren(top, ...facs);
+    } catch (e) { if (alive()) body.replaceChildren(errBox(e)); }
+  }
+
+  async function drawAds(body, alive) {
+    try {
+      const [r, st] = await Promise.all([call('ads', { action: 'list' }), call('ads', { action: 'stats' })]);
+      if (!alive()) return;
       ADS = (r && r.ads) || ADS;
+      const stats = (st && st.stats) || {};
+      const list = h('div', {});
+      const draw = () => {
+        if (!ADS.length) { list.replaceChildren(h('p', { class: 'muted' }, 'Картинок в docs/ads пока нет')); return; }
+        list.replaceChildren(...ADS.map((a) => {
+          const s = stats[a.id] || { v7: 0, c7: 0, v30: 0, c30: 0 };
+          const url = h('input', { type: 'url', placeholder: 'https://…', value: a.url });
+          const note = h('span', { class: 'muted' }, '');
+          const im = h('img', { src: a.src, alt: a.id, style: 'width:100%;aspect-ratio:' + AD_W + ' / ' + AD_H + ';object-fit:cover;border-radius:10px' });
+          im.addEventListener('load', () => {
+            const ok = im.naturalWidth === AD_W && im.naturalHeight === AD_H;
+            note.textContent = im.naturalWidth + '×' + im.naturalHeight + (ok ? ' ✓' : ' — нужен размер ' + AD_W + '×' + AD_H);
+          });
+          return h('div', { class: 'linkform' },
+            im, h('b', {}, a.id), note,
+            h('p', { class: 'muted' }, 'Показы: ' + s.v7 + ' за 7 дн. / ' + s.v30 + ' за 30 дн.'),
+            h('p', { class: 'muted' }, 'Клики: ' + s.c7 + ' / ' + s.c30 + ' · CTR (7 дн.): ' + ctr(s.v7, s.c7) + ' · (30 дн.): ' + ctr(s.v30, s.c30)),
+            url,
+            h('button', { class: 'mini', onclick: safe(async () => {
+              const res = await call('ads', { action: 'set', id: a.id, url: url.value.trim() });
+              ADS = (res && res.ads) || ADS;
+              draw();
+            }) }, 'Сохранить'));
+        }));
+      };
+      body.replaceChildren(h('section', { class: 'card' }, h('h3', {}, 'Реклама'),
+        h('p', { class: 'muted' }, 'Картинки берутся из docs/ads (ad1, ad2, …), размер строго ' + AD_W + '×' + AD_H + '. Для каждой задайте ссылку, на которую перейдёт пользователь. Счётчики приблизительные.'),
+        list,
+        h('button', { class: 'mini alt', onclick: safe(async () => {
+          const res = await call('ads', { action: 'refresh' });
+          ADS = (res && res.ads) || ADS;
+          draw();
+        }) }, 'Обновить список картинок')));
       draw();
-    }) }, 'Обновить список картинок'));
-    root.append(card);
-    loadAds().then(draw);
+    } catch (e) { if (alive()) body.replaceChildren(errBox(e)); }
+  }
+
+  async function drawAssistants(body, alive) {
+    try {
+      let list = ((await call('admin', { action: 'assistants' })).assistants) || [];
+      if (!alive()) return;
+      const box = h('div', {});
+      const draw = () => {
+        box.replaceChildren(...(list.length
+          ? list.map((n) => h('div', { class: 'erow' }, h('span', {}, '@' + n),
+            h('button', { class: 'mini danger', onclick: safe(async () => {
+              if (!(await ask('Убрать ассистента @' + n + '?'))) return false;
+              list = ((await call('admin', { action: 'assistant_del', username: n })).assistants) || [];
+              draw();
+            }, 'none') }, 'Убрать')))
+          : [h('p', { class: 'muted' }, 'Ассистентов пока нет (админ имеет все права)')]));
+      };
+      const name = h('input', { type: 'text', placeholder: '@username' });
+      body.replaceChildren(h('section', { class: 'card' }, h('h3', {}, 'Ассистенты'),
+        h('p', { class: 'muted' }, 'Ассистенты могут менять расписание, ДЗ и ссылки на своём выбранном потоке.'),
+        box, name,
+        h('button', { class: 'mini', onclick: safe(async () => {
+          const v = name.value.trim();
+          if (!v) return false;
+          list = ((await call('admin', { action: 'assistant_add', username: v })).assistants) || [];
+          name.value = '';
+          draw();
+        }) }, 'Добавить')));
+      draw();
+    } catch (e) { if (alive()) body.replaceChildren(errBox(e)); }
+  }
+
+  function openAdmin() {
+    if (document.getElementById('admin-panel')) return;
+    const cs = getComputedStyle(document.body);
+    const bg = cs.backgroundColor && cs.backgroundColor !== 'rgba(0, 0, 0, 0)' ? cs.backgroundColor : '#ffffff';
+    const panel = h('div', { id: 'admin-panel', style: 'position:fixed;inset:0;z-index:100;overflow:auto;padding:12px;box-sizing:border-box;background:' + bg + ';color:' + cs.color });
+    const body = h('div', {});
+    const tabs = h('div', { class: 'toolbar' });
+    const sections = { act: ['Активность', drawActivity], ads: ['Реклама', drawAds], asst: ['Ассистенты', drawAssistants] };
+    let seq = 0;
+    const show = (k) => {
+      const my = ++seq;
+      for (const b of tabs.children) b.className = 'chip' + (b.dataset.k === k ? ' on' : '');
+      body.replaceChildren(h('p', { class: 'muted center' }, 'Загрузка…'));
+      sections[k][1](body, () => my === seq && panel.isConnected);
+    };
+    Object.keys(sections).forEach((k) => tabs.append(h('button', { class: 'chip', 'data-k': k, onclick: () => { buzz.tap(); show(k); } }, sections[k][0])));
+    panel.append(h('div', { class: 'toolbar' }, h('button', { class: 'mini alt', onclick: () => { buzz.tap(); panel.remove(); } }, '← Назад'), h('b', {}, 'Админ-панель')), tabs, body);
+    document.body.append(panel);
+    show('act');
+  }
+
+  // Карточка в настройках (только админ)
+  function adminEntry(root) {
+    if (root.querySelector('.ad-admin')) return;
+    root.append(h('section', { class: 'card ad-admin' }, h('h3', {}, 'Администрирование'),
+      h('p', { class: 'muted' }, 'Активность пользователей, реклама и ассистенты.'),
+      h('button', { onclick: () => { buzz.tap(); openAdmin(); } }, 'Открыть админ-панель')));
   }
 
   // ---------- Настройки: направления по курсу ----------
@@ -129,7 +241,7 @@
     fac.addEventListener('change', rebuild);
     course.addEventListener('change', rebuild);
     rebuild();
-    if (S.boot && S.boot.admin) adminAds(root);
+    if (S.boot && S.boot.admin) adminEntry(root);
   }
 
   // Экраны определяются по элементам на странице, а не подменой функций: не зависит от того, как app.js вызывает экраны
