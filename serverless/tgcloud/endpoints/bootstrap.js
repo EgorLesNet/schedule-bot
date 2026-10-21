@@ -18,7 +18,7 @@ export default endpoint(async (input, u) => {
     });
   });
   const me = Object.assign({ done: [], notes: {}, favs: [] }, await store.get('ud:' + u.id, {}));
-  const saved = await store.getUser(u.id);
+  const saved = await store.touch(u.id);
   const assistant = await store.isAssistant(u.username);
   if (assistant && u.username && saved.username !== u.username) {
     saved.username = u.username;

@@ -6,7 +6,7 @@ import { allEntries, listSchedules, loadEvents } from '../lib/schedule.js';
 import { isLangStart } from '../lib/lang.js';
 import { NL } from '../lib/config.js';
 
-const NEED = ['menu', 'd', 'w', 'hw', 'rem', 'remt', 'rf'];
+const NEED = ['menu', 'd', 'w', 'hw', 'rem', 'remt', 'alt', 'rf'];
 
 async function pick(uid, course, stream) {
   if (course === '1' || course === '2') return V.langView(course, stream);
@@ -21,7 +21,7 @@ export default async function (q) {
   const uid = q.from.id;
   const p = (q.data || '').split(':');
   const a = p[0];
-  let user = await store.getUser(uid);
+  let user = await store.touch(uid);
   let v;
   if (NEED.includes(a) && !user.course) v = await V.coursesView();
   else if (a === 'courses') v = await V.coursesView();
@@ -55,6 +55,10 @@ export default async function (q) {
   else if (a === 'rem') v = V.remView(user);
   else if (a === 'remt') {
     user = await store.saveUser(uid, { reminders: !user.reminders });
+    v = V.remView(user);
+  }
+  else if (a === 'alt') {
+    user = await store.saveUser(uid, { alerts: user.alerts === false });
     v = V.remView(user);
   }
   else if (a === 'rf') {

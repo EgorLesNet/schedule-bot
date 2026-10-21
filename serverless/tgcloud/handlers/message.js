@@ -7,8 +7,10 @@ import { applyHw, syncExisting } from '../lib/hwsync.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+const DAY = 86400000;
 const HELP = [
   '/menu - меню', '/today, /tomorrow, /week - расписание', '/hw - домашние задания', '/app - мини-приложение',
+  '/alerts - уведомления об изменениях расписания (вкл/выкл)',
   '', 'Ассистенты:', '/addhw Предмет | 2026-10-20 | текст', '/delhw Предмет | 2026-10-20',
   '', 'Админ:', '/assistant add @user, /assistant del @user, /assistants', '/announce текст, /stats, /remind_now, /synchw',
 ].join(NL);
@@ -21,7 +23,7 @@ export default async function (message) {
   const sp = text.indexOf(' ');
   const cmd = (sp < 0 ? text : text.slice(0, sp)).split('@')[0].toLowerCase();
   const arg = sp < 0 ? '' : text.slice(sp + 1).trim();
-  const user = await store.getUser(message.from.id);
+  const user = await store.touch(message.from.id);
   const show = (v) => send(chat, v.text, v.markup);
   const deny = () => send(chat, '❌ Нет прав для этой команды');
   const needCourse = async () => { if (user.course) return false; await show(await V.coursesView()); return true; };
@@ -47,6 +49,10 @@ export default async function (message) {
       return send(chat, 'Открыть расписание:', { inline_keyboard: [[{ text: '📱 Открыть приложение', web_app: { url: APP_URL } }]] });
     case '/help':
       return send(chat, HELP);
+    case '/alerts': {
+      const u2 = await store.saveUser(message.from.id, { alerts: user.alerts === false });
+      return send(chat, u2.alerts === false ? '🔕 Уведомления об изменениях расписания выключены' : '🔔 Уведомления об изменениях расписания включены');
+    }
     case '/addhw':
     case '/delhw': {
       if (!(await store.isAssistant(uname))) return deny();
@@ -91,24 +97,35 @@ export default async function (message) {
       const ids = await store.get('users', []);
       const entries = await allEntries();
       const byKey = new Map(entries.map((e) => [e.course + '|' + e.key, e]));
+      const now = Date.now();
       const tree = {};
       const total = {};
-      let none = 0, lost = 0, rem = 0;
+      let none = 0, lost = 0, rem = 0, d1 = 0, d7 = 0, d30 = 0, fresh = 0, unknown = 0;
       for (const id of ids) {
         const u = await store.getUser(id);
         if (u.reminders) rem++;
+        const age = u.seen ? now - u.seen : Infinity;
+        if (!u.seen) unknown++;
+        if (age < DAY) d1++;
+        if (age < 7 * DAY) d7++;
+        if (age < 30 * DAY) d30++;
+        if (u.since && now - u.since < 7 * DAY) fresh++;
         if (!u.course || !u.stream) { none++; continue; }
         const e = byKey.get(u.course + '|' + u.stream);
         if (!e) { lost++; continue; }
-        const f = tree[e.faculty] || (tree[e.faculty] = { total: 0, courses: {} });
+        const f = tree[e.faculty] || (tree[e.faculty] = { total: 0, active: 0, courses: {} });
         f.total++;
+        if (age < 7 * DAY) f.active++;
         f.courses[u.course] = (f.courses[u.course] || 0) + 1;
         total[u.course] = (total[u.course] || 0) + 1;
       }
-      const lines = ['📊 Пользователей: ' + ids.length, ''];
+      const lines = ['📊 Пользователей: ' + ids.length, '📈 Заходили: за 24 ч — ' + d1 + ', за 7 дн. — ' + d7 + ', за 30 дн. — ' + d30];
+      if (fresh) lines.push('🆕 Новых за 7 дней: ' + fresh);
+      if (unknown) lines.push('Нет данных об активности: ' + unknown + ' (появятся после следующего захода)');
+      lines.push('');
       const names = Object.keys(tree).sort((a, b) => tree[b].total - tree[a].total || a.localeCompare(b, 'ru'));
       for (const n of names) {
-        lines.push('🏛 ' + n + ': ' + tree[n].total);
+        lines.push('🏛 ' + n + ': ' + tree[n].total + ' (активны за 7 дн.: ' + tree[n].active + ')');
         for (const c of Object.keys(tree[n].courses).sort((a, b) => Number(a) - Number(b))) lines.push('   ' + c + ' курс: ' + tree[n].courses[c]);
       }
       const courses = Object.keys(total).sort((a, b) => Number(a) - Number(b));

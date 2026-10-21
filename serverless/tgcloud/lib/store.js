@@ -25,6 +25,16 @@ export async function saveUser(id, patch) {
   return u;
 }
 
+const TOUCH_MS = 600000;
+
+// Отмечает активность пользователя (не чаще раза в 10 минут): seen — последний заход, since — первый
+export async function touch(id) {
+  const u = await getUser(id);
+  const now = Date.now();
+  if (u.seen && now - u.seen < TOUCH_MS) return u;
+  return saveUser(id, { seen: now, since: u.since || now });
+}
+
 const hwKey = (c, s) => 'hw:' + c + '_' + s;
 export const loadHw = (c, s) => get(hwKey(c, s), {});
 export const saveHw = (c, s, d) => set(hwKey(c, s), d);

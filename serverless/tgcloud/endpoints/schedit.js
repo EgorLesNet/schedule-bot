@@ -58,7 +58,10 @@ export default endpoint(async (input, u) => {
   } else if (a === 'rename') {
     if (!orig) throw bad();
     const to = String(input.to || '').trim().slice(0, 100);
-    if (to && to !== orig) sr[orig] = to; else delete sr[orig];
+    if (to && to !== orig) {
+      sr[orig] = to;
+      note = '✏️ Предмет переименован: ' + orig + ' → ' + to;
+    } else delete sr[orig];
   } else {
     changed = false;
   }

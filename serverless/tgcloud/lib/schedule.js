@@ -5,6 +5,7 @@ import { BASE, API_TREE, TTL, NL } from './config.js';
 import { human } from './time.js';
 import { langLessons } from './lang.js';
 import { parseSchedule } from './faculties.js';
+import { announceFileChanges } from './changes.js';
 
 const LUNCH = /обед|перерыв/i;
 const ONLINE = ['онлайн', 'online', 'zoom', 'teams', 'вебинар', 'webinar', 'дистанционно', 'удаленно', 'remote', 'ссылка', 'конференция', 'conference', 'meet', 'meeting'];
@@ -104,6 +105,9 @@ export async function loadEvents(course, stream, force = false) {
     try {
       text = await getText(BASE + '/' + info.file.split('/').map(encodeURIComponent).join('/'));
       await store.set(ck, { at: Date.now(), text });
+      if (c && c.text && c.text !== text) {
+        try { await announceFileChanges(course, stream, c.text, text); } catch (e) {}
+      }
     } catch (e) {
       if (c) text = c.text; else return [];
     }
