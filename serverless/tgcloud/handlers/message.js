@@ -2,7 +2,7 @@ import { api } from 'sdk';
 import * as store from '../lib/store.js';
 import { send } from '../lib/bot.js';
 import { sendReminders } from '../lib/remind.js';
-import { allEntries } from '../lib/schedule.js';
+import { allEntries, loadEvents } from '../lib/schedule.js';
 import { syncExisting } from '../lib/hwsync.js';
 import { inviteView } from '../lib/invite.js';
 import { attachmentOf, addInbox } from '../lib/files.js';
@@ -15,6 +15,7 @@ const ADMIN_HELP = [
   'Расписание, ДЗ и настройки — в приложении. В чате доступны:',
   '/alerts - уведомления об изменениях расписания (вкл/выкл)',
   '', 'Админ:', '/stats - статистика', '/announce текст - рассылка всем', '/assistant add @user, /assistant del @user, /assistants',
+  '/refresh - перечитать расписание из GitHub, не дожидаясь часа',
   '/remind_now, /synchw', '/setmenu - кнопка приложения, описание бота и список команд',
 ].join(NL);
 
@@ -46,6 +47,24 @@ export default async function (message) {
     }
     case '/help':
       return store.isAdmin(uname) ? send(chat, ADMIN_HELP) : invite();
+    case '/refresh': {
+      if (!store.isAdmin(uname)) return deny();
+      // Список файлов перечитываем сразу, затем каждый файл (с рассылкой уведомлений об изменениях); не дольше 20 секунд за раз
+      const before = (await allEntries()).length;
+      const list = await allEntries(true);
+      const t0 = Date.now();
+      let done = 0;
+      for (const e of list) {
+        if (Date.now() - t0 > 20000) break;
+        try {
+          const c = await store.get('cache:ics:' + e.file);
+          if (c && Date.now() - c.at < 120000) { done++; continue; }
+          await loadEvents(e.course, e.key, true);
+          done++;
+        } catch (err) {}
+      }
+      return send(chat, '🔄 Расписание обновлено' + NL + 'Файлов в списке: ' + list.length + ' (было в кэше: ' + before + ')' + NL + 'Перечитано: ' + done + ' из ' + list.length + (done < list.length ? NL + 'Не все успели, повторите /refresh через минуту.' : ''));
+    }
     case '/synchw': {
       if (!store.isAdmin(uname)) return deny();
       if (!user.course) return send(chat, 'Сначала выберите расписание в приложении.');
