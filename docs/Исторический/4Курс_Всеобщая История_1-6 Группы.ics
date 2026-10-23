@@ -1,0 +1,2605 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Raspisanie_4_kurs_Vseobshchaya_istoriya_gruppy_1-6.i
+ cs//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — История (Всеобщая истори
+ я), 4 курс, группы 1–6
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:d49d62f08a85516c4f7b31e4682e00b1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T093000
+DTEND;TZID=Europe/Moscow:20260907T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:83523b6cef6e833856ee0e7c825928cd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T111000
+DTEND;TZID=Europe/Moscow:20260907T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:0c4b09424c0193563906d2de241334fc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T093000
+DTEND;TZID=Europe/Moscow:20260914T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:62f1d437c763c6dbef91dbe77d47eaf2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T111000
+DTEND;TZID=Europe/Moscow:20260914T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:dbcb4b5798a9805d88d57e8b19ee434c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T093000
+DTEND;TZID=Europe/Moscow:20260921T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:f8f92ae37951e62e4efcc5ad6c60995d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T111000
+DTEND;TZID=Europe/Moscow:20260921T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:ae748fadb9793cd700a49c553d3f450a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T093000
+DTEND;TZID=Europe/Moscow:20260928T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:a1f5a4ee0a4f96fdcd5b37e08880616c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T111000
+DTEND;TZID=Europe/Moscow:20260928T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:08df4ef58d4d2d352c5da5b8ba02467a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T093000
+DTEND;TZID=Europe/Moscow:20261005T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:a0e33b85cf57ef7b2ba0d90d263485b1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T111000
+DTEND;TZID=Europe/Moscow:20261005T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:77d9b37ea3927bb2bd9cf8a26e74c4f8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T093000
+DTEND;TZID=Europe/Moscow:20261012T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:7333fc437a22628e94ce044e02e33bf3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T111000
+DTEND;TZID=Europe/Moscow:20261012T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:78d9716464599dbce56dbfe844e3bfd6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T093000
+DTEND;TZID=Europe/Moscow:20261019T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:b568050121a105bc876df24c4339cce5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T111000
+DTEND;TZID=Europe/Moscow:20261019T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:405e7a0b7f5c999c25ab3e759f223d48@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T093000
+DTEND;TZID=Europe/Moscow:20261026T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:21553ce640206e48280fbdd0394f9a5c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T111000
+DTEND;TZID=Europe/Moscow:20261026T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:e018807653b4d37d770690248e539925@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T093000
+DTEND;TZID=Europe/Moscow:20261102T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:aec0be93cb9b1840a29474da41beb97d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T111000
+DTEND;TZID=Europe/Moscow:20261102T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:2b52d30476490559bdd73063e989b233@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T093000
+DTEND;TZID=Europe/Moscow:20261109T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:0024f15246f5c64e6eef92c74781200b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T111000
+DTEND;TZID=Europe/Moscow:20261109T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:819c344b0952e0cd4f8aa8d772559c04@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T093000
+DTEND;TZID=Europe/Moscow:20261116T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:334733a194944eda348e3b5ccc18bdc1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T111000
+DTEND;TZID=Europe/Moscow:20261116T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:052502942ea57abc77dc2da976c50ba9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T093000
+DTEND;TZID=Europe/Moscow:20261123T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:6cf74b18eb842218e7b9569547ae4b16@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T111000
+DTEND;TZID=Europe/Moscow:20261123T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:98093dda6d152fe0ef6fb8ec49dc03da@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T093000
+DTEND;TZID=Europe/Moscow:20261130T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:6300bb6011550b6c6b983c279fc3c11a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T111000
+DTEND;TZID=Europe/Moscow:20261130T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:c5a859db881b0a5e98529d250ad4c18f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T093000
+DTEND;TZID=Europe/Moscow:20261207T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:79046efc68fa6a3d22242f683cee8816@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T111000
+DTEND;TZID=Europe/Moscow:20261207T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:a0caf466bf070e8fc4b33eb2c49d6816@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T093000
+DTEND;TZID=Europe/Moscow:20261214T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:579c5661b2e460726df8b262661b83af@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T111000
+DTEND;TZID=Europe/Moscow:20261214T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:3949f45d03b597d79176a7c83e66bb1b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T093000
+DTEND;TZID=Europe/Moscow:20261221T110000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:bf0c9e741e5dcace68a82721668bbb85@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T111000
+DTEND;TZID=Europe/Moscow:20261221T124000
+SUMMARY:Актуальные проблемы XX века
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Сергеев Е. Ю.\; Шаци
+ лло В.К.\nФорма контроля: Зачет\nОбъём: 32 ч
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:429915469ba14829613a6cc8b1554c3c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T131000
+DTEND;TZID=Europe/Moscow:20260907T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e14605489e14ce863a14669ead9e934@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T131000
+DTEND;TZID=Europe/Moscow:20260914T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6d7daeca6223ec19bd32baad080701d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T131000
+DTEND;TZID=Europe/Moscow:20260921T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7e8b33a71940041ca2bd7fef216625a4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T131000
+DTEND;TZID=Europe/Moscow:20260928T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5e87e8420af294d6446ac1d18c41cdf3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T131000
+DTEND;TZID=Europe/Moscow:20261005T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0987011d21f0c47309eca280eec047d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T131000
+DTEND;TZID=Europe/Moscow:20261012T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:57b77f47c1687115bd99fce8ef9bf15a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T131000
+DTEND;TZID=Europe/Moscow:20261019T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:33c9ddd2607598b4a1bed8f26a381efe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T131000
+DTEND;TZID=Europe/Moscow:20261026T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:be0ec2b7515791d8e4775f16d90d1d80@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T131000
+DTEND;TZID=Europe/Moscow:20261102T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c5aeb2898847ecb690faee01107be37@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T131000
+DTEND;TZID=Europe/Moscow:20261109T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9a0d01ff00a32874a3a3225d0e5fc3e8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T131000
+DTEND;TZID=Europe/Moscow:20261116T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e76aa4d6d37576e1f287a51aa1921b4d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T131000
+DTEND;TZID=Europe/Moscow:20261123T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:83eb590f4d9bb89f98c23fa35d4ac2c5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T131000
+DTEND;TZID=Europe/Moscow:20261130T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:960d10f026e4d825357c88ab573737c6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T131000
+DTEND;TZID=Europe/Moscow:20261207T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f63b12e7a408cabebe5dc13f0877464@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T131000
+DTEND;TZID=Europe/Moscow:20261214T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:af206fba8ed8d818e7125f43ad09474d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T131000
+DTEND;TZID=Europe/Moscow:20261221T144000
+SUMMARY:История России XX в.
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0b80008e3ac858a2d6ae0ca7a9fdecbd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T110000
+DTEND;TZID=Europe/Moscow:20260901T123000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:eb6609fccee685ed52dd867fa3abff6b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T124000
+DTEND;TZID=Europe/Moscow:20260901T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:89ed1bc2e4c1ed626472f480f5e47370@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T110000
+DTEND;TZID=Europe/Moscow:20260908T123000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:c062e001c260d4d635d327996037fecc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T124000
+DTEND;TZID=Europe/Moscow:20260908T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:47b20a2e15812e48f6a027783d0ae1fd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T110000
+DTEND;TZID=Europe/Moscow:20260915T123000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:048640518f9679dfa801e9456477d428@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T124000
+DTEND;TZID=Europe/Moscow:20260915T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:8977e7876a6639a8b0d4cd772ff2b9e3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T110000
+DTEND;TZID=Europe/Moscow:20260922T123000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:fe96d57ea162b28d7a5760ef13401174@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T124000
+DTEND;TZID=Europe/Moscow:20260922T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:868d4442de3d2bb42d35420669fb2308@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T110000
+DTEND;TZID=Europe/Moscow:20260929T123000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:9ef0a5f4cb7ac0bf15e2862af71ecbb3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T124000
+DTEND;TZID=Europe/Moscow:20260929T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ЦЭМИ РАН 1922
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nТо
+ лько в сентябре
+END:VEVENT
+BEGIN:VEVENT
+UID:197ee93500d70f0c8667f432ed1d0782@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T090000
+DTEND;TZID=Europe/Moscow:20260909T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:46cdc8a821819f03a868d1fbe3831354@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T090000
+DTEND;TZID=Europe/Moscow:20260916T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f0cd954f9ac92743eb35897db5ef761c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T090000
+DTEND;TZID=Europe/Moscow:20260923T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4533a0288cece9c02242e144e4087b45@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T090000
+DTEND;TZID=Europe/Moscow:20260930T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bf15d4af6d251ddce08fb1f2adf274aa@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T090000
+DTEND;TZID=Europe/Moscow:20261007T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9baaea6b8f4010dfdac86a821642b76f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T090000
+DTEND;TZID=Europe/Moscow:20261014T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:45b6a9db7dce44826b2cbc16e725db8a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T090000
+DTEND;TZID=Europe/Moscow:20261021T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ee1bc315ae8a61e981c1732da61fb7fd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T090000
+DTEND;TZID=Europe/Moscow:20261028T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f8128865d5ef51be7acf615facd75753@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T090000
+DTEND;TZID=Europe/Moscow:20261111T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:237fad67876aae16c41cce4fb85ea98f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T090000
+DTEND;TZID=Europe/Moscow:20261118T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1000aea9a066eb1f2c677a4136dc9df1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T090000
+DTEND;TZID=Europe/Moscow:20261125T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0180cc30fabdcb4cb412be1032e8e78f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T090000
+DTEND;TZID=Europe/Moscow:20261202T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d70ec653e1ebb60477578054ba276c72@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T090000
+DTEND;TZID=Europe/Moscow:20261209T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c659ec2a556c6345a2cfd021835282e4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T090000
+DTEND;TZID=Europe/Moscow:20261216T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:92438d73742e467a1c1b2c6365515499@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T090000
+DTEND;TZID=Europe/Moscow:20261223T103000
+SUMMARY:История государства и права
+LOCATION:ИнСЛ РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Марей А. В.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.\nС 9 с
+ ентября
+END:VEVENT
+BEGIN:VEVENT
+UID:b138be3c8d86408e4271b5729af86b45@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T104000
+DTEND;TZID=Europe/Moscow:20260902T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:80d92e9cc6a4e3192729457b8a810df9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T124000
+DTEND;TZID=Europe/Moscow:20260902T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:b32633f49bb31e7f87abbe2720da1274@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T104000
+DTEND;TZID=Europe/Moscow:20260909T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:2315968ce9e162e082a27e55da339201@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T124000
+DTEND;TZID=Europe/Moscow:20260909T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:b3395ce25354e60a27a6645b62db7aea@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T104000
+DTEND;TZID=Europe/Moscow:20260916T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bea816eb28fe07bb325c92b77ba43f97@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T124000
+DTEND;TZID=Europe/Moscow:20260916T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:6b29c6a2a1dae001ced1d401904a7ea8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T104000
+DTEND;TZID=Europe/Moscow:20260923T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1586e5ea3421f46b15ccf634aa7dacd0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T124000
+DTEND;TZID=Europe/Moscow:20260923T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:938c53c54687bb35c0f6675f3da9e20b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T104000
+DTEND;TZID=Europe/Moscow:20260930T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1e9eb04de8b8eb7a70406df7137263e3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T124000
+DTEND;TZID=Europe/Moscow:20260930T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:566aed6b55a81d082709c0d56faa47bc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T104000
+DTEND;TZID=Europe/Moscow:20261007T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ebe72a9b782e98fe3c7fa178ebed3adc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T124000
+DTEND;TZID=Europe/Moscow:20261007T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:33028dea37e264f2928b4a6cc9c8403c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T104000
+DTEND;TZID=Europe/Moscow:20261014T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:a03368c5293285a0898a61ad5f5d8b0f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T124000
+DTEND;TZID=Europe/Moscow:20261014T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7db51831c8b0fdfebbf789086b853d30@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T104000
+DTEND;TZID=Europe/Moscow:20261021T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:04184ada0c33d71e638b3e2fac34acf9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T124000
+DTEND;TZID=Europe/Moscow:20261021T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:62d5d2df756499f506ef633c22e1d56f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T104000
+DTEND;TZID=Europe/Moscow:20261028T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:861e439f6fa90bfb20c84d2f198b188b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T124000
+DTEND;TZID=Europe/Moscow:20261028T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9a2f14f71b07aee0a582081a8203fd93@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T104000
+DTEND;TZID=Europe/Moscow:20261111T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9df08b42aff8f2812fd1fd02eda6d5db@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T124000
+DTEND;TZID=Europe/Moscow:20261111T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e01a584046922f8a9140dd695f8e1db3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T104000
+DTEND;TZID=Europe/Moscow:20261118T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1c8c8aa9520349c19283954256405b1e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T124000
+DTEND;TZID=Europe/Moscow:20261118T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:85df4f83978413ff8330bd3a36bb24e6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T104000
+DTEND;TZID=Europe/Moscow:20261125T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:421d07485a13bf824b7e8fc5c03dd409@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T124000
+DTEND;TZID=Europe/Moscow:20261125T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c4712b8f0fe1bfff324057863a20c94c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T104000
+DTEND;TZID=Europe/Moscow:20261202T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:73a0342a3a970076d27de231ce661dca@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T124000
+DTEND;TZID=Europe/Moscow:20261202T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:2b1c8819fbfb24fe6762c036dd13bd9e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T104000
+DTEND;TZID=Europe/Moscow:20261209T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5b60710b7e23c3ba29cce2ac43d5d575@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T124000
+DTEND;TZID=Europe/Moscow:20261209T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:83a06c979dd7afd60551113b3378470d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T104000
+DTEND;TZID=Europe/Moscow:20261216T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9fb43eefb1e3ca1e29925c179ec97d2d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T124000
+DTEND;TZID=Europe/Moscow:20261216T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:3af326cf55a1c5c570be3ff166e70d3d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T104000
+DTEND;TZID=Europe/Moscow:20261223T121000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c17442df4cd675de371d961d827029af@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T124000
+DTEND;TZID=Europe/Moscow:20261223T141000
+SUMMARY:История стран Латинской Америки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Щелчков А.А.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 68 ч.\nС 2 
+ сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d8730d94b92a19d44bbb19450ccbd10f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T142000
+DTEND;TZID=Europe/Moscow:20260909T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:4446025faa2f96baf2ee3c8ee88c6e38@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T142000
+DTEND;TZID=Europe/Moscow:20260916T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3de11dff77ad950acf98d129701e44d9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T142000
+DTEND;TZID=Europe/Moscow:20260923T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:f0ac4a0628286e8fbd6ffac6e1a445d5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T142000
+DTEND;TZID=Europe/Moscow:20260930T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:43b8770ca2645d4b542f3931d49831ab@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T142000
+DTEND;TZID=Europe/Moscow:20261007T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:6adfceae5d1105e413b1d2d062e8ce4f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T142000
+DTEND;TZID=Europe/Moscow:20261014T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:097ede320081409f681522a72046d469@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T142000
+DTEND;TZID=Europe/Moscow:20261021T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:4a73721afa60f45a2987269478aba629@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T142000
+DTEND;TZID=Europe/Moscow:20261028T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:d977c9fa81a097d6e8feb7a05dae1fba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T142000
+DTEND;TZID=Europe/Moscow:20261111T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:022d56371d20ea2b2398c998b342387a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T142000
+DTEND;TZID=Europe/Moscow:20261118T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:14da2cce89463216316d41390ea9f27c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T142000
+DTEND;TZID=Europe/Moscow:20261125T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:fcededefa701b3d60f8695e5355dede3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T142000
+DTEND;TZID=Europe/Moscow:20261202T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:2b58cfbd7018f9ceafdfb0557247fa9b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T142000
+DTEND;TZID=Europe/Moscow:20261209T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:f7eab1f0619d8f710517dcc7474e2b67@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T142000
+DTEND;TZID=Europe/Moscow:20261216T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:b10bd3e490278600feee104632d1fc1f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T142000
+DTEND;TZID=Europe/Moscow:20261223T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:bdae6e620ae99cd2e09f755c050883cc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T160000
+DTEND;TZID=Europe/Moscow:20260902T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4d427ee6d8347a1242cc480616fb3cb2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T160000
+DTEND;TZID=Europe/Moscow:20260909T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:dd626b2153b609e2bc42042ce8b5d527@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T160000
+DTEND;TZID=Europe/Moscow:20260916T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d964bc259a02e1b2e345cf3d06866d3e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T160000
+DTEND;TZID=Europe/Moscow:20260923T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:42dab3675fb31e17ec49c60e23397a58@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T160000
+DTEND;TZID=Europe/Moscow:20260930T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e46c948d20635c9122556d9ec90077cc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T160000
+DTEND;TZID=Europe/Moscow:20261007T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e49487849162e54cb0547c844803c700@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T160000
+DTEND;TZID=Europe/Moscow:20261014T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:3dc042a5a17f45330c869df4a846029b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T160000
+DTEND;TZID=Europe/Moscow:20261021T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d4bd97058a00c9c76431b2e3d2cc577d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T160000
+DTEND;TZID=Europe/Moscow:20261028T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:677d26a5e405557547dfe460c4bda90e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T160000
+DTEND;TZID=Europe/Moscow:20261111T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:384b3e39e611e2b620d138570c932a5a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f5938529f20318e007cf459b6b2809a8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T160000
+DTEND;TZID=Europe/Moscow:20261125T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0203dd33e8f86dd636a47f0ecf06db23@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T160000
+DTEND;TZID=Europe/Moscow:20261202T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:fa2df3e218169e612f2421842b4bd3b4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T160000
+DTEND;TZID=Europe/Moscow:20261209T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:792dd86de871148ad1630a351df8dc41@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T160000
+DTEND;TZID=Europe/Moscow:20261216T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f628842c73aa37e93d7796a7f60b1a89@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T160000
+DTEND;TZID=Europe/Moscow:20261223T173000
+SUMMARY:Основы цивилизации США XIX–XX веков
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Петров А.Ю.\nФорма к
+ онтроля: Экзамен\nОбъём: 54 ч.\nС 2 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0afe6b5b9901d6bec08d0562f6000c69@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T100000
+DTEND;TZID=Europe/Moscow:20260903T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:021bb20ca1bc18d3be07ddd4d6f33ad2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T124000
+DTEND;TZID=Europe/Moscow:20260903T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4403c63566c76c08c332e9b6b230cd28@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T142000
+DTEND;TZID=Europe/Moscow:20260903T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:00bb1a5061748868c3bc271de7739ab1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T100000
+DTEND;TZID=Europe/Moscow:20260910T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:07fe181b8fccf937ebff7e6d1acdd01e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T124000
+DTEND;TZID=Europe/Moscow:20260910T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b7dbdfaff86a77feb555ebfa327d0b27@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T142000
+DTEND;TZID=Europe/Moscow:20260910T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d162abee1021fd07daa481985e906a34@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e1f38703130dd577fa57817a248c1ac0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T124000
+DTEND;TZID=Europe/Moscow:20260917T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b7445e50d33e9f20558425340b0820d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T142000
+DTEND;TZID=Europe/Moscow:20260917T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a5541b1053cb17ec214d0bc2825392cc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T100000
+DTEND;TZID=Europe/Moscow:20260924T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b7d61bd13f701e85a9e457569fa241a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T124000
+DTEND;TZID=Europe/Moscow:20260924T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bbdcb153ae0d4a34de7f8b49dadac35c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T142000
+DTEND;TZID=Europe/Moscow:20260924T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a9ccf90a8c1e869bc78424afe6c72896@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:76583974d5510cd26a268b2c0c33563a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T124000
+DTEND;TZID=Europe/Moscow:20261001T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0dae59d664ac036e237014f287592da7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T142000
+DTEND;TZID=Europe/Moscow:20261001T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d4c2014a64b14ce6fcc0a6755d814ffa@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:652bd71fa7d1213ca557016a3d0d3d4d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T124000
+DTEND;TZID=Europe/Moscow:20261008T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:173a88db98ed30de581fe60a1f8e49da@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T142000
+DTEND;TZID=Europe/Moscow:20261008T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:73c83c5a6d568d8e6bcf4c7b0ebe6588@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T100000
+DTEND;TZID=Europe/Moscow:20261015T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:330d74cee417f5b6cf198d0fced0a9fa@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T124000
+DTEND;TZID=Europe/Moscow:20261015T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:914fab144de2ba115f96cb1fefe3fc49@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T142000
+DTEND;TZID=Europe/Moscow:20261015T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d7e99df47fdd382894c85e42c783fd74@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T100000
+DTEND;TZID=Europe/Moscow:20261022T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:34835b565eb3505350279c8a0d804daf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T124000
+DTEND;TZID=Europe/Moscow:20261022T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e8f39babb3f01fa4d15b74493dbc15dc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T142000
+DTEND;TZID=Europe/Moscow:20261022T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:491d3696867c7e9edc471c708e5899b4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T100000
+DTEND;TZID=Europe/Moscow:20261029T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c09e91a4d28012c3938866babdcf1b57@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T124000
+DTEND;TZID=Europe/Moscow:20261029T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:528f3281fc609b65a01364af00cf4cc7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T142000
+DTEND;TZID=Europe/Moscow:20261029T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0ecd76db79f4b43d35e56035b453c974@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T100000
+DTEND;TZID=Europe/Moscow:20261105T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7cda59976ac022731d303e538420331a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T124000
+DTEND;TZID=Europe/Moscow:20261105T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5d5701fbfa63255dce46c4ee52b453a5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T142000
+DTEND;TZID=Europe/Moscow:20261105T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0602bfb92f4e61b612904acc88baf76d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T100000
+DTEND;TZID=Europe/Moscow:20261112T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5694889ffd8e022f90e7d9a49a5b1e59@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T124000
+DTEND;TZID=Europe/Moscow:20261112T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:987113700346679f519e211ccfc305b6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T142000
+DTEND;TZID=Europe/Moscow:20261112T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7a79f9381136b488e888a5e6289e1524@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T100000
+DTEND;TZID=Europe/Moscow:20261119T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4b02a4ac66c7e27220b8233f626b9176@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T124000
+DTEND;TZID=Europe/Moscow:20261119T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:074750aec6723fb08b878fad031ffcea@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T142000
+DTEND;TZID=Europe/Moscow:20261119T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ae81e515b5579cafcad21715c90b1af1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T100000
+DTEND;TZID=Europe/Moscow:20261126T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c89f610ed1f5a90eb576bd7fc49d85e6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T124000
+DTEND;TZID=Europe/Moscow:20261126T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:41983b06a7324288ef8712e85b73f8ef@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T142000
+DTEND;TZID=Europe/Moscow:20261126T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7d2b6882aebb975f70dba0a0b75c62c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T100000
+DTEND;TZID=Europe/Moscow:20261203T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:66e4328530e069baf18cac86f5ae6c2c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T124000
+DTEND;TZID=Europe/Moscow:20261203T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a56620226ff4162e114e1764474a4f53@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T142000
+DTEND;TZID=Europe/Moscow:20261203T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a09f87ee60bf5a7bb7135526e03d55be@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T100000
+DTEND;TZID=Europe/Moscow:20261210T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8b0f6950603ac1ab69b5f99d1f87d185@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T124000
+DTEND;TZID=Europe/Moscow:20261210T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3ae6c7b67525878508ffd9b3d60831d4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T142000
+DTEND;TZID=Europe/Moscow:20261210T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:567fc1fa6518583c699461d400d1f366@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T100000
+DTEND;TZID=Europe/Moscow:20261217T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0fc220c4cd5aadd158460f83eaab1f19@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T124000
+DTEND;TZID=Europe/Moscow:20261217T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:59cadbb3670da6884ffc28f761d42965@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T142000
+DTEND;TZID=Europe/Moscow:20261217T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c6f958c326c17038db1ad62e158a405@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T100000
+DTEND;TZID=Europe/Moscow:20261224T113000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:635d570ff014985aab68476ba3c6053e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T124000
+DTEND;TZID=Europe/Moscow:20261224T141000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a40300abe128a92a12be9a8f93b9b7b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T142000
+DTEND;TZID=Europe/Moscow:20261224T155000
+SUMMARY:История западных и южных славян Ист
+ ория Новейшего времени (ТРИ ПАРЫ)
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю Гиго
+ лаев Г.Е.\nФорма контроля: Зачет Зачет с о
+ ценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfcb6cd9dd40f6585c3fa40f48b77d5a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T090000
+DTEND;TZID=Europe/Moscow:20260904T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9778e8b4a85d0b0698b848ad24e127e5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T104000
+DTEND;TZID=Europe/Moscow:20260904T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:71423ab527fd737013c5812b795a75a0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T124000
+DTEND;TZID=Europe/Moscow:20260904T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c257bc67d69551df32da6b9d17f85bb0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T090000
+DTEND;TZID=Europe/Moscow:20260911T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:22064798be6d858f4e2971657d566a5b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T104000
+DTEND;TZID=Europe/Moscow:20260911T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9776e92ecbfb2235f0af1a402878411b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T124000
+DTEND;TZID=Europe/Moscow:20260911T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0db787a429f20c823b989ecb5c6b5b2d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T090000
+DTEND;TZID=Europe/Moscow:20260918T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4b0c7a8863eb8acaf73b2a22cd18068b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T104000
+DTEND;TZID=Europe/Moscow:20260918T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fbe9264044491afad27fd61b61ea9a1c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T124000
+DTEND;TZID=Europe/Moscow:20260918T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:50729f69ad85c3d649079d737881a705@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T090000
+DTEND;TZID=Europe/Moscow:20260925T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a040eed3eab64bf334be1231a0799b91@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T104000
+DTEND;TZID=Europe/Moscow:20260925T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0b56f45e3d90dba0832c07bdf12e9786@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T124000
+DTEND;TZID=Europe/Moscow:20260925T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ec1bf15e1ac34f6d56139776cd50d816@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T090000
+DTEND;TZID=Europe/Moscow:20261002T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cd60011e65321894e5c38e56b5e85f61@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T104000
+DTEND;TZID=Europe/Moscow:20261002T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:83bbcfe0d42cb5ee49be556fa400a8f7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T124000
+DTEND;TZID=Europe/Moscow:20261002T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9a51846e897d98fa89015e0d09cfeffa@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T090000
+DTEND;TZID=Europe/Moscow:20261009T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:620a0fc8db5ee02c68b5797d40b09b81@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T104000
+DTEND;TZID=Europe/Moscow:20261009T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:30f865fbd457c3c587a7ea527e68e963@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T124000
+DTEND;TZID=Europe/Moscow:20261009T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:74414946716848dbbc1be70db1fc69b3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T090000
+DTEND;TZID=Europe/Moscow:20261016T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9e831ba4b50d52b35811beee7637d8e1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T104000
+DTEND;TZID=Europe/Moscow:20261016T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bea6b00640988aee6e29c96a9aa82822@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T124000
+DTEND;TZID=Europe/Moscow:20261016T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:18461b454cae7f9f564db0649f0c2004@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T090000
+DTEND;TZID=Europe/Moscow:20261023T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7fc37a88d1e0175a40fc8633a67766bc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T104000
+DTEND;TZID=Europe/Moscow:20261023T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2d90dae05224e0e82b4af0831c8c0e85@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T124000
+DTEND;TZID=Europe/Moscow:20261023T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:96655ea84b116f7954ed15890ea1307c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T090000
+DTEND;TZID=Europe/Moscow:20261030T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ab8f2bed8a24486250d5f69acf6c00fc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T104000
+DTEND;TZID=Europe/Moscow:20261030T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8df11ac61e0527c1f4fd17e576d8d67f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T124000
+DTEND;TZID=Europe/Moscow:20261030T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9476e980edbb384058920adfa73ca81b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T090000
+DTEND;TZID=Europe/Moscow:20261106T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0a45e3585e82e51ed197d61f554c9a7a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T104000
+DTEND;TZID=Europe/Moscow:20261106T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:84ddea834c4cc54d6beee9289f6bbd86@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T124000
+DTEND;TZID=Europe/Moscow:20261106T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:177147f80c470379645d43ce63aa1c8b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T090000
+DTEND;TZID=Europe/Moscow:20261113T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8ece28bf54b2a41ef5b0babdf8a0050c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T104000
+DTEND;TZID=Europe/Moscow:20261113T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8f9da97a776b6094ff42a13a03e543e3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T124000
+DTEND;TZID=Europe/Moscow:20261113T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:27ba08592f797449c8427dae1c18eb78@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T090000
+DTEND;TZID=Europe/Moscow:20261120T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:412d38521a7ac13a801ff13b2f76ff55@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T104000
+DTEND;TZID=Europe/Moscow:20261120T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:387624443a5efe10ed5fc576f8c30629@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T124000
+DTEND;TZID=Europe/Moscow:20261120T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6e8cc4298d46ff08c5a16af92add462f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T090000
+DTEND;TZID=Europe/Moscow:20261127T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b1d8ab1bd38c65943a1d86685f5e2070@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T104000
+DTEND;TZID=Europe/Moscow:20261127T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:92c2f6765bdb0183031ada778bf35493@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T124000
+DTEND;TZID=Europe/Moscow:20261127T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:60ea1a2509e942ae968e92b7fe4c8566@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T090000
+DTEND;TZID=Europe/Moscow:20261204T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:91a9f368a4b6d7ccefa4f0ed1824c160@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T104000
+DTEND;TZID=Europe/Moscow:20261204T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c34ca556630b17b023b37abbbe7cbd82@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T124000
+DTEND;TZID=Europe/Moscow:20261204T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:04339845596b726c058320427a0d47a1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T090000
+DTEND;TZID=Europe/Moscow:20261211T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:eead8ff637e740f5680a066c803a7bff@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T104000
+DTEND;TZID=Europe/Moscow:20261211T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f311a5f57b2aa429510735c2b8bcf26@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T124000
+DTEND;TZID=Europe/Moscow:20261211T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f4112b3220a2f2e55b136acec4cc8f3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T090000
+DTEND;TZID=Europe/Moscow:20261218T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:956f6eea6be35f09f634a3698d7b7cfc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T104000
+DTEND;TZID=Europe/Moscow:20261218T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bf9e4f58e47b7dd68cb064515d89ac0e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T124000
+DTEND;TZID=Europe/Moscow:20261218T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d5d3ddbb35e80dc16bd4a4baf252cbb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T090000
+DTEND;TZID=Europe/Moscow:20261225T103000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:93a565a3cd7bbbf5d26a93b8515418b4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T104000
+DTEND;TZID=Europe/Moscow:20261225T121000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f78ebc7a0d78b868a4586901ce0bc3c8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T124000
+DTEND;TZID=Europe/Moscow:20261225T141000
+SUMMARY:История России XX в. (ТРИ ПАРЫ)
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Бахтурина А.Ю.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 134 ч.
+END:VEVENT
+END:VCALENDAR
