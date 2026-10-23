@@ -9,6 +9,9 @@ const D = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const T = /^[0-9]{2}:[0-9]{2}$/;
 const bad = () => new EndpointError('bad input');
 const dm = (d) => d.slice(8) + '.' + d.slice(5, 7);
+const LOG_MAX = 200;
+const LOG_SHOW = 50;
+const who = (u) => (u.username ? '@' + u.username : ([u.first_name, u.last_name].filter(Boolean).join(' ') || 'id' + u.id));
 
 export default endpoint(async (input, u) => {
   const user = await store.getUser(u.id);
@@ -26,6 +29,7 @@ export default endpoint(async (input, u) => {
   const evKey = orig + '[' + start + ']';
   let changed = true;
   let note = '';
+  let logText = '';
 
   if (a === 'cancel' || a === 'move') {
     if (!orig || !D.test(date) || !T.test(start)) throw bad();
@@ -34,6 +38,7 @@ export default endpoint(async (input, u) => {
     if (a === 'cancel') {
       se[date][evKey] = { deleted: true };
       note = '❌ Пара отменена: ' + title + NL + dm(date) + ' в ' + start;
+      logText = '❌ Отмена: ' + title + ', ' + dm(date) + ' ' + start;
     } else {
       const nd = String(input.newDate || '');
       const ns = String(input.newStart || '');
@@ -45,10 +50,12 @@ export default endpoint(async (input, u) => {
       se[nd][nk] = { new: true, new_summary: title, new_desc: desc, start_time: ns, end_time: ne };
       se[date][evKey] = { deleted: true, moved_to: nd + '|' + nk };
       note = '↪️ Пара перенесена: ' + title + NL + 'Было: ' + dm(date) + ' ' + start + NL + 'Стало: ' + dm(nd) + ' ' + ns + '–' + ne;
+      logText = '↪️ Перенос: ' + title + ', ' + dm(date) + ' ' + start + ' → ' + dm(nd) + ' ' + ns + '–' + ne;
     }
   } else if (a === 'undo') {
     const ev = String(input.ev || '');
     const ed = se[date] && se[date][ev];
+    if (ed) logText = '↩️ Возврат: ' + ev.split('[')[0] + ', ' + dm(date);
     if (ed && ed.moved_to) {
       const i = ed.moved_to.indexOf('|');
       const d2 = ed.moved_to.slice(0, i);
@@ -62,16 +69,26 @@ export default endpoint(async (input, u) => {
     if (to && to !== orig) {
       sr[orig] = to;
       note = '✏️ Предмет переименован: ' + orig + ' → ' + to;
-    } else delete sr[orig];
+      logText = '✏️ Переименование: ' + orig + ' → ' + to;
+    } else {
+      if (sr[orig]) logText = '✏️ Сброс названия: ' + orig;
+      delete sr[orig];
+    }
   } else {
     changed = false;
   }
 
+  const lk = 'editlog:' + sk;
+  let lg = await store.get(lk, []);
   if (changed) {
     edits[sk] = se;
     ren[sk] = sr;
     await store.set('edits', edits);
     await store.set('renames', ren);
+    if (logText) {
+      lg = lg.concat([{ t: Date.now(), by: who(u), text: logText }]).slice(-LOG_MAX);
+      await store.set(lk, lg);
+    }
   }
 
   if (note) {
@@ -92,5 +109,5 @@ export default endpoint(async (input, u) => {
     }
   }
   list.sort((x, y) => x.date.localeCompare(y.date));
-  return { edits: list, renames: Object.entries(sr).map(([from, to]) => ({ from, to })) };
+  return { edits: list, renames: Object.entries(sr).map(([from, to]) => ({ from, to })), log: lg.slice(-LOG_SHOW).reverse() };
 });
