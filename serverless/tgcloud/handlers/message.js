@@ -5,6 +5,7 @@ import { sendReminders } from '../lib/remind.js';
 import { allEntries } from '../lib/schedule.js';
 import { syncExisting } from '../lib/hwsync.js';
 import { inviteView } from '../lib/invite.js';
+import { attachmentOf, addInbox } from '../lib/files.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DAY = 86400000;
@@ -18,7 +19,16 @@ const ADMIN_HELP = [
 ].join(NL);
 
 export default async function (message) {
-  if (!message.text || !message.from || message.chat.type !== 'private') return;
+  if (!message.from || message.chat.type !== 'private') return;
+  // Файл любого формата: запоминаем во «входящих», в ДЗ его прикрепляют в приложении
+  const att = attachmentOf(message);
+  if (att) {
+    await store.touch(message.from.id);
+    const first = await addInbox(message.from.id, att);
+    if (!first) return;
+    return send(message.chat.id, '📎 Файл получен: ' + att.name + NL + 'Откройте приложение, вкладку «ДЗ», и отметьте его при составлении задания. Файлы ждут там 7 дней.' + (att.kind === 'photo' ? NL + 'Совет: чтобы не терять качество, отправляйте фото как файл.' : ''));
+  }
+  if (!message.text) return;
   const chat = message.chat.id;
   const uname = message.from.username || '';
   const text = message.text.trim();

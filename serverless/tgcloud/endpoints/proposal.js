@@ -2,7 +2,8 @@ import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { loadEvents, toOriginal } from '../lib/schedule.js';
 import { LANG_NAME, langDates } from '../lib/lang.js';
-import { applyHw } from '../lib/hwsync.js';
+import { applyHw, applyFiles } from '../lib/hwsync.js';
+import { takeFromInbox, plain } from '../lib/files.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
 import { canEdit } from '../lib/roles.js';
@@ -45,10 +46,12 @@ export default endpoint(async (input, u) => {
     const lang = subject === LANG_NAME && (course === '1' || course === '2') && langDates(events, date).includes(date);
     if (!lang && !events.some((e) => e.date === date && e.summary === subject)) throw new EndpointError('no such lesson');
     const original = await toOriginal(course, stream, subject);
+    const ids = Array.isArray(input.files) ? input.files.slice(0, 10).map(String) : [];
+    const files = ids.length ? (await takeFromInbox(u.id, ids)).map(plain) : [];
     const id = Date.now().toString(36) + Math.floor(Math.random() * 1000).toString(36);
-    list.push({ id, uid: u.id, uname: u.username || '', subject, original, date, text, at: Date.now() });
+    list.push({ id, uid: u.id, uname: u.username || '', subject, original, date, text, files, at: Date.now() });
     await store.set(k, list);
-    await notifyAssistants(course, stream, '💡 Новое предложение ДЗ: ' + subject + ', ' + fmt(date) + NL + text.slice(0, 200) + NL + 'Откройте вкладку «ДЗ» в приложении.', u.id);
+    await notifyAssistants(course, stream, '💡 Новое предложение ДЗ: ' + subject + ', ' + fmt(date) + NL + text.slice(0, 200) + (files.length ? NL + '📎 Файлов: ' + files.length : '') + NL + 'Откройте вкладку «ДЗ» в приложении.', u.id);
   } else if (a === 'cancel') {
     list = list.filter((p) => !(p.id === input.id && p.uid === u.id));
     await store.set(k, list);
@@ -61,6 +64,7 @@ export default endpoint(async (input, u) => {
       if (a === 'approve') {
         const t = String(input.text || p.text).trim().slice(0, 1000) || p.text;
         await applyHw(course, stream, p.original, p.date, t);
+        if (p.files && p.files.length) await applyFiles(course, stream, p.original, p.date, 'add', p.files);
         try { await send(p.uid, '✅ Ваше ДЗ принято: ' + p.subject + ', ' + fmt(p.date)); } catch (e) {}
       } else {
         try { await send(p.uid, '❌ Ваше предложение по ' + p.subject + ' (' + fmt(p.date) + ') отклонено'); } catch (e) {}

@@ -1,5 +1,6 @@
 import * as store from './store.js';
 import { listSchedules, loadEvents } from './schedule.js';
+import { loadFiles, saveFiles, mergeFiles } from './files.js';
 
 const norm = (s) => String(s).trim().toLowerCase();
 
@@ -42,6 +43,22 @@ export async function applyHw(course, stream, original, date, text) {
     }
   } catch (e) {}
   return n;
+}
+
+// Вложения ДЗ: mode 'add' добавляет файлы к уже прикреплённым, 'clear' убирает все. Те же потоки-двойники, что и у текста ДЗ.
+export async function applyFiles(course, stream, original, date, mode, files) {
+  const targets = [{ stream, key: original + '|' + date }];
+  try {
+    const ctx = await loadAll(course);
+    for (const c of counterparts(ctx, stream, original, date)) targets.push({ stream: c.stream, key: c.original + '|' + date });
+  } catch (e) {}
+  for (const t of targets) {
+    const all = await loadFiles(course, t.stream);
+    if (mode === 'clear') delete all[t.key];
+    else all[t.key] = mergeFiles(all[t.key] || [], files);
+    await saveFiles(course, t.stream, all);
+  }
+  return targets.length - 1;
 }
 
 export async function syncExisting(course) {
