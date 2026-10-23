@@ -1,0 +1,3015 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Raspisanie_3_kurs_Arkheologiya_gruppy_1-4.ics//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — История (Археология), 3 ку
+ рс, группы 1–4
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:6cc7d01233544ece65aa671b3db046e9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T090000
+DTEND;TZID=Europe/Moscow:20260907T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0f75e5b24134866f4d93ccc0edecef6f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T104000
+DTEND;TZID=Europe/Moscow:20260907T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ca938560ca151a1b01c2e30d7b4f1c63@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T090000
+DTEND;TZID=Europe/Moscow:20260914T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4514d3e795da5a45aefca631895dd87d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T104000
+DTEND;TZID=Europe/Moscow:20260914T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:94d73326e84433af0a15b4724a44baee@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T090000
+DTEND;TZID=Europe/Moscow:20260921T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:880a9ee3ebc7f4b10252feaeba487232@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T104000
+DTEND;TZID=Europe/Moscow:20260921T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c96b78d79bb613c81101ae9b5db4f5a9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T090000
+DTEND;TZID=Europe/Moscow:20260928T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bd846cb1c72597462a027c6afc091811@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T104000
+DTEND;TZID=Europe/Moscow:20260928T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e152801b84a7cd5c3647d1d37c263ef6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T090000
+DTEND;TZID=Europe/Moscow:20261005T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:804fdc8227a49351a1615b995e105ac2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T104000
+DTEND;TZID=Europe/Moscow:20261005T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:108888e464b33c3d996aa73eea969162@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T090000
+DTEND;TZID=Europe/Moscow:20261012T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ff4b203dee423a0a9b37526c21c1f459@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T104000
+DTEND;TZID=Europe/Moscow:20261012T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e647526090141409d549e6e5aafe4aff@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T090000
+DTEND;TZID=Europe/Moscow:20261019T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:6b995a6e9351cf215aa5546b9f9ed390@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T104000
+DTEND;TZID=Europe/Moscow:20261019T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bd4301d95be02fb25d19b7ef8a1e0cfc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T090000
+DTEND;TZID=Europe/Moscow:20261026T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:6cede984f0472304c1ee807f1cf3555f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T104000
+DTEND;TZID=Europe/Moscow:20261026T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0ab49b37833573c489a6de4910a77c84@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T090000
+DTEND;TZID=Europe/Moscow:20261102T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7003d200cd78fa9c1f16e2325ff4bf41@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T104000
+DTEND;TZID=Europe/Moscow:20261102T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ae93df43f7966aba40e3547c2d3ee631@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T090000
+DTEND;TZID=Europe/Moscow:20261109T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:e6a53c197406995e0cf972c10629ff6b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T104000
+DTEND;TZID=Europe/Moscow:20261109T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4bd1fb0e4b943aa290bd18dfb48b8342@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T090000
+DTEND;TZID=Europe/Moscow:20261116T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5cc0b61dd1469cb8b00e9ee5a972b813@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T104000
+DTEND;TZID=Europe/Moscow:20261116T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f3f5c5f267bfaadfa3b8b182e586091d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T090000
+DTEND;TZID=Europe/Moscow:20261123T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:62e7a6cccdce5282eb4de6e0edff3139@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T104000
+DTEND;TZID=Europe/Moscow:20261123T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:89ffc9f07f1149e7a866a8df23a8e2e4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T090000
+DTEND;TZID=Europe/Moscow:20261130T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:431da500ec31325decbad128f3e0d48b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T104000
+DTEND;TZID=Europe/Moscow:20261130T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:2f80de56ee69c2ea4d39bb5b91b2d3d7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T090000
+DTEND;TZID=Europe/Moscow:20261207T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:2bd2062b2716cf48dc997cc6dcf382de@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T104000
+DTEND;TZID=Europe/Moscow:20261207T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0cdb0c88506cff8157df2986463d2538@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T090000
+DTEND;TZID=Europe/Moscow:20261214T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1a9d51e5c03ca820b92a15574ab83bed@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T104000
+DTEND;TZID=Europe/Moscow:20261214T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f2ef029010fbc607b2787a2f5a99829f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T090000
+DTEND;TZID=Europe/Moscow:20261221T103000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0feb700763d284351e857f0446e6c376@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T104000
+DTEND;TZID=Europe/Moscow:20261221T121000
+SUMMARY:История Нового времени
+LOCATION:Ректорат (Мароновский пер.\, 26)302
+DESCRIPTION:Преподаватель: Чудинов А.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.\nС 7-
+ го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:6727aa594f96e652565340a480f11c3a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T124000
+DTEND;TZID=Europe/Moscow:20260907T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:95a7a8dba19d95c2e768b1a6278dd4c3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T124000
+DTEND;TZID=Europe/Moscow:20260914T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bfddd750477e2a3649045228ba73867b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T124000
+DTEND;TZID=Europe/Moscow:20260921T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d802679e8764535d4c7db207ecf4aeb9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T124000
+DTEND;TZID=Europe/Moscow:20260928T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9712fa2cc89c95ec067b7b6ba772259b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T124000
+DTEND;TZID=Europe/Moscow:20261005T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:075785965c580927fe7bfd2c8ab60500@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T124000
+DTEND;TZID=Europe/Moscow:20261012T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:a0d02f5a4e1e2e632ab8bc4bb374c024@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T124000
+DTEND;TZID=Europe/Moscow:20261019T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:36ea4d03a9aa6154f090df929c1cbe13@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T124000
+DTEND;TZID=Europe/Moscow:20261026T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0d125465145d5f4a445b76e7b72db92b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T124000
+DTEND;TZID=Europe/Moscow:20261102T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:20745522c80887136975af78341f7ac0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T124000
+DTEND;TZID=Europe/Moscow:20261109T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:51c6784c9e8b0a532f669e905383abd3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T124000
+DTEND;TZID=Europe/Moscow:20261116T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5af00002134a9238316c05ee0bf79ef6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T124000
+DTEND;TZID=Europe/Moscow:20261123T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:42d9ab5c780543086270e2e2fdd18537@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T124000
+DTEND;TZID=Europe/Moscow:20261130T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7924bf4ebedd5b225aad1ee20022a063@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T124000
+DTEND;TZID=Europe/Moscow:20261207T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:8826da35bffaaa4f06478a55de0a7d76@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T124000
+DTEND;TZID=Europe/Moscow:20261214T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:f4ad092bbe8b45e661753a9fb289d941@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T124000
+DTEND;TZID=Europe/Moscow:20261221T141000
+SUMMARY:История Европейской культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.\nС
+  7-го сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:0e0c3dd3b0d5f7ff0cdb266c91c6096b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260907T142000
+DTEND;TZID=Europe/Moscow:20260907T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0bd8e8ff3913097f74ae614cc8a06983@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260914T142000
+DTEND;TZID=Europe/Moscow:20260914T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9b059eb2eece13da55da1d2084503c74@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260921T142000
+DTEND;TZID=Europe/Moscow:20260921T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e9451b8984cf412eb7992eb1966aa787@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260928T142000
+DTEND;TZID=Europe/Moscow:20260928T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b646c46e4b2b30212a28c4d30187b3c7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261005T142000
+DTEND;TZID=Europe/Moscow:20261005T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ae79372d59ef2a6b189c72bfa3c8c892@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261012T142000
+DTEND;TZID=Europe/Moscow:20261012T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:08e778cadea6cb5ca482977d46e797b1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261019T142000
+DTEND;TZID=Europe/Moscow:20261019T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ffa4ac5c890e790c050a6f9a24ea34c5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261026T142000
+DTEND;TZID=Europe/Moscow:20261026T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4945ec89238ad014e62c4c0b1e850317@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261102T142000
+DTEND;TZID=Europe/Moscow:20261102T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:071be46cd05c0a5fd0087edf8bd89e18@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261109T142000
+DTEND;TZID=Europe/Moscow:20261109T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6446ae999ba9ea7c28d458bb2c467f1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261116T142000
+DTEND;TZID=Europe/Moscow:20261116T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:00708ad77d6e3b069a7133b1b30418db@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261123T142000
+DTEND;TZID=Europe/Moscow:20261123T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:67ba2b6a82dfa23ef0f8318e6357a8fe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261130T142000
+DTEND;TZID=Europe/Moscow:20261130T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5545a5ec857a9d0896adac052fdd0c8a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261207T142000
+DTEND;TZID=Europe/Moscow:20261207T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:07958d95ea0063abaf368d6697eff148@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261214T142000
+DTEND;TZID=Europe/Moscow:20261214T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:23114657c9dd6b624b3e73ffdd59d2a5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261221T142000
+DTEND;TZID=Europe/Moscow:20261221T155000
+SUMMARY:История Отечественной культуры
+LOCATION:Ректорат (Мароновский пер.\, 26)МАЗ
+DESCRIPTION:Преподаватель: Гранцева Е.О.\nФорм
+ а контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fe0182941cd699119a158d312d196976@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T100000
+DTEND;TZID=Europe/Moscow:20260901T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fcdc583192d613529b0353dea892907a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T100000
+DTEND;TZID=Europe/Moscow:20260908T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5c4ca7bebf54342a69e87f0510f14b5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T100000
+DTEND;TZID=Europe/Moscow:20260915T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0344d2cf104b8e06b94934a9637b4bac@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T100000
+DTEND;TZID=Europe/Moscow:20260922T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:19b4e8c31b91f3025af9f19aedf30f5e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T100000
+DTEND;TZID=Europe/Moscow:20260929T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2b61b90f6556241fe207cf2410d7b6ee@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T100000
+DTEND;TZID=Europe/Moscow:20261006T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:607d2a9ecb59f08f20744c45c2516128@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T100000
+DTEND;TZID=Europe/Moscow:20261013T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:edf7896e1ac6eab27ea140835cf83b79@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T100000
+DTEND;TZID=Europe/Moscow:20261020T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d63eac10571363c0eedbda300e0d8651@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T100000
+DTEND;TZID=Europe/Moscow:20261027T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c9cf439fce4a54e970be57287120f7e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T100000
+DTEND;TZID=Europe/Moscow:20261103T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:39da0bfde225d7920ed45bb637c99b47@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T100000
+DTEND;TZID=Europe/Moscow:20261110T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:302f20fe1ba81d203b59756bf32bce15@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T100000
+DTEND;TZID=Europe/Moscow:20261117T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:db445c71621eb5079efdae27b46d4eba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T100000
+DTEND;TZID=Europe/Moscow:20261124T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a9624a50b3e4cd1d9f0c1e710366ba9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T100000
+DTEND;TZID=Europe/Moscow:20261201T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b88fb5b0242e8a76c31b41d8ac0975cb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T100000
+DTEND;TZID=Europe/Moscow:20261208T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:520b512fc22b67c9afd9d222097a0d1e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T100000
+DTEND;TZID=Europe/Moscow:20261215T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f4b6940d27b95178ec3c8f2b08028852@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T100000
+DTEND;TZID=Europe/Moscow:20261222T113000
+SUMMARY:История исторической науки (3 я груп
+ па)
+LOCATION:ИВИ\, аквариум
+DESCRIPTION:Преподаватель: Бобкова М.С.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2fc42654d2594c9d74a0cca5727ffa0b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T114000
+DTEND;TZID=Europe/Moscow:20260901T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:845086a4c710db94e9c8301933bd2f92@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T114000
+DTEND;TZID=Europe/Moscow:20260908T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfebe32b9c3e5d5a2ad9035fa60ed5a7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T114000
+DTEND;TZID=Europe/Moscow:20260915T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:416683f0ff1f55dba23c4fc53432e0d3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T114000
+DTEND;TZID=Europe/Moscow:20260922T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c1b1ee9049afe05475621afd6f0743da@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T114000
+DTEND;TZID=Europe/Moscow:20260929T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c715003181ec5596e65283b5cab45882@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T114000
+DTEND;TZID=Europe/Moscow:20261006T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c322f0992ef20b468ebfd0aeea03a8a0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T114000
+DTEND;TZID=Europe/Moscow:20261013T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:21623af7eb08a29856a0c5ef9a38e3bf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T114000
+DTEND;TZID=Europe/Moscow:20261020T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8452486fc04c13f312952015ca61b030@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T114000
+DTEND;TZID=Europe/Moscow:20261027T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:de9de1e601375f705c7d51c3ad708818@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T114000
+DTEND;TZID=Europe/Moscow:20261103T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fe196c039e37308d9498fd3c358faaa0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T114000
+DTEND;TZID=Europe/Moscow:20261110T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9ee8652af76fb74f437302dc1949f474@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T114000
+DTEND;TZID=Europe/Moscow:20261117T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8a8d60202d9f4a7d2a77cba7328a9f6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T114000
+DTEND;TZID=Europe/Moscow:20261124T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:abab44b1f21fa1ea46957b941de77e8d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T114000
+DTEND;TZID=Europe/Moscow:20261201T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f470b6006db48da5871f2b0e76359bba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T114000
+DTEND;TZID=Europe/Moscow:20261208T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:50eda9c7cef074e569ab9afff7c4792e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T114000
+DTEND;TZID=Europe/Moscow:20261215T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf7b7d21ab482931cf5c71949089388c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T114000
+DTEND;TZID=Europe/Moscow:20261222T131000
+SUMMARY:Профессиональный английский 3-я гру
+ ппа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Горбунова Е.В.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2b2fdbea93edf15133f32e3283d55b71@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T134000
+DTEND;TZID=Europe/Moscow:20260901T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4bf6c7651b08ee57beee9ee4e5521aa3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T134000
+DTEND;TZID=Europe/Moscow:20260908T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bd96531eb9be27d2353f81397d30c8cd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T134000
+DTEND;TZID=Europe/Moscow:20260915T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a6ee471339995331751b9822b5781dad@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T134000
+DTEND;TZID=Europe/Moscow:20260922T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d126af365bb69ccd49b95c523e43cadf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T134000
+DTEND;TZID=Europe/Moscow:20260929T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ab3adbc3134b6a14c594c8b477e18bf1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T134000
+DTEND;TZID=Europe/Moscow:20261006T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2d55faa92b45bdc4ec4b4d750cb4f85b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T134000
+DTEND;TZID=Europe/Moscow:20261013T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfc777176a6104139f31b0080d9d5e7e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T134000
+DTEND;TZID=Europe/Moscow:20261020T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e88213d6324ba1071b81d196309922a9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T134000
+DTEND;TZID=Europe/Moscow:20261027T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:51f969175bb775fd73c49b220c0a5648@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T134000
+DTEND;TZID=Europe/Moscow:20261103T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c257c84a2898d8d7b3ff2ee63fae81b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T134000
+DTEND;TZID=Europe/Moscow:20261110T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f0209253a10b691832446d9a7313986@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T134000
+DTEND;TZID=Europe/Moscow:20261117T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fe01c6239a789ab8019120595857cd0d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T134000
+DTEND;TZID=Europe/Moscow:20261124T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6d67c9745cc18b686eaaa5584a6c2450@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T134000
+DTEND;TZID=Europe/Moscow:20261201T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8ac6bf3ce002f2ab200bab6e359241a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T134000
+DTEND;TZID=Europe/Moscow:20261208T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fde4f332c0e7ed581ae004220b9e7c1e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T134000
+DTEND;TZID=Europe/Moscow:20261215T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f9d3b3d30e0f43dcaa3ce7df6b5c2d35@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T134000
+DTEND;TZID=Europe/Moscow:20261222T151000
+SUMMARY:История Нового времени - 3 группа
+LOCATION:ИВИ\, 1527
+DESCRIPTION:Преподаватель: Зайцева Д.В.\nФорма 
+ контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c8336b90250e5cf6f3d0ee1ed801b90e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T100000
+DTEND;TZID=Europe/Moscow:20260902T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:ebf5f1485de9dec0b873e0eb52b1d6b6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T114000
+DTEND;TZID=Europe/Moscow:20260902T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:4d6f61feefa213932b2e66ced862b215@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T100000
+DTEND;TZID=Europe/Moscow:20260909T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:7c9b73bac9c75eae4cc91baba5542d2d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T114000
+DTEND;TZID=Europe/Moscow:20260909T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d0727c8761d426bf7b759daba3e8e061@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T100000
+DTEND;TZID=Europe/Moscow:20260916T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:038596acb3a7823f92ee7ff323446867@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T114000
+DTEND;TZID=Europe/Moscow:20260916T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:b1d7db61a3e7996c5fa9391254b4376f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T100000
+DTEND;TZID=Europe/Moscow:20260923T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:72bb17bcb746fa4e391c262b2d9b6498@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T114000
+DTEND;TZID=Europe/Moscow:20260923T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:bb350c619045541b2745f40054a3534a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T100000
+DTEND;TZID=Europe/Moscow:20260930T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:a3d50b984a6060a7ae2025962df8d12d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T114000
+DTEND;TZID=Europe/Moscow:20260930T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:6b0fa6558f54170d5d73ea98b8bea29d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T100000
+DTEND;TZID=Europe/Moscow:20261007T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d17575948a1840b4d3581ae7f723dd4d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T114000
+DTEND;TZID=Europe/Moscow:20261007T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:846723838cfc2f95c2aa13a7c5fcefe5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T100000
+DTEND;TZID=Europe/Moscow:20261014T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:19961dbcb9f70d8cd4b0a3948e99572b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T114000
+DTEND;TZID=Europe/Moscow:20261014T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:b24481a9c84687b2671d3ba28805f5a6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T100000
+DTEND;TZID=Europe/Moscow:20261021T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:ee9d52f74b7f1da31184b3af69f9ac71@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T114000
+DTEND;TZID=Europe/Moscow:20261021T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:16c9c96efc0fef141d5860a04776bb25@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T100000
+DTEND;TZID=Europe/Moscow:20261028T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:bfa63f6b96d5563bd19f7437d19fea55@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T114000
+DTEND;TZID=Europe/Moscow:20261028T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:9533130fb77b6c5e7a104c690e377a05@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T100000
+DTEND;TZID=Europe/Moscow:20261111T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d21db976e56cda023d498d1f008ba303@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T114000
+DTEND;TZID=Europe/Moscow:20261111T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:c60f34df5ba2365202c68d821af02e0f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T100000
+DTEND;TZID=Europe/Moscow:20261118T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:8edd43e52749d3a24dcc5c873d7a7ea6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T114000
+DTEND;TZID=Europe/Moscow:20261118T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:810b9ece85ad725dc1280363776836c1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T100000
+DTEND;TZID=Europe/Moscow:20261125T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:4f8928b2a3e67b394ffb121927302ba1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T114000
+DTEND;TZID=Europe/Moscow:20261125T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:8368b607b665ced3940f88fbef128d41@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T100000
+DTEND;TZID=Europe/Moscow:20261202T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:05c24e083cbe17f0f755f63f9b7fd991@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T114000
+DTEND;TZID=Europe/Moscow:20261202T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:e6727a90f882b84b044a615399dd443b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T100000
+DTEND;TZID=Europe/Moscow:20261209T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:482cf7450c2a6752f351f69f599112d6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T114000
+DTEND;TZID=Europe/Moscow:20261209T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:e519368127c123ada057627b99b60f79@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T100000
+DTEND;TZID=Europe/Moscow:20261216T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:d13169558192d75294fa64e34c2f33d5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T114000
+DTEND;TZID=Europe/Moscow:20261216T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:80db54767a3e4ecdae13c4a4ac3c738e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T100000
+DTEND;TZID=Europe/Moscow:20261223T113000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:87c3e6058cb7d2a7069c25811377ec4a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T114000
+DTEND;TZID=Europe/Moscow:20261223T131000
+SUMMARY:Культуры и общества в железном веке 
+ и Средневековье: Часть 1
+LOCATION:ИА РАН
+DESCRIPTION:Преподаватель: Родинкова В.Е.\nФор
+ ма контроля: экзамен
+END:VEVENT
+BEGIN:VEVENT
+UID:fe0bc10d2a842bcfe4e9666b42111cba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T142000
+DTEND;TZID=Europe/Moscow:20260909T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:831a967bb5ce72dcc9800bd1bcfe03b7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T160000
+DTEND;TZID=Europe/Moscow:20260909T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:35d7639be7e83212042982e331e2bd8a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T142000
+DTEND;TZID=Europe/Moscow:20260916T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:be267dbe9d40773546ad7fb8357bcc27@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T160000
+DTEND;TZID=Europe/Moscow:20260916T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:f548650e248a77d6a753461df105c53d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T142000
+DTEND;TZID=Europe/Moscow:20260923T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:b485c0fc26ade1330de2eda6f13d98bb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T160000
+DTEND;TZID=Europe/Moscow:20260923T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:b054bdb9098548c43773b8fb2e5cb886@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T142000
+DTEND;TZID=Europe/Moscow:20260930T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:dccd80899249990236fb69849a111fb8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T160000
+DTEND;TZID=Europe/Moscow:20260930T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3f0a302e2496bb2375de56ea317e01ef@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T142000
+DTEND;TZID=Europe/Moscow:20261007T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:caf3308360518db7507fcb04076b92b2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T160000
+DTEND;TZID=Europe/Moscow:20261007T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:bb7e85948602ef34e47b7d703d0b744e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T142000
+DTEND;TZID=Europe/Moscow:20261014T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:74b073acc4e572c8297a5f8ae606f475@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T160000
+DTEND;TZID=Europe/Moscow:20261014T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:8247c56ffa16383e86a1c13f5ccd88b3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T142000
+DTEND;TZID=Europe/Moscow:20261021T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:83e49a69a164d4e95013702f43cb75ca@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T160000
+DTEND;TZID=Europe/Moscow:20261021T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:120c33cfcbb967e96694e8f3445c7715@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T142000
+DTEND;TZID=Europe/Moscow:20261028T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:9a7bfd9497375788b633f5304f55ab2d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T160000
+DTEND;TZID=Europe/Moscow:20261028T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:fb35445ceae7e5407c8060a2b278896a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T142000
+DTEND;TZID=Europe/Moscow:20261111T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3673947905ebd57356c12006f0ca8032@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T160000
+DTEND;TZID=Europe/Moscow:20261111T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:b19879fe4700726b34d73b9a067fc140@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T142000
+DTEND;TZID=Europe/Moscow:20261118T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3cfc28cd5fabfe58e641a493118bafe5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:866fa30971e9230011464703e053d119@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T142000
+DTEND;TZID=Europe/Moscow:20261125T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:99ce140f5d1e2b0e24c6690fd69e9ea4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T160000
+DTEND;TZID=Europe/Moscow:20261125T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:5c020af55120eaf87e744261a228fa2a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T142000
+DTEND;TZID=Europe/Moscow:20261202T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:64278c324c77e399f2b51a22da642140@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T160000
+DTEND;TZID=Europe/Moscow:20261202T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:0a7c9a995e56661e229bbf5fd87b1842@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T142000
+DTEND;TZID=Europe/Moscow:20261209T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:a63b26ed25f2392b9af565da89563f0c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T160000
+DTEND;TZID=Europe/Moscow:20261209T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:4042468ee3024086266cc69f5bdde301@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T142000
+DTEND;TZID=Europe/Moscow:20261216T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:0a0a9d70d14a0940e02349ed8e6c45ca@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T160000
+DTEND;TZID=Europe/Moscow:20261216T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:682a8569bffb6ddd5410931183294e51@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T142000
+DTEND;TZID=Europe/Moscow:20261223T155000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:06858094417b61eac05733267411c5f4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T160000
+DTEND;TZID=Europe/Moscow:20261223T173000
+SUMMARY:История стран Африки
+LOCATION:ИнСл РАН\, ауд. 902
+DESCRIPTION:Преподаватель: Балезин А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 72 ч.\nС 9 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:6bef91e245c11f44eb1a2dcb909ff4e6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T100000
+DTEND;TZID=Europe/Moscow:20260903T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4067133951e5d1dd86bcdaf120df6950@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T100000
+DTEND;TZID=Europe/Moscow:20260910T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7429e5b684bcfc7af23bbdb4e2fe98d6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f1a82d0f4d37167e3fbd359e0c984779@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T100000
+DTEND;TZID=Europe/Moscow:20260924T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c073f599c50b4558abeaffe41149c79d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:18b0cfbf3cc0cd482aa0610da17a60ef@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d32b3309bc57d6a41d45f451126748ff@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T100000
+DTEND;TZID=Europe/Moscow:20261015T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3472efaa353331df88bc547d5c6efef3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T100000
+DTEND;TZID=Europe/Moscow:20261022T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8d8ea6629733a3dbf61c38840994bdad@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T100000
+DTEND;TZID=Europe/Moscow:20261029T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:521ea22f8f901aa84533da463d5bc23c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T100000
+DTEND;TZID=Europe/Moscow:20261105T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d70bb8132764dce737a66539726eadb4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T100000
+DTEND;TZID=Europe/Moscow:20261112T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f58f4c664976024da031e3aa58acfb6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T100000
+DTEND;TZID=Europe/Moscow:20261119T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0763304754e8b92678131b2734776698@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T100000
+DTEND;TZID=Europe/Moscow:20261126T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:425efde59200483d1252e20b8af21c74@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T100000
+DTEND;TZID=Europe/Moscow:20261203T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5165c13d8063337c4da0839d5acc83f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T100000
+DTEND;TZID=Europe/Moscow:20261210T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:260d77d0c4cf50f16c84f00124211b15@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T100000
+DTEND;TZID=Europe/Moscow:20261217T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:864090e4e5a529688a1ff28e60a43247@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T100000
+DTEND;TZID=Europe/Moscow:20261224T113000
+SUMMARY:История западных и южных славян
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Плотников А.Ю.\nФор
+ ма контроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c5d0d1f1d18396413bdbc0384cdbbdbd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T114000
+DTEND;TZID=Europe/Moscow:20260910T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:4043783627a172f2fd99a5d89eece145@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T132000
+DTEND;TZID=Europe/Moscow:20260910T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:ad8f6440505a48d8e78dabfa665e6d8d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T114000
+DTEND;TZID=Europe/Moscow:20260917T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:b6cae704b2a6e241a4e74792d39c371b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T132000
+DTEND;TZID=Europe/Moscow:20260917T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:c82ad46a99f5a25cf9ac4a54192ea2e3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T114000
+DTEND;TZID=Europe/Moscow:20260924T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:89808cbedc2446dcc83baff3bd4a2f67@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T132000
+DTEND;TZID=Europe/Moscow:20260924T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:a7539b3e4a52ee1dae3efd750b6a50d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T114000
+DTEND;TZID=Europe/Moscow:20261001T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:49f5dd09489c95136ba47369263ff710@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T132000
+DTEND;TZID=Europe/Moscow:20261001T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:6c06560f55557c31bc147da8a96c44c8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T114000
+DTEND;TZID=Europe/Moscow:20261008T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:c36468541282cf01c01fbb144295594d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T132000
+DTEND;TZID=Europe/Moscow:20261008T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:3909ca52051c4c92c0767ad56efd2557@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T114000
+DTEND;TZID=Europe/Moscow:20261015T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:05903813ae299ef1c8520548c75f5010@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T132000
+DTEND;TZID=Europe/Moscow:20261015T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:33546d0722c41fb76b81922cc976bd2a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T114000
+DTEND;TZID=Europe/Moscow:20261022T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:63930d60038da0b176e42fccf527e589@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T132000
+DTEND;TZID=Europe/Moscow:20261022T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:69489180ab19070a1cde0eff9d9851ea@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T114000
+DTEND;TZID=Europe/Moscow:20261029T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:e409058c7285562b9afe1b1d7cf152ba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T132000
+DTEND;TZID=Europe/Moscow:20261029T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:2152c0ffd797b086f2d449d1ccdaa52c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T114000
+DTEND;TZID=Europe/Moscow:20261105T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:071b5c90bb17567d93580074f1729f20@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T132000
+DTEND;TZID=Europe/Moscow:20261105T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:a14a4c67bfc1c834b05728d26ee0e85c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T114000
+DTEND;TZID=Europe/Moscow:20261112T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:65fa8baa5ec5289e9fa46a3ef10757c9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T132000
+DTEND;TZID=Europe/Moscow:20261112T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:14abc74f74d2c3948728aea16a3f1a7e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T114000
+DTEND;TZID=Europe/Moscow:20261119T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:56fa9a18648db56daad65c0413935006@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T132000
+DTEND;TZID=Europe/Moscow:20261119T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:e0860293467b831feec993a26cabe0d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T114000
+DTEND;TZID=Europe/Moscow:20261126T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:5efafc5c779a2d8da091ad77ec83a999@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T132000
+DTEND;TZID=Europe/Moscow:20261126T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:e4b07686a0cc9bc1ecf4005af11e2d76@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T114000
+DTEND;TZID=Europe/Moscow:20261203T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:5b34c38c170117c526f6554cf5872612@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T132000
+DTEND;TZID=Europe/Moscow:20261203T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:4ed8f823b0320d202c9ddaa2b5ac9d7d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T114000
+DTEND;TZID=Europe/Moscow:20261210T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:06886e6412c07ee8f2b15a1042fecb08@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T132000
+DTEND;TZID=Europe/Moscow:20261210T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:43b90da9d1d7e74a826d539d8414de49@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T114000
+DTEND;TZID=Europe/Moscow:20261217T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:839cc61191ea5aea6940b807f0725b24@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T132000
+DTEND;TZID=Europe/Moscow:20261217T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:2230068904d25caeecd08da36f8ac091@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T114000
+DTEND;TZID=Europe/Moscow:20261224T131000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:19e337153420f5d7e0f0e560df236d3e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T132000
+DTEND;TZID=Europe/Moscow:20261224T145000
+SUMMARY:Источниковедение
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Тарасютина Е.В.\nФо
+ рма контроля: Экзамен\nОбъём: 72 ч.\nС 10 сен
+ тября
+END:VEVENT
+BEGIN:VEVENT
+UID:a7157f7b5eafd484a114d33a5717e441@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T090000
+DTEND;TZID=Europe/Moscow:20260904T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d5296b39df1effb3272e27bb5aa6c94f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T104000
+DTEND;TZID=Europe/Moscow:20260904T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:93a8a71f065b9801eadc26b5d18380a2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T124000
+DTEND;TZID=Europe/Moscow:20260904T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:515e97bcf044aed4f9effc9e4d72653b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T090000
+DTEND;TZID=Europe/Moscow:20260911T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:146d66cd2742a4b8a4190581ac267c63@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T104000
+DTEND;TZID=Europe/Moscow:20260911T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:50dd50ea98264fb084f7f9bbf86559e5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T124000
+DTEND;TZID=Europe/Moscow:20260911T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ed8a016970819486ce0b11c1bd7caf78@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T090000
+DTEND;TZID=Europe/Moscow:20260918T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ef46233bfdbb796388d137d9e7bb2190@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T104000
+DTEND;TZID=Europe/Moscow:20260918T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c817d8ee49a2e1a1666e5efdfd5f5377@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T124000
+DTEND;TZID=Europe/Moscow:20260918T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7ef568ff1abbeb4ace0b9193a5cffee1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T090000
+DTEND;TZID=Europe/Moscow:20260925T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:fc72865adfb672fa8e7d107e114fcb84@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T104000
+DTEND;TZID=Europe/Moscow:20260925T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:cbc1137f773985dab5aec41e272215a4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T124000
+DTEND;TZID=Europe/Moscow:20260925T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:570197d855d0244a27be16303446fe26@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T090000
+DTEND;TZID=Europe/Moscow:20261002T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:8490c42a88e9f4fc3c9783a8c2d335ff@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T104000
+DTEND;TZID=Europe/Moscow:20261002T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:67070906a769a1dd3b37193576ed8cab@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T124000
+DTEND;TZID=Europe/Moscow:20261002T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:36e8bf7011851261da5ff7cf052d62fd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T090000
+DTEND;TZID=Europe/Moscow:20261009T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:fe586c3ccfcaf10883db11f75e3d43d7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T104000
+DTEND;TZID=Europe/Moscow:20261009T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5dcbc792680b7e8a7b6e218765516e8a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T124000
+DTEND;TZID=Europe/Moscow:20261009T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:cfa4b712c14a026693a2f39ec90ac53c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T090000
+DTEND;TZID=Europe/Moscow:20261016T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:de4f214b04f5819eed6b5871dc9b75b7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T104000
+DTEND;TZID=Europe/Moscow:20261016T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:2789712db805949dbc9e9b307503b21f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T124000
+DTEND;TZID=Europe/Moscow:20261016T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:1ae6867384dd8aeb53f85b22d88155ba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T090000
+DTEND;TZID=Europe/Moscow:20261023T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7e2d57f755805d296b0d3d1b0bd201a1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T104000
+DTEND;TZID=Europe/Moscow:20261023T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4cdd73489e08eb6d10bf760baaa4ad0d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T124000
+DTEND;TZID=Europe/Moscow:20261023T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:ddec2a36f6cbd7038d2b9bdac3b41033@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T090000
+DTEND;TZID=Europe/Moscow:20261030T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:47ff8325f7d31df54ea2e36c84fd641e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T104000
+DTEND;TZID=Europe/Moscow:20261030T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5749f848796612172b3ddd1857d3e071@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T124000
+DTEND;TZID=Europe/Moscow:20261030T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:a9e70f9433e68f394bb07a4ac929e841@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T090000
+DTEND;TZID=Europe/Moscow:20261106T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:21e599eff582d765cd4c2ffde2ec1625@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T104000
+DTEND;TZID=Europe/Moscow:20261106T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c689cc72109b80508d46b9e302a2b64c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T124000
+DTEND;TZID=Europe/Moscow:20261106T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4bec47c41bbf2810359a705d4bfa1c3e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T090000
+DTEND;TZID=Europe/Moscow:20261113T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:b8c021baa1209fd1e5395db644f09fa4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T104000
+DTEND;TZID=Europe/Moscow:20261113T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:9ca022ee3636884f69851e2b05fbc406@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T124000
+DTEND;TZID=Europe/Moscow:20261113T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:998ce26641729404cd079c7d89678e4e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T090000
+DTEND;TZID=Europe/Moscow:20261120T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:4b80c7be6028166f3b54313c4d1d5c74@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T104000
+DTEND;TZID=Europe/Moscow:20261120T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:58860855de47b423d648e63f9e681b66@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T124000
+DTEND;TZID=Europe/Moscow:20261120T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:c50c2a297e4d7190578d7d8dd1e30e10@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T090000
+DTEND;TZID=Europe/Moscow:20261127T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:039f555bbeca89664dbf97d064f3b6b0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T104000
+DTEND;TZID=Europe/Moscow:20261127T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:14df530f5e6a2718dd2f8d47da4d1841@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T124000
+DTEND;TZID=Europe/Moscow:20261127T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:3e6fd9fb733ad33ff29251cdbe81c8f3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T090000
+DTEND;TZID=Europe/Moscow:20261204T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:02aa72e64276bc9b8e09195d3209ba08@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T104000
+DTEND;TZID=Europe/Moscow:20261204T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:bae1e98cdd70b967ec6f422663c064c7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T124000
+DTEND;TZID=Europe/Moscow:20261204T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:3a4322bc03c8693ff18c9ad1b56fbddc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T090000
+DTEND;TZID=Europe/Moscow:20261211T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:65eec61537e717c8590462071c697d0a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T104000
+DTEND;TZID=Europe/Moscow:20261211T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:b9c5fc48b44bf5a0ccbc744d064d6893@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T124000
+DTEND;TZID=Europe/Moscow:20261211T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7b44244df04b5c2ba0bd00487a846e38@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T090000
+DTEND;TZID=Europe/Moscow:20261218T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:5bebdd1db5883d3262ed78759de895de@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T104000
+DTEND;TZID=Europe/Moscow:20261218T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:37cfae106102a8907ee8b97cae75c8b4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T124000
+DTEND;TZID=Europe/Moscow:20261218T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:91d0ee8f3aa1cf89f1255771241dd886@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T090000
+DTEND;TZID=Europe/Moscow:20261225T103000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:d49baf89df63c4c77c740be19e73fe29@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T104000
+DTEND;TZID=Europe/Moscow:20261225T121000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+BEGIN:VEVENT
+UID:7d2e375421a64f272b50122e8b2d1213@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T124000
+DTEND;TZID=Europe/Moscow:20261225T141000
+SUMMARY:История России XIX в.
+LOCATION:ИВИ РАН\, ауд. 1406
+DESCRIPTION:Преподаватель: Осипов Е.А.\; Михайл
+ ова Ю.Л.\nФорма контроля: Зачет с оценкой\
+ nОбъём: 162 ч.\nС 4 сентября
+END:VEVENT
+END:VCALENDAR
