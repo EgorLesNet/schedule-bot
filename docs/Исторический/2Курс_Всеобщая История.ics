@@ -1,0 +1,3481 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//Raspisanie_2_kurs_Istoriya_Vseobshchaya_istoriya.ics
+ //RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — История (Всеобщая истори
+ я), 2 курс
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:cc3348ee514d976cd9c4323d867f5b19@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T090000
+DTEND;TZID=Europe/Moscow:20260901T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0576c1c00baf204e89155acb93b7f70d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T104000
+DTEND;TZID=Europe/Moscow:20260901T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d1269b94a78fa9d5f284a8c4e012f76e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T090000
+DTEND;TZID=Europe/Moscow:20260908T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2efa25c869db29790ab47d036389ec3a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T104000
+DTEND;TZID=Europe/Moscow:20260908T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:abbda34176f2ead6484b8bd66af9ec3f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T090000
+DTEND;TZID=Europe/Moscow:20260915T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:368affa052cc392fe24ca77671bafbe9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T104000
+DTEND;TZID=Europe/Moscow:20260915T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e6f5bd0454f11c1fd8afd6f04859ba8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T090000
+DTEND;TZID=Europe/Moscow:20260922T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef5fc220310b6e25b2c952839289aa3a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T104000
+DTEND;TZID=Europe/Moscow:20260922T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d8e8cdee2087e0927046075b84caa832@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T090000
+DTEND;TZID=Europe/Moscow:20260929T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ea631f75f1041829e6e0bd6ea4c11f04@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T104000
+DTEND;TZID=Europe/Moscow:20260929T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:39699617684071050301512c8fac9745@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T090000
+DTEND;TZID=Europe/Moscow:20261006T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6432d6986709a90b0a3e7d68b5bec9e0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T104000
+DTEND;TZID=Europe/Moscow:20261006T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fb6d6cc4d87c3ef4b5f695af208b2f50@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T090000
+DTEND;TZID=Europe/Moscow:20261013T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2cda07faff311215b64b7ecad50f9522@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T104000
+DTEND;TZID=Europe/Moscow:20261013T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:409225be5e040a5ccf2f1199665b669e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T090000
+DTEND;TZID=Europe/Moscow:20261020T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:42597afd2e5108a61d9bf7210ca59987@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T104000
+DTEND;TZID=Europe/Moscow:20261020T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8f6b0e2dbce4453ada02b65bc575c5cf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T090000
+DTEND;TZID=Europe/Moscow:20261027T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:28abb5a507d38d5ee82c1feb6cddfc22@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T104000
+DTEND;TZID=Europe/Moscow:20261027T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:042c3c9463fe0f0a611714ae13fc8e4a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T090000
+DTEND;TZID=Europe/Moscow:20261103T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:336842fd7e60f92460233532e0d91791@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T104000
+DTEND;TZID=Europe/Moscow:20261103T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:211a547fbf3990e58da8e4b39d715423@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T090000
+DTEND;TZID=Europe/Moscow:20261110T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d97e50c8054e018dbf7a8ea748b26f65@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T104000
+DTEND;TZID=Europe/Moscow:20261110T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:55c95037d3379c9afa968ce4d5d18960@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T090000
+DTEND;TZID=Europe/Moscow:20261117T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:de96be851480ffb093108084647879bf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T104000
+DTEND;TZID=Europe/Moscow:20261117T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2e7498a652a78f9c3cc9e0b1ac995b3d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T090000
+DTEND;TZID=Europe/Moscow:20261124T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:30d65715e9845bf6c7052aa810f0a59a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T104000
+DTEND;TZID=Europe/Moscow:20261124T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0fd4985104d9bf5029ba5760569c5c39@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T090000
+DTEND;TZID=Europe/Moscow:20261201T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6df557982689845f663cd9750b2287e7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T104000
+DTEND;TZID=Europe/Moscow:20261201T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:502bd873314b0677d2993137cb16d0e0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T090000
+DTEND;TZID=Europe/Moscow:20261208T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c5ad815833ce42970b31be26549b70f8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T104000
+DTEND;TZID=Europe/Moscow:20261208T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e504f4c4273503918d61373330bdeff9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T090000
+DTEND;TZID=Europe/Moscow:20261215T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2933e07f52305f17dec725ed110690b7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T104000
+DTEND;TZID=Europe/Moscow:20261215T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7f754d4401e15770dbd0f65016750287@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T090000
+DTEND;TZID=Europe/Moscow:20261222T103000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b30d508acac451607fc024d0a9d22c0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T104000
+DTEND;TZID=Europe/Moscow:20261222T121000
+SUMMARY:История Средних веков
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Анисимова А.А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c5c704ddc28b9f411ee814456543d74e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T124000
+DTEND;TZID=Europe/Moscow:20260901T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bd3ad85cc96442a02a514b03abc8c192@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T124000
+DTEND;TZID=Europe/Moscow:20260908T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ba888f11dbde307e00c58c86aa333a87@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T124000
+DTEND;TZID=Europe/Moscow:20260915T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5b34e915dd6c97888e7e9d4714b0ba31@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T124000
+DTEND;TZID=Europe/Moscow:20260922T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2aa068e6af1f5f1ba20ff815a2fdb7ff@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T124000
+DTEND;TZID=Europe/Moscow:20260929T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:00b2b8ecba82f9195091b0471290456d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T124000
+DTEND;TZID=Europe/Moscow:20261006T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7d7c75b7cd57f43239c4b1a93e11306d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T124000
+DTEND;TZID=Europe/Moscow:20261013T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0bed390fefbd30a0e152ca46868fe82c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T124000
+DTEND;TZID=Europe/Moscow:20261020T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2edf808d2b18fa56a96536cf3e405f8e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T124000
+DTEND;TZID=Europe/Moscow:20261027T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2829fbc703451667837c9ba4d0935275@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T124000
+DTEND;TZID=Europe/Moscow:20261103T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f790cd3bc4a68c8194c4e94c4d5abe0c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T124000
+DTEND;TZID=Europe/Moscow:20261110T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:57592048a0e1decb30fd38c1232092ef@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T124000
+DTEND;TZID=Europe/Moscow:20261117T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c170be10edb9808dbd6b75425a6ecfbf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T124000
+DTEND;TZID=Europe/Moscow:20261124T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5aebeaa6a00a0adf82c4d95847a55460@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T124000
+DTEND;TZID=Europe/Moscow:20261201T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8ce1aac0d00c5415fece45ae52394b58@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T124000
+DTEND;TZID=Europe/Moscow:20261208T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac252aca1621469c49ba15772638ee0e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T124000
+DTEND;TZID=Europe/Moscow:20261215T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2fff8974715636b891341aa220b7f437@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T124000
+DTEND;TZID=Europe/Moscow:20261222T141000
+SUMMARY:История Европейской культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f012ef91f50a40c0e33233d50ccedb43@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260901T142000
+DTEND;TZID=Europe/Moscow:20260901T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce9db0e905dd612d9985f18ccbdfa284@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260908T142000
+DTEND;TZID=Europe/Moscow:20260908T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7ce1a67df498dcf84bbf518c58914a39@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260915T142000
+DTEND;TZID=Europe/Moscow:20260915T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b896c8d099a408d29cfb76f6fe32408f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260922T142000
+DTEND;TZID=Europe/Moscow:20260922T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3fce58e62d748318fbc68f90ab860337@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260929T142000
+DTEND;TZID=Europe/Moscow:20260929T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4b836ba990e67d14fd03f7421bffed7a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261006T142000
+DTEND;TZID=Europe/Moscow:20261006T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:65cea899f81f7385ba7dbc800d09a274@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261013T142000
+DTEND;TZID=Europe/Moscow:20261013T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f991ec5e0759c9e905bc059fe6525ae5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261020T142000
+DTEND;TZID=Europe/Moscow:20261020T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7f8a758c13612641612ee311d99f33c3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261027T142000
+DTEND;TZID=Europe/Moscow:20261027T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d80067ebff28b01ae0b797ed8ee11f0f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261103T142000
+DTEND;TZID=Europe/Moscow:20261103T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad8dc227a97fb63ef3877a514cc930b3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261110T142000
+DTEND;TZID=Europe/Moscow:20261110T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a1662cfbea697cdb22833eab3f22096@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261117T142000
+DTEND;TZID=Europe/Moscow:20261117T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:77ec428027c989674a875e30dd5fba77@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261124T142000
+DTEND;TZID=Europe/Moscow:20261124T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:31398f89a4307e040e7a5de743d2703d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261201T142000
+DTEND;TZID=Europe/Moscow:20261201T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6889176530395ca52f41e95a0e7d7bde@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261208T142000
+DTEND;TZID=Europe/Moscow:20261208T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:09228befcbfce7a70db3c309dfb4c4b6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261215T142000
+DTEND;TZID=Europe/Moscow:20261215T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a9f2bde0f2da5719917cc0581d438357@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261222T142000
+DTEND;TZID=Europe/Moscow:20261222T155000
+SUMMARY:История Отечественной культуры
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Садова Л.А.\nФорма к
+ онтроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fd7e7361274851ebe74002da08279b5f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T090000
+DTEND;TZID=Europe/Moscow:20260902T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca9899e3d92148a4af8414df8a181e7a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T090000
+DTEND;TZID=Europe/Moscow:20260909T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dbd0deeee14835d808aca8f0011303cd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T090000
+DTEND;TZID=Europe/Moscow:20260916T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:428ccc4e7895eba5b2207dbc9a9872da@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T090000
+DTEND;TZID=Europe/Moscow:20260923T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3682d360b9b42f7565f5d5a8a0e88d22@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T090000
+DTEND;TZID=Europe/Moscow:20260930T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:be8bc0497ca973cce18e29d95f79b750@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T090000
+DTEND;TZID=Europe/Moscow:20261007T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:93d1217971085ea9b81a8a4a2e1a1199@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T090000
+DTEND;TZID=Europe/Moscow:20261014T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9a9f243e1ce3309fcfb76c7f0707968b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T090000
+DTEND;TZID=Europe/Moscow:20261021T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d5e37d9cb74c8ac5bea0ae2d2ad1d6e7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T090000
+DTEND;TZID=Europe/Moscow:20261028T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f99e34f9dd3c6afc6d60ee2469860e4e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T090000
+DTEND;TZID=Europe/Moscow:20261111T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8db540d7edd1c56d7c39bfc62f50cf16@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T090000
+DTEND;TZID=Europe/Moscow:20261118T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5df8d68226b4031e15ef4e7e57160fbe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T090000
+DTEND;TZID=Europe/Moscow:20261125T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f6a185d5b0e6d01522de4815fcb00c2c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T090000
+DTEND;TZID=Europe/Moscow:20261202T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:41664acef930e4a492b8f991e8a86688@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T090000
+DTEND;TZID=Europe/Moscow:20261209T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:28e6a70500b6954dbe9e77fbe340d196@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T090000
+DTEND;TZID=Europe/Moscow:20261216T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:008fb5ad627f1f1368140b6192481bd4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T090000
+DTEND;TZID=Europe/Moscow:20261223T103000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой\nОбъём: 96 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7cbbd17f781ef126ca9736932985125c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T104000
+DTEND;TZID=Europe/Moscow:20260902T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9a2c49fcc6169c01f8086c183dcea40f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T104000
+DTEND;TZID=Europe/Moscow:20260909T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9ee9cd91bedd13207160a670d7d79fa0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T104000
+DTEND;TZID=Europe/Moscow:20260916T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:6906567e880628febdf683b6b6839419@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T104000
+DTEND;TZID=Europe/Moscow:20260923T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:919e26188d34876afa7d65ca17c3c7bc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T104000
+DTEND;TZID=Europe/Moscow:20260930T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4912da64758b54527e9a60e2f61be032@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T104000
+DTEND;TZID=Europe/Moscow:20261007T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3048e8b8f064cce3ced746198c34ca4c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T104000
+DTEND;TZID=Europe/Moscow:20261014T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c81a2c4b734f8179b457b06742bf2040@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T104000
+DTEND;TZID=Europe/Moscow:20261021T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:547cdfa42169b1923331751eaa744e56@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T104000
+DTEND;TZID=Europe/Moscow:20261028T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:5bd5a1b885c7ac310d116fac6d9e7609@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T104000
+DTEND;TZID=Europe/Moscow:20261111T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:1906d607ab148fc9f38276c14a641e87@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T104000
+DTEND;TZID=Europe/Moscow:20261118T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:9bf940b748965e746a84111106e4f694@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T104000
+DTEND;TZID=Europe/Moscow:20261125T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:2390c3bac921b379389d126a9b4740f7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T104000
+DTEND;TZID=Europe/Moscow:20261202T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:07597d1c70ff947335f69a2e3a2a13c8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T104000
+DTEND;TZID=Europe/Moscow:20261209T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:79ed39c6dd93bc94869d101aa7b63958@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T104000
+DTEND;TZID=Europe/Moscow:20261216T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:e31683b5aaad1f9835e49c7cfbf0dca8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T104000
+DTEND;TZID=Europe/Moscow:20261223T121000
+SUMMARY:История России до XIX в.
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Кузьмин А. В.\nФорма
+  контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:4c0db362552dd8fc505fd5db6ebc942a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T124000
+DTEND;TZID=Europe/Moscow:20260902T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:85706da4182e6c3156fa13959a0c3115@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260902T142000
+DTEND;TZID=Europe/Moscow:20260902T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1c2de453fdb5a78216a4d131fdbac0a3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T124000
+DTEND;TZID=Europe/Moscow:20260909T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ebd519d0011514c9c6a068b33cff8939@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260909T142000
+DTEND;TZID=Europe/Moscow:20260909T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f1f986afda1be2649b256720b9f7cf2d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T124000
+DTEND;TZID=Europe/Moscow:20260916T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:66631150a921c163ddeef675778970dc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260916T142000
+DTEND;TZID=Europe/Moscow:20260916T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a821d8a0813aaac5e4fc2973f136e2f5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T124000
+DTEND;TZID=Europe/Moscow:20260923T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:455b14b23662442ebee8887862147381@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260923T142000
+DTEND;TZID=Europe/Moscow:20260923T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cfff127bc389c77ae373ee4921f0813f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T124000
+DTEND;TZID=Europe/Moscow:20260930T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7dbddcda321f2e30c9bb1a5852b66d4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260930T142000
+DTEND;TZID=Europe/Moscow:20260930T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:afcc112d9f442a2d5235bc8357259945@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T124000
+DTEND;TZID=Europe/Moscow:20261007T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0d453e45f7dc0160852b171f498afe92@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261007T142000
+DTEND;TZID=Europe/Moscow:20261007T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fbabb0187b3171d146be8c6be0487604@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T124000
+DTEND;TZID=Europe/Moscow:20261014T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2fad9edb1dfd62ee925672daddb46311@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261014T142000
+DTEND;TZID=Europe/Moscow:20261014T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9fef69c85e5a3b0a20b8ee19603ff2ce@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T124000
+DTEND;TZID=Europe/Moscow:20261021T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3be8804401bc3dc3a42c573ac2945b83@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261021T142000
+DTEND;TZID=Europe/Moscow:20261021T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c8dcc56d1d855688c9665bab06932d8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T124000
+DTEND;TZID=Europe/Moscow:20261028T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2908a6bf4f97ac6cb2405feb2192e190@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261028T142000
+DTEND;TZID=Europe/Moscow:20261028T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:82bcb72f970935af42fba5077f2bf29e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T124000
+DTEND;TZID=Europe/Moscow:20261111T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6f9ece4e5915e0707f7160a85da3b8d2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261111T142000
+DTEND;TZID=Europe/Moscow:20261111T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:92b3c865727c9e7528cdb9a7f9743cc0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T124000
+DTEND;TZID=Europe/Moscow:20261118T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7401da9870b6886ba2a5cf61b3673c52@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261118T142000
+DTEND;TZID=Europe/Moscow:20261118T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:659983379dd5f5c702feb674744cb262@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T124000
+DTEND;TZID=Europe/Moscow:20261125T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5b9eefd443280364b64ee98b56ed2b30@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261125T142000
+DTEND;TZID=Europe/Moscow:20261125T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bdc0a5e9ea75337c0612eb9032099f51@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T124000
+DTEND;TZID=Europe/Moscow:20261202T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c2b869a0c808d660ac3892939a0cfd4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261202T142000
+DTEND;TZID=Europe/Moscow:20261202T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:57f9c9580a4bebcd1946ecb228ca5d6c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T124000
+DTEND;TZID=Europe/Moscow:20261209T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:191055fd6a5ceca2a33095a263df4b82@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261209T142000
+DTEND;TZID=Europe/Moscow:20261209T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b45a51d0ffbda7905c6c0688da6cb94a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T124000
+DTEND;TZID=Europe/Moscow:20261216T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b98aef87fdb447fd9812ccfec70f5cc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261216T142000
+DTEND;TZID=Europe/Moscow:20261216T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ae65da8796bc142697fe4046671d430c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T124000
+DTEND;TZID=Europe/Moscow:20261223T141000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a408472fd10ff1c1e0bafbeb3ada651a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261223T142000
+DTEND;TZID=Europe/Moscow:20261223T155000
+SUMMARY:Философия
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Завалько Г. А.\nФорм
+ а контроля: Экзамен\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9754f11310516e26213954c5c767b9dc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T090000
+DTEND;TZID=Europe/Moscow:20260903T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad43d5a2b69a5f520d32ea4c6c1a28c7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T090000
+DTEND;TZID=Europe/Moscow:20260910T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:268768c44e6d62a25c6dcc87ba822071@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T090000
+DTEND;TZID=Europe/Moscow:20260917T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ccc51015f36797cc7e3de0151bcd19c3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T090000
+DTEND;TZID=Europe/Moscow:20260924T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3dbc3938dee2ffecfe1be9d12b4b2664@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T090000
+DTEND;TZID=Europe/Moscow:20261001T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5713ac80169c8759551dcda9faa02afc@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T090000
+DTEND;TZID=Europe/Moscow:20261008T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:431006fe5a80ee2cc423d4117bd69c95@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T090000
+DTEND;TZID=Europe/Moscow:20261015T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f3db35312385316a9d5ba988ebf2fa46@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T090000
+DTEND;TZID=Europe/Moscow:20261022T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ac3c7f921435aad9e961a27a834b0cac@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T090000
+DTEND;TZID=Europe/Moscow:20261029T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:eaf33edaab043280e32b10dfebef8a3b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T090000
+DTEND;TZID=Europe/Moscow:20261105T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4d831b690c91b6b07d242d9cc318f684@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T090000
+DTEND;TZID=Europe/Moscow:20261112T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:12e4c42aee8be82efbc59747cfebbb8f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T090000
+DTEND;TZID=Europe/Moscow:20261119T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b4db6a6d2c9f8e8242d733f536fcf01@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T090000
+DTEND;TZID=Europe/Moscow:20261126T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:077650cc0ffdbe7efac37a4c5f10e305@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T090000
+DTEND;TZID=Europe/Moscow:20261203T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0b7a0c4758f49c4b71f004821d5d33b2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T090000
+DTEND;TZID=Europe/Moscow:20261210T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7b2810bccbf9de63d347d5e3c472e6a2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T090000
+DTEND;TZID=Europe/Moscow:20261217T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:35b0ff5748a5c76b81fded4fb766f612@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T090000
+DTEND;TZID=Europe/Moscow:20261224T103000
+SUMMARY:История Средних веков (семинары) 1-я 
+ группа
+LOCATION:ИВИ РАН\, ауд. 1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0ce2bf378cafe085280be6339d63e33f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T104000
+DTEND;TZID=Europe/Moscow:20260903T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:28bfb94de3f275cbeb506747807c91ad@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T104000
+DTEND;TZID=Europe/Moscow:20260910T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:087835e48ec38f747028354c239aa91c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T104000
+DTEND;TZID=Europe/Moscow:20260917T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:db9451e644e26b7ef0b68c9a67b6764c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T104000
+DTEND;TZID=Europe/Moscow:20260924T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fd91a0c6e9b68328855b03d38e331cf8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T104000
+DTEND;TZID=Europe/Moscow:20261001T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:74be4d71c2fad6aa46606e73059f99ba@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T104000
+DTEND;TZID=Europe/Moscow:20261008T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c1e6bf3f9268b205c87fc6de112c5fe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T104000
+DTEND;TZID=Europe/Moscow:20261015T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1cc638d6efad7f0f78a1fbf71a93abc1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T104000
+DTEND;TZID=Europe/Moscow:20261022T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef16feb93e49122ee0f467b8774e6b2e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T104000
+DTEND;TZID=Europe/Moscow:20261029T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0c3d83849e44969355aa6f282a30970c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T104000
+DTEND;TZID=Europe/Moscow:20261105T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b92481a089247e13af2cb91614460615@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T104000
+DTEND;TZID=Europe/Moscow:20261112T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4a87dc3721af451a4c201b7488e934d2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T104000
+DTEND;TZID=Europe/Moscow:20261119T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:97afe8dfeb6f2e092bfe1abab42d0b49@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T104000
+DTEND;TZID=Europe/Moscow:20261126T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7534b3686b3de8d965c8d7bf27fedc70@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T104000
+DTEND;TZID=Europe/Moscow:20261203T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8c172037fc8453dac36086455efb76e9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T104000
+DTEND;TZID=Europe/Moscow:20261210T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b0c5b7483cae1fef6e3fe63ded86cbaf@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T104000
+DTEND;TZID=Europe/Moscow:20261217T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f824b5d87c3748b75dc0b8ed13707ebe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T104000
+DTEND;TZID=Europe/Moscow:20261224T121000
+SUMMARY:Источниковедение (Семинары) 1-группа
+LOCATION:ИВИ РАН\, ауд. 1414
+DESCRIPTION:Преподаватель: Дробышев М.И.\nОбъё
+ м: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:62e56a94bf03fb4bc9a9993c6e5b78f1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T104000
+DTEND;TZID=Europe/Moscow:20260903T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:e29fcd5c19517bb230d5ac3d52a3c9e2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T104000
+DTEND;TZID=Europe/Moscow:20260910T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f3ada4b08d25b691331ce70267e0a351@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T104000
+DTEND;TZID=Europe/Moscow:20260917T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0bcde69193ce138808a4576191ae2ab2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T104000
+DTEND;TZID=Europe/Moscow:20260924T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:a18f3af74fd16805cc13df732b05479c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T104000
+DTEND;TZID=Europe/Moscow:20261001T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d29f214e85c44d1e0edf3315cd8de32f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T104000
+DTEND;TZID=Europe/Moscow:20261008T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:6c20e5b4e27a13df7c1c1ee196b6b028@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T104000
+DTEND;TZID=Europe/Moscow:20261015T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:0ad5f3e7da7b9e2892476010fb3c6808@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T104000
+DTEND;TZID=Europe/Moscow:20261022T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:3704585d266e5a1ca38f1dbb4a298144@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T104000
+DTEND;TZID=Europe/Moscow:20261029T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:f77cfc648eaeed2ac67b5abc2d81611f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T104000
+DTEND;TZID=Europe/Moscow:20261105T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:c99a9afda28443d8df9ba8c3f28d47a1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T104000
+DTEND;TZID=Europe/Moscow:20261112T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:b6f96d6d4ecec2970aa64f5ca5a2d13a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T104000
+DTEND;TZID=Europe/Moscow:20261119T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:cb01951a8cdb906a9efa0cf5696d71fe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T104000
+DTEND;TZID=Europe/Moscow:20261126T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:759439ca615ea1e877724dd9139a757d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T104000
+DTEND;TZID=Europe/Moscow:20261203T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:8ee168a24c26509ba520cf1d3d40424a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T104000
+DTEND;TZID=Europe/Moscow:20261210T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d233f69e626db61b48b6369a40d4e740@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T104000
+DTEND;TZID=Europe/Moscow:20261217T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:e4c232ba10ae6ed11b37c67741f50e00@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T104000
+DTEND;TZID=Europe/Moscow:20261224T121000
+SUMMARY:История Средних веков (семинары) 2-я 
+ группа
+LOCATION:ИВИ РАН\,1407
+DESCRIPTION:Преподаватель: Анисимова А. А.\nФор
+ ма контроля: Зачет с оценкой
+END:VEVENT
+BEGIN:VEVENT
+UID:d5add111e9617d91ead71ee959b50956@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260903T124000
+DTEND;TZID=Europe/Moscow:20260903T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6463db4562470e6c01a3a8693a6dc71@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260910T124000
+DTEND;TZID=Europe/Moscow:20260910T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6e0e27a406061e701fac8efa79d6775@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260917T124000
+DTEND;TZID=Europe/Moscow:20260917T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:78c0eec3c0e8d266791b205055c98228@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260924T124000
+DTEND;TZID=Europe/Moscow:20260924T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:31210c720aa874a9cfe5641e345214db@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261001T124000
+DTEND;TZID=Europe/Moscow:20261001T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:212c6871e6ea48254dbcb951958001e1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261008T124000
+DTEND;TZID=Europe/Moscow:20261008T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fab90ba23558f6803279583c51a20787@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261015T124000
+DTEND;TZID=Europe/Moscow:20261015T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bce44e3d9efd24170a93e24cb1096e9c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261022T124000
+DTEND;TZID=Europe/Moscow:20261022T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8045bbc2d8ef9e58f1ba0e62884f7f23@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261029T124000
+DTEND;TZID=Europe/Moscow:20261029T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2948a3ea7e762a2df79a82f1b881e79b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261105T124000
+DTEND;TZID=Europe/Moscow:20261105T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a37a175d352e2f889fdc6cdbd2475664@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261112T124000
+DTEND;TZID=Europe/Moscow:20261112T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a05c4aec853a6ebb25ac439d059baac7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261119T124000
+DTEND;TZID=Europe/Moscow:20261119T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0acea1beac50116153e7321929ace9a6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261126T124000
+DTEND;TZID=Europe/Moscow:20261126T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf3a2f66c2cda9ee38c99615071cc282@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261203T124000
+DTEND;TZID=Europe/Moscow:20261203T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:797f7436973fa20b2430a6d2850c0fa9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261210T124000
+DTEND;TZID=Europe/Moscow:20261210T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:54cf6169327f2f27651b80caa072d864@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261217T124000
+DTEND;TZID=Europe/Moscow:20261217T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1aaa1374a2651d7e40ca16174c8de352@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261224T124000
+DTEND;TZID=Europe/Moscow:20261224T141000
+SUMMARY:Источниковедение (Семинары) 2-группа
+LOCATION:ИВИ РАН\, ауд. 1527
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d550ed0db05c426d78cec0a1b7423a58@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T090000
+DTEND;TZID=Europe/Moscow:20260904T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:90145104ca959c947d4704fbd4bfad14@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T090000
+DTEND;TZID=Europe/Moscow:20260911T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:5fb85dafc73c78f969a302f0bf845811@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T090000
+DTEND;TZID=Europe/Moscow:20260918T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:1b7416671dbd0e68321f89c0cfb58a44@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T090000
+DTEND;TZID=Europe/Moscow:20260925T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:b02289d98a777778be607dc08d6618b9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T090000
+DTEND;TZID=Europe/Moscow:20261002T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:00fa03849fadb38244812c392b0536c4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T090000
+DTEND;TZID=Europe/Moscow:20261009T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:ccbff29029609bb834ce145795a0c122@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T090000
+DTEND;TZID=Europe/Moscow:20261016T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:dfd3c17d97490d996cf0ef7100af8e70@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T090000
+DTEND;TZID=Europe/Moscow:20261023T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:d142a6725e99be92b76951f133ef9cae@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T090000
+DTEND;TZID=Europe/Moscow:20261030T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:d549acdb2a10e80e2b4309c3c98780d5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T090000
+DTEND;TZID=Europe/Moscow:20261106T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:d307edf5d26904497906856ea3ccf28c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T090000
+DTEND;TZID=Europe/Moscow:20261113T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:c03b19690823425c2b9d4d32d822eeef@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T090000
+DTEND;TZID=Europe/Moscow:20261120T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:956705a1b1023b4de2839bd694bc7b0c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T090000
+DTEND;TZID=Europe/Moscow:20261127T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:958e821372d2e6bffbc1db8e909804d6@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T090000
+DTEND;TZID=Europe/Moscow:20261204T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:34fda45b81d9d8063859f6bb9a703833@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T090000
+DTEND;TZID=Europe/Moscow:20261211T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3213cb56c59b628327a9a492ae875ec5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T090000
+DTEND;TZID=Europe/Moscow:20261218T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:8f2e5ce31fdd0b8be2cf2a55bf9442d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T090000
+DTEND;TZID=Europe/Moscow:20261225T103000
+SUMMARY:Историческая география
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Алмазов А.С.\nФорма 
+ контроля: Экзамен\nОбъём: 54 ч.\nС 4 сентябр
+ я
+END:VEVENT
+BEGIN:VEVENT
+UID:3a3d842d7d09be3324acd85fc7a99c48@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T104000
+DTEND;TZID=Europe/Moscow:20260904T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:3c1e3bb1272e01ed6c83ea0da42de947@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T104000
+DTEND;TZID=Europe/Moscow:20260911T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:cddd798b11c59418aaa41de97e031a56@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T104000
+DTEND;TZID=Europe/Moscow:20260918T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:2f165d5e53017de258cbb47d06486594@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T104000
+DTEND;TZID=Europe/Moscow:20260925T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:cc40ebd5d3ec33e360cf0d569ed731ed@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T104000
+DTEND;TZID=Europe/Moscow:20261002T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:659398edaf195dc4e39e0fbe2dce1570@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T104000
+DTEND;TZID=Europe/Moscow:20261009T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:620ab3a13005b45e85c6478037a5cd20@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T104000
+DTEND;TZID=Europe/Moscow:20261016T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:bf120b1a9d298245c5e2bb627596d2db@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T104000
+DTEND;TZID=Europe/Moscow:20261023T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:86f87fc89f41d97195d3a0590e30befd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T104000
+DTEND;TZID=Europe/Moscow:20261030T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:9c4b3a0610a5a36f0a99c13a8f7b2cac@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T104000
+DTEND;TZID=Europe/Moscow:20261106T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:727e7c8a189761611ee33ec1ec62f477@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T104000
+DTEND;TZID=Europe/Moscow:20261113T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:44ba7bf6a3b70c96a93b5f8734431eb5@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T104000
+DTEND;TZID=Europe/Moscow:20261120T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:0b015d34ba60ab24391ef1430333086f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T104000
+DTEND;TZID=Europe/Moscow:20261127T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:29927516bfe5ecbd1158691451e9bb9d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T104000
+DTEND;TZID=Europe/Moscow:20261204T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:42dadd41eebdf12d5cc99a309fe5fabe@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T104000
+DTEND;TZID=Europe/Moscow:20261211T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:e99ebad966e235fcbddc6ad12efb75ee@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T104000
+DTEND;TZID=Europe/Moscow:20261218T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:d8d505556f99d2792831a196fe2d5bbb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T104000
+DTEND;TZID=Europe/Moscow:20261225T121000
+SUMMARY:Источниковедение
+LOCATION:ЦЭМИ\, 01
+DESCRIPTION:Преподаватель: Дробышев М. И.\nФорм
+ а контроля: Зачет\nОбъём: 18 ч.\nС 4-го сентя
+ бря
+END:VEVENT
+BEGIN:VEVENT
+UID:262b65ddfb2fa7ae4438a644dbb55515@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T140000
+DTEND;TZID=Europe/Moscow:20260904T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ebfc1479e6e148547986b1d0915c754f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260904T154000
+DTEND;TZID=Europe/Moscow:20260904T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7c7fe07ec8e4c043c196275498ec13a8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T140000
+DTEND;TZID=Europe/Moscow:20260911T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:517d048c21fe5c2c0c2385dac03feb25@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260911T154000
+DTEND;TZID=Europe/Moscow:20260911T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b83749e06ca9e5f55b9656348e0e1970@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T140000
+DTEND;TZID=Europe/Moscow:20260918T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f903b08d324b2737800f9c609e5ed68@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260918T154000
+DTEND;TZID=Europe/Moscow:20260918T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:46c031b5998ab6f892c86ccfdaed5666@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T140000
+DTEND;TZID=Europe/Moscow:20260925T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9f002670445244f25916ea74e86d98cd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260925T154000
+DTEND;TZID=Europe/Moscow:20260925T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:08022f85be95e9570ec7d18e72a5ab92@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T140000
+DTEND;TZID=Europe/Moscow:20261002T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8c411194cf0e1e8b354d37384045239a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261002T154000
+DTEND;TZID=Europe/Moscow:20261002T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:766c31c0447548a8ff774172eed580a4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T140000
+DTEND;TZID=Europe/Moscow:20261009T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a88aa2c9f23e3acec096bab144563651@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261009T154000
+DTEND;TZID=Europe/Moscow:20261009T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:857a37b083eefb2b3617cd784c088f61@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T140000
+DTEND;TZID=Europe/Moscow:20261016T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ad98a061b9d0cce6cf359cff74e6fa96@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261016T154000
+DTEND;TZID=Europe/Moscow:20261016T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b6c5459341c5e563ff87c01219b63bd@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T140000
+DTEND;TZID=Europe/Moscow:20261023T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2f36fc02ebb8d922df9eb1c1dfb82ee2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261023T154000
+DTEND;TZID=Europe/Moscow:20261023T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c6506b3694920aac78dbb27e60d2d13b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T140000
+DTEND;TZID=Europe/Moscow:20261030T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e9dc3c1b128ea0873578b532d75d5757@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261030T154000
+DTEND;TZID=Europe/Moscow:20261030T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bc8c6396318e2fa900091ae3c7dae8ce@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T140000
+DTEND;TZID=Europe/Moscow:20261106T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:efbdac105d8ff715d5a89093982d4083@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261106T154000
+DTEND;TZID=Europe/Moscow:20261106T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f69df83f2d2cf56aa37e739c8ec1dad4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T140000
+DTEND;TZID=Europe/Moscow:20261113T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:424b65a7a4d5bcfd8a1c54f877393a68@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261113T154000
+DTEND;TZID=Europe/Moscow:20261113T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f15c534195c69d6767af3103e4209d1c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T140000
+DTEND;TZID=Europe/Moscow:20261120T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5dcca62bbd1a1732a9ada9c3312dc6e3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261120T154000
+DTEND;TZID=Europe/Moscow:20261120T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5dc81296cebdbac1d586bed00e2145ad@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T140000
+DTEND;TZID=Europe/Moscow:20261127T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b431dc7d28eff0fe5fd9ffbcc756559@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261127T154000
+DTEND;TZID=Europe/Moscow:20261127T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bb86589a3662a1ab1b00b60c01972925@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T140000
+DTEND;TZID=Europe/Moscow:20261204T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4906d76f1f07a18e31ba2ad8f08db9ec@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261204T154000
+DTEND;TZID=Europe/Moscow:20261204T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e89829e8c87cd3049e9c95f5b57e3b56@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T140000
+DTEND;TZID=Europe/Moscow:20261211T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:641375f2534e956ba09e5d853b15693f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261211T154000
+DTEND;TZID=Europe/Moscow:20261211T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3c615fce8f90966b47faf6951b5d81a0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T140000
+DTEND;TZID=Europe/Moscow:20261218T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ee6031583f4556a536a255246889f9ea@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261218T154000
+DTEND;TZID=Europe/Moscow:20261218T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:170bcbece295f734a69da00eee92b1c7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T140000
+DTEND;TZID=Europe/Moscow:20261225T153000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ce8f8ae76dca528851cae5214be7d9cb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261225T154000
+DTEND;TZID=Europe/Moscow:20261225T171000
+SUMMARY:Культурологические методы в истори
+ и
+LOCATION:Портал gaugn.ru ZOOM
+DESCRIPTION:Преподаватель: Сайко Е.А.\nФорма ко
+ нтроля: Зачет\nОбъём: 36 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:73cde08f2339f27f32d38b24cc884b20@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260905T110000
+DTEND;TZID=Europe/Moscow:20260905T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:23d6ba71fa27e15c180647e8f2bf06a4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260905T124000
+DTEND;TZID=Europe/Moscow:20260905T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:684791df8167b59135e1b9b857df3557@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260912T110000
+DTEND;TZID=Europe/Moscow:20260912T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc53912f882e6d85a4c204bd06782f4d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260912T124000
+DTEND;TZID=Europe/Moscow:20260912T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d47cad3672e57d428569b9512a5f4563@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260919T110000
+DTEND;TZID=Europe/Moscow:20260919T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6456106b2775c5950e774a31bc84cfa7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260919T124000
+DTEND;TZID=Europe/Moscow:20260919T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:097dcc328b38ff4f5f267b36c495b858@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260926T110000
+DTEND;TZID=Europe/Moscow:20260926T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cb98ac7534255f6faa71143ae8b211d4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260926T124000
+DTEND;TZID=Europe/Moscow:20260926T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7c13dc361273d4d4a8d378c64ca64b7f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261003T110000
+DTEND;TZID=Europe/Moscow:20261003T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e492a170a40a61cbd6d829e844f5103@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261003T124000
+DTEND;TZID=Europe/Moscow:20261003T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:18ec36cebb600c5bb937d4ddc4f76b52@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261010T110000
+DTEND;TZID=Europe/Moscow:20261010T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f13487014e19a9b03c5520e8d859fc73@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261010T124000
+DTEND;TZID=Europe/Moscow:20261010T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:38cf26c839e24eba6080bc0a9e04d569@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261017T110000
+DTEND;TZID=Europe/Moscow:20261017T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:f7d05422d39f513a39196f9fe5ff310c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261017T124000
+DTEND;TZID=Europe/Moscow:20261017T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6b9d1e222abd28c9ce7cf3d924886ac9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261024T110000
+DTEND;TZID=Europe/Moscow:20261024T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c25a5e52ba468e0f4497dbec388f84d3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261024T124000
+DTEND;TZID=Europe/Moscow:20261024T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:14bb14c21af408d84312b0af35e38211@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261031T110000
+DTEND;TZID=Europe/Moscow:20261031T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:67ff68ed58dcde919a90b58b5f0cb54b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261031T124000
+DTEND;TZID=Europe/Moscow:20261031T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfac6e18408f6877d793f28f60e4d291@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261107T110000
+DTEND;TZID=Europe/Moscow:20261107T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:aa590e5a5bcdc3139dc8b2e074fc4c56@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261107T124000
+DTEND;TZID=Europe/Moscow:20261107T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4772d74eb563e39df9a3ed35a2868cae@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261114T110000
+DTEND;TZID=Europe/Moscow:20261114T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:ef1e4f54754bf8ce6e1d7a66fb0179b2@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261114T124000
+DTEND;TZID=Europe/Moscow:20261114T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:baae3cf3cdd8591500a92ea51b4ba7c4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261121T110000
+DTEND;TZID=Europe/Moscow:20261121T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:01adc0d217bb9253f2bbb988c32879be@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261121T124000
+DTEND;TZID=Europe/Moscow:20261121T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:120624d7f1c4f87c3ae783b1ca8abaa8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261128T110000
+DTEND;TZID=Europe/Moscow:20261128T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:362b8f78e535776f93ea310acdbd8852@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261128T124000
+DTEND;TZID=Europe/Moscow:20261128T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9d322bf844d0799005bd8de5a88256c4@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261205T110000
+DTEND;TZID=Europe/Moscow:20261205T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5daca3c3f66afd7061084a42ba43fb75@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261205T124000
+DTEND;TZID=Europe/Moscow:20261205T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:c14b5f91f55ffb8965693857aa0dc35d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261212T110000
+DTEND;TZID=Europe/Moscow:20261212T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:9c3283896fc8671a4d3783983e42d62f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261212T124000
+DTEND;TZID=Europe/Moscow:20261212T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:18d092343602b7d70ecfa9a3defb3f7e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261219T110000
+DTEND;TZID=Europe/Moscow:20261219T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b0643d4c8f76931a762fd0b3a5a5bf1b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261219T124000
+DTEND;TZID=Europe/Moscow:20261219T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b7fa4ec26e9dbb621dd25de7d9044e8@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261226T110000
+DTEND;TZID=Europe/Moscow:20261226T123000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:11e047874d08787b47c55f449f92d8b1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261226T124000
+DTEND;TZID=Europe/Moscow:20261226T141000
+SUMMARY:Информатика и математика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Ахтамзян Н.И.\nФорм
+ а контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4b077385eb8b4de90a29e58dd534a0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260905T151000
+DTEND;TZID=Europe/Moscow:20260905T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dcb0d1b2590f9390b63470e25578b150@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260905T170000
+DTEND;TZID=Europe/Moscow:20260905T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:e0574bf6b6609d0db025a1a0306592c3@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260912T151000
+DTEND;TZID=Europe/Moscow:20260912T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1383209a71b5c6b3622ccf812aa3163e@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260912T170000
+DTEND;TZID=Europe/Moscow:20260912T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:44b431e33b35e405bbef9e21d7da73e0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260919T151000
+DTEND;TZID=Europe/Moscow:20260919T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1d1185824b3f7e8802ea730383e7854f@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260919T170000
+DTEND;TZID=Europe/Moscow:20260919T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:7753e2235bdc6bdddeb05f545f3310da@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260926T151000
+DTEND;TZID=Europe/Moscow:20260926T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2237eb4d01f7699bc27693e9cb2ca989@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20260926T170000
+DTEND;TZID=Europe/Moscow:20260926T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b8d14bf5020f3da75867cc220dd4ab50@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261003T151000
+DTEND;TZID=Europe/Moscow:20261003T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:eeaccbe893cd5d34e6e76e8bca951312@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261003T170000
+DTEND;TZID=Europe/Moscow:20261003T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2350ce3c0d83cbc133c458847656997a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261010T151000
+DTEND;TZID=Europe/Moscow:20261010T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1db8a355fa18dd5b9f0ec5cba50014de@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261010T170000
+DTEND;TZID=Europe/Moscow:20261010T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:b685b6afc43123e61da80b8263ee6601@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261017T151000
+DTEND;TZID=Europe/Moscow:20261017T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dfac8eff41042db39d391d7c7e7de819@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261017T170000
+DTEND;TZID=Europe/Moscow:20261017T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:27735954b33f9ee4ad63975844b95655@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261024T151000
+DTEND;TZID=Europe/Moscow:20261024T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c48e7c379cc2faf038783c2475313cb@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261024T170000
+DTEND;TZID=Europe/Moscow:20261024T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:37eb824fb9146af439f2a68d01bb3b64@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261031T151000
+DTEND;TZID=Europe/Moscow:20261031T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:dce1bcc7c37db9544775e8e98e3e5395@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261031T170000
+DTEND;TZID=Europe/Moscow:20261031T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:1d047f1b15710bb5c4605710c12f3571@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261107T151000
+DTEND;TZID=Europe/Moscow:20261107T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8448691e33c6fa55a5c6f038cf998386@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261107T170000
+DTEND;TZID=Europe/Moscow:20261107T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:d97ae57ed1be7468c6efdde9a5de7a6d@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261114T151000
+DTEND;TZID=Europe/Moscow:20261114T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:fa26b087439ca6b43a0ba52aca70b53a@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261114T170000
+DTEND;TZID=Europe/Moscow:20261114T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2ef4cd191c327e111e2f3101a1933c6c@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261121T151000
+DTEND;TZID=Europe/Moscow:20261121T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:5086eedfa6d90ef88cc955209f5fc915@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261121T170000
+DTEND;TZID=Europe/Moscow:20261121T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:0025436548aa8f2fca61438b35b5c978@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261128T151000
+DTEND;TZID=Europe/Moscow:20261128T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:cd6aa9ee16bd5e074dd3db82b911ecd9@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261128T170000
+DTEND;TZID=Europe/Moscow:20261128T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:510fd131c01be1f1244ce1ad3112d549@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261205T151000
+DTEND;TZID=Europe/Moscow:20261205T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:a80be44662306312693106f46b0eefe1@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261205T170000
+DTEND;TZID=Europe/Moscow:20261205T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:bf195e237932b6792241a4e589d233d0@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261212T151000
+DTEND;TZID=Europe/Moscow:20261212T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:2ab510f549ec61ec7248389187902685@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261212T170000
+DTEND;TZID=Europe/Moscow:20261212T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:8e6792f83d06065a3a0148f3176ed56b@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261219T151000
+DTEND;TZID=Europe/Moscow:20261219T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:081dbb774d78aeffb4f7853ff50b6661@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261219T170000
+DTEND;TZID=Europe/Moscow:20261219T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:393cd7d885d8dd1a4a4fa8ef69bf0f92@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261226T151000
+DTEND;TZID=Europe/Moscow:20261226T164000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+BEGIN:VEVENT
+UID:6264d2544f8ccb3eccf1f71ee3e828e7@gaugn-hist
+DTSTAMP:20261023T201900Z
+DTSTART;TZID=Europe/Moscow:20261226T170000
+DTEND;TZID=Europe/Moscow:20261226T183000
+SUMMARY:Экономика
+LOCATION:ВКС\, портал gaugn
+DESCRIPTION:Преподаватель: Тиханович О.А.\nФор
+ ма контроля: экзамен\nОбъём: 54 ч.
+END:VEVENT
+END:VCALENDAR
