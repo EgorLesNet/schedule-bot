@@ -1,6 +1,7 @@
 import { api } from 'sdk';
 import * as store from '../lib/store.js';
 import { send } from '../lib/bot.js';
+import { secure } from '../lib/auth.js';
 import { sendReminders } from '../lib/remind.js';
 import { allEntries, loadEvents } from '../lib/schedule.js';
 import { syncExisting } from '../lib/hwsync.js';
@@ -14,6 +15,7 @@ const LONG = 'Расписание ГАУГН в удобном приложен
 const ADMIN_HELP = [
   'Расписание, ДЗ и настройки — в приложении. В чате доступны:',
   '/alerts - уведомления об изменениях расписания (вкл/выкл)',
+  '/myid - ваш Telegram id',
   '', 'Админ:', '/stats - статистика', '/announce текст - рассылка всем', '/assistant add @user, /assistant del @user, /assistants',
   '/refresh - перечитать расписание из GitHub, не дожидаясь часа',
   '/remind_now, /synchw', '/setmenu - кнопка приложения, описание бота и список команд',
@@ -31,7 +33,8 @@ export default async function (message) {
   }
   if (!message.text) return;
   const chat = message.chat.id;
-  const uname = message.from.username || '';
+  // Ник проверяется вместе с id: если с таким ником пишет чужой аккаунт, права не даются
+  const uname = (await secure(message.from)).username || '';
   const text = message.text.trim();
   const sp = text.indexOf(' ');
   const cmd = (sp < 0 ? text : text.slice(0, sp)).split('@')[0].toLowerCase();
@@ -41,6 +44,8 @@ export default async function (message) {
   const invite = async () => { const v = await inviteView(); return send(chat, v.text, v.markup); };
 
   switch (cmd) {
+    case '/myid':
+      return send(chat, '🆔 Ваш Telegram id: ' + message.from.id);
     case '/alerts': {
       const u2 = await store.saveUser(message.from.id, { alerts: user.alerts === false });
       return send(chat, u2.alerts === false ? '🔕 Уведомления об изменениях расписания выключены' : '🔔 Уведомления об изменениях расписания включены');

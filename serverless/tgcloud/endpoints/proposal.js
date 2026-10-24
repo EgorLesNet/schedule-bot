@@ -4,9 +4,11 @@ import { loadEvents, toOriginal } from '../lib/schedule.js';
 import { LANG_NAME, langDates } from '../lib/lang.js';
 import { applyHw, applyFiles } from '../lib/hwsync.js';
 import { takeFromInbox, plain } from '../lib/files.js';
+import { notifyStream } from '../lib/notify.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
 import { canEdit } from '../lib/roles.js';
+import { today } from '../lib/time.js';
 import { NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
@@ -63,9 +65,17 @@ export default endpoint(async (input, u) => {
       await store.set(k, list);
       if (a === 'approve') {
         const t = String(input.text || p.text).trim().slice(0, 1000) || p.text;
-        await applyHw(course, stream, p.original, p.date, t);
+        const prev = (await store.loadHw(course, stream))[p.original + '|' + p.date];
+        const touched = await applyHw(course, stream, p.original, p.date, t);
         if (p.files && p.files.length) await applyFiles(course, stream, p.original, p.date, 'add', p.files);
         try { await send(p.uid, '✅ Ваше ДЗ принято: ' + p.subject + ', ' + fmt(p.date)); } catch (e) {}
+        // Мгновенное уведомление потоку о новом или изменённом ДЗ (кроме ассистента и автора предложения)
+        if (p.date >= today() && prev !== t) {
+          const msg = (prev === undefined ? '📝 Новое ДЗ' : '✏️ ДЗ изменено') + ': ' + p.subject + ', ' + fmt(p.date) + NL + t.slice(0, 300) + (p.files && p.files.length ? NL + '📎 Файлов: ' + p.files.length : '') + NL + 'Подробности — во вкладке «ДЗ».';
+          for (const s of [stream, ...touched]) {
+            try { await notifyStream(course, s, msg, [u.id, p.uid], 'hwAlerts'); } catch (e) {}
+          }
+        }
       } else {
         try { await send(p.uid, '❌ Ваше предложение по ' + p.subject + ' (' + fmt(p.date) + ') отклонено'); } catch (e) {}
       }

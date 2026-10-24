@@ -1,5 +1,5 @@
-const C = 'schedule-v25';
-const SHELL = ['./', 'index.html', 'app.js', 'settings.js', 'extras.js', 'files.js', 'news.js', 'style.css', 'manifest.webmanifest', 'icon.svg'];
+const C = 'schedule-v27';
+const SHELL = ['./', 'index.html', 'app.js', 'settings.js', 'extras.js', 'files.js', 'news.js', 'more.js', 'style.css', 'manifest.webmanifest', 'icon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(C).then((c) => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== C).map((k) => caches.delete(k))))); self.clients.claim(); });
 self.addEventListener('fetch', (e) => {

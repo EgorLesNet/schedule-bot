@@ -26,12 +26,13 @@ function counterparts(ctx, stream, original, date) {
   return out;
 }
 
+// Возвращает массив потоков-двойников, в которые ТЕКСТ ДЗ тоже скопирован (для уведомлений)
 export async function applyHw(course, stream, original, date, text) {
   const own = await store.loadHw(course, stream);
   const key = original + '|' + date;
   if (text) own[key] = text; else delete own[key];
   await store.saveHw(course, stream, own);
-  let n = 0;
+  const touched = [];
   try {
     const ctx = await loadAll(course);
     for (const c of counterparts(ctx, stream, original, date)) {
@@ -39,10 +40,10 @@ export async function applyHw(course, stream, original, date, text) {
       const k2 = c.original + '|' + date;
       if (text) hw[k2] = text; else delete hw[k2];
       await store.saveHw(course, c.stream, hw);
-      n++;
+      touched.push(c.stream);
     }
   } catch (e) {}
-  return n;
+  return touched;
 }
 
 // Вложения ДЗ: mode 'add' добавляет файлы к уже прикреплённым, 'clear' убирает все. Те же потоки-двойники, что и у текста ДЗ.

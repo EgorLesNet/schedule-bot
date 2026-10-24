@@ -3,6 +3,7 @@ name: HW reminders
 # Рассылка напоминаний о ДЗ и расписания на завтра. У Telegram Serverless нет планировщика,
 # поэтому этот workflow раз в 5 минут выполняет endpoints/tick на платформе (npx tgcloud run).
 # Нужен секрет TGCLOUD_TOKEN (BotFather → бот → Serverless → CLI Access → Access token).
+# Необязательные секреты для уведомления админа о сбое: BOT_TOKEN (токен бота из BotFather) и ADMIN_CHAT_ID (ваш id, команда /myid у бота).
 # Расписание GitHub Actions работает только из ветки по умолчанию (сейчас это tgcloud).
 
 on:
@@ -43,3 +44,14 @@ jobs:
             if echo "$OUT" | grep -Eq 'sent[^0-9]{0,6}0([^0-9]|$)'; then break; fi
             if [ "$i" -lt 3 ]; then sleep 65; fi
           done
+      - name: Notify admin about failure
+        if: failure()
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$BOT_TOKEN" ] || [ -z "$ADMIN_CHAT_ID" ]; then echo "BOT_TOKEN или ADMIN_CHAT_ID не заданы, уведомление не отправлено"; exit 0; fi
+          curl -fsS -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${ADMIN_CHAT_ID}" \
+            --data-urlencode "text=⚠️ Сбой рассылки напоминаний о ДЗ. Вероятные причины: токен TGCLOUD_TOKEN недействителен или ошибка в коде. Лог: ${RUN_URL}" > /dev/null
