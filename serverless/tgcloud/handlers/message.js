@@ -8,6 +8,8 @@ import { syncExisting } from '../lib/hwsync.js';
 import { inviteView } from '../lib/invite.js';
 import { attachmentOf, addInbox } from '../lib/files.js';
 import { createBackup, listBackups, restoreBackup, backupId } from '../lib/backup.js';
+import { Batch, record, retryEntry } from '../lib/dlv.js';
+import { viewLog } from '../lib/dlvview.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DAY = 86400000;
@@ -19,6 +21,7 @@ const ADMIN_HELP = [
   '/myid - ваш Telegram id',
   '', 'Админ:', '/stats - статистика', '/announce текст - рассылка всем', '/assistant add @user, /assistant del @user, /assistants',
   '/refresh - перечитать расписание из GitHub, не дожидаясь часа',
+  '/deliveries - журнал рассылок, /retry id - повторить отправку',
   '/backup - создать копию базы, /backups - список (хранятся 2 суток), /restore id - восстановить',
   '/remind_now, /synchw', '/setmenu - кнопка приложения, описание бота и список команд',
 ].join(NL);
@@ -60,6 +63,26 @@ export default async function (message) {
     }
     case '/help':
       return store.isAdmin(uname) ? send(chat, ADMIN_HELP) : invite();
+    case '/deliveries': {
+      if (!store.isAdmin(uname)) return deny();
+      const list = await viewLog(8);
+      if (!list.length) return send(chat, 'Журнал рассылок пока пуст.');
+      const lines = list.map((x) => {
+        const bad = Object.entries(x.reasons).map(([k, n]) => k + ': ' + n).concat(Object.entries(x.transient).map(([k, n]) => k + ': ' + n + ' (временно)'));
+        return stamp(x.t) + ' · ' + x.kind + ' · ' + x.scope + NL + '✅ ' + x.ok + ' из ' + x.expected + (x.failed ? ' · ❌ ' + x.failed : '') + (bad.length ? NL + '   ' + bad.join('; ') : '') + (x.canRetry ? NL + '   Повторить: /retry ' + x.id : x.auto ? NL + '   Повтор выполняется автоматически' : '');
+      });
+      return send(chat, ('📨 Последние рассылки:' + NL + NL + lines.join(NL + NL)).slice(0, 4000));
+    }
+    case '/retry': {
+      if (!store.isAdmin(uname)) return deny();
+      if (!arg) return send(chat, 'Формат: /retry id (список — /deliveries)');
+      try {
+        const r = await retryEntry(arg.trim());
+        return send(chat, '🔁 Повтор: доставлено ' + r.ok + ', осталось с ошибкой ' + r.left);
+      } catch (e) {
+        return send(chat, '❌ ' + ((e && e.message) || e));
+      }
+    }
     case '/backup': {
       if (!store.isAdmin(uname)) return deny();
       const r = await createBackup('manual');
@@ -137,11 +160,13 @@ export default async function (message) {
     case '/announce': {
       if (!store.isAdmin(uname)) return deny();
       if (!arg) return send(chat, 'Формат: /announce текст');
-      let ok = 0, fail = 0;
+      const body = '📢 Объявление от администратора:' + NL + NL + arg;
+      const b = new Batch('Объявление админа', {}, body);
       for (const id of await store.get('users', [])) {
-        try { await send(id, '📢 Объявление от администратора:' + NL + NL + arg); ok++; } catch (e) { fail++; }
+        try { await send(id, body); b.hit(); } catch (e) { b.miss(id, e); }
       }
-      return send(chat, '✅ Отправлено: ' + ok + ', не доставлено: ' + fail);
+      try { await record(b); } catch (e) {}
+      return send(chat, '✅ Отправлено: ' + b.ok + ', не доставлено: ' + (b.expected - b.ok) + (b.retry.length ? NL + 'Временные ошибки можно повторить: /deliveries' : ''));
     }
     case '/stats': {
       if (!store.isAdmin(uname)) return deny();

@@ -4,9 +4,10 @@ import { userLang } from './lang.js';
 import { send } from './bot.js';
 import { today, addDays } from './time.js';
 import { NL } from './config.js';
+import { Batch, record } from './dlv.js';
 
 // Вечернее напоминание: расписание на завтра и домашние задания. У каждого пользователя своё время (remindAt, МСК).
-// У платформы нет планировщика, поэтому рассылку запускает tickReminders (endpoints/tick.js): его раз в 5 минут зовёт открытое приложение.
+// У платформы нет планировщика, поэтому рассылку запускает tickReminders (endpoints/tick.js): GitHub Actions и раз в 5 минут открытое приложение.
 // Тик срабатывает не чаще раза в минуту и отправляет не более MAX_PER_TICK сообщений за раз.
 export const DEFAULT_AT = '20:00';
 const TICK_MS = 60000;
@@ -37,12 +38,15 @@ export async function buildReminder(u, date, memo) {
 }
 
 // force=true: всем, у кого включены напоминания, независимо от времени (команда /remind_now)
-// force=false: только тем, у кого время уже наступило и сегодня ещё не отправляли
+// force=false: только тем, у кого время уже наступило и сегодня ещё не отправляли.
+// Итог каждой рассылки попадает в журнал. При временной ошибке (лимит, сбой сети) отметка «уже отправлено» снимается,
+// и напоминание уйдёт при следующей проверке (пока у пользователя не наступил следующий день).
 async function run(force, limit) {
   const day = today();
   const date = addDays(day, 1);
   const now = nowMin();
   const memo = {};
+  const b = new Batch('Напоминание', {}, '');
   let sent = 0;
   for (const id of await store.get('users', [])) {
     if (sent >= limit) break;
@@ -56,8 +60,16 @@ async function run(force, limit) {
     let text = '';
     try { text = await buildReminder(u, date, memo); } catch (e) { continue; }
     if (!text) continue;
-    try { await send(id, text); sent++; } catch (e) {}
+    try {
+      await send(id, text);
+      sent++;
+      b.hit();
+    } catch (e) {
+      const c = b.miss(id, e);
+      if (c.retry && !force) await store.set('user:' + id, u);
+    }
   }
+  try { await record(b); } catch (e) {}
   return sent;
 }
 
