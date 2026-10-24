@@ -1,6 +1,7 @@
 import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { loadEvents, toOriginal } from '../lib/schedule.js';
+import { planShift, planToken, planRows } from '../lib/shiftplan.js';
 import { endpoint } from '../lib/auth.js';
 import { canEdit } from '../lib/roles.js';
 import { notifyStream } from '../lib/notify.js';
@@ -16,11 +17,6 @@ const LOG_SHOW = 50;
 const MAX_SHIFT_LESSONS = 80;
 const who = (u) => (u.username ? '@' + u.username : ([u.first_name, u.last_name].filter(Boolean).join(' ') || 'id' + u.id));
 
-const addMin = (t, d) => {
-  const m = Number(t.slice(0, 2)) * 60 + Number(t.slice(3, 5)) + d;
-  if (m < 0 || m > 1439) return '';
-  return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
-};
 const shiftLabel = (m) => {
   const a = Math.abs(m);
   const h = Math.floor(a / 60);
@@ -82,38 +78,25 @@ export default endpoint(async (input, u) => {
       logText = '↪️ Перенос: ' + title + ', ' + dm(date) + ' ' + start + ' → ' + dm(nd) + ' ' + ns + '–' + ne;
     }
   } else if (a === 'shift') {
-    // Сдвиг всех пар предмета на N минут (в тот же день); scope 'all' — все будущие, иначе начиная с даты пары
+    // Сдвиг всех пар предмета на N минут (в тот же день); scope 'all' — все будущие, иначе начиная с даты пары.
+    // preview:true — только таблица «было → станет» без изменений; применение блокируется жёсткими проблемами,
+    // пересечения с другими парами требуют allowOverlap, при несовпадении token с предпросмотром — ошибка.
     const mins = Number(input.minutes);
     const subj = String(input.summary || '').trim();
     if (!Number.isInteger(mins) || mins === 0 || Math.abs(mins) > 360 || !subj || !D.test(date)) throw bad();
     const from = input.scope === 'all' ? today() : date;
-    const found = (await loadEvents(user.course, user.stream)).filter((e) => e.summary === subj && e.date >= from);
-    if (!found.length) throw new EndpointError('Пар этого предмета не найдено');
-    const plan = [];
-    const seen = new Set();
-    for (const e of found) {
-      const oldKey = e.original + '[' + e.start + ']';
-      if (seen.has(e.date + '|' + oldKey)) continue;
-      seen.add(e.date + '|' + oldKey);
-      const ns = addMin(e.start, mins);
-      const ne = addMin(e.end, mins);
-      if (!ns || !ne) throw new EndpointError('Время выходит за пределы суток: ' + dm(e.date) + ' ' + e.start);
-      const existing = se[e.date] && se[e.date][oldKey];
-      const inPlace = !!(existing && existing.new);
-      const title = inPlace ? existing.new_summary : subj;
-      plan.push({ e, oldKey, ns, ne, existing, inPlace, nk: title + '[' + ns + ']' });
-    }
+    const all = await loadEvents(user.course, user.stream);
+    const { plan } = planShift(all, se, subj, mins, from);
+    if (!plan.length) throw new EndpointError('Пар этого предмета не найдено');
     if (plan.length > MAX_SHIFT_LESSONS) throw new EndpointError('Слишком много пар за раз, выберите «Начиная с этой даты»');
-    const olds = {};
-    for (const p of plan) (olds[p.e.date] = olds[p.e.date] || new Set()).add(p.oldKey);
-    const news = {};
-    for (const p of plan) {
-      const ns2 = (news[p.e.date] = news[p.e.date] || new Set());
-      const clash = ns2.has(p.nk) || olds[p.e.date].has(p.nk) || (se[p.e.date] && se[p.e.date][p.nk]);
-      if (clash) throw new EndpointError('Сдвиг даёт совпадение времени двух пар в день ' + dm(p.e.date) + '. Выберите другой сдвиг');
-      ns2.add(p.nk);
+    const token = planToken(plan);
+    if (input.preview) {
+      return { token, count: plan.length, hard: plan.some((p) => p.problems.length), overlaps: plan.some((p) => p.warns.length), rows: planRows(plan) };
     }
-    plan.sort((x, y) => x.e.date.localeCompare(y.e.date) || x.e.start.localeCompare(y.e.start));
+    const blocked = plan.find((p) => p.problems.length);
+    if (blocked) throw new EndpointError(dm(blocked.e.date) + ': ' + blocked.problems[0]);
+    if (input.token && input.token !== token) throw new EndpointError('Расписание изменилось, сделайте предпросмотр заново');
+    if (plan.some((p) => p.warns.length) && !input.allowOverlap) throw new EndpointError('Есть пересечения с другими парами: подтвердите их в предпросмотре');
     for (const p of plan) {
       const d = p.e.date;
       if (p.inPlace) {
