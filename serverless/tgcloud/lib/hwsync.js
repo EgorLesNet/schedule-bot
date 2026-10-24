@@ -46,7 +46,8 @@ export async function applyHw(course, stream, original, date, text) {
   return touched;
 }
 
-// Вложения ДЗ: mode 'add' добавляет файлы к уже прикреплённым, 'clear' убирает все. Те же потоки-двойники, что и у текста ДЗ.
+// Вложения ДЗ: mode 'add' добавляет файлы к уже прикреплённым, 'remove' убирает файлы с указанными uid (files — массив uid), 'clear' убирает все.
+// Те же потоки-двойники, что и у текста ДЗ.
 export async function applyFiles(course, stream, original, date, mode, files) {
   const targets = [{ stream, key: original + '|' + date }];
   try {
@@ -56,7 +57,10 @@ export async function applyFiles(course, stream, original, date, mode, files) {
   for (const t of targets) {
     const all = await loadFiles(course, t.stream);
     if (mode === 'clear') delete all[t.key];
-    else all[t.key] = mergeFiles(all[t.key] || [], files);
+    else if (mode === 'remove') {
+      const left = (all[t.key] || []).filter((f) => !files.includes(f.uid));
+      if (left.length) all[t.key] = left; else delete all[t.key];
+    } else all[t.key] = mergeFiles(all[t.key] || [], files);
     await saveFiles(course, t.stream, all);
   }
   return targets.length - 1;
