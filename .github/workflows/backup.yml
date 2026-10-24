@@ -1,0 +1,48 @@
+name: DB backup
+
+# Резервная копия всей базы бота раз в 6 часов (03:17, 09:17, 15:17, 21:17 по Москве). Копии хранятся в самой базе 2 суток, старые удаляются автоматически.
+# В лог Actions (он публичный) попадает только служебный ответ (число ключей и размер), данные пользователей не выводятся.
+# Нужен секрет TGCLOUD_TOKEN; для уведомления о сбое — BOT_TOKEN и ADMIN_CHAT_ID (как в reminders.yml).
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: backup
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tgcloud
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Create backup on Telegram Serverless
+        working-directory: serverless
+        env:
+          TGCLOUD_TOKEN: ${{ secrets.TGCLOUD_TOKEN }}
+        run: |
+          if [ -z "$TGCLOUD_TOKEN" ]; then echo "::error::Secret TGCLOUD_TOKEN is not set"; exit 1; fi
+          mkdir -p .tgcloud
+          npx -y -p @tgcloud/cli tgcloud run endpoints/backup --ctx '{ initData: { user: { id: 1 } } }'
+      - name: Notify admin about failure
+        if: failure()
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$BOT_TOKEN" ] || [ -z "$ADMIN_CHAT_ID" ]; then echo "BOT_TOKEN или ADMIN_CHAT_ID не заданы, уведомление не отправлено"; exit 0; fi
+          curl -fsS -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${ADMIN_CHAT_ID}" \
+            --data-urlencode "text=⚠️ Сбой резервного копирования базы. Вероятные причины: токен TGCLOUD_TOKEN недействителен или ошибка в коде. Лог: ${RUN_URL}" > /dev/null

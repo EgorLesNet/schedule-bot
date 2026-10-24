@@ -7,6 +7,7 @@ import { allEntries, loadEvents } from '../lib/schedule.js';
 import { syncExisting } from '../lib/hwsync.js';
 import { inviteView } from '../lib/invite.js';
 import { attachmentOf, addInbox } from '../lib/files.js';
+import { createBackup, listBackups, restoreBackup, backupId } from '../lib/backup.js';
 import { APP_URL, NL } from '../lib/config.js';
 
 const DAY = 86400000;
@@ -18,8 +19,15 @@ const ADMIN_HELP = [
   '/myid - ваш Telegram id',
   '', 'Админ:', '/stats - статистика', '/announce текст - рассылка всем', '/assistant add @user, /assistant del @user, /assistants',
   '/refresh - перечитать расписание из GitHub, не дожидаясь часа',
+  '/backup - создать копию базы, /backups - список (хранятся 2 суток), /restore id - восстановить',
   '/remind_now, /synchw', '/setmenu - кнопка приложения, описание бота и список команд',
 ].join(NL);
+
+const stamp = (ts) => {
+  const d = new Date(ts + 3 * 3600000);
+  const p = (n) => String(n).padStart(2, '0');
+  return p(d.getUTCDate()) + '.' + p(d.getUTCMonth() + 1) + ' ' + p(d.getUTCHours()) + ':' + p(d.getUTCMinutes());
+};
 
 export default async function (message) {
   if (!message.from || message.chat.type !== 'private') return;
@@ -52,6 +60,34 @@ export default async function (message) {
     }
     case '/help':
       return store.isAdmin(uname) ? send(chat, ADMIN_HELP) : invite();
+    case '/backup': {
+      if (!store.isAdmin(uname)) return deny();
+      const r = await createBackup('manual');
+      return send(chat, '💾 Копия создана: ' + r.id + NL + 'Ключей: ' + r.keys + ', размер ≈ ' + Math.ceil(r.bytes / 1024) + ' КБ' + (r.pruned ? NL + 'Удалено старых (старше 2 суток): ' + r.pruned : ''));
+    }
+    case '/backups': {
+      if (!store.isAdmin(uname)) return deny();
+      const list = await listBackups();
+      if (!list.length) return send(chat, 'Копий пока нет. Создайте командой /backup.');
+      const lines = list.slice().reverse().map((b) => backupId(b.ts) + ' · ' + stamp(b.ts) + ' МСК · ' + b.keys + ' ключей · ' + Math.ceil(b.bytes / 1024) + ' КБ · ' + b.label);
+      return send(chat, '💾 Копии (хранятся 2 суток):' + NL + lines.join(NL) + NL + NL + 'Восстановить: /restore id');
+    }
+    case '/restore': {
+      if (!store.isAdmin(uname)) return deny();
+      const parts = arg.split(' ').filter(Boolean);
+      const id = parts[0];
+      const b = id ? (await listBackups()).find((x) => backupId(x.ts) === id) : null;
+      if (!b) return send(chat, 'Формат: /restore id (список — /backups)');
+      if (parts[1] !== 'yes') {
+        return send(chat, '⚠️ Будут перезаписаны значения из копии ' + id + ' от ' + stamp(b.ts) + ' МСК (' + b.keys + ' ключей). Данные, появившиеся после неё, останутся. Перед этим автоматически создаётся ещё одна копия.' + NL + 'Подтвердите: /restore ' + id + ' yes');
+      }
+      try {
+        const r = await restoreBackup(b.ts);
+        return send(chat, '✅ Восстановлено ключей: ' + r.restored);
+      } catch (e) {
+        return send(chat, '❌ Не удалось восстановить: ' + ((e && e.message) || e));
+      }
+    }
     case '/refresh': {
       if (!store.isAdmin(uname)) return deny();
       // Список файлов перечитываем сразу, затем каждый файл (с рассылкой уведомлений об изменениях); не дольше 20 секунд за раз
