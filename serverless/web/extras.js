@@ -1,8 +1,7 @@
-// Дополнения поверх app.js и settings.js: время напоминания, группировка ДЗ по срокам, журнал правок расписания
+// Дополнения поверх app.js и settings.js: время напоминания, Вкладка «ДЗ» (даты, форма сверху), журнал правок расписания
 (function () {
   const DEFAULT_AT = '20:00';
   const REMIND_TIMES = (() => { const o = []; for (let m = 360; m <= 1410; m += 30) o.push(hhmm(m)); return o; })();
-  const HW_GROUPS = [['over', '⚠️ Просрочено'], ['today', 'Сегодня'], ['tom', 'Завтра'], ['week', 'На этой неделе'], ['later', 'Позже'], ['done', '✓ Выполнено']];
 
   const stamp = (ms) => {
     const d = new Date(ms + 3 * 3600000);
@@ -26,35 +25,65 @@
       sel));
   }
 
-  // ---------- ДЗ: группы «Сегодня / Завтра / На этой неделе / Позже / Выполнено» ----------
+  // ---------- ДЗ: заголовки по датам (внутри даты сначала невыполненные) ----------
+  function dateLabel(date, now) {
+    const rel = date === now ? 'Сегодня · ' : date === add(now, 1) ? 'Завтра · ' : date === add(now, 2) ? 'Послезавтра · ' : '';
+    return (date < now ? '⚠️ ' : '') + rel + fullLabel(date);
+  }
+
   function groupHw(root) {
     if (root.querySelector('.hw-group')) return;
     const cards = [...root.querySelectorAll('.hwc')];
     if (!cards.length) return;
     const now = nowMsk().date;
-    const tomorrow = add(now, 1);
-    const weekEnd = add(wk(now), 6);
     const items = [];
     for (const el of cards) {
       const title = (el.querySelector('b') || {}).textContent || '';
       const m = /(\d{2})\.(\d{2})\.(\d{4})\s*$/.exec(title);
       if (!m) return;
-      const date = m[3] + '-' + m[2] + '-' + m[1];
-      const kind = el.classList.contains('done') ? 'done' : date < now ? 'over' : date === now ? 'today' : date === tomorrow ? 'tom' : date <= weekEnd ? 'week' : 'later';
-      items.push({ el, date, title, kind });
+      items.push({ el, title, date: m[3] + '-' + m[2] + '-' + m[1], done: el.classList.contains('done') });
     }
+    items.sort((a, b) => a.date.localeCompare(b.date) || (a.done - b.done) || a.title.localeCompare(b.title, 'ru'));
+    const count = {};
+    for (const x of items) count[x.date] = (count[x.date] || 0) + 1;
     const parent = cards[0].parentElement;
     const marker = document.createComment('');
     parent.insertBefore(marker, cards[0]);
     const frag = document.createDocumentFragment();
-    for (const [kind, label] of HW_GROUPS) {
-      const list = items.filter((x) => x.kind === kind).sort((a, b) => (kind === 'done' ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date)) || a.title.localeCompare(b.title, 'ru'));
-      if (!list.length) continue;
-      frag.append(h('p', { class: 'muted hw-group', style: 'font-weight:700;margin:14px 4px 4px;text-align:left' }, label + ' · ' + list.length));
-      for (const x of list) frag.append(x.el);
+    let last = '';
+    for (const x of items) {
+      if (x.date !== last) {
+        last = x.date;
+        frag.append(h('p', { class: 'muted hw-group', style: 'font-weight:700;margin:14px 4px 4px;text-align:left' }, dateLabel(x.date, now) + ' · ' + count[x.date]));
+      }
+      frag.append(x.el);
     }
     parent.insertBefore(frag, marker);
     marker.remove();
+  }
+
+  // ---------- ДЗ: форма добавления в начале страницы, по умолчанию свёрнута в одну кнопку ----------
+  // Если вкладку открыли кнопкой «ДЗ» у пары (S.pre), форма раскрыта сразу
+  function hwFormTop(root) {
+    if (root.querySelector('.hw-form-toggle')) return;
+    const form = [...root.querySelectorAll('section.card')].find((s) => {
+      const t = s.querySelector('h3');
+      return t && /^(Добавить ДЗ|💡 Предложить ДЗ)$/.test(t.textContent.trim());
+    });
+    if (!form) return;
+    const parent = form.parentElement;
+    const open = !!S.pre;
+    const name = form.querySelector('h3').textContent.trim().replace(/^💡\s*/, '');
+    const btn = h('button', { class: 'mini hw-form-toggle' }, open ? '✕ Свернуть' : '＋ ' + name);
+    btn.addEventListener('click', () => {
+      buzz.tap();
+      const hidden = form.style.display === 'none';
+      form.style.display = hidden ? '' : 'none';
+      btn.textContent = hidden ? '✕ Свернуть' : '＋ ' + name;
+    });
+    form.style.display = open ? '' : 'none';
+    parent.prepend(form);
+    form.before(btn);
   }
 
   // ---------- Журнал правок: карточка сразу после «Изменения расписания» (только ассистенты) ----------
@@ -71,6 +100,7 @@
   if (view) {
     new MutationObserver(() => {
       try { remindCard(view); } catch (e) {}
+      try { hwFormTop(view); } catch (e) {}
       try { groupHw(view); } catch (e) {}
       try { logCard(view); } catch (e) {}
     }).observe(view, { childList: true, subtree: true });
