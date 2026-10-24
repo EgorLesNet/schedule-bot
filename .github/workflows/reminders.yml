@@ -1,0 +1,45 @@
+name: HW reminders
+
+# Рассылка напоминаний о ДЗ и расписания на завтра. У Telegram Serverless нет планировщика,
+# поэтому этот workflow раз в 5 минут выполняет endpoints/tick на платформе (npx tgcloud run).
+# Нужен секрет TGCLOUD_TOKEN (BotFather → бот → Serverless → CLI Access → Access token).
+# Расписание GitHub Actions работает только из ветки по умолчанию (сейчас это tgcloud).
+
+on:
+  schedule:
+    # 03:00–20:55 UTC = 06:00–23:55 по Москве (время напоминаний в приложении: 06:00–23:30). GitHub может задержать запуск на несколько минут.
+    - cron: '*/5 3-20 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: reminders
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tgcloud
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run reminders tick on Telegram Serverless
+        working-directory: serverless
+        env:
+          TGCLOUD_TOKEN: ${{ secrets.TGCLOUD_TOKEN }}
+        run: |
+          if [ -z "$TGCLOUD_TOKEN" ]; then echo "::error::Secret TGCLOUD_TOKEN is not set"; exit 1; fi
+          mkdir -p .tgcloud
+          # За один вызов отправляется не более 15 сообщений и не чаще раза в минуту, поэтому повторяем до 3 раз, пока есть что отправлять
+          for i in 1 2 3; do
+            OUT=$(npx -y -p @tgcloud/cli tgcloud run endpoints/tick --ctx '{ initData: { user: { id: 1 } } }' 2>&1) || { echo "$OUT"; exit 1; }
+            echo "$OUT"
+            if echo "$OUT" | grep -Eq 'sent[^0-9]{0,6}0([^0-9]|$)'; then break; fi
+            if [ "$i" -lt 3 ]; then sleep 65; fi
+          done
