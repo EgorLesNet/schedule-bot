@@ -3,6 +3,11 @@
   const DEFAULT_AT = '20:00';
   const REMIND_TIMES = (() => { const o = []; for (let m = 360; m <= 1410; m += 30) o.push(hhmm(m)); return o; })();
 
+  // Кнопки вне карточек («Добавить ДЗ», «Новое объявление»): тот же вид, что у `.card button` и `.card button.alt` в style.css
+  const css = document.createElement('style');
+  css.textContent = 'button.big{display:block;width:100%;margin:0 0 12px;padding:10px;border:0;border-radius:14px;background:var(--tg-theme-button-color,#2481cc);color:var(--tg-theme-button-text-color,#fff);font-size:15px}button.big.alt{background:#8883;color:inherit}';
+  document.head.append(css);
+
   const stamp = (ms) => {
     const d = new Date(ms + 3 * 3600000);
     return String(d.getUTCDate()).padStart(2, '0') + '.' + String(d.getUTCMonth() + 1).padStart(2, '0') + ' ' + hhmm(d.getUTCHours() * 60 + d.getUTCMinutes());
@@ -74,12 +79,17 @@
     const parent = form.parentElement;
     const open = !!S.pre;
     const name = form.querySelector('h3').textContent.trim().replace(/^💡\s*/, '');
-    const btn = h('button', { class: 'mini hw-form-toggle' }, open ? '✕ Свернуть' : '＋ ' + name);
+    const btn = h('button', { class: 'big hw-form-toggle' });
+    const setBtn = (isOpen) => {
+      btn.textContent = isOpen ? '✕ Свернуть' : '＋ ' + name;
+      btn.className = 'big hw-form-toggle' + (isOpen ? ' alt' : '');
+    };
+    setBtn(open);
     btn.addEventListener('click', () => {
       buzz.tap();
       const hidden = form.style.display === 'none';
       form.style.display = hidden ? '' : 'none';
-      btn.textContent = hidden ? '✕ Свернуть' : '＋ ' + name;
+      setBtn(hidden);
     });
     form.style.display = open ? '' : 'none';
     parent.prepend(form);

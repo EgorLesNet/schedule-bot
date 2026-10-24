@@ -58,10 +58,15 @@
     const parts = (data.items || []).map(card);
     if (data.canPost) {
       const slot = h('div', {});
-      parts.push(h('div', { class: 'toolbar' }, h('button', { class: 'mini alt', onclick: () => {
+      const btn = h('button', { class: 'big' }, '📢 Новое объявление');
+      btn.addEventListener('click', () => {
         buzz.tap();
-        if (slot.firstChild) slot.replaceChildren(); else slot.replaceChildren(formCard(box));
-      } }, '📢 Новое объявление')), slot);
+        const open = !slot.firstChild;
+        if (open) slot.replaceChildren(formCard(box)); else slot.replaceChildren();
+        btn.textContent = open ? '✕ Свернуть' : '📢 Новое объявление';
+        btn.className = 'big' + (open ? ' alt' : '');
+      });
+      parts.push(btn, slot);
       if ((data.mine || []).length) parts.push(mineCard(data.mine, box));
     }
     box.replaceChildren(...parts);
