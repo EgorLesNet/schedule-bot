@@ -11,6 +11,8 @@ import { NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const PAGE = 20;
+// Текст ДЗ: практически без ограничения (длинные тексты в приложении сворачиваются под кнопку), потолок только защищает базу
+const HW_MAX = 20000;
 const dm = (d) => d.slice(8) + '.' + d.slice(5, 7);
 const who = (u) => (u.username ? '@' + u.username : ([u.first_name, u.last_name].filter(Boolean).join(' ') || 'id' + u.id));
 const fm = (f) => ({ uid: f.uid, name: f.name, kind: f.kind, size: f.size });
@@ -43,7 +45,7 @@ export default endpoint(async (input, u) => {
     }
 
     if (act === 'add') {
-      const t = String(input.text || '').trim().slice(0, 1000);
+      const t = String(input.text || '').trim().slice(0, HW_MAX);
       if (!t) throw new Error('empty text');
       const touched = await applyHw(course, stream, original, date, t);
       await pushVersion(course, stream, hk, t, who(u), prev);
@@ -66,7 +68,7 @@ export default endpoint(async (input, u) => {
     } else if (act === 'edit') {
       // Правка: текст, дата, удаление отдельных файлов и добавление файлов из «входящих»
       if (prev === undefined) throw new Error('Задание не найдено');
-      const t = String(input.text || '').trim().slice(0, 1000);
+      const t = String(input.text || '').trim().slice(0, HW_MAX);
       if (!t) throw new Error('empty text');
       const newDate = DATE.test(String(input.newDate || '')) ? String(input.newDate) : date;
       const nk = original + '|' + newDate;

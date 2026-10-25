@@ -15,6 +15,9 @@ import { NL } from '../lib/config.js';
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const pkey = (c, s) => 'props:' + c + '_' + s;
 const fmt = (d) => d.slice(8) + '.' + d.slice(5, 7);
+// Тексты длинные можно: предложение студента до 10000 символов, при принятии ассистент может дополнить до 20000 (как в homework.js)
+const PROP_MAX = 10000;
+const HW_MAX = 20000;
 // Исполняемые и установочные форматы: студент не может приложить их к предложению (после принятия файл уходит всему потоку)
 const RISKY = /[.](apk|xapk|exe|msi|bat|cmd|com|scr|dll|jar|js|jse|vbs|vbe|ps1|sh|lnk|iso|dmg|pkg|app|hta|reg|appx|msix)$/i;
 
@@ -43,7 +46,7 @@ export default endpoint(async (input, u) => {
   if (a === 'add') {
     const date = String(input.date || '');
     const subject = String(input.subject || '').trim();
-    const text = String(input.text || '').trim().slice(0, 1000);
+    const text = String(input.text || '').trim().slice(0, PROP_MAX);
     if (!DATE.test(date) || !subject || !text) throw new EndpointError('bad input');
     if (list.filter((p) => p.uid === u.id).length >= 5) throw new EndpointError('too many pending');
     if (list.length >= 100) throw new EndpointError('queue full');
@@ -73,7 +76,7 @@ export default endpoint(async (input, u) => {
       list = list.filter((x) => x.id !== p.id);
       await store.set(k, list);
       if (a === 'approve') {
-        const t = String(input.text || p.text).trim().slice(0, 1000) || p.text;
+        const t = String(input.text || p.text).trim().slice(0, HW_MAX) || p.text;
         const prev = (await store.loadHw(course, stream))[p.original + '|' + p.date];
         const touched = await applyHw(course, stream, p.original, p.date, t);
         if (p.files && p.files.length) await applyFiles(course, stream, p.original, p.date, 'add', p.files);
