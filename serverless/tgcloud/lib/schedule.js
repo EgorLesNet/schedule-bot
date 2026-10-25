@@ -63,7 +63,8 @@ function applyEdits(events, edits) {
     const ed = edits[e.date] && edits[e.date][e.original + '[' + e.start + ']'];
     if (!ed) { out.push(e); continue; }
     if (ed.deleted) continue;
-    if (ed.new_summary) out.push(Object.assign({}, e, { summary: ed.new_summary, desc: ed.new_desc !== undefined ? ed.new_desc : e.desc }));
+    // Запись может менять название (new_summary) и/или описание (new_desc, например аудиторию); название из переименований остаётся, если new_summary не задан
+    if (ed.new_summary || ed.new_desc !== undefined) out.push(Object.assign({}, e, ed.new_summary ? { summary: ed.new_summary } : {}, ed.new_desc !== undefined ? { desc: ed.new_desc } : {}));
     else out.push(e);
   }
   for (const [date, m] of Object.entries(edits)) {

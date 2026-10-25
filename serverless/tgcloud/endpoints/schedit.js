@@ -143,6 +143,37 @@ export default endpoint(async (input, u) => {
       if (sr[orig]) logText = '✏️ Сброс названия: ' + orig;
       delete sr[orig];
     }
+  } else if (a === 'room') {
+    // Аудитория пары (для старост): правится строка «Аудитория: …» в описании пары; пустое значение возвращает исходную аудиторию из расписания
+    const subj = String(input.summary || '').trim();
+    if (!subj || !D.test(date) || !T.test(start)) throw bad();
+    const room = String(input.room || '').replace(/\s+/g, ' ').trim().slice(0, 40);
+    const all = await loadEvents(user.course, user.stream);
+    const ev = all.find((e) => e.date === date && e.start === start && e.summary === subj);
+    if (!ev) throw new EndpointError('Пара не найдена');
+    const key = ev.original + '[' + start + ']';
+    se[date] = se[date] || {};
+    const ed = se[date][key];
+    const re = /(Аудитория|Room|Auditorium)\s*:[^\n]*/i;
+    const withRoom = (desc, r) => {
+      const text = String(desc || '');
+      if (re.test(text)) return r ? text.replace(re, 'Аудитория: ' + r) : text.replace(re, '').replace(/\n{2,}/g, NL).trim();
+      return r ? (text ? text + NL : '') + 'Аудитория: ' + r : text;
+    };
+    if (ed && ed.new) {
+      ed.new_desc = withRoom(ed.new_desc, room);
+    } else if (room) {
+      se[date][key] = Object.assign({}, ed || {}, { new_desc: withRoom(ev.desc, room), room });
+    } else if (ed && ed.room !== undefined) {
+      delete se[date][key];
+      if (!Object.keys(se[date]).length) delete se[date];
+    } else {
+      changed = false;
+    }
+    if (changed) {
+      note = '🏫 Изменена аудитория: ' + subj + NL + dm(date) + ' ' + start + NL + (room ? 'Аудитория: ' + room : 'Аудитория: как в исходном расписании');
+      logText = '🏫 Аудитория: ' + subj + ', ' + dm(date) + ' ' + start + ' → ' + (room || 'исходная');
+    }
   } else {
     changed = false;
   }
