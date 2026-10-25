@@ -2,7 +2,7 @@ name: HW reminders
 
 # Рассылка напоминаний о ДЗ и расписания на завтра. У Telegram Serverless нет планировщика,
 # поэтому этот workflow раз в 5 минут выполняет endpoints/tick на платформе (npx tgcloud run).
-# Нужен секрет TGCLOUD_TOKEN (BotFather → бот → Serverless → CLI Access → Access token).
+# Нужен секрет TGCLOUD_TOKEN в окружении (Settings → Environments → TGCLOUD_TOKEN; токен: BotFather → бот → Serverless → CLI Access → Access token).
 # Необязательные секреты для уведомления админа о сбое: BOT_TOKEN (токен бота из BotFather) и ADMIN_CHAT_ID (ваш id, команда /myid у бота).
 # Расписание GitHub Actions работает только из ветки по умолчанию (сейчас это tgcloud).
 
@@ -22,6 +22,7 @@ permissions:
 jobs:
   tick:
     runs-on: ubuntu-latest
+    environment: TGCLOUD_TOKEN
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4

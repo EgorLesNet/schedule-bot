@@ -2,7 +2,7 @@ name: DB backup
 
 # Резервная копия всей базы бота раз в 6 часов (03:17, 09:17, 15:17, 21:17 по Москве). Копии хранятся в самой базе 2 суток, старые удаляются автоматически.
 # В лог Actions (он публичный) попадает только служебный ответ (число ключей и размер), данные пользователей не выводятся.
-# Нужен секрет TGCLOUD_TOKEN; для уведомления о сбое — BOT_TOKEN и ADMIN_CHAT_ID (как в reminders.yml).
+# Нужен секрет TGCLOUD_TOKEN в окружении (Settings → Environments → TGCLOUD_TOKEN); для уведомления о сбое — BOT_TOKEN и ADMIN_CHAT_ID (как в reminders.yml).
 
 on:
   schedule:
@@ -19,6 +19,7 @@ permissions:
 jobs:
   backup:
     runs-on: ubuntu-latest
+    environment: TGCLOUD_TOKEN
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
