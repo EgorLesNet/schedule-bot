@@ -5,7 +5,8 @@ import { loadFiles } from '../lib/files.js';
 import { endpoint } from '../lib/auth.js';
 import { today } from '../lib/time.js';
 
-// Карточка предмета: ближайшие занятия, постоянная ссылка, ДЗ (актуальные и прошедшие), материалы (файлы ДЗ), личная заметка по предмету
+// Карточка предмета: ближайшие занятия, постоянная ссылка, ДЗ (актуальные и прошедшие), материалы (файлы ДЗ), личная заметка по предмету.
+// Заметок по предметам не больше MAX_NOTES: при превышении самые старые удаляются сами (изменённая заметка считается новой).
 const MAX_NOTES = 200;
 const fm = (f) => ({ uid: f.uid, name: f.name, kind: f.kind, size: f.size });
 
@@ -23,8 +24,10 @@ export default endpoint(async (input, u) => {
     const notes = await store.get(nkey, {});
     const t = String(input.text || '').trim().slice(0, 1000);
     if (t) {
-      if (!Object.prototype.hasOwnProperty.call(notes, original) && Object.keys(notes).length >= MAX_NOTES) throw new EndpointError('Слишком много заметок, удалите ненужные');
+      delete notes[original];
       notes[original] = t;
+      const keys = Object.keys(notes);
+      for (const old of keys.slice(0, Math.max(0, keys.length - MAX_NOTES))) delete notes[old];
     } else delete notes[original];
     await store.set(nkey, notes);
     return { note: t };
