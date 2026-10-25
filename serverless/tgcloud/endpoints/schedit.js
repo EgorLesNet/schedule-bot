@@ -16,6 +16,9 @@ const LOG_MAX = 200;
 const LOG_SHOW = 50;
 const MAX_SHIFT_LESSONS = 80;
 const who = (u) => (u.username ? '@' + u.username : ([u.first_name, u.last_name].filter(Boolean).join(' ') || 'id' + u.id));
+const LUNCH = /обед|перерыв/i;
+const ROOM_RE = /(Аудитория|Room|Auditorium)\s*:[^\n]*/i;
+const mins = (t) => Number(t.slice(0, 2)) * 60 + Number(t.slice(3, 5));
 
 const shiftLabel = (m) => {
   const a = Math.abs(m);
@@ -38,6 +41,50 @@ function undoOne(se, date, ev) {
   return !!ed;
 }
 
+// Строка «Аудитория: …» в описании пары: заменить, добавить или убрать (пустое значение)
+function withRoom(desc, r) {
+  const text = String(desc || '');
+  if (ROOM_RE.test(text)) return r ? text.replace(ROOM_RE, 'Аудитория: ' + r) : text.replace(ROOM_RE, '').replace(/\n{2,}/g, NL).trim();
+  return r ? (text ? text + NL : '') + 'Аудитория: ' + r : text;
+}
+
+// Пара и пары того же предмета подряд с ней в этот день: между ними нет других пар (обед не в счёт), перерыв не больше 30 минут
+function chainOf(all, ev) {
+  const day = all.filter((e) => e.date === ev.date && !LUNCH.test(e.summary)).sort((a, b) => a.start.localeCompare(b.start) || a.end.localeCompare(b.end));
+  const at = day.indexOf(ev);
+  if (at < 0) return [ev];
+  let lo = at;
+  let hi = at;
+  while (lo > 0 && day[lo - 1].summary === ev.summary && mins(day[lo].start) - mins(day[lo - 1].end) <= 30) lo--;
+  while (hi < day.length - 1 && day[hi + 1].summary === ev.summary && mins(day[hi + 1].start) - mins(day[hi].end) <= 30) hi++;
+  return day.slice(lo, hi + 1);
+}
+
+// Меняет аудиторию одной пары в правках потока (se); возвращает true, если что-то поменялось
+function applyRoom(se, ev, room) {
+  const key = ev.original + '[' + ev.start + ']';
+  const dayEd = se[ev.date] || (se[ev.date] = {});
+  const ed = dayEd[key];
+  let ch = true;
+  if (ed && ed.new) {
+    const nd = withRoom(ed.new_desc, room);
+    ch = nd !== String(ed.new_desc || '');
+    ed.new_desc = nd;
+  } else if (room) {
+    const m = ROOM_RE.exec(ev.desc || '');
+    const cur = m ? m[0].replace(/^[^:]*:\s*/, '').trim() : '';
+    if (ed && ed.room === room) ch = false;
+    else if (!ed && cur === room) ch = false;
+    else dayEd[key] = Object.assign({}, ed || {}, { new_desc: withRoom(ev.desc, room), room });
+  } else if (ed && ed.room !== undefined) {
+    delete dayEd[key];
+  } else {
+    ch = false;
+  }
+  if (!Object.keys(dayEd).length) delete se[ev.date];
+  return ch;
+}
+
 export default endpoint(async (input, u) => {
   const user = await store.getUser(u.id);
   if (!(await canEdit(u.username, user))) throw new EndpointError('forbidden');
@@ -53,6 +100,7 @@ export default endpoint(async (input, u) => {
   const start = String(input.start || '');
   const evKey = orig + '[' + start + ']';
   let changed = true;
+  let roomCount = 0;
   let note = '';
   let logText = '';
 
@@ -81,12 +129,12 @@ export default endpoint(async (input, u) => {
     // Сдвиг всех пар предмета на N минут (в тот же день); scope 'all' — все будущие, иначе начиная с даты пары.
     // preview:true — только таблица «было → станет» без изменений; применение блокируется жёсткими проблемами,
     // пересечения с другими парами требуют allowOverlap, при несовпадении token с предпросмотром — ошибка.
-    const mins = Number(input.minutes);
+    const mins2 = Number(input.minutes);
     const subj = String(input.summary || '').trim();
-    if (!Number.isInteger(mins) || mins === 0 || Math.abs(mins) > 360 || !subj || !D.test(date)) throw bad();
+    if (!Number.isInteger(mins2) || mins2 === 0 || Math.abs(mins2) > 360 || !subj || !D.test(date)) throw bad();
     const from = input.scope === 'all' ? today() : date;
     const all = await loadEvents(user.course, user.stream);
-    const { plan } = planShift(all, se, subj, mins, from);
+    const { plan } = planShift(all, se, subj, mins2, from);
     if (!plan.length) throw new EndpointError('Пар этого предмета не найдено');
     if (plan.length > MAX_SHIFT_LESSONS) throw new EndpointError('Слишком много пар за раз, выберите «Начиная с этой даты»');
     const token = planToken(plan);
@@ -110,8 +158,8 @@ export default endpoint(async (input, u) => {
       }
     }
     const first = plan[0];
-    note = '⏱ Время пар сдвинуто (' + shiftLabel(mins) + '): ' + subj + NL + plan.length + ' ' + lessons(plan.length) + ', начиная с ' + dm(first.e.date) + NL + 'Например: ' + dm(first.e.date) + ' ' + first.e.start + ' → ' + first.ns;
-    logText = '⏱ Сдвиг ' + shiftLabel(mins) + ': ' + subj + ', ' + plan.length + ' ' + lessons(plan.length) + ' с ' + dm(first.e.date);
+    note = '⏱ Время пар сдвинуто (' + shiftLabel(mins2) + '): ' + subj + NL + plan.length + ' ' + lessons(plan.length) + ', начиная с ' + dm(first.e.date) + NL + 'Например: ' + dm(first.e.date) + ' ' + first.e.start + ' → ' + first.ns;
+    logText = '⏱ Сдвиг ' + shiftLabel(mins2) + ': ' + subj + ', ' + plan.length + ' ' + lessons(plan.length) + ' с ' + dm(first.e.date);
   } else if (a === 'unshift') {
     // Снимает все переносы пар предмета (в том числе одиночные) от даты или от сегодня
     const subj = String(input.summary || '').trim();
@@ -144,35 +192,34 @@ export default endpoint(async (input, u) => {
       delete sr[orig];
     }
   } else if (a === 'room') {
-    // Аудитория пары (для старост): правится строка «Аудитория: …» в описании пары; пустое значение возвращает исходную аудиторию из расписания
+    // Аудитория (для старост). scope 'one' — эта пара и пары того же предмета подряд с ней; scope 'all' — все пары предмета начиная с сегодняшнего дня.
+    // Аудитория записывается строкой «Аудитория: …» в описание пары; пустое значение возвращает исходную аудиторию из расписания.
     const subj = String(input.summary || '').trim();
     if (!subj || !D.test(date) || !T.test(start)) throw bad();
     const room = String(input.room || '').replace(/\s+/g, ' ').trim().slice(0, 40);
     const all = await loadEvents(user.course, user.stream);
-    const ev = all.find((e) => e.date === date && e.start === start && e.summary === subj);
-    if (!ev) throw new EndpointError('Пара не найдена');
-    const key = ev.original + '[' + start + ']';
-    se[date] = se[date] || {};
-    const ed = se[date][key];
-    const re = /(Аудитория|Room|Auditorium)\s*:[^\n]*/i;
-    const withRoom = (desc, r) => {
-      const text = String(desc || '');
-      if (re.test(text)) return r ? text.replace(re, 'Аудитория: ' + r) : text.replace(re, '').replace(/\n{2,}/g, NL).trim();
-      return r ? (text ? text + NL : '') + 'Аудитория: ' + r : text;
-    };
-    if (ed && ed.new) {
-      ed.new_desc = withRoom(ed.new_desc, room);
-    } else if (room) {
-      se[date][key] = Object.assign({}, ed || {}, { new_desc: withRoom(ev.desc, room), room });
-    } else if (ed && ed.room !== undefined) {
-      delete se[date][key];
-      if (!Object.keys(se[date]).length) delete se[date];
-    } else {
-      changed = false;
+    const ev0 = all.find((e) => e.date === date && e.start === start && e.summary === subj);
+    if (!ev0) throw new EndpointError('Пара не найдена');
+    const whole = input.scope === 'all';
+    const targets = whole ? all.filter((e) => e.summary === subj && (e.date >= today() || e === ev0)) : chainOf(all, ev0);
+    targets.sort((x, y) => x.date.localeCompare(y.date) || x.start.localeCompare(y.start));
+    if (targets.length > MAX_SHIFT_LESSONS) throw new EndpointError('Слишком много пар за раз');
+    const seen = new Set();
+    for (const e of targets) {
+      const id = e.date + '|' + e.original + '[' + e.start + ']';
+      if (seen.has(id)) continue;
+      seen.add(id);
+      if (applyRoom(se, e, room)) roomCount++;
     }
-    if (changed) {
-      note = '🏫 Изменена аудитория: ' + subj + NL + dm(date) + ' ' + start + NL + (room ? 'Аудитория: ' + room : 'Аудитория: как в исходном расписании');
-      logText = '🏫 Аудитория: ' + subj + ', ' + dm(date) + ' ' + start + ' → ' + (room || 'исходная');
+    if (!roomCount) {
+      changed = false;
+    } else {
+      const times = [...new Set(targets.map((e) => e.start))].join(', ');
+      const where = whole
+        ? 'Все пары предмета: ' + roomCount + ' ' + lessons(roomCount) + ', начиная с ' + dm(targets[0].date)
+        : dm(date) + ' ' + times;
+      note = '🏫 Изменена аудитория: ' + subj + NL + where + NL + (room ? 'Аудитория: ' + room : 'Аудитория: как в исходном расписании');
+      logText = '🏫 Аудитория: ' + subj + ', ' + (whole ? 'все пары (' + roomCount + ')' : dm(date) + ' ' + times) + ' → ' + (room || 'исходная');
     }
   } else {
     changed = false;
@@ -209,5 +256,5 @@ export default endpoint(async (input, u) => {
     }
   }
   list.sort((x, y) => x.date.localeCompare(y.date));
-  return { edits: list, renames: Object.entries(sr).map(([from, to]) => ({ from, to })), log: lg.slice(-LOG_SHOW).reverse() };
+  return { edits: list, renames: Object.entries(sr).map(([from, to]) => ({ from, to })), log: lg.slice(-LOG_SHOW).reverse(), roomCount };
 });

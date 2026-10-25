@@ -1,4 +1,4 @@
-const C = 'schedule-v39';
+const C = 'schedule-v40';
 const SHELL = ['./', 'index.html', 'fast.js', 'app.js', 'settings.js', 'extras.js', 'files.js', 'news.js', 'more.js', 'menu.js', 'hwx.js', 'plan.js', 'room.js', 'subj.js', 'clubs.js', 'hwfold.js', 'dlv.js', 'anim.js', 'navpill.js', 'style.css', 'manifest.webmanifest', 'icon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(C).then((c) => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== C).map((k) => caches.delete(k))))); self.clients.claim(); });
