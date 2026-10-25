@@ -7,7 +7,14 @@ const BS = String.fromCharCode(92);
 const CRLF = String.fromCharCode(13) + NL;
 const LUNCH = /обед|перерыв/i;
 
-const esc = (s) => String(s || '').split(BS).join(BS + BS).split(';').join(BS + ';').split(',').join(BS + ',').split(NL).join(BS + 'n');
+// Управляющие символы (в том числе перевод строки CR) заменяются пробелом: иначе из названия или описания можно «вставить» собственные строки в календарь.
+// Табуляция и перевод строки LF остаются: LF ниже превращается в \n по правилам .ics.
+const plain = (s) => Array.from(String(s || '')).map((c) => {
+  const n = c.charCodeAt(0);
+  return (n < 32 && n !== 10 && n !== 9) || n === 127 ? ' ' : c;
+}).join('');
+
+const esc = (s) => plain(s).split(BS).join(BS + BS).split(';').join(BS + ';').split(',').join(BS + ',').split(NL).join(BS + 'n');
 
 // Строки .ics нужно переносить: продолжение начинается с пробела
 function fold(line) {

@@ -6,6 +6,7 @@ import { getInbox, dropInbox, loadFiles, sendFiles } from '../lib/files.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
 import { canEdit } from '../lib/roles.js';
+import { allow } from '../lib/limit.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const fmt = (d) => d.slice(8) + '.' + d.slice(5, 7);
@@ -36,6 +37,8 @@ export default endpoint(async (input, u) => {
   if (a === 'send') {
     const files = (await loadFiles(user.course, user.stream))[original + '|' + date] || [];
     if (!files.length) throw new EndpointError('Файлов нет');
+    // Каждая отправка — до 11 вызовов Telegram: не больше 6 раз за 10 минут на пользователя, чтобы не занимать общий лимит бота
+    if (!(await allow(u.id, 'files-send', 6, 600000))) throw new EndpointError('Слишком часто, подождите несколько минут');
     try { await send(u.id, '📎 Файлы к ДЗ: ' + subject + ', ' + fmt(date)); } catch (e) { throw new EndpointError('Откройте чат с ботом, нажмите «Старт» и повторите'); }
     const sent = await sendFiles(u.id, files);
     return { sent, total: files.length };

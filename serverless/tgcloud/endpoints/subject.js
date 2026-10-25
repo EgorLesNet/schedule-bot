@@ -6,6 +6,7 @@ import { endpoint } from '../lib/auth.js';
 import { today } from '../lib/time.js';
 
 // Карточка предмета: ближайшие занятия, постоянная ссылка, ДЗ (актуальные и прошедшие), материалы (файлы ДЗ), личная заметка по предмету
+const MAX_NOTES = 200;
 const fm = (f) => ({ uid: f.uid, name: f.name, kind: f.kind, size: f.size });
 
 export default endpoint(async (input, u) => {
@@ -15,12 +16,16 @@ export default endpoint(async (input, u) => {
   const subject = String(input.subject || '').trim().slice(0, 150);
   if (!subject) throw new EndpointError('bad input');
   const original = await toOriginal(course, stream, subject);
+  if (original === '__proto__') throw new EndpointError('bad input');
   const nkey = 'subnote:' + u.id;
 
   if (input.action === 'note') {
     const notes = await store.get(nkey, {});
     const t = String(input.text || '').trim().slice(0, 1000);
-    if (t) notes[original] = t; else delete notes[original];
+    if (t) {
+      if (!Object.prototype.hasOwnProperty.call(notes, original) && Object.keys(notes).length >= MAX_NOTES) throw new EndpointError('Слишком много заметок, удалите ненужные');
+      notes[original] = t;
+    } else delete notes[original];
     await store.set(nkey, notes);
     return { note: t };
   }

@@ -3,17 +3,20 @@ import * as store from '../lib/store.js';
 import { loadEvents, toOriginal } from '../lib/schedule.js';
 import { LANG_NAME, langDates } from '../lib/lang.js';
 import { applyHw, applyFiles } from '../lib/hwsync.js';
-import { takeFromInbox, plain } from '../lib/files.js';
+import { getInbox, takeFromInbox, plain } from '../lib/files.js';
 import { notifyStream } from '../lib/notify.js';
 import { send } from '../lib/bot.js';
 import { endpoint } from '../lib/auth.js';
 import { canEdit } from '../lib/roles.js';
+import { allow } from '../lib/limit.js';
 import { today } from '../lib/time.js';
 import { NL } from '../lib/config.js';
 
 const DATE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 const pkey = (c, s) => 'props:' + c + '_' + s;
 const fmt = (d) => d.slice(8) + '.' + d.slice(5, 7);
+// Исполняемые и установочные форматы: студент не может приложить их к предложению (после принятия файл уходит всему потоку)
+const RISKY = /[.](apk|xapk|exe|msi|bat|cmd|com|scr|dll|jar|js|jse|vbs|vbe|ps1|sh|lnk|iso|dmg|pkg|app|hta|reg|appx|msix)$/i;
 
 // Уведомляем только тех ассистентов и админа, которые могут править этот поток (с учётом ролей)
 async function notifyAssistants(course, stream, text, exceptId) {
@@ -44,16 +47,22 @@ export default endpoint(async (input, u) => {
     if (!DATE.test(date) || !subject || !text) throw new EndpointError('bad input');
     if (list.filter((p) => p.uid === u.id).length >= 5) throw new EndpointError('too many pending');
     if (list.length >= 100) throw new EndpointError('queue full');
+    // Не больше 5 предложений в час: иначе «добавить — отозвать» в цикле засыпает ассистентов уведомлениями
+    if (!(await allow(u.id, 'prop-add', 5, 3600000))) throw new EndpointError('Слишком часто, попробуйте позже');
     const events = await loadEvents(course, stream);
     const lang = subject === LANG_NAME && (course === '1' || course === '2') && langDates(events, date).includes(date);
     if (!lang && !events.some((e) => e.date === date && e.summary === subject)) throw new EndpointError('no such lesson');
     const original = await toOriginal(course, stream, subject);
     const ids = Array.isArray(input.files) ? input.files.slice(0, 10).map(String) : [];
+    if (ids.length) {
+      const bad = (await getInbox(u.id)).filter((x) => ids.includes(x.id)).find((x) => RISKY.test(x.name));
+      if (bad) throw new EndpointError('Такой тип файла нельзя прикрепить к предложению: ' + bad.name);
+    }
     const files = ids.length ? (await takeFromInbox(u.id, ids)).map(plain) : [];
     const id = Date.now().toString(36) + Math.floor(Math.random() * 1000).toString(36);
     list.push({ id, uid: u.id, uname: u.username || '', subject, original, date, text, files, at: Date.now() });
     await store.set(k, list);
-    await notifyAssistants(course, stream, '💡 Новое предложение ДЗ: ' + subject + ', ' + fmt(date) + NL + text.slice(0, 200) + (files.length ? NL + '📎 Файлов: ' + files.length : '') + NL + 'Откройте вкладку «ДЗ» в приложении.', u.id);
+    await notifyAssistants(course, stream, '💡 Новое предложение ДЗ: ' + subject + ', ' + fmt(date) + NL + text.slice(0, 200) + (files.length ? NL + '📎 Файлы: ' + files.map((f) => f.name).join(', ').slice(0, 200) : '') + NL + 'Откройте вкладку «ДЗ» в приложении.', u.id);
   } else if (a === 'cancel') {
     list = list.filter((p) => !(p.id === input.id && p.uid === u.id));
     await store.set(k, list);

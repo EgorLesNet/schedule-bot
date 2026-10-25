@@ -1,10 +1,14 @@
 import * as store from './store.js';
 import { allEntries } from './schedule.js';
 
-// Роли ассистентов: roles[username] = [{ faculty, course, stream }, ...]; пустое поле = «любой», нет записи = полный доступ
+const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
+
+// Роли ассистентов: roles[username] = [{ faculty, course, stream }, ...]; пустое поле = «любой», нет записи = полный доступ.
+// Читаем только собственные ключи объекта: ник вроде constructor не должен подхватывать свойства прототипа.
 export async function scopesOf(uname) {
   const roles = await store.get('roles', {});
-  return roles[String(uname || '').toLowerCase()] || [];
+  const k = String(uname || '').toLowerCase();
+  return has(roles, k) && Array.isArray(roles[k]) ? roles[k] : [];
 }
 
 // Может ли пользователь править расписание, ДЗ и ссылки на потоке, выбранном у него в профиле

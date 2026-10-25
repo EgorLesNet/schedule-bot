@@ -17,11 +17,21 @@ export async function set(key, val) {
 
 export const getUser = (id) => get('user:' + id, {});
 
+// Индекс пользователей (kv users) — один общий список, а запросы идут параллельно, поэтому новая запись может затереться чужой.
+// После записи индекс перечитывается; если id пропал, добавляем ещё раз (до 3 попыток). Для существующих пользователей это одно чтение, как раньше.
+async function addToIndex(id) {
+  for (let i = 0; i < 3; i++) {
+    const idx = await get('users', []);
+    if (idx.includes(id)) return;
+    idx.push(id);
+    await set('users', idx);
+  }
+}
+
 export async function saveUser(id, patch) {
   const u = Object.assign({}, await getUser(id), patch);
   await set('user:' + id, u);
-  const idx = await get('users', []);
-  if (!idx.includes(id)) { idx.push(id); await set('users', idx); }
+  await addToIndex(id);
   return u;
 }
 

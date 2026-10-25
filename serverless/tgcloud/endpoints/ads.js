@@ -3,6 +3,7 @@ import { getText } from '../lib/http.js';
 import { API_TREE, BASE } from '../lib/config.js';
 import { today, addDays } from '../lib/time.js';
 import { endpoint } from '../lib/auth.js';
+import { allow } from '../lib/limit.js';
 
 const AD_RE = /^docs\/ads\/(ad[0-9]+)[.](png|jpe?g|webp|gif)$/i;
 const ADS_TTL = 300000;
@@ -36,14 +37,14 @@ function urlFor(links, a) {
   return l && typeof l === 'object' && l.sha === a.sha ? l.url : '';
 }
 
-// Счётчики от клиента: только известные id, целые положительные, с потолком на один запрос
-function clean(o, max) {
+// Счётчики от клиента: только id существующих рекламных картинок (known), не больше 50 ключей, целые положительные, с потолком на один запрос
+function clean(o, max, known) {
   const out = {};
   if (!o || typeof o !== 'object') return out;
-  for (const [k, v] of Object.entries(o)) {
+  for (const [k, v] of Object.entries(o).slice(0, 50)) {
     const id = String(k).toLowerCase();
     const n = Math.floor(Number(v));
-    if (/^ad[0-9]+$/.test(id) && n > 0) out[id] = Math.min(n, max);
+    if (known.has(id) && n > 0) out[id] = Math.min(n, max);
   }
   return out;
 }
@@ -69,8 +70,11 @@ async function adStats() {
 export default endpoint(async (input, u) => {
   const admin = store.isAdmin(u.username);
   if (input.action === 'track') {
-    const views = clean(input.views, 120);
-    const clicks = clean(input.clicks, 10);
+    // Не чаще 60 отправок в час на пользователя (лишние тихо отбрасываются), чтобы статистику нельзя было накрутить или раздуть
+    if (!(await allow(u.id, 'ads-track', 60, 3600000))) return { ok: true };
+    const known = new Set((await listAds(false)).map((a) => a.id));
+    const views = clean(input.views, 120, known);
+    const clicks = clean(input.clicks, 10, known);
     if (Object.keys(views).length || Object.keys(clicks).length) {
       const key = 'adstat:' + today();
       const day = await store.get(key, {});
