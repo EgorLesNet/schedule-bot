@@ -2,15 +2,16 @@ import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { endpoint } from '../lib/auth.js';
 
-// Клубы ГАУГН: разделы (по умолчанию «СНО ГАУГН» и «ССК ГАУГН») и клубы в них. Читает любой пользователь, правит только админ из приложения.
-// kv clubs = { sections: [{ id, title, clubs: [{ id, name, url, status }] }] }; status: active (работает), paused (приостановлено), closed (закрыт на неопределённый срок).
+// Клубы ГАУГН: разделы (по умолчанию «СНО ГАУГН» и «ССК ГАУГН») и клубы в них. Правит только админ из приложения.
+// kv clubs = { open, sections: [{ id, title, clubs: [{ id, name, url, status }] }] }; status: active (работает), paused (приостановлено), closed (закрыт на неопределённый срок).
+// open === false: страница закрыта, студентам сервер не отдаёт содержимое (только признак open: false), админ видит всё. Нет поля open — страница открыта.
 const KEY = 'clubs';
 const STATUS = ['active', 'paused', 'closed'];
 const MAX_SECTIONS = 12;
 const MAX_CLUBS = 60;
 const URL_RE = /^https?:[/][/][^ ]{3,500}$/;
 
-const defaults = () => ({ sections: [{ id: 'sno', title: 'СНО ГАУГН', clubs: [] }, { id: 'ssk', title: 'ССК ГАУГН', clubs: [] }] });
+const defaults = () => ({ open: true, sections: [{ id: 'sno', title: 'СНО ГАУГН', clubs: [] }, { id: 'ssk', title: 'ССК ГАУГН', clubs: [] }] });
 const newId = () => Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
 const text = (v, n) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, n);
 
@@ -33,10 +34,15 @@ export default endpoint(async (input, u) => {
   let data = await store.get(KEY, null);
   if (!data || !Array.isArray(data.sections)) data = defaults();
   const a = input.action || 'list';
-  if (a === 'list') return { admin, sections: data.sections };
+  if (a === 'list') {
+    if (data.open === false && !admin) return { admin: false, open: false, sections: [] };
+    return { admin, open: data.open !== false, sections: data.sections };
+  }
   if (!admin) throw new EndpointError('forbidden');
 
-  if (a === 'section_add') {
+  if (a === 'visibility') {
+    data.open = !!input.open;
+  } else if (a === 'section_add') {
     const title = text(input.title, 60);
     if (!title) throw new EndpointError('Введите название раздела');
     if (data.sections.length >= MAX_SECTIONS) throw new EndpointError('Слишком много разделов');
@@ -74,5 +80,5 @@ export default endpoint(async (input, u) => {
     } else throw new EndpointError('bad action');
   }
   await store.set(KEY, data);
-  return { admin, sections: data.sections };
+  return { admin, open: data.open !== false, sections: data.sections };
 });

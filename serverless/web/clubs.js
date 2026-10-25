@@ -1,5 +1,5 @@
 // Страница «Клубы» (между «ДЗ» и «Настройки»): карточки разделов (СНО ГАУГН, ССК ГАУГН), внутри — клубы с подсветкой статуса и переходом по ссылке.
-// Заполняет админ прямо в приложении. Подключается после app.js: добавляет вкладку в TABS и значок в ICONS, app.js не правится.
+// Заполняет админ прямо в приложении; страницу можно закрыть для студентов (им показывается заглушка, содержимое сервер не отдаёт). Подключается после app.js: добавляет вкладку в TABS и значок в ICONS, app.js не правится.
 (function () {
   if (typeof TABS === 'undefined' || typeof h !== 'function' || typeof call !== 'function') return;
 
@@ -7,6 +7,7 @@
   const LABEL = { active: 'Работает', paused: 'Приостановлено', closed: 'Закрыт на неопределённый срок' };
   const RGB = { active: '52,199,89', paused: '255,204,0', closed: '255,59,48' };
   let openSec = null;
+  let preview = false;
 
   const css = document.createElement('style');
   css.textContent = [
@@ -21,6 +22,9 @@
     '.sec-go{font-size:28px;line-height:1;color:var(--tg-theme-hint-color,#777)}',
     '.club-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 12px;font-size:12px;color:var(--tg-theme-hint-color,#777)}',
     '.club-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:rgb(var(--sc))}',
+    '.club-stub{text-align:center;padding:30px 16px}',
+    '.club-stub .big{font-size:46px;margin-bottom:10px}',
+    '.club-stub h3{font-size:18px;margin:0 0 6px}',
   ].join('\n');
   document.head.append(css);
 
@@ -37,6 +41,29 @@
     await call('clubs', typeof get === 'function' ? get() : get);
     render();
   });
+
+  // Заглушка для студентов, пока страница закрыта (админ может посмотреть её кнопкой «Как видят студенты»)
+  function stubView(back) {
+    const box = h('div', {});
+    if (back) box.append(h('div', { class: 'toolbar' }, h('button', { class: 'chip', onclick: () => { buzz.tap(); preview = false; render(); } }, '← Вернуться к редактированию')));
+    box.append(h('section', { class: 'card club-stub' },
+      h('div', { class: 'big' }, '✨'),
+      h('h3', {}, 'Готовим интересное обновление!'),
+      h('p', { class: 'muted', style: 'margin:0' }, 'Все клубы ГАУГН будут тут')));
+    return box;
+  }
+
+  function visibilityCard(open) {
+    const c = h('section', { class: 'card', style: 'border-left:5px solid ' + (open ? '#34c759' : '#ff9500') },
+      h('b', {}, open ? '🟢 Страница открыта для всех' : '🔒 Страница закрыта для студентов'),
+      h('p', { class: 'muted', style: 'margin:6px 0 0' }, open ? 'Студенты видят все клубы.' : 'Студенты видят только заглушку, содержимое им не передаётся. Вы видите всё и можете редактировать.'));
+    c.append(h('button', {
+      class: open ? 'mini danger' : 'mini',
+      onclick: act(() => ({ action: 'visibility', open: !open }), open ? 'Закрыть страницу «Клубы»? Студенты увидят заглушку «Готовим интересное обновление!»' : 'Открыть страницу «Клубы» для всех студентов?'),
+    }, open ? 'Закрыть для студентов' : 'Открыть для всех'));
+    if (!open) c.append(h('button', { class: 'mini alt', onclick: () => { buzz.tap(); preview = true; render(); } }, '👁 Как видят студенты'));
+    return c;
+  }
 
   function summary(s) {
     const n = { active: 0, paused: 0, closed: 0 };
@@ -105,8 +132,9 @@
     return box;
   }
 
-  function listView(sections, admin) {
+  function listView(sections, admin, open) {
     const box = h('div', {});
+    if (admin) box.append(visibilityCard(open));
     for (const s of sections) {
       box.append(h('section', { class: 'card sec-card', onclick: () => { buzz.tap(); openSec = s.id; render(); } },
         h('div', { class: 'row' }, h('div', { class: 'grow' }, h('h3', {}, s.title), summary(s)), h('span', { class: 'sec-go' }, '›'))));
@@ -124,9 +152,13 @@
     const data = await call('clubs', { action: 'list' }, true);
     const sections = (data && data.sections) || [];
     const admin = !!(data && data.admin);
+    const open = !(data && data.open === false);
+    if (!admin && !open) return stubView(false);
+    if (admin && preview && !open) return stubView(true);
+    preview = false;
     const sec = openSec && sections.find((s) => s.id === openSec);
     if (openSec && !sec) openSec = null;
-    return sec ? sectionView(sec, admin) : listView(sections, admin);
+    return sec ? sectionView(sec, admin) : listView(sections, admin, open);
   }
 
   // ---------- Вкладка в меню: между «ДЗ» и «Настройки» ----------
