@@ -35,7 +35,7 @@ jobs:
         run: |
           if [ -z "$TGCLOUD_TOKEN" ]; then echo "::error::Secret TGCLOUD_TOKEN is not set"; exit 1; fi
           mkdir -p .tgcloud
-          npx -y -p @tgcloud/cli tgcloud run endpoints/backup --ctx '{ initData: { user: { id: 1 } } }'
+          npx -y -p @tgcloud/cli tgcloud run endpoints/backup '{}' --ctx '{ initData: { user: { id: 1 } } }'
       - name: Notify admin about failure
         if: failure()
         env:

@@ -40,7 +40,7 @@ jobs:
           mkdir -p .tgcloud
           # За один вызов отправляется не более 15 сообщений и не чаще раза в минуту, поэтому повторяем до 3 раз, пока есть что отправлять
           for i in 1 2 3; do
-            OUT=$(npx -y -p @tgcloud/cli tgcloud run endpoints/tick --ctx '{ initData: { user: { id: 1 } } }' 2>&1) || { echo "$OUT"; exit 1; }
+            OUT=$(npx -y -p @tgcloud/cli tgcloud run endpoints/tick '{}' --ctx '{ initData: { user: { id: 1 } } }' 2>&1) || { echo "$OUT"; exit 1; }
             echo "$OUT"
             if echo "$OUT" | grep -Eq 'sent[^0-9]{0,6}0([^0-9]|$)'; then break; fi
             if [ "$i" -lt 3 ]; then sleep 65; fi
