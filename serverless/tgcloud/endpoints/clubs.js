@@ -1,84 +1,54 @@
 import { EndpointError } from 'sdk';
 import * as store from '../lib/store.js';
 import { endpoint } from '../lib/auth.js';
-
-// Клубы ГАУГН: разделы (по умолчанию «СНО ГАУГН» и «ССК ГАУГН») и клубы в них. Правит только админ из приложения.
-// kv clubs = { open, sections: [{ id, title, clubs: [{ id, name, url, status }] }] }; status: active (работает), paused (приостановлено), closed (закрыт на неопределённый срок).
-// open === false: страница закрыта, студентам сервер не отдаёт содержимое (только признак open: false), админ видит всё. Нет поля open — страница открыта.
-const KEY = 'clubs';
-const STATUS = ['active', 'paused', 'closed'];
-const MAX_SECTIONS = 12;
-const MAX_CLUBS = 60;
-const URL_RE = /^https?:[/][/][^ ]{3,500}$/;
-
-const defaults = () => ({ open: true, sections: [{ id: 'sno', title: 'СНО ГАУГН', clubs: [] }, { id: 'ssk', title: 'ССК ГАУГН', clubs: [] }] });
-const newId = () => Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
-const text = (v, n) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, n);
-
-function cleanUrl(v) {
-  const url = String(v || '').trim();
-  if (!url) return '';
-  if (!URL_RE.test(url)) throw new EndpointError('Ссылка должна начинаться с http:// или https://');
-  return url;
+const text = (v, n) => String(v || '').trim().slice(0, n);
+const id = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+const statuses = ['active', 'paused', 'closed'];
+function url(v, photo = false) {
+  const s = text(v, 2000);
+  if (!s) return '';
+  try { const u = new URL(s); if ((photo ? u.protocol === 'https:' : ['http:', 'https:'].includes(u.protocol)) && u.hostname && !u.username && !u.password) return u.href; } catch (e) {}
+  throw new EndpointError(photo ? 'Фото: нужна публичная HTTPS-ссылка на изображение' : 'Нужна ссылка http:// или https://');
 }
-
-function cleanStatus(v, fallback) {
-  const s = String(v || '');
-  if (!s) return fallback;
-  if (STATUS.indexOf(s) < 0) throw new EndpointError('bad status');
-  return s;
+function fields(p, old = {}) {
+  const name = text(p.name, 80).replace(/\s+/g, ' ');
+  if (!name) throw new EndpointError('Введите название клуба');
+  const status = p.status || old.status || 'active';
+  if (!statuses.includes(status)) throw new EndpointError('bad status');
+  return { name, status, url: url(p.url),
+    description: p.description === undefined ? old.description || '' : text(p.description, 3000),
+    photo: p.photo === undefined ? old.photo || '' : url(p.photo, true) };
 }
-
-export default endpoint(async (input, u) => {
+export default endpoint(async (p, u) => {
   const admin = store.isAdmin(u.username);
-  let data = await store.get(KEY, null);
-  if (!data || !Array.isArray(data.sections)) data = defaults();
-  const a = input.action || 'list';
-  if (a === 'list') {
-    if (data.open === false && !admin) return { admin: false, open: false, sections: [] };
-    return { admin, open: data.open !== false, sections: data.sections };
-  }
+  let d = await store.get('clubs', null);
+  if (!d || !Array.isArray(d.sections)) d = { open: true, sections: [{ id: 'sno', title: 'СНО ГАУГН', clubs: [] }, { id: 'ssk', title: 'ССК ГАУГН', clubs: [] }] };
+  const result = () => ({ admin, open: d.open !== false, sections: d.open === false && !admin ? [] : d.sections });
+  const a = p.action || 'list';
+  if (a === 'list') return result();
   if (!admin) throw new EndpointError('forbidden');
-
-  if (a === 'visibility') {
-    data.open = !!input.open;
-  } else if (a === 'section_add') {
-    const title = text(input.title, 60);
-    if (!title) throw new EndpointError('Введите название раздела');
-    if (data.sections.length >= MAX_SECTIONS) throw new EndpointError('Слишком много разделов');
-    data.sections.push({ id: newId(), title, clubs: [] });
+  if (a === 'visibility') d.open = !!p.open;
+  else if (a === 'section_add') {
+    const title = text(p.title, 60);
+    if (!title || d.sections.length >= 12) throw new EndpointError('Введите название; не больше 12 разделов');
+    d.sections.push({ id: id(), title, clubs: [] });
   } else {
-    const sec = data.sections.find((s) => s.id === String(input.section || ''));
-    if (!sec) throw new EndpointError('Раздел не найден');
-    if (a === 'section_edit') {
-      const title = text(input.title, 60);
-      if (!title) throw new EndpointError('Введите название раздела');
-      sec.title = title;
-    } else if (a === 'section_delete') {
-      data.sections = data.sections.filter((s) => s !== sec);
-    } else if (a === 'club_add') {
-      const name = text(input.name, 80);
-      if (!name) throw new EndpointError('Введите название клуба');
-      if (sec.clubs.length >= MAX_CLUBS) throw new EndpointError('Слишком много клубов в разделе');
-      sec.clubs.push({ id: newId(), name, url: cleanUrl(input.url), status: cleanStatus(input.status, 'active') });
-    } else if (a === 'club_edit' || a === 'club_delete' || a === 'club_move') {
-      const i = sec.clubs.findIndex((c) => c.id === String(input.club || ''));
+    const s = d.sections.find((x) => x.id === p.section);
+    if (!s) throw new EndpointError('Раздел не найден');
+    if (a === 'section_edit') { const t = text(p.title, 60); if (!t) throw new EndpointError('Введите название'); s.title = t; }
+    else if (a === 'section_delete') d.sections = d.sections.filter((x) => x !== s);
+    else if (a === 'club_add') {
+      if (s.clubs.length >= 60) throw new EndpointError('Не больше 60 клубов в разделе');
+      s.clubs.push({ id: id(), ...fields(p) });
+    } else {
+      const i = s.clubs.findIndex((x) => x.id === p.club);
       if (i < 0) throw new EndpointError('Клуб не найден');
-      const c = sec.clubs[i];
-      if (a === 'club_edit') {
-        const name = text(input.name, 80);
-        if (!name) throw new EndpointError('Введите название клуба');
-        c.name = name;
-        c.url = cleanUrl(input.url);
-        c.status = cleanStatus(input.status, c.status);
-      } else if (a === 'club_delete') {
-        sec.clubs.splice(i, 1);
-      } else {
-        const j = i + (Number(input.dir) < 0 ? -1 : 1);
-        if (j >= 0 && j < sec.clubs.length) { sec.clubs[i] = sec.clubs[j]; sec.clubs[j] = c; }
-      }
-    } else throw new EndpointError('bad action');
+      if (a === 'club_edit') Object.assign(s.clubs[i], fields(p, s.clubs[i]));
+      else if (a === 'club_delete') s.clubs.splice(i, 1);
+      else if (a === 'club_move') { const j = i + (Number(p.dir) < 0 ? -1 : 1); if (j >= 0 && j < s.clubs.length) [s.clubs[i], s.clubs[j]] = [s.clubs[j], s.clubs[i]]; }
+      else throw new EndpointError('bad action');
+    }
   }
-  await store.set(KEY, data);
-  return { admin, open: data.open !== false, sections: data.sections };
+  await store.set('clubs', d);
+  return result();
 });
