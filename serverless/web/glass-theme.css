@@ -1,14 +1,16 @@
-/* Minimal ambient color, not a bright animated wallpaper. */
-:root{--sb-bg:#f6f8fc;--sb-text:#202936;--sb-muted:#566274;--sb-flat:#edf1f7;--sb-surface:rgba(255,255,255,.64);--sb-field:rgba(255,255,255,.68);--sb-edge:rgba(255,255,255,.78);--sb-drop:rgba(36,53,78,.07);--sb-a:rgba(124,157,210,.12);--sb-b:rgba(173,146,201,.10);--sb-c:rgba(132,186,176,.08)}
-:root[data-theme=dark]{--sb-bg:#10141b;--sb-text:#eef2f8;--sb-muted:#bac4d4;--sb-flat:#1c2430;--sb-surface:rgba(29,36,47,.70);--sb-field:rgba(37,46,60,.78);--sb-edge:rgba(255,255,255,.12);--sb-drop:rgba(0,0,0,.18);--sb-a:rgba(88,119,174,.10);--sb-b:rgba(124,115,149,.08);--sb-c:rgba(69,131,125,.08)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--sb-bg:#10141b;--sb-text:#eef2f8;--sb-muted:#bac4d4;--sb-flat:#1c2430;--sb-surface:rgba(29,36,47,.70);--sb-field:rgba(37,46,60,.78);--sb-edge:rgba(255,255,255,.12);--sb-drop:rgba(0,0,0,.18);--sb-a:rgba(88,119,174,.10);--sb-b:rgba(124,115,149,.08);--sb-c:rgba(69,131,125,.08)}}
+/* The base belongs to the user's Telegram theme; defaults are only for a normal browser. */
+:root{--sb-browser-bg:#f6f8fc;--sb-browser-text:#202936;--sb-browser-muted:#566274;--sb-bg:var(--tg-theme-bg-color,var(--sb-browser-bg));--sb-text:var(--tg-theme-text-color,var(--sb-browser-text));--sb-muted:var(--tg-theme-hint-color,var(--sb-browser-muted));--sb-flat:var(--tg-theme-secondary-bg-color,var(--sb-bg));--sb-bg-rgb:255,255,255;--sb-panel-rgb:255,255,255;--sb-accent-rgb:124,157,210;--sb-surface:rgba(var(--sb-panel-rgb),.64);--sb-field:rgba(var(--sb-bg-rgb),.74);--sb-edge:rgba(255,255,255,.78);--sb-drop:rgba(36,53,78,.07);--sb-a:rgba(var(--sb-accent-rgb),.09);--sb-b:rgba(173,146,201,.06);--sb-c:rgba(132,186,176,.05)}
+:root[data-theme=dark]{--sb-browser-bg:#10141b;--sb-browser-text:#eef2f8;--sb-browser-muted:#bac4d4;--sb-bg-rgb:16,20,27;--sb-panel-rgb:29,36,47;--sb-surface:rgba(var(--sb-panel-rgb),.72);--sb-field:rgba(var(--sb-bg-rgb),.82);--sb-edge:rgba(255,255,255,.12);--sb-drop:rgba(0,0,0,.18);--sb-a:rgba(var(--sb-accent-rgb),.07);--sb-b:rgba(124,115,149,.05);--sb-c:rgba(69,131,125,.05)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--sb-browser-bg:#10141b;--sb-browser-text:#eef2f8;--sb-browser-muted:#bac4d4;--sb-bg-rgb:16,20,27;--sb-panel-rgb:29,36,47;--sb-surface:rgba(var(--sb-panel-rgb),.72);--sb-field:rgba(var(--sb-bg-rgb),.82);--sb-edge:rgba(255,255,255,.12);--sb-drop:rgba(0,0,0,.18);--sb-a:rgba(var(--sb-accent-rgb),.07);--sb-b:rgba(124,115,149,.05);--sb-c:rgba(69,131,125,.05)}}
 html.sb-glass-theme{background:var(--sb-bg);color-scheme:light}
 html.sb-glass-theme[data-theme=dark]{color-scheme:dark}
 @media(prefers-color-scheme:dark){html.sb-glass-theme:not([data-theme=light]){color-scheme:dark}}
-html.sb-glass-theme body{background:var(--sb-bg)!important;color:var(--sb-text);isolation:isolate;--tg-theme-bg-color:var(--sb-bg);--tg-theme-text-color:var(--sb-text);--tg-theme-hint-color:var(--sb-muted);--tg-theme-secondary-bg-color:var(--sb-flat)}
-html.sb-glass-theme body::before{content:'';position:fixed;inset:-10%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 18% 24%,var(--sb-a),transparent 62%),radial-gradient(ellipse at 82% 38%,var(--sb-b),transparent 65%),radial-gradient(ellipse at 48% 86%,var(--sb-c),transparent 64%);animation:sb-ambient 36s ease-in-out infinite alternate}
+/* Do not redefine any --tg-theme-* variable on body or descendants. */
+html.sb-glass-theme body{background:var(--sb-bg)!important;color:var(--sb-text);position:relative}
+html.sb-glass-theme body::before{content:'';position:fixed;inset:-10%;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 18% 24%,var(--sb-a),transparent 62%),radial-gradient(ellipse at 82% 38%,var(--sb-b),transparent 65%),radial-gradient(ellipse at 48% 86%,var(--sb-c),transparent 64%);animation:sb-ambient 36s ease-in-out infinite alternate}
+html.sb-glass-theme main#view{position:relative;z-index:1}
 @keyframes sb-ambient{from{transform:translate3d(-.6%,-.4%,0) scale(1.01)}to{transform:translate3d(.8%,.6%,0) scale(1.025)}}
-html.sb-glass-theme :is(.card,.cal,.banner,dialog.lesson-sheet,.ux-group>summary,.sheet-section>summary){background:var(--sb-surface)!important;box-shadow:inset 0 0 0 .7px var(--sb-edge),0 6px 24px var(--sb-drop);-webkit-backdrop-filter:blur(14px) saturate(112%);backdrop-filter:blur(14px) saturate(112%)}
+html.sb-glass-theme :is(.card,.cal,.banner,dialog.lesson-sheet,.ux-group>summary,.sheet-section>summary){background:var(--sb-surface)!important;box-shadow:inset 0 0 0 .7px var(--sb-edge),0 6px 24px var(--sb-drop);-webkit-backdrop-filter:blur(14px) saturate(112%);backdrop-filter:blur(14px) saturate(112%);color:var(--sb-text)}
 html.sb-glass-theme :is(.ux-group,.sheet-section){background:transparent!important}
 html.sb-glass-theme :is(.ux-group>summary,.sheet-section>summary){border-radius:inherit}
 html.sb-glass-theme :is(.ux-group[open]>.ux-body,.sheet-section[open]){background:var(--sb-surface)}
@@ -19,6 +21,7 @@ html.sb-glass-theme .sb-glass-surface.sb-glass-rendered{background:transparent!i
 .sb-glass-layer>.sb-card-glass{position:absolute;inset:0;border-radius:inherit;pointer-events:none}
 html.sb-glass-theme :is(input[type=text],input[type=url],input[type=search],input[type=date],input[type=time],select,textarea){background:var(--sb-field);border-color:var(--sb-edge);box-shadow:inset 0 0 0 .5px var(--sb-drop);color:var(--sb-text)}
 html.sb-glass-theme :is(input,textarea)::placeholder{color:var(--sb-muted);opacity:1}
+html.sb-glass-theme :is(.muted,.note){color:var(--sb-muted)}
 html.sb-glass-theme :is(.card button.alt,.chip:not(.on)){background:var(--sb-field);color:var(--sb-text);box-shadow:inset 0 0 0 .6px var(--sb-edge)}
 html.sb-glass-theme #subj-panel{background:var(--sb-bg)!important;background-image:radial-gradient(ellipse at 18% 24%,var(--sb-a),transparent 62%),radial-gradient(ellipse at 82% 38%,var(--sb-b),transparent 65%)!important;color:var(--sb-text)!important}
 html.sb-glass-theme .hwc.done{opacity:1;color:var(--sb-muted)}
