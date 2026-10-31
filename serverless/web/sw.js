@@ -1,5 +1,5 @@
-const C = 'schedule-v49';
-const SHELL = ['./', 'index.html', 'fast.js', 'app.js', 'ux.js', 'settings.js', 'extras.js', 'files.js', 'news.js', 'more.js', 'menu.js', 'hwx.js', 'plan.js', 'room.js', 'subj.js', 'library.js', 'clubs.js', 'hwfold.js', 'dlv.js', 'anim.js', 'visual.js', 'interactions.js', 'dates-eu.js', 'style.css', 'manifest.webmanifest', 'icon.svg'];
+const C = 'schedule-v50';
+const SHELL = ['./', 'index.html', 'fast.js', 'app.js', 'ux.js', 'settings.js', 'extras.js', 'files.js', 'news.js', 'more.js', 'menu.js', 'hwx.js', 'plan.js', 'room.js', 'subj.js', 'library.js', 'clubs.js', 'hwfold.js', 'dlv.js', 'anim.js', 'visual.js', 'interactions.js', 'dates-eu.js', 'style.css', 'glass-theme.css', 'manifest.webmanifest', 'icon.svg'];
 const NAV = ['glisse-nav.js', 'glisse-nav.css', 'glisse-notices.txt'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(C).then(async (c) => {

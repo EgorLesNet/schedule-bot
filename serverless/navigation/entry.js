@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { TabBar } from 'glisse';
 import { readNavigation, activateTab } from './bridge.js';
+import { startGlassSurfaces } from './surfaces.js';
 import './nav.css';
 
 // React owns only #glisse-tabs. The application continues to own #tabs and #view.
@@ -67,3 +68,4 @@ if (legacy && typeof TABS !== 'undefined' && typeof S !== 'undefined' && typeof 
     schedule();
   } catch (error) { restore(error); }
 }
+startGlassSurfaces();
