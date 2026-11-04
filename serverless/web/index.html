@@ -1,43 +1,43 @@
 <!doctype html>
-<html lang='ru' class='sb-glass-theme'>
-<head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'>
-<title>Расписание</title>
-<link rel='manifest' href='manifest.webmanifest'>
-<link rel='icon' href='icon.svg'>
-<meta name='theme-color' content='#2481cc'>
-<link rel='stylesheet' href='style.css'>
-<link rel='stylesheet' href='glisse-nav.css'>
-<link rel='stylesheet' href='glass-theme.css'>
-<script src='https://telegram.org/js/telegram-web-app.js'></script>
-<script src='telegram-theme.js'></script>
-</head>
-<body>
-<nav id='tabs'></nav>
-<main id='view'></main>
-<script src='fast.js'></script>
-<script src='app.js'></script>
-<script src='ux.js'></script>
-<script src='settings.js'></script>
-<script src='extras.js'></script>
-<script src='files.js'></script>
-<script src='news.js'></script>
-<script src='more.js'></script>
-<script src='menu.js'></script>
-<script src='hwx.js'></script>
-<script src='plan.js'></script>
-<script src='room.js'></script>
-<script src='subj.js'></script>
-<script src='library.js'></script>
-<script src='clubs.js'></script>
-<script src='hwfold.js'></script>
-<script src='dlv.js'></script>
-<script src='anim.js'></script>
-<script src='visual.js'></script>
-<script src='interactions.js'></script>
-<script src='dates-eu.js'></script>
-<script src='glisse-nav.js' defer></script>
-<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});</script>
-</body>
-</html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><title>Расписание</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><script src="https://telegram.org/js/telegram-web-app.js"></script><style>body{margin:0;font-family:system-ui,sans-serif;background:#f1f5fc;color:#182438}#boot-status{max-width:640px;margin:40px auto;padding:20px;line-height:1.6}#boot-status a{color:#2481cc}@media(prefers-color-scheme:dark){body{background:#10151e;color:#edf2fa}}</style></head><body>
+<div id="boot-status" role="status">Загрузка нового интерфейса… <a href="legacy.html">Старая версия</a></div><div id="root"></div>
+<script src="register-sw.js"></script>
+<script type="module">
+const status = document.getElementById('boot-status');
+try {
+  const manifestURL = new URL('react/manifest.json', location.href);
+  const response = await fetch(manifestURL, { cache: 'no-store' });
+  if (!response.ok) throw new Error('React-сборка недоступна: HTTP ' + response.status);
+  const manifest = await response.json();
+  const entryKey = manifest['index.html']?.isEntry ? 'index.html' : Object.keys(manifest).find(key => manifest[key].isEntry);
+  if (!entryKey) throw new Error('В манифесте не найдена точка входа');
+  const seen = new Set();
+  const css = new Set();
+  function visit(key) {
+    if (seen.has(key)) return;
+    seen.add(key);
+    const item = manifest[key];
+    if (!item) throw new Error('Неполный манифест сборки');
+    for (const file of item.css || []) css.add(file);
+    for (const child of item.imports || []) visit(child);
+  }
+  visit(entryKey);
+  const assetURL = file => {
+    const url = new URL(file, manifestURL);
+    if (url.origin !== manifestURL.origin || !url.pathname.startsWith(new URL('./', manifestURL).pathname)) throw new Error('Некорректный путь ресурса');
+    return url.href;
+  };
+  await Promise.all([...css].map(file => new Promise((resolve, reject) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet'; link.href = assetURL(file);
+    link.onload = resolve; link.onerror = () => reject(new Error('Не загружены стили нового интерфейса'));
+    document.head.append(link);
+  })));
+  await import(assetURL(manifest[entryKey].file));
+  status.remove();
+} catch (error) {
+  status.setAttribute('role', 'alert');
+  status.replaceChildren(document.createTextNode('Новый интерфейс не загрузился. ' + (error.message || error) + ' '));
+  const link = document.createElement('a'); link.href = 'legacy.html'; link.textContent = 'Открыть старую версию'; status.append(link);
+}
+</script><noscript>Для приложения необходим JavaScript. <a href="legacy.html">Старая версия</a></noscript></body></html>
