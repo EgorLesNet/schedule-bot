@@ -1,0 +1,121 @@
+/* Paint-only theme for the existing interface. No layout, metrics, DOM or event changes. */
+html.sb-glass-theme {
+  --ui-control-radius: 14px;
+  --ui-panel-radius: 18px;
+  --ui-accent: var(--tg-theme-button-color, #2481cc);
+  --ui-accent-text: var(--tg-theme-button-text-color, #fff);
+  --ui-text: var(--sb-text, var(--tg-theme-text-color, #202936));
+  --ui-muted: var(--sb-muted, var(--tg-theme-hint-color, #566274));
+  --ui-surface: var(--sb-surface, #f1f1f4);
+  --ui-secondary: var(--sb-field, #f6f8fc);
+  --ui-edge: var(--sb-edge, rgba(255,255,255,.78));
+  --ui-panel-shadow: inset 0 0 0 1px var(--ui-edge), 0 4px 16px var(--sb-drop, rgba(36,53,78,.07));
+  --ui-control-shadow: inset 0 0 0 1px var(--ui-edge), 0 2px 6px var(--sb-drop, rgba(36,53,78,.07));
+  --ui-danger: #b92739;
+  --ui-success: #18743a;
+}
+html.sb-glass-theme[data-theme=dark] { --ui-success: #8be2a5; }
+@media (prefers-color-scheme: dark) {
+  html.sb-glass-theme:not([data-theme=light]) { --ui-success: #8be2a5; }
+}
+
+/* All actual buttons, including dynamically added buttons and dialog actions.
+   Keep the existing font metrics, padding, borders, widths, flex rules and hit areas. */
+html.sb-glass-theme body button {
+  background: var(--ui-accent) !important;
+  color: var(--ui-accent-text) !important;
+  border-color: var(--ui-edge) !important;
+  border-radius: var(--ui-control-radius) !important;
+  box-shadow: var(--ui-control-shadow) !important;
+  text-shadow: none !important;
+}
+
+/* Secondary controls use the same surface and outline everywhere. */
+html.sb-glass-theme body :is(button.alt, button[aria-pressed=false], button.chip:not(.on), .cal button:not(.sel), .sheet-head button, #tabs button:not(.on)) {
+  background: var(--ui-secondary) !important;
+  color: var(--ui-text) !important;
+  box-shadow: var(--ui-control-shadow) !important;
+}
+
+/* Selected controls share one accent; no added borders or outline offsets. */
+html.sb-glass-theme body :is(button.on, button.sel, button[aria-pressed=true], button[aria-selected=true], #tabs button.on, .cal button.d.sel) {
+  background: var(--ui-accent) !important;
+  color: var(--ui-accent-text) !important;
+  box-shadow: var(--ui-control-shadow) !important;
+}
+
+/* Preserve the established shapes of calendar dates and bottom navigation. */
+html.sb-glass-theme body .cal button.d { border-radius: 50% !important; }
+html.sb-glass-theme body #tabs button { border-radius: 26px !important; }
+html.sb-glass-theme body .cal button.d.today:not(.sel) { color: var(--ui-accent) !important; }
+html.sb-glass-theme body button.danger {
+  background: var(--ui-danger) !important;
+  color: #fff !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 2px 6px var(--sb-drop, rgba(36,53,78,.07)) !important;
+}
+html.sb-glass-theme body button:disabled { opacity: .45 !important; }
+html.sb-glass-theme body button:focus-visible {
+  outline: 2px solid var(--ui-accent) !important;
+  outline-offset: -2px !important;
+}
+html.sb-glass-theme body button:enabled:active {
+  box-shadow: inset 0 0 0 2px var(--ui-edge), inset 0 2px 6px var(--sb-drop, rgba(36,53,78,.07)) !important;
+}
+
+/* Shared card/banner/dialog paint. No new filters or positioning contexts. */
+html.sb-glass-theme body :is(.card, .cal, .banner, .ux-group > summary, .sheet-section > summary, dialog.lesson-sheet, .ux-toast),
+html.sb-glass-theme body .sb-glass-surface.sb-glass-rendered {
+  background: var(--ui-surface) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-edge) !important;
+  box-shadow: var(--ui-panel-shadow) !important;
+}
+html.sb-glass-theme body :is(.card, .cal, .banner, .ux-group, .sheet-section, .ux-toast) {
+  border-radius: var(--ui-panel-radius) !important;
+}
+html.sb-glass-theme body :is(.ux-group > summary, .sheet-section > summary) {
+  border-radius: inherit !important;
+}
+html.sb-glass-theme body dialog.lesson-sheet {
+  border-radius: var(--ui-panel-radius) var(--ui-panel-radius) 0 0 !important;
+}
+html.sb-glass-theme body #tabs {
+  background: var(--ui-surface) !important;
+  border-color: var(--ui-edge) !important;
+  box-shadow: var(--ui-panel-shadow) !important;
+}
+html.sb-glass-theme body :is(.ux-group[open] > .ux-body, .sheet-section[open]) {
+  background: var(--ui-surface) !important;
+}
+
+/* Turn off only the old absolute decorative layer, without removing DOM nodes. */
+html.sb-glass-theme body .sb-glass-layer { opacity: 0 !important; }
+
+/* Keep semantic status colours and subject markers. */
+html.sb-glass-theme body .banner.now { color: var(--ui-success) !important; }
+html.sb-glass-theme body .banner.next { color: var(--ui-accent) !important; }
+html.sb-glass-theme body .ui-room {
+  background: var(--ui-secondary) !important;
+  color: var(--ui-text) !important;
+  border-radius: var(--ui-control-radius) !important;
+  box-shadow: inset 0 0 0 1px var(--ui-edge) !important;
+}
+html.sb-glass-theme body :is(input[type=text], input[type=url], input[type=search], input[type=date], input[type=time], select, textarea) {
+  background: var(--ui-secondary) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-edge) !important;
+  border-radius: var(--ui-control-radius) !important;
+  box-shadow: inset 0 0 0 1px var(--ui-edge) !important;
+}
+html.sb-glass-theme body :is(input, textarea)::placeholder { color: var(--ui-muted); }
+
+@media (prefers-reduced-transparency: reduce) {
+  html.sb-glass-theme { --ui-surface: var(--sb-flat, var(--sb-bg)); --ui-secondary: var(--sb-flat, var(--sb-bg)); }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  html.sb-glass-theme { --ui-surface: var(--sb-flat, var(--sb-bg)); --ui-secondary: var(--sb-flat, var(--sb-bg)); }
+}
+@media (forced-colors: active) {
+  html.sb-glass-theme body button { background: ButtonFace !important; color: ButtonText !important; box-shadow: inset 0 0 0 1px ButtonText !important; }
+  html.sb-glass-theme body :is(button.on, button.sel, button[aria-pressed=true], button[aria-selected=true]) { background: Highlight !important; color: HighlightText !important; }
+}
