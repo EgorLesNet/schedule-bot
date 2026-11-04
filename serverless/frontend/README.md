@@ -1,52 +1,49 @@
-# React / Glisse: isolated first migration stage
+# React / Glisse preview — stages 1 and 2
 
-This is an additive preview, NOT a completed migration and NOT a replacement for the production entrypoint. Existing `web/index.html`, backend, schema and service worker are unchanged.
+This is an additive preview, not a completed migration and not a replacement for the production entrypoint. Existing web/index.html, backend, schema and service worker remain unchanged.
 
-## Implemented
+## Implemented in source
 
-- Actual React components from glisse 0.5.0: Button, Glass, Input and Switch, via shared wrappers.
+- Shared wrappers for actual Glisse 0.5.0 Button, Glass, Input and Switch.
 - Day/week schedule, date navigation, subject/teacher search, favourites and personal notes.
-- Homework list, done status, assistant add/delete and student proposals.
 - Faculty/course/direction/stream selection, language start and reminders.
-- Existing Telegram.WebApp.Serverless.call transport; no HTTP API replacement, initData substitution, SSR or separate Node runtime.
-- Telegram themeChanged subscription, safe areas, haptic feedback and visible API errors.
-- Session read cache scoped to Telegram user ID for range/subjects/subjectDates, one-hour TTL; never caches writes/bootstrap and never replays writes.
+- Stage 2: current homework, archive search and server pagination (20 per page); done status; create/delete; edit text/date, remove individual attachments and add files from inbox; assistant-only history with restore using the server-provided version index.
+- Stage 2: file inbox via bot chat, refresh, selection up to 10, confirmed removal from inbox; send homework files to personal chat; confirmed clearing of homework attachments. There is no fabricated browser-upload endpoint.
+- Stage 2: student proposals with attachments, own proposal list/cancellation; assistant queue with editable text, approve/reject confirmations and attachment metadata. Pending proposal file download is not exposed by the existing endpoint and is not invented.
+- One mutation lock across the homework screen; writes are not retried automatically. Stale read responses are ignored and query data is hidden immediately when request identity changes. Server remains the authority for permissions and limits.
+- Existing Telegram.WebApp.Serverless.call transport, Telegram theme events, safe areas and haptics. Session read cache for range/subjects/subjectDates is scoped to Telegram user ID with one-hour TTL; bootstrap and writes are not cached.
 
-## Not migrated
+## Still not migrated
 
-Files and attachment actions, proposal moderation, homework editing/history/archive, schedule edits, subscription calendars, news, library, clubs, exams, admin and advanced settings remain in the original application. Preview clearly labels these limitations and links back to `../index.html`. This must not be described as a full migration.
+Schedule edits/link management, subscription calendars, news, library, clubs, exams, admin, advanced settings and some legacy presentation conveniences. Legacy remains available via the old-version button. The full project must not be described as migrated.
 
-## Requirements and build
+## Build and publish preview
 
-Use Node >=22.12.0 and npm. From the repository root:
-
-```sh
-cd serverless/frontend
-npm install
-npm run build
-```
-
-Commit the generated package-lock.json after the first successful dependency resolution; subsequent reproducible installations should use npm ci. This commit does not include a fabricated lockfile or prebuilt assets. Vite emits files ONLY into `serverless/web/react/`; emptyOutDir is limited to that directory. Relative asset paths allow Telegram static hosting at a non-root URL. `tgcloud.jsonc` continues to publish `web`.
-
-## Publish preview alongside production
+Node >=22.12.0 and npm are required. Use the existing configured/authenticated Telegram Serverless project.
 
 ```sh
 cd ~/schedule-src
 git checkout tgcloud
 git pull --ff-only origin tgcloud
 cd serverless/frontend
-npm install
-npm run build
-cd ..
+npm install && npm run build
+```
+
+Only after a successful build, and after verifying the CLI account/project:
+
+```sh
+cd ~/schedule-src/serverless
 npx tgcloud push
 ```
 
-Run the last command only in the already configured/authenticated Telegram Serverless project and verify the CLI account/project before pushing. It publishes existing backend plus static files according to the existing project configuration. No schema migration is introduced. If CLI setup is missing, use the project's existing scaffold/login procedure rather than creating a different bot.
+Vite writes only to serverless/web/react/, with relative asset paths; tgcloud.jsonc still publishes web. No SSR, separate Node runtime or schema migration is introduced. The root Mini App URL must remain unchanged. Open react/index.html relative to the Mini App static base URL inside Telegram Serverless. A normal browser cannot validate the Serverless bridge.
 
-Open `react/index.html` relative to the current Mini App static base URL inside Telegram Serverless. Keep the bot's production Mini App URL unchanged. Opening the page in a normal browser cannot test the Serverless bridge. Vite dev/preview only tests rendering without backend access.
+The first npm install creates package-lock.json: inspect and commit it after successful dependency resolution, then use npm ci for reproducible installs. No fabricated lockfile or prebuilt assets are included.
 
-## Validation status
+## Validation status and regression checklist
 
-No npm install, build, browser test or Telegram deployment has been executed by the authoring assistant. The source is a reviewable first stage, not a verified production build. Do not switch the root Mini App to this preview yet.
+The authoring assistant has not executed npm install/build, browser tests or deployment. These are reviewable sources, not a verified production build.
 
-Before accepting: run npm install/build; test real Telegram iOS/Android/Desktop; verify course selection, day/week/search, theme changes, favourite/note persistence, homework permissions/add/delete/proposal/done, transport errors and return to legacy. Verify existing service worker behaviour: it is cache-first and can retain an older preview HTML on subsequent releases. This preview does not unregister or erase production caches. Before a production cutover, design and test a service-worker migration, complete all remaining screens and run regression tests.
+Before accepting stage 2, test real Telegram iOS/Android/Desktop with student and assistant accounts: archive search, multiple pages and empty pages after deletion; edit text/date with collision rejection; original history indices and restoration without changing attachments; inbox refresh/selection/drop; attach and send files; student file-type restrictions and five-pending/rate limits; approve replacing existing homework, reject/cancel; errors/timeouts without automatic write replay; correct permissions after changing streams; return to legacy. Test long texts, theme changes and safe areas.
+
+The existing production service worker remains cache-first and can retain old preview HTML on later releases. No production caches are unregistered or deleted by the preview. A tested cache migration, remaining-screen migration and full regressions are required before switching production to React.
