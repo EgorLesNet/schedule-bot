@@ -1,0 +1,1432 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ГАУГН//ЛИНГ_243-3k//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ГАУГН — Лингвистика, 3 курс, ЛИНГ_2
+ 43
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:676ef917c53aba6611f00505d25b6125@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260902T100000
+DTEND;TZID=Europe/Moscow:20260902T113000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:ef271deb99381a09c5f861b65e55030f@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260902T114000
+DTEND;TZID=Europe/Moscow:20260902T131000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:983fe6c69b83f6b71fbdccac9c683ddf@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260904T090000
+DTEND;TZID=Europe/Moscow:20260904T103000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:841f6dd42678a971912a37aee22db1cd@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260904T104000
+DTEND;TZID=Europe/Moscow:20260904T121000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:0d89c3735294ad3f702add59d14f9cf4@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260904T123000
+DTEND;TZID=Europe/Moscow:20260904T140000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:0e16e4a5db39b9c083e0bd98fa04ac76@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260904T141000
+DTEND;TZID=Europe/Moscow:20260904T154000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:dff8d79942d2cc70223d48a37bdabc1b@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260909T144000
+DTEND;TZID=Europe/Moscow:20260909T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс французского языка
+LOCATION:ауд. 131 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:a07bc8a65efad33af31b8f78c43899f4@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260909T162000
+DTEND;TZID=Europe/Moscow:20260909T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс французского языка
+LOCATION:ауд. 131 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:f80d38e571dcb54e5261fbc93dd96064@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260912T100000
+DTEND;TZID=Europe/Moscow:20260912T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:e9b6e15c54f4e0cc4e62b05f90eabf7b@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260912T123000
+DTEND;TZID=Europe/Moscow:20260912T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — преп. А.С. Солдатова
+ \nПрактический курс испанского языка (пр
+ акт.) (зачет с оценкой) — ОНЛАЙН — ст. пре
+ п. Е.В. Львовна
+END:VEVENT
+BEGIN:VEVENT
+UID:7d87d406db1788f94f91b4108f6d7c1c@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260915T090000
+DTEND;TZID=Europe/Moscow:20260915T103000
+SUMMARY:Лингвистика и семиотика (практ.) (зач
+ ет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. Д.С. Зо
+ лотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:e3a3efee5ccfd7b103a2622f500a0621@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260915T104000
+DTEND;TZID=Europe/Moscow:20260915T121000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:d9d8d0e8aa05b3b2faa79d012c07690e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260917T100000
+DTEND;TZID=Europe/Moscow:20260917T113000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:e5e2230f83d17ad830b383b6201bd6dc@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260917T114000
+DTEND;TZID=Europe/Moscow:20260917T131000
+SUMMARY:Литература англоязычных стран (заче
+ т)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:facbfaf10b0eec3fddd9b900c8ad09ea@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260917T133000
+DTEND;TZID=Europe/Moscow:20260917T150000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:906413b7887c194ed498a46c80e9599f@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260917T151000
+DTEND;TZID=Europe/Moscow:20260917T164000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:536664fe99d3454e69cf70f923714503@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260919T100000
+DTEND;TZID=Europe/Moscow:20260919T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:66421eabe80a558ab757293d58cb4fc9@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260919T123000
+DTEND;TZID=Europe/Moscow:20260919T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:d1d26f38684b880fb3e856cdde1dad02@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260923T144000
+DTEND;TZID=Europe/Moscow:20260923T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:632dbcf4c5d3f259997b37c844f663a9@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260923T162000
+DTEND;TZID=Europe/Moscow:20260923T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:2c4ccd7e7c533301839af664b5cc0243@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260926T100000
+DTEND;TZID=Europe/Moscow:20260926T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:871713fc0e7328556aeb2c85666c044b@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260926T123000
+DTEND;TZID=Europe/Moscow:20260926T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:088abfd116c8b308908f9896c1e6d394@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260929T090000
+DTEND;TZID=Europe/Moscow:20260929T103000
+SUMMARY:Цифровая лингводидактика
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\n(практ.) (за
+ чет)\nпреп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:c35292f630022ba3a1e83eafda7db611@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260929T104000
+DTEND;TZID=Europe/Moscow:20260929T121000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:7cf65aa67de99029478e28f966115c4d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20260929T123000
+DTEND;TZID=Europe/Moscow:20260929T140000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:a3b36d6e4fa2fa69b024b7dac8deccbb@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261001T100000
+DTEND;TZID=Europe/Moscow:20261001T113000
+SUMMARY:Лингвистика и семиотика (практ.) (зач
+ ет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. Д.С. Зо
+ лотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:5facba1d33382669d5d7d41fc2f25cf1@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261001T114000
+DTEND;TZID=Europe/Moscow:20261001T131000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:b01fabaa1014a65da49e4c3789b41a8d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261001T133000
+DTEND;TZID=Europe/Moscow:20261001T150000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:51e00522348c3e716eed411f34ba7ffa@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261003T100000
+DTEND;TZID=Europe/Moscow:20261003T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:037afe5937f2b891bfd40bc20e14110a@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261003T114000
+DTEND;TZID=Europe/Moscow:20261003T131000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:71091f48054d00f9ab8bb4698099008f@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261007T144000
+DTEND;TZID=Europe/Moscow:20261007T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:8fb290fca9121727db3386eb72ffc1d9@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261007T162000
+DTEND;TZID=Europe/Moscow:20261007T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:92988cc06704246d4f5c9f761992c52d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261008T100000
+DTEND;TZID=Europe/Moscow:20261008T113000
+SUMMARY:Литература англоязычных стран (лекц
+ ия) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. М. И. Крупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:3fd5ec34b0621631b0e4ccb39401c1a7@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261008T114000
+DTEND;TZID=Europe/Moscow:20261008T131000
+SUMMARY:Литература англоязычных стран (лекц
+ ия) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. М. И. Крупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:0a36f50b173d008f1122b79fe59a8a43@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261008T133000
+DTEND;TZID=Europe/Moscow:20261008T150000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4e7e2558d83abed1ae08812b49383e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261008T151000
+DTEND;TZID=Europe/Moscow:20261008T164000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:1343909588b336cb3d8b504c48e45d8f@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261013T090000
+DTEND;TZID=Europe/Moscow:20261013T103000
+SUMMARY:Лингвистика и семиотика (практ.) (зач
+ ет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. Д.С. Зо
+ лотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:529c38c00aa8bd882ef9ce44d28da0d6@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261013T104000
+DTEND;TZID=Europe/Moscow:20261013T121000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:2d8d122601367f6ea0a0849c89933a16@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261013T123000
+DTEND;TZID=Europe/Moscow:20261013T140000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:acb431fab19cdaa6dbae92b1f581bb22@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261013T142000
+DTEND;TZID=Europe/Moscow:20261013T155000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:c34b52451ae4e6acb4e804c6fe019637@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261015T133000
+DTEND;TZID=Europe/Moscow:20261015T150000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:e5472b4379da2516c72989aeda74fbdf@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261015T151000
+DTEND;TZID=Europe/Moscow:20261015T164000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:61ed6e7c67c01d43fe3b925517574ef8@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261017T100000
+DTEND;TZID=Europe/Moscow:20261017T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:20e32ca05cd5743064d6a9063f66ac27@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261017T123000
+DTEND;TZID=Europe/Moscow:20261017T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:d36ed0a9e1238679b437b5ff58a64a9d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261017T141000
+DTEND;TZID=Europe/Moscow:20261017T153000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:d3c59089ec70c2981bc649fef743f8e1@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261021T144000
+DTEND;TZID=Europe/Moscow:20261021T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:2ea36f3c8a4fe7fd4e37317f0941c363@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261021T162000
+DTEND;TZID=Europe/Moscow:20261021T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:baff67c7a55d907ec0584444bfeeaba2@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261024T100000
+DTEND;TZID=Europe/Moscow:20261024T113000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс немецкого языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. А.Е. Бажанов
+END:VEVENT
+BEGIN:VEVENT
+UID:6a7d57a6751157e7f45d172daadaa83d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261024T123000
+DTEND;TZID=Europe/Moscow:20261024T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. А.Е. Бажанов\nПрактический ку
+ рс испанского языка (практ.) (зачет с оце
+ нкой) — ОНЛАЙН — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:0e7b8888091206858a8b0821bbd94b86@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261024T141000
+DTEND;TZID=Europe/Moscow:20261024T154000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:3a9816f5f57100d9a8adcc55b1eacd25@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261027T090000
+DTEND;TZID=Europe/Moscow:20261027T103000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:cf49472cf5cb535f66222f38a8aa74c4@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261027T104000
+DTEND;TZID=Europe/Moscow:20261027T121000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:4b265a51f838de766e93f923ed55248c@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261027T123000
+DTEND;TZID=Europe/Moscow:20261027T140000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:b3b7714414583e3fd9077284be278ee1@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261031T100000
+DTEND;TZID=Europe/Moscow:20261031T113000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:5a4e42f120bf1c0af1dfa0298e0e49f4@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261031T114000
+DTEND;TZID=Europe/Moscow:20261031T131000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:d7038204232a6963ce815bf21bf72986@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261031T133000
+DTEND;TZID=Europe/Moscow:20261031T150000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ОНЛАЙН / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ОНЛАЙН — ст. преп. Е
+ .В. Львова\nПрактический курс китайского
+  языка (практ.) (зачет с оценкой) — ОНЛАЙН
+  — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:946f8fb2ddb338d77e72c2d8a01f5394@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261031T151000
+DTEND;TZID=Europe/Moscow:20261031T164000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:6be979bd530c46c8547d59807a69cb37@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261107T100000
+DTEND;TZID=Europe/Moscow:20261107T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:31c60d774cdbdccfe74cb5f393fa1f59@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261107T123000
+DTEND;TZID=Europe/Moscow:20261107T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:9023ac14c8f28f6e730568459d2b6c62@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261109T090000
+DTEND;TZID=Europe/Moscow:20261109T103000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ауд. 320 / ауд. 311
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 320 — ст. преп. Е.
+ В. Львова\nПрактический курс китайского 
+ языка (практ.) (зачет с оценкой) — ауд. 311 
+ — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:1f116a9aaeea99317f250f6985e6043e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261109T104000
+DTEND;TZID=Europe/Moscow:20261109T121000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ауд. 320 / ауд. 301
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 320 — ст. преп. Е.
+ В. Львова\nПрактический курс китайского 
+ языка (практ.) (зачет с оценкой) — ауд. 301 
+ — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:19083b02df0ac4ca749afd5e54ef12c7@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261109T124000
+DTEND;TZID=Europe/Moscow:20261109T141000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ауд. 302
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:3933286558a6aea1608bf566af77700f@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261109T142000
+DTEND;TZID=Europe/Moscow:20261109T155000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ауд. 302
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:5d9f4ea30112872e05bdab6310ba09c7@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261110T090000
+DTEND;TZID=Europe/Moscow:20261110T103000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. Д.С. Зо
+ лотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:143083e7fe760d18cd6c458410b5a8f3@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261110T104000
+DTEND;TZID=Europe/Moscow:20261110T121000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:d3e9eba7e34e3a03e64cb0869092161c@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261110T123000
+DTEND;TZID=Europe/Moscow:20261110T140000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:db02932578d09e53ce5efe67fd7c2138@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261110T142000
+DTEND;TZID=Europe/Moscow:20261110T155000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:21fff1999e726d0199db30b9dca0052a@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261112T133000
+DTEND;TZID=Europe/Moscow:20261112T150000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:09b0ddea19a762883629fe79b7a1d6d2@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261112T151000
+DTEND;TZID=Europe/Moscow:20261112T164000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:e5fc0286cea6876b116ff27ab452eab4@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261114T100000
+DTEND;TZID=Europe/Moscow:20261114T113000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс немецкого языка
+LOCATION:ауд. 207 / ауд. 211 / ауд. 311
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с немецкого языка (практ.) (зачет с оценк
+ ой) — ауд. 311 — ст. преп. А.Е. Бажанов
+END:VEVENT
+BEGIN:VEVENT
+UID:1d17a59e291a68a533de3cc3cbd1d253@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261114T123000
+DTEND;TZID=Europe/Moscow:20261114T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс немецкого языка / Пра
+ ктический курс испанского языка
+LOCATION:ауд. 207 / ауд. 211 / ауд. 311 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с немецкого языка (практ.) (зачет с оценк
+ ой) — ауд. 311 — ст. преп. А.Е. Бажанов\nПрак
+ тический курс испанского языка (практ.) (
+ зачет с оценкой) — ОНЛАЙН — ст. преп. Е.В.
+  Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:d2ab460934af91526de4638c7b7302ce@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261118T144000
+DTEND;TZID=Europe/Moscow:20261118T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:dbec83e9d6fc7ff2028ae127a6113308@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261118T162000
+DTEND;TZID=Europe/Moscow:20261118T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:8d8641b667d40ec6ba972c4f707be6bf@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261121T100000
+DTEND;TZID=Europe/Moscow:20261121T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:4cc97162ae7027f7a751152db39e1096@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261121T123000
+DTEND;TZID=Europe/Moscow:20261121T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:a88b706025f8094b4e873ce8b5ca0a72@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261124T090000
+DTEND;TZID=Europe/Moscow:20261124T103000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:39384916d9eb7aa0d065c0cc381b8f13@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261124T104000
+DTEND;TZID=Europe/Moscow:20261124T121000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:7c03e7138b753e9cb7c21a4f48d871bc@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261124T123000
+DTEND;TZID=Europe/Moscow:20261124T140000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:4fab197f6619154284496ce957ce4e7a@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261128T100000
+DTEND;TZID=Europe/Moscow:20261128T113000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:2eb04399ba05213296899f659a8796ad@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261128T114000
+DTEND;TZID=Europe/Moscow:20261128T131000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Д.С. Золотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:d7eb5d16011aaacad74e434ff01aeb4c@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261128T133000
+DTEND;TZID=Europe/Moscow:20261128T150000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ОНЛАЙН / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ОНЛАЙН — ст. преп. Е
+ .В. Львова\nПрактический курс китайского
+  языка (практ.) (зачет с оценкой) — ОНЛАЙН
+  — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:0cfa97d26720acea3fe2c0df2ad5f23e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261128T151000
+DTEND;TZID=Europe/Moscow:20261128T164000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:a03c1b746f78b4aae0d3c61767e4793d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261202T144000
+DTEND;TZID=Europe/Moscow:20261202T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:4bb660927bad7c1c1926d4ebe54b06c9@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261202T162000
+DTEND;TZID=Europe/Moscow:20261202T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:6b44a155424d91932b4be59f55ab43af@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261205T100000
+DTEND;TZID=Europe/Moscow:20261205T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:733822afca8c95548d41c68f73109ecb@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261205T123000
+DTEND;TZID=Europe/Moscow:20261205T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:66f7b5f179f11e6a190bc43e3e2378ca@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261207T090000
+DTEND;TZID=Europe/Moscow:20261207T103000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ауд. 320 / ауд. 311
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 320 — ст. преп. Е.
+ В. Львова\nПрактический курс китайского 
+ языка (практ.) (зачет с оценкой) — ауд. 311 
+ — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:1cc1743071f539e95dbe8c1554be1f6e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261207T104000
+DTEND;TZID=Europe/Moscow:20261207T121000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс китайского языка
+LOCATION:ауд. 320 / ауд. 301
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 320 — ст. преп. Е.
+ В. Львова\nПрактический курс китайского 
+ языка (практ.) (зачет с оценкой) — ауд. 301 
+ — преп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:f41efe4507dbe51e28a625e1020cce97@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261207T124000
+DTEND;TZID=Europe/Moscow:20261207T141000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ауд. 302
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:f0995cd8802a17c1407edcb283a5db18@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261207T142000
+DTEND;TZID=Europe/Moscow:20261207T155000
+SUMMARY:Теоретическая фонетика (лекция) (экз
+ амен)
+LOCATION:ауд. 302
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. Е.И. Михалева
+END:VEVENT
+BEGIN:VEVENT
+UID:dff789e99ba2826f4bdad4c7e91401ec@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261208T090000
+DTEND;TZID=Europe/Moscow:20261208T103000
+SUMMARY:Лингвистика и семиотика (лекция) (за
+ чет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. Д.С. Зо
+ лотухин
+END:VEVENT
+BEGIN:VEVENT
+UID:4cec6734c5653b757bd9d0a38fba5c8e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261208T104000
+DTEND;TZID=Europe/Moscow:20261208T121000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:ae89cf3c9c5266714d6154f0b975010b@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261208T123000
+DTEND;TZID=Europe/Moscow:20261208T140000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:b8ae825facd34216ed5c0d2bb4112e72@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261208T142000
+DTEND;TZID=Europe/Moscow:20261208T155000
+SUMMARY:Практикум по межкультурной коммуни
+ кации (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:ст. преп. Г.С. Веревкина
+END:VEVENT
+BEGIN:VEVENT
+UID:659243fdf67b9f9de5b4723c90805b21@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261210T133000
+DTEND;TZID=Europe/Moscow:20261210T150000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:df13a468b82dd649083564587e4de456@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261210T151000
+DTEND;TZID=Europe/Moscow:20261210T164000
+SUMMARY:Литература англоязычных стран (прак
+ т.) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nдоц. М. И. К
+ рупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:4740f751876eb55e1942fcea225212e6@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261212T100000
+DTEND;TZID=Europe/Moscow:20261212T113000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс немецкого языка
+LOCATION:ауд. 207 / ауд. 211 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с немецкого языка (практ.) (зачет с оценк
+ ой) — ОНЛАЙН — ст. преп. А.Е. Бажанов
+END:VEVENT
+BEGIN:VEVENT
+UID:3a328898e0dd710b7e4890654d1c8b18@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261212T123000
+DTEND;TZID=Europe/Moscow:20261212T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс испанского языка
+LOCATION:ауд. 207 / ауд. 211 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с испанского языка (практ.) (зачет с оцен
+ кой) — ОНЛАЙН — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:9b99587e8b31f3cc25264919c0968e92@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261212T141000
+DTEND;TZID=Europe/Moscow:20261212T154000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:6d3510cb8b126f1afa6e440ed9867cff@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261216T144000
+DTEND;TZID=Europe/Moscow:20261216T161000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:20c3d9f059a3a3083a3d348179b1a6f7@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261216T162000
+DTEND;TZID=Europe/Moscow:20261216T175000
+SUMMARY:Практический курс испанского языка 
+ / Практический курс немецкого языка / Пр
+ актический курс французского языка
+LOCATION:ауд. 131 / ауд. 304 / ауд. 201
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс испанского языка (практ
+ .) (зачет с оценкой) — ауд. 131 — ст. преп. Е.
+ В. Львова\nПрактический курс немецкого я
+ зыка (практ.) (зачет с оценкой) — ауд. 304 —
+  ст. преп. А.Е. Бажанов\nПрактический курс
+  французского языка (практ.) (зачет с оце
+ нкой) — ауд. 201 — доц. Г.В. Шарикова
+END:VEVENT
+BEGIN:VEVENT
+UID:7acc0e7ca4fdd295863b37af08d28b1a@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261219T100000
+DTEND;TZID=Europe/Moscow:20261219T113000
+SUMMARY:Практический курс китайского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 207
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Солдатова
+END:VEVENT
+BEGIN:VEVENT
+UID:7fe25faa1a3319a84b7567ea65110cbe@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261219T123000
+DTEND;TZID=Europe/Moscow:20261219T140000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс испанского языка
+LOCATION:ауд. 207 / ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс испанского 
+ языка (практ.) (зачет с оценкой) — ОНЛАЙН 
+ — ст. преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:ad04203fd43212f69dcc99a4908cb15c@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261219T141000
+DTEND;TZID=Europe/Moscow:20261219T154000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:787793891dd4cf607e770370372f40de@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261222T090000
+DTEND;TZID=Europe/Moscow:20261222T103000
+SUMMARY:Цифровая лингводидактика (практ.) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_242\, ЛИНГ_243\nпреп. А.С. Е
+ фремова
+END:VEVENT
+BEGIN:VEVENT
+UID:133e59c5af7f14d8f8c6af079d9f2ad7@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261222T104000
+DTEND;TZID=Europe/Moscow:20261222T121000
+SUMMARY:Цифровая лингводидактика (лекция) (з
+ ачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nпр
+ еп. А.С. Ефремова
+END:VEVENT
+BEGIN:VEVENT
+UID:d2b0aa9d68a9c41da50fab6a01c63f25@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261222T123000
+DTEND;TZID=Europe/Moscow:20261222T140000
+SUMMARY:Литература англоязычных стран (лекц
+ ия) (зачет)
+LOCATION:ОНЛАЙН
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nдо
+ ц. М. И. Крупенина
+END:VEVENT
+BEGIN:VEVENT
+UID:b74e8ccf8f72f014099971127f87517e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261226T100000
+DTEND;TZID=Europe/Moscow:20261226T113000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс немецкого языка
+LOCATION:ауд. 207 / ауд. 211 / ауд. 311
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с немецкого языка (практ.) (зачет с оценк
+ ой) — ауд. 311 — ст. преп. А.Е. Бажанов
+END:VEVENT
+BEGIN:VEVENT
+UID:694205be5503bcba282e96f33962b9bc@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261226T114000
+DTEND;TZID=Europe/Moscow:20261226T131000
+SUMMARY:Практический курс китайского языка 
+ / Практический курс французского языка /
+  Практический курс немецкого языка
+LOCATION:ауд. 207 / ауд. 211 / ауд. 311
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nПр
+ актический курс китайского языка (практ
+ .) (зачет с оценкой) — ауд. 207 — преп. А.С. С
+ олдатова\nПрактический курс французско
+ го языка (практ.) (зачет с оценкой) — ауд. 
+ 211 — доц. Г.В. Шарикова\nПрактический кур
+ с немецкого языка (практ.) (зачет с оценк
+ ой) — ауд. 311 — ст. преп. А.Е. Бажанов
+END:VEVENT
+BEGIN:VEVENT
+UID:acc55852da5fd196fae464e4e1d5708d@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261226T133000
+DTEND;TZID=Europe/Moscow:20261226T150000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 310
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+BEGIN:VEVENT
+UID:0d408fcb755ce953d1ed43fad908b00e@gaugn-ling3
+DTSTAMP:20261105T185700Z
+DTSTART;TZID=Europe/Moscow:20261226T151000
+DTEND;TZID=Europe/Moscow:20261226T164000
+SUMMARY:Практический курс испанского языка 
+ (практ.) (зачет с оценкой)
+LOCATION:ауд. 310
+DESCRIPTION:Группы: ЛИНГ_241\, ЛИНГ_242\, ЛИНГ_243\nст
+ . преп. Е.В. Львова
+END:VEVENT
+END:VCALENDAR
