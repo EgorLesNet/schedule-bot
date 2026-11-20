@@ -1,104 +1,116 @@
 (function () {
   const view = document.getElementById('view');
   if (!view) return;
-  let busy = false;
   const permitted = () => S.boot && (S.boot.assistant || S.boot.admin);
-  const field = (name, input) => h('label', {}, h('span', { class: 'muted' }, name), input);
+  const field = (name, control) => h('label', {}, h('span', { class: 'muted' }, name), control);
   function open() {
     if (!permitted() || document.getElementById('schedule-editor')) return;
     const { course, stream } = S.boot.user;
-    const scope = () => permitted() && S.boot.user.course === course && S.boot.user.stream === stream;
     const dialog = h('dialog', { id: 'schedule-editor', style: 'max-width:560px;width:90%;max-height:85vh;overflow:auto;background:var(--sb-bg);color:var(--sb-text);border:1px solid var(--sb-edge);border-radius:18px' });
     const date = h('input', { type: 'date', value: S.date || nowMsk().date });
-    const content = h('div', {}), status = h('p', { role: 'status' });
-    let seq = 0;
-    const guard = () => { if (!scope() || !dialog.isConnected) throw new Error('Поток изменился. Откройте редактор заново.'); };
-    async function mutate(fn) {
-      if (busy) return;
-      busy = true;
-      dialog.querySelectorAll('button,input,select').forEach(el => el.disabled = true);
-      try { guard(); await fn(); }
-      catch (e) { status.textContent = String(e.message || e); }
-      finally { busy = false; dialog.querySelectorAll('button,input,select').forEach(el => el.disabled = false); }
-    }
-    async function write(name, payload) {
-      guard();
-      status.textContent = 'Сохранение…';
-      const result = await call(name, payload);
-      guard();
-      return result;
-    }
+    const content = h('div', {}), addSlot = h('div', {}), status = h('p', { role: 'status' });
+    let busy = false, seq = 0, formSeq = 0;
+    const valid = () => dialog.isConnected && permitted() && S.boot.user.course === course && S.boot.user.stream === stream;
+    const guard = () => { if (!valid()) throw new Error('Поток изменился. Откройте редактор заново.'); };
+    const button = (title, fn, cls = 'mini') => h('button', { type: 'button', class: cls, onclick: fn }, title);
+    const request = (action, more = {}) => call('lessonManage', { course, stream, date: date.value, action, ...more });
     async function load() {
-      const ticket = ++seq, selected = date.value;
-      if (!selected) return;
+      const ticket = ++seq;
       content.replaceChildren(h('p', {}, 'Загрузка…'));
       try {
         guard();
-        const days = await call('range', { from: selected, days: 1, editorRead: Date.now() });
-        if (ticket !== seq || !scope() || !dialog.isConnected) return;
-        const cards = [];
-        for (const item of days[0].items) {
-          if (item.lang) continue;
+        const selected = date.value;
+        const data = await request('list');
+        if (ticket !== seq || !valid() || selected !== date.value) return;
+        content.replaceChildren();
+        for (const item of data.items) {
           const slot = h('div', {});
-          const row = h('section', { class: 'card' }, h('b', {}, item.start + '–' + item.end + ' ' + item.summary));
-          const base = { original: item.original || item.summary, summary: item.summary, date: selected, start: item.start };
-          row.append(h('button', { type: 'button', class: 'mini danger', onclick: () => mutate(async () => {
-            if (!(await ask('Отменить пару «' + item.summary + '» для потока?'))) return;
-            await write('schedit', { ...base, action: 'cancel' });
+          const base = { original: item.original, summary: item.summary, date: selected, start: item.start };
+          const row = h('section', { class: 'card' }, h('b', {}, item.start + '–' + item.end + ' ' + item.summary), h('p', { class: 'muted' }, [item.teacher, item.room].filter(Boolean).join(' · ')));
+          row.append(button('Отменить пару', () => run(async () => {
+            if (!(await ask('Отменить пару для всего потока?'))) return false;
+            await call('schedit', { ...base, action: 'cancel' });
             status.textContent = 'Пара отменена. Рассылка изменений запрошена.';
-            S.marks = {}; await load();
-          }) }, 'Отменить пару'), h('button', { type: 'button', class: 'mini', onclick: () => {
-            if (slot.firstChild) { slot.replaceChildren(); return; }
+          }), 'mini danger'));
+          if (item.removable) row.append(button('Убрать добавленную пару', () => run(async () => {
+            if (!(await ask('Удалить добавленную пару для всего потока?'))) return false;
+            report(await request('remove', { key: item.key }), 'Пара удалена');
+          }), 'mini danger'));
+          row.append(button('Перенести', () => {
             const nd = h('input', { type: 'date', value: selected, min: nowMsk().date });
-            const ns = h('input', { type: 'time', value: item.start });
-            const ne = h('input', { type: 'time', value: item.end });
-            slot.append(field('Новая дата', nd), field('Начало', ns), field('Окончание', ne), h('button', { type: 'button', onclick: () => mutate(async () => {
-              if (!nd.value || nd.value < nowMsk().date || !ns.value || !ne.value || ns.value >= ne.value) throw new Error('Проверьте дату и время');
-              const target = await call('range', { from: nd.value, days: 1, editorRead: Date.now() });
+            const ns = h('input', { type: 'time', value: item.start }), ne = h('input', { type: 'time', value: item.end });
+            slot.replaceChildren(field('Новая дата', nd), field('Начало', ns), field('Окончание', ne), button('Подтвердить перенос', () => run(async () => {
+              check(nd.value, ns.value, ne.value);
+              const target = await call('range', { from: nd.value, days: 1, editorRead: Date.now() }); guard();
+              const clash = target[0].items.some(x => !(nd.value === selected && x.start === item.start && x.summary === item.summary) && ns.value < x.end && ne.value > x.start);
+              if (clash && !(await ask('Есть пересечение с другой парой. Продолжить?'))) return false;
+              if (!(await ask(('Было: ' + selected + ' ' + item.start + '. Станет: ' + nd.value + ' ' + ns.value + '–' + ne.value + '. Перенести?').slice(0, 256)))) return false;
               guard();
-              const overlap = target[0].items.some(x => !(nd.value === selected && x.start === item.start && x.summary === item.summary) && ns.value < x.end && ne.value > x.start);
-              const message = 'Перенести «' + item.summary + '» с ' + selected + ' ' + item.start + ' на ' + nd.value + ' ' + ns.value + '–' + ne.value + '?' + (overlap ? ' Есть пересечение с другими парами.' : '');
-              if (!(await ask(message.slice(0, 256)))) return;
-              await write('schedit', { ...base, action: 'move', newDate: nd.value, newStart: ns.value, newEnd: ne.value, teacher: item.teacher, room: item.room });
+              await call('schedit', { ...base, action: 'move', newDate: nd.value, newStart: ns.value, newEnd: ne.value, teacher: item.teacher, room: item.room });
               status.textContent = 'Пара перенесена. Рассылка изменений запрошена.';
-              S.marks = {}; await load();
-            }) }, 'Подтвердить перенос'));
-          } }, 'Перенести'), slot);
-          cards.push(row);
+            })));
+          }), button('Аудитория', () => {
+            const room = h('input', { type: 'text', maxlength: 40, value: item.room || '' });
+            const apply = scope => run(async () => {
+              if (!(await ask(scope === 'all' ? 'Изменить аудиторию всех будущих пар предмета?' : 'Изменить аудиторию этой пары и следующих подряд пар того же предмета?'))) return false;
+              await call('schedit', { ...base, action: 'room', room: room.value, scope });
+              status.textContent = 'Аудитория сохранена. Уведомления отправляются при изменении.';
+            });
+            slot.replaceChildren(field('Аудитория', room), h('p', { class: 'muted' }, 'Пустое значение возвращает исходную аудиторию.'), button('Для этой пары и пар подряд', () => apply('one')), button('Для всех будущих пар', () => apply('all')));
+          }), slot);
+          content.append(row);
         }
-        content.replaceChildren(...cards);
-        if (!cards.length) content.append(h('p', {}, 'В этот день нет доступных для изменения пар'));
+        if (!data.items.length) content.append(h('p', {}, 'Занятий нет'));
+        if (data.cancelled.length) content.append(h('h3', {}, 'Отменённые пары'));
+        for (const item of data.cancelled) content.append(h('section', { class: 'card' }, h('p', {}, item.title), button('Восстановить', () => run(async () => {
+          if (!(await ask('Восстановить пару для всего потока?'))) return false;
+          report(await request('restore', { key: item.key }), 'Пара восстановлена');
+        }))));
       } catch (e) { if (ticket === seq) content.replaceChildren(h('p', { class: 'err' }, String(e.message || e))); }
     }
-    const addSlot = h('div', {});
-    const addButton = h('button', { type: 'button', onclick: safe(async () => {
+    function report(result, message) { status.textContent = message + (result.notified == null ? '. Результат рассылки неизвестен.' : '. Уведомлений отправлено: ' + result.notified); }
+    function check(d, start, end) { if (!d || d < nowMsk().date || !start || !end || start >= end) throw new Error('Проверьте дату и время'); }
+    async function run(fn) {
+      if (busy) return;
+      busy = true;
+      dialog.querySelectorAll('button,input,select').forEach(el => el.disabled = true);
+      try {
+        guard();
+        const result = await fn();
+        if (result !== false) { S.marks = {}; await load(); }
+      } catch (e) { status.textContent = String(e.message || e) + '. Если связь прервалась, проверьте расписание перед повторной попыткой.'; }
+      finally { busy = false; dialog.querySelectorAll('button,input,select').forEach(el => el.disabled = false); }
+    }
+    const addButton = button('＋ Добавить пару', safe(async () => {
       if (busy) return false;
+      const ticket = ++formSeq;
       if (addSlot.firstChild) { addSlot.replaceChildren(); return; }
+      const selected = date.value;
       addSlot.append(h('p', {}, 'Загрузка предметов…'));
       try {
         const subjects = await call('subjects'); guard();
-        const subject = h('select', {}, subjects.map(s => h('option', { value: s }, s)));
+        if (ticket !== formSeq || selected !== date.value) return;
+        const subject = h('select', {}, subjects.map(name => h('option', { value: name }, name)));
         const start = h('input', { type: 'time' }), end = h('input', { type: 'time' });
         const teacher = h('input', { type: 'text', maxlength: 100 }), room = h('input', { type: 'text', maxlength: 60 });
-        addSlot.replaceChildren(field('Предмет', subject), field('Начало', start), field('Окончание', end), field('Преподаватель', teacher), field('Аудитория', room), h('button', { type: 'button', onclick: () => mutate(async () => {
+        addSlot.replaceChildren(field('Предмет', subject), field('Начало', start), field('Окончание', end), field('Преподаватель', teacher), field('Аудитория', room), button('Добавить и уведомить поток', () => run(async () => {
+          check(date.value, start.value, end.value);
+          if (!subject.value) throw new Error('Выберите предмет');
           const payload = { course, stream, date: date.value, subject: subject.value, start: start.value, end: end.value, teacher: teacher.value, room: room.value };
-          if (!payload.subject || !payload.date || payload.date < nowMsk().date || !payload.start || !payload.end || payload.start >= payload.end) throw new Error('Проверьте предмет, дату и время');
-          let result = await write('addLesson', payload);
+          let result = await call('addLesson', payload); guard();
           if (!result.added) {
-            if (!(await ask('Есть пересечения с другими парами. Всё равно добавить?'))) { status.textContent = 'Добавление отменено'; return; }
-            result = await write('addLesson', { ...payload, allowOverlap: true });
+            if (!(await ask('Есть пересечения с другими парами. Всё равно добавить?'))) return false;
+            guard(); result = await call('addLesson', { ...payload, allowOverlap: true });
           }
           if (!result.added) throw new Error('Пара не добавлена');
-          addSlot.replaceChildren(); S.marks = {};
-          status.textContent = result.notified == null ? 'Пара добавлена. Результат рассылки неизвестен.' : 'Пара добавлена. Уведомлений отправлено: ' + result.notified;
-          await load();
-        }) }, 'Добавить и уведомить поток'));
-      } catch (e) { addSlot.replaceChildren(); throw e; }
-    }) }, '＋ Добавить пару');
-    const close = () => { if (busy) return; ++seq; dialog.close(); dialog.remove(); S.marks = {}; render(); };
+          addSlot.replaceChildren(); report(result, 'Пара добавлена');
+        })));
+      } catch (e) { if (ticket === formSeq) addSlot.replaceChildren(); throw e; }
+    }));
+    const close = () => { if (busy) return; ++seq; ++formSeq; dialog.close(); dialog.remove(); S.marks = {}; render(); };
     dialog.addEventListener('cancel', e => { e.preventDefault(); close(); });
-    date.addEventListener('change', () => { addSlot.replaceChildren(); load(); });
-    dialog.append(h('h2', {}, 'Изменить расписание'), field('Дата — нажмите для выбора в календаре', date), status, content, addButton, addSlot, h('button', { type: 'button', class: 'alt', onclick: close }, 'Закрыть'));
+    date.addEventListener('change', () => { ++formSeq; addSlot.replaceChildren(); load(); });
+    dialog.append(h('h2', {}, 'Изменить расписание'), field('Дата — выбор через календарь', date), status, content, addButton, addSlot, button('Закрыть', close, 'alt'));
     document.body.append(dialog); dialog.showModal(); load();
   }
   function mount() {
@@ -108,12 +120,9 @@
     anchor.after(h('button', { type: 'button', class: 'mini schedule-editor-open', onclick: open }, 'Изменить расписание'));
     for (const old of view.querySelectorAll('.add-lesson')) old.remove();
   }
-  // Route existing per-lesson edit shortcuts into the same editor.
   view.addEventListener('click', e => {
     const button = e.target.closest('button');
-    if (permitted() && button && button.textContent.trim() === '⚙️' && button.closest('.lesson')) {
-      e.preventDefault(); e.stopImmediatePropagation(); open();
-    }
+    if (permitted() && button && button.textContent.trim() === '⚙️' && button.closest('.lesson')) { e.preventDefault(); e.stopImmediatePropagation(); open(); }
   }, true);
   new MutationObserver(mount).observe(view, { childList: true, subtree: true });
   mount();
