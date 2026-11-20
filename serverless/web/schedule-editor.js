@@ -110,14 +110,23 @@
     const close = () => { if (busy) return; ++seq; ++formSeq; dialog.close(); dialog.remove(); S.marks = {}; render(); };
     dialog.addEventListener('cancel', e => { e.preventDefault(); close(); });
     date.addEventListener('change', () => { ++formSeq; addSlot.replaceChildren(); load(); });
-    dialog.append(h('h2', {}, 'Изменить расписание'), field('Дата — выбор через календарь', date), status, content, addButton, addSlot, button('Закрыть', close, 'alt'));
+    const back = button('← Назад', close, 'mini alt');
+    back.setAttribute('aria-label', 'Вернуться к расписанию');
+    const header = h('div', { class: 'toolbar sheet-head', style: 'position:sticky;top:0;z-index:2;background:var(--sb-bg);padding:8px 0' }, back, h('b', {}, 'Изменить расписание'));
+    dialog.setAttribute('aria-label', 'Изменить расписание');
+    dialog.append(header, field('Дата — выбор через календарь', date), status, content, addButton, addSlot, button('Закрыть', close, 'alt'));
     document.body.append(dialog); dialog.showModal(); load();
   }
   function mount() {
     if (!permitted() || !['day', 'week'].includes(S.tab)) return;
+    if (view.querySelector('.schedule-editor-open')) return;
+    const content = view.firstElementChild;
+    if (!content || content.classList.contains('sk-wrap') || (content.tagName === 'P' && /Загрузка|Подключение/.test(content.textContent))) return;
+    const entry = h('button', { type: 'button', class: 'big schedule-editor-open', onclick: open }, 'Изменить расписание');
     const anchor = view.querySelector('.toolbar');
-    if (!anchor || view.querySelector('.schedule-editor-open')) return;
-    anchor.after(h('button', { type: 'button', class: 'mini schedule-editor-open', onclick: open }, 'Изменить расписание'));
+    if (anchor) anchor.after(entry);
+    else if (content.tagName === 'DIV') content.prepend(entry);
+    else view.prepend(entry);
     for (const old of view.querySelectorAll('.add-lesson')) old.remove();
   }
   view.addEventListener('click', e => {
