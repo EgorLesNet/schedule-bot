@@ -37,8 +37,8 @@
     dialog.setAttribute('aria-label', 'Редактирование расписания и объявлений');
     const original = [...dialog.children].filter(node => node !== header);
     const close = original.find(node => node.tagName === 'BUTTON' && node.textContent.trim() === 'Закрыть');
-    const add = original.find(node => node.tagName === 'BUTTON' && node.textContent.trim() === '＋ Добавить пару');
-    if (add) add.className = 'big';
+    const addLessonButton = original.find(node => node.tagName === 'BUTTON' && node.textContent.trim() === '＋ Добавить пару');
+    if (addLessonButton) addLessonButton.className = 'big';
     if (close) close.className = 'big alt';
     const schedule = h('div', { id: 'editor-schedule-panel', role: 'tabpanel', 'aria-labelledby': 'editor-schedule-tab' });
     const news = h('div', { id: 'editor-news-panel', role: 'tabpanel', 'aria-labelledby': 'editor-news-tab' });
@@ -138,7 +138,14 @@
   function scan() {
     if (queued) return;
     queued = true;
-    queueMicrotask(() => { queued = false; mountPublic(); mountEditor(); });
+    queueMicrotask(() => {
+      queued = false;
+      for (const entry of view?.querySelectorAll('.schedule-editor-open') || []) {
+        if (entry.textContent !== 'Изменить расписание/объявления') entry.textContent = 'Изменить расписание/объявления';
+      }
+      mountPublic();
+      mountEditor();
+    });
   }
   new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });
   scan();
