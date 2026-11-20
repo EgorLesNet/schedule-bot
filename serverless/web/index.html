@@ -39,7 +39,40 @@
 <script src='plan.js'></script>
 <script src='room.js'></script>
 <script src='subj.js'></script>
-<script src='library.js'></script>
+<script>
+(function () {
+  let loading = false;
+  function scan() {
+    const panel = document.getElementById('subj-panel');
+    if (loading || !panel || !panel.querySelector('.toolbar b')) return;
+    loading = true;
+    const script = document.createElement('script');
+    script.src = 'library.js';
+    script.onload = () => {
+      observer.disconnect();
+      // Wake the library observer for the panel that may already be open.
+      const current = document.getElementById('subj-panel');
+      if (current) current.append(document.createComment('library ready'));
+    };
+    script.onerror = () => {
+      script.remove();
+      loading = false;
+      const current = document.getElementById('subj-panel');
+      if (!current) return;
+      const retry = document.createElement('button');
+      retry.type = 'button';
+      retry.textContent = 'Повторить загрузку библиотеки';
+      retry.onclick = () => { retry.remove(); scan(); };
+      current.append(retry);
+      observer.takeRecords();
+    };
+    document.head.append(script);
+  }
+  const observer = new MutationObserver(scan);
+  observer.observe(document.body, { childList: true, subtree: true });
+  scan();
+})();
+</script>
 <script src='clubs.js'></script>
 <script src='hwfold.js'></script>
 <script src='dlv.js'></script>
