@@ -1,0 +1,75 @@
+name: Encrypted iMac backup relay
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: imac-relay
+  cancel-in-progress: false
+jobs:
+  relay:
+    if: vars.IMAC_RELAY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: TGCLOUD_TOKEN
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tgcloud
+          path: source
+          persist-credentials: false
+      - name: Require a private vault
+        env:
+          GH_TOKEN: ${{ secrets.BACKUP_VAULT_TOKEN }}
+          VAULT: ${{ vars.BACKUP_VAULT_REPO }}
+        run: |
+          test "$(gh api "repos/$VAULT" --jq .private)" = true
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.BACKUP_VAULT_REPO }}
+          token: ${{ secrets.BACKUP_VAULT_TOKEN }}
+          path: vault
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare CLI and encrypted relay
+        working-directory: source/serverless
+        env:
+          CERT: ${{ secrets.IMAC_BACKUP_CERT }}
+        run: |
+          npm install --no-save --ignore-scripts @tgcloud/cli@0.2.0 json5@2.2.3
+          chmod 700 tools/relay_cli.cjs
+          printf '%s\n' "$CERT" > "$RUNNER_TEMP/imac-cert.pem"
+          openssl x509 -in "$RUNNER_TEMP/imac-cert.pem" -pubkey -noout > "$RUNNER_TEMP/imac-pub.pem"
+          mkdir -p "$RUNNER_TEMP/backup-staging"
+          sudo mount -t tmpfs -o size=2G,mode=0700,uid=$(id -u),gid=$(id -g) tmpfs "$RUNNER_TEMP/backup-staging"
+      - name: Export encrypted archives and import signed receipts
+        env:
+          TGCLOUD_TOKEN: ${{ secrets.TGCLOUD_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          export TGCLOUD_PROJECT_DIR="$GITHUB_WORKSPACE/source/serverless"
+          export BACKUP_VAULT="$GITHUB_WORKSPACE/vault"
+          export BACKUP_CERT="$RUNNER_TEMP/imac-cert.pem"
+          export BACKUP_PUBKEY="$RUNNER_TEMP/imac-pub.pem"
+          export BACKUP_STAGING="$RUNNER_TEMP/backup-staging"
+          python source/serverless/tools/publish_relay.py
+          node source/serverless/tools/import_relay_receipts.cjs
+      - name: Publish ciphertext only
+        working-directory: vault
+        run: |
+          mkdir -p receipts
+          git config user.name backup-relay
+          git config user.email backup-relay@users.noreply.github.com
+          git add archives
+          if ! git diff --cached --quiet; then git commit -m 'Encrypted backup archives'; fi
+          git pull --rebase
+          git push
+      - name: Remove staging mount
+        if: always()
+        run: sudo umount "$RUNNER_TEMP/backup-staging" 2>/dev/null || true
