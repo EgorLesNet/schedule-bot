@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a backup on a pre-mounted encrypted volume. See archive_backup.md."""
+"""Build a complete archive of a selected snapshot on a mounted volume."""
 import argparse
 import hashlib
 import json
@@ -29,9 +29,21 @@ def main():
         result = subprocess.run([str(args.exporter.resolve()), json.dumps(payload)], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True, timeout=120)
         return json.loads(result.stdout)
 
-    snapshot = max(export(action='list')['snapshots'], key=lambda item: item['ts'])
+    snapshots = export(action='list')['snapshots']
+    requested = os.environ.get('SCHEDULE_SNAPSHOT_ID')
+    if requested is not None:
+        if not re.fullmatch(r'[a-z0-9]{1,32}', requested):
+            raise RuntimeError('Invalid requested snapshot ID')
+        matches = [s for s in snapshots if s['id'] == requested]
+        if len(matches) != 1:
+            raise RuntimeError('Requested snapshot is unavailable or ambiguous')
+        snapshot = matches[0]
+    else:
+        if not snapshots:
+            raise RuntimeError('No snapshots available')
+        snapshot = max(snapshots, key=lambda item: item['ts'])
     sid = snapshot['id']
-    if not re.fullmatch(r'[a-z0-9]+', sid):
+    if not re.fullmatch(r'[a-z0-9]{1,32}', sid):
         raise RuntimeError('Invalid snapshot ID')
     dest = volume / ('schedule-' + sid + '.zip')
     keys, files, inventory = set(), set(), {}
@@ -81,7 +93,7 @@ def main():
             if archive.testzip() is not None:
                 raise RuntimeError('Archive integrity check failed')
         os.replace(str(pending), str(dest))
-    print('Backup complete: %d database keys, %d attachments' % (len(keys), len(files)))
+    print('Backup complete: %s, %d database keys, %d attachments' % (sid, len(keys), len(files)))
 
 
 if __name__ == '__main__':
