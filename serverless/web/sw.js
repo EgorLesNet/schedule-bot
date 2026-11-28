@@ -1,8 +1,11 @@
 // Versioned offline shell for the Mini App.
-// RULE: change BUILD in every commit that touches files in web/. A new BUILD makes the browser install a fresh, complete cache.
+// RULE: the ONLY place to change the version is web/version.js (it is also shown at the bottom of the app settings).
+// Change it in every commit that touches files in web/: a new version makes the browser install a fresh, complete cache.
 // Safety: index.html is network-first, so a release is visible at once when online; static files are served from one consistent
 // versioned cache; the new worker waits (no skipWaiting) and takes over on the next Mini App opening, never in the middle of a session.
-const BUILD = '2026-11-28-1';
+importScripts('version.js');
+if (typeof self.APP_VERSION !== 'string' || !self.APP_VERSION) throw new Error('version.js must define APP_VERSION');
+const BUILD = self.APP_VERSION;
 const PREFIX = 'schedule-shell-';
 const CACHE = PREFIX + BUILD;
 const LEGACY = ['schedule-v51'];

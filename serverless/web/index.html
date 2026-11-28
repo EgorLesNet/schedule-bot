@@ -20,6 +20,7 @@ html.sb-glass-theme:not([data-card-blur=on]) #view :is(.card,.cal,.ux-group>summ
 </head>
 <body>
 <nav id='tabs'></nav><main id='view'></main>
+<script src='version.js'></script>
 <script src='range-inflight.js'></script>
 <script src='fast.js'></script>
 <script src='app.js'></script>
@@ -51,7 +52,8 @@ const observer=new MutationObserver(scan);observer.observe(document.body,{childL
 <script src='opening-ready.js'></script>
 <script src='ui-refinements.js'></script>
 <script src='schedule-editor.js'></script>
+<script src='version-footer.js'></script>
 <script src='glisse-nav.js' defer></script>
-<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});</script>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).catch(function(){});</script>
 </body>
 </html>
